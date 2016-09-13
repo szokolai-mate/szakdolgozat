@@ -1,5 +1,6 @@
 //TODO: frame-sync : bal �s jobb csak egyszerre vehet� ki (std::pair<float,float>)
 //-> mono, stereo.... az �sszes csatorn�ra kell megold�st tal�lni
+//szétszedni modulokra
 
 # include <iostream>
 #include <portaudio.h>
@@ -29,7 +30,7 @@ int left, right = 0;
 float linear_volume = 0.0f;
 
 inline float soft_clip(float x) {
-	//az ellen�rz�st lehet hogy kijjebb kellene tenni
+	//az ellenőrzést lehet hogy kijjebb kellene tenni
 	if (x > 0.8f || x < -0.8f) {
 		return ( (pow(exp(1),(exp(1)*x)) - 1) / (pow(exp(1), (exp(1)*x)) + 1) );
 	}
