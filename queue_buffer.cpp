@@ -6,7 +6,7 @@ template <typename T> class queue_buffer{
 private:
 	unsigned long long cap;
 	T * buffer;
-	unsigned long long start, end;
+	std::atomic< unsigned long long > start, end;
 	std::atomic<bool> emptyflag;
 	std::mutex m;
 public:
@@ -41,10 +41,8 @@ public:
 
 	/*Clears buffer of data. O(n) - cost is infinitesimal*/
 	void clear() {
-		m.lock();
 		end = start = 0;
 		emptyflag = true;
-		m.unlock();
 	}
 
 	/*Returns capacity of element T*/
