@@ -4,32 +4,32 @@
 
 template <typename T> class queue_buffer{
 private:
-	unsigned long long cap;
+	unsigned int cap;
 	T * buffer;
-	std::atomic< unsigned long long > start, end;
+	std::atomic<unsigned int> start, end;
 	std::atomic<bool> emptyflag;
 	std::mutex m;
 public:
 	/*Buffer size is immutable*/
-	queue_buffer(unsigned long long cap);
+	queue_buffer(unsigned int cap);
 
 	~queue_buffer();
 
 	/*Adds argument to buffer. Returns remaining capacity, -1 if was full*/
-	unsigned long long add(const T  &_buffer);
+	unsigned int add(const T  &_buffer);
 
-	unsigned long long addamount(T * _buffer,const unsigned long long & amount);
+	unsigned int addamount(T * _buffer,const unsigned int & amount);
 
-	unsigned long long addsome(T * _buffer,const unsigned long long & max_amount, unsigned long long &added_amount);
+	unsigned int addsome(T * _buffer,const unsigned int & max_amount, unsigned int &added_amount);
 
 	/*Copies next T into argument. Returns true on success, false on failure (buffer was empty)*/
 	bool get(T &into);
 
-	T* getamount(const unsigned long long & amount);
+	T* getamount(const unsigned int & amount);
 
-	T* getsome(unsigned long long &got_amount,const unsigned long long &max_amount);
+	T* getsome(unsigned int &got_amount,const unsigned int &max_amount);
 
-	T* getsome(unsigned long long &got_amount);
+	T* getsome(unsigned int &got_amount);
 
 	/*Returns whether buffer is empty*/
 	bool isEmpty() {
@@ -46,7 +46,7 @@ public:
 	}
 
 	/*Returns capacity of element T*/
-	unsigned long long capacity() {
+	unsigned int capacity() {
 		return cap;
 	}
 
@@ -55,7 +55,7 @@ public:
 		return &(buffer[start]);
 	}
 
-	unsigned long long size() {
+	unsigned int size() {
 		m.lock();
 		if (start < end) {
 			return end - start;
@@ -69,7 +69,7 @@ public:
 
 
 template <typename T>
-queue_buffer<T>::queue_buffer(unsigned long long _capacity) {
+queue_buffer<T>::queue_buffer(unsigned int _capacity) {
 	cap = _capacity;
 	buffer = new T[cap];
 
@@ -80,7 +80,7 @@ queue_buffer<T>::queue_buffer(unsigned long long _capacity) {
 }
 
 template <typename T>
-unsigned long long queue_buffer<T>::add(const T  &_buffer) {
+unsigned int queue_buffer<T>::add(const T  &_buffer) {
 	m.lock();
 	//std::unique_lock<std::mutex> lk(m);
 	if (start == end) {
@@ -106,12 +106,12 @@ unsigned long long queue_buffer<T>::add(const T  &_buffer) {
 }
 
 template <typename T>
-unsigned long long queue_buffer<T>::addamount(T * _buffer,const unsigned long long &amount) {
+unsigned int queue_buffer<T>::addamount(T * _buffer,const unsigned int &amount) {
 
 }
 
 template <typename T>
-unsigned long long queue_buffer<T>::addsome(T * _buffer,const unsigned long long &max_amount, unsigned long long &added_amount) {
+unsigned int queue_buffer<T>::addsome(T * _buffer,const unsigned int &max_amount, unsigned int &added_amount) {
 
 }
 
@@ -130,17 +130,17 @@ bool queue_buffer<T>::get(T &into) {
 }
 
 template <typename T>
-T* queue_buffer<T>::getamount(const unsigned long long &amount) {
+T* queue_buffer<T>::getamount(const unsigned int &amount) {
 
 }
 
 template <typename T>
-T* queue_buffer<T>::getsome(unsigned long long &got_amount,const unsigned long long &max_amount) {
+T* queue_buffer<T>::getsome(unsigned int &got_amount,const unsigned int &max_amount) {
 
 }
 
 template <typename T>
-T* queue_buffer<T>::getsome(unsigned long long &got_amount) {
+T* queue_buffer<T>::getsome(unsigned int &got_amount) {
 
 }
 

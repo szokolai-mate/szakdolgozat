@@ -2,7 +2,7 @@
 //-> mono, stereo.... az �sszes csatorn�ra kell megold�st tal�lni
 //szétszedni modulokra
 
-# include <iostream>
+#include <iostream>
 #include <portaudio.h>
 #include <ogg/ogg.h>
 #include <fstream>
@@ -21,7 +21,7 @@
 std::mutex m;
 std::condition_variable cv;
 
-long long played = 0, read = 0;
+int played = 0, read = 0;
 
 #define SINE_SIZE 200
 float sinetable[SINE_SIZE];
