@@ -2,7 +2,10 @@
 #include <mutex>
 #include <atomic>
 
-template <typename T> class queue_buffer{
+#include "iBuffer.h"
+
+template <typename T>
+ class queue_buffer : private iBuffer<T>{
 private:
 	unsigned int cap;
 	T * buffer;
@@ -17,30 +20,23 @@ public:
 
 	/*Adds argument to buffer. Returns remaining capacity, -1 if was full*/
 	unsigned int add(const T  &_buffer);
-
-	unsigned int addamount(T * _buffer,const unsigned int & amount);
-
-	unsigned int addsome(T * _buffer,const unsigned int & max_amount, unsigned int &added_amount);
-
 	/*Copies next T into argument. Returns true on success, false on failure (buffer was empty)*/
 	bool get(T &into);
-
-	T* getamount(const unsigned int & amount);
-
-	T* getsome(unsigned int &got_amount,const unsigned int &max_amount);
-
-	T* getsome(unsigned int &got_amount);
-
 	/*Returns whether buffer is empty*/
 	bool isEmpty() {
-		//std::unique_lock<std::mutex> lk(m);
-		//m.lock();
-		//m.unlock();
 		return emptyflag;
+	}
+
+	bool isFull(){
+		std::lock_guard<std::mutex> lock(m);
+		if (!emptyflag && start == end) { return true; }
+		else {return false;}
+		
 	}
 
 	/*Clears buffer of data. O(n) - cost is infinitesimal*/
 	void clear() {
+		std::lock_guard<std::mutex> lock(m);
 		end = start = 0;
 		emptyflag = true;
 	}
@@ -56,12 +52,11 @@ public:
 	}
 
 	unsigned int size() {
-		m.lock();
+		std::lock_guard<std::mutex> lock(m);
 		if (start < end) {
 			return end - start;
 		}
-		if (!emptyflag && start == end) { m.unlock(); return cap; }
-		m.unlock();
+		if (!emptyflag && start == end) { return cap; }
 		return cap-start+end;
 	}
 
@@ -81,8 +76,7 @@ queue_buffer<T>::queue_buffer(unsigned int _capacity) {
 
 template <typename T>
 unsigned int queue_buffer<T>::add(const T  &_buffer) {
-	m.lock();
-	//std::unique_lock<std::mutex> lk(m);
+	std::lock_guard<std::mutex> lock(m);
 	if (start == end) {
 		if (isEmpty()) {
 			//empty - add and set to not empty
@@ -90,58 +84,28 @@ unsigned int queue_buffer<T>::add(const T  &_buffer) {
 		}
 		else {
 			//full
-			m.unlock();
 			return -1;
 		}
 	}
-	//std::cout << "ADDING" << std::endl;
 	buffer[end] = _buffer;
 	end = (end + 1) % cap;
 	//returns capacity left
-	if (end == start && !isEmpty()) { m.unlock(); return 0; }
+	if (end == start && !isEmpty()) { return 0; }
 	if (start <= end) {
-		m.unlock(); return cap + start - end;
+		return cap + start - end;
 	}
-	else { m.unlock(); return start - end; }
-}
-
-template <typename T>
-unsigned int queue_buffer<T>::addamount(T * _buffer,const unsigned int &amount) {
-
-}
-
-template <typename T>
-unsigned int queue_buffer<T>::addsome(T * _buffer,const unsigned int &max_amount, unsigned int &added_amount) {
-
+	else { return start - end; }
 }
 
 template <typename T>
 bool queue_buffer<T>::get(T &into) {
-	m.lock();
-	//std::unique_lock<std::mutex> lk(m);
-	if (isEmpty()) { m.unlock(); return false; }
-	//std::cout << "getting" << std::endl;
+	std::lock_guard<std::mutex> lock(m);
+	if (isEmpty()) { return false; }
 
 	into = buffer[start];
 	start = (start + 1) % cap;
 	if (start == end) { emptyflag = true; }
-	m.unlock();
 	return true;
-}
-
-template <typename T>
-T* queue_buffer<T>::getamount(const unsigned int &amount) {
-
-}
-
-template <typename T>
-T* queue_buffer<T>::getsome(unsigned int &got_amount,const unsigned int &max_amount) {
-
-}
-
-template <typename T>
-T* queue_buffer<T>::getsome(unsigned int &got_amount) {
-
 }
 
 template <typename T>
