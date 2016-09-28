@@ -5,7 +5,7 @@
 #include "iBuffer.h"
 
 template <typename T>
- class queue_buffer : private iBuffer<T>{
+ class queue_buffer : public iBuffer<T>{
 private:
 	unsigned int cap;
 	T * buffer;
@@ -19,7 +19,7 @@ public:
 	~queue_buffer();
 
 	/*Adds argument to buffer. Returns remaining capacity, -1 if was full*/
-	unsigned int add(const T  &_buffer);
+	unsigned int add(T  &_buffer);
 	/*Copies next T into argument. Returns true on success, false on failure (buffer was empty)*/
 	bool get(T &into);
 	/*Returns whether buffer is empty*/
@@ -75,7 +75,7 @@ queue_buffer<T>::queue_buffer(unsigned int _capacity) {
 }
 
 template <typename T>
-unsigned int queue_buffer<T>::add(const T  &_buffer) {
+unsigned int queue_buffer<T>::add(T  &_buffer) {
 	std::lock_guard<std::mutex> lock(m);
 	if (start == end) {
 		if (isEmpty()) {

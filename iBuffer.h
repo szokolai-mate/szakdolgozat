@@ -2,8 +2,9 @@
 
 template <typename T>
 class iBuffer{
+public:
     /*Adds argument to buffer. Returns remaining capacity, -1 if was full*/
-    virtual unsigned int add(const T  &_buffer) = 0;
+    virtual unsigned int add(T  & _buffer) = 0;
     
     /*Copies next T into argument. Returns true on success, false on failure (buffer was empty)*/
 	virtual bool get(T &into) = 0;

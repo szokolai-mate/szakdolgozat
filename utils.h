@@ -27,3 +27,19 @@ struct audio_descriptor {
 		sample_rate = _sample_rate;
 	}
 };
+
+struct audio_file_descriptor {
+    unsigned long data_start;
+    unsigned long next_byte;
+
+    audio_file_descriptor(){}
+    audio_file_descriptor(unsigned long _data_start,unsigned long _next_byte){
+        data_start=_data_start;
+        next_byte=_next_byte;
+    }
+    audio_file_descriptor(unsigned long _data_start){
+        data_start=_data_start;
+        next_byte=_data_start;
+    }
+
+};

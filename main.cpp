@@ -16,10 +16,11 @@
 #include <chrono>
 #include <mutex>
 #include <condition_variable>
+#include <string>
 
 #include "utils.h"
 
-#include "tmp.h"
+#include "simple_loader.cpp"
 
 
 std::mutex m;
@@ -202,13 +203,21 @@ PaDeviceInfo const* info = Pa_GetDeviceInfo(0);
 	}
 
 	queue_buffer<float> qb(4096);
+	simple_loader<float> loader;
+	//in.open("Sine.ogg", std::ios::binary);
+	//in.open("01 - Dancing Queen.ogg", std::ios::binary);
+	//in.open("Lumme-Badloop.ogg", std::ios::binary);
+	//in.open("mono86kbps44100.ogg", std::ios::binary);
+	std::string fname {"Ain't_No_Rest_For_The_Wicked.ogg"};
+	loader.open(&fname);
 
 	bool done_loading = false;
-
-	audio_descriptor ad{};
-	std::thread t1(load, &qb, &ad, &done_loading, &cv,&m);
+	std::thread t1([&] {loader.load(&qb); });
+	std::cout<<"sleeping"<<std::endl;
+	std::this_thread::sleep_for(std::chrono::duration<int, std::ratio<1, 1000>>(3000));
+	std::cout<<"waking"<<std::endl;
 	//kellene ready to play CV - mi van ha nem olvasta még be a sample ratet?
-	std::thread t2(play, &qb, &ad, &done_loading);
+	std::thread t2(play, &qb, (loader.getAudioDescriptor()), &done_loading);
 	t2.join();
 	t1.join();
 	std::cout << "load finished" << std::endl;
@@ -217,3 +226,9 @@ PaDeviceInfo const* info = Pa_GetDeviceInfo(0);
 	std::cout << "threads finished" << std::endl;
 	std::cin.get();
 }
+/*szét kell szedni a loaderben a töltéseket:
+1. load - betölti a headert 
+2. utána elkezd megának egy threaded ami tölt
+3. ezt a töltő- threaded meg kell tudni állítani
+*/
+//TODO: thread fogadjon el object instance metódust
