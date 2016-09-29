@@ -3,6 +3,7 @@
 #include <iostream>
 #include <thread>
 #include <chrono>
+#include <future>
 
 #include <ogg/ogg.h>
 #include <vorbis/codec.h>
@@ -16,22 +17,14 @@ template <typename T>
 class simple_loader : public iLoader<T>{
 private:
     std::ifstream infile;
-    audio_descriptor ad;
 public:
-    void load(iBuffer<T> * _buffer);
+    void load(iBuffer<T> * _buffer , std::promise<audio_descriptor> _adp);
     bool open(const std::string * _filename);
     void pause_load();
-
-    audio_descriptor * getAudioDescriptor();
-
-	//test
-	static void start_load(simple_loader * instance,iBuffer<T> * _buffer){
-		instance->load(_buffer);
-	}
 };
 
 template <typename T>
-void simple_loader<T>::load(iBuffer<T> * _buffer){
+void simple_loader<T>::load(iBuffer<T> * _buffer ,  std::promise<audio_descriptor> _adp){
     //TODO:exceptions
 
 	ogg_sync_state   oy; /* sync and verify incoming physical bitstream */
@@ -179,8 +172,9 @@ void simple_loader<T>::load(iBuffer<T> * _buffer){
 				++ptr;
 			}
 
-			ad.channels = vi.channels;
-			ad.sample_rate = vi.rate;
+			audio_descriptor ad (vi.channels,vi.rate);
+
+			_adp.set_value(ad);
 
 			channels = vi.channels;
 			sample_rate = vi.rate;
@@ -300,9 +294,3 @@ template <typename T>
 void simple_loader<T>::pause_load(){
     
 }
-
-template <typename T>
-audio_descriptor * simple_loader<T>::getAudioDescriptor(){
-    return &(this->ad);
-}
-
