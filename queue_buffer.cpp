@@ -4,6 +4,8 @@
 
 #include "iBuffer.h"
 
+//TODO: megpróbálni locklessé tenni
+
 template <typename T>
  class queue_buffer : public iBuffer<T>{
 private:
@@ -21,7 +23,7 @@ public:
 	/*Adds argument to buffer. Returns remaining capacity, -1 if was full*/
 	unsigned int add(T  &_buffer);
 	/*Copies next T into argument. Returns true on success, false on failure (buffer was empty)*/
-	bool get(T &into);
+	unsigned int get(T &into);
 	/*Returns whether buffer is empty*/
 	bool isEmpty() {
 		return emptyflag;
@@ -98,14 +100,18 @@ unsigned int queue_buffer<T>::add(T  &_buffer) {
 }
 
 template <typename T>
-bool queue_buffer<T>::get(T &into) {
-	std::lock_guard<std::mutex> lock(m);
-	if (isEmpty()) { return false; }
+unsigned int queue_buffer<T>::get(T &into) {
+	//std::lock_guard<std::mutex> lock(m);
+	if (isEmpty()) { return 0; }
 
 	into = buffer[start];
 	start = (start + 1) % cap;
 	if (start == end) { emptyflag = true; }
-	return true;
+	if (start < end) {
+			return end - start;
+		}
+	if (!emptyflag && start == end) { return cap; }
+	return cap-start+end;
 }
 
 template <typename T>

@@ -18,13 +18,13 @@ class simple_loader : public iLoader<T>{
 private:
     std::ifstream infile;
 public:
-    void load(iBuffer<T> * _buffer , std::promise<audio_descriptor> _adp);
-    bool open(const std::string * _filename);
+    void load(iBuffer<T> & _buffer , std::promise<audio_descriptor> _adp);
+    bool open(const std::string & _filename);
     void pause_load();
 };
 
 template <typename T>
-void simple_loader<T>::load(iBuffer<T> * _buffer ,  std::promise<audio_descriptor> _adp){
+void simple_loader<T>::load(iBuffer<T> & _buffer ,  std::promise<audio_descriptor> _adp){
     //TODO:exceptions
 
 	ogg_sync_state   oy; /* sync and verify incoming physical bitstream */
@@ -227,12 +227,12 @@ void simple_loader<T>::load(iBuffer<T> * _buffer ,  std::promise<audio_descripto
 								while ((samples = vorbis_synthesis_pcmout(&vd, &pcm))>0) {
 									for (int i = 0; i < samples; i++) {
 										for (int j = 0; j < vi.channels; j++) {
-											int res = _buffer->add(pcm[j][i]);
+											int res = _buffer.add(pcm[j][i]);
 											//debug::read++;
 											while (res<0) {
 												std::this_thread::yield();
-												std::this_thread::sleep_for(std::chrono::duration<int, std::ratio<1, 1000>>(3));
-												res = _buffer->add(pcm[j][i]);
+												std::this_thread::sleep_for(std::chrono::duration<int, std::ratio<1, 1000>>(1));
+												res = _buffer.add(pcm[j][i]);
 											}
 										}
 									}
@@ -280,11 +280,11 @@ void simple_loader<T>::load(iBuffer<T> * _buffer ,  std::promise<audio_descripto
 }
 
 template <typename T>
-bool simple_loader<T>::open(const std::string * _filename){
-    this->infile.open(_filename->c_str(),std::ios::binary);
+bool simple_loader<T>::open(const std::string & _filename){
+    this->infile.open(_filename.c_str(),std::ios::binary);
     if(!infile.is_open()){
         //error
-        std::cerr<<"Error opening file: "<<_filename->c_str() << std::endl;
+        std::cerr<<"Error opening file: "<<_filename.c_str() << std::endl;
         return false;
     }
     return true;
