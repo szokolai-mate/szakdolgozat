@@ -101,7 +101,7 @@ unsigned int queue_buffer<T>::add(T  &_buffer) {
 
 template <typename T>
 unsigned int queue_buffer<T>::get(T &into) {
-	//std::lock_guard<std::mutex> lock(m);
+	std::lock_guard<std::mutex> lock(m);
 	if (isEmpty()) { return 0; }
 
 	into = buffer[start];

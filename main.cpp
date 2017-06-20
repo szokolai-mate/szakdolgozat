@@ -8,6 +8,8 @@
 
 //TODO: blokkolóval tesztelni a sinuszt
 
+//TODO: statikus buffer, hogy ellenőrizhessem a szekvencialitást és hogy a pause/play miért dobál el frameket (gyorsabbnak tűnik a lejátszás)
+
 //pretest: blokkoló example nem kattog, nem blokkoló ugyanugy kattog.
 //BLOKKOLÓVAL KELL AZ EGÉSZET CSINÁLNOM GÓFUCK
 //pretest2: a nem blokkoló record-playback nem mutat poppolást, KELL MÉG TESZTELNI
@@ -28,12 +30,10 @@ tehát pulseaudio = el kell foglalni a hardvert = semmi más nem adhat ki hangot
 
 //probléma: mintha kihagyna amikor resume-nál underflow van.
 
-
-//TODO: libsoundio callback is kattog-e
-
-
+//TODO:probléma:pause és play kiugraszt cuccot valamiért.
 //VOLUME: valahogy a callbackbe rakni a volume-babrálást? (currentVolume, targetVolume,volumeChange)
 
+//tézis: a portaudio stopstream-je alapból kattan valamiért.
 //TODO: read up on move semantics for efficient buffer mixing/input/output
 
 #include <iostream>
@@ -46,9 +46,9 @@ tehát pulseaudio = el kell foglalni a hardvert = semmi más nem adhat ki hangot
 
 #include "simple_loader.cpp"
 #include "simple_manager.cpp"
-#include "simple_player.cpp"
 
 #include "queue_buffer.cpp"
+
 
 	#include <set>
 	#include <chrono>
@@ -113,14 +113,15 @@ int main()
 				PaHostApiInfo const *apiinfo = Pa_GetHostApiInfo(info->hostApi);
 				printf("Default odevice: %s of API %s\n", info->name,apiinfo->name);
 			}
-	#endif
+    #endif
 
     queue_buffer<float> qb(512*16);
     simple_loader<float> loader;
+
     std::string elephant{"Ain't_No_Rest_For_The_Wicked.ogg"};
-	std::string abba{"01 - Dancing Queen.ogg"};
-	std::string mono{"mono86kbps44100.ogg"};
-    loader.open(elephant);
+	  std::string abba{"01 - Dancing Queen.ogg"};
+	  std::string mono{"mono86kbps44100.ogg"};
+    loader.open(abba);
 	
     std::promise<audio_descriptor> adp;
     std::future<audio_descriptor> adf = adp.get_future();
@@ -132,7 +133,9 @@ int main()
 
 	mt.init(qb, adf.get());
 	mt.play();
+
     bool l=true;
+    std::cout<<"Press any key to play/pause"<<std::endl;
     while(std::cin.get()){
         if(l)mt.pause();
         else mt.play();

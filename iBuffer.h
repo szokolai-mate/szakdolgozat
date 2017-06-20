@@ -4,11 +4,11 @@
 template <typename T>
 class iBuffer{
 public:
-    /*Adds argument to buffer. Returns remaining capacity, -1 if was full*/
-    virtual unsigned int add(T  & _buffer) = 0;
+    /*Adds argument to buffer. Returns remaining capacity, -1 if was already full*/
+    virtual int add(T  & _buffer) = 0;
     
-    /*Copies next T into argument. Returns true on success, false on failure (buffer was empty)*/
-	virtual unsigned int get(T &into) = 0;
+    /*Copies next T into argument. Returns remaining elements in buffer*/
+	virtual int get(T &into) = 0;
 
     /*Returns whether buffer is empty*/
 	virtual bool isEmpty() = 0;

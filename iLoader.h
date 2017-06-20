@@ -4,6 +4,7 @@
 #include <future>
 
 #include "iBuffer.h"
+#include "utils.h"
 
 template <typename T>
 class iLoader{
