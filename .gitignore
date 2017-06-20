@@ -1,2 +1,4 @@
-*.ogg
+./*.ogg
 .vscode/*
+./*.out
+./*.exe

@@ -20,7 +20,10 @@ private:
 public:
     void load(iBuffer<T> & _buffer , std::promise<audio_descriptor> _adp);
     bool open(const std::string & _filename);
+	bool close();
     void pause_load();
+
+	~simple_loader<T>();	
 };
 
 template <typename T>
@@ -290,7 +293,21 @@ bool simple_loader<T>::open(const std::string & _filename){
     return true;
 }
 
+template<typename T>
+bool simple_loader<T>::close(){
+	if(this->infile.close())
+		return true;
+	return false;
+}
+
 template <typename T>
 void simple_loader<T>::pause_load(){
     
+}
+
+template <typename T>
+simple_loader<T>::~simple_loader(){
+    if(this->infile.is_open()){
+		this->infile.close();
+	}
 }

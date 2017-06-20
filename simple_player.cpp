@@ -24,6 +24,8 @@ std::mutex m;
 std::condition_variable cv;
 
 sine_generator sg(440);
+int counter = 0;
+bool change = false;
 
 
 //-tmp
@@ -111,6 +113,15 @@ static int sineCallback(const void *inputBuffer, void *outputBuffer,
 
 	while(i<framesPerBuffer){
 		float sine=sg.next();
+		//tmp
+		++counter;
+		if(counter>48000*3){
+			counter=0;
+			if(change){sg.setFrequency(880);change=false;}
+			else{change = true; sg.setFrequency(440);}
+		}
+
+		//~tmp
 		*out=clip::soft_clip(sine*data->volume);
 		out++;
 		*out=clip::soft_clip(sine*data->volume);

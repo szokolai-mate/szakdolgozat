@@ -34,10 +34,11 @@ tehát pulseaudio = el kell foglalni a hardvert = semmi más nem adhat ki hangot
 
 //VOLUME: valahogy a callbackbe rakni a volume-babrálást? (currentVolume, targetVolume,volumeChange)
 
+//TODO: read up on move semantics for efficient buffer mixing/input/output
+
 #include <iostream>
 #include <thread>
 #include <future>
-#include <askfjbfsd>
 
 #include <portaudio.h>
 
@@ -116,9 +117,6 @@ int main()
 
     queue_buffer<float> qb(512*16);
     simple_loader<float> loader;
-    //in.open("Sine.ogg", std::ios::binary);
-    //in.open("01 - Dancing Queen.ogg", std::ios::binary);
-    //in.open("Lumme-Badloop.ogg", std::ios::binary);
     std::string elephant{"Ain't_No_Rest_For_The_Wicked.ogg"};
 	std::string abba{"01 - Dancing Queen.ogg"};
 	std::string mono{"mono86kbps44100.ogg"};

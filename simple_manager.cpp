@@ -1,3 +1,14 @@
+//TODO: itt kell majd több folyamot összefésülni.
+// ->next,next(amount),move semantics?
+
+
+//lesz egy kevert buffer, ezt a többiből keveri össze. next;next(amount). repeatingbuffer-nek is kell lennie next(amount)-nak -> repeating is : IBuffer
+//mit keverjen: csak valami iterálható adatszerkezet iBufferekből
+// -> hogy kell minden collectiont elfogadtatni? iterátor?
+// -> ezek szerint az időzítést nem itt kéne intézni, csak kívulről attach/detach buffereket
+// --->bufferből ha elfogyik az adat, és a buffer már CLOSED! akkor detach. ilyenkor akár újrahasználhatnánk!
+// -------->buffer pool?
+
 #include "iManager.h"
 #include "simple_player.cpp"
 
