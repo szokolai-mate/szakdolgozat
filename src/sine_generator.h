@@ -1,6 +1,6 @@
 #pragma once
 
-#include "utils.h"
+#include <utils.h>
 #include <iostream>
 //TODO: változtatható frekvencia
 //TODO: szétszedni h+cpp

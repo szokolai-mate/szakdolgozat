@@ -1,9 +1,72 @@
 {
-    // See https://go.microsoft.com/fwlink/?LinkId=733558
-    // for the documentation about the tasks.json format
-    "version": "0.1.0",
-    "command": "g++",
-    "isShellCommand": true,
-    "args": ["-g","-pthread","-lportaudio","-lvorbis","-logg","main.cpp"],
-    "showOutput": "always"
+  "version": "0.1.0",
+  "isShellCommand": true,
+  "linux": { "command": "sh", "args": ["-c"] },
+  "osx": { "command": "sh", "args": ["-c"] },
+  "windows": { "command": "powershell", "args": ["-Command"] },
+  "tasks": [
+    {
+      "taskName": "build Mixer",
+      "args": ["mkdir -p build && cd build && cmake .. && make Mixer && make cleanup"],
+      "showOutput": "always",
+      "isShellCommand": true,
+      "suppressTaskName": true,
+      "isBuildCommand": true,
+      "isTestCommand": false,
+      "problemMatcher": {
+                "owner": "cpp",
+                "fileLocation": ["relative", "${workspaceRoot}"],
+                "pattern": {
+                    "regexp": "^(.*):(\\d+):(\\d+):\\s+(warning|error):\\s+(.*)$",
+                    "file": 1,
+                    "line": 2,
+                    "column": 3,
+                    "severity": 4,
+                    "message": 5
+                }
+            }
+    },
+    {
+      "taskName": "build Test",
+      "args": ["mkdir -p build && cd build && cmake .. && make Test && make coverage && make cleanup"],
+      "showOutput": "always",
+      "isShellCommand": true,
+      "suppressTaskName": true,
+      "isBuildCommand": true,
+      "isTestCommand": false,
+      "problemMatcher": {
+                "owner": "cpp",
+                "fileLocation": ["relative", "${workspaceRoot}"],
+                "pattern": {
+                    "regexp": "^(.*):(\\d+):(\\d+):\\s+(warning|error):\\s+(.*)$",
+                    "file": 1,
+                    "line": 2,
+                    "column": 3,
+                    "severity": 4,
+                    "message": 5
+                }
+            }
+    },
+    {
+      "taskName": "build doc",
+      "args": ["mkdir -p build && cd build && cmake .. && make doc && make cleanup"],
+      "showOutput": "always",
+      "isShellCommand": true,
+      "suppressTaskName": true,
+      "isBuildCommand": true,
+      "isTestCommand": false,
+      "problemMatcher": {
+                "owner": "cpp",
+                "fileLocation": ["relative", "${workspaceRoot}"],
+                "pattern": {
+                    "regexp": "^(.*):(\\d+):(\\d+):\\s+(warning|error):\\s+(.*)$",
+                    "file": 1,
+                    "line": 2,
+                    "column": 3,
+                    "severity": 4,
+                    "message": 5
+                }
+            }
+    }
+  ]
 }

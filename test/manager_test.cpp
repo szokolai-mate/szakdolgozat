@@ -1,4 +1,5 @@
-#include "iPlayer.h"
+//TODO: what is even this
+/*#include "iPlayer.h"
 
 class Manager {
     private:
@@ -12,4 +13,4 @@ iPlayer * Manager::player=0;
 
 iPlayer * Manager::getPlayer(){
     return Manager::player;
-}
+}*/

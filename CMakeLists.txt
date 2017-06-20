@@ -1,3 +1,4 @@
+#TODO: cleanup cmake - linked libraries, test target
 cmake_minimum_required(VERSION 3.6)
 
 project(Szakdolgozat)
@@ -13,16 +14,14 @@ include_directories(inc)
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++14")
 
 add_custom_target(doc
-WORKING_DIRECTORY ${PROJECT_SOURCE_DIR}/../doc
+WORKING_DIRECTORY ${PROJECT_SOURCE_DIR}/doc
 COMMAND echo "Generating documentation."
-COMMAND mkdir -p ${PROJECT_SOURCE_DIR}/../doc/
-COMMAND echo ${PROJECT_SOURCE_DIR}
 COMMAND doxygen
 )
 set_target_properties(doc PROPERTIES EXCLUDE_FROM_DEFAULT_BUILD TRUE)
 
 add_custom_target(cleanup
 WORKING_DIRECTORY ${PROJECT_BINARY_DIR}
-COMMAND find . ! \\\( -name 'Server' -o -name 'Test' \\\) -type f -exec rm -f {} +
+COMMAND find . ! \\\( -name 'Mixer' -o -name 'Test' \\\) -type f -exec rm -f {} +
 COMMAND find . ! \\\( -name bin -o -name . -o -name .. \\\) -type d -exec rm -rf {} +
 )

@@ -44,10 +44,10 @@ tehát pulseaudio = el kell foglalni a hardvert = semmi más nem adhat ki hangot
 
 #include "utils.h"
 
-#include "simple_loader.cpp"
-#include "simple_manager.cpp"
+#include <SimpleLoader.h>
+//#include "simple_manager.cpp"
 
-#include "queue_buffer.cpp"
+//#include "queue_buffer.cpp"
 
 
 	#include <set>
@@ -115,7 +115,7 @@ int main()
 			}
     #endif
 
-    queue_buffer<float> qb(512*16);
+    //queue_buffer<float> qb(512*16);
     simple_loader<float> loader;
 
     std::string elephant{"Ain't_No_Rest_For_The_Wicked.ogg"};
@@ -123,7 +123,7 @@ int main()
 	  std::string mono{"mono86kbps44100.ogg"};
     loader.open(abba);
 	
-    std::promise<audio_descriptor> adp;
+    /*std::promise<audio_descriptor> adp;
     std::future<audio_descriptor> adf = adp.get_future();
     std::thread t1([&] { loader.load(qb, std::move(adp)); });
 	
@@ -143,6 +143,6 @@ int main()
     }
 
     t1.join();
-    std::cout << "threads finished" << std::endl;
+    std::cout << "threads finished" << std::endl;*/
     std::cin.get();
 }

@@ -21,9 +21,9 @@ public:
 	~queue_buffer();
 
 	/*Adds argument to buffer. Returns remaining capacity, -1 if was full*/
-	unsigned int add(T  &_buffer);
+	int add(T  &_buffer);
 	/*Copies next T into argument. Returns true on success, false on failure (buffer was empty)*/
-	unsigned int get(T &into);
+	int get(T &into);
 	/*Returns whether buffer is empty*/
 	bool isEmpty() {
 		return emptyflag;
@@ -77,7 +77,7 @@ queue_buffer<T>::queue_buffer(unsigned int _capacity) {
 }
 
 template <typename T>
-unsigned int queue_buffer<T>::add(T  &_buffer) {
+int queue_buffer<T>::add(T  &_buffer) {
 	std::lock_guard<std::mutex> lock(m);
 	if (start == end) {
 		if (isEmpty()) {
@@ -100,7 +100,7 @@ unsigned int queue_buffer<T>::add(T  &_buffer) {
 }
 
 template <typename T>
-unsigned int queue_buffer<T>::get(T &into) {
+int queue_buffer<T>::get(T &into) {
 	std::lock_guard<std::mutex> lock(m);
 	if (isEmpty()) { return 0; }
 

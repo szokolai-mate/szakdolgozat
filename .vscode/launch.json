@@ -2,10 +2,10 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "C++ Launch",
+            "name": "launch Mixer",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${workspaceRoot}/a.out",
+            "program": "${workspaceRoot}/build/bin/Mixer",
             "args": [],
             "stopAtEntry": false,
             "cwd": "${workspaceRoot}",
@@ -20,14 +20,18 @@
             "windows": {
                 "MIMode": "gdb"
             },
-            "preLaunchTask": "g++"
+            "preLaunchTask": "build Mixer"
         },
         {
-            "name": "C++ Attach",
+            "name": "launch Test",
             "type": "cppdbg",
-            "request": "attach",
-            "program": "${workspaceRoot}/a.out",
-            "processId": "${command.pickProcess}",
+            "request": "launch",
+            "program": "${workspaceRoot}/build/bin/Test",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceRoot}",
+            "environment": [],
+            "externalConsole": true,
             "linux": {
                 "MIMode": "gdb"
             },
@@ -36,7 +40,30 @@
             },
             "windows": {
                 "MIMode": "gdb"
-            }
+            },
+            "preLaunchTask": "build Test"
+        }
+        ,
+        {
+            "name": "make Documentation",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceRoot}",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceRoot}",
+            "environment": [],
+            "externalConsole": true,
+            "linux": {
+                "MIMode": "gdb"
+            },
+            "osx": {
+                "MIMode": "lldb"
+            },
+            "windows": {
+                "MIMode": "gdb"
+            },
+            "preLaunchTask": "build doc"
         }
     ]
 }

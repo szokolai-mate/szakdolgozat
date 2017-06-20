@@ -1,30 +1,7 @@
-#include <fstream>
-#include <string>
-#include <iostream>
-#include <thread>
-#include <chrono>
-#include <future>
-
-#include <ogg/ogg.h>
-#include <vorbis/codec.h>
-
-#include "iLoader.h"
+#include <SimpleLoader.h>
 #include "utils.h"
 
 #define BUFFERSIZE 4096
-
-template <typename T>
-class simple_loader : public iLoader<T>{
-private:
-    std::ifstream infile;
-public:
-    void load(iBuffer<T> & _buffer , std::promise<audio_descriptor> _adp);
-    bool open(const std::string & _filename);
-	bool close();
-    void pause_load();
-
-	~simple_loader<T>();	
-};
 
 template <typename T>
 void simple_loader<T>::load(iBuffer<T> & _buffer ,  std::promise<audio_descriptor> _adp){
