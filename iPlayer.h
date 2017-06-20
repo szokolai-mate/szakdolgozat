@@ -12,6 +12,7 @@ public:
     virtual bool stop() = 0;
     virtual bool play() = 0;
 protected:
-    T volume;
+    T volume,targetVolume,deltaVolume;
+    std::atomic<bool> paused;
     iBuffer<T> * buffer;
 };

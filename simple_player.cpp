@@ -64,17 +64,36 @@ private:
 		out++;
 		i++;
 	}*/
-	//ez miért nem segít?
-	if(data->buffer->size()<framesPerBuffer*2){std::cout<<"not enough frames in buffer: "<<data->buffer->size()/2<<std::endl;return paContinue;}
+	if(data->buffer->size()<framesPerBuffer*2){std::cout<<"not enough frames in buffer: "<<data->buffer->size()/2<<std::endl;}
+
+    if(data->paused){
+        data->deltaVolume=data->targetVolume-data->volume/framesPerBuffer;
+    }
+
     float into;
     i = 0;
     unsigned int more;
     while (i < framesPerBuffer)
     {
+        if(data->volume!=data->targetVolume){
+            data->volume+=data->deltaVolume;
+            if(data->deltaVolume>0){
+                if(data->volume>data->targetVolume){
+                    //fölé ment ->kész
+                    data->volume=data->targetVolume;
+                }
+            }
+            else{
+                if(data->volume<data->targetVolume){
+                    //alá ment->kész
+                    data->volume=data->targetVolume;
+                }
+            }
+        }
 	more = data->buffer->get(into);
 	if (!more)
 	{
-	    return paContinue;
+	    //return paContinue;
 	}
 	*out = clip::soft_clip(into*data->volume);
 	out++;
@@ -82,20 +101,15 @@ private:
 	
 	if (!more)
 	{
-	    return paContinue;
+	    //return paContinue;
 	}
 	*out = clip::soft_clip(into*data->volume);
 	out++;
 	i++;
-	//volume increase of noise
-	//data->volume += 0.00001f;
-	if (data->volume > 2.0f)
-	{
-	    data->volume = 0.0f;
-	}
     }
     return paContinue;
 }
+
 //SINE CALLBACK
 static int sineCallback(const void *inputBuffer, void *outputBuffer,
 			  unsigned long framesPerBuffer,
@@ -109,7 +123,33 @@ static int sineCallback(const void *inputBuffer, void *outputBuffer,
     unsigned int i = 0;
     (void)inputBuffer; /* Prevent unused variable warning. */
 
-	while(i<framesPerBuffer){
+    if(data->paused)std::cout<<"LAST CALLBACK"<<std::endl;
+    if(data->paused){
+        float distance = data->targetVolume-data->volume;
+        float step = distance/framesPerBuffer;
+        std::cout<<step<<"=step"<<std::endl;
+
+        data->deltaVolume=step;
+    }
+
+    while(i<framesPerBuffer){
+
+        if(data->volume!=data->targetVolume){
+            data->volume+=data->deltaVolume;
+
+            if(data->deltaVolume>0){
+                if(data->volume>data->targetVolume){
+                    //fölé ment ->kész
+                    data->volume=data->targetVolume;
+                }
+            }
+            else{
+                if(data->volume<data->targetVolume){
+                    //alá ment->kész
+                    data->volume=data->targetVolume;
+                }
+            }
+        }
 		float sine=sg.next();
 		*out=clip::soft_clip(sine*data->volume);
 		out++;
@@ -117,80 +157,65 @@ static int sineCallback(const void *inputBuffer, void *outputBuffer,
 		out++;
 		i++;
 	}
-	std::cout<<data->volume<<std::endl;
 	return paContinue;
 
 }
 
-};
 
+};
 
 template <typename T>
 bool simple_player<T>::pause (){
-	if(!stream){return false;}
+    this->targetVolume=0.0f;
+    this->deltaVolume=-0.005f;
+    this->paused=true;
+
+    if(!stream){return false;}
 	if(Pa_IsStreamStopped(stream)){return false;}
-	//wait for buffer.ready?
-	//test
-	while(this->volume>0.0f){
-		this->volume-=0.01f;
-		std::this_thread::sleep_for(std::chrono::duration<int, std::ratio<1, 1000>>(1));
-		//std::cout<<this->volume<<std::endl;
-	}
     err = Pa_StopStream(stream);
 	if (err != paNoError){
 	    Pa_error_occured(err);
         return false;
     }
-	return true;
-}
-
-template <typename T>
-bool simple_player<T>::stop (){
-	if(!stream){return false;}
-	//test
-	while(this->volume>0.0f){
-		this->volume-=0.001f;
-		std::this_thread::yield();
-		std::this_thread::sleep_for(std::chrono::duration<int, std::ratio<1, 1000>>(1));
-		//std::cout<<this->volume<<std::endl;
-
-	}
-
-	err = Pa_StopStream(stream);
-	if (err != paNoError){
-	    Pa_error_occured(err);
-        return false;
-    }
-	err = Pa_CloseStream(stream);
-	if (err != paNoError){
-	    Pa_error_occured(err);
-        return false;
-    }
-	Pa_Terminate();
-	
-    return true;   
+    return true;
 }
 
 template <typename T>
 bool simple_player<T>::play(){
-	if(!stream){return false;}
-	if(Pa_IsStreamActive(stream)){return false;}
-	err = Pa_StartStream(stream);
-	if (err != paNoError){
-	    Pa_error_occured(err);
+
+    this->paused=false;
+    this->targetVolume=0.5f;
+    this->deltaVolume=0.05f;
+
+    if(!stream){return false;}
+    if(Pa_IsStreamActive(stream)){return false;}
+    err = Pa_StartStream(stream);
+    if (err != paNoError){
+        Pa_error_occured(err);
         return false;
     }
-	//test
-	while(this->volume<0.5f){
-		this->volume+=0.01f;
-		std::this_thread::yield();
-		std::this_thread::sleep_for(std::chrono::duration<int, std::ratio<1, 1000>>(1));
-		//std::cout<<this->volume<<std::endl;
 
-	}
-	return true;
+    return true;
 }
 
+
+template <typename T>
+bool simple_player<T>::stop (){
+    if(!stream){return false;}
+    err = Pa_StopStream(stream);
+    if (err != paNoError){
+        Pa_error_occured(err);
+        return false;
+    }
+    err = Pa_CloseStream(stream);
+    if (err != paNoError){
+        Pa_error_occured(err);
+        return false;
+    }
+    Pa_Terminate();
+
+    return true;
+}
 
 template <typename T>
 bool simple_player<T>::init(iBuffer<T> & _buffer,const audio_descriptor ad ){
@@ -218,6 +243,8 @@ bool simple_player<T>::init(iBuffer<T> & _buffer,const audio_descriptor ad ){
 
 	this->buffer=&_buffer;
 	this->volume=0.5f;
+    this->targetVolume=0.0f;
+    this->deltaVolume=0.0f;
 
 	err = Pa_OpenStream(
 	&stream,
@@ -227,7 +254,7 @@ bool simple_player<T>::init(iBuffer<T> & _buffer,const audio_descriptor ad ){
 	256*8, //fixed for pulseaudio, testing 0 for others
 	//furcsa 1024-nél VAN underflow resume+playnél, de 2048-nál NINCS!  és ez a sine-ra is igaz ahol nincs buffer!
 	paClipOff,      /* we won't output out of range samples so don't bother clipping them */
-	sineCallback, /* no callback, use blocking API */
+	bufferCallback, /* no callback, use blocking API */
 	this);		/* no callback, so no callback userData */
 
     if (err != paNoError){
