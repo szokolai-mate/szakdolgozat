@@ -1,3 +1,5 @@
+//TODO: evaluate. is this some loader for testing buffers?
+/*
 #include "iLoader.h"
 #include "utils.h"
 
@@ -34,3 +36,4 @@ template <typename T>
 void dummyLoader<T>::pause_load() {
     this->loading=false;
 }
+*/

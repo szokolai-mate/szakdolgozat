@@ -36,13 +36,15 @@ tehát pulseaudio = el kell foglalni a hardvert = semmi más nem adhat ki hangot
 //tézis: a portaudio stopstream-je alapból kattan valamiért.
 //TODO: read up on move semantics for efficient buffer mixing/input/output
 
+//CURRENT TODO: separate h+impl -> now linker errors
+
 #include <iostream>
 #include <thread>
 #include <future>
 
 #include <portaudio.h>
 
-#include "utils.h"
+#include <Utils.h>
 
 #include <SimpleLoader.h>
 //#include "simple_manager.cpp"

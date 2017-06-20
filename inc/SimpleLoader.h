@@ -11,6 +11,7 @@
 #include <vorbis/codec.h>
 
 #include <iLoader.h>
+#include <Utils.h>
 
 template <typename T>
 class simple_loader : public iLoader<T>{

@@ -1,5 +1,4 @@
 #include <SimpleLoader.h>
-#include "utils.h"
 
 #define BUFFERSIZE 4096
 
@@ -272,9 +271,8 @@ bool simple_loader<T>::open(const std::string & _filename){
 
 template<typename T>
 bool simple_loader<T>::close(){
-	if(this->infile.close())
-		return true;
-	return false;
+	this->infile.close();
+	return !this->infile.fail();
 }
 
 template <typename T>
@@ -288,3 +286,5 @@ simple_loader<T>::~simple_loader(){
 		this->infile.close();
 	}
 }
+
+template class simple_loader<float>;
