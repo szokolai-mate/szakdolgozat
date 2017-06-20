@@ -1,4 +1,5 @@
 #pragma once
+//TODO: closed flag, ha már nem szándékozunk újat beletölteni
 
 template <typename T>
 class iBuffer{

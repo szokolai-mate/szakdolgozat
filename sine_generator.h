@@ -2,7 +2,7 @@
 
 #include "utils.h"
 #include <iostream>
-//TODO: a kiadott frekvencia pontosságát tesztelni
+//TODO: változtatható frekvencia
 //TODO: szétszedni h+cpp
 #define SINE_TABLE_SIZE 2400
 class sine_generator{
@@ -19,6 +19,9 @@ public:
     sine_generator(float _frequency);
     float next();
     float getFrequency();
+
+    //test
+    void setFrequency(float _frequency);
 };
 
 const std::array<float,sine_generator::table_size> sine_generator::sinetable = constexpr_array::make<sine_generator::table_size>(sine_generator::functor);
@@ -42,4 +45,9 @@ float sine_generator::next(){
 
 float sine_generator::getFrequency(){
     return this->step*20.0f;
+}
+
+//test
+void sine_generator::setFrequency(float _frequency){
+    this->step=_frequency/20;
 }
