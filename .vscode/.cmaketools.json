@@ -34,6 +34,55 @@
                 "type": "UTILITY"
               },
               {
+                "artifacts": [
+                  "/SharedWithWindows/Projects/szakdolgozat/build/bin/Mixer"
+                ],
+                "buildDirectory": "/SharedWithWindows/Projects/szakdolgozat/build/src",
+                "fileGroups": [
+                  {
+                    "compileFlags": " -std=c++14 -g  ",
+                    "includePath": [
+                      {
+                        "path": "/SharedWithWindows/Projects/szakdolgozat/inc"
+                      }
+                    ],
+                    "isGenerated": false,
+                    "language": "CXX",
+                    "sources": [
+                      "dummyLoader.cpp",
+                      "main.cpp",
+                      "queue_buffer.cpp",
+                      "simple_loader.cpp",
+                      "simple_manager.cpp",
+                      "simple_player.cpp"
+                    ]
+                  }
+                ],
+                "fullName": "Mixer",
+                "linkLanguageFlags": "-std=c++14 -g",
+                "linkLibraries": "-Wl,-rpath,/usr/local/lib -lpthread /usr/local/lib/libportaudio.so",
+                "linkerLanguage": "CXX",
+                "name": "Mixer",
+                "sourceDirectory": "/SharedWithWindows/Projects/szakdolgozat/src",
+                "type": "EXECUTABLE"
+              },
+              {
+                "buildDirectory": "/SharedWithWindows/Projects/szakdolgozat/build",
+                "fileGroups": [
+                  {
+                    "isGenerated": true,
+                    "sources": [
+                      "build/CMakeFiles/doc",
+                      "build/CMakeFiles/doc.rule"
+                    ]
+                  }
+                ],
+                "fullName": "doc",
+                "name": "doc",
+                "sourceDirectory": "/SharedWithWindows/Projects/szakdolgozat",
+                "type": "UTILITY"
+              },
+              {
                 "buildDirectory": "/SharedWithWindows/Projects/szakdolgozat/build/test",
                 "fileGroups": [
                   {
@@ -56,7 +105,7 @@
                 "buildDirectory": "/SharedWithWindows/Projects/szakdolgozat/build/test",
                 "fileGroups": [
                   {
-                    "compileFlags": " -std=c++14 -g -O0 --coverage -fprofile-arcs -ftest-coverage  ",
+                    "compileFlags": " -std=c++14 -g -O0 --coverage -fprofile-arcs -ftest-coverage -g  ",
                     "includePath": [
                       {
                         "path": "/SharedWithWindows/Projects/szakdolgozat/inc"
@@ -76,60 +125,11 @@
                   }
                 ],
                 "fullName": "Test",
-                "linkLanguageFlags": "-std=c++14 -g -O0 --coverage -fprofile-arcs -ftest-coverage",
+                "linkLanguageFlags": "-std=c++14 -g -O0 --coverage -fprofile-arcs -ftest-coverage -g",
                 "linkLibraries": "-lpthread /usr/local/lib/libgtest.a",
                 "linkerLanguage": "CXX",
                 "name": "Test",
                 "sourceDirectory": "/SharedWithWindows/Projects/szakdolgozat/test",
-                "type": "EXECUTABLE"
-              },
-              {
-                "buildDirectory": "/SharedWithWindows/Projects/szakdolgozat/build",
-                "fileGroups": [
-                  {
-                    "isGenerated": true,
-                    "sources": [
-                      "build/CMakeFiles/doc",
-                      "build/CMakeFiles/doc.rule"
-                    ]
-                  }
-                ],
-                "fullName": "doc",
-                "name": "doc",
-                "sourceDirectory": "/SharedWithWindows/Projects/szakdolgozat",
-                "type": "UTILITY"
-              },
-              {
-                "artifacts": [
-                  "/SharedWithWindows/Projects/szakdolgozat/build/bin/Mixer"
-                ],
-                "buildDirectory": "/SharedWithWindows/Projects/szakdolgozat/build/src",
-                "fileGroups": [
-                  {
-                    "compileFlags": " -std=c++14  ",
-                    "includePath": [
-                      {
-                        "path": "/SharedWithWindows/Projects/szakdolgozat/inc"
-                      }
-                    ],
-                    "isGenerated": false,
-                    "language": "CXX",
-                    "sources": [
-                      "dummyLoader.cpp",
-                      "main.cpp",
-                      "queue_buffer.cpp",
-                      "simple_loader.cpp",
-                      "simple_manager.cpp",
-                      "simple_player.cpp"
-                    ]
-                  }
-                ],
-                "fullName": "Mixer",
-                "linkLanguageFlags": "-std=c++14",
-                "linkLibraries": "-Wl,-rpath,/usr/local/lib -lpthread /usr/local/lib/libportaudio.so",
-                "linkerLanguage": "CXX",
-                "name": "Mixer",
-                "sourceDirectory": "/SharedWithWindows/Projects/szakdolgozat/src",
                 "type": "EXECUTABLE"
               }
             ]
@@ -137,7 +137,7 @@
         ]
       }
     ],
-    "cookie": "0.04510896077230009",
+    "cookie": "0.4803689611621289",
     "inReplyTo": "codemodel",
     "type": "reply"
   }

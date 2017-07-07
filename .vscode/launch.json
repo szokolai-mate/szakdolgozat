@@ -1,5 +1,6 @@
 {
     "version": "0.2.0",
+    "miDebuggerPath": "/usr/bin/gdb",
     "configurations": [
         {
             "name": "launch Mixer",
@@ -42,8 +43,7 @@
                 "MIMode": "gdb"
             },
             "preLaunchTask": "build Test"
-        }
-        ,
+        },
         {
             "name": "make Documentation",
             "type": "cppdbg",
