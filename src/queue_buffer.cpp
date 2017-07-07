@@ -2,7 +2,7 @@
 #include <mutex>
 #include <atomic>
 
-#include "iBuffer.h"
+#include <iBuffer.h>
 
 //TODO: megpróbálni locklessé tenni
 

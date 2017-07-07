@@ -9,8 +9,8 @@
 // --->bufferből ha elfogyik az adat, és a buffer már CLOSED! akkor detach. ilyenkor akár újrahasználhatnánk!
 // -------->buffer pool?
 
-#include "iManager.h"
-#include "simple_player.cpp"
+#include <iManager.h>
+#include <SimplePlayer.h>
 
 #include "utils.h"
 

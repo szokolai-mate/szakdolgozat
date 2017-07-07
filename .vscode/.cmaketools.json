@@ -7,5 +7,138 @@
     "description": "Emit debug information without performing optimizations"
   },
   "activeEnvironments": [],
-  "codeModel": null
+  "codeModel": {
+    "configurations": [
+      {
+        "name": "Debug",
+        "projects": [
+          {
+            "buildDirectory": "/SharedWithWindows/Projects/szakdolgozat/build",
+            "name": "Szakdolgozat",
+            "sourceDirectory": "/SharedWithWindows/Projects/szakdolgozat",
+            "targets": [
+              {
+                "buildDirectory": "/SharedWithWindows/Projects/szakdolgozat/build",
+                "fileGroups": [
+                  {
+                    "isGenerated": true,
+                    "sources": [
+                      "build/CMakeFiles/cleanup",
+                      "build/CMakeFiles/cleanup.rule"
+                    ]
+                  }
+                ],
+                "fullName": "cleanup",
+                "name": "cleanup",
+                "sourceDirectory": "/SharedWithWindows/Projects/szakdolgozat",
+                "type": "UTILITY"
+              },
+              {
+                "buildDirectory": "/SharedWithWindows/Projects/szakdolgozat/build/test",
+                "fileGroups": [
+                  {
+                    "isGenerated": true,
+                    "sources": [
+                      "../build/test/CMakeFiles/coverage",
+                      "../build/test/CMakeFiles/coverage.rule"
+                    ]
+                  }
+                ],
+                "fullName": "coverage",
+                "name": "coverage",
+                "sourceDirectory": "/SharedWithWindows/Projects/szakdolgozat/test",
+                "type": "UTILITY"
+              },
+              {
+                "artifacts": [
+                  "/SharedWithWindows/Projects/szakdolgozat/build/bin/Test"
+                ],
+                "buildDirectory": "/SharedWithWindows/Projects/szakdolgozat/build/test",
+                "fileGroups": [
+                  {
+                    "compileFlags": " -std=c++14 -g -O0 --coverage -fprofile-arcs -ftest-coverage  ",
+                    "includePath": [
+                      {
+                        "path": "/SharedWithWindows/Projects/szakdolgozat/inc"
+                      }
+                    ],
+                    "isGenerated": false,
+                    "language": "CXX",
+                    "sources": [
+                      "manager_test.cpp",
+                      "test_main.cpp",
+                      "../src/dummyLoader.cpp",
+                      "../src/queue_buffer.cpp",
+                      "../src/simple_loader.cpp",
+                      "../src/simple_manager.cpp",
+                      "../src/simple_player.cpp"
+                    ]
+                  }
+                ],
+                "fullName": "Test",
+                "linkLanguageFlags": "-std=c++14 -g -O0 --coverage -fprofile-arcs -ftest-coverage",
+                "linkLibraries": "-lpthread /usr/local/lib/libgtest.a",
+                "linkerLanguage": "CXX",
+                "name": "Test",
+                "sourceDirectory": "/SharedWithWindows/Projects/szakdolgozat/test",
+                "type": "EXECUTABLE"
+              },
+              {
+                "buildDirectory": "/SharedWithWindows/Projects/szakdolgozat/build",
+                "fileGroups": [
+                  {
+                    "isGenerated": true,
+                    "sources": [
+                      "build/CMakeFiles/doc",
+                      "build/CMakeFiles/doc.rule"
+                    ]
+                  }
+                ],
+                "fullName": "doc",
+                "name": "doc",
+                "sourceDirectory": "/SharedWithWindows/Projects/szakdolgozat",
+                "type": "UTILITY"
+              },
+              {
+                "artifacts": [
+                  "/SharedWithWindows/Projects/szakdolgozat/build/bin/Mixer"
+                ],
+                "buildDirectory": "/SharedWithWindows/Projects/szakdolgozat/build/src",
+                "fileGroups": [
+                  {
+                    "compileFlags": " -std=c++14  ",
+                    "includePath": [
+                      {
+                        "path": "/SharedWithWindows/Projects/szakdolgozat/inc"
+                      }
+                    ],
+                    "isGenerated": false,
+                    "language": "CXX",
+                    "sources": [
+                      "dummyLoader.cpp",
+                      "main.cpp",
+                      "queue_buffer.cpp",
+                      "simple_loader.cpp",
+                      "simple_manager.cpp",
+                      "simple_player.cpp"
+                    ]
+                  }
+                ],
+                "fullName": "Mixer",
+                "linkLanguageFlags": "-std=c++14",
+                "linkLibraries": "-Wl,-rpath,/usr/local/lib -lpthread /usr/local/lib/libportaudio.so",
+                "linkerLanguage": "CXX",
+                "name": "Mixer",
+                "sourceDirectory": "/SharedWithWindows/Projects/szakdolgozat/src",
+                "type": "EXECUTABLE"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "cookie": "0.04510896077230009",
+    "inReplyTo": "codemodel",
+    "type": "reply"
+  }
 }

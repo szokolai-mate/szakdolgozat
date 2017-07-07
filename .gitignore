@@ -79,3 +79,8 @@ client/jspm_packages
 *.ogg
 *.mp3
 *.wav
+
+# GTAGS
+GPATH
+GRTAGS
+GTAGS
