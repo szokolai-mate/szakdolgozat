@@ -11,7 +11,7 @@
 //#include "sine_generator.h"
 
 template <typename T>
-class simple_player : public iPlayer<T>
+class SimplePlayer : public iPlayer<T>
 {
   public:
     bool play();

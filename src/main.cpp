@@ -41,13 +41,13 @@ tehát pulseaudio = el kell foglalni a hardvert = semmi más nem adhat ki hangot
 
 #include <portaudio.h>
 
-//#include "utils.h"
+#include "utils.h"
 #include <iBuffer.h>
 
 //#include <SimpleLoader.h>
-//#include "simple_manager.cpp"
+#include "simple_manager.cpp"
 
-//#include "queue_buffer.cpp"
+#include "queue_buffer.cpp"
 
 #include <set>
 #include <chrono>
@@ -113,7 +113,7 @@ int main()
 	}
 #endif
 
-	//queue_buffer<float> qb(512*16);
+	queue_buffer<float> qb(512 * 16);
 	//simple_loader<float> loader;
 
 	std::string elephant{"Ain't_No_Rest_For_The_Wicked.ogg"};
@@ -124,22 +124,30 @@ int main()
 	/*std::promise<audio_descriptor> adp;
     std::future<audio_descriptor> adf = adp.get_future();
     std::thread t1([&] { loader.load(qb, std::move(adp)); });
-	
-	simple_manager<simple_player<float>> mt;
+	*/
+	//simple_manager<simple_player<float>> mt;
 
-    adf.wait();
+	//adf.wait();
 
-	mt.init(qb, adf.get());
+	audio_descriptor ad(2, 44000);
+	SimplePlayer<float> player;
+	/*
+	mt.init(qb, ad);
 	mt.play();
-
-    bool l=true;
-    std::cout<<"Press any key to play/pause"<<std::endl;
-    while(std::cin.get()){
-        if(l)mt.pause();
-        else mt.play();
-        l=!l;
-    }
-
+	*/
+	/*
+	bool l = true;
+	std::cout << "Press any key to play/pause" << std::endl;
+	while (std::cin.get())
+	{
+		if (l)
+			mt.pause();
+		else
+			mt.play();
+		l = !l;
+	}
+	*/
+	/*
     t1.join();
     std::cout << "threads finished" << std::endl;*/
 	std::cin.get();

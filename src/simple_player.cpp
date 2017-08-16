@@ -31,7 +31,7 @@ static int bufferCallback(const void *inputBuffer, void *outputBuffer,
 {
     /* Cast data passed through stream to our structure. */
     //iBuffer<float> *buffer = (iBuffer<float> *)userData;
-    simple_player<float> *data = (simple_player<float> *)userData;
+    SimplePlayer<float> *data = (SimplePlayer<float> *)userData;
     float *out = (float *)outputBuffer;
     unsigned int i;
     (void)inputBuffer; /* Prevent unused variable warning. */
@@ -111,7 +111,7 @@ static int sineCallback(const void *inputBuffer, void *outputBuffer,
 			  void *userData)
 {   
     /* Cast data passed through stream to our structure. */
-	simple_player<float> *data = (simple_player<float> *)userData;
+	SimplePlayer<float> *data = (SimplePlayer<float> *)userData;
     float *out = (float *)outputBuffer;
     unsigned int i = 0;
     (void)inputBuffer; /* Prevent unused variable warning. */
@@ -165,7 +165,7 @@ static int sineCallback(const void *inputBuffer, void *outputBuffer,
 
 
 template <typename T>
-bool simple_player<T>::pause()
+bool SimplePlayer<T>::pause()
 {
     this->targetVolume = 0.0f;
     this->deltaVolume = -0.005f;
@@ -189,7 +189,7 @@ bool simple_player<T>::pause()
 }
 
 template <typename T>
-bool simple_player<T>::play()
+bool SimplePlayer<T>::play()
 {
 
     this->paused = false;
@@ -215,7 +215,7 @@ bool simple_player<T>::play()
 }
 
 template <typename T>
-bool simple_player<T>::stop()
+bool SimplePlayer<T>::stop()
 {
     if (!stream)
     {
@@ -239,7 +239,7 @@ bool simple_player<T>::stop()
 }
 
 template <typename T>
-bool simple_player<T>::init(iBuffer<T> &_buffer, const audio_descriptor ad)
+bool SimplePlayer<T>::init(iBuffer<T> &_buffer, const audio_descriptor ad)
 {
     PaStreamParameters outputParameters;
 
