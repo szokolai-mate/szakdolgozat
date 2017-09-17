@@ -1,0 +1,3 @@
+<map id="Mixer::iAudioEndpoint&lt; T &gt;" name="Mixer::iAudioEndpoint&lt; T &gt;">
+<area shape="rect" id="node2" href="$classPortAudioEndpoint.html" title="{PortAudioEndpoint\&lt; T \&gt;\n|&#45; stream\l&#45; err\l&#45; source\l|+ init()\l+ start()\l+ stop()\l+ close()\l+ init()\l&#45; callbackFunction()\l&#45; callbackFunction()\l&#45; callbackFunction()\l}" alt="" coords="15,131,177,340"/>
+</map>

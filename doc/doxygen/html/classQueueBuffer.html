@@ -1,0 +1,622 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Szakdolgozat: QueueBuffer&lt; T &gt; osztálysablon-referencia</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Szakdolgozat
+   </div>
+   <div id="projectbrief">A szakdolgozatom ELTE Programtervező Informatikus BSc. szakra.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Készítette Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Keresés');
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Keresés');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Publikus tagfüggvények</a> &#124;
+<a href="#pri-methods">Privát tagfüggvények</a> &#124;
+<a href="#pri-attribs">Privát attribútumok</a> &#124;
+<a href="classQueueBuffer-members.html">A tagok teljes listája</a>  </div>
+  <div class="headertitle">
+<div class="title">QueueBuffer&lt; T &gt; osztálysablon-referencia</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="QueueBuffer_8h_source.html">QueueBuffer.h</a>&gt;</code></p>
+<div class="dynheader">
+A QueueBuffer&lt; T &gt; osztály származási diagramja:</div>
+<div class="dyncontent">
+<div class="center"><img src="classQueueBuffer__inherit__graph.png" border="0" usemap="#QueueBuffer_3_01T_01_4_inherit__map" alt="Inheritance graph"/></div>
+<map name="QueueBuffer_3_01T_01_4_inherit__map" id="QueueBuffer_3_01T_01_4_inherit__map">
+<area shape="rect" id="node2" href="classiBuffer.html" title="{iBuffer\&lt; T \&gt;\n||+ add()\l+ add()\l+ get()\l+ isEmpty()\l+ isFull()\l+ clear()\l+ capacity()\l+ size()\l}" alt="" coords="23,5,115,185"/>
+</map>
+</div>
+<div class="dynheader">
+A QueueBuffer&lt; T &gt; osztály együttműködési diagramja:</div>
+<div class="dyncontent">
+<div class="center"><img src="classQueueBuffer__coll__graph.png" border="0" usemap="#QueueBuffer_3_01T_01_4_coll__map" alt="Collaboration graph"/></div>
+<map name="QueueBuffer_3_01T_01_4_coll__map" id="QueueBuffer_3_01T_01_4_coll__map">
+<area shape="rect" id="node2" href="classiBuffer.html" title="{iBuffer\&lt; T \&gt;\n||+ add()\l+ add()\l+ get()\l+ isEmpty()\l+ isFull()\l+ clear()\l+ capacity()\l+ size()\l}" alt="" coords="5,5,97,185"/>
+</map>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Publikus tagfüggvények</h2></td></tr>
+<tr class="memitem:a366e7c97789ae30c27ad0f60082e6dac"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classQueueBuffer.html#a366e7c97789ae30c27ad0f60082e6dac">QueueBuffer</a> (unsigned int <a class="el" href="classQueueBuffer.html#afe82272243fc7c59b925d02ec80b3337">cap</a>)</td></tr>
+<tr class="separator:a366e7c97789ae30c27ad0f60082e6dac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa20332726677e1dbc24677083e7f7ed0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classQueueBuffer.html#aa20332726677e1dbc24677083e7f7ed0">~QueueBuffer</a> ()</td></tr>
+<tr class="separator:aa20332726677e1dbc24677083e7f7ed0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa6dc56709289aa30625b036184bcb53c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classQueueBuffer.html#aa6dc56709289aa30625b036184bcb53c">add</a> (T &amp;_buffer)</td></tr>
+<tr class="separator:aa6dc56709289aa30625b036184bcb53c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae694746640cafea59167d17f01e9ea98"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classQueueBuffer.html#ae694746640cafea59167d17f01e9ea98">add</a> (std::vector&lt; T &gt; &amp;_buffer)</td></tr>
+<tr class="separator:ae694746640cafea59167d17f01e9ea98"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3ae87863cdfea0f3410b3defbb1e9faa"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classQueueBuffer.html#a3ae87863cdfea0f3410b3defbb1e9faa">get</a> (T &amp;into)</td></tr>
+<tr class="separator:a3ae87863cdfea0f3410b3defbb1e9faa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa1379908218464cdcc14d2d11a744f61"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classQueueBuffer.html#aa1379908218464cdcc14d2d11a744f61">isEmpty</a> ()</td></tr>
+<tr class="separator:aa1379908218464cdcc14d2d11a744f61"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a36e110c54aafc2b192b49ffe7a168466"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classQueueBuffer.html#a36e110c54aafc2b192b49ffe7a168466">isFull</a> ()</td></tr>
+<tr class="separator:a36e110c54aafc2b192b49ffe7a168466"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0d95f72600e43992b00b65c74dcf93f0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classQueueBuffer.html#a0d95f72600e43992b00b65c74dcf93f0">clear</a> ()</td></tr>
+<tr class="separator:a0d95f72600e43992b00b65c74dcf93f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a0fa5a6d7e9626498f9790c7bfc0e7b"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classQueueBuffer.html#a3a0fa5a6d7e9626498f9790c7bfc0e7b">capacity</a> ()</td></tr>
+<tr class="separator:a3a0fa5a6d7e9626498f9790c7bfc0e7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a745ae1e3cb65118a4d43e3363bc4d232"><td class="memItemLeft" align="right" valign="top">T *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classQueueBuffer.html#a745ae1e3cb65118a4d43e3363bc4d232">exposeBuffer</a> ()</td></tr>
+<tr class="separator:a745ae1e3cb65118a4d43e3363bc4d232"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4883218e2edf1a9a1a0b7141fa478817"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classQueueBuffer.html#a4883218e2edf1a9a1a0b7141fa478817">size</a> ()</td></tr>
+<tr class="separator:a4883218e2edf1a9a1a0b7141fa478817"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Privát tagfüggvények</h2></td></tr>
+<tr class="memitem:a2ac44ec758e06403968b4c9d0a2f8549"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classQueueBuffer.html#a2ac44ec758e06403968b4c9d0a2f8549">currentSize</a> ()</td></tr>
+<tr class="separator:a2ac44ec758e06403968b4c9d0a2f8549"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Privát attribútumok</h2></td></tr>
+<tr class="memitem:afe82272243fc7c59b925d02ec80b3337"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classQueueBuffer.html#afe82272243fc7c59b925d02ec80b3337">cap</a></td></tr>
+<tr class="separator:afe82272243fc7c59b925d02ec80b3337"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac6c9ab54cdb21f164f720847230195cf"><td class="memItemLeft" align="right" valign="top">T *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classQueueBuffer.html#ac6c9ab54cdb21f164f720847230195cf">buffer</a></td></tr>
+<tr class="separator:ac6c9ab54cdb21f164f720847230195cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aab8f49c218eb30c476875db1a5927f8e"><td class="memItemLeft" align="right" valign="top">std::atomic&lt; unsigned int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classQueueBuffer.html#aab8f49c218eb30c476875db1a5927f8e">start</a></td></tr>
+<tr class="separator:aab8f49c218eb30c476875db1a5927f8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a327029adf155edfc2a516ecea51768fd"><td class="memItemLeft" align="right" valign="top">std::atomic&lt; unsigned int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classQueueBuffer.html#a327029adf155edfc2a516ecea51768fd">end</a></td></tr>
+<tr class="separator:a327029adf155edfc2a516ecea51768fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a06fbbdb498339a05c0fa56c350bf9f69"><td class="memItemLeft" align="right" valign="top">std::atomic&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classQueueBuffer.html#a06fbbdb498339a05c0fa56c350bf9f69">emptyflag</a></td></tr>
+<tr class="separator:a06fbbdb498339a05c0fa56c350bf9f69"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6509db78433b53715bcebfbd4b4a836e"><td class="memItemLeft" align="right" valign="top">std::mutex&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classQueueBuffer.html#a6509db78433b53715bcebfbd4b4a836e">m</a></td></tr>
+<tr class="separator:a6509db78433b53715bcebfbd4b4a836e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Konstruktorok és destruktorok dokumentációja</h2>
+<a id="a366e7c97789ae30c27ad0f60082e6dac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a366e7c97789ae30c27ad0f60082e6dac">&#9670;&nbsp;</a></span>QueueBuffer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classQueueBuffer.html">QueueBuffer</a>&lt; T &gt;::<a class="el" href="classQueueBuffer.html">QueueBuffer</a> </td>
+          <td>(</td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>cap</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa20332726677e1dbc24677083e7f7ed0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa20332726677e1dbc24677083e7f7ed0">&#9670;&nbsp;</a></span>~QueueBuffer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classQueueBuffer.html">QueueBuffer</a>&lt; T &gt;::~<a class="el" href="classQueueBuffer.html">QueueBuffer</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Tagfüggvények dokumentációja</h2>
+<a id="aa6dc56709289aa30625b036184bcb53c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa6dc56709289aa30625b036184bcb53c">&#9670;&nbsp;</a></span>add() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="classQueueBuffer.html">QueueBuffer</a>&lt; T &gt;::add </td>
+          <td>(</td>
+          <td class="paramtype">T &amp;&#160;</td>
+          <td class="paramname"><em>_buffer</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Megvalósítja a következőket: <a class="el" href="classiBuffer.html#ac58a1f6d936b5233dc389a540a48c696">iBuffer&lt; T &gt;</a>.</p>
+
+</div>
+</div>
+<a id="ae694746640cafea59167d17f01e9ea98"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae694746640cafea59167d17f01e9ea98">&#9670;&nbsp;</a></span>add() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="classQueueBuffer.html">QueueBuffer</a>&lt; T &gt;::add </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>_buffer</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Megvalósítja a következőket: <a class="el" href="classiBuffer.html#a46bce21caf4bfd22d7b3598db835a79b">iBuffer&lt; T &gt;</a>.</p>
+
+</div>
+</div>
+<a id="a3a0fa5a6d7e9626498f9790c7bfc0e7b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3a0fa5a6d7e9626498f9790c7bfc0e7b">&#9670;&nbsp;</a></span>capacity()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int <a class="el" href="classQueueBuffer.html">QueueBuffer</a>&lt; T &gt;::capacity </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Megvalósítja a következőket: <a class="el" href="classiBuffer.html#a477abe136ad2bd4e9b04110adef98f7c">iBuffer&lt; T &gt;</a>.</p>
+
+</div>
+</div>
+<a id="a0d95f72600e43992b00b65c74dcf93f0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0d95f72600e43992b00b65c74dcf93f0">&#9670;&nbsp;</a></span>clear()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classQueueBuffer.html">QueueBuffer</a>&lt; T &gt;::clear </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Megvalósítja a következőket: <a class="el" href="classiBuffer.html#a632ab814cb1611f4174e1eea6a690d8f">iBuffer&lt; T &gt;</a>.</p>
+
+</div>
+</div>
+<a id="a2ac44ec758e06403968b4c9d0a2f8549"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2ac44ec758e06403968b4c9d0a2f8549">&#9670;&nbsp;</a></span>currentSize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int <a class="el" href="classQueueBuffer.html">QueueBuffer</a>&lt; T &gt;::currentSize </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a745ae1e3cb65118a4d43e3363bc4d232"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a745ae1e3cb65118a4d43e3363bc4d232">&#9670;&nbsp;</a></span>exposeBuffer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">T* <a class="el" href="classQueueBuffer.html">QueueBuffer</a>&lt; T &gt;::exposeBuffer </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3ae87863cdfea0f3410b3defbb1e9faa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3ae87863cdfea0f3410b3defbb1e9faa">&#9670;&nbsp;</a></span>get()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="classQueueBuffer.html">QueueBuffer</a>&lt; T &gt;::get </td>
+          <td>(</td>
+          <td class="paramtype">T &amp;&#160;</td>
+          <td class="paramname"><em>into</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Megvalósítja a következőket: <a class="el" href="classiBuffer.html#a0ca9eee8fb27ca8b846fb76b646fc2c9">iBuffer&lt; T &gt;</a>.</p>
+
+</div>
+</div>
+<a id="aa1379908218464cdcc14d2d11a744f61"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa1379908218464cdcc14d2d11a744f61">&#9670;&nbsp;</a></span>isEmpty()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="classQueueBuffer.html">QueueBuffer</a>&lt; T &gt;::isEmpty </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Megvalósítja a következőket: <a class="el" href="classiBuffer.html#a63df5ced8e6891beef7567548ea9d4fd">iBuffer&lt; T &gt;</a>.</p>
+
+</div>
+</div>
+<a id="a36e110c54aafc2b192b49ffe7a168466"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a36e110c54aafc2b192b49ffe7a168466">&#9670;&nbsp;</a></span>isFull()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="classQueueBuffer.html">QueueBuffer</a>&lt; T &gt;::isFull </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Megvalósítja a következőket: <a class="el" href="classiBuffer.html#a0e5b4fab5ce5b0ca2dc128fd807c5d87">iBuffer&lt; T &gt;</a>.</p>
+
+</div>
+</div>
+<a id="a4883218e2edf1a9a1a0b7141fa478817"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4883218e2edf1a9a1a0b7141fa478817">&#9670;&nbsp;</a></span>size()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int <a class="el" href="classQueueBuffer.html">QueueBuffer</a>&lt; T &gt;::size </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Megvalósítja a következőket: <a class="el" href="classiBuffer.html#a5443ca0daef72568598771901e981200">iBuffer&lt; T &gt;</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Adattagok dokumentációja</h2>
+<a id="ac6c9ab54cdb21f164f720847230195cf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac6c9ab54cdb21f164f720847230195cf">&#9670;&nbsp;</a></span>buffer</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">T* <a class="el" href="classQueueBuffer.html">QueueBuffer</a>&lt; T &gt;::buffer</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afe82272243fc7c59b925d02ec80b3337"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afe82272243fc7c59b925d02ec80b3337">&#9670;&nbsp;</a></span>cap</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int <a class="el" href="classQueueBuffer.html">QueueBuffer</a>&lt; T &gt;::cap</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a06fbbdb498339a05c0fa56c350bf9f69"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a06fbbdb498339a05c0fa56c350bf9f69">&#9670;&nbsp;</a></span>emptyflag</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::atomic&lt;bool&gt; <a class="el" href="classQueueBuffer.html">QueueBuffer</a>&lt; T &gt;::emptyflag</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a327029adf155edfc2a516ecea51768fd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a327029adf155edfc2a516ecea51768fd">&#9670;&nbsp;</a></span>end</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::atomic&lt;unsigned int&gt; <a class="el" href="classQueueBuffer.html">QueueBuffer</a>&lt; T &gt;::end</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6509db78433b53715bcebfbd4b4a836e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6509db78433b53715bcebfbd4b4a836e">&#9670;&nbsp;</a></span>m</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::mutex <a class="el" href="classQueueBuffer.html">QueueBuffer</a>&lt; T &gt;::m</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aab8f49c218eb30c476875db1a5927f8e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aab8f49c218eb30c476875db1a5927f8e">&#9670;&nbsp;</a></span>start</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::atomic&lt;unsigned int&gt; <a class="el" href="classQueueBuffer.html">QueueBuffer</a>&lt; T &gt;::start</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>Ez a dokumentáció az osztályról a következő fájlok alapján készült:<ul>
+<li>/SharedWithWindows/Projects/szakdolgozat/inc/<a class="el" href="QueueBuffer_8h_source.html">QueueBuffer.h</a></li>
+<li>/SharedWithWindows/Projects/szakdolgozat/src/<a class="el" href="queue__buffer_8cpp.html">queue_buffer.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Készítette &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>

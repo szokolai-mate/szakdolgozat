@@ -1,0 +1,91 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Szakdolgozat: /SharedWithWindows/Projects/szakdolgozat/inc/PortAudioEndpoint.h Forrásfájl</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Szakdolgozat
+   </div>
+   <div id="projectbrief">A szakdolgozatom ELTE Programtervező Informatikus BSc. szakra.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Készítette Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Keresés');
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Keresés');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_bfccd401955b95cf8c75461437045ac0.html">inc</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">PortAudioEndpoint.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="PortAudioEndpoint_8h.html">Ugrás a fájl dokumentációjához.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &lt;portaudio.h&gt;</span></div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;</div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="iAudioEndpoint_8h.html">iAudioEndpoint.h</a>&gt;</span></div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="iSource_8h.html">iSource.h</a>&gt;</span></div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div><div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="PortAudioEndpoint_8h.html#ad0a4f108604a47bfba8c6efc8a00bac2">    9</a></span>&#160;<span class="preprocessor">#define PA_WRITE_ERRORS</span></div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#ifdef PA_WRITE_ERRORS</span></div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#endif</span></div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment">/*TODO: at start and stop make a rapid approach to 0 to avoid popping*/</span></div><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div><div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="classPortAudioEndpoint.html">   29</a></span>&#160;<span class="keyword">class </span><a class="code" href="classPortAudioEndpoint.html">PortAudioEndpoint</a> : <span class="keyword">public</span> <a class="code" href="classMixer_1_1iAudioEndpoint.html">Mixer::iAudioEndpoint</a>&lt;T&gt;</div><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;{</div><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;  <span class="keyword">public</span>:</div><div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classPortAudioEndpoint.html#a0bb576977ec4f4407b7561792080f02c">init</a>(<a class="code" href="classDataFlow_1_1iSource.html">DataFlow::iSource&lt;T&gt;</a> &amp; <a class="code" href="classPortAudioEndpoint.html#a4dc20e8f96c72c59229fd617006805d1">source</a>,<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> channels, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> sampleRate);</div><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classPortAudioEndpoint.html#a02dc58cb15c508da987478da1c8fece5">start</a>();</div><div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classPortAudioEndpoint.html#a131691d657362526961933e205e5a67f">stop</a>();</div><div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classPortAudioEndpoint.html#a9066b8e4d66747b7f07c283f1aef8c55">close</a>();</div><div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div><div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;  <span class="keyword">private</span>:</div><div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="classPortAudioEndpoint.html#a90cf04f4421dc4971c41fdcbb423e660">   46</a></span>&#160;    PaStream *<a class="code" href="classPortAudioEndpoint.html#a90cf04f4421dc4971c41fdcbb423e660">stream</a>;</div><div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="classPortAudioEndpoint.html#aae23d2e8c395e9387f68e895f095b14a">   47</a></span>&#160;    PaError <a class="code" href="classPortAudioEndpoint.html#aae23d2e8c395e9387f68e895f095b14a">err</a>;</div><div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="classPortAudioEndpoint.html#a4dc20e8f96c72c59229fd617006805d1">   48</a></span>&#160;    <a class="code" href="classDataFlow_1_1iSource.html">DataFlow::iSource&lt;T&gt;</a> *<a class="code" href="classPortAudioEndpoint.html#a4dc20e8f96c72c59229fd617006805d1">source</a>;</div><div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">int</span> <a class="code" href="classPortAudioEndpoint.html#afcee2d3ed8a9145a25e95f573c540190">callbackFunction</a>(<span class="keyword">const</span> <span class="keywordtype">void</span> *inputBuffer, <span class="keywordtype">void</span> *outputBuffer,</div><div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;                                <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> framesPerBuffer,</div><div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;                                <span class="keyword">const</span> PaStreamCallbackTimeInfo *timeInfo,</div><div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;                                PaStreamCallbackFlags statusFlags,</div><div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;                                <span class="keywordtype">void</span> *userData);</div><div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;};</div><div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div><div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="keyword">template</span> &lt;&gt;</div><div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="keywordtype">int</span> <a class="code" href="classPortAudioEndpoint.html#afcee2d3ed8a9145a25e95f573c540190">PortAudioEndpoint&lt;float&gt;::callbackFunction</a>(<span class="keyword">const</span> <span class="keywordtype">void</span> *inputBuffer, <span class="keywordtype">void</span> *outputBuffer,</div><div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;                                               <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> framesPerBuffer,</div><div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;                                               <span class="keyword">const</span> PaStreamCallbackTimeInfo *timeInfo,</div><div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;                                               PaStreamCallbackFlags statusFlags,</div><div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;                                               <span class="keywordtype">void</span> *userData);</div><div class="ttc" id="classPortAudioEndpoint_html_aae23d2e8c395e9387f68e895f095b14a"><div class="ttname"><a href="classPortAudioEndpoint.html#aae23d2e8c395e9387f68e895f095b14a">PortAudioEndpoint::err</a></div><div class="ttdeci">PaError err</div><div class="ttdef"><b>Definition:</b> PortAudioEndpoint.h:47</div></div>
+<div class="ttc" id="classPortAudioEndpoint_html_a90cf04f4421dc4971c41fdcbb423e660"><div class="ttname"><a href="classPortAudioEndpoint.html#a90cf04f4421dc4971c41fdcbb423e660">PortAudioEndpoint::stream</a></div><div class="ttdeci">PaStream * stream</div><div class="ttdef"><b>Definition:</b> PortAudioEndpoint.h:46</div></div>
+<div class="ttc" id="classPortAudioEndpoint_html_a9066b8e4d66747b7f07c283f1aef8c55"><div class="ttname"><a href="classPortAudioEndpoint.html#a9066b8e4d66747b7f07c283f1aef8c55">PortAudioEndpoint::close</a></div><div class="ttdeci">bool close()</div><div class="ttdoc">Close stream. Reopen with init(). </div><div class="ttdef"><b>Definition:</b> portaudio_endpoint.cpp:56</div></div>
+<div class="ttc" id="classPortAudioEndpoint_html"><div class="ttname"><a href="classPortAudioEndpoint.html">PortAudioEndpoint</a></div><div class="ttdef"><b>Definition:</b> PortAudioEndpoint.h:29</div></div>
+<div class="ttc" id="iAudioEndpoint_8h_html"><div class="ttname"><a href="iAudioEndpoint_8h.html">iAudioEndpoint.h</a></div></div>
+<div class="ttc" id="classPortAudioEndpoint_html_a0bb576977ec4f4407b7561792080f02c"><div class="ttname"><a href="classPortAudioEndpoint.html#a0bb576977ec4f4407b7561792080f02c">PortAudioEndpoint::init</a></div><div class="ttdeci">bool init(DataFlow::iSource&lt; T &gt; &amp;source, unsigned int channels, unsigned int sampleRate)</div></div>
+<div class="ttc" id="iSource_8h_html"><div class="ttname"><a href="iSource_8h.html">iSource.h</a></div></div>
+<div class="ttc" id="classMixer_1_1iAudioEndpoint_html"><div class="ttname"><a href="classMixer_1_1iAudioEndpoint.html">Mixer::iAudioEndpoint</a></div><div class="ttdef"><b>Definition:</b> iAudioEndpoint.h:9</div></div>
+<div class="ttc" id="classPortAudioEndpoint_html_a4dc20e8f96c72c59229fd617006805d1"><div class="ttname"><a href="classPortAudioEndpoint.html#a4dc20e8f96c72c59229fd617006805d1">PortAudioEndpoint::source</a></div><div class="ttdeci">DataFlow::iSource&lt; T &gt; * source</div><div class="ttdef"><b>Definition:</b> PortAudioEndpoint.h:48</div></div>
+<div class="ttc" id="classPortAudioEndpoint_html_a131691d657362526961933e205e5a67f"><div class="ttname"><a href="classPortAudioEndpoint.html#a131691d657362526961933e205e5a67f">PortAudioEndpoint::stop</a></div><div class="ttdeci">bool stop()</div><div class="ttdoc">Stop playing. Idempotent. </div><div class="ttdef"><b>Definition:</b> portaudio_endpoint.cpp:36</div></div>
+<div class="ttc" id="classPortAudioEndpoint_html_a02dc58cb15c508da987478da1c8fece5"><div class="ttname"><a href="classPortAudioEndpoint.html#a02dc58cb15c508da987478da1c8fece5">PortAudioEndpoint::start</a></div><div class="ttdeci">bool start()</div><div class="ttdoc">Start playing from the attached source. </div><div class="ttdef"><b>Definition:</b> portaudio_endpoint.cpp:15</div></div>
+<div class="ttc" id="classDataFlow_1_1iSource_html"><div class="ttname"><a href="classDataFlow_1_1iSource.html">DataFlow::iSource</a></div><div class="ttdef"><b>Definition:</b> iSource.h:9</div></div>
+<div class="ttc" id="classPortAudioEndpoint_html_afcee2d3ed8a9145a25e95f573c540190"><div class="ttname"><a href="classPortAudioEndpoint.html#afcee2d3ed8a9145a25e95f573c540190">PortAudioEndpoint::callbackFunction</a></div><div class="ttdeci">static int callbackFunction(const void *inputBuffer, void *outputBuffer, unsigned long framesPerBuffer, const PaStreamCallbackTimeInfo *timeInfo, PaStreamCallbackFlags statusFlags, void *userData)</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Készítette &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>

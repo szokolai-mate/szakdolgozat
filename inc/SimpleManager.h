@@ -11,7 +11,7 @@
 #pragma once
 
 #include <iManager.h>
-#include <SimplePlayer.h>
+#include <PortAudioEndpoint.h>
 
 #include <Utils.h>
 

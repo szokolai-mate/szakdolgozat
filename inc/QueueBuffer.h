@@ -2,6 +2,7 @@
 
 #include <mutex>
 #include <atomic>
+#include <vector>
 
 #include <iBuffer.h>
 
@@ -9,23 +10,33 @@
 //TODO: megpróbálni locklessé tenni
 
 template <typename T>
-class queue_buffer : public iBuffer<T>{
+class QueueBuffer : public DataFlow::iBuffer<T>{
 private:
 	unsigned int cap;
 	T * buffer;
 	std::atomic<unsigned int> start, end;
 	std::atomic<bool> emptyflag;
 	std::mutex m;
+
+	unsigned int currentSize() {
+		if(emptyflag){return 0;}
+		if (start < end) {
+			return end - start;
+		}
+		if (!emptyflag && start == end) { return cap; }
+		return cap-start+end;
+	}
 public:
 	/*Buffer size is immutable*/
-	queue_buffer(unsigned int cap);
+	QueueBuffer(unsigned int cap);
 
-	~queue_buffer();
+	~QueueBuffer();
 
 	/*Adds argument to buffer. Returns remaining capacity, -1 if was full*/
 	int add(T  &_buffer);
-	/*Copies next T into argument. Returns true on success, false on failure (buffer was empty)*/
-	int get(T &into);
+	int add(std::vector<T>  &_buffer);
+	/**/
+	std::vector<T> get(const unsigned int & amount);
 	/*Returns whether buffer is empty*/
 	bool isEmpty() {
 		return emptyflag;
@@ -57,11 +68,7 @@ public:
 
 	unsigned int size() {
 		std::lock_guard<std::mutex> lock(m);
-		if (start < end) {
-			return end - start;
-		}
-		if (!emptyflag && start == end) { return cap; }
-		return cap-start+end;
+		return currentSize();
 	}
 
 };

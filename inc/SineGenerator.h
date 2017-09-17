@@ -1,25 +1,30 @@
 #pragma once
 
+#include <vector>
+
+#include <iSource.h>
 #include <Utils.h>
-#include <iostream>
 //TODO: változtatható frekvencia
-//TODO: szétszedni h+cpp
+
+//TODO: NOTE: sample rate is fixed to 48000
 #define SINE_TABLE_SIZE 2400
-class sine_generator{
-private:
-    int counter;
-    float step;
 
-    static float functor(double x) { return (float)sin(((double)x / (double)sine_generator::table_size) * M_PI * 2.0); }
+namespace Mixer{
+    template <typename T>
+    class SineGenerator: public DataFlow::iSource<T>{
+        public:
+            std::vector<T> get(const unsigned int & amount);
 
-public:
-    constexpr static const int table_size = SINE_TABLE_SIZE;
-    static const std::array<float,table_size> sinetable;
+            SineGenerator(const float& frequency);
 
-    sine_generator(float _frequency);
-    float next();
-    float getFrequency();
+            constexpr static const int table_size = SINE_TABLE_SIZE;
+            static const std::array<float,table_size> sinetable;
 
-    //test
-    void setFrequency(float _frequency);
-};
+        private:
+            float step;
+            unsigned int position;
+
+            static float functor(double x) { return (float)sin(((double)x / (double)SineGenerator::table_size) * M_PI * 2.0); }
+
+    };
+}

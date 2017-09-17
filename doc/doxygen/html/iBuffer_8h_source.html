@@ -1,0 +1,85 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Szakdolgozat: /SharedWithWindows/Projects/szakdolgozat/inc/iBuffer.h Forrásfájl</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Szakdolgozat
+   </div>
+   <div id="projectbrief">A szakdolgozatom ELTE Programtervező Informatikus BSc. szakra.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Készítette Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Keresés');
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Keresés');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_bfccd401955b95cf8c75461437045ac0.html">inc</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">iBuffer.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="iBuffer_8h.html">Ugrás a fájl dokumentációjához.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">//TODO+EVALUATE: closed flag, ha már nem szándékozunk újat beletölteni</span></div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;</div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div><div class="line"><a name="l00007"></a><span class="lineno"><a class="line" href="classiBuffer.html">    7</a></span>&#160;<span class="keyword">class </span><a class="code" href="classiBuffer.html">iBuffer</a>{</div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keyword">public</span>:</div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    <span class="comment">/*Adds argument to buffer. Returns remaining capacity, -1 if was already full*/</span></div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiBuffer.html#ac58a1f6d936b5233dc389a540a48c696">add</a>(T  &amp; _buffer) = 0;</div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classiBuffer.html#ac58a1f6d936b5233dc389a540a48c696">add</a>(std::vector&lt;T&gt;  &amp; _buffer) = 0;</div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    </div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <span class="comment">/*Copies next T into argument. Returns remaining elements in buffer*/</span></div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">int</span> <span class="keyword">get</span>(T &amp;into) = 0;</div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="comment">/*Returns whether buffer is empty*/</span></div><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiBuffer.html#a63df5ced8e6891beef7567548ea9d4fd">isEmpty</a>() = 0;</div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="comment">/*Returns whether buffer is full*/</span></div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classiBuffer.html#a0e5b4fab5ce5b0ca2dc128fd807c5d87">isFull</a>() = 0;</div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="comment">/*Clears buffer of data*/</span></div><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classiBuffer.html#a632ab814cb1611f4174e1eea6a690d8f">clear</a>() = 0;</div><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    </div><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="comment">/*Returns capacity in number of element T*/</span></div><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="classiBuffer.html#a477abe136ad2bd4e9b04110adef98f7c">capacity</a>() = 0;</div><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    </div><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="classiBuffer.html#a5443ca0daef72568598771901e981200">size</a>() = 0;</div><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;};</div><div class="ttc" id="classiBuffer_html"><div class="ttname"><a href="classiBuffer.html">iBuffer</a></div><div class="ttdef"><b>Definition:</b> iBuffer.h:7</div></div>
+<div class="ttc" id="classiBuffer_html_a0e5b4fab5ce5b0ca2dc128fd807c5d87"><div class="ttname"><a href="classiBuffer.html#a0e5b4fab5ce5b0ca2dc128fd807c5d87">iBuffer::isFull</a></div><div class="ttdeci">virtual bool isFull()=0</div></div>
+<div class="ttc" id="classiBuffer_html_a477abe136ad2bd4e9b04110adef98f7c"><div class="ttname"><a href="classiBuffer.html#a477abe136ad2bd4e9b04110adef98f7c">iBuffer::capacity</a></div><div class="ttdeci">virtual unsigned int capacity()=0</div></div>
+<div class="ttc" id="classiBuffer_html_a632ab814cb1611f4174e1eea6a690d8f"><div class="ttname"><a href="classiBuffer.html#a632ab814cb1611f4174e1eea6a690d8f">iBuffer::clear</a></div><div class="ttdeci">virtual void clear()=0</div></div>
+<div class="ttc" id="classiBuffer_html_a5443ca0daef72568598771901e981200"><div class="ttname"><a href="classiBuffer.html#a5443ca0daef72568598771901e981200">iBuffer::size</a></div><div class="ttdeci">virtual unsigned int size()=0</div></div>
+<div class="ttc" id="classiBuffer_html_ac58a1f6d936b5233dc389a540a48c696"><div class="ttname"><a href="classiBuffer.html#ac58a1f6d936b5233dc389a540a48c696">iBuffer::add</a></div><div class="ttdeci">virtual int add(T &amp;_buffer)=0</div></div>
+<div class="ttc" id="classiBuffer_html_a63df5ced8e6891beef7567548ea9d4fd"><div class="ttname"><a href="classiBuffer.html#a63df5ced8e6891beef7567548ea9d4fd">iBuffer::isEmpty</a></div><div class="ttdeci">virtual bool isEmpty()=0</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Készítette &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>
