@@ -30,8 +30,9 @@ private:
 
     K decoder;
 
+    std::vector<T> overflow;
+
     bool streamInitialized = false;
-    bool initialized = false;
 
     int initStream(ogg_page & page);
     int read();
@@ -42,10 +43,12 @@ private:
 public:
     void load(DataFlow::iBuffer<T> & _buffer , std::promise<audio_descriptor> _adp);
     bool open(const std::string & _filename);
+    int init();    
     bool close();
     void clear();
     void pauseLoad();
     std::vector<T> get(const unsigned int & amount);    
+    
 
     SimpleLoader<T,K>();
 	~SimpleLoader<T,K>();	

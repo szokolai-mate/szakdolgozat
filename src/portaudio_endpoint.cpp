@@ -137,7 +137,10 @@ int PortAudioEndpoint<float>::callbackFunction(const void *inputBuffer, void *ou
     float *out = (float *)outputBuffer;
     (void)inputBuffer; /* Prevent unused variable warning. */
 
-    std::vector<float> vector = data->get(framesPerBuffer);
+
+    //tmp
+    //amount * 2 for stereo
+    std::vector<float> vector = data->get(framesPerBuffer*2);
     std::copy(vector.begin(), vector.end(), out);
     return paContinue;
 }

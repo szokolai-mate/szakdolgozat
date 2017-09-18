@@ -88,8 +88,6 @@
 //             return;
 // 		}
 
-
-
 // 		/* At this point, we're sure we're Vorbis. We've set up the logical
 // 		(Ogg) bitstream decoder. Get the comment and codebook headers and
 // 		set up the Vorbis decoder */
@@ -203,7 +201,7 @@
 // 								example, pcm[0] is left, and pcm[1] is right.  samples is
 // 								the size of each channel.  Convert the float values
 // 								(-1.<=range<=1.) to whatever PCM format and write it out */
-								
+
 // 								while ((samples = vorbis_synthesis_pcmout(&vd, &pcm))>0) {
 // 									for (int i = 0; i < samples; i++) {
 // 										for (int j = 0; j < vi.channels; j++) {
@@ -217,7 +215,7 @@
 // 									}
 // 								/* tell libvorbis how many samples we actually consumed */
 // 									vorbis_synthesis_read(&vd, samples);
-								
+
 // 								}
 
 // 							}
@@ -258,13 +256,23 @@
 
 // }
 
-//TODO: decoder interface
-
+template <>
+int SimpleLoader<float, VorbisDecoder>::init()
+{
+	for (int i = 0; i < 3; i++)
+	{
+		nextPacket();
+		decoder.addToHeader(currentPacket);
+	}
+	decoder.initDecoding();
+}
 
 template <typename T, typename K>
-int SimpleLoader<T,K>::initStream(ogg_page & page){
+int SimpleLoader<T, K>::initStream(ogg_page &page)
+{
 	int err = ogg_stream_init(&os, ogg_page_serialno(&page));
-	if(err!=0){
+	if (err != 0)
+	{
 		//ERROR
 		return err;
 	}
@@ -272,18 +280,21 @@ int SimpleLoader<T,K>::initStream(ogg_page & page){
 }
 
 template <typename T, typename K>
-int SimpleLoader<T,K>::read(){
-	buffer = ogg_sync_buffer(&oy, BUFFERSIZE);	
+int SimpleLoader<T, K>::read()
+{
+	buffer = ogg_sync_buffer(&oy, BUFFERSIZE);
 	infile.read(buffer, BUFFERSIZE); //read into buffer
-	int bytes = infile.gcount(); //calculate how much we wrote into buffer
-	ogg_sync_wrote(&oy, bytes); //tell ogg how much we wrote to buffer
+	int bytes = infile.gcount();	 //calculate how much we wrote into buffer
+	ogg_sync_wrote(&oy, bytes);		 //tell ogg how much we wrote to buffer
 	return bytes;
 }
 
 template <typename T, typename K>
-int SimpleLoader<T,K>::readNextPage(){
+int SimpleLoader<T, K>::readNextPage()
+{
 	int err = ogg_sync_pageout(&oy, &currentPage);
-	while(err!=1 && !eos){
+	while (err != 1 && !eos)
+	{
 		read();
 		err = ogg_sync_pageout(&oy, &currentPage);
 		//return err;
@@ -292,251 +303,220 @@ int SimpleLoader<T,K>::readNextPage(){
 }
 
 template <typename T, typename K>
-int SimpleLoader<T,K>::nextPage(){
+int SimpleLoader<T, K>::nextPage()
+{
 	int err = readNextPage();
-	if(!streamInitialized){
+	if (!streamInitialized)
+	{
 		initStream(currentPage);
 	}
-	if(err !=1){
+	if (err != 1)
+	{
 		//ERROR
 	}
-	return ogg_stream_pagein(&os,&currentPage);
+	return ogg_stream_pagein(&os, &currentPage);
 }
 
 template <typename T, typename K>
-int SimpleLoader<T,K>::nextPacket(){
-	if(!streamInitialized)nextPage();
-	//std::cout<<os.packetno<<" on page " << os.pageno<<std::endl;
+int SimpleLoader<T, K>::nextPacket()
+{
+	if (!streamInitialized)
+		nextPage();
 	int err = ogg_stream_packetout(&os, &currentPacket);
-	//std::cout<<err<<std::endl;
-	//NOTE: most mi van miért nyalja végig azzal az egész file-t hogy egy negyedik packetet is kér??
-	while(err!=1 && !eos){
+	while (err != 1 && !eos)
+	{
 		nextPage();
 		err = ogg_stream_packetout(&os, &currentPacket);
-		//std::cout<<os.packetno<<" on page " << os.pageno<<std::endl;
-		
-		//std::cout<<"next page then "<<err<<std::endl;
 		//return err;
 	}
 	return err;
 }
 
 template <typename T, typename K>
-void SimpleLoader<T,K>::load(DataFlow::iBuffer<T> & _buffer ,  std::promise<audio_descriptor> _adp){
+void SimpleLoader<T, K>::load(DataFlow::iBuffer<T> &_buffer, std::promise<audio_descriptor> _adp)
+{
 	//TODO:exceptions
 	//TODO separation
 
-		/* grab some data at the head of the stream. We want the first page
+	/* grab some data at the head of the stream. We want the first page
 		(which is guaranteed to be small and only contain the Vorbis
 		stream initial header) We need the first page to get the stream
 		serialno. */
-	
-		/* extract the initial header from the first page and verify that the
+
+	/* extract the initial header from the first page and verify that the
 		Ogg bitstream is in fact Vorbis data */
 
-		/* I handle the initial header first instead of just having the code
+	/* I handle the initial header first instead of just having the code
 		read all three Vorbis headers at once because reading the initial
 		header is an easy way to identify a Vorbis bitstream and it's
 		useful to see that functionality seperated out. */
 
-		if (nextPacket() != 1) {
-			/* no page? must not be vorbis */
-			fprintf(stderr, "Error reading initial header packet.\n");
-			//ERROR
-            return;
-		}
+	if (nextPacket() != 1)
+	{
+		/* no page? must not be vorbis */
+		fprintf(stderr, "Error reading initial header packet.\n");
+		//ERROR
+		return;
+	}
 
-		if (decoder.addToHeader(currentPacket)<0) {
-			/* error case; not a vorbis header */
-			fprintf(stderr, "This Ogg bitstream does not contain Vorbis "
-				"audio data.\n");
-			//ERROR
-            return;
-		}
+	if (decoder.addToHeader(currentPacket) < 0)
+	{
+		/* error case; not a vorbis header */
+		fprintf(stderr, "This Ogg bitstream does not contain Vorbis "
+						"audio data.\n");
+		//ERROR
+		return;
+	}
 
-
-
-		/* At this point, we're sure we're Vorbis. We've set up the logical
+	/* At this point, we're sure we're Vorbis. We've set up the logical
 		(Ogg) bitstream decoder. Get the comment and codebook headers and
 		set up the Vorbis decoder */
 
-		/* The next two packets in order are the comment and codebook headers.
+	/* The next two packets in order are the comment and codebook headers.
 		They're likely large and may span multiple pages. Thus we read
 		and submit data until we get our two packets, watching that no
 		pages are missing. If a page is missing, error out; losing a
 		header page is the only place where missing data is fatal. */
 
-		// i = 0;
-		// while (i<2) {
-		// 	while (i<2) {
-		// 		int result = ogg_sync_pageout(&oy, &currentPage);
-		// 		if (result == 0)break; /* Need more data */
-		// 							   /* Don't complain about missing or corrupt data yet. We'll
-		// 							   catch it at the packet output phase */
-		// 		if (result == 1) {
-		// 			ogg_stream_pagein(&os, &currentPage); /* we can ignore any errors here
-		// 										 as they'll also become apparent
-		// 										 at packetout */
-		// 			while (i<2) {
-		// 				result = ogg_stream_packetout(&os, &currentPacket);
-		// 				if (result == 0)break;
-		// 				if (result<0) {
-		// 					/* Uh oh; data at some point was corrupted or missing!
-		// 					We can't tolerate that in a header.  Die. */
-		// 					fprintf(stderr, "Corrupt secondary header.  Exiting.\n");
-        //                     //ERROR
-        //                     return;
-		// 				}
-		// 				result =  decoder.addToHeader(currentPacket);
-		// 				if (result<0) {
-		// 					fprintf(stderr, "Corrupt secondary header.  Exiting.\n");
-        //                     //ERROR
-        //                     return;
-		// 				}
-		// 				i++;
-		// 			}
-		// 		}
-		// 	}
-		// 	/* no harm in not checking before adding more */
-		// 	bytesRead = read();
-		// 	if (bytesRead == 0 && i<2) {
-		// 		fprintf(stderr, "End of file before finding all Vorbis headers!\n");
-        //         //ERROR
-        //         return;
-		// 	}
-		// }
+	// i = 0;
+	// while (i<2) {
+	// 	while (i<2) {
+	// 		int result = ogg_sync_pageout(&oy, &currentPage);
+	// 		if (result == 0)break; /* Need more data */
+	// 							   /* Don't complain about missing or corrupt data yet. We'll
+	// 							   catch it at the packet output phase */
+	// 		if (result == 1) {
+	// 			ogg_stream_pagein(&os, &currentPage); /* we can ignore any errors here
+	// 										 as they'll also become apparent
+	// 										 at packetout */
+	// 			while (i<2) {
+	// 				result = ogg_stream_packetout(&os, &currentPacket);
+	// 				if (result == 0)break;
+	// 				if (result<0) {
+	// 					/* Uh oh; data at some point was corrupted or missing!
+	// 					We can't tolerate that in a header.  Die. */
+	// 					fprintf(stderr, "Corrupt secondary header.  Exiting.\n");
+	//                     //ERROR
+	//                     return;
+	// 				}
+	// 				result =  decoder.addToHeader(currentPacket);
+	// 				if (result<0) {
+	// 					fprintf(stderr, "Corrupt secondary header.  Exiting.\n");
+	//                     //ERROR
+	//                     return;
+	// 				}
+	// 				i++;
+	// 			}
+	// 		}
+	// 	}
+	// 	/* no harm in not checking before adding more */
+	// 	bytesRead = read();
+	// 	if (bytesRead == 0 && i<2) {
+	// 		fprintf(stderr, "End of file before finding all Vorbis headers!\n");
+	//         //ERROR
+	//         return;
+	// 	}
+	// }
 
-		nextPacket();
-		decoder.addToHeader(currentPacket);
-		nextPacket();
-		decoder.addToHeader(currentPacket);
+	nextPacket();
+	decoder.addToHeader(currentPacket);
+	nextPacket();
+	decoder.addToHeader(currentPacket);
 
-		decoder.printHeader();
+	decoder.printHeader();
 
-		/* OK, got and parsed all three headers. Initialize the Vorbis
+	/* OK, got and parsed all three headers. Initialize the Vorbis
 		packet->PCM decoder. */
-		if (decoder.initDecoding() == 0) {
-			while(!eos){
-				int err = nextPacket();
-				if(err!=1){
-					std::cout<<"error"<<std::endl;
-				}
-				std::vector<T> data = decoder.decode(currentPacket);
-			}
-			/* The rest is just a straight decode loop until end of stream */
-			// while (!eos) {
-			// 	while (!eos) {
-			// 		int result = ogg_sync_pageout(&oy, &og);
-			// 		if (result == 0)break; /* need more data */
-			// 		if (result<0) { /* missing or corrupt data at this page position */
-			// 			fprintf(stderr, "Corrupt or missing data in bitstream; "
-			// 				"continuing...\n");
-			// 		}
-			// 		else {
-			// 			ogg_stream_pagein(&os, &og); /* can safely ignore errors at
-			// 										 this point */
-			// 			while (1) {
-			// 				result = ogg_stream_packetout(&os, &op);
+	// if (decoder.initDecoding() == 0) {
+	// 	while(!eos){
+	// 		int err = nextPacket();
+	// 		if(err!=1){
+	// 			std::cout<<"error"<<std::endl;
+	// 		}
+	// 		std::vector<T> data = decoder.decode(currentPacket);
+	// 	}
 
-			// 				if (result == 0)break; /* need more data */
-			// 				if (result<0) { /* missing or corrupt data at this page position */
-			// 								/* no reason to complain; already complained above */
-			// 				}
-			// 				else {
-			// 					/* we have a packet.  Decode it */
-			// 					float **pcm;
-			// 					int samples;
-
-			// 					if (vorbis_synthesis(&vb, &op) == 0) /* test for success! */
-			// 						vorbis_synthesis_blockin(&vd, &vb);
-			// 					/*
-
-			// 					**pcm is a multichannel float vector.  In stereo, for
-			// 					example, pcm[0] is left, and pcm[1] is right.  samples is
-			// 					the size of each channel.  Convert the float values
-			// 					(-1.<=range<=1.) to whatever PCM format and write it out */
-								
-			// 					while ((samples = vorbis_synthesis_pcmout(&vd, &pcm))>0) {
-			// 						for (int i = 0; i < samples; i++) {
-			// 							for (int j = 0; j < decoder.getChannels(); j++) {
-			// 								int res = _buffer.add(pcm[j][i]);
-			// 								while (res<0) {
-			// 									std::this_thread::yield();
-			// 									std::this_thread::sleep_for(std::chrono::duration<int, std::ratio<1, 1000>>(1));
-			// 									res = _buffer.add(pcm[j][i]);
-			// 								}
-			// 							}
-			// 						}
-			// 					/* tell libvorbis how many samples we actually consumed */
-			// 						vorbis_synthesis_read(&vd, samples);
-								
-			// 					}
-
-			// 				}
-			// 			}
-			// 			if (ogg_page_eos(&og))eos = 1;
-			// 		}
-			// 	}
-			// }
-
-		}
-		else {
-			fprintf(stderr, "Error: Corrupt header during playback initialization.\n");
-		}
-		clear();
+	// }
+	// else {
+	// 	fprintf(stderr, "Error: Corrupt header during playback initialization.\n");
+	// }
+	clear();
 }
 
 template <typename T, typename K>
-std::vector<T> SimpleLoader<T,K>::get(const unsigned int & amount){
-	std::vector<T> res(amount);
-
-	return res;
-}   
-
-
-template <typename T, typename K>
-bool SimpleLoader<T,K>::open(const std::string & _filename){
-    this->infile.open(_filename.c_str(),std::ios::binary);
-    if(!infile.is_open()){
-        //error
-        std::cerr<<"Error opening file: "<<_filename.c_str() << std::endl;
-        return false;
+std::vector<T> SimpleLoader<T, K>::get(const unsigned int &amount)
+{
+	std::vector<T> res;
+	res.reserve(amount);
+	int samples = 0;
+	while (samples < amount)
+	{
+		if(overflow.size()>0){
+			int amountFits = std::min(amount - samples, (unsigned int)overflow.size());	
+			res.insert(res.end(), overflow.begin(), overflow.begin()+amountFits);			
+			samples+=amountFits;
+			overflow = std::vector<T>(overflow.begin()+amountFits,overflow.end());			
+			continue;			
+		}
+		nextPacket();
+		std::vector<T> decoded = decoder.decode(currentPacket);
+		int amountFits = std::min(amount - samples, (unsigned int)decoded.size());
+		res.insert(res.end(), decoded.begin(), decoded.begin()+amountFits);
+		samples+=amountFits;
+		overflow = std::vector<T>(decoded.begin()+amountFits,decoded.end());
 	}
-	initialized = false;
-	eos = false;
-    return true;
+	return res;
 }
 
-template <typename T,typename K>
-bool SimpleLoader<T,K>::close(){
+template <typename T, typename K>
+bool SimpleLoader<T, K>::open(const std::string &_filename)
+{
+	this->infile.open(_filename.c_str(), std::ios::binary);
+	if (!infile.is_open())
+	{
+		//error
+		std::cerr << "Error opening file: " << _filename.c_str() << std::endl;
+		return false;
+	}
+	eos = false;
+	return true;
+}
+
+template <typename T, typename K>
+bool SimpleLoader<T, K>::close()
+{
 	this->infile.close();
 	eos = true;
 	return !this->infile.fail();
 }
 
 template <typename T, typename K>
-void SimpleLoader<T,K>::pauseLoad(){
-    //TODO
+void SimpleLoader<T, K>::pauseLoad()
+{
+	//TODO
 }
 
 template <typename T, typename K>
-void SimpleLoader<T,K>::clear(){
-	initialized = false;
+void SimpleLoader<T, K>::clear()
+{
 	ogg_stream_clear(&os);
-	ogg_sync_clear(&oy);	
+	ogg_sync_clear(&oy);
 }
 
 template <typename T, typename K>
-SimpleLoader<T,K>::SimpleLoader(){
-	ogg_sync_init(&oy);	
+SimpleLoader<T, K>::SimpleLoader()
+{
+	ogg_sync_init(&oy);
 }
 
 template <typename T, typename K>
-SimpleLoader<T,K>::~SimpleLoader(){
-    if(this->infile.is_open()){
+SimpleLoader<T, K>::~SimpleLoader()
+{
+	if (this->infile.is_open())
+	{
 		this->infile.close();
 	}
 	clear();
 }
 
-template class SimpleLoader<float,VorbisDecoder>;
+template class SimpleLoader<float, VorbisDecoder>;

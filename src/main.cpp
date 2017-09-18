@@ -42,6 +42,8 @@ tehát pulseaudio = el kell foglalni a hardvert = semmi más nem adhat ki hangot
 //		->buffer seems ok, even when read and write are in different threads
 //talán a mutex lockolgatás miatt van?
 
+//TODO: eldönteni ki a felelős azért hogy ne framesPerBuffer hanem ftamesPerBuffer*channels sample follyon
+
 #include <iostream>
 #include <thread>
 #include <future>
@@ -124,20 +126,25 @@ int main()
 
 QueueBuffer<float> qb(512 * 16);
 QueueBuffer<float> qb2(512 * 16);
-SimpleLoader<float,VorbisDecoder> loader;
-SimpleLoader<float,VorbisDecoder> loader2;
+
 
 	std::string dancingQueen{"01 - Dancing Queen.ogg"};
 	std::string waterloo{"19 - Waterloo.ogg"};
 	std::string mono{"mono86kbps44100.ogg"};
+
+	SimpleLoader<float,VorbisDecoder> loader;
+	SimpleLoader<float,VorbisDecoder> loader2;
+
 	loader.open(dancingQueen);
 	loader2.open(waterloo);
 	
 	std::promise<audio_descriptor> adp;
 	std::promise<audio_descriptor> adp2;
 	std::future<audio_descriptor> adf = adp.get_future();
-	std::thread t1([&] { loader.load(qb, std::move(adp)); });
-	std::thread t3([&] { loader2.load(qb2, std::move(adp2)); });
+	loader.init();
+	loader2.init();
+	//std::thread t1([&] { loader.init(); });
+	//std::thread t3([&] { loader2.load(qb2, std::move(adp2)); });
 	//adf.wait();
 	
 
@@ -155,25 +162,25 @@ SimpleLoader<float,VorbisDecoder> loader2;
 
 	audio_descriptor ad(2, 48000);
 	PortAudioEndpoint<float> player;
-	player.init(sg, 2, 48000);
-	//player.start();
+	player.init(loader2, 2, 44100);
+	player.start();
 
 	bool b = true;
-	/*while (true)
+	while (true)
 	{
 		std::this_thread::sleep_for(std::chrono::duration<int, std::ratio<1, 1>>(3));
 		player.stop();
 		if (b)
 		{
-			player.init(qb2, 2, 48000);
+			player.init(loader, 2, 44100);
 		}
 		else
 		{
-			player.init(qb, 2, 44100);
+			player.init(loader2, 2, 44100);
 		}
 		player.start();
 		b = !b;
-	}*/
+	}
 
 //TMP: buffer test
 //#define BUFFER_TEST
