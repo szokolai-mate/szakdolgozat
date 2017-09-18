@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['queue_5fbuffer_2ecpp',['queue_buffer.cpp',['../queue__buffer_8cpp.html',1,'']]],
-  ['queuebuffer_2eh',['QueueBuffer.h',['../QueueBuffer_8h.html',1,'']]]
+  ['portaudio_5fendpoint_2ecpp',['portaudio_endpoint.cpp',['../portaudio__endpoint_8cpp.html',1,'']]],
+  ['portaudiobackend_2eh',['PortAudioBackend.h',['../PortAudioBackend_8h.html',1,'']]]
 ];

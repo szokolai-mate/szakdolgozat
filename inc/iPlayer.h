@@ -1,18 +1,18 @@
 #pragma once
 
-#include <iBuffer.h>
-#include <Utils.h>
+#include <atomic>
+
+#include <iSource.h>
 
 template <typename T>
-class iPlayer {
+class iPlayer : public DataFlow::iSource<T> {
 public:
     //TODO: feature evaulation
-    virtual bool init(DataFlow::iBuffer<T> & _buffer,const audio_descriptor ad) = 0;
+    virtual bool init(DataFlow::iSource, unsigned int channels, unsigned int sampleRate) = 0;
     virtual bool pause() = 0;
     virtual bool stop() = 0;
     virtual bool play() = 0;
 protected:
-    T volume,targetVolume,deltaVolume;
+    T volume;
     std::atomic<bool> paused;
-    DataFlow::iBuffer<T> * buffer;
 };

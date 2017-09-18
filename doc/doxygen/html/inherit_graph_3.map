@@ -1,5 +1,8 @@
 <map id="Osztályhierarchia&#45;ábra" name="Osztályhierarchia&#45;ábra">
-<area shape="rect" id="node1" href="$classiBuffer.html" title="iBuffer\&lt; T \&gt;" alt="" coords="5,31,97,57"/>
-<area shape="rect" id="node2" href="$classiAdvancedBuffer.html" title="iAdvancedBuffer\&lt; T \&gt;" alt="" coords="145,5,296,32"/>
-<area shape="rect" id="node3" href="$classQueueBuffer.html" title="QueueBuffer\&lt; T \&gt;" alt="" coords="157,56,284,83"/>
+<area shape="rect" id="node1" href="$classDataFlow_1_1iSource.html" title="DataFlow::iSource\&lt; T \&gt;" alt="" coords="5,81,168,108"/>
+<area shape="rect" id="node2" href="$classDataFlow_1_1iBuffer.html" title="DataFlow::iBuffer\&lt; T \&gt;" alt="" coords="227,5,383,32"/>
+<area shape="rect" id="node4" href="$classiPlayer.html" title="iPlayer\&lt; T \&gt;" alt="" coords="257,56,352,83"/>
+<area shape="rect" id="node5" href="$classMixer_1_1SineGenerator.html" title="Mixer::SineGenerator\&lt; T \&gt;" alt="" coords="216,107,393,133"/>
+<area shape="rect" id="node6" href="$classOggFileLoader.html" title="OggFileLoader\&lt; T, K \&gt;" alt="" coords="227,157,382,184"/>
+<area shape="rect" id="node3" href="$classQueueBuffer.html" title="QueueBuffer\&lt; T \&gt;" alt="" coords="441,5,568,32"/>
 </map>

@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['portaudio_5fendpoint_2ecpp',['portaudio_endpoint.cpp',['../portaudio__endpoint_8cpp.html',1,'']]],
-  ['portaudioendpoint_2eh',['PortAudioEndpoint.h',['../PortAudioEndpoint_8h.html',1,'']]]
+  ['ogg_5ffile_5floader_2ecpp',['ogg_file_loader.cpp',['../ogg__file__loader_8cpp.html',1,'']]],
+  ['oggfileloader_2eh',['OggFileLoader.h',['../OggFileLoader_8h.html',1,'']]]
 ];

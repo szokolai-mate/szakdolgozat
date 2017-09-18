@@ -1,11 +1,8 @@
 #pragma once
 
-#include <math.h>
 #include <utility>
 #include <array>
 #include <atomic>
-
-#include <iBuffer.h>
 
 namespace template_utils
 {
@@ -15,24 +12,13 @@ struct extract_inner_base;
 template <template <typename> class C, typename T>
 struct extract_inner_base<C <T> >{    using type = T; };
 
+/*! This will extract the template parameter of template parameter T
+    For example, if you have A with <typename T> and B with <typename K>, and make an A<B<float>>,
+    then in A extract_inner<T> will evaluate to K or float in this case.
+*/
 template <typename T>
 using extract_inner = typename extract_inner_base<T>::type;
 }
-
-namespace clip
-{
-
-inline float soft_clip(float x)
-{
-    //az ellenőrzést lehet hogy kijjebb kellene tenni
-    if (x > 0.8f || x < -0.8f)
-    {
-        return ((pow(exp(1), (exp(1) * x)) - 1) / (pow(exp(1), (exp(1) * x)) + 1));
-    }
-    else
-        return x;
-}
-};
 
 //structs
 

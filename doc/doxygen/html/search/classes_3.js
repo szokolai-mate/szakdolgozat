@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['portaudioendpoint',['PortAudioEndpoint',['../classPortAudioEndpoint.html',1,'']]]
+  ['oggfileloader',['OggFileLoader',['../classOggFileLoader.html',1,'']]]
 ];

@@ -1,0 +1,102 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Szakdolgozat: /SharedWithWindows/Projects/szakdolgozat/inc/OggFileLoader.h Forrásfájl</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Szakdolgozat
+   </div>
+   <div id="projectbrief">A szakdolgozatom ELTE Programtervező Informatikus BSc. szakra.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Készítette Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Keresés');
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Keresés');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_bfccd401955b95cf8c75461437045ac0.html">inc</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">OggFileLoader.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="OggFileLoader_8h.html">Ugrás a fájl dokumentációjához.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;</div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &lt;fstream&gt;</span></div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;</div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &lt;ogg/ogg.h&gt;</span></div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="iSource_8h.html">iSource.h</a>&gt;</span></div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="Utils_8h.html">Utils.h</a>&gt;</span></div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="VorbisDecoder_8h.html">VorbisDecoder.h</a>&gt;</span></div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T,<span class="keyword">typename</span> K&gt;</div><div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="classOggFileLoader.html">   14</a></span>&#160;<span class="keyword">class </span><a class="code" href="classOggFileLoader.html">OggFileLoader</a> : <span class="keyword">public</span> <a class="code" href="classDataFlow_1_1iSource.html">DataFlow::iSource</a>&lt;T&gt;{</div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keyword">private</span>:</div><div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="classOggFileLoader.html#ac1b59cdf85b968251fc64ce1d4ddf605">   16</a></span>&#160;    std::ifstream <a class="code" href="classOggFileLoader.html#ac1b59cdf85b968251fc64ce1d4ddf605">infile</a>;</div><div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="classOggFileLoader.html#a25472b683b5dc3cfe65230fc5dba38af">   17</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classOggFileLoader.html#a25472b683b5dc3cfe65230fc5dba38af">eos</a> = <span class="keyword">true</span>;</div><div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="classOggFileLoader.html#aa1bda7029a53f5ce7b7b2f4e7e922b92">   18</a></span>&#160;    <span class="keywordtype">char</span> * <a class="code" href="classOggFileLoader.html#aa1bda7029a53f5ce7b7b2f4e7e922b92">buffer</a>;</div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div><div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="classOggFileLoader.html#a6f7733f2506e729b8d964c8bc04a68d8">   20</a></span>&#160;    ogg_sync_state   <a class="code" href="classOggFileLoader.html#a6f7733f2506e729b8d964c8bc04a68d8">oy</a>; <span class="comment">/* sync and verify incoming physical bitstream */</span>    </div><div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="classOggFileLoader.html#a89d7f11a6a8a1426e28937cd05382129">   21</a></span>&#160;    ogg_stream_state <a class="code" href="classOggFileLoader.html#a89d7f11a6a8a1426e28937cd05382129">os</a>; <span class="comment">/* take physical pages, weld into a logical stream of packets */</span></div><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div><div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="classOggFileLoader.html#aa3908bfd22763d04a56bb81512701259">   23</a></span>&#160;    ogg_page         <a class="code" href="classOggFileLoader.html#aa3908bfd22763d04a56bb81512701259">currentPage</a>; <span class="comment">/* one Ogg bitstream page. Vorbis packets are inside */</span></div><div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="classOggFileLoader.html#a13d79069503c5665e2e7604d7b71b3d9">   24</a></span>&#160;    ogg_packet       <a class="code" href="classOggFileLoader.html#a13d79069503c5665e2e7604d7b71b3d9">currentPacket</a>; <span class="comment">/* one raw packet of data for decode */</span></div><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div><div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="classOggFileLoader.html#a0f9728b3221f5c077974d507bf184d38">   26</a></span>&#160;    K <a class="code" href="classOggFileLoader.html#a0f9728b3221f5c077974d507bf184d38">decoder</a>;</div><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div><div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="classOggFileLoader.html#acaf4409e5fd1c52a7748c643db63d8c0">   28</a></span>&#160;    std::vector&lt;T&gt; <a class="code" href="classOggFileLoader.html#acaf4409e5fd1c52a7748c643db63d8c0">overflow</a>;</div><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div><div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="classOggFileLoader.html#abdb7526225dc19bc0b5af92c09182cc4">   30</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classOggFileLoader.html#abdb7526225dc19bc0b5af92c09182cc4">streamInitialized</a> = <span class="keyword">false</span>;</div><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classOggFileLoader.html#a98f61e3908610c549d2b47861c066406">initStream</a>(ogg_page &amp; page);</div><div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classOggFileLoader.html#a5ba0c2a63e96c9b6815585310e10d504">read</a>();</div><div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classOggFileLoader.html#ac00acf3900b694cfa9d242068b443413">readNextPage</a>();</div><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classOggFileLoader.html#a47b37c1962662ac4de4b88541d9e7295">nextPage</a>();</div><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classOggFileLoader.html#a9b1b15e250c29f1fcafbdf0cd1e5e590">nextPacket</a>();</div><div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="keyword">public</span>:</div><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classOggFileLoader.html#a877b5980ca3e50479faf9680e3a704a1">open</a>(<span class="keyword">const</span> std::string &amp; _filename);</div><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classOggFileLoader.html#a577762dd6ca2fc01946babba5efda547">init</a>();    </div><div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classOggFileLoader.html#a5a26744b6e544a7a2c765d172176ff60">close</a>();</div><div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classOggFileLoader.html#a18b14be2466a962f53bb7c411ec46268">clear</a>();</div><div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    std::vector&lt;T&gt; <span class="keyword">get</span>(<span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> &amp; amount);    </div><div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    </div><div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div><div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <a class="code" href="classOggFileLoader.html">OggFileLoader&lt;T,K&gt;</a>();</div><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    ~<a class="code" href="classOggFileLoader.html">OggFileLoader&lt;T,K&gt;</a>();  </div><div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;};</div><div class="ttc" id="classOggFileLoader_html_a47b37c1962662ac4de4b88541d9e7295"><div class="ttname"><a href="classOggFileLoader.html#a47b37c1962662ac4de4b88541d9e7295">OggFileLoader::nextPage</a></div><div class="ttdeci">int nextPage()</div><div class="ttdef"><b>Definition:</b> ogg_file_loader.cpp:53</div></div>
+<div class="ttc" id="classOggFileLoader_html_a5a26744b6e544a7a2c765d172176ff60"><div class="ttname"><a href="classOggFileLoader.html#a5a26744b6e544a7a2c765d172176ff60">OggFileLoader::close</a></div><div class="ttdeci">bool close()</div><div class="ttdef"><b>Definition:</b> ogg_file_loader.cpp:126</div></div>
+<div class="ttc" id="classOggFileLoader_html_aa1bda7029a53f5ce7b7b2f4e7e922b92"><div class="ttname"><a href="classOggFileLoader.html#aa1bda7029a53f5ce7b7b2f4e7e922b92">OggFileLoader::buffer</a></div><div class="ttdeci">char * buffer</div><div class="ttdef"><b>Definition:</b> OggFileLoader.h:18</div></div>
+<div class="ttc" id="classOggFileLoader_html_ac00acf3900b694cfa9d242068b443413"><div class="ttname"><a href="classOggFileLoader.html#ac00acf3900b694cfa9d242068b443413">OggFileLoader::readNextPage</a></div><div class="ttdeci">int readNextPage()</div><div class="ttdef"><b>Definition:</b> ogg_file_loader.cpp:40</div></div>
+<div class="ttc" id="VorbisDecoder_8h_html"><div class="ttname"><a href="VorbisDecoder_8h.html">VorbisDecoder.h</a></div></div>
+<div class="ttc" id="classOggFileLoader_html_a18b14be2466a962f53bb7c411ec46268"><div class="ttname"><a href="classOggFileLoader.html#a18b14be2466a962f53bb7c411ec46268">OggFileLoader::clear</a></div><div class="ttdeci">void clear()</div><div class="ttdef"><b>Definition:</b> ogg_file_loader.cpp:134</div></div>
+<div class="ttc" id="classOggFileLoader_html_a577762dd6ca2fc01946babba5efda547"><div class="ttname"><a href="classOggFileLoader.html#a577762dd6ca2fc01946babba5efda547">OggFileLoader::init</a></div><div class="ttdeci">int init()</div></div>
+<div class="ttc" id="classOggFileLoader_html_a0f9728b3221f5c077974d507bf184d38"><div class="ttname"><a href="classOggFileLoader.html#a0f9728b3221f5c077974d507bf184d38">OggFileLoader::decoder</a></div><div class="ttdeci">K decoder</div><div class="ttdef"><b>Definition:</b> OggFileLoader.h:26</div></div>
+<div class="ttc" id="classOggFileLoader_html_a13d79069503c5665e2e7604d7b71b3d9"><div class="ttname"><a href="classOggFileLoader.html#a13d79069503c5665e2e7604d7b71b3d9">OggFileLoader::currentPacket</a></div><div class="ttdeci">ogg_packet currentPacket</div><div class="ttdef"><b>Definition:</b> OggFileLoader.h:24</div></div>
+<div class="ttc" id="classOggFileLoader_html_a89d7f11a6a8a1426e28937cd05382129"><div class="ttname"><a href="classOggFileLoader.html#a89d7f11a6a8a1426e28937cd05382129">OggFileLoader::os</a></div><div class="ttdeci">ogg_stream_state os</div><div class="ttdef"><b>Definition:</b> OggFileLoader.h:21</div></div>
+<div class="ttc" id="classOggFileLoader_html_a5ba0c2a63e96c9b6815585310e10d504"><div class="ttname"><a href="classOggFileLoader.html#a5ba0c2a63e96c9b6815585310e10d504">OggFileLoader::read</a></div><div class="ttdeci">int read()</div><div class="ttdef"><b>Definition:</b> ogg_file_loader.cpp:30</div></div>
+<div class="ttc" id="Utils_8h_html"><div class="ttname"><a href="Utils_8h.html">Utils.h</a></div></div>
+<div class="ttc" id="classOggFileLoader_html_a9b1b15e250c29f1fcafbdf0cd1e5e590"><div class="ttname"><a href="classOggFileLoader.html#a9b1b15e250c29f1fcafbdf0cd1e5e590">OggFileLoader::nextPacket</a></div><div class="ttdeci">int nextPacket()</div><div class="ttdef"><b>Definition:</b> ogg_file_loader.cpp:68</div></div>
+<div class="ttc" id="classOggFileLoader_html_ac1b59cdf85b968251fc64ce1d4ddf605"><div class="ttname"><a href="classOggFileLoader.html#ac1b59cdf85b968251fc64ce1d4ddf605">OggFileLoader::infile</a></div><div class="ttdeci">std::ifstream infile</div><div class="ttdef"><b>Definition:</b> OggFileLoader.h:16</div></div>
+<div class="ttc" id="iSource_8h_html"><div class="ttname"><a href="iSource_8h.html">iSource.h</a></div></div>
+<div class="ttc" id="classOggFileLoader_html_a98f61e3908610c549d2b47861c066406"><div class="ttname"><a href="classOggFileLoader.html#a98f61e3908610c549d2b47861c066406">OggFileLoader::initStream</a></div><div class="ttdeci">int initStream(ogg_page &amp;page)</div><div class="ttdef"><b>Definition:</b> ogg_file_loader.cpp:18</div></div>
+<div class="ttc" id="classOggFileLoader_html_a6f7733f2506e729b8d964c8bc04a68d8"><div class="ttname"><a href="classOggFileLoader.html#a6f7733f2506e729b8d964c8bc04a68d8">OggFileLoader::oy</a></div><div class="ttdeci">ogg_sync_state oy</div><div class="ttdef"><b>Definition:</b> OggFileLoader.h:20</div></div>
+<div class="ttc" id="classOggFileLoader_html_abdb7526225dc19bc0b5af92c09182cc4"><div class="ttname"><a href="classOggFileLoader.html#abdb7526225dc19bc0b5af92c09182cc4">OggFileLoader::streamInitialized</a></div><div class="ttdeci">bool streamInitialized</div><div class="ttdef"><b>Definition:</b> OggFileLoader.h:30</div></div>
+<div class="ttc" id="classOggFileLoader_html_a25472b683b5dc3cfe65230fc5dba38af"><div class="ttname"><a href="classOggFileLoader.html#a25472b683b5dc3cfe65230fc5dba38af">OggFileLoader::eos</a></div><div class="ttdeci">bool eos</div><div class="ttdef"><b>Definition:</b> OggFileLoader.h:17</div></div>
+<div class="ttc" id="classOggFileLoader_html_a877b5980ca3e50479faf9680e3a704a1"><div class="ttname"><a href="classOggFileLoader.html#a877b5980ca3e50479faf9680e3a704a1">OggFileLoader::open</a></div><div class="ttdeci">bool open(const std::string &amp;_filename)</div><div class="ttdef"><b>Definition:</b> ogg_file_loader.cpp:112</div></div>
+<div class="ttc" id="classOggFileLoader_html"><div class="ttname"><a href="classOggFileLoader.html">OggFileLoader</a></div><div class="ttdef"><b>Definition:</b> OggFileLoader.h:14</div></div>
+<div class="ttc" id="classOggFileLoader_html_acaf4409e5fd1c52a7748c643db63d8c0"><div class="ttname"><a href="classOggFileLoader.html#acaf4409e5fd1c52a7748c643db63d8c0">OggFileLoader::overflow</a></div><div class="ttdeci">std::vector&lt; T &gt; overflow</div><div class="ttdef"><b>Definition:</b> OggFileLoader.h:28</div></div>
+<div class="ttc" id="classDataFlow_1_1iSource_html"><div class="ttname"><a href="classDataFlow_1_1iSource.html">DataFlow::iSource</a></div><div class="ttdef"><b>Definition:</b> iSource.h:7</div></div>
+<div class="ttc" id="classOggFileLoader_html_aa3908bfd22763d04a56bb81512701259"><div class="ttname"><a href="classOggFileLoader.html#aa3908bfd22763d04a56bb81512701259">OggFileLoader::currentPage</a></div><div class="ttdeci">ogg_page currentPage</div><div class="ttdef"><b>Definition:</b> OggFileLoader.h:23</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Készítette &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>

@@ -1,9 +1,6 @@
 var searchData=
 [
-  ['m',['m',['../classQueueBuffer.html#a6509db78433b53715bcebfbd4b4a836e',1,'QueueBuffer']]],
-  ['main',['main',['../main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'main.cpp']]],
-  ['main_2ecpp',['main.cpp',['../main_8cpp.html',1,'']]],
-  ['make',['make',['../namespaceconstexpr__array.html#a284c3665dbbc12e214b6e607dfe5bd98',1,'constexpr_array']]],
-  ['make_5fhelper',['make_helper',['../namespaceconstexpr__array.html#ad2f8860d094b4ba6b852ce783775ae12',1,'constexpr_array']]],
-  ['mixer',['Mixer',['../namespaceMixer.html',1,'']]]
+  ['next_5fbyte',['next_byte',['../structaudio__file__descriptor.html#afe1512b3ca1d4f9048460a5a03dcc53e',1,'audio_file_descriptor']]],
+  ['nextpacket',['nextPacket',['../classOggFileLoader.html#a9b1b15e250c29f1fcafbdf0cd1e5e590',1,'OggFileLoader']]],
+  ['nextpage',['nextPage',['../classOggFileLoader.html#a47b37c1962662ac4de4b88541d9e7295',1,'OggFileLoader']]]
 ];

@@ -1,11 +1,11 @@
 <map id="/SharedWithWindows/Projects/szakdolgozat/src/main.cpp" name="/SharedWithWindows/Projects/szakdolgozat/src/main.cpp">
-<area shape="rect" id="node6" href="$Utils_8h.html" title="Utils.h" alt="" coords="716,259,776,285"/>
-<area shape="rect" id="node13" href="$SimpleLoader_8h.html" title="SimpleLoader.h" alt="" coords="858,109,970,136"/>
-<area shape="rect" id="node20" href="$PortAudioEndpoint_8h.html" title="PortAudioEndpoint.h" alt="" coords="231,109,373,136"/>
-<area shape="rect" id="node23" href="$SineGenerator_8h.html" title="SineGenerator.h" alt="" coords="363,184,479,211"/>
-<area shape="rect" id="node24" href="$QueueBuffer_8h.html" title="QueueBuffer.h" alt="" coords="1249,259,1355,285"/>
-<area shape="rect" id="node11" href="$iBuffer_8h.html" title="iBuffer.h" alt="" coords="843,333,913,360"/>
-<area shape="rect" id="node19" href="$iLoader_8h.html" title="iLoader.h" alt="" coords="1159,184,1234,211"/>
-<area shape="rect" id="node21" href="$iAudioEndpoint_8h.html" title="iAudioEndpoint.h" alt="" coords="167,184,287,211"/>
-<area shape="rect" id="node22" href="$iSource_8h.html" title="iSource.h" alt="" coords="306,259,383,285"/>
+<area shape="rect" id="node6" href="$Utils_8h.html" title="Utils.h" alt="" coords="1257,184,1317,211"/>
+<area shape="rect" id="node10" href="$OggFileLoader_8h.html" title="OggFileLoader.h" alt="" coords="908,109,1025,136"/>
+<area shape="rect" id="node16" href="$VorbisDecoder_8h.html" title="VorbisDecoder.h" alt="" coords="739,184,858,211"/>
+<area shape="rect" id="node18" href="$PortAudioBackend_8h.html" title="PortAudioBackend.h" alt="" coords="191,109,332,136"/>
+<area shape="rect" id="node20" href="$SineGenerator_8h.html" title="SineGenerator.h" alt="" coords="1101,109,1217,136"/>
+<area shape="rect" id="node22" href="$QueueBuffer_8h.html" title="QueueBuffer.h" alt="" coords="581,109,688,136"/>
+<area shape="rect" id="node15" href="$iSource_8h.html" title="iSource.h" alt="" coords="560,259,637,285"/>
+<area shape="rect" id="node19" href="$iAudioBackend_8h.html" title="iAudioBackend.h" alt="" coords="152,184,272,211"/>
+<area shape="rect" id="node24" href="$iBuffer_8h.html" title="iBuffer.h" alt="" coords="510,184,581,211"/>
 </map>

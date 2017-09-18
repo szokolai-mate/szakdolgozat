@@ -1,3 +1,4 @@
 <map id="Osztályhierarchia&#45;ábra" name="Osztályhierarchia&#45;ábra">
-<area shape="rect" id="node1" href="$classiGenerator.html" title="iGenerator\&lt; T \&gt;" alt="" coords="5,5,120,32"/>
+<area shape="rect" id="node1" href="$classMixer_1_1iAudioBackend.html" title="Mixer::iAudioBackend\&lt; T \&gt;" alt="" coords="5,5,187,32"/>
+<area shape="rect" id="node2" href="$classPortAudioBackend.html" title="PortAudioBackend\&lt; T \&gt;" alt="" coords="235,5,397,32"/>
 </map>

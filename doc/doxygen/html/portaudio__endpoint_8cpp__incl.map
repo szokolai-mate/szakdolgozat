@@ -1,6 +1,5 @@
 <map id="/SharedWithWindows/Projects/szakdolgozat/src/portaudio_endpoint.cpp" name="/SharedWithWindows/Projects/szakdolgozat/src/portaudio_endpoint.cpp">
-<area shape="rect" id="node2" href="$PortAudioEndpoint_8h.html" title="PortAudioEndpoint.h" alt="" coords="157,109,298,136"/>
-<area shape="rect" id="node5" href="$iAudioEndpoint_8h.html" title="iAudioEndpoint.h" alt="" coords="167,184,287,211"/>
-<area shape="rect" id="node6" href="$iSource_8h.html" title="iSource.h" alt="" coords="263,259,341,285"/>
-<area shape="rect" id="node7" href="$iBuffer_8h.html" title="iBuffer.h" alt="" coords="291,333,361,360"/>
+<area shape="rect" id="node2" href="$PortAudioBackend_8h.html" title="PortAudioBackend.h" alt="" coords="157,109,298,136"/>
+<area shape="rect" id="node5" href="$iAudioBackend_8h.html" title="iAudioBackend.h" alt="" coords="167,184,287,211"/>
+<area shape="rect" id="node6" href="$iSource_8h.html" title="iSource.h" alt="" coords="241,259,318,285"/>
 </map>

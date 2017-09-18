@@ -33,11 +33,10 @@
                     "isGenerated": false,
                     "language": "CXX",
                     "sources": [
-                      "dummyLoader.cpp",
                       "main.cpp",
+                      "ogg_file_loader.cpp",
                       "portaudio_endpoint.cpp",
                       "queue_buffer.cpp",
-                      "simple_loader.cpp",
                       "sine_generator.cpp",
                       "vorbis_decoder.cpp"
                     ]
@@ -50,22 +49,6 @@
                 "name": "Mixer",
                 "sourceDirectory": "/SharedWithWindows/Projects/szakdolgozat/src",
                 "type": "EXECUTABLE"
-              },
-              {
-                "buildDirectory": "/SharedWithWindows/Projects/szakdolgozat/build",
-                "fileGroups": [
-                  {
-                    "isGenerated": true,
-                    "sources": [
-                      "build/CMakeFiles/cleanup",
-                      "build/CMakeFiles/cleanup.rule"
-                    ]
-                  }
-                ],
-                "fullName": "cleanup",
-                "name": "cleanup",
-                "sourceDirectory": "/SharedWithWindows/Projects/szakdolgozat",
-                "type": "UTILITY"
               },
               {
                 "buildDirectory": "/SharedWithWindows/Projects/szakdolgozat/build/test",
@@ -100,10 +83,9 @@
                     "language": "CXX",
                     "sources": [
                       "test_main.cpp",
-                      "../src/dummyLoader.cpp",
+                      "../src/ogg_file_loader.cpp",
                       "../src/portaudio_endpoint.cpp",
                       "../src/queue_buffer.cpp",
-                      "../src/simple_loader.cpp",
                       "../src/sine_generator.cpp",
                       "../src/vorbis_decoder.cpp"
                     ]
@@ -116,6 +98,22 @@
                 "name": "Test",
                 "sourceDirectory": "/SharedWithWindows/Projects/szakdolgozat/test",
                 "type": "EXECUTABLE"
+              },
+              {
+                "buildDirectory": "/SharedWithWindows/Projects/szakdolgozat/build",
+                "fileGroups": [
+                  {
+                    "isGenerated": true,
+                    "sources": [
+                      "build/CMakeFiles/cleanup",
+                      "build/CMakeFiles/cleanup.rule"
+                    ]
+                  }
+                ],
+                "fullName": "cleanup",
+                "name": "cleanup",
+                "sourceDirectory": "/SharedWithWindows/Projects/szakdolgozat",
+                "type": "UTILITY"
               },
               {
                 "buildDirectory": "/SharedWithWindows/Projects/szakdolgozat/build",
@@ -138,7 +136,7 @@
         ]
       }
     ],
-    "cookie": "0.6258232347874462",
+    "cookie": "0.33240608461009047",
     "inReplyTo": "codemodel",
     "type": "reply"
   }

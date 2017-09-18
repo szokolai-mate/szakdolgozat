@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['queuebuffer',['QueueBuffer',['../classQueueBuffer.html',1,'']]]
+  ['portaudiobackend',['PortAudioBackend',['../classPortAudioBackend.html',1,'']]]
 ];

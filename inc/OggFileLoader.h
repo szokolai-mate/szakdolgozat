@@ -2,21 +2,16 @@
 
 #include <fstream>
 #include <string>
-#include <iostream>
-#include <thread>
-#include <chrono>
-#include <future>
 #include <vector>
 
 #include <ogg/ogg.h>
-#include <vorbis/codec.h>
 
-#include <iLoader.h>
+#include <iSource.h>
 #include <Utils.h>
 #include <VorbisDecoder.h>
 
 template <typename T,typename K>
-class SimpleLoader : public iLoader<T>{
+class OggFileLoader : public DataFlow::iSource<T>{
 private:
     std::ifstream infile;
     bool eos = true;
@@ -41,15 +36,13 @@ private:
     int nextPacket();
 
 public:
-    void load(DataFlow::iBuffer<T> & _buffer , std::promise<audio_descriptor> _adp);
     bool open(const std::string & _filename);
     int init();    
     bool close();
     void clear();
-    void pauseLoad();
     std::vector<T> get(const unsigned int & amount);    
     
 
-    SimpleLoader<T,K>();
-	~SimpleLoader<T,K>();	
+    OggFileLoader<T,K>();
+	~OggFileLoader<T,K>();	
 };

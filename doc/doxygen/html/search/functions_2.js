@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['exposebuffer',['exposeBuffer',['../classQueueBuffer.html#a745ae1e3cb65118a4d43e3363bc4d232',1,'QueueBuffer']]]
+  ['decode',['decode',['../classVorbisDecoder.html#a2ae9f7f18261b822502d481535609873',1,'VorbisDecoder']]]
 ];

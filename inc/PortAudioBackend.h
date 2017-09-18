@@ -2,7 +2,7 @@
 #include <portaudio.h>
 #include <vector>
 
-#include <iAudioEndpoint.h>
+#include <iAudioBackend.h>
 #include <iSource.h>
 
 
@@ -26,7 +26,7 @@
     A csatolt objektumból nyert adat multiplexáltnak tekintendő.
 */
 template <typename T>
-class PortAudioEndpoint : public Mixer::iAudioEndpoint<T>
+class PortAudioBackend : public Mixer::iAudioBackend<T>
 {
   public:
     /*! Initialize the backend with the parameters.
@@ -54,7 +54,7 @@ class PortAudioEndpoint : public Mixer::iAudioEndpoint<T>
 };
 
 template <>
-int PortAudioEndpoint<float>::callbackFunction(const void *inputBuffer, void *outputBuffer,
+int PortAudioBackend<float>::callbackFunction(const void *inputBuffer, void *outputBuffer,
                                                unsigned long framesPerBuffer,
                                                const PaStreamCallbackTimeInfo *timeInfo,
                                                PaStreamCallbackFlags statusFlags,

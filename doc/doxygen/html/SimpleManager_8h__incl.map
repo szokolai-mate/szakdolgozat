@@ -1,7 +1,7 @@
 <map id="/SharedWithWindows/Projects/szakdolgozat/inc/SimpleManager.h" name="/SharedWithWindows/Projects/szakdolgozat/inc/SimpleManager.h">
-<area shape="rect" id="node3" href="$PortAudioEndpoint_8h.html" title="PortAudioEndpoint.h" alt="" coords="206,109,347,136"/>
+<area shape="rect" id="node3" href="$PortAudioBackend_8h.html" title="PortAudioBackend.h" alt="" coords="206,109,347,136"/>
 <area shape="rect" id="node10" href="$Utils_8h.html" title="Utils.h" alt="" coords="552,109,612,136"/>
-<area shape="rect" id="node6" href="$iAudioEndpoint_8h.html" title="iAudioEndpoint.h" alt="" coords="167,184,287,211"/>
+<area shape="rect" id="node6" href="$iAudioBackend_8h.html" title="iAudioBackend.h" alt="" coords="167,184,287,211"/>
 <area shape="rect" id="node7" href="$iSource_8h.html" title="iSource.h" alt="" coords="275,259,353,285"/>
 <area shape="rect" id="node8" href="$iBuffer_8h.html" title="iBuffer.h" alt="" coords="316,333,387,360"/>
 </map>

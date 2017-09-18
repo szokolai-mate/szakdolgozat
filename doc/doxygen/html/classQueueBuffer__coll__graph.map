@@ -1,3 +1,4 @@
 <map id="QueueBuffer&lt; T &gt;" name="QueueBuffer&lt; T &gt;">
-<area shape="rect" id="node2" href="$classiBuffer.html" title="{iBuffer\&lt; T \&gt;\n||+ add()\l+ add()\l+ get()\l+ isEmpty()\l+ isFull()\l+ clear()\l+ capacity()\l+ size()\l}" alt="" coords="5,5,97,185"/>
+<area shape="rect" id="node2" href="$classDataFlow_1_1iBuffer.html" title="{DataFlow::iBuffer\&lt; T \&gt;\n||+ add()\l+ add()\l+ isEmpty()\l+ isFull()\l+ clear()\l+ capacity()\l+ size()\l}" alt="" coords="9,132,165,297"/>
+<area shape="rect" id="node3" href="$classDataFlow_1_1iSource.html" title="{DataFlow::iSource\&lt; T \&gt;\n||+ get()\l}" alt="" coords="5,5,168,83"/>
 </map>

@@ -1,6 +1,8 @@
 var searchData=
 [
-  ['init',['init',['../classMixer_1_1iAudioEndpoint.html#a1e4c742c631cf6b51c173dd8cc51628b',1,'Mixer::iAudioEndpoint::init()'],['../classiPlayer.html#a41da0aee70510fd6f4b3e8ef3e8c1a83',1,'iPlayer::init()'],['../classPortAudioEndpoint.html#a0bb576977ec4f4407b7561792080f02c',1,'PortAudioEndpoint::init()'],['../classsimple__manager.html#a154b24005100a6be81c4c68a32ed180a',1,'simple_manager::init()'],['../classPortAudioEndpoint.html#a88699a3e4cfcdb77dfee5943d5ea1009',1,'PortAudioEndpoint::init()']]],
-  ['isempty',['isEmpty',['../classiBuffer.html#a63df5ced8e6891beef7567548ea9d4fd',1,'iBuffer::isEmpty()'],['../classQueueBuffer.html#aa1379908218464cdcc14d2d11a744f61',1,'QueueBuffer::isEmpty()']]],
-  ['isfull',['isFull',['../classiBuffer.html#a0e5b4fab5ce5b0ca2dc128fd807c5d87',1,'iBuffer::isFull()'],['../classQueueBuffer.html#a36e110c54aafc2b192b49ffe7a168466',1,'QueueBuffer::isFull()']]]
+  ['get',['get',['../classDataFlow_1_1iSource.html#a597d9d155168f1b28e7ddc4dbc17df41',1,'DataFlow::iSource::get()'],['../classOggFileLoader.html#a0e01d930726fdd328af51fb6c156634e',1,'OggFileLoader::get()'],['../classQueueBuffer.html#a38b69f009d2482cbc43c0682582d5c7c',1,'QueueBuffer::get()'],['../classMixer_1_1SineGenerator.html#a15bf8bf2978c11a16ec167e47d19ab01',1,'Mixer::SineGenerator::get()']]],
+  ['getchannels',['getChannels',['../classVorbisDecoder.html#a093657e0c8dd6837a3b404ba83fcf41a',1,'VorbisDecoder']]],
+  ['getcomments',['getComments',['../classVorbisDecoder.html#a2db4ab8a554290aa1223be5169189166',1,'VorbisDecoder']]],
+  ['getsamplerate',['getSampleRate',['../classVorbisDecoder.html#a53cebfad07ba8dd53b7746f8c2fe2622',1,'VorbisDecoder']]],
+  ['getvendor',['getVendor',['../classVorbisDecoder.html#ac16d7275ad31dbd7e2215216107b977a',1,'VorbisDecoder']]]
 ];

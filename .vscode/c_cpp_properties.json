@@ -1,14 +1,11 @@
 {
     "configurations": [
         {
-            "name": "Szakdolgozat / Mixer / Debug",
-            "includePath": [
-                "/SharedWithWindows/Projects/szakdolgozat/inc"
-            ],
+            "name": "null",
+            "includePath": [],
             "defines": [],
             "browse": {
                 "path": [
-                    "/SharedWithWindows/Projects/szakdolgozat/inc",
                     "${workspaceRoot}"
                 ],
                 "limitSymbolsToIncludedHeaders": true,

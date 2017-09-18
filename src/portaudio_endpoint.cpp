@@ -1,4 +1,4 @@
-#include <PortAudioEndpoint.h>
+#include <PortAudioBackend.h>
 
 #ifdef PA_WRITE_ERRORS
 void Pa_error_occured(PaError err, std::string msg = "")
@@ -12,7 +12,7 @@ void Pa_error_occured(PaError err, std::string msg = "")
 #endif
 
 template <typename T>
-bool PortAudioEndpoint<T>::start()
+bool PortAudioBackend<T>::start()
 {
     if (!stream)
     {
@@ -33,7 +33,7 @@ bool PortAudioEndpoint<T>::start()
 }
 
 template <typename T>
-bool PortAudioEndpoint<T>::stop()
+bool PortAudioBackend<T>::stop()
 {
     if (!stream)
     {
@@ -53,7 +53,7 @@ bool PortAudioEndpoint<T>::stop()
 }
 
 template <typename T>
-bool PortAudioEndpoint<T>::close()
+bool PortAudioBackend<T>::close()
 {
     if (!stream)
     {
@@ -77,7 +77,7 @@ bool PortAudioEndpoint<T>::close()
 }
 
 template <>
-bool PortAudioEndpoint<float>::init(DataFlow::iSource<float> &source, unsigned int channels, unsigned int sampleRate)
+bool PortAudioBackend<float>::init(DataFlow::iSource<float> &source, unsigned int channels, unsigned int sampleRate)
 {
     this->stop();
     this->source = &source;
@@ -126,7 +126,7 @@ bool PortAudioEndpoint<float>::init(DataFlow::iSource<float> &source, unsigned i
 }
 
 template <>
-int PortAudioEndpoint<float>::callbackFunction(const void *inputBuffer, void *outputBuffer,
+int PortAudioBackend<float>::callbackFunction(const void *inputBuffer, void *outputBuffer,
                                                unsigned long framesPerBuffer,
                                                const PaStreamCallbackTimeInfo *timeInfo,
                                                PaStreamCallbackFlags statusFlags,
@@ -138,11 +138,11 @@ int PortAudioEndpoint<float>::callbackFunction(const void *inputBuffer, void *ou
     (void)inputBuffer; /* Prevent unused variable warning. */
 
 
-    //tmp
+    //tmp FIXME
     //amount * 2 for stereo
     std::vector<float> vector = data->get(framesPerBuffer*2);
     std::copy(vector.begin(), vector.end(), out);
     return paContinue;
 }
 
-template class PortAudioEndpoint<float>;
+template class PortAudioBackend<float>;

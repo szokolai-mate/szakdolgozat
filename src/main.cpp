@@ -52,8 +52,8 @@ tehát pulseaudio = el kell foglalni a hardvert = semmi más nem adhat ki hangot
 
 #include <Utils.h>
 
-#include <SimpleLoader.h>
-#include <PortAudioEndpoint.h>
+#include <OggFileLoader.h>
+#include <PortAudioBackend.h>
 #include <SineGenerator.h>
 //#include "simple_manager.cpp"
 
@@ -125,43 +125,24 @@ int main()
 #endif
 
 QueueBuffer<float> qb(512 * 16);
-QueueBuffer<float> qb2(512 * 16);
 
 
 	std::string dancingQueen{"01 - Dancing Queen.ogg"};
 	std::string waterloo{"19 - Waterloo.ogg"};
 	std::string mono{"mono86kbps44100.ogg"};
 
-	SimpleLoader<float,VorbisDecoder> loader;
-	SimpleLoader<float,VorbisDecoder> loader2;
+	OggFileLoader<float,VorbisDecoder> loader;
+	OggFileLoader<float,VorbisDecoder> loader2;
 
 	loader.open(dancingQueen);
 	loader2.open(waterloo);
 	
-	std::promise<audio_descriptor> adp;
-	std::promise<audio_descriptor> adp2;
-	std::future<audio_descriptor> adf = adp.get_future();
 	loader.init();
 	loader2.init();
-	//std::thread t1([&] { loader.init(); });
-	//std::thread t3([&] { loader2.load(qb2, std::move(adp2)); });
-	//adf.wait();
-	
 
-	Mixer::SineGenerator<float> sg(1200);
-	Mixer::SineGenerator<float> sg2(880);
+	Mixer::SineGenerator<float> sg(440);
 
-	//std::vector<float> test = {1.0f,2.0f,3.0f,4.0f,5.0f};
-	/*std::thread t2([&] {
-		while (true)
-		{
-			std::vector<float> tmp = sg2.get(2048);
-			qb2.add(tmp);
-		}
-	});*/
-
-	audio_descriptor ad(2, 48000);
-	PortAudioEndpoint<float> player;
+	PortAudioBackend<float> player;
 	player.init(loader2, 2, 44100);
 	player.start();
 
@@ -171,6 +152,8 @@ QueueBuffer<float> qb2(512 * 16);
 		std::this_thread::sleep_for(std::chrono::duration<int, std::ratio<1, 1>>(3));
 		player.stop();
 		if (b)
+
+		//MEMORY LEAK HERE
 		{
 			player.init(loader, 2, 44100);
 		}
@@ -178,10 +161,24 @@ QueueBuffer<float> qb2(512 * 16);
 		{
 			player.init(loader2, 2, 44100);
 		}
+		//
 		player.start();
 		b = !b;
 	}
 
+/*
+while(true){
+	OggFileLoader<float,VorbisDecoder> testloader;
+	testloader.open(waterloo);
+	testloader.init();
+	std::vector<float> v(50,0);
+	while(v.size()>0){
+		v = testloader.get(2048);
+		std::cout<<"Got "<<v.size()<<std::endl;
+	}
+	std::cin.get();
+}
+*/
 //TMP: buffer test
 //#define BUFFER_TEST
 #ifdef BUFFER_TEST

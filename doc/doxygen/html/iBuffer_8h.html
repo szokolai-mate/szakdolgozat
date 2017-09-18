@@ -64,38 +64,30 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">Osztályok</a>  </div>
+<a href="#nested-classes">Osztályok</a> &#124;
+<a href="#namespaces">Névterek</a>  </div>
   <div class="headertitle">
 <div class="title">iBuffer.h fájlreferencia</div>  </div>
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &lt;vector&gt;</code><br />
+<code>#include &lt;<a class="el" href="iSource_8h_source.html">iSource.h</a>&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Az iBuffer.h definíciós fájl függési gráfja:</div>
 <div class="dyncontent">
 <div class="center"><img src="iBuffer_8h__incl.png" border="0" usemap="#_2SharedWithWindows_2Projects_2szakdolgozat_2inc_2iBuffer_8h" alt=""/></div>
+<map name="_2SharedWithWindows_2Projects_2szakdolgozat_2inc_2iBuffer_8h" id="_2SharedWithWindows_2Projects_2szakdolgozat_2inc_2iBuffer_8h">
+<area shape="rect" id="node3" href="iSource_8h.html" title="iSource.h" alt="" coords="83,109,160,136"/>
+</map>
 </div>
 </div><div class="textblock"><div class="dynheader">
 Ez az ábra azt mutatja, hogy mely fájlok ágyazzák be közvetve vagy közvetlenül ezt a fájlt:</div>
 <div class="dyncontent">
 <div class="center"><img src="iBuffer_8h__dep__incl.png" border="0" usemap="#_2SharedWithWindows_2Projects_2szakdolgozat_2inc_2iBuffer_8hdep" alt=""/></div>
 <map name="_2SharedWithWindows_2Projects_2szakdolgozat_2inc_2iBuffer_8hdep" id="_2SharedWithWindows_2Projects_2szakdolgozat_2inc_2iBuffer_8hdep">
-<area shape="rect" id="node2" href="iAdvancedBuffer_8h.html" title="/SharedWithWindows\l/Projects/szakdolgozat\l/inc/iAdvancedBuffer.h" alt="" coords="30,109,185,165"/>
-<area shape="rect" id="node3" href="iLoader_8h.html" title="/SharedWithWindows\l/Projects/szakdolgozat\l/inc/iLoader.h" alt="" coords="718,213,873,269"/>
-<area shape="rect" id="node7" href="iPlayer_8h.html" title="/SharedWithWindows\l/Projects/szakdolgozat\l/inc/iPlayer.h" alt="" coords="539,213,694,269"/>
-<area shape="rect" id="node8" href="iSource_8h.html" title="/SharedWithWindows\l/Projects/szakdolgozat\l/inc/iSource.h" alt="" coords="209,109,363,165"/>
-<area shape="rect" id="node15" href="QueueBuffer_8h.html" title="/SharedWithWindows\l/Projects/szakdolgozat\l/inc/QueueBuffer.h" alt="" coords="833,109,987,165"/>
-<area shape="rect" id="node17" href="Utils_8h.html" title="/SharedWithWindows\l/Projects/szakdolgozat\l/inc/Utils.h" alt="" coords="425,109,579,165"/>
-<area shape="rect" id="node4" href="SimpleLoader_8h.html" title="/SharedWithWindows\l/Projects/szakdolgozat\l/inc/SimpleLoader.h" alt="" coords="579,317,734,373"/>
-<area shape="rect" id="node5" href="main_8cpp.html" title="/SharedWithWindows\l/Projects/szakdolgozat\l/src/main.cpp" alt="" coords="415,421,570,477"/>
-<area shape="rect" id="node6" href="simple__loader_8cpp.html" title="/SharedWithWindows\l/Projects/szakdolgozat\l/src/SimpleLoader.cpp" alt="" coords="594,421,749,477"/>
-<area shape="rect" id="node9" href="iAudioEndpoint_8h.html" title="/SharedWithWindows\l/Projects/szakdolgozat\l/inc/iAudioEndpoint.h" alt="" coords="30,213,185,269"/>
-<area shape="rect" id="node10" href="PortAudioEndpoint_8h.html" title="/SharedWithWindows\l/Projects/szakdolgozat\l/inc/PortAudioEndpoint.h" alt="" coords="13,317,180,373"/>
-<area shape="rect" id="node13" href="SineGenerator_8h.html" title="/SharedWithWindows\l/Projects/szakdolgozat\l/inc/SineGenerator.h" alt="" coords="209,213,363,269"/>
-<area shape="rect" id="node11" href="portaudio__endpoint_8cpp.html" title="/SharedWithWindows\l/Projects/szakdolgozat\l/src/portaudio_endpoint.cpp" alt="" coords="5,421,188,477"/>
-<area shape="rect" id="node12" href="SimpleManager_8h.html" title="/SharedWithWindows\l/Projects/szakdolgozat\l/inc/SimpleManager.h" alt="" coords="229,421,383,477"/>
-<area shape="rect" id="node14" href="sine__generator_8cpp.html" title="/SharedWithWindows\l/Projects/szakdolgozat\l/src/sine_generator.cpp" alt="" coords="204,317,363,373"/>
-<area shape="rect" id="node16" href="queue__buffer_8cpp.html" title="/SharedWithWindows\l/Projects/szakdolgozat\l/src/queue_buffer.cpp" alt="" coords="947,213,1102,269"/>
+<area shape="rect" id="node2" href="QueueBuffer_8h.html" title="/SharedWithWindows\l/Projects/szakdolgozat\l/inc/QueueBuffer.h" alt="" coords="95,109,249,165"/>
+<area shape="rect" id="node3" href="main_8cpp.html" title="/SharedWithWindows\l/Projects/szakdolgozat\l/src/main.cpp" alt="" coords="5,213,160,269"/>
+<area shape="rect" id="node4" href="queue__buffer_8cpp.html" title="/SharedWithWindows\l/Projects/szakdolgozat\l/src/queue_buffer.cpp" alt="" coords="184,213,339,269"/>
 </map>
 </div>
 </div>
@@ -103,7 +95,12 @@ Ez az ábra azt mutatja, hogy mely fájlok ágyazzák be közvetve vagy közvetl
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Osztályok</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classiBuffer.html">iBuffer&lt; T &gt;</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDataFlow_1_1iBuffer.html">DataFlow::iBuffer&lt; T &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
+Névterek</h2></td></tr>
+<tr class="memitem:namespaceDataFlow"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceDataFlow.html">DataFlow</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
