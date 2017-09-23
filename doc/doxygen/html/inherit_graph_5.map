@@ -1,3 +1,13 @@
 <map id="Osztályhierarchia&#45;ábra" name="Osztályhierarchia&#45;ábra">
-<area shape="rect" id="node1" href="$structtemplate__utils_1_1extract__inner__base_3_01C_3_01T_01_4_01_4.html" title="template_utils::extract\l_inner_base\&lt; C\&lt; T \&gt; \&gt;" alt="" coords="5,5,164,47"/>
+<area shape="rect" id="node1" href="$classMixer_1_1AudioSource.html" title="Mixer::AudioSource" alt="" coords="19,56,155,83"/>
+<area shape="rect" id="node2" href="$classMixer_1_1SineGenerator.html" title="Mixer::SineGenerator\&lt; T \&gt;" alt="" coords="216,56,393,83"/>
+<area shape="rect" id="node3" href="$classSimplePlayer.html" title="SimplePlayer\&lt; T, K \&gt;" alt="" coords="231,5,379,32"/>
+<area shape="rect" id="node4" href="$classiPlayer.html" title="iPlayer" alt="" coords="55,5,118,32"/>
+<area shape="rect" id="node5" href="$classDataFlow_1_1iSource.html" title="DataFlow::iSource\&lt; T \&gt;" alt="" coords="5,165,168,192"/>
+<area shape="rect" id="node6" href="$classDataFlow_1_1Applicator.html" title="DataFlow::Applicator\l\&lt; T, K \&gt;" alt="" coords="233,158,377,199"/>
+<area shape="rect" id="node7" href="$classDataFlow_1_1Consolidator.html" title="DataFlow::Consolidator\l\&lt; T, K \&gt;" alt="" coords="225,223,384,265"/>
+<area shape="rect" id="node8" href="$classDataFlow_1_1iBuffer.html" title="DataFlow::iBuffer\&lt; T \&gt;" alt="" coords="227,289,383,316"/>
+<area shape="rect" id="node10" href="$classOggFileLoader.html" title="OggFileLoader\&lt; T, K \&gt;" alt="" coords="227,340,382,367"/>
+<area shape="rect" id="node11" href="$classVolumeControl.html" title="VolumeControl\&lt; T \&gt;" alt="" coords="235,107,375,133"/>
+<area shape="rect" id="node9" href="$classQueueBuffer.html" title="QueueBuffer\&lt; T \&gt;" alt="" coords="441,289,568,316"/>
 </map>

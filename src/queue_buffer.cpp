@@ -1,5 +1,8 @@
 #include <QueueBuffer.h>
 
+//! \todo TODO: clean this up, jesus
+//! \todo TODO: finish the implementation of queue buffer
+
 //TMP
 #include <iostream>
 

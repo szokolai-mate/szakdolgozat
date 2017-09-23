@@ -11,7 +11,7 @@ int VorbisDecoder::addToHeader(ogg_packet &packet)
     return vorbis_synthesis_headerin(&vi, &vc, &packet);
 }
 
-std::vector<std::string> VorbisDecoder::getComments()
+std::vector<std::string> VorbisDecoder::getComments() const
 {
     std::vector<std::string> res;
     char **ptr = vc.user_comments;
@@ -24,15 +24,15 @@ std::vector<std::string> VorbisDecoder::getComments()
     return res;
 }
 
-unsigned int VorbisDecoder::getChannels(){
+unsigned int VorbisDecoder::getChannels() const{
     return vi.channels;
 }
 
-unsigned int VorbisDecoder::getSampleRate(){
+unsigned int VorbisDecoder::getSampleRate() const{
     return vi.rate;
 }
 
-std::string VorbisDecoder::getVendor(){
+std::string VorbisDecoder::getVendor() const{
     return std::string{vc.vendor};
 }
 
@@ -73,4 +73,3 @@ std::vector<float> VorbisDecoder::decode(ogg_packet & packet){
 VorbisDecoder::~VorbisDecoder(){
     clear();
 }
-

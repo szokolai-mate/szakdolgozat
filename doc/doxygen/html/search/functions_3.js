@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['exposebuffer',['exposeBuffer',['../classQueueBuffer.html#a745ae1e3cb65118a4d43e3363bc4d232',1,'QueueBuffer']]]
+  ['init',['init',['../classPortAudioBackend.html#aab3c1da9b792658a1bbc87294cf9adf4',1,'PortAudioBackend']]]
 ];

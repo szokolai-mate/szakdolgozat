@@ -1,7 +1,9 @@
 var searchData=
 [
-  ['add',['add',['../classDataFlow_1_1iBuffer.html#aca09a1a02945a9da73a283984136332e',1,'DataFlow::iBuffer::add(T &amp;_buffer)=0'],['../classDataFlow_1_1iBuffer.html#a045f71200fd4d615601c0d15dc1fc6a7',1,'DataFlow::iBuffer::add(std::vector&lt; T &gt; &amp;_buffer)=0'],['../classQueueBuffer.html#aa6dc56709289aa30625b036184bcb53c',1,'QueueBuffer::add(T &amp;_buffer)'],['../classQueueBuffer.html#ae694746640cafea59167d17f01e9ea98',1,'QueueBuffer::add(std::vector&lt; T &gt; &amp;_buffer)']]],
-  ['addtoheader',['addToHeader',['../classVorbisDecoder.html#a8788601bafad9e49d21b6fa5a009a164',1,'VorbisDecoder']]],
-  ['audio_5fdescriptor',['audio_descriptor',['../structaudio__descriptor.html',1,'audio_descriptor'],['../structaudio__descriptor.html#a266dee8eea08ae31c299c1d5a5fc8b39',1,'audio_descriptor::audio_descriptor()'],['../structaudio__descriptor.html#a0d492f041fb06d5f2f3500011b4367f4',1,'audio_descriptor::audio_descriptor(unsigned short _channels, unsigned short _sample_rate)']]],
-  ['audio_5ffile_5fdescriptor',['audio_file_descriptor',['../structaudio__file__descriptor.html',1,'audio_file_descriptor'],['../structaudio__file__descriptor.html#adc4c3a2ed4bf8f391920ee0f63251302',1,'audio_file_descriptor::audio_file_descriptor()'],['../structaudio__file__descriptor.html#a79b160789afc6f9f9bf961841bc6f819',1,'audio_file_descriptor::audio_file_descriptor(unsigned long _data_start, unsigned long _next_byte)'],['../structaudio__file__descriptor.html#afb5af3bc281eff2f2546d0ecb2edb872',1,'audio_file_descriptor::audio_file_descriptor(unsigned long _data_start)']]]
+  ['accumulation',['Accumulation',['../classConsolidation_1_1Accumulation.html',1,'Consolidation']]],
+  ['applicator',['Applicator',['../classDataFlow_1_1Applicator.html',1,'DataFlow']]],
+  ['attach',['attach',['../classDataFlow_1_1Applicator.html#a1959c809e0e7726fb9051029e94ba14b',1,'DataFlow::Applicator']]],
+  ['audio_5fdescriptor',['audio_descriptor',['../structaudio__descriptor.html',1,'']]],
+  ['audio_5ffile_5fdescriptor',['audio_file_descriptor',['../structaudio__file__descriptor.html',1,'']]],
+  ['audiosource',['AudioSource',['../classMixer_1_1AudioSource.html',1,'Mixer']]]
 ];

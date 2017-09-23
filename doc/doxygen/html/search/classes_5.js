@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['queuebuffer',['QueueBuffer',['../classQueueBuffer.html',1,'']]]
+  ['oggfileloader',['OggFileLoader',['../classOggFileLoader.html',1,'']]]
 ];

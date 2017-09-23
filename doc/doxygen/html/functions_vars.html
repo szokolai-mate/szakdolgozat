@@ -62,6 +62,9 @@ $(function() {
 &#160;
 
 <h3><a id="index_b"></a>- b -</h3><ul>
+<li>backend
+: <a class="el" href="classSimplePlayer.html#a0e8163b877b976abde4192edb10091ce">SimplePlayer&lt; T, K, Channels, SampleRate &gt;</a>
+</li>
 <li>buffer
 : <a class="el" href="classOggFileLoader.html#aa1bda7029a53f5ce7b7b2f4e7e922b92">OggFileLoader&lt; T, K &gt;</a>
 , <a class="el" href="classQueueBuffer.html#ac6c9ab54cdb21f164f720847230195cf">QueueBuffer&lt; T &gt;</a>
@@ -75,6 +78,9 @@ $(function() {
 </li>
 <li>channels
 : <a class="el" href="structaudio__descriptor.html#a9cdcb99cd3382f820008a82898d1efa3">audio_descriptor</a>
+</li>
+<li>consolidationMethod
+: <a class="el" href="classDataFlow_1_1Consolidator.html#adb78895a7cf57f95b775af9c1997d46d">DataFlow::Consolidator&lt; T, K &gt;</a>
 </li>
 <li>currentPacket
 : <a class="el" href="classOggFileLoader.html#a13d79069503c5665e2e7604d7b71b3d9">OggFileLoader&lt; T, K &gt;</a>
@@ -107,6 +113,13 @@ $(function() {
 </li>
 <li>err
 : <a class="el" href="classPortAudioBackend.html#affdb8fa7caebda989128e023fc0cde3f">PortAudioBackend&lt; T &gt;</a>
+</li>
+</ul>
+
+
+<h3><a id="index_f"></a>- f -</h3><ul>
+<li>filter
+: <a class="el" href="classDataFlow_1_1Applicator.html#ab7cc144afa1367f527d2d69ba6c6fd4d">DataFlow::Applicator&lt; T, K &gt;</a>
 </li>
 </ul>
 
@@ -147,7 +160,7 @@ $(function() {
 
 <h3><a id="index_p"></a>- p -</h3><ul>
 <li>paused
-: <a class="el" href="classiPlayer.html#a1490e3f7c35b0c4a4172ce21b7ee7f31">iPlayer&lt; T &gt;</a>
+: <a class="el" href="classSimplePlayer.html#a166cb0ddcc0f3cb06896e3e782d687da">SimplePlayer&lt; T, K, Channels, SampleRate &gt;</a>
 </li>
 <li>position
 : <a class="el" href="classMixer_1_1SineGenerator.html#aabe87150dc7d046d655931e42e7062a8">Mixer::SineGenerator&lt; T &gt;</a>
@@ -160,10 +173,19 @@ $(function() {
 : <a class="el" href="structaudio__descriptor.html#ad5a4a899a490de2c1159c370686e0661">audio_descriptor</a>
 </li>
 <li>sinetable
-: <a class="el" href="classMixer_1_1SineGenerator.html#ab0c75c10b775499d3c7d3a66c70286a7">Mixer::SineGenerator&lt; T &gt;</a>
+: <a class="el" href="classMixer_1_1SineGenerator.html#a131b27ee1a9bf3aec3ab86a57ac1d9db">Mixer::SineGenerator&lt; T &gt;</a>
+</li>
+<li>sinetableUninitialized
+: <a class="el" href="classMixer_1_1SineGenerator.html#acbce995c8803b601e6f954623fc47e9b">Mixer::SineGenerator&lt; T &gt;</a>
 </li>
 <li>source
-: <a class="el" href="classPortAudioBackend.html#a5bac8f0975d3ff761d10b747b3c5e4e1">PortAudioBackend&lt; T &gt;</a>
+: <a class="el" href="classDataFlow_1_1Applicator.html#a502080a4ac789effb62a226d4b1a1b13">DataFlow::Applicator&lt; T, K &gt;</a>
+, <a class="el" href="classPortAudioBackend.html#a5bac8f0975d3ff761d10b747b3c5e4e1">PortAudioBackend&lt; T &gt;</a>
+, <a class="el" href="classSimplePlayer.html#a64f884154fcbe7464c3ec89bd91f8822">SimplePlayer&lt; T, K, Channels, SampleRate &gt;</a>
+, <a class="el" href="classVolumeControl.html#ac631a58e0533f3fe46d118eb4a4227c3">VolumeControl&lt; T &gt;</a>
+</li>
+<li>sources
+: <a class="el" href="classDataFlow_1_1Consolidator.html#ada11ee2f819f2f1d5d1018d41097e781">DataFlow::Consolidator&lt; T, K &gt;</a>
 </li>
 <li>start
 : <a class="el" href="classQueueBuffer.html#aab8f49c218eb30c476875db1a5927f8e">QueueBuffer&lt; T &gt;</a>
@@ -176,13 +198,6 @@ $(function() {
 </li>
 <li>streamInitialized
 : <a class="el" href="classOggFileLoader.html#abdb7526225dc19bc0b5af92c09182cc4">OggFileLoader&lt; T, K &gt;</a>
-</li>
-</ul>
-
-
-<h3><a id="index_t"></a>- t -</h3><ul>
-<li>table_size
-: <a class="el" href="classMixer_1_1SineGenerator.html#a9c6a99bbb08ed809eed8c93074b8be75">Mixer::SineGenerator&lt; T &gt;</a>
 </li>
 </ul>
 
@@ -201,7 +216,14 @@ $(function() {
 : <a class="el" href="classVorbisDecoder.html#afde7742c30b47dbe8db7258795239cdc">VorbisDecoder</a>
 </li>
 <li>volume
-: <a class="el" href="classiPlayer.html#a745a9ee5188d5d13951afdbf98f5ca26">iPlayer&lt; T &gt;</a>
+: <a class="el" href="classVolumeControl.html#a030d8360763fd33b0c19933613c88aed">VolumeControl&lt; T &gt;</a>
+</li>
+</ul>
+
+
+<h3><a id="index_w"></a>- w -</h3><ul>
+<li>workspace
+: <a class="el" href="classConsolidation_1_1Accumulation.html#a7e3f9009d4cf9f0e67b146dcdfdba8bc">Consolidation::Accumulation&lt; T &gt;</a>
 </li>
 </ul>
 </div><!-- contents -->

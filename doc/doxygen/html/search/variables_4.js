@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['infile',['infile',['../classOggFileLoader.html#ac1b59cdf85b968251fc64ce1d4ddf605',1,'OggFileLoader']]]
+  ['filter',['filter',['../classDataFlow_1_1Applicator.html#ab7cc144afa1367f527d2d69ba6c6fd4d',1,'DataFlow::Applicator']]]
 ];

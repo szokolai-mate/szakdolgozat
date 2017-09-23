@@ -40,8 +40,9 @@ public:
     int init();    
     bool close();
     void clear();
-    std::vector<T> get(const unsigned int & amount);    
-    
+    std::vector<T> get(const unsigned int & amount);
+
+    const K & getDecoder();    
 
     OggFileLoader<T,K>();
 	~OggFileLoader<T,K>();	

@@ -1,7 +1,5 @@
 var searchData=
 [
-  ['iaudiobackend',['iAudioBackend',['../classMixer_1_1iAudioBackend.html',1,'Mixer']]],
-  ['ibuffer',['iBuffer',['../classDataFlow_1_1iBuffer.html',1,'DataFlow']]],
-  ['iplayer',['iPlayer',['../classiPlayer.html',1,'']]],
-  ['isource',['iSource',['../classDataFlow_1_1iSource.html',1,'DataFlow']]]
+  ['extract_5finner_5fbase',['extract_inner_base',['../structtemplate__utils_1_1extract__inner__base.html',1,'template_utils']]],
+  ['extract_5finner_5fbase_3c_20c_3c_20t_20_3e_20_3e',['extract_inner_base&lt; C&lt; T &gt; &gt;',['../structtemplate__utils_1_1extract__inner__base_3_01C_3_01T_01_4_01_4.html',1,'template_utils']]]
 ];

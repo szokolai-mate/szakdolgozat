@@ -1,24 +1,4 @@
-//TODO: frame-sync : bal �s jobb csak egyszerre vehet� ki (std::pair<float,float>)
-//-> mono, stereo.... az �sszes csatorn�ra kell megold�st tal�lni
-//szétszedni modulokra
-
-//úgy tűnik nekem kell egy real-time mixert csinálnom. fuck.
-
-//TODO(later): equalizer
-
-//TODO: blokkolóval tesztelni a sinuszt
-
-//TODO: statikus buffer, hogy ellenőrizhessem a szekvencialitást és hogy a pause/play miért dobál el frameket (gyorsabbnak tűnik a lejátszás)
-
-//pretest: blokkoló example nem kattog, nem blokkoló ugyanugy kattog.
-//BLOKKOLÓVAL KELL AZ EGÉSZET CSINÁLNOM GÓFUCK
-//pretest2: a nem blokkoló record-playback nem mutat poppolást, KELL MÉG TESZTELNI
-//pretest3: real time visszaáttszás is kattog.
-//KONKLUZIÓ: pulseaudio bekaphatja
-
-/*ha direkt kapcsolódok a pcm playback device-ra, a kattogásnak végre vvége.
-tehát pulseaudio = el kell foglalni a hardvert = semmi más nem adhat ki hangot közben
-=> pulseaudio detected = blokkoló irás nem callback*/
+//\todo TODO(later): equalizer
 
 //KONKLUZIÓ : FIX FRAMES-PRE-BUFFER KELL A KATTOGÁS ELLEN (legalábbis pulseaudiónál)
 
@@ -29,39 +9,35 @@ tehát pulseaudio = el kell foglalni a hardvert = semmi más nem adhat ki hangot
 
 //probléma: mintha kihagyna amikor resume-nál underflow van.
 
-//TODO:probléma:pause és play kiugraszt cuccot valamiért.
-//VOLUME: valahogy a callbackbe rakni a volume-babrálást? (currentVolume, targetVolume,volumeChange)
+//TODO: separate h+impl
 
-//tézis: a portaudio stopstream-je alapból kattan valamiért.
-//TODO: read up on move semantics for efficient buffer mixing/input/output
-
-//CURRENT TODO: separate h+impl -> now linker errors
-
-//BUGHUNT: in player after getting out of the buffer: random discrepencies: -0.1 -> -0.6 -> -0.1
-// ->must do a buffer test
-//		->buffer seems ok, even when read and write are in different threads
-//talán a mutex lockolgatás miatt van?
-
-//TODO: eldönteni ki a felelős azért hogy ne framesPerBuffer hanem ftamesPerBuffer*channels sample follyon
+//TODO: channel + samplerate menjen végig (AudioDescriptor?)
+//TODO: change template in applicator/consolidator to interface/functor pointer: otherwise you cant change them in runtime
 
 #include <iostream>
 #include <thread>
-#include <future>
+#include <chrono>
 
 #include <portaudio.h>
 
 #include <Utils.h>
 
 #include <OggFileLoader.h>
+#include <SimplePlayer.h>
 #include <PortAudioBackend.h>
 #include <SineGenerator.h>
-//#include "simple_manager.cpp"
+#include <Consolidator.h>
+#include <ConsolidationMethods.h>
+#include <Applicator.h>
+#include <Clipping.h>
+#include <VolumeControl.h>
 
 #include <QueueBuffer.h>
 #include <VorbisDecoder.h>
 
-#include <set>
-#include <chrono>
+#define DEFAULT_CHANNELS 2
+#define DEFAULT_SAMPLE_RATE 48000
+
 
 int main()
 {
@@ -132,37 +108,48 @@ QueueBuffer<float> qb(512 * 16);
 	std::string mono{"mono86kbps44100.ogg"};
 
 	OggFileLoader<float,VorbisDecoder> loader;
-	OggFileLoader<float,VorbisDecoder> loader2;
 
 	loader.open(dancingQueen);
-	loader2.open(waterloo);
 	
 	loader.init();
-	loader2.init();
 
-	Mixer::SineGenerator<float> sg(440);
+	for(auto a : loader.getDecoder().getComments()){
+		std::cout<<a<<std::endl;
+	}
 
-	PortAudioBackend<float> player;
-	player.init(loader2, 2, 44100);
-	player.start();
+	Mixer::SineGenerator<float> sg(440,DEFAULT_CHANNELS,DEFAULT_SAMPLE_RATE);
+	Mixer::SineGenerator<float> sg2(439,DEFAULT_CHANNELS,DEFAULT_SAMPLE_RATE);
+
+	VolumeControl<float> vc(0.5f);
+	VolumeControl<float> vc2(0.5f);
+
+	vc.attach(sg);
+	vc2.attach(sg2);
+
+	DataFlow::Consolidator<float,Consolidation::Accumulation> consolidator;
+	consolidator.attach(vc);
+	consolidator.attach(vc2);
+	
+	DataFlow::Applicator<float,Clipping::Hard> applicator;
+	applicator.attach(consolidator);
+	
+	SimplePlayer<float,PortAudioBackend> player(DEFAULT_CHANNELS,DEFAULT_SAMPLE_RATE);
+	player.attach(applicator);
+	player.play();
 
 	bool b = true;
 	while (true)
 	{
 		std::this_thread::sleep_for(std::chrono::duration<int, std::ratio<1, 1>>(3));
-		player.stop();
-		if (b)
+		player.pause();
 
-		//MEMORY LEAK HERE
-		{
-			player.init(loader, 2, 44100);
+		if(b){
+			player.attach(vc);
+		}else{
+			player.attach(applicator);
 		}
-		else
-		{
-			player.init(loader2, 2, 44100);
-		}
-		//
-		player.start();
+
+		if (b)player.play();
 		b = !b;
 	}
 

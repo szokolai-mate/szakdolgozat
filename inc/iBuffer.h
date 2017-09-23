@@ -27,5 +27,7 @@ class iBuffer : public DataFlow::iSource<T>
     virtual unsigned int capacity() = 0;
 
     virtual unsigned int size() = 0;
+
+    virtual ~iBuffer(){};
 };
 }

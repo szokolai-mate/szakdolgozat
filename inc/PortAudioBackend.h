@@ -5,15 +5,11 @@
 #include <iAudioBackend.h>
 #include <iSource.h>
 
-
 #define PA_WRITE_ERRORS
 
 #ifdef PA_WRITE_ERRORS
 #include <iostream>
 #endif
-
-
-/*TODO: at start and stop make a rapid approach to 0 to avoid popping*/
 
 //! \~english An endpoint with PortAudio backend
 //! \~hungarian PortAudio backendet használó végpont
@@ -28,34 +24,29 @@
 template <typename T>
 class PortAudioBackend : public Mixer::iAudioBackend<T>
 {
-  public:
-    /*! Initialize the backend with the parameters.
-    \param source the object supplying audio data
+public:
+  /*! \~english Initialize the backend with the parameters. 
+        \~hungarian Felállitja a backendet a paraméterekkel.
+    \param \~english source the object supplying audio data
+           \~hungarian source a forrás ahonnan az adatot nyeri
     \param channels channel count
     \param sampleRate sample rate
     */
-    bool init(DataFlow::iSource<T> & source,unsigned int channels, unsigned int sampleRate);
-    //! Start playing from the attached source.
-    bool start();
-    //! Stop playing. Idempotent.
-    bool stop();
-    //! Close stream. Reopen with init().
-    bool close();
+  bool init(DataFlow::iSource<T> &source, const unsigned int & channels, const unsigned int & sampleRate);
+  //! Start playing from the attached source.
+  bool start();
+  //! Stop playing. Idempotent.
+  bool stop();
+  //! Close stream. Reopen with init().
+  bool close();
 
-  private:
-    PaStream *stream;
-    PaError err;
-    DataFlow::iSource<T> *source;
-    static int callbackFunction(const void *inputBuffer, void *outputBuffer,
-                                unsigned long framesPerBuffer,
-                                const PaStreamCallbackTimeInfo *timeInfo,
-                                PaStreamCallbackFlags statusFlags,
-                                void *userData);
+private:
+  PaStream *stream;
+  PaError err;
+  DataFlow::iSource<T> *source;
+  static int callbackFunction(const void *inputBuffer, void *outputBuffer,
+                              unsigned long framesPerBuffer,
+                              const PaStreamCallbackTimeInfo *timeInfo,
+                              PaStreamCallbackFlags statusFlags,
+                              void *userData);
 };
-
-template <>
-int PortAudioBackend<float>::callbackFunction(const void *inputBuffer, void *outputBuffer,
-                                               unsigned long framesPerBuffer,
-                                               const PaStreamCallbackTimeInfo *timeInfo,
-                                               PaStreamCallbackFlags statusFlags,
-                                               void *userData);

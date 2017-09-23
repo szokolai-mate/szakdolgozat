@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['oggfileloader',['OggFileLoader',['../classOggFileLoader.html',1,'']]]
+  ['hard',['Hard',['../classClipping_1_1Hard.html',1,'Clipping']]]
 ];

@@ -1,7 +1,13 @@
 #include <OggFileLoader.h>
-//TODO: exceptions and error handling
+//! \todo TODO: exceptions and error handling
+//MAYBE: separate further to file-packaging-coded
 
 #define BUFFERSIZE 4096
+
+template <typename T, typename K>
+const K & OggFileLoader<T, K>::getDecoder(){
+	return decoder;
+}
 
 template <>
 int OggFileLoader<float, VorbisDecoder>::init()
@@ -115,7 +121,6 @@ bool OggFileLoader<T, K>::open(const std::string &_filename)
 	if (!infile.is_open())
 	{
 		//error
-		std::cerr << "Error opening file: " << _filename.c_str() << std::endl;
 		return false;
 	}
 	eos = false;

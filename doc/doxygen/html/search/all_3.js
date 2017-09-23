@@ -1,7 +1,5 @@
 var searchData=
 [
-  ['data_5fstart',['data_start',['../structaudio__file__descriptor.html#ae61a00a1b7ae01bc10dd9c7c28c3692e',1,'audio_file_descriptor']]],
-  ['dataflow',['DataFlow',['../namespaceDataFlow.html',1,'']]],
-  ['decode',['decode',['../classVorbisDecoder.html#a2ae9f7f18261b822502d481535609873',1,'VorbisDecoder']]],
-  ['decoder',['decoder',['../classOggFileLoader.html#a0f9728b3221f5c077974d507bf184d38',1,'OggFileLoader']]]
+  ['extract_5finner_5fbase',['extract_inner_base',['../structtemplate__utils_1_1extract__inner__base.html',1,'template_utils']]],
+  ['extract_5finner_5fbase_3c_20c_3c_20t_20_3e_20_3e',['extract_inner_base&lt; C&lt; T &gt; &gt;',['../structtemplate__utils_1_1extract__inner__base_3_01C_3_01T_01_4_01_4.html',1,'template_utils']]]
 ];

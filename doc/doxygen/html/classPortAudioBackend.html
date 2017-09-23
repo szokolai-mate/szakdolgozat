@@ -61,9 +61,6 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Publikus tagfüggvények</a> &#124;
-<a href="#pri-methods">Privát tagfüggvények</a> &#124;
-<a href="#pri-static-methods">Statikus privát tagfüggvények</a> &#124;
-<a href="#pri-attribs">Privát attribútumok</a> &#124;
 <a href="classPortAudioBackend-members.html">A tagok teljes listája</a>  </div>
   <div class="headertitle">
 <div class="title">PortAudioBackend&lt; T &gt; osztálysablon-referencia</div>  </div>
@@ -76,7 +73,7 @@ A PortAudioBackend&lt; T &gt; osztály származási diagramja:</div>
 <div class="dyncontent">
 <div class="center"><img src="classPortAudioBackend__inherit__graph.png" border="0" usemap="#PortAudioBackend_3_01T_01_4_inherit__map" alt="Inheritance graph"/></div>
 <map name="PortAudioBackend_3_01T_01_4_inherit__map" id="PortAudioBackend_3_01T_01_4_inherit__map">
-<area shape="rect" id="node2" href="classMixer_1_1iAudioBackend.html" title="{Mixer::iAudioBackend\&lt; T \&gt;\n||+ init()\l}" alt="" coords="5,5,187,83"/>
+<area shape="rect" id="node2" href="classMixer_1_1iAudioBackend.html" title="{Mixer::iAudioBackend\&lt; T \&gt;\n||+ init()\l+ ~iAudioBackend()\l}" alt="" coords="5,5,187,97"/>
 </map>
 </div>
 <div class="dynheader">
@@ -84,266 +81,36 @@ A PortAudioBackend&lt; T &gt; osztály együttműködési diagramja:</div>
 <div class="dyncontent">
 <div class="center"><img src="classPortAudioBackend__coll__graph.png" border="0" usemap="#PortAudioBackend_3_01T_01_4_coll__map" alt="Collaboration graph"/></div>
 <map name="PortAudioBackend_3_01T_01_4_coll__map" id="PortAudioBackend_3_01T_01_4_coll__map">
-<area shape="rect" id="node2" href="classMixer_1_1iAudioBackend.html" title="{Mixer::iAudioBackend\&lt; T \&gt;\n||+ init()\l}" alt="" coords="5,5,187,83"/>
+<area shape="rect" id="node2" href="classMixer_1_1iAudioBackend.html" title="{Mixer::iAudioBackend\&lt; T \&gt;\n||+ init()\l+ ~iAudioBackend()\l}" alt="" coords="5,5,187,97"/>
 </map>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Publikus tagfüggvények</h2></td></tr>
-<tr class="memitem:a3719f43b1ee5c9551d3a63d5ad5d5532"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPortAudioBackend.html#a3719f43b1ee5c9551d3a63d5ad5d5532">init</a> (<a class="el" href="classDataFlow_1_1iSource.html">DataFlow::iSource</a>&lt; T &gt; &amp;<a class="el" href="classPortAudioBackend.html#a5bac8f0975d3ff761d10b747b3c5e4e1">source</a>, unsigned int channels, unsigned int sampleRate)</td></tr>
-<tr class="separator:a3719f43b1ee5c9551d3a63d5ad5d5532"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a81fdbca89c3e0388eb3c2e4d681eae7c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPortAudioBackend.html#a81fdbca89c3e0388eb3c2e4d681eae7c">start</a> ()</td></tr>
-<tr class="memdesc:a81fdbca89c3e0388eb3c2e4d681eae7c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Start playing from the attached source.  <a href="#a81fdbca89c3e0388eb3c2e4d681eae7c">Részletek...</a><br /></td></tr>
+<tr class="memitem:aab3c1da9b792658a1bbc87294cf9adf4"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPortAudioBackend.html#aab3c1da9b792658a1bbc87294cf9adf4">init</a> (<a class="el" href="classDataFlow_1_1iSource.html">DataFlow::iSource</a>&lt; T &gt; &amp;source, const unsigned int &amp;channels, const unsigned int &amp;sampleRate)</td></tr>
+<tr class="separator:aab3c1da9b792658a1bbc87294cf9adf4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a81fdbca89c3e0388eb3c2e4d681eae7c"><td class="memItemLeft" align="right" valign="top"><a id="a81fdbca89c3e0388eb3c2e4d681eae7c"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPortAudioBackend.html#a81fdbca89c3e0388eb3c2e4d681eae7c">start</a> ()</td></tr>
+<tr class="memdesc:a81fdbca89c3e0388eb3c2e4d681eae7c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Start playing from the attached source. <br /></td></tr>
 <tr class="separator:a81fdbca89c3e0388eb3c2e4d681eae7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4849770557d4538feb676137bbcfa737"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPortAudioBackend.html#a4849770557d4538feb676137bbcfa737">stop</a> ()</td></tr>
-<tr class="memdesc:a4849770557d4538feb676137bbcfa737"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stop playing. Idempotent.  <a href="#a4849770557d4538feb676137bbcfa737">Részletek...</a><br /></td></tr>
+<tr class="memitem:a4849770557d4538feb676137bbcfa737"><td class="memItemLeft" align="right" valign="top"><a id="a4849770557d4538feb676137bbcfa737"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPortAudioBackend.html#a4849770557d4538feb676137bbcfa737">stop</a> ()</td></tr>
+<tr class="memdesc:a4849770557d4538feb676137bbcfa737"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stop playing. Idempotent. <br /></td></tr>
 <tr class="separator:a4849770557d4538feb676137bbcfa737"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae4cb511ad95bddbe8389fccec9579ea9"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPortAudioBackend.html#ae4cb511ad95bddbe8389fccec9579ea9">close</a> ()</td></tr>
-<tr class="memdesc:ae4cb511ad95bddbe8389fccec9579ea9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Close stream. Reopen with <a class="el" href="classPortAudioBackend.html#a3719f43b1ee5c9551d3a63d5ad5d5532">init()</a>.  <a href="#ae4cb511ad95bddbe8389fccec9579ea9">Részletek...</a><br /></td></tr>
+<tr class="memitem:ae4cb511ad95bddbe8389fccec9579ea9"><td class="memItemLeft" align="right" valign="top"><a id="ae4cb511ad95bddbe8389fccec9579ea9"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPortAudioBackend.html#ae4cb511ad95bddbe8389fccec9579ea9">close</a> ()</td></tr>
+<tr class="memdesc:ae4cb511ad95bddbe8389fccec9579ea9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Close stream. Reopen with <a class="el" href="classPortAudioBackend.html#aab3c1da9b792658a1bbc87294cf9adf4">init()</a>. <br /></td></tr>
 <tr class="separator:ae4cb511ad95bddbe8389fccec9579ea9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2721a11a4b4f70e166f67b43a79cd5be"><td class="memTemplParams" colspan="2">template&lt;&gt; </td></tr>
-<tr class="memitem:a2721a11a4b4f70e166f67b43a79cd5be"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classPortAudioBackend.html#a2721a11a4b4f70e166f67b43a79cd5be">init</a> (<a class="el" href="classDataFlow_1_1iSource.html">DataFlow::iSource</a>&lt; float &gt; &amp;<a class="el" href="classPortAudioBackend.html#a5bac8f0975d3ff761d10b747b3c5e4e1">source</a>, unsigned int channels, unsigned int sampleRate)</td></tr>
-<tr class="separator:a2721a11a4b4f70e166f67b43a79cd5be"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
-Privát tagfüggvények</h2></td></tr>
-<tr class="memitem:ac128707fe2fec02430a388bbaa629fe7"><td class="memTemplParams" colspan="2">template&lt;&gt; </td></tr>
-<tr class="memitem:ac128707fe2fec02430a388bbaa629fe7"><td class="memTemplItemLeft" align="right" valign="top">int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classPortAudioBackend.html#ac128707fe2fec02430a388bbaa629fe7">callbackFunction</a> (const void *inputBuffer, void *outputBuffer, unsigned long framesPerBuffer, const PaStreamCallbackTimeInfo *timeInfo, PaStreamCallbackFlags statusFlags, void *userData)</td></tr>
-<tr class="separator:ac128707fe2fec02430a388bbaa629fe7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac128707fe2fec02430a388bbaa629fe7"><td class="memTemplParams" colspan="2">template&lt;&gt; </td></tr>
-<tr class="memitem:ac128707fe2fec02430a388bbaa629fe7"><td class="memTemplItemLeft" align="right" valign="top">int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classPortAudioBackend.html#ac128707fe2fec02430a388bbaa629fe7">callbackFunction</a> (const void *inputBuffer, void *outputBuffer, unsigned long framesPerBuffer, const PaStreamCallbackTimeInfo *timeInfo, PaStreamCallbackFlags statusFlags, void *userData)</td></tr>
-<tr class="separator:ac128707fe2fec02430a388bbaa629fe7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-methods"></a>
-Statikus privát tagfüggvények</h2></td></tr>
-<tr class="memitem:afd8d458b86fb17816da8d4a4fc731048"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPortAudioBackend.html#afd8d458b86fb17816da8d4a4fc731048">callbackFunction</a> (const void *inputBuffer, void *outputBuffer, unsigned long framesPerBuffer, const PaStreamCallbackTimeInfo *timeInfo, PaStreamCallbackFlags statusFlags, void *userData)</td></tr>
-<tr class="separator:afd8d458b86fb17816da8d4a4fc731048"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
-Privát attribútumok</h2></td></tr>
-<tr class="memitem:ac5b349e4f80a772b43ce147e72202ecc"><td class="memItemLeft" align="right" valign="top">PaStream *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPortAudioBackend.html#ac5b349e4f80a772b43ce147e72202ecc">stream</a></td></tr>
-<tr class="separator:ac5b349e4f80a772b43ce147e72202ecc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:affdb8fa7caebda989128e023fc0cde3f"><td class="memItemLeft" align="right" valign="top">PaError&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPortAudioBackend.html#affdb8fa7caebda989128e023fc0cde3f">err</a></td></tr>
-<tr class="separator:affdb8fa7caebda989128e023fc0cde3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5bac8f0975d3ff761d10b747b3c5e4e1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classDataFlow_1_1iSource.html">DataFlow::iSource</a>&lt; T &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPortAudioBackend.html#a5bac8f0975d3ff761d10b747b3c5e4e1">source</a></td></tr>
-<tr class="separator:a5bac8f0975d3ff761d10b747b3c5e4e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Részletes leírás</h2>
 <div class="textblock"><h3>template&lt;typename T&gt;<br />
 class PortAudioBackend&lt; T &gt;</h3>
 
 <p>PortAudio backendet használó végpont</p>
-<p>Ez az osztály egy multiplatformos audió backendet, a PortAudio-t használja egy iSource objektumból nyert audió adat lejátszására. Használat előtt az <a class="el" href="classPortAudioBackend.html#a3719f43b1ee5c9551d3a63d5ad5d5532">init()</a> függvénnyel egy iSource objektumot csatlakoztatunk hozzá, majd a <a class="el" href="classPortAudioBackend.html#a81fdbca89c3e0388eb3c2e4d681eae7c" title="Start playing from the attached source. ">start()</a> fügvénnyel elkezdhetjük a lejátszást. A csatolt objektumból nyert adat multiplexáltnak tekintendő. </p>
+<p>Ez az osztály egy multiplatformos audió backendet, a PortAudio-t használja egy iSource objektumból nyert audió adat lejátszására. Használat előtt az <a class="el" href="classPortAudioBackend.html#aab3c1da9b792658a1bbc87294cf9adf4">init()</a> függvénnyel egy iSource objektumot csatlakoztatunk hozzá, majd a <a class="el" href="classPortAudioBackend.html#a81fdbca89c3e0388eb3c2e4d681eae7c" title="Start playing from the attached source. ">start()</a> fügvénnyel elkezdhetjük a lejátszást. A csatolt objektumból nyert adat multiplexáltnak tekintendő. </p>
 </div><h2 class="groupheader">Tagfüggvények dokumentációja</h2>
-<a id="afd8d458b86fb17816da8d4a4fc731048"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afd8d458b86fb17816da8d4a4fc731048">&#9670;&nbsp;</a></span>callbackFunction() <span class="overload">[1/3]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static int <a class="el" href="classPortAudioBackend.html">PortAudioBackend</a>&lt; T &gt;::callbackFunction </td>
-          <td>(</td>
-          <td class="paramtype">const void *&#160;</td>
-          <td class="paramname"><em>inputBuffer</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">void *&#160;</td>
-          <td class="paramname"><em>outputBuffer</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">unsigned long&#160;</td>
-          <td class="paramname"><em>framesPerBuffer</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const PaStreamCallbackTimeInfo *&#160;</td>
-          <td class="paramname"><em>timeInfo</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">PaStreamCallbackFlags&#160;</td>
-          <td class="paramname"><em>statusFlags</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">void *&#160;</td>
-          <td class="paramname"><em>userData</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="ac128707fe2fec02430a388bbaa629fe7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac128707fe2fec02430a388bbaa629fe7">&#9670;&nbsp;</a></span>callbackFunction() <span class="overload">[2/3]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">int <a class="el" href="classPortAudioBackend.html">PortAudioBackend</a>&lt; float &gt;::callbackFunction </td>
-          <td>(</td>
-          <td class="paramtype">const void *&#160;</td>
-          <td class="paramname"><em>inputBuffer</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">void *&#160;</td>
-          <td class="paramname"><em>outputBuffer</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">unsigned long&#160;</td>
-          <td class="paramname"><em>framesPerBuffer</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const PaStreamCallbackTimeInfo *&#160;</td>
-          <td class="paramname"><em>timeInfo</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">PaStreamCallbackFlags&#160;</td>
-          <td class="paramname"><em>statusFlags</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">void *&#160;</td>
-          <td class="paramname"><em>userData</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="ac128707fe2fec02430a388bbaa629fe7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac128707fe2fec02430a388bbaa629fe7">&#9670;&nbsp;</a></span>callbackFunction() <span class="overload">[3/3]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">int <a class="el" href="classPortAudioBackend.html">PortAudioBackend</a>&lt; float &gt;::callbackFunction </td>
-          <td>(</td>
-          <td class="paramtype">const void *&#160;</td>
-          <td class="paramname"><em>inputBuffer</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">void *&#160;</td>
-          <td class="paramname"><em>outputBuffer</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">unsigned long&#160;</td>
-          <td class="paramname"><em>framesPerBuffer</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const PaStreamCallbackTimeInfo *&#160;</td>
-          <td class="paramname"><em>timeInfo</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">PaStreamCallbackFlags&#160;</td>
-          <td class="paramname"><em>statusFlags</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">void *&#160;</td>
-          <td class="paramname"><em>userData</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="ae4cb511ad95bddbe8389fccec9579ea9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae4cb511ad95bddbe8389fccec9579ea9">&#9670;&nbsp;</a></span>close()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">bool <a class="el" href="classPortAudioBackend.html">PortAudioBackend</a>&lt; T &gt;::close </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Close stream. Reopen with <a class="el" href="classPortAudioBackend.html#a3719f43b1ee5c9551d3a63d5ad5d5532">init()</a>. </p>
-
-</div>
-</div>
-<a id="a3719f43b1ee5c9551d3a63d5ad5d5532"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3719f43b1ee5c9551d3a63d5ad5d5532">&#9670;&nbsp;</a></span>init() <span class="overload">[1/2]</span></h2>
+<a id="aab3c1da9b792658a1bbc87294cf9adf4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aab3c1da9b792658a1bbc87294cf9adf4">&#9670;&nbsp;</a></span>init()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -362,13 +129,13 @@ template&lt;typename T &gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramtype">const unsigned int &amp;&#160;</td>
           <td class="paramname"><em>channels</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramtype">const unsigned int &amp;&#160;</td>
           <td class="paramname"><em>sampleRate</em>&#160;</td>
         </tr>
         <tr>
@@ -383,173 +150,22 @@ template&lt;typename T &gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Initialize the backend with the parameters. </p><dl class="params"><dt>Paraméterek</dt><dd>
+<p>Felállitja a backendet a paraméterekkel. </p><dl class="params"><dt>Paraméterek</dt><dd>
   <table class="params">
-    <tr><td class="paramname">source</td><td>the object supplying audio data </td></tr>
+    <tr><td class="paramname">source</td><td>a forrás ahonnan az adatot nyeri </td></tr>
     <tr><td class="paramname">channels</td><td>channel count </td></tr>
     <tr><td class="paramname">sampleRate</td><td>sample rate </td></tr>
   </table>
   </dd>
 </dl>
 
-<p>Megvalósítja a következőket: <a class="el" href="classMixer_1_1iAudioBackend.html#a8204f110c371e8267d280bd0f4fe51fd">Mixer::iAudioBackend&lt; T &gt;</a>.</p>
-
-</div>
-</div>
-<a id="a2721a11a4b4f70e166f67b43a79cd5be"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2721a11a4b4f70e166f67b43a79cd5be">&#9670;&nbsp;</a></span>init() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">bool <a class="el" href="classPortAudioBackend.html">PortAudioBackend</a>&lt; float &gt;::init </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classDataFlow_1_1iSource.html">DataFlow::iSource</a>&lt; float &gt; &amp;&#160;</td>
-          <td class="paramname"><em>source</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">unsigned int&#160;</td>
-          <td class="paramname"><em>channels</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">unsigned int&#160;</td>
-          <td class="paramname"><em>sampleRate</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a81fdbca89c3e0388eb3c2e4d681eae7c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a81fdbca89c3e0388eb3c2e4d681eae7c">&#9670;&nbsp;</a></span>start()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">bool <a class="el" href="classPortAudioBackend.html">PortAudioBackend</a>&lt; T &gt;::start </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Start playing from the attached source. </p>
-
-</div>
-</div>
-<a id="a4849770557d4538feb676137bbcfa737"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4849770557d4538feb676137bbcfa737">&#9670;&nbsp;</a></span>stop()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">bool <a class="el" href="classPortAudioBackend.html">PortAudioBackend</a>&lt; T &gt;::stop </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Stop playing. Idempotent. </p>
-
-</div>
-</div>
-<h2 class="groupheader">Adattagok dokumentációja</h2>
-<a id="affdb8fa7caebda989128e023fc0cde3f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#affdb8fa7caebda989128e023fc0cde3f">&#9670;&nbsp;</a></span>err</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">PaError <a class="el" href="classPortAudioBackend.html">PortAudioBackend</a>&lt; T &gt;::err</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a5bac8f0975d3ff761d10b747b3c5e4e1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5bac8f0975d3ff761d10b747b3c5e4e1">&#9670;&nbsp;</a></span>source</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classDataFlow_1_1iSource.html">DataFlow::iSource</a>&lt;T&gt;* <a class="el" href="classPortAudioBackend.html">PortAudioBackend</a>&lt; T &gt;::source</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="ac5b349e4f80a772b43ce147e72202ecc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac5b349e4f80a772b43ce147e72202ecc">&#9670;&nbsp;</a></span>stream</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">PaStream* <a class="el" href="classPortAudioBackend.html">PortAudioBackend</a>&lt; T &gt;::stream</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
+<p>Megvalósítja a következőket: <a class="el" href="classMixer_1_1iAudioBackend.html">Mixer::iAudioBackend&lt; T &gt;</a>.</p>
 
 </div>
 </div>
 <hr/>Ez a dokumentáció az osztályról a következő fájlok alapján készült:<ul>
 <li>/SharedWithWindows/Projects/szakdolgozat/inc/<a class="el" href="PortAudioBackend_8h_source.html">PortAudioBackend.h</a></li>
-<li>/SharedWithWindows/Projects/szakdolgozat/src/<a class="el" href="portaudio__endpoint_8cpp.html">portaudio_endpoint.cpp</a></li>
+<li>/SharedWithWindows/Projects/szakdolgozat/src/portaudio_backend.cpp</li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

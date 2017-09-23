@@ -77,7 +77,7 @@ bool PortAudioBackend<T>::close()
 }
 
 template <>
-bool PortAudioBackend<float>::init(DataFlow::iSource<float> &source, unsigned int channels, unsigned int sampleRate)
+bool PortAudioBackend<float>::init(DataFlow::iSource<float> &source,const unsigned int & channels, const unsigned int & sampleRate)
 {
     this->stop();
     this->source = &source;
@@ -111,8 +111,7 @@ bool PortAudioBackend<float>::init(DataFlow::iSource<float> &source, unsigned in
         NULL, /* no input */
         &outputParameters,
         sampleRate,
-        256 * 8, //fixed for pulseaudio, testing 0 for others
-        //furcsa 1024-nél VAN underflow resume+playnél, de 2048-nál NINCS!  és ez a sine-ra is igaz ahol nincs buffer!
+        0, // NOTE: this had to be fixed for pulseaudio or popping was introduced. Not anymore!
         paClipOff,        /* we won't output out of range samples so don't bother clipping them */
         callbackFunction, /* the callback function. NULL for blocking API */
         this->source);    /* userData passed to the callback */
@@ -125,22 +124,19 @@ bool PortAudioBackend<float>::init(DataFlow::iSource<float> &source, unsigned in
     return true;
 }
 
-template <>
-int PortAudioBackend<float>::callbackFunction(const void *inputBuffer, void *outputBuffer,
+template <typename T>
+int PortAudioBackend<T>::callbackFunction(const void *inputBuffer, void *outputBuffer,
                                                unsigned long framesPerBuffer,
                                                const PaStreamCallbackTimeInfo *timeInfo,
                                                PaStreamCallbackFlags statusFlags,
                                                void *userData)
 {
     /* Cast data passed through stream to our structure. */
-    DataFlow::iSource<float> *data = (DataFlow::iSource<float> *)userData;
-    float *out = (float *)outputBuffer;
+    DataFlow::iSource<T> *data = (DataFlow::iSource<T> *)userData;
+    T *out = (T *)outputBuffer;
     (void)inputBuffer; /* Prevent unused variable warning. */
 
-
-    //tmp FIXME
-    //amount * 2 for stereo
-    std::vector<float> vector = data->get(framesPerBuffer*2);
+    std::vector<T> vector = data->get(framesPerBuffer);
     std::copy(vector.begin(), vector.end(), out);
     return paContinue;
 }

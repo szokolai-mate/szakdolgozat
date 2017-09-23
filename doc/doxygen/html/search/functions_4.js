@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['functor',['functor',['../classMixer_1_1SineGenerator.html#a33aabe4ee38f6d5f0504b1ac3e586316',1,'Mixer::SineGenerator']]]
+  ['start',['start',['../classPortAudioBackend.html#a81fdbca89c3e0388eb3c2e4d681eae7c',1,'PortAudioBackend']]],
+  ['stop',['stop',['../classPortAudioBackend.html#a4849770557d4538feb676137bbcfa737',1,'PortAudioBackend']]]
 ];
