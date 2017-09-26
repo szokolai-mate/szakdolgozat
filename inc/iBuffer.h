@@ -1,5 +1,6 @@
 #pragma once
 //TODO+EVALUATE: closed flag, ha már nem szándékozunk újat beletölteni
+//!\~todo TODO: fix buffers and document!
 
 #include <vector>
 

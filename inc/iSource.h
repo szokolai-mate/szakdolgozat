@@ -14,7 +14,7 @@ namespace DataFlow {
     class iSource{
         public:
         /*! \~english Get data from this source.
-            \~hungarian Adatot kér a forrástól.
+            \~hungarian Adatot kér ettől a forrástól.
 
             \param amount \~english the amount of type T to get
                             \~hungarian a kért adat mennyisége

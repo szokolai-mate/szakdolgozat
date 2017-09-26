@@ -1,5 +1,5 @@
 <map id="Mixer::SineGenerator&lt; T &gt;" name="Mixer::SineGenerator&lt; T &gt;">
 <area shape="rect" id="node2" href="$classDataFlow_1_1iSource.html" title="{DataFlow::iSource\&lt; T \&gt;\n||+ get()\l+ ~iSource()\l}" alt="" coords="5,307,168,399"/>
-<area shape="rect" id="node3" href="$classMixer_1_1AudioSource.html" title="{Mixer::AudioSource\n||+ AudioSource()\l+ getChannels()\l+ getSampleRate()\l}" alt="" coords="293,300,429,407"/>
+<area shape="rect" id="node3" href="$classMixer_1_1AudioSource.html" title="{Mixer::AudioSource\n||+ getChannels()\l+ getSampleRate()\l# AudioSource()\l}" alt="" coords="293,300,429,407"/>
 <area shape="rect" id="node7" title="STL class. " alt="" coords="563,145,672,223"/>
 </map>

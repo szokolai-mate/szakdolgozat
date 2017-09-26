@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['portaudiobackend',['PortAudioBackend',['../classPortAudioBackend.html',1,'']]]
+  ['portaudiobackend',['PortAudioBackend',['../classMixer_1_1PortAudioBackend.html',1,'Mixer']]]
 ];

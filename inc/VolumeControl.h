@@ -6,43 +6,49 @@
 #include <iSource.h>
 
 template <typename T>
-class VolumeControl : public DataFlow::iSource<T>
+/*! \~english A functor that acts as volume control when used with Applicator.
+    \~hungarian Egy funktor ami hangerőszabályzóként viselkedik egy Applicator -ban.
+*/
+class VolumeControl
 {
   private:
-    std::atomic<T> volume = 1;
+    std::atomic<T> volume;
     DataFlow::iSource<T> *source;
 
   public:
+    /*! \~english Get the current volume multiplier.
+        \~hungarian Visszaadja a jelenlegi hangerő szorzót.
+        \return \~english the volume multiplier
+                \~hungarian a hangerő szorzó
+    */
     T getVolume()
     {
         return volume;
     }
 
+    /*! \~english Set the volume multiplier.
+        \~hungarian Beállítja a hangerő szorzót.
+        \param volume \~english the desired volume
+                        \~hungarian a kívánt hangerő
+    */
     void setVolume(const T &volume)
     {
         this->volume = volume;
     }
 
-    std::vector<T> get(const unsigned int &amount)
+    inline T operator()(T x)
     {
-        std::vector<T> res = source->get(amount);
-        for (auto &e : res)
-        {
-            e = e * volume;
-        }
-        return res;
-    }
-    /*!
-        \~english Attach the parameter as this object's source.
-        \~hungarian A paramétert az objektum forrásaként hozzácsatolja.
-        \param source \~english the iSource<T> to attach
-                        \~hungarian a csatolni kívánt iSource<T>
-    */
-    void attach(DataFlow::iSource<T> &source)
-    {
-        this->source = &source;
+       return x * volume;
     }
 
-    VolumeControl(){};
+    inline void operator()(std::vector<T> &vector)
+    {
+        for (T &x : vector)
+        {
+            x = x * volume;
+        }
+    }
+
+    VolumeControl(): volume(1){};
     VolumeControl(const float &volume) : volume(volume) {}
 };

@@ -2,9 +2,16 @@
 
 #include <math.h>
 
+
+//! \~english Contains classes implementing clipping methods.
+//! \~hungarian Nyírási módókat megvalósító osztályokat tartalmaz.
+/*! \~english Must implement them for singe values and vectors of values with arbitary length.
+    \~hungarian Két implementáció szükséges: egyedüli értékekhez és bármilyen hosszúságú vektorokhoz.
+*/
 namespace Clipping
 {
-
+//! \~english Soft clipping implementation. Values above or below 80% of the limits get reduced to never reach the limits. Similar to hyperbolic tangent function.
+//! \~hungarian Finom nyírás. A határértékek 80%-át meghaladó értékeket úgy csökkenti hogy soha ne érjék el a határértékeket. Hiperbólikus tangens függvényhez hasonló.
 class Soft
 {
   public:
@@ -30,6 +37,8 @@ class Soft
     }
 };
 
+//! \~english Hard clipping implementation. Values above or below the limits get clipped to the limits.
+//! \~hungarian Durva nyírás. A határértékeken túli értékek a határértéket veszik fel.
 class Hard
 {
 public:

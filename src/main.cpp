@@ -14,11 +14,14 @@
 //TODO: channel + samplerate menjen végig (AudioDescriptor?)
 //TODO: change template in applicator/consolidator to interface/functor pointer: otherwise you cant change them in runtime
 
+/*!
+	\~todo TODO: transitionable<T> - a mutexed(? maybe not cuz time can be indeterminate? just atomic?) generalized that can handle transitioning values
+	give it destination value and time and it does its thing
+*/
+
 #include <iostream>
 #include <thread>
 #include <chrono>
-
-#include <portaudio.h>
 
 #include <Utils.h>
 
@@ -38,9 +41,14 @@
 #define DEFAULT_CHANNELS 2
 #define DEFAULT_SAMPLE_RATE 48000
 
+#define DEBUG_PORTAUDIO
+#ifdef DEBUG_PORTAUDIO
+#include <portaudio.h>
+#endif
 
 int main()
 {
+#ifdef DEBUG_PORTAUDIO
 	PaError err;
 	err = Pa_Initialize();
 	if (err != paNoError)
@@ -99,41 +107,48 @@ int main()
 		printf("Default odevice: %s of API %s\n", info->name, apiinfo->name);
 	}
 #endif
+#endif
 
-QueueBuffer<float> qb(512 * 16);
-
+	QueueBuffer<float> qb(512 * 16);
 
 	std::string dancingQueen{"01 - Dancing Queen.ogg"};
 	std::string waterloo{"19 - Waterloo.ogg"};
 	std::string mono{"mono86kbps44100.ogg"};
 
-	OggFileLoader<float,VorbisDecoder> loader;
+	OggFileLoader<float, VorbisDecoder> loader;
 
 	loader.open(dancingQueen);
-	
+
 	loader.init();
 
-	for(auto a : loader.getDecoder().getComments()){
-		std::cout<<a<<std::endl;
+	for (auto a : loader.getDecoder().getComments())
+	{
+		std::cout << a << std::endl;
 	}
 
-	Mixer::SineGenerator<float> sg(440,DEFAULT_CHANNELS,DEFAULT_SAMPLE_RATE);
-	Mixer::SineGenerator<float> sg2(439,DEFAULT_CHANNELS,DEFAULT_SAMPLE_RATE);
+	Mixer::SineGenerator<float> sg(440, DEFAULT_CHANNELS, DEFAULT_SAMPLE_RATE);
+	Mixer::SineGenerator<float> sg2(439, DEFAULT_CHANNELS, DEFAULT_SAMPLE_RATE);
 
-	VolumeControl<float> vc(0.5f);
-	VolumeControl<float> vc2(0.5f);
-
+	DataFlow::Applicator<float,VolumeControl<float>> vc;
+	DataFlow::Applicator<float,VolumeControl<float>> vc2;
+	DataFlow::Applicator<float,VolumeControl<float>> vc3;
+	vc.getMethod().setVolume(0.3f);
+	vc2.getMethod().setVolume(0.3f);
+	vc3.getMethod().setVolume(0.3f);
+	
 	vc.attach(sg);
 	vc2.attach(sg2);
-
-	DataFlow::Consolidator<float,Consolidation::Accumulation> consolidator;
+	vc3.attach(loader);
+	
+	DataFlow::Consolidator<float, Consolidation::Accumulation> consolidator;
 	consolidator.attach(vc);
 	consolidator.attach(vc2);
+	consolidator.attach(vc3);
 	
-	DataFlow::Applicator<float,Clipping::Hard> applicator;
+	DataFlow::Applicator<float, Clipping::Hard> applicator;
 	applicator.attach(consolidator);
-	
-	SimplePlayer<float,PortAudioBackend> player(DEFAULT_CHANNELS,DEFAULT_SAMPLE_RATE);
+
+	Mixer::SimplePlayer<float, Mixer::PortAudioBackend> player(DEFAULT_CHANNELS, DEFAULT_SAMPLE_RATE);
 	player.attach(applicator);
 	player.play();
 
@@ -143,16 +158,20 @@ QueueBuffer<float> qb(512 * 16);
 		std::this_thread::sleep_for(std::chrono::duration<int, std::ratio<1, 1>>(3));
 		player.pause();
 
-		if(b){
+		if (b)
+		{
 			player.attach(vc);
-		}else{
+		}
+		else
+		{
 			player.attach(applicator);
 		}
 
-		if (b)player.play();
+		if (b)
+			player.play();
 		b = !b;
 	}
-
+//! \todo TODO: extract these tests to actual tests
 /*
 while(true){
 	OggFileLoader<float,VorbisDecoder> testloader;

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['sine_5ftable_5fsize',['SINE_TABLE_SIZE',['../SineGenerator_8h.html#a597174ea5be6ca475ea0fddbef1e9af7',1,'SineGenerator.h']]]
+  ['pa_5fwrite_5ferrors',['PA_WRITE_ERRORS',['../PortAudioBackend_8h.html#ad0a4f108604a47bfba8c6efc8a00bac2',1,'PortAudioBackend.h']]]
 ];

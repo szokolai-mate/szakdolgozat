@@ -8,6 +8,7 @@
 
 //TODO: really separate
 //TODO: megpróbálni locklessé tenni
+//!\todo TODO: document after sorting buffers out
 
 template <typename T>
 class QueueBuffer : public DataFlow::iBuffer<T>{

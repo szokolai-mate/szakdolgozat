@@ -64,11 +64,14 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#pub-methods">Publikus tagfüggvények</a> &#124;
 <a href="classDataFlow_1_1iConsolidationMethod-members.html">A tagok teljes listája</a>  </div>
   <div class="headertitle">
 <div class="title">DataFlow::iConsolidationMethod&lt; T &gt; osztálysablon-referencia<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;<a class="el" href="iConsolidationMethod_8h_source.html">iConsolidationMethod.h</a>&gt;</code></p>
 <div class="dynheader">
 A DataFlow::iConsolidationMethod&lt; T &gt; osztály származási diagramja:</div>
 <div class="dyncontent">
@@ -77,10 +80,127 @@ A DataFlow::iConsolidationMethod&lt; T &gt; osztály származási diagramja:</di
 <area shape="rect" id="node2" href="classConsolidation_1_1Accumulation.html" title="{Consolidation::Accumulation\&lt; T \&gt;\n|&#45; workspace\l|+ init()\l+ add()\l+ get()\l}" alt="" coords="5,189,225,296"/>
 </map>
 </div>
-<div class="dynheader">
-A DataFlow::iConsolidationMethod&lt; T &gt; osztály együttműködési diagramja:</div>
-<div class="dyncontent">
-<div class="center"><img src="classDataFlow_1_1iConsolidationMethod__coll__graph.png" border="0" usemap="#DataFlow_1_1iConsolidationMethod_3_01T_01_4_coll__map" alt="Collaboration graph"/></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Publikus tagfüggvények</h2></td></tr>
+<tr class="memitem:a2da24e7d96f132f4a884ad0f3f6b54f0"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDataFlow_1_1iConsolidationMethod.html#a2da24e7d96f132f4a884ad0f3f6b54f0">init</a> (const std::vector&lt; T &gt; &amp;initial)=0</td></tr>
+<tr class="separator:a2da24e7d96f132f4a884ad0f3f6b54f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aba29ef8d71ca74cbd81fd7a3b3bc0909"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDataFlow_1_1iConsolidationMethod.html#aba29ef8d71ca74cbd81fd7a3b3bc0909">add</a> (const std::vector&lt; T &gt; &amp;vector)=0</td></tr>
+<tr class="separator:aba29ef8d71ca74cbd81fd7a3b3bc0909"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a21efe2e5ec721253cd7ccff1c5d303ff"><td class="memItemLeft" align="right" valign="top">virtual std::vector&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDataFlow_1_1iConsolidationMethod.html#a21efe2e5ec721253cd7ccff1c5d303ff">get</a> ()=0</td></tr>
+<tr class="separator:a21efe2e5ec721253cd7ccff1c5d303ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Részletes leírás</h2>
+<div class="textblock"><h3>template&lt;typename T&gt;<br />
+class DataFlow::iConsolidationMethod&lt; T &gt;</h3>
+
+<p>A konszolidációs módszerek interfésze.</p>
+<p>Konszolidációs módszerek implementálásához lásd a <a class="el" href="namespaceConsolidation.html">Consolidation</a> névteret. </p>
+</div><h2 class="groupheader">Tagfüggvények dokumentációja</h2>
+<a id="aba29ef8d71ca74cbd81fd7a3b3bc0909"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aba29ef8d71ca74cbd81fd7a3b3bc0909">&#9670;&nbsp;</a></span>add()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool <a class="el" href="classDataFlow_1_1iConsolidationMethod.html">DataFlow::iConsolidationMethod</a>&lt; T &gt;::add </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>vector</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Vektor hozzáadása a konszolidációhoz. </p><dl class="params"><dt>Paraméterek</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">vector</td><td>a hozzáadandó vektor </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Visszatérési érték</dt><dd>sikeres volt-e a hozzáadás </dd></dl>
+
+<p>Megvalósítják a következők: <a class="el" href="classConsolidation_1_1Accumulation.html#a6d973f440e88be4d280692eef6734b13">Consolidation::Accumulation&lt; T &gt;</a>.</p>
+
+</div>
+</div>
+<a id="a21efe2e5ec721253cd7ccff1c5d303ff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a21efe2e5ec721253cd7ccff1c5d303ff">&#9670;&nbsp;</a></span>get()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual std::vector&lt;T&gt; <a class="el" href="classDataFlow_1_1iConsolidationMethod.html">DataFlow::iConsolidationMethod</a>&lt; T &gt;::get </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Az eredmény lekérése. Egyszer használható.</p>
+<dl class="section return"><dt>Visszatérési érték</dt><dd>a konszolidáció eredménye </dd></dl>
+
+<p>Megvalósítják a következők: <a class="el" href="classConsolidation_1_1Accumulation.html#a7026b1914e1c43b83c01b8c475047a56">Consolidation::Accumulation&lt; T &gt;</a>.</p>
+
+</div>
+</div>
+<a id="a2da24e7d96f132f4a884ad0f3f6b54f0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2da24e7d96f132f4a884ad0f3f6b54f0">&#9670;&nbsp;</a></span>init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool <a class="el" href="classDataFlow_1_1iConsolidationMethod.html">DataFlow::iConsolidationMethod</a>&lt; T &gt;::init </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>initial</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>A konszolidáció kezdeti értékének megadása. </p><dl class="params"><dt>Paraméterek</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">initial</td><td>a kezdeti érték </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Visszatérési érték</dt><dd>az inicializáció sikeres volt-e </dd></dl>
+
+<p>Megvalósítják a következők: <a class="el" href="classConsolidation_1_1Accumulation.html#afcaa4d7524367782abd07cb2ea647537">Consolidation::Accumulation&lt; T &gt;</a>.</p>
+
+</div>
 </div>
 <hr/>Ez a dokumentáció az osztályról a következő fájl alapján készült:<ul>
 <li>/SharedWithWindows/Projects/szakdolgozat/inc/<a class="el" href="iConsolidationMethod_8h_source.html">iConsolidationMethod.h</a></li>

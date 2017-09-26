@@ -1,9 +1,6 @@
 var searchData=
 [
-  ['szakdolgozat',['szakdolgozat',['../index.html',1,'']]],
-  ['simpleplayer',['SimplePlayer',['../classSimplePlayer.html',1,'']]],
-  ['sinegenerator',['SineGenerator',['../classMixer_1_1SineGenerator.html',1,'Mixer']]],
-  ['soft',['Soft',['../classClipping_1_1Soft.html',1,'Clipping']]],
-  ['start',['start',['../classPortAudioBackend.html#a81fdbca89c3e0388eb3c2e4d681eae7c',1,'PortAudioBackend']]],
-  ['stop',['stop',['../classPortAudioBackend.html#a4849770557d4538feb676137bbcfa737',1,'PortAudioBackend']]]
+  ['pause',['pause',['../classMixer_1_1iPlayer.html#a38073c8b4de79a9126f9f7a15ae5002b',1,'Mixer::iPlayer::pause()'],['../classMixer_1_1SimplePlayer.html#a836a52bfa67be8049bf1fb2da0e2b55f',1,'Mixer::SimplePlayer::pause()']]],
+  ['play',['play',['../classMixer_1_1iPlayer.html#a691cce4aa509a5c0d2acde1b0f2c741d',1,'Mixer::iPlayer::play()'],['../classMixer_1_1SimplePlayer.html#a7bcde060cc486426ab25239c82827241',1,'Mixer::SimplePlayer::play()']]],
+  ['portaudiobackend',['PortAudioBackend',['../classMixer_1_1PortAudioBackend.html',1,'Mixer']]]
 ];

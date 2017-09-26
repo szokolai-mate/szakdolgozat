@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['main',['main',['../main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'main.cpp']]],
-  ['make',['make',['../namespaceconstexpr__array.html#a284c3665dbbc12e214b6e607dfe5bd98',1,'constexpr_array']]],
-  ['make_5fhelper',['make_helper',['../namespaceconstexpr__array.html#ad2f8860d094b4ba6b852ce783775ae12',1,'constexpr_array']]]
+  ['pause',['pause',['../classMixer_1_1iPlayer.html#a38073c8b4de79a9126f9f7a15ae5002b',1,'Mixer::iPlayer::pause()'],['../classMixer_1_1SimplePlayer.html#a836a52bfa67be8049bf1fb2da0e2b55f',1,'Mixer::SimplePlayer::pause()']]],
+  ['play',['play',['../classMixer_1_1iPlayer.html#a691cce4aa509a5c0d2acde1b0f2c741d',1,'Mixer::iPlayer::play()'],['../classMixer_1_1SimplePlayer.html#a7bcde060cc486426ab25239c82827241',1,'Mixer::SimplePlayer::play()']]]
 ];

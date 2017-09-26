@@ -13,14 +13,23 @@ template <typename T, typename K>
 class Applicator : public DataFlow::iSource<T>
 {
   private:
-    K filter;
+    K method;
     DataFlow::iSource<T> *source;
   public:
     std::vector<T> get(const unsigned int &amount)
     {
         auto res = source->get(amount);
-        filter(res);
+        method(res);
         return res;
+    }
+    
+    //! \~english Get a reference to the method instance used.
+    //! \~hungary Egy referenciát ad a használt módszer példányhoz.
+    /*! \return \~english the reference
+               \~hungarian a referencia
+    */
+    K & getMethod(){
+        return method;
     }
 
     /*!

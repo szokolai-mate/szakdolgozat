@@ -60,15 +60,215 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#pub-methods">Publikus tagfüggvények</a> &#124;
 <a href="classVorbisDecoder-members.html">A tagok teljes listája</a>  </div>
   <div class="headertitle">
 <div class="title">VorbisDecoder osztályreferencia</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="dynheader">
-A VorbisDecoder osztály együttműködési diagramja:</div>
-<div class="dyncontent">
-<div class="center"><img src="classVorbisDecoder__coll__graph.png" border="0" usemap="#VorbisDecoder_coll__map" alt="Collaboration graph"/></div>
+
+<p><code>#include &lt;<a class="el" href="VorbisDecoder_8h_source.html">VorbisDecoder.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Publikus tagfüggvények</h2></td></tr>
+<tr class="memitem:a8788601bafad9e49d21b6fa5a009a164"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVorbisDecoder.html#a8788601bafad9e49d21b6fa5a009a164">addToHeader</a> (ogg_packet &amp;packet)</td></tr>
+<tr class="separator:a8788601bafad9e49d21b6fa5a009a164"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a10542fc68b20b9d76263e54e3b466efb"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVorbisDecoder.html#a10542fc68b20b9d76263e54e3b466efb">initDecoding</a> ()</td></tr>
+<tr class="separator:a10542fc68b20b9d76263e54e3b466efb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a55df2454d54918d549444fc835f1ca9e"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVorbisDecoder.html#a55df2454d54918d549444fc835f1ca9e">getComments</a> () const</td></tr>
+<tr class="separator:a55df2454d54918d549444fc835f1ca9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a56efa6b496cc18491583c52b17c52c8e"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVorbisDecoder.html#a56efa6b496cc18491583c52b17c52c8e">getVendor</a> () const</td></tr>
+<tr class="separator:a56efa6b496cc18491583c52b17c52c8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a53ec4a4ebb5fdf6a78007e3d2c3e46af"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVorbisDecoder.html#a53ec4a4ebb5fdf6a78007e3d2c3e46af">getChannels</a> () const</td></tr>
+<tr class="separator:a53ec4a4ebb5fdf6a78007e3d2c3e46af"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a56c47f4da71b80bcd58d3b5971c746"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVorbisDecoder.html#a3a56c47f4da71b80bcd58d3b5971c746">getSampleRate</a> () const</td></tr>
+<tr class="separator:a3a56c47f4da71b80bcd58d3b5971c746"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2ae9f7f18261b822502d481535609873"><td class="memItemLeft" align="right" valign="top">std::vector&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVorbisDecoder.html#a2ae9f7f18261b822502d481535609873">decode</a> (ogg_packet &amp;packet)</td></tr>
+<tr class="separator:a2ae9f7f18261b822502d481535609873"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9d4ccb71f8996dc2c214c2f93df74f32"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVorbisDecoder.html#a9d4ccb71f8996dc2c214c2f93df74f32">clear</a> ()</td></tr>
+<tr class="separator:a9d4ccb71f8996dc2c214c2f93df74f32"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a637929d707ce75b456b1bf4c764876ea"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVorbisDecoder.html#a637929d707ce75b456b1bf4c764876ea">VorbisDecoder</a> ()</td></tr>
+<tr class="separator:a637929d707ce75b456b1bf4c764876ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Részletes leírás</h2>
+<div class="textblock"><p>Vorbis kódolású adatot dekódoló osztály. </p>
+</div><h2 class="groupheader">Konstruktorok és destruktorok dokumentációja</h2>
+<a id="a637929d707ce75b456b1bf4c764876ea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a637929d707ce75b456b1bf4c764876ea">&#9670;&nbsp;</a></span>VorbisDecoder()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">VorbisDecoder::VorbisDecoder </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000004">Tennivaló:</a></b></dt><dd>TODO: errors and exceptions </dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">Tagfüggvények dokumentációja</h2>
+<a id="a8788601bafad9e49d21b6fa5a009a164"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8788601bafad9e49d21b6fa5a009a164">&#9670;&nbsp;</a></span>addToHeader()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int VorbisDecoder::addToHeader </td>
+          <td>(</td>
+          <td class="paramtype">ogg_packet &amp;&#160;</td>
+          <td class="paramname"><em>packet</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Az ogg csomag hozzáadása a fejléchez. </p><dl class="params"><dt>Paraméterek</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">packet</td><td>a hozzáadandó csomag </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Visszatérési érték</dt><dd>hibakód libvorbis-tól </dd></dl>
+
+</div>
+</div>
+<a id="a9d4ccb71f8996dc2c214c2f93df74f32"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9d4ccb71f8996dc2c214c2f93df74f32">&#9670;&nbsp;</a></span>clear()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void VorbisDecoder::clear </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Kiüríri a Vorbis dekódolási környezetet. </p>
+
+</div>
+</div>
+<a id="a2ae9f7f18261b822502d481535609873"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2ae9f7f18261b822502d481535609873">&#9670;&nbsp;</a></span>decode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; float &gt; VorbisDecoder::decode </td>
+          <td>(</td>
+          <td class="paramtype">ogg_packet &amp;&#160;</td>
+          <td class="paramname"><em>packet</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Egy OGG csomagot multiplexált PCM adatra dekódol. </p><dl class="params"><dt>Paraméterek</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">packet</td><td>a dekódolni kívánt ogg csomag </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Visszatérési érték</dt><dd>a dekódolt PCM adat </dd></dl>
+
+</div>
+</div>
+<a id="a53ec4a4ebb5fdf6a78007e3d2c3e46af"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a53ec4a4ebb5fdf6a78007e3d2c3e46af">&#9670;&nbsp;</a></span>getChannels()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int VorbisDecoder::getChannels </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Megadja a csatornák számát a Vorbis fejlécből. A fejlécnek teljesnek kell lennie. </p><dl class="section return"><dt>Visszatérési érték</dt><dd>a csatornák száma </dd></dl>
+
+</div>
+</div>
+<a id="a55df2454d54918d549444fc835f1ca9e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a55df2454d54918d549444fc835f1ca9e">&#9670;&nbsp;</a></span>getComments()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; std::string &gt; VorbisDecoder::getComments </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Megadja a kommenteket a Vorbis fejlécből. A fejlécnek teljesnek kell lennie. </p><dl class="section return"><dt>Visszatérési érték</dt><dd>a kommentek </dd></dl>
+
+</div>
+</div>
+<a id="a3a56c47f4da71b80bcd58d3b5971c746"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3a56c47f4da71b80bcd58d3b5971c746">&#9670;&nbsp;</a></span>getSampleRate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int VorbisDecoder::getSampleRate </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Megadja a mintavételezési sűrűséget a Vorbis fejlécből. A fejlécnek teljesnek kell lennie. </p><dl class="section return"><dt>Visszatérési érték</dt><dd>a mintavételezési sűrűség </dd></dl>
+
+</div>
+</div>
+<a id="a56efa6b496cc18491583c52b17c52c8e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a56efa6b496cc18491583c52b17c52c8e">&#9670;&nbsp;</a></span>getVendor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string VorbisDecoder::getVendor </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Megadja a készítő szövegét a Vorbis fejlécből. A fejlécnek teljesnek kell lennie. </p><dl class="section return"><dt>Visszatérési érték</dt><dd>a készítő szövege </dd></dl>
+
+</div>
+</div>
+<a id="a10542fc68b20b9d76263e54e3b466efb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a10542fc68b20b9d76263e54e3b466efb">&#9670;&nbsp;</a></span>initDecoding()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int VorbisDecoder::initDecoding </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>A dekódolási környezet inicializálása. A fejlécnek teljesnek kell lennie. </p><dl class="section return"><dt>Visszatérési érték</dt><dd>hibakód libvorbis-tól </dd></dl>
+
+</div>
 </div>
 <hr/>Ez a dokumentáció az osztályról a következő fájlok alapján készült:<ul>
 <li>/SharedWithWindows/Projects/szakdolgozat/inc/<a class="el" href="VorbisDecoder_8h_source.html">VorbisDecoder.h</a></li>

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['oggfileloader',['OggFileLoader',['../classOggFileLoader.html',1,'']]]
+  ['mixer',['Mixer',['../namespaceMixer.html',1,'']]]
 ];

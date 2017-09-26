@@ -77,20 +77,14 @@ A DataFlow::iSource&lt; T &gt; osztály származási diagramja:</div>
 <div class="dyncontent">
 <div class="center"><img src="classDataFlow_1_1iSource__inherit__graph.png" border="0" usemap="#DataFlow_1_1iSource_3_01T_01_4_inherit__map" alt="Inheritance graph"/></div>
 <map name="DataFlow_1_1iSource_3_01T_01_4_inherit__map" id="DataFlow_1_1iSource_3_01T_01_4_inherit__map">
-<area shape="rect" id="node2" href="classDataFlow_1_1Applicator.html" title="{DataFlow::Applicator\&lt; T \&gt;\n|&#45; filter\l&#45; source\l|+ get()\l+ attach()\l}" alt="" coords="5,292,181,399"/>
-<area shape="rect" id="node3" href="classDataFlow_1_1Consolidator.html" title="{DataFlow::Consolidator\&lt; T \&gt;\n|&#45; consolidationMethod\l&#45; sources\l|+ attach()\l+ get()\l}" alt="" coords="206,292,397,399"/>
+<area shape="rect" id="node2" href="classDataFlow_1_1Applicator.html" title="{DataFlow::Applicator\&lt; T \&gt;\n|&#45; method\l&#45; source\l|+ get()\l+ getMethod()\l+ attach()\l}" alt="" coords="5,285,181,406"/>
+<area shape="rect" id="node3" href="classDataFlow_1_1Consolidator.html" title="{DataFlow::Consolidator\&lt; T \&gt;\n|&#45; consolidationMethod\l&#45; sources\l|+ attach()\l+ detach()\l+ getMethod()\l+ get()\l}" alt="" coords="206,277,397,413"/>
 <area shape="rect" id="node4" href="classDataFlow_1_1iBuffer.html" title="{DataFlow::iBuffer\&lt; T \&gt;\n||+ add()\l+ add()\l+ isEmpty()\l+ isFull()\l+ clear()\l+ capacity()\l+ size()\l+ ~iBuffer()\l}" alt="" coords="421,255,577,435"/>
-<area shape="rect" id="node6" href="classMixer_1_1SineGenerator.html" title="{Mixer::SineGenerator\&lt; T \&gt;\n|&#45; step\l&#45; position\l&#45; sinetableUninitialized\l&#45; sinetable\l|+ get()\l+ SineGenerator()\l&#45; filler()\l}" alt="" coords="601,270,778,421"/>
-<area shape="rect" id="node7" href="classOggFileLoader.html" title="{OggFileLoader\&lt; T \&gt;\n|&#45; infile\l&#45; eos\l&#45; buffer\l&#45; oy\l&#45; os\l&#45; currentPage\l&#45; currentPacket\l&#45; decoder\l&#45; overflow\l&#45; streamInitialized\l|+ open()\l+ init()\l+ close()\l+ clear()\l+ get()\l+ getDecoder()\l+ OggFileLoader()\l+ ~OggFileLoader()\l+ init()\l&#45; initStream()\l&#45; read()\l&#45; readNextPage()\l&#45; nextPage()\l&#45; nextPacket()\l}" alt="" coords="803,145,941,545"/>
-<area shape="rect" id="node8" href="classSimplePlayer.html" title="{SimplePlayer\&lt; T \&gt;\n|&#45; backend\l&#45; source\l&#45; paused\l|+ get()\l+ pause()\l+ stop()\l+ play()\l+ attach()\l+ SimplePlayer()\l}" alt="" coords="965,255,1096,435"/>
-<area shape="rect" id="node9" href="classVolumeControl.html" title="{VolumeControl\&lt; T \&gt;\n|&#45; volume\l&#45; source\l|+ getVolume()\l+ setVolume()\l+ get()\l+ attach()\l+ VolumeControl()\l+ VolumeControl()\l}" alt="" coords="1121,263,1261,428"/>
+<area shape="rect" id="node6" href="classMixer_1_1SimplePlayer.html" title="{Mixer::SimplePlayer\&lt; T \&gt;\n|&#45; backend\l&#45; source\l&#45; paused\l|+ get()\l+ pause()\l+ stop()\l+ play()\l+ attach()\l+ SimplePlayer()\l}" alt="" coords="601,255,772,435"/>
+<area shape="rect" id="node7" href="classMixer_1_1SineGenerator.html" title="{Mixer::SineGenerator\&lt; T \&gt;\n|&#45; step\l&#45; position\l&#45; sinetableUninitialized\l&#45; sinetable\l|+ get()\l+ SineGenerator()\l&#45; filler()\l}" alt="" coords="797,270,974,421"/>
+<area shape="rect" id="node8" href="classOggFileLoader.html" title="{OggFileLoader\&lt; T \&gt;\n|&#45; infile\l&#45; eos\l&#45; buffer\l&#45; oy\l&#45; os\l&#45; currentPage\l&#45; currentPacket\l&#45; decoder\l&#45; overflow\l&#45; streamInitialized\l|+ open()\l+ init()\l+ close()\l+ clear()\l+ get()\l+ getDecoder()\l+ OggFileLoader()\l+ ~OggFileLoader()\l+ init()\l&#45; initStream()\l&#45; read()\l&#45; readNextPage()\l&#45; nextPage()\l&#45; nextPacket()\l}" alt="" coords="999,145,1137,545"/>
 <area shape="rect" id="node5" href="classQueueBuffer.html" title="{QueueBuffer\&lt; T \&gt;\n|&#45; cap\l&#45; buffer\l&#45; start\l&#45; end\l&#45; emptyflag\l&#45; m\l|+ QueueBuffer()\l+ ~QueueBuffer()\l+ add()\l+ add()\l+ get()\l+ isEmpty()\l+ isFull()\l+ clear()\l+ capacity()\l+ exposeBuffer()\l+ size()\l&#45; currentSize()\l}" alt="" coords="435,593,562,905"/>
 </map>
-</div>
-<div class="dynheader">
-A DataFlow::iSource&lt; T &gt; osztály együttműködési diagramja:</div>
-<div class="dyncontent">
-<div class="center"><img src="classDataFlow_1_1iSource__coll__graph.png" border="0" usemap="#DataFlow_1_1iSource_3_01T_01_4_coll__map" alt="Collaboration graph"/></div>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
@@ -129,7 +123,7 @@ template&lt;typename T&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Adatot kér a forrástól.</p>
+<p>Adatot kér ettől a forrástól.</p>
 <dl class="params"><dt>Paraméterek</dt><dd>
   <table class="params">
     <tr><td class="paramname">amount</td><td>a kért adat mennyisége </td></tr>
@@ -138,7 +132,7 @@ template&lt;typename T&gt; </div>
 </dl>
 <dl class="section return"><dt>Visszatérési érték</dt><dd>egy T típusú, <b>amount</b> méretű vektor, feltöltve az adattal. </dd></dl>
 
-<p>Megvalósítják a következők: <a class="el" href="classOggFileLoader.html#a0e01d930726fdd328af51fb6c156634e">OggFileLoader&lt; T, K &gt;</a>, <a class="el" href="classQueueBuffer.html#a38b69f009d2482cbc43c0682582d5c7c">QueueBuffer&lt; T &gt;</a>, <a class="el" href="classMixer_1_1SineGenerator.html#a15bf8bf2978c11a16ec167e47d19ab01">Mixer::SineGenerator&lt; T &gt;</a>, <a class="el" href="classVolumeControl.html#afe592118460245e418d0bb70aa23dc80">VolumeControl&lt; T &gt;</a>, <a class="el" href="classDataFlow_1_1Applicator.html#aaec7b6b55ff780c9e339a9ea41273ab1">DataFlow::Applicator&lt; T, K &gt;</a>, <a class="el" href="classSimplePlayer.html#af8f38b56cda20a30e219a2477bf57e19">SimplePlayer&lt; T, K &gt;</a> és <a class="el" href="classDataFlow_1_1Consolidator.html#ac036a7e7825206570261a39a6c9d94b3">DataFlow::Consolidator&lt; T, K &gt;</a>.</p>
+<p>Megvalósítják a következők: <a class="el" href="classOggFileLoader.html#a0e01d930726fdd328af51fb6c156634e">OggFileLoader&lt; T, K &gt;</a>, <a class="el" href="classDataFlow_1_1Consolidator.html#ac036a7e7825206570261a39a6c9d94b3">DataFlow::Consolidator&lt; T, K &gt;</a>, <a class="el" href="classQueueBuffer.html#a38b69f009d2482cbc43c0682582d5c7c">QueueBuffer&lt; T &gt;</a>, <a class="el" href="classMixer_1_1SineGenerator.html#a15bf8bf2978c11a16ec167e47d19ab01">Mixer::SineGenerator&lt; T &gt;</a>, <a class="el" href="classMixer_1_1SimplePlayer.html#a1f1738f9d44881a20ac84b04d71d9bba">Mixer::SimplePlayer&lt; T, K &gt;</a> és <a class="el" href="classDataFlow_1_1Applicator.html#aaec7b6b55ff780c9e339a9ea41273ab1">DataFlow::Applicator&lt; T, K &gt;</a>.</p>
 
 </div>
 </div>

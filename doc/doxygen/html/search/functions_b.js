@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['queuebuffer',['QueueBuffer',['../classQueueBuffer.html#a366e7c97789ae30c27ad0f60082e6dac',1,'QueueBuffer']]]
+  ['vorbisdecoder',['VorbisDecoder',['../classVorbisDecoder.html#a637929d707ce75b456b1bf4c764876ea',1,'VorbisDecoder']]]
 ];

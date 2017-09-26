@@ -1,0 +1,191 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Szakdolgozat: Mixer::iPlayer osztályreferencia</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Szakdolgozat
+   </div>
+   <div id="projectbrief">A szakdolgozatom ELTE Programtervező Informatikus BSc. szakra.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Készítette Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Keresés');
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Keresés');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespaceMixer.html">Mixer</a></li><li class="navelem"><a class="el" href="classMixer_1_1iPlayer.html">iPlayer</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Publikus tagfüggvények</a> &#124;
+<a href="classMixer_1_1iPlayer-members.html">A tagok teljes listája</a>  </div>
+  <div class="headertitle">
+<div class="title">Mixer::iPlayer osztályreferencia<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="iPlayer_8h_source.html">iPlayer.h</a>&gt;</code></p>
+<div class="dynheader">
+A Mixer::iPlayer osztály származási diagramja:</div>
+<div class="dyncontent">
+<div class="center"><img src="classMixer_1_1iPlayer__inherit__graph.png" border="0" usemap="#Mixer_1_1iPlayer_inherit__map" alt="Inheritance graph"/></div>
+<map name="Mixer_1_1iPlayer_inherit__map" id="Mixer_1_1iPlayer_inherit__map">
+<area shape="rect" id="node2" href="classMixer_1_1SimplePlayer.html" title="{Mixer::SimplePlayer\l\&lt; T, K \&gt;\n|&#45; backend\l&#45; source\l&#45; paused\l|+ get()\l+ pause()\l+ stop()\l+ play()\l+ attach()\l+ SimplePlayer()\l}" alt="" coords="5,175,144,369"/>
+</map>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Publikus tagfüggvények</h2></td></tr>
+<tr class="memitem:a38073c8b4de79a9126f9f7a15ae5002b"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMixer_1_1iPlayer.html#a38073c8b4de79a9126f9f7a15ae5002b">pause</a> ()=0</td></tr>
+<tr class="separator:a38073c8b4de79a9126f9f7a15ae5002b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0887754ec624b8d78c141966112ec32d"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMixer_1_1iPlayer.html#a0887754ec624b8d78c141966112ec32d">stop</a> ()=0</td></tr>
+<tr class="separator:a0887754ec624b8d78c141966112ec32d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a691cce4aa509a5c0d2acde1b0f2c741d"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMixer_1_1iPlayer.html#a691cce4aa509a5c0d2acde1b0f2c741d">play</a> ()=0</td></tr>
+<tr class="separator:a691cce4aa509a5c0d2acde1b0f2c741d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Részletes leírás</h2>
+<div class="textblock"><p>Alapvető zenelejátszó funkcionalitást leíró interfész. </p>
+</div><h2 class="groupheader">Tagfüggvények dokumentációja</h2>
+<a id="a38073c8b4de79a9126f9f7a15ae5002b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a38073c8b4de79a9126f9f7a15ae5002b">&#9670;&nbsp;</a></span>pause()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool Mixer::iPlayer::pause </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Lejátszás szüneteltetése. Idempotens. </p><dl class="section return"><dt>Visszatérési érték</dt><dd>igaz siker, hamis hiba esetén </dd></dl>
+
+<p>Megvalósítják a következők: <a class="el" href="classMixer_1_1SimplePlayer.html#a836a52bfa67be8049bf1fb2da0e2b55f">Mixer::SimplePlayer&lt; T, K &gt;</a>.</p>
+
+</div>
+</div>
+<a id="a691cce4aa509a5c0d2acde1b0f2c741d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a691cce4aa509a5c0d2acde1b0f2c741d">&#9670;&nbsp;</a></span>play()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool Mixer::iPlayer::play </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Elindítja a lejátszást. Idempotens. </p><dl class="section return"><dt>Visszatérési érték</dt><dd>igaz siker, hamis hiba esetén </dd></dl>
+
+<p>Megvalósítják a következők: <a class="el" href="classMixer_1_1SimplePlayer.html#a7bcde060cc486426ab25239c82827241">Mixer::SimplePlayer&lt; T, K &gt;</a>.</p>
+
+</div>
+</div>
+<a id="a0887754ec624b8d78c141966112ec32d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0887754ec624b8d78c141966112ec32d">&#9670;&nbsp;</a></span>stop()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool Mixer::iPlayer::stop </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Megállítja a lejátszást, törölve a belső állapotot. </p><dl class="section return"><dt>Visszatérési érték</dt><dd>igaz siker, hamis hiba esetén </dd></dl>
+
+<p>Megvalósítják a következők: <a class="el" href="classMixer_1_1SimplePlayer.html#a872f6610de7797600a317103fb289e19">Mixer::SimplePlayer&lt; T, K &gt;</a>.</p>
+
+</div>
+</div>
+<hr/>Ez a dokumentáció az osztályról a következő fájl alapján készült:<ul>
+<li>/SharedWithWindows/Projects/szakdolgozat/inc/<a class="el" href="iPlayer_8h_source.html">iPlayer.h</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Készítette &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>

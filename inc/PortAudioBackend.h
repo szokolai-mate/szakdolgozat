@@ -11,13 +11,14 @@
 #include <iostream>
 #endif
 
+namespace Mixer{
 //! \~english An endpoint with PortAudio backend
 //! \~hungarian PortAudio backendet használó végpont
 /*!
-    \~english This class utilizes the cross-platform audio backend PortAudio to play data from an iSource.
+    \~english This class utilizes the cross-platform audio backend PortAudio to play data from an iSource. \n
     The init() function must be called before starting playback with the start() function.
     The source must contain the audio data already multiplexed.
-    \~hungarian Ez az osztály egy multiplatformos audió backendet, a PortAudio-t használja egy iSource objektumból nyert audió adat lejátszására.
+    \~hungarian Ez az osztály egy multiplatformos audió backendet, a PortAudio-t használja egy iSource objektumból nyert audió adat lejátszására. \n
     Használat előtt az init() függvénnyel egy iSource objektumot csatlakoztatunk hozzá, majd a start() fügvénnyel elkezdhetjük a lejátszást.
     A csatolt objektumból nyert adat multiplexáltnak tekintendő.
 */
@@ -49,4 +50,5 @@ private:
                               const PaStreamCallbackTimeInfo *timeInfo,
                               PaStreamCallbackFlags statusFlags,
                               void *userData);
+};
 };

@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['dataflow',['DataFlow',['../namespaceDataFlow.html',1,'']]]
+  ['clipping',['Clipping',['../namespaceClipping.html',1,'']]],
+  ['consolidation',['Consolidation',['../namespaceConsolidation.html',1,'']]]
 ];

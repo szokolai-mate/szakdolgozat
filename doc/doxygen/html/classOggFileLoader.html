@@ -61,11 +61,14 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Publikus tagfüggvények</a> &#124;
+<a href="#pri-methods">Privát tagfüggvények</a> &#124;
 <a href="classOggFileLoader-members.html">A tagok teljes listája</a>  </div>
   <div class="headertitle">
 <div class="title">OggFileLoader&lt; T, K &gt; osztálysablon-referencia</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;<a class="el" href="OggFileLoader_8h_source.html">OggFileLoader.h</a>&gt;</code></p>
 <div class="dynheader">
 Az OggFileLoader&lt; T, K &gt; osztály származási diagramja:</div>
 <div class="dyncontent">
@@ -74,26 +77,84 @@ Az OggFileLoader&lt; T, K &gt; osztály származási diagramja:</div>
 <area shape="rect" id="node2" href="classDataFlow_1_1iSource.html" title="{DataFlow::iSource\&lt; T \&gt;\n||+ get()\l+ ~iSource()\l}" alt="" coords="5,5,168,97"/>
 </map>
 </div>
-<div class="dynheader">
-Az OggFileLoader&lt; T, K &gt; osztály együttműködési diagramja:</div>
-<div class="dyncontent">
-<div class="center"><img src="classOggFileLoader__coll__graph.png" border="0" usemap="#OggFileLoader_3_01T_00_01K_01_4_coll__map" alt="Collaboration graph"/></div>
-<map name="OggFileLoader_3_01T_00_01K_01_4_coll__map" id="OggFileLoader_3_01T_00_01K_01_4_coll__map">
-<area shape="rect" id="node2" href="classDataFlow_1_1iSource.html" title="{DataFlow::iSource\&lt; T \&gt;\n||+ get()\l+ ~iSource()\l}" alt="" coords="5,541,168,633"/>
-<area shape="rect" id="node5" title="STL class. " alt="" coords="446,549,541,626"/>
-<area shape="rect" id="node6" title="STL class. " alt="" coords="427,400,560,492"/>
-<area shape="rect" id="node7" title="STL class. " alt="" coords="429,259,558,351"/>
-<area shape="rect" id="node8" title="STL class. " alt="" coords="416,132,571,209"/>
-<area shape="rect" id="node9" title="STL class. " alt="" coords="443,5,543,83"/>
-</map>
-</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Publikus tagfüggvények</h2></td></tr>
+<tr class="memitem:a877b5980ca3e50479faf9680e3a704a1"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classOggFileLoader.html#a877b5980ca3e50479faf9680e3a704a1">open</a> (const std::string &amp;_filename)</td></tr>
+<tr class="separator:a877b5980ca3e50479faf9680e3a704a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a577762dd6ca2fc01946babba5efda547"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classOggFileLoader.html#a577762dd6ca2fc01946babba5efda547">init</a> ()</td></tr>
+<tr class="separator:a577762dd6ca2fc01946babba5efda547"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5a26744b6e544a7a2c765d172176ff60"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classOggFileLoader.html#a5a26744b6e544a7a2c765d172176ff60">close</a> ()</td></tr>
+<tr class="separator:a5a26744b6e544a7a2c765d172176ff60"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a18b14be2466a962f53bb7c411ec46268"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classOggFileLoader.html#a18b14be2466a962f53bb7c411ec46268">clear</a> ()</td></tr>
+<tr class="separator:a18b14be2466a962f53bb7c411ec46268"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0e01d930726fdd328af51fb6c156634e"><td class="memItemLeft" align="right" valign="top">std::vector&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classOggFileLoader.html#a0e01d930726fdd328af51fb6c156634e">get</a> (const unsigned int &amp;amount)</td></tr>
 <tr class="separator:a0e01d930726fdd328af51fb6c156634e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a507d114b16c86dbde099a360157d0415"><td class="memItemLeft" align="right" valign="top">const K &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classOggFileLoader.html#a507d114b16c86dbde099a360157d0415">getDecoder</a> ()</td></tr>
+<tr class="separator:a507d114b16c86dbde099a360157d0415"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Privát tagfüggvények</h2></td></tr>
+<tr class="memitem:a98f61e3908610c549d2b47861c066406"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classOggFileLoader.html#a98f61e3908610c549d2b47861c066406">initStream</a> (ogg_page &amp;page)</td></tr>
+<tr class="separator:a98f61e3908610c549d2b47861c066406"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5ba0c2a63e96c9b6815585310e10d504"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classOggFileLoader.html#a5ba0c2a63e96c9b6815585310e10d504">read</a> ()</td></tr>
+<tr class="separator:a5ba0c2a63e96c9b6815585310e10d504"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac00acf3900b694cfa9d242068b443413"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classOggFileLoader.html#ac00acf3900b694cfa9d242068b443413">readNextPage</a> ()</td></tr>
+<tr class="separator:ac00acf3900b694cfa9d242068b443413"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a47b37c1962662ac4de4b88541d9e7295"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classOggFileLoader.html#a47b37c1962662ac4de4b88541d9e7295">nextPage</a> ()</td></tr>
+<tr class="separator:a47b37c1962662ac4de4b88541d9e7295"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b1b15e250c29f1fcafbdf0cd1e5e590"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classOggFileLoader.html#a9b1b15e250c29f1fcafbdf0cd1e5e590">nextPacket</a> ()</td></tr>
+<tr class="separator:a9b1b15e250c29f1fcafbdf0cd1e5e590"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Tagfüggvények dokumentációja</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Részletes leírás</h2>
+<div class="textblock"><h3>template&lt;typename T, typename K&gt;<br />
+class OggFileLoader&lt; T, K &gt;</h3>
+
+<p>OGG kódolt fájlok olvasására használható osztály. A K sablon paraméter a dekódolásra használandó osztály</p>
+<pre class="fragment">        Használat:  1) fájl megnyitása - open()            
+                    2) inicializálás - init()
+                    3) a példány készen áll az olvasásra - get()</pre> </div><h2 class="groupheader">Tagfüggvények dokumentációja</h2>
+<a id="a18b14be2466a962f53bb7c411ec46268"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a18b14be2466a962f53bb7c411ec46268">&#9670;&nbsp;</a></span>clear()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T , typename K &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classOggFileLoader.html">OggFileLoader</a>&lt; T, K &gt;::clear </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Törli az ogg olvasás folyam belső állapotát. </p>
+
+</div>
+</div>
+<a id="a5a26744b6e544a7a2c765d172176ff60"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5a26744b6e544a7a2c765d172176ff60">&#9670;&nbsp;</a></span>close()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T , typename K &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="classOggFileLoader.html">OggFileLoader</a>&lt; T, K &gt;::close </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Fájl és forrás lezárása.</p>
+<dl class="section return"><dt>Visszatérési érték</dt><dd>sikeres volt-e a fájl lezárása </dd></dl>
+
+</div>
+</div>
 <a id="a0e01d930726fdd328af51fb6c156634e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a0e01d930726fdd328af51fb6c156634e">&#9670;&nbsp;</a></span>get()</h2>
 
@@ -119,7 +180,7 @@ template&lt;typename T , typename K &gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Adatot kér a forrástól.</p>
+<p>Adatot kér ettől a forrástól.</p>
 <dl class="params"><dt>Paraméterek</dt><dd>
   <table class="params">
     <tr><td class="paramname">amount</td><td>a kért adat mennyisége </td></tr>
@@ -129,6 +190,216 @@ template&lt;typename T , typename K &gt; </div>
 <dl class="section return"><dt>Visszatérési érték</dt><dd>egy T típusú, <b>amount</b> méretű vektor, feltöltve az adattal. </dd></dl>
 
 <p>Megvalósítja a következőket: <a class="el" href="classDataFlow_1_1iSource.html#a597d9d155168f1b28e7ddc4dbc17df41">DataFlow::iSource&lt; T &gt;</a>.</p>
+
+</div>
+</div>
+<a id="a507d114b16c86dbde099a360157d0415"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a507d114b16c86dbde099a360157d0415">&#9670;&nbsp;</a></span>getDecoder()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T , typename K &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">const K &amp; <a class="el" href="classOggFileLoader.html">OggFileLoader</a>&lt; T, K &gt;::getDecoder </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Az ezen loader pélány által használt decoder példány hozzáférhető ezzel a metódussal.</p>
+<dl class="section return"><dt>Visszatérési érték</dt><dd>egy konstans referencia a decoder példányhoz </dd></dl>
+
+</div>
+</div>
+<a id="a577762dd6ca2fc01946babba5efda547"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a577762dd6ca2fc01946babba5efda547">&#9670;&nbsp;</a></span>init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T, typename K&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="classOggFileLoader.html">OggFileLoader</a>&lt; T, K &gt;::init </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>A példány felkészítése adatszolgáltatásra.</p>
+<dl class="section return"><dt>Visszatérési érték</dt><dd>a dekódertól kapott hibakód </dd></dl>
+
+</div>
+</div>
+<a id="a98f61e3908610c549d2b47861c066406"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a98f61e3908610c549d2b47861c066406">&#9670;&nbsp;</a></span>initStream()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T , typename K &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="classOggFileLoader.html">OggFileLoader</a>&lt; T, K &gt;::initStream </td>
+          <td>(</td>
+          <td class="paramtype">ogg_page &amp;&#160;</td>
+          <td class="paramname"><em>page</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Libogg initializálása.</p>
+<dl class="section return"><dt>Visszatérési érték</dt><dd>hibakód a libogg-tól </dd></dl>
+
+</div>
+</div>
+<a id="a9b1b15e250c29f1fcafbdf0cd1e5e590"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9b1b15e250c29f1fcafbdf0cd1e5e590">&#9670;&nbsp;</a></span>nextPacket()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T , typename K &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="classOggFileLoader.html">OggFileLoader</a>&lt; T, K &gt;::nextPacket </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>A következő csomagot olvassa ki a libogg-ba rakott oldalból.</p>
+<dl class="section return"><dt>Visszatérési érték</dt><dd>hibakód a libogg-tól </dd></dl>
+
+</div>
+</div>
+<a id="a47b37c1962662ac4de4b88541d9e7295"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a47b37c1962662ac4de4b88541d9e7295">&#9670;&nbsp;</a></span>nextPage()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T , typename K &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="classOggFileLoader.html">OggFileLoader</a>&lt; T, K &gt;::nextPage </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>A libogg belső pufferébe olvassa a currentPage oldalt.</p>
+<dl class="section return"><dt>Visszatérési érték</dt><dd>hibakód a libogg-tól </dd></dl>
+
+</div>
+</div>
+<a id="a877b5980ca3e50479faf9680e3a704a1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a877b5980ca3e50479faf9680e3a704a1">&#9670;&nbsp;</a></span>open()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T , typename K &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="classOggFileLoader.html">OggFileLoader</a>&lt; T, K &gt;::open </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>_filename</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Fájl megnyitása.</p>
+<dl class="section return"><dt>Visszatérési érték</dt><dd>sikeres volt-e a fájl megnyitása </dd></dl>
+
+</div>
+</div>
+<a id="a5ba0c2a63e96c9b6815585310e10d504"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5ba0c2a63e96c9b6815585310e10d504">&#9670;&nbsp;</a></span>read()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T , typename K &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="classOggFileLoader.html">OggFileLoader</a>&lt; T, K &gt;::read </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>A libogg belső pufferébe olvas adatot.</p>
+<dl class="section return"><dt>Visszatérési érték</dt><dd>hibakód a libogg-tól </dd></dl>
+
+</div>
+</div>
+<a id="ac00acf3900b694cfa9d242068b443413"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac00acf3900b694cfa9d242068b443413">&#9670;&nbsp;</a></span>readNextPage()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T , typename K &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="classOggFileLoader.html">OggFileLoader</a>&lt; T, K &gt;::readNextPage </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>A következő oldalt olvassa be a példány currentPage változójába.</p>
+<dl class="section return"><dt>Visszatérési érték</dt><dd>hibakód a libogg-tól </dd></dl>
 
 </div>
 </div>

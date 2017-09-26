@@ -59,29 +59,93 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><b>Mixer</b></li><li class="navelem"><a class="el" href="classMixer_1_1AudioSource.html">AudioSource</a></li>  </ul>
+<li class="navelem"><a class="el" href="namespaceMixer.html">Mixer</a></li><li class="navelem"><a class="el" href="classMixer_1_1AudioSource.html">AudioSource</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#pub-methods">Publikus tagfüggvények</a> &#124;
 <a href="classMixer_1_1AudioSource-members.html">A tagok teljes listája</a>  </div>
   <div class="headertitle">
 <div class="title">Mixer::AudioSource osztályreferencia</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;<a class="el" href="AudioSource_8h_source.html">AudioSource.h</a>&gt;</code></p>
 <div class="dynheader">
 A Mixer::AudioSource osztály származási diagramja:</div>
 <div class="dyncontent">
 <div class="center"><img src="classMixer_1_1AudioSource__inherit__graph.png" border="0" usemap="#Mixer_1_1AudioSource_inherit__map" alt="Inheritance graph"/></div>
 <map name="Mixer_1_1AudioSource_inherit__map" id="Mixer_1_1AudioSource_inherit__map">
-<area shape="rect" id="node2" href="classMixer_1_1SineGenerator.html" title="{Mixer::SineGenerator\&lt; T \&gt;\n|&#45; step\l&#45; position\l&#45; sinetableUninitialized\l&#45; sinetable\l|+ get()\l+ SineGenerator()\l&#45; filler()\l}" alt="" coords="5,189,183,340"/>
-<area shape="rect" id="node3" href="classSimplePlayer.html" title="{SimplePlayer\&lt; T, K \&gt;\n|&#45; backend\l&#45; source\l&#45; paused\l|+ get()\l+ pause()\l+ stop()\l+ play()\l+ attach()\l+ SimplePlayer()\l}" alt="" coords="207,175,355,355"/>
+<area shape="rect" id="node2" href="classMixer_1_1SimplePlayer.html" title="{Mixer::SimplePlayer\l\&lt; T, K \&gt;\n|&#45; backend\l&#45; source\l&#45; paused\l|+ get()\l+ pause()\l+ stop()\l+ play()\l+ attach()\l+ SimplePlayer()\l}" alt="" coords="5,175,144,369"/>
+<area shape="rect" id="node3" href="classMixer_1_1SineGenerator.html" title="{Mixer::SineGenerator\&lt; T \&gt;\n|&#45; step\l&#45; position\l&#45; sinetableUninitialized\l&#45; sinetable\l|+ get()\l+ SineGenerator()\l&#45; filler()\l}" alt="" coords="169,197,346,347"/>
 </map>
 </div>
-<div class="dynheader">
-A Mixer::AudioSource osztály együttműködési diagramja:</div>
-<div class="dyncontent">
-<div class="center"><img src="classMixer_1_1AudioSource__coll__graph.png" border="0" usemap="#Mixer_1_1AudioSource_coll__map" alt="Collaboration graph"/></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Publikus tagfüggvények</h2></td></tr>
+<tr class="memitem:ad9e00dc09089bb1585d80dd9e1a16e8c"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMixer_1_1AudioSource.html#ad9e00dc09089bb1585d80dd9e1a16e8c">getChannels</a> ()</td></tr>
+<tr class="separator:ad9e00dc09089bb1585d80dd9e1a16e8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a90e176ec0d0c225ea044eef62971dc16"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMixer_1_1AudioSource.html#a90e176ec0d0c225ea044eef62971dc16">getSampleRate</a> ()</td></tr>
+<tr class="separator:a90e176ec0d0c225ea044eef62971dc16"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Részletes leírás</h2>
+<div class="textblock"><p>Audió adatot szolgáltató forrásokat megjelölő absztrakt osztály.</p>
+<p>A szolgáltatott audió adat leírásához szükséges tulajdonságokat tartalmazza. </p>
+</div><h2 class="groupheader">Tagfüggvények dokumentációja</h2>
+<a id="ad9e00dc09089bb1585d80dd9e1a16e8c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad9e00dc09089bb1585d80dd9e1a16e8c">&#9670;&nbsp;</a></span>getChannels()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int Mixer::AudioSource::getChannels </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>A csatornák számát adja vissza.</p>
+<dl class="section return"><dt>Visszatérési érték</dt><dd>a csatornák száma </dd></dl>
+
+</div>
+</div>
+<a id="a90e176ec0d0c225ea044eef62971dc16"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a90e176ec0d0c225ea044eef62971dc16">&#9670;&nbsp;</a></span>getSampleRate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int Mixer::AudioSource::getSampleRate </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>A mintavételezés sűrűségét adja vissza.</p>
+<dl class="section return"><dt>Visszatérési érték</dt><dd>a mintavételezés sűrűsége </dd></dl>
+
+</div>
 </div>
 <hr/>Ez a dokumentáció az osztályról a következő fájl alapján készült:<ul>
 <li>/SharedWithWindows/Projects/szakdolgozat/inc/<a class="el" href="AudioSource_8h_source.html">AudioSource.h</a></li>

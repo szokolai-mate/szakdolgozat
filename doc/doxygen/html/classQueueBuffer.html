@@ -66,6 +66,8 @@ $(function() {
 <div class="title">QueueBuffer&lt; T &gt; osztálysablon-referencia</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;<a class="el" href="QueueBuffer_8h_source.html">QueueBuffer.h</a>&gt;</code></p>
 <div class="dynheader">
 A QueueBuffer&lt; T &gt; osztály származási diagramja:</div>
 <div class="dyncontent">
@@ -75,21 +77,43 @@ A QueueBuffer&lt; T &gt; osztály származási diagramja:</div>
 <area shape="rect" id="node3" href="classDataFlow_1_1iSource.html" title="{DataFlow::iSource\&lt; T \&gt;\n||+ get()\l+ ~iSource()\l}" alt="" coords="5,5,168,97"/>
 </map>
 </div>
-<div class="dynheader">
-A QueueBuffer&lt; T &gt; osztály együttműködési diagramja:</div>
-<div class="dyncontent">
-<div class="center"><img src="classQueueBuffer__coll__graph.png" border="0" usemap="#QueueBuffer_3_01T_01_4_coll__map" alt="Collaboration graph"/></div>
-<map name="QueueBuffer_3_01T_01_4_coll__map" id="QueueBuffer_3_01T_01_4_coll__map">
-<area shape="rect" id="node2" href="classDataFlow_1_1iBuffer.html" title="{DataFlow::iBuffer\&lt; T \&gt;\n||+ add()\l+ add()\l+ isEmpty()\l+ isFull()\l+ clear()\l+ capacity()\l+ size()\l+ ~iBuffer()\l}" alt="" coords="9,147,165,327"/>
-<area shape="rect" id="node3" href="classDataFlow_1_1iSource.html" title="{DataFlow::iSource\&lt; T \&gt;\n||+ get()\l+ ~iSource()\l}" alt="" coords="5,5,168,97"/>
-</map>
-</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Publikus tagfüggvények</h2></td></tr>
+<tr class="memitem:a366e7c97789ae30c27ad0f60082e6dac"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classQueueBuffer.html#a366e7c97789ae30c27ad0f60082e6dac">QueueBuffer</a> (unsigned int cap)</td></tr>
+<tr class="separator:a366e7c97789ae30c27ad0f60082e6dac"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a38b69f009d2482cbc43c0682582d5c7c"><td class="memItemLeft" align="right" valign="top">std::vector&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classQueueBuffer.html#a38b69f009d2482cbc43c0682582d5c7c">get</a> (const unsigned int &amp;amount)</td></tr>
 <tr class="separator:a38b69f009d2482cbc43c0682582d5c7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Részletes leírás</h2>
+<div class="textblock"><h3>template&lt;typename T&gt;<br />
+class QueueBuffer&lt; T &gt;</h3>
+
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000005">Tennivaló:</a></b></dt><dd>TODO: document after sorting buffers out </dd></dl>
+</div><h2 class="groupheader">Konstruktorok és destruktorok dokumentációja</h2>
+<a id="a366e7c97789ae30c27ad0f60082e6dac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a366e7c97789ae30c27ad0f60082e6dac">&#9670;&nbsp;</a></span>QueueBuffer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classQueueBuffer.html">QueueBuffer</a>&lt; T &gt;::<a class="el" href="classQueueBuffer.html">QueueBuffer</a> </td>
+          <td>(</td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>_capacity</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000003">Tennivaló:</a></b></dt><dd><p class="startdd">TODO: clean this up, jesus </p>
+<p class="enddd">TODO: finish the implementation of queue buffer </p>
+</dd></dl>
+
+</div>
+</div>
 <h2 class="groupheader">Tagfüggvények dokumentációja</h2>
 <a id="a38b69f009d2482cbc43c0682582d5c7c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a38b69f009d2482cbc43c0682582d5c7c">&#9670;&nbsp;</a></span>get()</h2>
@@ -116,7 +140,7 @@ template&lt;typename T &gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Adatot kér a forrástól.</p>
+<p>Adatot kér ettől a forrástól.</p>
 <dl class="params"><dt>Paraméterek</dt><dd>
   <table class="params">
     <tr><td class="paramname">amount</td><td>a kért adat mennyisége </td></tr>

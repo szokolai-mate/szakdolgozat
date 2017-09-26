@@ -12,7 +12,7 @@ void Pa_error_occured(PaError err, std::string msg = "")
 #endif
 
 template <typename T>
-bool PortAudioBackend<T>::start()
+bool Mixer::PortAudioBackend<T>::start()
 {
     if (!stream)
     {
@@ -33,7 +33,7 @@ bool PortAudioBackend<T>::start()
 }
 
 template <typename T>
-bool PortAudioBackend<T>::stop()
+bool Mixer::PortAudioBackend<T>::stop()
 {
     if (!stream)
     {
@@ -53,7 +53,7 @@ bool PortAudioBackend<T>::stop()
 }
 
 template <typename T>
-bool PortAudioBackend<T>::close()
+bool Mixer::PortAudioBackend<T>::close()
 {
     if (!stream)
     {
@@ -76,8 +76,9 @@ bool PortAudioBackend<T>::close()
     return true;
 }
 
+namespace Mixer{
 template <>
-bool PortAudioBackend<float>::init(DataFlow::iSource<float> &source,const unsigned int & channels, const unsigned int & sampleRate)
+bool Mixer::PortAudioBackend<float>::init(DataFlow::iSource<float> &source,const unsigned int & channels, const unsigned int & sampleRate)
 {
     this->stop();
     this->source = &source;
@@ -123,9 +124,10 @@ bool PortAudioBackend<float>::init(DataFlow::iSource<float> &source,const unsign
     }
     return true;
 }
+};
 
 template <typename T>
-int PortAudioBackend<T>::callbackFunction(const void *inputBuffer, void *outputBuffer,
+int Mixer::PortAudioBackend<T>::callbackFunction(const void *inputBuffer, void *outputBuffer,
                                                unsigned long framesPerBuffer,
                                                const PaStreamCallbackTimeInfo *timeInfo,
                                                PaStreamCallbackFlags statusFlags,
@@ -141,4 +143,4 @@ int PortAudioBackend<T>::callbackFunction(const void *inputBuffer, void *outputB
     return paContinue;
 }
 
-template class PortAudioBackend<float>;
+template class Mixer::PortAudioBackend<float>;

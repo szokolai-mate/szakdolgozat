@@ -1,5 +1,5 @@
 <map id="SimplePlayer&lt; T, K &gt;" name="SimplePlayer&lt; T, K &gt;">
-<area shape="rect" id="node2" href="$classMixer_1_1AudioSource.html" title="{Mixer::AudioSource\n|&#45; channels\l&#45; sampleRate\l|+ AudioSource()\l+ getChannels()\l+ getSampleRate()\l}" alt="" coords="5,5,141,127"/>
+<area shape="rect" id="node2" href="$classMixer_1_1AudioSource.html" title="{Mixer::AudioSource\n|&#45; channels\l&#45; sampleRate\l|+ getChannels()\l+ getSampleRate()\l# AudioSource()\l}" alt="" coords="5,5,141,127"/>
 <area shape="rect" id="node3" href="$classDataFlow_1_1iSource.html" title="{DataFlow::iSource\&lt; T \&gt;\n||+ get()\l+ ~iSource()\l}" alt="" coords="165,20,328,112"/>
-<area shape="rect" id="node4" href="$classiPlayer.html" title="{iPlayer\n||+ pause()\l+ stop()\l+ play()\l+ ~iPlayer()\l}" alt="" coords="352,5,443,127"/>
+<area shape="rect" id="node4" href="$classMixer_1_1iPlayer.html" title="{Mixer::iPlayer\n||+ pause()\l+ stop()\l+ play()\l+ ~iPlayer()\l}" alt="" coords="353,5,455,127"/>
 </map>

@@ -70,6 +70,8 @@ $(function() {
 <div class="title">DataFlow::Consolidator&lt; T, K &gt; osztálysablon-referencia</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;<a class="el" href="Consolidator_8h_source.html">Consolidator.h</a>&gt;</code></p>
 <div class="dynheader">
 A DataFlow::Consolidator&lt; T, K &gt; osztály származási diagramja:</div>
 <div class="dyncontent">
@@ -78,22 +80,93 @@ A DataFlow::Consolidator&lt; T, K &gt; osztály származási diagramja:</div>
 <area shape="rect" id="node2" href="classDataFlow_1_1iSource.html" title="{DataFlow::iSource\&lt; T \&gt;\n||+ get()\l+ ~iSource()\l}" alt="" coords="5,5,168,97"/>
 </map>
 </div>
-<div class="dynheader">
-A DataFlow::Consolidator&lt; T, K &gt; osztály együttműködési diagramja:</div>
-<div class="dyncontent">
-<div class="center"><img src="classDataFlow_1_1Consolidator__coll__graph.png" border="0" usemap="#DataFlow_1_1Consolidator_3_01T_00_01K_01_4_coll__map" alt="Collaboration graph"/></div>
-<map name="DataFlow_1_1Consolidator_3_01T_00_01K_01_4_coll__map" id="DataFlow_1_1Consolidator_3_01T_00_01K_01_4_coll__map">
-<area shape="rect" id="node2" href="classDataFlow_1_1iSource.html" title="{DataFlow::iSource\&lt; T \&gt;\n||+ get()\l+ ~iSource()\l}" alt="" coords="5,322,168,414"/>
-<area shape="rect" id="node5" title="STL class. " alt="" coords="355,153,471,230"/>
-</map>
-</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Publikus tagfüggvények</h2></td></tr>
+<tr class="memitem:a33229d15aa2ba097d46cd2dd71a692b6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDataFlow_1_1Consolidator.html#a33229d15aa2ba097d46cd2dd71a692b6">attach</a> (<a class="el" href="classDataFlow_1_1iSource.html">DataFlow::iSource</a>&lt; T &gt; &amp;source)</td></tr>
+<tr class="separator:a33229d15aa2ba097d46cd2dd71a692b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb03d0d4200f5c5aaab3056193ed18ed"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDataFlow_1_1Consolidator.html#afb03d0d4200f5c5aaab3056193ed18ed">detach</a> (<a class="el" href="classDataFlow_1_1iSource.html">DataFlow::iSource</a>&lt; T &gt; &amp;source)</td></tr>
+<tr class="separator:afb03d0d4200f5c5aaab3056193ed18ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9967333461ab933069b50964add89279"><td class="memItemLeft" align="right" valign="top">K&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDataFlow_1_1Consolidator.html#a9967333461ab933069b50964add89279">getMethod</a> ()</td></tr>
+<tr class="separator:a9967333461ab933069b50964add89279"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac036a7e7825206570261a39a6c9d94b3"><td class="memItemLeft" align="right" valign="top">std::vector&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDataFlow_1_1Consolidator.html#ac036a7e7825206570261a39a6c9d94b3">get</a> (const unsigned int &amp;amount)</td></tr>
 <tr class="separator:ac036a7e7825206570261a39a6c9d94b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Tagfüggvények dokumentációja</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Részletes leírás</h2>
+<div class="textblock"><h3>template&lt;typename T, template&lt; typename &gt; typename K&gt;<br />
+class DataFlow::Consolidator&lt; T, K &gt;</h3>
+
+<p>Több forrást egy forrássá alakít.</p>
+<p>A konszolidáció a K sablon paraméter szerint történik. A konszolidátor és a konszolidáció típusának meg kell egyeznie a sablonban. Implementált konszolidációs moódszerekhez lásd a <a class="el" href="namespaceConsolidation.html">Consolidation</a> névteret. </p>
+</div><h2 class="groupheader">Tagfüggvények dokumentációja</h2>
+<a id="a33229d15aa2ba097d46cd2dd71a692b6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a33229d15aa2ba097d46cd2dd71a692b6">&#9670;&nbsp;</a></span>attach()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T , template&lt; typename &gt; typename K&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classDataFlow_1_1Consolidator.html">DataFlow::Consolidator</a>&lt; T, K &gt;::attach </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classDataFlow_1_1iSource.html">DataFlow::iSource</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>source</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>A paramétert az objektum forrásaihoz hozzácsatolja. </p><dl class="params"><dt>Paraméterek</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">source</td><td>a csatolni kívánt iSource&lt;T&gt; </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="afb03d0d4200f5c5aaab3056193ed18ed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afb03d0d4200f5c5aaab3056193ed18ed">&#9670;&nbsp;</a></span>detach()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T , template&lt; typename &gt; typename K&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="classDataFlow_1_1Consolidator.html">DataFlow::Consolidator</a>&lt; T, K &gt;::detach </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classDataFlow_1_1iSource.html">DataFlow::iSource</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>source</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>A paramétert az objektum forrásaiból kiveszi. </p><dl class="params"><dt>Paraméterek</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">source</td><td>a kivenni kívánt iSource&lt;T&gt; </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="ac036a7e7825206570261a39a6c9d94b3"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac036a7e7825206570261a39a6c9d94b3">&#9670;&nbsp;</a></span>get()</h2>
 
@@ -119,7 +192,7 @@ template&lt;typename T , template&lt; typename &gt; typename K&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Adatot kér a forrástól.</p>
+<p>Adatot kér ettől a forrástól.</p>
 <dl class="params"><dt>Paraméterek</dt><dd>
   <table class="params">
     <tr><td class="paramname">amount</td><td>a kért adat mennyisége </td></tr>
@@ -129,6 +202,34 @@ template&lt;typename T , template&lt; typename &gt; typename K&gt; </div>
 <dl class="section return"><dt>Visszatérési érték</dt><dd>egy T típusú, <b>amount</b> méretű vektor, feltöltve az adattal. </dd></dl>
 
 <p>Megvalósítja a következőket: <a class="el" href="classDataFlow_1_1iSource.html#a597d9d155168f1b28e7ddc4dbc17df41">DataFlow::iSource&lt; T &gt;</a>.</p>
+
+</div>
+</div>
+<a id="a9967333461ab933069b50964add89279"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9967333461ab933069b50964add89279">&#9670;&nbsp;</a></span>getMethod()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T , template&lt; typename &gt; typename K&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">K&lt;T&gt;&amp; <a class="el" href="classDataFlow_1_1Consolidator.html">DataFlow::Consolidator</a>&lt; T, K &gt;::getMethod </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Visszatérési érték</dt><dd>a referencia </dd></dl>
 
 </div>
 </div>

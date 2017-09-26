@@ -1,19 +1,20 @@
 <map id="/SharedWithWindows/Projects/szakdolgozat/src/main.cpp" name="/SharedWithWindows/Projects/szakdolgozat/src/main.cpp">
-<area shape="rect" id="node6" href="$Utils_8h.html" title="Utils.h" alt="" coords="37,184,97,211"/>
-<area shape="rect" id="node10" href="$OggFileLoader_8h.html" title="OggFileLoader.h" alt="" coords="431,109,548,136"/>
-<area shape="rect" id="node16" href="$VorbisDecoder_8h.html" title="VorbisDecoder.h" alt="" coords="479,184,598,211"/>
-<area shape="rect" id="node18" href="$SimplePlayer_8h.html" title="SimplePlayer.h" alt="" coords="1602,109,1713,136"/>
-<area shape="rect" id="node20" href="$PortAudioBackend_8h.html" title="PortAudioBackend.h" alt="" coords="1436,109,1577,136"/>
-<area shape="rect" id="node22" href="$SineGenerator_8h.html" title="SineGenerator.h" alt="" coords="186,109,302,136"/>
-<area shape="rect" id="node24" href="$Consolidator_8h.html" title="Consolidator.h" alt="" coords="1121,184,1228,211"/>
-<area shape="rect" id="node25" href="$ConsolidationMethods_8h.html" title="ConsolidationMethods.h" alt="" coords="673,109,836,136"/>
-<area shape="rect" id="node27" href="$Applicator_8h.html" title="Applicator.h" alt="" coords="1737,109,1828,136"/>
-<area shape="rect" id="node28" href="$Clipping_8h.html" title="Clipping.h" alt="" coords="327,109,407,136"/>
-<area shape="rect" id="node29" href="$VolumeControl_8h.html" title="VolumeControl.h" alt="" coords="775,184,894,211"/>
-<area shape="rect" id="node30" href="$QueueBuffer_8h.html" title="QueueBuffer.h" alt="" coords="1212,109,1319,136"/>
-<area shape="rect" id="node15" href="$iSource_8h.html" title="iSource.h" alt="" coords="1353,259,1431,285"/>
-<area shape="rect" id="node19" href="$iPlayer_8h.html" title="iPlayer.h" alt="" coords="1839,184,1913,211"/>
-<area shape="rect" id="node21" href="$iAudioBackend_8h.html" title="iAudioBackend.h" alt="" coords="1695,184,1815,211"/>
-<area shape="rect" id="node26" href="$iConsolidationMethod_8h.html" title="iConsolidationMethod.h" alt="" coords="685,259,843,285"/>
-<area shape="rect" id="node32" href="$iBuffer_8h.html" title="iBuffer.h" alt="" coords="1303,184,1374,211"/>
+<area shape="rect" id="node5" href="$Utils_8h.html" title="Utils.h" alt="" coords="1603,184,1663,211"/>
+<area shape="rect" id="node9" href="$OggFileLoader_8h.html" title="OggFileLoader.h" alt="" coords="1631,109,1748,136"/>
+<area shape="rect" id="node15" href="$VorbisDecoder_8h.html" title="VorbisDecoder.h" alt="" coords="1687,184,1806,211"/>
+<area shape="rect" id="node17" href="$SimplePlayer_8h.html" title="SimplePlayer.h" alt="" coords="1171,184,1282,211"/>
+<area shape="rect" id="node20" href="$PortAudioBackend_8h.html" title="PortAudioBackend.h" alt="" coords="348,109,489,136"/>
+<area shape="rect" id="node23" href="$SineGenerator_8h.html" title="SineGenerator.h" alt="" coords="1255,109,1371,136"/>
+<area shape="rect" id="node25" href="$Consolidator_8h.html" title="Consolidator.h" alt="" coords="800,184,907,211"/>
+<area shape="rect" id="node26" href="$ConsolidationMethods_8h.html" title="ConsolidationMethods.h" alt="" coords="5,109,168,136"/>
+<area shape="rect" id="node28" href="$Applicator_8h.html" title="Applicator.h" alt="" coords="904,109,995,136"/>
+<area shape="rect" id="node29" href="$Clipping_8h.html" title="Clipping.h" alt="" coords="1065,109,1145,136"/>
+<area shape="rect" id="node30" href="$VolumeControl_8h.html" title="VolumeControl.h" alt="" coords="1409,184,1527,211"/>
+<area shape="rect" id="node31" href="$QueueBuffer_8h.html" title="QueueBuffer.h" alt="" coords="687,109,793,136"/>
+<area shape="rect" id="node14" href="$iSource_8h.html" title="iSource.h" alt="" coords="901,259,979,285"/>
+<area shape="rect" id="node18" href="$iPlayer_8h.html" title="iPlayer.h" alt="" coords="1066,259,1139,285"/>
+<area shape="rect" id="node19" href="$AudioSource_8h.html" title="AudioSource.h" alt="" coords="1215,259,1321,285"/>
+<area shape="rect" id="node22" href="$iAudioBackend_8h.html" title="iAudioBackend.h" alt="" coords="376,184,496,211"/>
+<area shape="rect" id="node27" href="$iConsolidationMethod_8h.html" title="iConsolidationMethod.h" alt="" coords="71,259,230,285"/>
+<area shape="rect" id="node33" href="$iBuffer_8h.html" title="iBuffer.h" alt="" coords="705,184,775,211"/>
 </map>

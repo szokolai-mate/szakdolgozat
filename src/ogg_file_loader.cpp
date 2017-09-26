@@ -17,7 +17,7 @@ int OggFileLoader<float, VorbisDecoder>::init()
 		nextPacket();
 		decoder.addToHeader(currentPacket);
 	}
-	decoder.initDecoding();
+	return decoder.initDecoding();
 }
 
 template <typename T, typename K>
