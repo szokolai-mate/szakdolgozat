@@ -1,4 +1,0 @@
-<map id="iBuffer&lt; T &gt;" name="iBuffer&lt; T &gt;">
-<area shape="rect" id="node2" href="$classiAdvancedBuffer.html" title="{iAdvancedBuffer\&lt; T \&gt;\n||+ addamount()\l+ getamount()\l+ getsome()\l+ getsome()\l}" alt="" coords="5,329,156,450"/>
-<area shape="rect" id="node3" href="$classQueueBuffer.html" title="{QueueBuffer\&lt; T \&gt;\n|&#45; cap\l&#45; buffer\l&#45; start\l&#45; end\l&#45; emptyflag\l&#45; m\l|+ QueueBuffer()\l+ ~QueueBuffer()\l+ add()\l+ add()\l+ get()\l+ isEmpty()\l+ isFull()\l+ clear()\l+ capacity()\l+ exposeBuffer()\l+ size()\l&#45; currentSize()\l}" alt="" coords="180,233,307,545"/>
-</map>

@@ -24,8 +24,8 @@ namespace DataFlow{
         /*!
         \~english Attach the parameter to this object's sources.
         \~hungarian A paramétert az objektum forrásaihoz hozzácsatolja.
-        \param source \~english the iSource<T> to attach
-                        \~hungarian a csatolni kívánt iSource<T>
+        \~english \param source the iSource<T> to attach
+                        \~hungarian \param source a csatolni kívánt iSource<T>
         */
         void attach(DataFlow::iSource<T> & source){
             sources.push_back(source);
@@ -34,8 +34,8 @@ namespace DataFlow{
         /*!
         \~english Remove the parameter from this object's sources.
         \~hungarian A paramétert az objektum forrásaiból kiveszi.
-        \param source \~english the iSource<T> to detach
-                        \~hungarian a kivenni kívánt iSource<T>
+        \~english \param source the iSource<T> to detach
+                        \~hungarian \param source a kivenni kívánt iSource<T>
         */
         bool detach(DataFlow::iSource<T> & source){
             for(auto it = sources.begin();it!=sources.end();it++){
@@ -49,8 +49,8 @@ namespace DataFlow{
 
         //! \~english Get a reference to the consolidation method instance used.
         //! \~hungary Egy referenciát ad a használt konszolidációs módszer példányhoz.
-        /*! \return \~english the reference
-                    \~hungarian a referencia
+        /*! \~english \return the reference
+                    \~hungarian \return a referencia
         */
         K<T> & getMethod(){
             return consolidationMethod;

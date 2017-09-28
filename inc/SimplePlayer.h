@@ -46,8 +46,8 @@ class SimplePlayer : public Mixer::AudioSource, public DataFlow::iSource<T>, pub
     /*!
         \~english Attach the parameter as this object's source.
         \~hungarian A paramétert az objektum forrásaként hozzácsatolja.
-        \param source \~english the iSource<T> to attach
-                        \~hungarian a csatolni kívánt iSource<T>
+        \~english \param source the iSource<T> to attach
+                        \~hungarian \param source a csatolni kívánt iSource<T>
     */
     void attach(DataFlow::iSource<T> &source)
     {
@@ -57,10 +57,10 @@ class SimplePlayer : public Mixer::AudioSource, public DataFlow::iSource<T>, pub
     /*! \~english Constructor. Requires parameters for AudioSource.
         \~hungarian Konstuktor. Az AudioSource paramétereit kéri.
 
-        \param channels \~english channel count
-                        \~hungarian csatornák száma
-        \param sampleRate \~english sample rate
-                            \~hungarian mintavételezési sűrűség
+        \~english \param channels channel count
+                        \~hungarian \param channels csatornák száma
+        \~english \param sampleRate sample rate
+                            \~hungarian \param sampleRate mintavételezési sűrűség
     */
     SimplePlayer(const unsigned int &channels, const unsigned int &sampleRate) : AudioSource(channels, sampleRate)
     {

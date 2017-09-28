@@ -35,12 +35,12 @@ public:
   /*!
     \~english Constructor. Sets initial frequency and requires AudioSource parameters.
     \~hungarian Konstruktor. Beállítja a kezdeti frekvenciát és az AudioSource paramétereit.
-    \param frequency \~english the initial frequency
-                      \~hungarian a kezdeti frekvencia
-    \param channels \~english the channel count
-                      \~hungarian a csatornák száma
-    \param sampleRate \~english the sample rate
-                      \~hungarian a intavételezés sűrűsége
+    \~english \param frequency the initial frequency
+                      \~hungarian \param frequency a kezdeti frekvencia
+    \~english \param channels the channel count
+                      \~hungarian \param channels a csatornák száma
+    \~english \param sampleRate the sample rate
+                      \~hungarian \param sampleRate a intavételezés sűrűsége
   */
   SineGenerator(const float &frequency, const unsigned int &channels, const unsigned int &sampleRate);
 };

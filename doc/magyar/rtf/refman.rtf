@@ -1,0 +1,2575 @@
+{\rtf1\ansi\ansicpg1250\uc1 \deff0\deflang1033\deflangfe1033
+{\fonttbl {\f0\froman\fcharset0\fprq2{\*\panose 02020603050405020304}Times New Roman;}
+{\f1\fswiss\fcharset0\fprq2{\*\panose 020b0604020202020204}Arial;}
+{\f2\fmodern\fcharset0\fprq1{\*\panose 02070309020205020404}Courier New;}
+{\f3\froman\fcharset2\fprq2{\*\panose 05050102010706020507}Symbol;}
+}
+{\colortbl;\red0\green0\blue0;\red0\green0\blue255;\red0\green255\blue255;\red0\green255\blue0;\red255\green0\blue255;\red255\green0\blue0;\red255\green255\blue0;\red255\green255\blue255;\red0\green0\blue128;\red0\green128\blue128;\red0\green128\blue0;\red128\green0\blue128;\red128\green0\blue0;\red128\green128\blue0;\red128\green128\blue128;\red192\green192\blue192;}
+{\stylesheet
+{\widctlpar\adjustright \fs20\cgrid \snext0 Normal;}
+{\paperw11900\paperh16840\margl1800\margr1800\margt1440\margb1440\gutter0\ltrsect}
+{\s1\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs36\kerning36\cgrid \sbasedon0 \snext0 heading 1;}
+{\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid \sbasedon0 \snext0 heading 2;}
+{\s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid \sbasedon0 \snext0 heading 3;}
+{\s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid \sbasedon0 \snext0 heading 4;}{\*\cs10 \additive Default Paragraph Font;}
+{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid \sbasedon0 \snext0 heading 5;}{\*\cs10 \additive Default Paragraph Font;}
+{\s15\qc\sb240\sa60\widctlpar\outlinelevel0\adjustright \b\f1\fs32\kerning28\cgrid \sbasedon0 \snext15 Title;}
+{\s16\qc\sa60\widctlpar\outlinelevel1\adjustright \f1\cgrid \sbasedon0 \snext16 Subtitle;}
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid \sbasedon0 \snext17 BodyText;}
+{\s18\widctlpar\fs22\cgrid \sbasedon0 \snext18 DenseText;}
+{\s28\widctlpar\tqc\tx4320\tqr\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext28 header;}
+{\s29\widctlpar\tqc\tx4320\tqr\tx8640\qr\adjustright \fs20\cgrid \sbasedon0 \snext29 footer;}
+{\s30\li360\sa60\sb120\keepn\widctlpar\adjustright \b\f1\fs20\cgrid \sbasedon0 \snext30 GroupHeader;}
+{\s40\li0\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext41 Code Example 0;}
+{\s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext42 Code Example 1;}
+{\s42\li720\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext43 Code Example 2;}
+{\s43\li1080\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext44 Code Example 3;}
+{\s44\li1440\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext45 Code Example 4;}
+{\s45\li1800\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext46 Code Example 5;}
+{\s46\li2160\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext47 Code Example 6;}
+{\s47\li2520\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext48 Code Example 7;}
+{\s48\li2880\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext49 Code Example 8;}
+{\s49\li3240\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext49 Code Example 9;}
+{\s50\li0\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext51 List Continue 0;}
+{\s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext52 List Continue 1;}
+{\s52\li720\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext53 List Continue 2;}
+{\s53\li1080\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext54 List Continue 3;}
+{\s54\li1440\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext55 List Continue 4;}
+{\s55\li1800\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext56 List Continue 5;}
+{\s56\li2160\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext57 List Continue 6;}
+{\s57\li2520\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext58 List Continue 7;}
+{\s58\li2880\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext59 List Continue 8;}
+{\s59\li3240\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext59 List Continue 9;}
+{\s60\li0\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext61 DescContinue 0;}
+{\s61\li360\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext62 DescContinue 1;}
+{\s62\li720\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext63 DescContinue 2;}
+{\s63\li1080\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext64 DescContinue 3;}
+{\s64\li1440\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext65 DescContinue 4;}
+{\s65\li1800\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext66 DescContinue 5;}
+{\s66\li2160\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext67 DescContinue 6;}
+{\s67\li2520\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext68 DescContinue 7;}
+{\s68\li2880\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext69 DescContinue 8;}
+{\s69\li3240\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext69 DescContinue 9;}
+{\s70\li0\sa30\sb30\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext81 LatexTOC 0;}
+{\s71\li360\sa27\sb27\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext82 LatexTOC 1;}
+{\s72\li720\sa24\sb24\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext83 LatexTOC 2;}
+{\s73\li1080\sa21\sb21\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext84 LatexTOC 3;}
+{\s74\li1440\sa18\sb18\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext85 LatexTOC 4;}
+{\s75\li1800\sa15\sb15\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext86 LatexTOC 5;}
+{\s76\li2160\sa12\sb12\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext87 LatexTOC 6;}
+{\s77\li2520\sa9\sb9\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext88 LatexTOC 7;}
+{\s78\li2880\sa6\sb6\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext89 LatexTOC 8;}
+{\s79\li3240\sa3\sb3\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext89 LatexTOC 9;}
+{\s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext81 \sautoupd List Bullet 0;}
+{\s81\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls2\adjustright \fs20\cgrid \sbasedon0 \snext82 \sautoupd List Bullet 1;}
+{\s82\fi-360\li1080\widctlpar\jclisttab\tx1080{\*\pn \pnlvlbody\ilvl0\ls3\pnrnot0\pndec }\ls3\adjustright \fs20\cgrid \sbasedon0 \snext83 \sautoupd List Bullet 2;}
+{\s83\fi-360\li1440\widctlpar\jclisttab\tx1440{\*\pn \pnlvlbody\ilvl0\ls4\pnrnot0\pndec }\ls4\adjustright \fs20\cgrid \sbasedon0 \snext84 \sautoupd List Bullet 3;}
+{\s84\fi-360\li1800\widctlpar\jclisttab\tx1800{\*\pn \pnlvlbody\ilvl0\ls5\pnrnot0\pndec }\ls5\adjustright \fs20\cgrid \sbasedon0 \snext85 \sautoupd List Bullet 4;}
+{\s85\fi-360\li2160\widctlpar\jclisttab\tx2160{\*\pn \pnlvlbody\ilvl0\ls6\pnrnot0\pndec }\ls6\adjustright \fs20\cgrid \sbasedon0 \snext86 \sautoupd List Bullet 5;}
+{\s86\fi-360\li2520\widctlpar\jclisttab\tx2520{\*\pn \pnlvlbody\ilvl0\ls7\pnrnot0\pndec }\ls7\adjustright \fs20\cgrid \sbasedon0 \snext87 \sautoupd List Bullet 6;}
+{\s87\fi-360\li2880\widctlpar\jclisttab\tx2880{\*\pn \pnlvlbody\ilvl0\ls8\pnrnot0\pndec }\ls8\adjustright \fs20\cgrid \sbasedon0 \snext88 \sautoupd List Bullet 7;}
+{\s88\fi-360\li3240\widctlpar\jclisttab\tx3240{\*\pn \pnlvlbody\ilvl0\ls9\pnrnot0\pndec }\ls9\adjustright \fs20\cgrid \sbasedon0 \snext89 \sautoupd List Bullet 8;}
+{\s89\fi-360\li3600\widctlpar\jclisttab\tx3600{\*\pn \pnlvlbody\ilvl0\ls10\pnrnot0\pndec }\ls10\adjustright \fs20\cgrid \sbasedon0 \snext89 \sautoupd List Bullet 9;}
+{\s90\fi-360\li360\widctlpar\fs20\cgrid \sbasedon0 \snext91 \sautoupd List Enum 0;}
+{\s91\fi-360\li720\widctlpar\fs20\cgrid \sbasedon0 \snext92 \sautoupd List Enum 1;}
+{\s92\fi-360\li1080\widctlpar\fs20\cgrid \sbasedon0 \snext93 \sautoupd List Enum 2;}
+{\s93\fi-360\li1440\widctlpar\fs20\cgrid \sbasedon0 \snext94 \sautoupd List Enum 3;}
+{\s94\fi-360\li1800\widctlpar\fs20\cgrid \sbasedon0 \snext95 \sautoupd List Enum 4;}
+{\s95\fi-360\li2160\widctlpar\fs20\cgrid \sbasedon0 \snext96 \sautoupd List Enum 5;}
+{\s96\fi-360\li2520\widctlpar\fs20\cgrid \sbasedon0 \snext96 \sautoupd List Enum 5;}
+{\s97\fi-360\li2880\widctlpar\fs20\cgrid \sbasedon0 \snext98 \sautoupd List Enum 7;}
+{\s98\fi-360\li3240\widctlpar\fs20\cgrid \sbasedon0 \snext99 \sautoupd List Enum 8;}
+{\s99\fi-360\li3600\widctlpar\fs20\cgrid \sbasedon0 \snext99 \sautoupd List Enum 9;}
+}
+{\info 
+{\title {\comment Szakdolgozat }Szakdolgozat}
+{\comment K\'E9sz\'EDtetteDoxgyen. }
+{\creatim \yr2017\mo9\dy28\hr14\min22\sec27}
+}\pard\plain 
+\sectd\pgnlcrm
+{\footer \s29\widctlpar\tqc\tx4320\tqr\tx8640\qr\adjustright \fs20\cgrid {\chpgn}}
+\pard\plain \s16\qc\sa60\widctlpar\outlinelevel1\adjustright \f1\cgrid 
+\vertalc\qc\par\par\par\par\par\par\par
+\pard\plain \s15\qc\sb240\sa60\widctlpar\outlinelevel0\adjustright \b\f1\fs32\kerning28\cgrid 
+{\field\fldedit {\*\fldinst TITLE \\*MERGEFORMAT}{\fldrslt Szakdolgozat}}\par
+\pard\plain \s16\qc\sa60\widctlpar\outlinelevel1\adjustright \f1\cgrid 
+\par
+\par\par\par\par\par\par\par\par\par\par\par\par
+\pard\plain \s16\qc\sa60\widctlpar\outlinelevel1\adjustright \f1\cgrid 
+{\field\fldedit {\*\fldinst AUTHOR \\*MERGEFORMAT}{\fldrslt AUTHOR}}\par
+Verzi\'F3 \par{\field\fldedit {\*\fldinst CREATEDATE \\*MERGEFORMAT}{\fldrslt Thu Sep 28 2017 }}\par
+\page\page\vertalt
+\pard\plain 
+\s1\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs36\kerning36\cgrid Tartalomjegyz\'E9k\par
+\pard\plain \par
+{\field\fldedit {\*\fldinst TOC \\f \\*MERGEFORMAT}{\fldrslt Table of contents}}\par
+\pard\plain 
+\sect \sbkpage \pgndec \pgnrestart
+\sect \sectd \sbknone
+{\footer \s29\widctlpar\tqc\tx4320\tqr\tx8640\qr\adjustright \fs20\cgrid {\chpgn}}
+
+\pard\plain \sect\sbkpage
+\s1\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs36\kerning36\cgrid 
+szakdolgozat\par \pard\plain 
+{\tc \v szakdolgozat}
+{
+\pard\plain \s17\sa60\sb30\widctlpar\qj \fs22\cgrid {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Ez a project a BSc. szakdolgozatom alapja.\par
+Ideiglenes t\'F6lt\'E9s am\'EDg a dokument\'E1ci\'F3 gener\'E1l\'E1ssal foglalkozom.\par
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras diam purus, blandit eu pellentesque a, fringilla a arcu. Aliquam laoreet semper nulla sit amet faucibus. Cras id enim ut lectus bibendum malesuada. Aenean condimentum ut nulla non ultricies. Nulla vehicula auctor ullamcorper. Vestibulum nisl nunc, porta nec nunc non, condimentum rutrum est. Sed sit amet posuere nisi. Fusce imperdiet, ipsum nec mollis dictum, nisl tellus dapibus ipsum, ut ultrices lorem ligula vel eros. Aenean consectetur mauris libero. Aenean fermentum, nibh id sodales viverra, est ligula vestibulum neque, eget blandit nulla lacus vel elit. Maecenas lacus quam, porttitor et tortor ut, malesuada rhoncus tortor.\par
+Aliquam sit amet dui quam. Fusce fermentum porta hendrerit. Fusce dignissim sapien et metus varius, vitae sollicitudin dolor mollis. Sed at blandit libero. Integer gravida justo vel erat lobortis, in condimentum justo auctor. Ut rhoncus pretium massa, in iaculis lacus. Vivamus non lacus arcu. Nam pellentesque volutpat felis, ut volutpat nisl placerat congue. Morbi sodales lacus non molestie pharetra. Sed vel egestas mauris, vel fermentum lacus. Proin eleifend euismod risus eu blandit. Donec accumsan accumsan congue. Nulla pulvinar justo mauris, vel tristique odio condimentum ut. Suspendisse pretium, dui eu aliquet ultricies, justo erat iaculis urna, eget condimentum erat nunc at ante. Integer rhoncus faucibus lacus a gravida.\par
+Suspendisse ligula leo, malesuada pellentesque lacinia vel, vestibulum vel turpis. Donec sit amet neque id ipsum faucibus placerat sed quis erat. Donec porta lectus mi, nec rhoncus ante pretium ac. Nulla vitae nulla augue. Fusce ante nisi, fermentum non faucibus non, consequat ut risus. Nullam posuere aliquam eros, non sollicitudin eros tristique in. Pellentesque lectus massa, ornare vel venenatis sit amet, fringilla eu urna. Donec ullamcorper sed urna a tincidunt.\par
+Phasellus convallis ex mi, non porttitor nisi accumsan a. Fusce nulla tellus, mattis ac urna at, semper eleifend velit. Integer bibendum urna ac semper finibus. Curabitur ac varius lectus, nec rutrum dolor. Mauris sagittis nisl eget pellentesque viverra. Nunc metus mi, posuere ut mi ut, efficitur egestas magna. Morbi sit amet dolor tortor. Vivamus in hendrerit felis. In tristique vel elit nec tempor. Nulla facilisi. Proin a quam a orci varius pharetra porttitor sit amet sem. Donec vel blandit felis, mattis consequat mauris. Nulla tortor enim, eleifend in iaculis id, hendrerit sed sapien. Duis et dui in mi pharetra euismod vitae a mi. Nam eu risus hendrerit, eleifend nulla consectetur, interdum turpis.\par
+Integer non rhoncus justo. Praesent ut nibh a nunc aliquam bibendum. Aliquam ultrices sed turpis condimentum ultricies. Ut mi quam, luctus et ante vitae, luctus bibendum tellus. Vivamus quis venenatis mi. Duis at est lacinia, suscipit urna a, suscipit nisi. Fusce malesuada eu turpis nec vestibulum. Proin elementum non enim non semper. Integer at nulla turpis. Donec accumsan ultricies neque vel vulputate. Nunc rhoncus mauris non ante elementum, nec pharetra mi fermentum. Sed nisl tortor, feugiat et diam ac, dapibus iaculis ligula. Ut mattis dictum vulputate.\par
+Quisque porta orci ut nunc commodo ornare. Aenean in lectus et nisi bibendum varius vitae sit amet augue. Aliquam est velit, pretium ac orci vitae, sodales finibus sem. Aliquam nec facilisis erat. Curabitur interdum facilisis arcu, ac pulvinar orci vehicula sed. Cras quis nisl ut augue feugiat egestas eget at lacus. Curabitur odio lacus, faucibus sit amet condimentum nec, varius at augue. Pellentesque id bibendum mauris. Sed nec maximus libero. Pellentesque a imperdiet lectus. Maecenas tincidunt justo id purus suscipit, ac rhoncus velit interdum. Etiam ullamcorper enim accumsan lorem consectetur semper. Ut eleifend ligula purus, vel eleifend nunc ullamcorper sit amet.\par
+Ut est lectus, tempus eu mauris ullamcorper, cursus blandit nunc. Phasellus eu ullamcorper sem. Sed nec ullamcorper sem, vitae pulvinar mi. Donec pellentesque vitae nibh sed volutpat. Duis sem nulla, molestie at quam eget, aliquet euismod nulla. Vivamus semper finibus mi. Vestibulum in imperdiet ligula. Vestibulum quis iaculis nulla.\par
+Donec efficitur luctus ornare. Vivamus efficitur bibendum justo ut aliquet. Morbi sit amet risus lobortis, lacinia quam nec, sollicitudin urna. Nunc vulputate lacus sed tortor imperdiet volutpat. Vivamus pulvinar aliquam ipsum. Sed ut pharetra eros. Aliquam at sodales enim. Interdum et malesuada fames ac ante ipsum primis in faucibus. Ut gravida sapien ac ipsum fermentum, in varius nisi porta. Nam placerat, tellus aliquam rhoncus tempor, tortor lectus rhoncus risus, quis vestibulum eros odio vel eros. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec in massa quis leo tempor rhoncus. Quisque vitae diam ligula. Pellentesque pellentesque ex sed viverra bibendum. Nunc laoreet turpis ex, sit amet volutpat velit suscipit et.\par
+Nulla iaculis dui nec dolor mollis, sed molestie nibh iaculis. Nullam rhoncus justo eu elit pretium, quis ultrices sem fermentum. Vestibulum elementum quam sit amet varius porttitor. Nam at viverra arcu. Suspendisse potenti. In tempus nisi at leo ullamcorper, eget egestas sem malesuada. Sed id mauris fermentum, hendrerit tellus id, ornare risus. Curabitur eu diam varius, placerat leo sed, tincidunt purus. Pellentesque dictum felis eget luctus aliquam. In eu ipsum non nunc porta consectetur aliquet in nisi.\par
+Nunc ut ante in ante fermentum venenatis. Etiam at mattis orci, sed viverra eros. Nam varius semper mauris, quis placerat augue placerat eu. In semper a metus sit amet porttitor. Aenean nec neque magna. Quisque bibendum vehicula lorem, in hendrerit risus vestibulum quis. Aliquam malesuada aliquam imperdiet. Vivamus luctus nisi et iaculis placerat. Sed ullamcorper, felis a lacinia mattis, ligula ligula vehicula massa, nec posuere mauris enim nec purus. Pellentesque tristique rutrum nibh pharetra vehicula. Duis non cursus magna.\par
+Phasellus aliquet neque placerat, semper nisi non, iaculis odio. Nam dictum blandit tempus. Pellentesque ultrices purus at augue laoreet imperdiet. Ut neque dolor, ornare sit amet convallis dictum, rutrum eget justo. Maecenas dignissim volutpat ornare. Nullam velit lacus, porta iaculis lacinia consequat, vulputate sit amet diam. Praesent sed purus imperdiet, faucibus urna eu, porttitor elit. Nunc ac ex porta, malesuada nulla eu, feugiat est. Cras vehicula elit et massa vulputate mattis ac at nibh. Aliquam erat volutpat. Fusce tincidunt magna sed felis viverra sodales. Donec in risus tempus, accumsan justo a, pulvinar ligula.\par
+Aenean dictum eu erat a venenatis. Nunc ac volutpat velit. Cras eget mollis turpis, ac volutpat enim. Praesent imperdiet magna et lorem laoreet, vel ullamcorper elit porta. Suspendisse condimentum sollicitudin sagittis. Suspendisse tempor, felis et feugiat condimentum, augue enim bibendum dolor, aliquet cursus erat metus a neque. Maecenas tortor quam, faucibus in ligula quis, ullamcorper scelerisque nulla. Nunc at condimentum lacus, eu tempor neque. In nec metus odio. Nam justo est, pulvinar sed vehicula in, varius a nibh. Cras consequat a nisl et facilisis. Mauris sapien urna, hendrerit nec diam et, luctus varius tellus. Integer a tincidunt erat. In hac habitasse platea dictumst. Pellentesque eu congue diam.\par
+Phasellus suscipit sodales pharetra. Donec turpis turpis, eleifend in quam ut, semper placerat tortor. Vestibulum condimentum commodo enim vel dictum. Ut dolor dolor, semper at volutpat id, commodo et neque. Nulla at lacinia ipsum, laoreet dictum sem. Nulla facilisi. Etiam quam quam, gravida ac porttitor in, vehicula sit amet enim. Cras laoreet aliquam ligula.\par
+Ut lobortis turpis ipsum, ut vulputate augue auctor mattis. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Fusce tempor vulputate nulla a bibendum. Vestibulum efficitur vehicula libero, et consequat mauris euismod ac. Morbi pretium vitae tellus vel feugiat. Donec risus purus, porta ac pretium non, commodo sit amet lorem. Fusce tempor nunc sollicitudin quam tempus, sed lobortis massa molestie. Pellentesque elementum bibendum viverra. Vivamus condimentum fringilla tincidunt.\par
+Nullam vel vehicula ipsum. Nunc a justo lacus. Nullam porta congue bibendum. Suspendisse eget elit ut libero euismod interdum. Curabitur sed neque sem. Integer a quam blandit, fringilla ante id, faucibus nulla. Proin in enim lacinia, volutpat arcu sit amet, sodales nulla. Morbi dapibus turpis augue, eget tempor odio pellentesque eget. Ut cursus dolor eu turpis suscipit scelerisque. Nunc in justo massa. Aliquam nibh nisl, ultricies et iaculis eget, feugiat id nunc. Nam ullamcorper dolor sed ante aliquet, a viverra justo consequat.\par
+Donec mauris sapien, viverra suscipit auctor vitae, mattis quis nulla. Sed a tortor vitae ipsum mattis imperdiet at ut dolor. Pellentesque vitae dui tortor. Phasellus erat ipsum, lobortis nec sagittis ac, imperdiet non quam. Morbi vehicula enim nec ullamcorper convallis. Pellentesque commodo nulla eu sem iaculis, vitae viverra purus luctus. Suspendisse nisi justo, egestas eget rhoncus ac, semper nec sapien. Proin auctor neque scelerisque est gravida suscipit. Pellentesque semper vehicula urna, et faucibus lectus ultrices id. Integer consectetur, ipsum in pulvinar consequat, quam elit tristique eros, eget varius dolor arcu sit amet diam.\par
+Ut neque neque, tincidunt in leo vitae, interdum scelerisque purus. Maecenas sit amet pellentesque sapien. Quisque aliquam scelerisque felis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; In pretium imperdiet neque. Quisque tincidunt mi dolor, eget rutrum turpis mattis quis. Fusce a orci arcu. Sed semper ipsum ut eleifend aliquet.\par
+Integer vel ex diam. Nam molestie sem aliquet lacus accumsan, quis mollis nibh iaculis. In quis porttitor nibh. Donec luctus congue sem vitae tincidunt. Proin a eleifend mauris, eu placerat leo. Nunc ornare tortor faucibus eros rhoncus posuere. Curabitur imperdiet pretium tortor quis volutpat. Nunc egestas mollis velit quis viverra. Quisque vitae lacinia nunc. Quisque at arcu malesuada, euismod augue ut, vulputate libero. Pellentesque id nisi nec justo pharetra condimentum. Phasellus elementum faucibus magna, et hendrerit ligula tristique ut. Duis eu eleifend nibh. Nullam tristique vestibulum felis, at bibendum massa placerat ut. Phasellus lacinia fermentum metus, in iaculis metus lacinia id.\par
+Curabitur ornare erat enim, non ornare mauris vehicula fermentum. Nulla cursus nec dui et venenatis. Aliquam semper eleifend maximus. Cras pulvinar porta nunc vitae auctor. Aliquam in purus tempus, facilisis diam vel, venenatis libero. Nulla pellentesque mauris sed dolor tincidunt euismod. Quisque lacinia tellus ullamcorper, vulputate odio ornare, pretium orci.\par
+Sed vehicula risus sed nibh ullamcorper hendrerit feugiat a ligula. Vestibulum ante risus, luctus et suscipit id, euismod sed justo. Etiam non eros id dui congue venenatis finibus nec elit. Pellentesque commodo commodo arcu dictum suscipit. Vestibulum et quam fermentum, dapibus arcu vitae, placerat ligula. Donec mollis, quam vel sollicitudin porta, ex mi pellentesque sapien, et pulvinar tortor velit non mauris. Aliquam congue placerat ipsum quis euismod. Donec turpis sem, gravida feugiat fringilla id, dignissim at erat. Nulla id consectetur tortor. In eget mauris eu lacus posuere lacinia. Proin convallis nunc ac facilisis ullamcorper.\par
+Sed mattis pharetra dui, a consectetur nunc aliquet et. Nulla vel elit eu augue scelerisque pulvinar et eget est. Sed vel est rhoncus, elementum diam vel, accumsan dolor. Sed ullamcorper diam vulputate, posuere lacus ultrices, sodales turpis. Phasellus egestas facilisis sapien vitae mattis. Aliquam ullamcorper tristique purus eu efficitur. Morbi suscipit sapien id eros fermentum condimentum. Nullam gravida neque at lectus accumsan mattis. Maecenas gravida accumsan eros sed elementum. Integer lectus ligula, mattis vel sapien eget, dignissim dictum ligula. Nullam sodales libero eget bibendum faucibus. Fusce lobortis nibh vel luctus luctus. Sed fringilla, augue et vulputate imperdiet, tellus dolor pharetra ipsum, ut luctus leo dui vitae nulla. Donec sed blandit metus.\par
+Nam vitae dictum sem, id varius tellus. Fusce nec sagittis justo. Nullam vulputate enim id sapien posuere, eu blandit ligula molestie. Curabitur eleifend velit orci, id rhoncus ligula suscipit eget. Quisque laoreet, elit sed aliquet interdum, tortor est pretium sapien, eu faucibus est nunc vel augue. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum nisl tortor, faucibus hendrerit dictum at, fringilla eget arcu. Aliquam sodales quam vitae risus molestie, ac ornare nulla molestie. Aliquam erat volutpat. Duis viverra, leo non facilisis scelerisque, lorem libero vestibulum nisi, sed mattis turpis tellus at nunc. Etiam nec nunc at turpis suscipit sagittis sit amet eu nunc. Donec interdum quam magna, eu fermentum dolor egestas ut. Mauris volutpat, lacus at porttitor suscipit, diam ex mattis erat, vel imperdiet purus dui ut mauris. Nam scelerisque semper urna.\par
+Aenean arcu lacus, condimentum id metus a, luctus accumsan neque. Mauris mi turpis, porttitor id suscipit at, dapibus eu orci. Curabitur luctus fermentum hendrerit. Duis luctus at ipsum vitae commodo. Nulla posuere, velit mollis sagittis accumsan, felis dui pretium risus, quis aliquet est libero at justo. Nulla felis orci, tempus ac felis id, imperdiet euismod diam. Pellentesque non urna semper, luctus dui ac, auctor urna. Sed blandit elit id lobortis rhoncus.\par
+Integer posuere hendrerit commodo. Cras interdum convallis luctus. Donec eu blandit nibh. Etiam sed turpis convallis, pharetra velit sit amet, fermentum velit. Nunc fringilla semper nisi, tempor gravida dui laoreet ac. Duis placerat gravida tortor, sit amet ornare tellus placerat et. Pellentesque lectus sem, fermentum at lorem eget, imperdiet semper metus. Mauris quis porttitor metus, non scelerisque orci. Etiam vehicula lacus in massa cursus sollicitudin. Ut elit felis, auctor at consequat ut, malesuada tincidunt ante. Nunc dapibus luctus ipsum, sed fermentum metus maximus nec. Nam sit amet aliquam odio, id aliquam quam. Duis porta, nunc in molestie suscipit, enim mauris commodo risus, et pellentesque urna velit ac augue.\par
+Morbi dignissim porttitor ante. Donec semper justo sed iaculis cursus. Sed lacinia nibh at leo mollis tristique. Sed at leo feugiat, convallis quam non, aliquam sem. Mauris eu justo efficitur, consectetur odio sed, pretium ante. Nunc tincidunt gravida commodo. Curabitur rutrum, leo auctor posuere eleifend, felis nulla bibendum est, id aliquam mi risus ac diam. Maecenas pellentesque, libero eget finibus fringilla, lorem enim placerat lacus, ac imperdiet sem tortor vel justo. Ut vel posuere diam. Nunc tempus blandit luctus. Sed condimentum semper fringilla. Morbi dapibus sit amet ante sit amet suscipit. Mauris eu rhoncus tortor.\par
+Suspendisse et posuere risus, at interdum eros. Aliquam eu libero ac velit hendrerit accumsan nec vel nulla. Pellentesque sollicitudin, massa nec dictum auctor, mauris nunc posuere mauris, in pretium leo nunc feugiat mauris. Ut tristique aliquet lorem, non vehicula ante imperdiet quis. In nec quam eros. Etiam tincidunt leo a interdum ultricies. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec eu augue quis leo malesuada mollis. Nunc et erat aliquet, ullamcorper elit ac, iaculis velit. Nullam molestie, dui bibendum maximus pharetra, erat ante finibus justo, at egestas elit eros in massa. Nulla in enim quam. Praesent fermentum, ex aliquam ultricies efficitur, arcu nunc pharetra lectus, et placerat ipsum tortor at quam. Aenean ac tortor nec orci gravida molestie.\par
+Mauris sollicitudin justo quam, aliquam pellentesque turpis efficitur eu. Vivamus in lorem enim. Vestibulum placerat sagittis mauris, non suscipit neque ullamcorper et. Donec ante tellus, semper vel eleifend cursus, scelerisque at erat. Sed dui neque, faucibus at dapibus vitae, vestibulum et dui. Praesent in porttitor nisi. Donec dictum magna non quam mattis, faucibus dictum arcu imperdiet. Etiam ullamcorper iaculis tristique. Aliquam sed nisi at augue ornare tempor nec in sapien. Nullam pulvinar dolor et sagittis lobortis. Duis lacinia, turpis sed tempor semper, ex lacus maximus sem, vel volutpat ante massa et augue. Nam elementum auctor venenatis.\par
+Aliquam a enim sed metus blandit sollicitudin. Ut euismod neque sed justo lobortis ullamcorper quis ac ipsum. Etiam consequat mattis lacus, eu elementum nisl consequat sit amet. Morbi vehicula quam turpis, et placerat justo rhoncus id. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus tempus quam nec arcu lobortis posuere. Cras nisi nulla, dignissim et est nec, auctor posuere urna. Phasellus eget diam a justo tempus hendrerit vel et ex. Curabitur mattis, ante ut luctus blandit, ligula lacus tristique risus, at euismod augue sem a elit. Aliquam eget aliquet lorem.\par
+Pellentesque ullamcorper massa et ante sodales placerat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin risus diam, aliquam auctor pulvinar vel, pellentesque ut sapien. Sed placerat sem eget fermentum tincidunt. Mauris commodo tristique posuere. Donec molestie scelerisque dui, at tincidunt orci. Duis ut lacinia magna, in vestibulum odio. Sed ornare fringilla ligula et commodo.\par
+Phasellus molestie pharetra venenatis. Suspendisse a magna quis neque vestibulum rhoncus. Suspendisse potenti. Nunc sit amet facilisis justo. Nulla libero tellus, porta sit amet egestas a, consequat at felis. Cras feugiat, urna vitae aliquet sagittis, leo est maximus ipsum, vel maximus nunc felis at purus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Suspendisse elementum blandit pulvinar. Maecenas lacinia diam eu rhoncus pharetra. Aenean auctor velit tortor, vitae placerat nisi dignissim eu. Phasellus id gravida tortor. Aliquam dui mi, lobortis et dolor eu, tincidunt ultricies ante. Donec id quam vitae nisi venenatis elementum. Nulla fringilla posuere dolor in maximus.\par
+Morbi sit amet ultricies diam, nec egestas diam. Nam sagittis convallis imperdiet. Nulla pretium consequat mauris sed rutrum. Curabitur vulputate sit amet nulla nec interdum. Ut ac vulputate mi, id maximus purus. Donec efficitur lacinia purus quis lobortis. Integer varius imperdiet massa. Sed efficitur aliquam augue, tristique aliquam eros. Praesent cursus elementum nulla, nec gravida mauris vehicula vitae. In vulputate sollicitudin lorem id porttitor.\par
+Nulla id venenatis ipsum. Nam elementum ac est id rhoncus. Integer tempor, turpis ac accumsan bibendum, enim ligula malesuada est, vitae facilisis lectus magna a massa. Proin eu scelerisque mi, eu cursus felis. Donec ipsum turpis, eleifend volutpat auctor ac, congue in odio. Nunc ut imperdiet nunc. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.\par
+Donec pulvinar erat vitae aliquam cursus. Maecenas a tellus a purus suscipit convallis. Duis at gravida eros. Sed rutrum ac arcu quis tincidunt. Nullam tincidunt, lectus sed sollicitudin volutpat, turpis erat viverra mauris, sit amet mollis quam leo vitae nunc. Donec scelerisque sodales arcu quis bibendum. Sed at tellus viverra, commodo nisi vel, varius ex. Phasellus euismod pellentesque tellus. Vivamus feugiat mattis venenatis. Integer ac odio ac arcu molestie semper malesuada vitae magna. Quisque a fermentum tortor, sit amet blandit lorem. Aliquam dictum ex vitae facilisis aliquam. Aliquam erat volutpat.\par
+Mauris nisi elit, feugiat ac suscipit ac, tempor nec eros. Morbi commodo neque nec lorem porttitor auctor. Mauris in accumsan diam, sit amet efficitur turpis. Praesent feugiat ante nulla, eu feugiat nisl lacinia vel. Maecenas gravida vulputate efficitur. Vivamus ornare magna id urna pulvinar egestas. Quisque id nisi ut arcu efficitur fermentum. Nulla suscipit auctor elit, a dictum tortor mollis ac.\par
+Praesent convallis, ipsum in sagittis placerat, elit diam consectetur est, at volutpat libero velit sed quam. Morbi malesuada dignissim purus. Curabitur odio odio, rutrum id consectetur non, dictum ut orci. Sed consequat purus quis convallis porta. Ut lacinia dolor magna, a placerat purus tempus vitae. Nam at accumsan nunc. Vestibulum et diam sed urna elementum egestas. In nibh ipsum, euismod id mi nec, luctus iaculis orci. Praesent placerat malesuada erat, sed consequat sapien facilisis a. Suspendisse vitae ipsum eget ex aliquam aliquam. Vestibulum ac porttitor arcu, at rutrum dui. Nunc vitae fringilla ex, quis mollis sapien. Suspendisse neque mi, varius non convallis non, laoreet id mauris. Curabitur vestibulum rhoncus fringilla. In maximus felis imperdiet egestas ultrices. Nunc egestas placerat elit, in semper velit dictum sed.\par
+Ut a dui in arcu vehicula rhoncus. Donec ac eros orci. Phasellus porta sapien vitae metus condimentum posuere. Praesent justo magna, fringilla at blandit eu, dictum sed augue. In imperdiet tristique tellus, nec laoreet erat mattis dignissim. In hac habitasse platea dictumst. Nulla accumsan risus magna, at molestie justo molestie non. Morbi viverra, erat quis ornare gravida, orci sem porttitor dui, a semper dolor tortor ac ante. Nullam pulvinar nisl ut nunc pellentesque lacinia. Sed a elementum metus. Donec accumsan molestie nisl nec volutpat. Aliquam erat volutpat. Fusce sodales neque sit amet ipsum viverra luctus. Nunc pretium purus in dolor pretium auctor. Nam malesuada nec libero nec tincidunt. Ut sed elementum nisl, quis pretium mi.\par
+Phasellus a lectus quis enim ultrices semper vitae interdum ante. Ut pellentesque nibh faucibus porta lobortis. Fusce egestas, nulla viverra tincidunt rhoncus, libero nisi iaculis neque, at mattis dui mauris id purus. Sed mollis faucibus arcu, vitae suscipit libero. Donec a arcu et massa molestie semper in at orci. Integer mollis fermentum magna, vel fermentum felis egestas in. Sed tempus semper lectus, vitae scelerisque eros accumsan nec. Duis sagittis elit enim, quis blandit purus elementum vitae. Maecenas nibh mauris, accumsan consectetur fringilla a, dictum eget sem. Sed leo arcu, consectetur eget tellus sit amet, auctor tempus eros. Phasellus auctor vulputate lorem et fermentum. Cras bibendum quam diam, non fermentum risus molestie rhoncus. Fusce porttitor fermentum pellentesque. Sed pulvinar ante id dui aliquam, quis ultrices lorem placerat. Maecenas venenatis euismod justo, tempor vestibulum mi hendrerit eu.\par
+Proin ornare nisl urna, at iaculis sem semper at. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dictum turpis tortor, nec tincidunt mauris mollis elementum. Nunc ut velit at metus molestie tempus vitae at mauris. Maecenas augue magna, pharetra eu risus sit amet, sagittis mattis risus. Sed interdum dui id dapibus gravida. Suspendisse libero felis, auctor euismod neque id, consequat imperdiet ligula. Cras non ullamcorper est. In pulvinar volutpat magna, vel tristique sapien aliquet at. Donec posuere metus justo, eget pellentesque nibh tincidunt at. Quisque vel cursus sem. Aliquam porttitor pellentesque dui, nec rhoncus purus euismod a. Nullam eu quam aliquet orci suscipit imperdiet elementum eu justo. Morbi tortor libero, aliquam ut ante nec, ornare aliquam lorem. Pellentesque aliquam vitae tortor sit amet pellentesque.\par
+Donec sed pretium lorem. Donec aliquet finibus quam eu tincidunt. Phasellus dapibus condimentum felis, non vestibulum sapien consectetur ac. Nunc hendrerit efficitur commodo. Donec non augue suscipit, sagittis risus ac, consequat mi. In sit amet commodo urna. Cras at ligula ultricies, tristique mi ut, commodo elit. Donec ornare ullamcorper risus quis porta. Sed accumsan, lorem sit amet facilisis euismod, leo ligula aliquet sapien, vitae convallis justo justo non ligula. Nunc varius, enim vel vestibulum accumsan, elit elit condimentum mauris, vitae commodo diam mauris nec justo. Curabitur tempor est ac urna hendrerit, sit amet scelerisque odio fringilla. In scelerisque euismod tellus a porta. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Cras viverra quam at velit malesuada accumsan. Fusce tempus diam et pretium congue. Sed non rutrum nibh.\par
+Cras vestibulum rhoncus ultricies. Integer vulputate, nunc eget pulvinar ultricies, tellus magna iaculis tellus, sit amet aliquet enim dolor condimentum nisi. Proin ornare eget dolor eget efficitur. Sed eget velit rutrum, varius ante eleifend, finibus nisl. Sed vel ante velit. Etiam pretium, mi sed blandit finibus, tortor neque rutrum ipsum, ac scelerisque libero magna nec urna. Maecenas laoreet mauris sed diam luctus fermentum. Cras viverra porta erat vel cursus. Nulla facilisi. Vivamus dignissim, ligula eget pretium ornare, massa sem viverra quam, ut pulvinar velit metus id felis. Curabitur iaculis eros id tempus gravida. Curabitur sollicitudin, dolor sit amet tincidunt laoreet, arcu enim gravida diam, id ornare nisl lorem sed velit. Vivamus fermentum dapibus est sit amet tempus.\par
+Suspendisse gravida aliquam feugiat. Quisque pharetra nibh risus, eget maximus massa ultrices at. Fusce bibendum, diam ut malesuada blandit, augue justo aliquet elit, at scelerisque nunc velit nec tortor. Aliquam gravida nulla non nibh auctor, et pellentesque lorem sodales. Praesent bibendum volutpat sem, vel tempor velit congue a. Etiam suscipit, tortor ut semper gravida, sem odio eleifend dui, eu rutrum mi enim nec ex. Vivamus eu varius dui. Donec id velit tortor. Nunc eu augue nibh. Nam in aliquam purus.\par
+Morbi a lacinia elit. Nullam pharetra malesuada justo, sed porta turpis varius ac. Vestibulum vel mi ac erat consequat tincidunt. Ut neque lectus, elementum at varius ac, ultricies quis nulla. Phasellus egestas rutrum sapien sagittis interdum. Mauris ac consequat urna, ac lobortis sem. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque scelerisque arcu tristique feugiat scelerisque.\par
+Nam dignissim ornare dui eget porta. In finibus quis tellus sed cursus. Donec non odio at sapien luctus tristique id eu nibh. Donec sed posuere erat, vel auctor augue. In faucibus velit nec feugiat dignissim. Phasellus vitae sapien eu purus faucibus tincidunt. Curabitur dictum mauris ac velit varius, id ornare ligula rhoncus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Vestibulum aliquam eros nunc, non consectetur sem sagittis vel. Sed faucibus tortor pulvinar scelerisque blandit. Praesent quis enim eu nulla aliquam luctus. Maecenas fringilla enim sit amet sapien sagittis, eget consectetur leo porta. Vivamus imperdiet, odio quis imperdiet tempus, tellus velit mattis odio, luctus dignissim tellus ex in dui. Nullam mauris nulla, dictum ac pharetra vitae, cursus sed urna. Sed laoreet mauris sed est aliquet condimentum bibendum molestie tellus.\par
+Aliquam feugiat justo in sagittis laoreet. Donec hendrerit risus nisl, at pulvinar lectus maximus sit amet. Pellentesque ante ante, semper non tincidunt sed, convallis vel est. Proin porttitor ipsum at commodo dictum. Integer et lorem et dui pharetra dapibus. Fusce in velit quis nibh pharetra porta ac eget ex. Cras aliquam odio nec turpis tincidunt molestie. Aliquam posuere risus et urna varius, id iaculis massa egestas. Vivamus et neque at lectus suscipit vulputate ac vitae justo. Quisque fermentum nulla a elit blandit, commodo tincidunt nulla volutpat. In dictum blandit leo eget laoreet. Pellentesque at pellentesque lectus, eget maximus lacus. Maecenas sit amet justo quis lectus ultrices pretium. Sed quis mauris a ante ultrices feugiat non sed massa. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;\par
+Proin fermentum velit dolor, a bibendum lacus pulvinar in. Nulla tincidunt mauris vel neque pharetra, at rhoncus nulla sodales. Sed mauris urna, auctor interdum tellus sed, feugiat fermentum velit. Phasellus diam purus, aliquam sed convallis sed, lacinia sit amet nunc. Vivamus porttitor ex at tincidunt finibus. Duis non ultrices libero, vehicula laoreet augue. Proin in venenatis lacus. Nam cursus tristique tellus, porta bibendum sapien egestas dignissim. Nam nec eros pulvinar, pellentesque tortor eu, rhoncus massa. Sed venenatis ut dolor id sodales. Vivamus malesuada molestie vehicula. Vivamus ante tortor, eleifend eu gravida quis, dignissim vitae purus. Ut pretium, nisl non mollis varius, lorem felis auctor nibh, et porta nulla turpis quis lacus. Mauris quis viverra massa.\par
+Etiam maximus, eros sit amet lobortis sodales, lorem odio fermentum lorem, ac convallis lectus libero id dolor. Nunc fringilla magna vel facilisis volutpat. Nullam sit amet aliquet turpis, vitae elementum augue. Cras justo mauris, viverra non nibh vitae, condimentum imperdiet velit. Duis dictum scelerisque lectus ac tincidunt. Morbi et lorem accumsan, fermentum quam at, dictum justo. Sed a consequat sapien. Nulla a molestie lacus. Morbi et erat feugiat, consectetur velit rutrum, laoreet leo. Pellentesque faucibus mauris urna, id volutpat mauris lobortis ut. Suspendisse maximus mi vel enim mattis, a mollis enim pulvinar.\par
+Vestibulum quam tellus, suscipit non libero volutpat, auctor mollis eros. Vivamus quis consectetur quam. Duis fringilla, ipsum sed dictum ultricies, tellus neque sagittis enim, id ullamcorper erat nulla a tellus. In efficitur aliquet congue. Aenean pulvinar pellentesque dui eget dictum. Donec eleifend porttitor augue, at consectetur arcu consequat sed. Vestibulum ac nulla id elit eleifend ultricies. Ut eu facilisis enim. Nam auctor odio a massa suscipit condimentum. Nunc in blandit justo. Morbi auctor auctor maximus. Quisque sed sem quis justo vulputate ullamcorper. Morbi placerat turpis nulla, id rutrum justo vulputate sit amet. Vivamus tempus est at diam tempor, at porta massa elementum. Mauris finibus posuere nisl in congue. Quisque rhoncus rhoncus erat.\par
+Donec a arcu et magna mollis dignissim. Nulla facilisi. Praesent sed aliquam arcu. Pellentesque sapien mi, sagittis in nisi eget, volutpat vehicula lectus. Etiam sit amet venenatis justo. Sed leo magna, maximus et nunc id, mollis sollicitudin leo. Vestibulum vel dui dolor. Sed sit amet leo quis enim sagittis consectetur et id odio. Quisque viverra ante velit, non dictum arcu vestibulum id. Integer id convallis nulla. Cras ac leo vel ligula convallis tempor id et ex. Sed feugiat nisi tortor, sed molestie nisi congue ac. Proin ac justo tellus. Aenean in sollicitudin magna. In dictum eros ac neque auctor, et accumsan arcu consequat. Ut malesuada enim quam, in ullamcorper nunc vehicula a.\par
+Nulla pellentesque posuere magna, vitae ultricies massa. Vivamus id enim mattis, tincidunt velit rutrum, suscipit eros. Sed nisi tortor, tempor ornare augue quis, maximus venenatis neque. Fusce venenatis orci in metus tempus dapibus eu ut enim. Nam congue, ante sit amet interdum egestas, lorem erat commodo nunc, ut tempus dui augue sollicitudin ante. Aliquam sit amet interdum purus. Nam dictum facilisis tortor at tristique.\par
+Fusce eros tortor, eleifend id orci sit amet, ullamcorper pellentesque neque. Nam id arcu mauris. Donec pharetra quam nec condimentum porttitor. Cras lorem quam, viverra placerat elit eu, gravida ornare mi. Donec nec nisl sed ex pharetra suscipit at non nunc. In elementum rutrum mattis. Vestibulum efficitur ut odio eget tincidunt. Aenean porttitor, nisi vel molestie sagittis, tellus felis gravida ex, a pellentesque massa turpis eget quam. Vestibulum nec tristique sapien. Ut eget ultricies nisl, ac porta dolor. \par
+}}
+
+\pard\plain \sect\sbkpage
+\s1\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs36\kerning36\cgrid 
+Tennival\'F3k list\'E1ja{\tc \v Tennival\'F3k list\'E1ja}\par \pard\plain 
+{\bkmkstart AAAAAAAADL}
+{\bkmkend AAAAAAAADL}
+{
+\pard\plain \s17\sa60\sb30\widctlpar\qj \fs22\cgrid {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
+{\bkmkstart AAAAAAAAAA}
+{\bkmkend AAAAAAAAAA}
+N\'E9vt\'E9r {\b Mixer}  \par
+}
+{\pard\plain \s61\li360\widctlpar\ql\adjustright \fs20\cgrid TODO: at start and stop make a rapid approach to 0 to avoid popping  \par}
+{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
+{\bkmkstart AAAAAAAAAB}
+{\bkmkend AAAAAAAAAB}
+Tag {\b Mixer::SimplePlayer< T, K >::get}  (const unsigned int &amount)\par
+}
+{\pard\plain \s61\li360\widctlpar\ql\adjustright \fs20\cgrid TODO: pause function  \par}
+{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
+{\bkmkstart AAAAAAAAAC}
+{\bkmkend AAAAAAAAAC}
+Oszt\'E1ly {\b QueueBuffer< T >}  \par
+}
+{\pard\plain \s61\li360\widctlpar\ql\adjustright \fs20\cgrid TODO: document after sorting buffers out  \par}
+{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
+{\bkmkstart AAAAAAAAAD}
+{\bkmkend AAAAAAAAAD}
+Tag {\b QueueBuffer< T >::QueueBuffer}  (unsigned int cap)\par
+}
+{\pard\plain \s61\li360\widctlpar\ql\adjustright \fs20\cgrid TODO: clean this up, jesus \par
+TODO: finish the implementation of queue buffer  \par}
+{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
+{\bkmkstart AAAAAAAAAE}
+{\bkmkend AAAAAAAAAE}
+Tag {\b VorbisDecoder::VorbisDecoder}  ()\par
+}
+{\pard\plain \s61\li360\widctlpar\ql\adjustright \fs20\cgrid TODO: errors and exceptions \par}
+}}
+
+\pard\plain \sect\sbkpage
+\s1\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs36\kerning36\cgrid 
+N\'E9vt\'E9rmutat\'F3\par \pard\plain 
+{\tc \v N\'E9vt\'E9rmutat\'F3}
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+N\'E9vt\'E9rlista\par \pard\plain 
+{
+\pard\plain \s17\sa60\sb30\widctlpar\qj \fs22\cgrid Az \'F6sszes dokument\'E1lt n\'E9vt\'E9r list\'E1ja r\'F6vid le\'EDr\'E1sokkal:}
+{
+\par
+\pard\plain \s71\li360\sa27\sb27\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid 
+{\b {\b Clipping} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAABI \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b {\b Consolidation} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAABL \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b {\b DataFlow} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAABT \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b {\b Mixer} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAACI \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b {\b template_utils} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAADF \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+\par}
+\pard\plain \sect\sbkpage
+\s1\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs36\kerning36\cgrid 
+Hierarchikus mutat\'F3\par \pard\plain 
+{\tc \v Hierarchikus mutat\'F3}
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+Oszt\'E1lyhierarchia\par \pard\plain 
+{
+\pard\plain \s17\sa60\sb30\widctlpar\qj \fs22\cgrid Majdnem (de nem teljesen) bet\'FBrendbe szedett lesz\'E1rmaz\'E1si lista:}
+{
+\par
+\pard\plain \s71\li360\sa27\sb27\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid 
+Mixer::AudioSource\tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAACJ \\*MERGEFORMAT}{\fldrslt pagenum}}
+{
+\par
+\pard\plain \s72\li720\sa24\sb24\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid 
+Mixer::SimplePlayer< T, K >\tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAADA \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+Mixer::SineGenerator< T >\tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAADD \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+}\par
+template_utils::extract_inner_base< T >\tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAADH \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+template_utils::extract_inner_base< C< T > >\tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAADI \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+Clipping::Hard\tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAABJ \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+Mixer::iAudioBackend< T >\tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAACM \\*MERGEFORMAT}{\fldrslt pagenum}}
+{
+\par
+\pard\plain \s72\li720\sa24\sb24\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid 
+Mixer::PortAudioBackend< T >\tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAACW \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+}\par
+DataFlow::iConsolidationMethod< T >\tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAACE \\*MERGEFORMAT}{\fldrslt pagenum}}
+{
+\par
+\pard\plain \s72\li720\sa24\sb24\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid 
+Consolidation::Accumulation< T >\tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAABM \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+}\par
+Mixer::iPlayer\tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAACP \\*MERGEFORMAT}{\fldrslt pagenum}}
+{
+\par
+\pard\plain \s72\li720\sa24\sb24\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid 
+Mixer::SimplePlayer< T, K >\tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAADA \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+}\par
+DataFlow::iSource< T >\tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAACF \\*MERGEFORMAT}{\fldrslt pagenum}}
+{
+\par
+\pard\plain \s72\li720\sa24\sb24\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid 
+DataFlow::Applicator< T, K >\tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAABU \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+DataFlow::Consolidator< T, K >\tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAABY \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+DataFlow::iBuffer< T >\tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAACD \\*MERGEFORMAT}{\fldrslt pagenum}}
+{
+\par
+\pard\plain \s73\li1080\sa21\sb21\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid 
+QueueBuffer< T >\tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAAS \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+}\par
+Mixer::SimplePlayer< T, K >\tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAADA \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+Mixer::SineGenerator< T >\tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAADD \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+OggFileLoader< T, K >\tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAAF \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+}\par
+Clipping::Soft\tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAABK \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+VolumeControl< T >\tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAAV \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+VorbisDecoder\tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAAY \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+}
+\pard\plain \sect\sbkpage
+\s1\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs36\kerning36\cgrid 
+Oszt\'E1lymutat\'F3\par \pard\plain 
+{\tc \v Oszt\'E1lymutat\'F3}
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+Oszt\'E1lylista\par \pard\plain 
+{
+\pard\plain \s17\sa60\sb30\widctlpar\qj \fs22\cgrid Az \'F6sszes oszt\'E1ly, strukt\'FAra, uni\'F3 \'E9s interf\'E9sz list\'E1ja r\'F6vid le\'EDr\'E1sokkal:}
+{
+\par
+\pard\plain \s71\li360\sa27\sb27\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid 
+{\b {\b Consolidation::Accumulation< T >} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAABM \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b {\b DataFlow::Applicator< T, K >} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAABU \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b {\b Mixer::AudioSource} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAACJ \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b {\b DataFlow::Consolidator< T, K >} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAABY \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b {\b template_utils::extract_inner_base< T >} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAADH \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b {\b template_utils::extract_inner_base< C< T > >} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAADI \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b {\b Clipping::Hard} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAABJ \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b {\b Mixer::iAudioBackend< T >} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAACM \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b {\b DataFlow::iBuffer< T >} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAACD \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b {\b DataFlow::iConsolidationMethod< T >} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAACE \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b {\b Mixer::iPlayer} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAACP \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b {\b DataFlow::iSource< T >} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAACF \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b {\b OggFileLoader< T, K >} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAAF \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b {\b Mixer::PortAudioBackend< T >} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAACW \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b {\b QueueBuffer< T >} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAAS \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b {\b Mixer::SimplePlayer< T, K >} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAADA \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b {\b Mixer::SineGenerator< T >} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAADD \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b {\b Clipping::Soft} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAABK \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b {\b VolumeControl< T >} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAAV \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b {\b VorbisDecoder} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAAY \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+\par}
+\pard\plain \sect\sbkpage
+\s1\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs36\kerning36\cgrid 
+N\'E9vterek dokument\'E1ci\'F3ja\par \pard\plain 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+Clipping n\'E9vt\'E9r-referencia\par \pard\plain 
+{\tc\tcl2 \v Clipping}
+{\xe \v Clipping}
+{\bkmkstart AAAAAAAABI}
+{\bkmkend AAAAAAAABI}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Oszt\'E1lyok\par
+\pard\plain 
+
+{
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+class {\b Hard}\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+class {\b Soft}\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+R\'E9szletes le\'EDr\'E1s\par
+\pard\plain 
+{
+\pard\plain \s17\sa60\sb30\widctlpar\qj \fs22\cgrid {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Ny\'EDr\'E1si m\'F3d\'F3kat megval\'F3s\'EDt\'F3 oszt\'E1lyokat tartalmaz.\par
+K\'E9t implement\'E1ci\'F3 sz\'FCks\'E9ges: egyed\'FCli \'E9rt\'E9kekhez \'E9s b\'E1rmilyen hossz\'FAs\'E1g\'FA vektorokhoz. \par
+}}
+\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+Consolidation n\'E9vt\'E9r-referencia\par \pard\plain 
+{\tc\tcl2 \v Consolidation}
+{\xe \v Consolidation}
+{\bkmkstart AAAAAAAABL}
+{\bkmkend AAAAAAAABL}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Oszt\'E1lyok\par
+\pard\plain 
+
+{
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+class {\b Accumulation}\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+R\'E9szletes le\'EDr\'E1s\par
+\pard\plain 
+{
+\pard\plain \s17\sa60\sb30\widctlpar\qj \fs22\cgrid {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Konszolid\'E1ci\'F3s m\'F3dszereket megval\'F3s\'EDt\'F3 oszt\'E1lyok, melyeket majd a konszolid\'E1torok haszn\'E1lnak.\par
+Az oszt\'E1lyok az iConsolidationMethod interf\'E9szb\'F5l sz\'E1rmaztathat\'F3ak. \par
+}}
+\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+DataFlow n\'E9vt\'E9r-referencia\par \pard\plain 
+{\tc\tcl2 \v DataFlow}
+{\xe \v DataFlow}
+{\bkmkstart AAAAAAAABT}
+{\bkmkend AAAAAAAABT}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Oszt\'E1lyok\par
+\pard\plain 
+
+{
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+class {\b Applicator}\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+class {\b Consolidator}\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+class {\b iBuffer}\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+class {\b iConsolidationMethod}\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+class {\b iSource}\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+R\'E9szletes le\'EDr\'E1s\par
+\pard\plain 
+{
+\pard\plain \s17\sa60\sb30\widctlpar\qj \fs22\cgrid {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Az adat foly\'E1s\'E1val \'E9s transzform\'E1l\'E1s\'E1val kapcsolatos oszt\'E1lyokat tartalmaz. A lehet\'F5 leggernerikusabban megval\'F3s\'EDtva. \par
+}}
+\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+Mixer n\'E9vt\'E9r-referencia\par \pard\plain 
+{\tc\tcl2 \v Mixer}
+{\xe \v Mixer}
+{\bkmkstart AAAAAAAACI}
+{\bkmkend AAAAAAAACI}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Oszt\'E1lyok\par
+\pard\plain 
+
+{
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+class {\b AudioSource}\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+class {\b iAudioBackend}\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+class {\b iPlayer}\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+class {\b PortAudioBackend}\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+class {\b SimplePlayer}\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+class {\b SineGenerator}\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+R\'E9szletes le\'EDr\'E1s\par
+\pard\plain 
+{
+\pard\plain \s17\sa60\sb30\widctlpar\qj \fs22\cgrid {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Hangfolyamok k\'E9sz\'EDt\'E9s\'E9re, kever\'E9s\'E9re \'E9s lej\'E1tsz\'E1s\'E1ra specializ\'E1lt oszt\'E1lyok n\'E9vtere.\par
+{{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
+Tennival\'F3:\par}\pard\plain \s61\li360\widctlpar\ql\adjustright \fs20\cgrid TODO: at start and stop make a rapid approach to 0 to avoid popping \par
+}
+}}
+\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+template_utils n\'E9vt\'E9r-referencia\par \pard\plain 
+{\tc\tcl2 \v template_utils}
+{\xe \v template_utils}
+{\bkmkstart AAAAAAAADF}
+{\bkmkend AAAAAAAADF}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Oszt\'E1lyok\par
+\pard\plain 
+
+{
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+struct {\b extract_inner_base}\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+struct {\b extract_inner_base< C< T > >}\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+T\'EDpusdefin\'EDci\'F3k\par
+\pard\plain 
+
+{
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+template<typename T > using {\b extract_inner} = typename {\b extract_inner_base}< T >::type\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+R\'E9szletes le\'EDr\'E1s\par
+\pard\plain 
+{
+\pard\plain \s17\sa60\sb30\widctlpar\qj \fs22\cgrid {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Sablon metaprogramoz\'E1shoz haszn\'E1lt eszk\'F6z\'F6ket tartalmaz\'F3 n\'E9vt\'E9r. \par
+}}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+T\'EDpusdefin\'EDci\'F3k dokument\'E1ci\'F3ja\par
+\pard\plain 
+{\xe \v extract_inner\:template_utils}
+{\xe \v template_utils\:extract_inner}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+template<typename T > using {\b template_utils::extract_inner} = typedef typename {\b extract_inner_base}<T>::type}}
+\par
+{\bkmkstart AAAAAAAADG}
+{\bkmkend AAAAAAAADG}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+This will extract the template parameter of template parameter T For example, if you have A with <typename t>=""> and B with <typename k>="">, and make an A<B<float>>, then in A extract_inner<T> will evaluate to K or float in this case. \par
+}}
+
+\pard\plain \sect\sbkpage
+\s1\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs36\kerning36\cgrid 
+Oszt\'E1lyok dokument\'E1ci\'F3ja{\tc \v Oszt\'E1lyok dokument\'E1ci\'F3ja}
+\par \pard\plain 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+Consolidation::Accumulation< T > oszt\'E1lysablon-referencia\par \pard\plain 
+{\tc\tcl2 \v Consolidation::Accumulation< T >}
+{\xe \v Consolidation::Accumulation< T >}
+{\bkmkstart AAAAAAAABM}
+{\bkmkend AAAAAAAABM}
+\par
+{
+{\f2 #include <ConsolidationMethods.h>}}\par
+A Consolidation::Accumulation< T > oszt\'E1ly sz\'E1rmaz\'E1si diagramja:{
+\pard\plain 
+\par\pard \qc {\field\flddirty {\*\fldinst INCLUDEPICTURE "classConsolidation_1_1Accumulation__inherit__graph.svg" \\d \\*MERGEFORMAT}{\fldrslt IMAGE}}\par
+}
+\par
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+R\'E9szletes le\'EDr\'E1s\par
+\pard\plain 
+{
+\pard\plain \s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+{
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
+template<typename T>\par
+class Consolidation::Accumulation< T >\par
+}
+
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Az eredm\'E9nyben minden elem az elemmel azonos pozici\'F3n l\'E9v\'F5 elemek \'F6sszege.\par
+P\'E9ld\'E1ul: [1,2][1,2][2,2] -> [4,6] \par
+}}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Publikus tagf\'FCggv\'E9nyek\par
+\pard\plain 
+
+{
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+bool {\b init} (const std::vector< T > &initial)\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+bool {\b add} (const std::vector< T > &vector)\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+std::vector< T > {\b get} ()\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Tagf\'FCggv\'E9nyek dokument\'E1ci\'F3ja\par
+\pard\plain 
+{\xe \v add\:Consolidation::Accumulation}
+{\xe \v Consolidation::Accumulation\:add}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+template<typename T > bool {\b Consolidation::Accumulation}< T >::add (const std::vector< T > &  {\i vector}){\f2 [virtual]}}}
+\par
+{\bkmkstart AAAAAAAABN}
+{\bkmkend AAAAAAAABN}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Vektor hozz\'E1ad\'E1sa a konszolid\'E1ci\'F3hoz. {\par
+{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
+Param\'E9terek:\par}
+\pard\plain \s61\li360\widctlpar\ql\adjustright \fs20\cgrid \trowd \trgaph108\trleft426\tblind426\trbrdrt\brdrs\brdrw10\brdrcf15 \trbrdrl\brdrs\brdrw10\brdrcf15 \trbrdrb\brdrs\brdrw10\brdrcf15 \trbrdrr\brdrs\brdrw10\brdrcf15 \trbrdrh\brdrs\brdrw10\brdrcf15 \trbrdrv\brdrs\brdrw10\brdrcf15 
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx2187
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx8748
+\pard \widctlpar\intbl\adjustright
+{{\i vector} \cell }{a hozz\'E1adand\'F3 vektor \cell }
+{\row }
+}
+{{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
+Visszat\'E9r\'E9si \'E9rt\'E9k:\par}\pard\plain \s62\li720\widctlpar\ql\adjustright \fs20\cgrid sikeres volt-e a hozz\'E1ad\'E1s \par
+}}{
+Megval\'F3s\'EDtja a k\'F6vetkez\'F5ket: {\b DataFlow::iConsolidationMethod< T >} ({\i o.{\field\fldedit {\*\fldinst PAGEREF AAAAAAAABO \\*MERGEFORMAT}{\fldrslt pagenum}}}).}\par
+}
+{\xe \v get\:Consolidation::Accumulation}
+{\xe \v Consolidation::Accumulation\:get}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+template<typename T > std::vector< T > {\b Consolidation::Accumulation}< T >::get (){\f2 [virtual]}}}
+\par
+{\bkmkstart AAAAAAAABP}
+{\bkmkend AAAAAAAABP}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Az eredm\'E9ny lek\'E9r\'E9se. Egyszer haszn\'E1lhat\'F3.\par
+{{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
+Visszat\'E9r\'E9si \'E9rt\'E9k:\par}\pard\plain \s62\li720\widctlpar\ql\adjustright \fs20\cgrid a konszolid\'E1ci\'F3 eredm\'E9nye \par
+}}{
+Megval\'F3s\'EDtja a k\'F6vetkez\'F5ket: {\b DataFlow::iConsolidationMethod< T >} ({\i o.{\field\fldedit {\*\fldinst PAGEREF AAAAAAAABQ \\*MERGEFORMAT}{\fldrslt pagenum}}}).}\par
+}
+{\xe \v init\:Consolidation::Accumulation}
+{\xe \v Consolidation::Accumulation\:init}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+template<typename T > bool {\b Consolidation::Accumulation}< T >::init (const std::vector< T > &  {\i initial}){\f2 [virtual]}}}
+\par
+{\bkmkstart AAAAAAAABR}
+{\bkmkend AAAAAAAABR}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+A konszolid\'E1ci\'F3 kezdeti \'E9rt\'E9k\'E9nek megad\'E1sa. {\par
+{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
+Param\'E9terek:\par}
+\pard\plain \s61\li360\widctlpar\ql\adjustright \fs20\cgrid \trowd \trgaph108\trleft426\tblind426\trbrdrt\brdrs\brdrw10\brdrcf15 \trbrdrl\brdrs\brdrw10\brdrcf15 \trbrdrb\brdrs\brdrw10\brdrcf15 \trbrdrr\brdrs\brdrw10\brdrcf15 \trbrdrh\brdrs\brdrw10\brdrcf15 \trbrdrv\brdrs\brdrw10\brdrcf15 
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx2187
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx8748
+\pard \widctlpar\intbl\adjustright
+{{\i initial} \cell }{a kezdeti \'E9rt\'E9k \cell }
+{\row }
+}
+{{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
+Visszat\'E9r\'E9si \'E9rt\'E9k:\par}\pard\plain \s62\li720\widctlpar\ql\adjustright \fs20\cgrid az inicializ\'E1ci\'F3 sikeres volt-e \par
+}}{
+Megval\'F3s\'EDtja a k\'F6vetkez\'F5ket: {\b DataFlow::iConsolidationMethod< T >} ({\i o.{\field\fldedit {\*\fldinst PAGEREF AAAAAAAABS \\*MERGEFORMAT}{\fldrslt pagenum}}}).}\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+Ez a dokument\'E1ci\'F3 az oszt\'E1lyr\'F3l a k\'F6vetkez\'F5 f\'E1jlok alapj\'E1n k\'E9sz\'FClt:{\par
+\pard\plain \s81\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls2\adjustright \fs20\cgrid 
+/SharedWithWindows/Projects/szakdolgozat/inc/ConsolidationMethods.h\par
+\pard\plain \s81\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls2\adjustright \fs20\cgrid 
+/SharedWithWindows/Projects/szakdolgozat/src/consolidation_methods.cpp\par
+}\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+DataFlow::Applicator< T, K > oszt\'E1lysablon-referencia\par \pard\plain 
+{\tc\tcl2 \v DataFlow::Applicator< T, K >}
+{\xe \v DataFlow::Applicator< T, K >}
+{\bkmkstart AAAAAAAABU}
+{\bkmkend AAAAAAAABU}
+\par
+{
+{\f2 #include <Applicator.h>}}\par
+A DataFlow::Applicator< T, K > oszt\'E1ly sz\'E1rmaz\'E1si diagramja:{
+\pard\plain 
+\par\pard \qc {\field\flddirty {\*\fldinst INCLUDEPICTURE "classDataFlow_1_1Applicator__inherit__graph.svg" \\d \\*MERGEFORMAT}{\fldrslt IMAGE}}\par
+}
+\par
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+R\'E9szletes le\'EDr\'E1s\par
+\pard\plain 
+{
+\pard\plain \s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+{
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
+template<typename T, typename K>\par
+class DataFlow::Applicator< T, K >\par
+}
+
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Ez az oszt\'E1ly a K t\'EDpus\'FA funktorral transzform\'E1lja a hozz\'E1csatolt iSource<T> forr\'E1st\par
+A forr\'E1st meg kell adni az {\b attach()} met\'F3dussal! \par
+}}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Publikus tagf\'FCggv\'E9nyek\par
+\pard\plain 
+
+{
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+std::vector< T > {\b get} (const unsigned int &amount)\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+K & {\b getMethod} ()\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b attach} ({\b DataFlow::iSource}< T > &source)\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Tagf\'FCggv\'E9nyek dokument\'E1ci\'F3ja\par
+\pard\plain 
+{\xe \v attach\:DataFlow::Applicator}
+{\xe \v DataFlow::Applicator\:attach}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+template<typename T , typename K > void {\b DataFlow::Applicator}< T, K >::attach ({\b DataFlow::iSource}< T > &  {\i source}){\f2 [inline]}}}
+\par
+{\bkmkstart AAAAAAAABV}
+{\bkmkend AAAAAAAABV}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+A param\'E9tert az objektum forr\'E1sak\'E9nt hozz\'E1csatolja. {\par
+{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
+Param\'E9terek:\par}
+\pard\plain \s61\li360\widctlpar\ql\adjustright \fs20\cgrid \trowd \trgaph108\trleft426\tblind426\trbrdrt\brdrs\brdrw10\brdrcf15 \trbrdrl\brdrs\brdrw10\brdrcf15 \trbrdrb\brdrs\brdrw10\brdrcf15 \trbrdrr\brdrs\brdrw10\brdrcf15 \trbrdrh\brdrs\brdrw10\brdrcf15 \trbrdrv\brdrs\brdrw10\brdrcf15 
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx2187
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx8748
+\pard \widctlpar\intbl\adjustright
+{{\i source} \cell }{a csatolni k\'EDv\'E1nt iSource<T> \cell }
+{\row }
+}
+}}
+{\xe \v get\:DataFlow::Applicator}
+{\xe \v DataFlow::Applicator\:get}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+template<typename T , typename K > std::vector<T> {\b DataFlow::Applicator}< T, K >::get (const unsigned int &  {\i amount}){\f2 [inline]}, {\f2 [virtual]}}}
+\par
+{\bkmkstart AAAAAAAABW}
+{\bkmkend AAAAAAAABW}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Adatot k\'E9r ett\'F5l a forr\'E1st\'F3l.\par
+{{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
+Param\'E9terek:\par}
+\pard\plain \s61\li360\widctlpar\ql\adjustright \fs20\cgrid \trowd \trgaph108\trleft426\tblind426\trbrdrt\brdrs\brdrw10\brdrcf15 \trbrdrl\brdrs\brdrw10\brdrcf15 \trbrdrb\brdrs\brdrw10\brdrcf15 \trbrdrr\brdrs\brdrw10\brdrcf15 \trbrdrh\brdrs\brdrw10\brdrcf15 \trbrdrv\brdrs\brdrw10\brdrcf15 
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx2187
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx8748
+\pard \widctlpar\intbl\adjustright
+{{\i amount} \cell }{a k\'E9rt adat mennyis\'E9ge \cell }
+{\row }
+}
+{{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
+Visszat\'E9r\'E9si \'E9rt\'E9k:\par}\pard\plain \s62\li720\widctlpar\ql\adjustright \fs20\cgrid egy T t\'EDpus\'FA, {\b amount}  m\'E9ret\'FB vektor, felt\'F6ltve az adattal. \par
+}}{
+Megval\'F3s\'EDtja a k\'F6vetkez\'F5ket: {\b DataFlow::iSource< T >} ({\i o.{\field\fldedit {\*\fldinst PAGEREF AAAAAAAAAJ \\*MERGEFORMAT}{\fldrslt pagenum}}}).}\par
+}
+{\xe \v getMethod\:DataFlow::Applicator}
+{\xe \v DataFlow::Applicator\:getMethod}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+template<typename T , typename K > K& {\b DataFlow::Applicator}< T, K >::getMethod (){\f2 [inline]}}}
+\par
+{\bkmkstart AAAAAAAABX}
+{\bkmkend AAAAAAAABX}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Egy referenci\'E1t ad a haszn\'E1lt m\'F3dszer p\'E9ld\'E1nyhoz.\par
+{{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
+Visszat\'E9r\'E9si \'E9rt\'E9k:\par}\pard\plain \s62\li720\widctlpar\ql\adjustright \fs20\cgrid a referencia \par
+}}}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+Ez a dokument\'E1ci\'F3 az oszt\'E1lyr\'F3l a k\'F6vetkez\'F5 f\'E1jl alapj\'E1n k\'E9sz\'FClt:{\par
+\pard\plain \s81\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls2\adjustright \fs20\cgrid 
+/SharedWithWindows/Projects/szakdolgozat/inc/Applicator.h\par
+}\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+Mixer::AudioSource oszt\'E1lyreferencia\par \pard\plain 
+{\tc\tcl2 \v Mixer::AudioSource}
+{\xe \v Mixer::AudioSource}
+{\bkmkstart AAAAAAAACJ}
+{\bkmkend AAAAAAAACJ}
+\par
+{
+{\f2 #include <AudioSource.h>}}\par
+A Mixer::AudioSource oszt\'E1ly sz\'E1rmaz\'E1si diagramja:{
+\pard\plain 
+\par\pard \qc {\field\flddirty {\*\fldinst INCLUDEPICTURE "classMixer_1_1AudioSource__inherit__graph.svg" \\d \\*MERGEFORMAT}{\fldrslt IMAGE}}\par
+}
+\par
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+R\'E9szletes le\'EDr\'E1s\par
+\pard\plain 
+{
+\pard\plain \s17\sa60\sb30\widctlpar\qj \fs22\cgrid {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Audi\'F3 adatot szolg\'E1ltat\'F3 forr\'E1sokat megjel\'F6l\'F5 absztrakt oszt\'E1ly.\par
+A szolg\'E1ltatott audi\'F3 adat le\'EDr\'E1s\'E1hoz sz\'FCks\'E9ges tulajdons\'E1gokat tartalmazza. \par
+}}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Publikus tagf\'FCggv\'E9nyek\par
+\pard\plain 
+
+{
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+unsigned int {\b getChannels} ()\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+unsigned int {\b getSampleRate} ()\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Tagf\'FCggv\'E9nyek dokument\'E1ci\'F3ja\par
+\pard\plain 
+{\xe \v getChannels\:Mixer::AudioSource}
+{\xe \v Mixer::AudioSource\:getChannels}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+unsigned int Mixer::AudioSource::getChannels (){\f2 [inline]}}}
+\par
+{\bkmkstart AAAAAAAACK}
+{\bkmkend AAAAAAAACK}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+A csatorn\'E1k sz\'E1m\'E1t adja vissza.\par
+{{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
+Visszat\'E9r\'E9si \'E9rt\'E9k:\par}\pard\plain \s62\li720\widctlpar\ql\adjustright \fs20\cgrid a csatorn\'E1k sz\'E1ma \par
+}}}
+{\xe \v getSampleRate\:Mixer::AudioSource}
+{\xe \v Mixer::AudioSource\:getSampleRate}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+unsigned int Mixer::AudioSource::getSampleRate (){\f2 [inline]}}}
+\par
+{\bkmkstart AAAAAAAACL}
+{\bkmkend AAAAAAAACL}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+A mintav\'E9telez\'E9s s\'FBr\'FBs\'E9g\'E9t adja vissza.\par
+{{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
+Visszat\'E9r\'E9si \'E9rt\'E9k:\par}\pard\plain \s62\li720\widctlpar\ql\adjustright \fs20\cgrid a mintav\'E9telez\'E9s s\'FBr\'FBs\'E9ge \par
+}}}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+Ez a dokument\'E1ci\'F3 az oszt\'E1lyr\'F3l a k\'F6vetkez\'F5 f\'E1jl alapj\'E1n k\'E9sz\'FClt:{\par
+\pard\plain \s81\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls2\adjustright \fs20\cgrid 
+/SharedWithWindows/Projects/szakdolgozat/inc/AudioSource.h\par
+}\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+DataFlow::Consolidator< T, K > oszt\'E1lysablon-referencia\par \pard\plain 
+{\tc\tcl2 \v DataFlow::Consolidator< T, K >}
+{\xe \v DataFlow::Consolidator< T, K >}
+{\bkmkstart AAAAAAAABY}
+{\bkmkend AAAAAAAABY}
+\par
+{
+{\f2 #include <Consolidator.h>}}\par
+A DataFlow::Consolidator< T, K > oszt\'E1ly sz\'E1rmaz\'E1si diagramja:{
+\pard\plain 
+\par\pard \qc {\field\flddirty {\*\fldinst INCLUDEPICTURE "classDataFlow_1_1Consolidator__inherit__graph.svg" \\d \\*MERGEFORMAT}{\fldrslt IMAGE}}\par
+}
+\par
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+R\'E9szletes le\'EDr\'E1s\par
+\pard\plain 
+{
+\pard\plain \s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+{
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
+template<typename T, template< typename > typename K>\par
+class DataFlow::Consolidator< T, K >\par
+}
+
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+T\'F6bb forr\'E1st egy forr\'E1ss\'E1 alak\'EDt.\par
+A konszolid\'E1ci\'F3 a K sablon param\'E9ter szerint t\'F6rt\'E9nik. A konszolid\'E1tor \'E9s a konszolid\'E1ci\'F3 t\'EDpus\'E1nak meg kell egyeznie a sablonban. Implement\'E1lt konszolid\'E1ci\'F3s mo\'F3dszerekhez l\'E1sd a {\b Consolidation} n\'E9vteret. \par
+}}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Publikus tagf\'FCggv\'E9nyek\par
+\pard\plain 
+
+{
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b attach} ({\b DataFlow::iSource}< T > &source)\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+bool {\b detach} ({\b DataFlow::iSource}< T > &source)\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+K< T > & {\b getMethod} ()\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+std::vector< T > {\b get} (const unsigned int &amount)\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Tagf\'FCggv\'E9nyek dokument\'E1ci\'F3ja\par
+\pard\plain 
+{\xe \v attach\:DataFlow::Consolidator}
+{\xe \v DataFlow::Consolidator\:attach}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+template<typename T , template< typename > typename K> void {\b DataFlow::Consolidator}< T, K >::attach ({\b DataFlow::iSource}< T > &  {\i source}){\f2 [inline]}}}
+\par
+{\bkmkstart AAAAAAAABZ}
+{\bkmkend AAAAAAAABZ}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+A param\'E9tert az objektum forr\'E1saihoz hozz\'E1csatolja. {\par
+{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
+Param\'E9terek:\par}
+\pard\plain \s61\li360\widctlpar\ql\adjustright \fs20\cgrid \trowd \trgaph108\trleft426\tblind426\trbrdrt\brdrs\brdrw10\brdrcf15 \trbrdrl\brdrs\brdrw10\brdrcf15 \trbrdrb\brdrs\brdrw10\brdrcf15 \trbrdrr\brdrs\brdrw10\brdrcf15 \trbrdrh\brdrs\brdrw10\brdrcf15 \trbrdrv\brdrs\brdrw10\brdrcf15 
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx2187
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx8748
+\pard \widctlpar\intbl\adjustright
+{{\i source} \cell }{a csatolni k\'EDv\'E1nt iSource<T> \cell }
+{\row }
+}
+}}
+{\xe \v detach\:DataFlow::Consolidator}
+{\xe \v DataFlow::Consolidator\:detach}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+template<typename T , template< typename > typename K> bool {\b DataFlow::Consolidator}< T, K >::detach ({\b DataFlow::iSource}< T > &  {\i source}){\f2 [inline]}}}
+\par
+{\bkmkstart AAAAAAAACA}
+{\bkmkend AAAAAAAACA}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+A param\'E9tert az objektum forr\'E1saib\'F3l kiveszi. {\par
+{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
+Param\'E9terek:\par}
+\pard\plain \s61\li360\widctlpar\ql\adjustright \fs20\cgrid \trowd \trgaph108\trleft426\tblind426\trbrdrt\brdrs\brdrw10\brdrcf15 \trbrdrl\brdrs\brdrw10\brdrcf15 \trbrdrb\brdrs\brdrw10\brdrcf15 \trbrdrr\brdrs\brdrw10\brdrcf15 \trbrdrh\brdrs\brdrw10\brdrcf15 \trbrdrv\brdrs\brdrw10\brdrcf15 
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx2187
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx8748
+\pard \widctlpar\intbl\adjustright
+{{\i source} \cell }{a kivenni k\'EDv\'E1nt iSource<T> \cell }
+{\row }
+}
+}}
+{\xe \v get\:DataFlow::Consolidator}
+{\xe \v DataFlow::Consolidator\:get}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+template<typename T , template< typename > typename K> std::vector<T> {\b DataFlow::Consolidator}< T, K >::get (const unsigned int &  {\i amount}){\f2 [inline]}, {\f2 [virtual]}}}
+\par
+{\bkmkstart AAAAAAAACB}
+{\bkmkend AAAAAAAACB}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Adatot k\'E9r ett\'F5l a forr\'E1st\'F3l.\par
+{{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
+Param\'E9terek:\par}
+\pard\plain \s61\li360\widctlpar\ql\adjustright \fs20\cgrid \trowd \trgaph108\trleft426\tblind426\trbrdrt\brdrs\brdrw10\brdrcf15 \trbrdrl\brdrs\brdrw10\brdrcf15 \trbrdrb\brdrs\brdrw10\brdrcf15 \trbrdrr\brdrs\brdrw10\brdrcf15 \trbrdrh\brdrs\brdrw10\brdrcf15 \trbrdrv\brdrs\brdrw10\brdrcf15 
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx2187
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx8748
+\pard \widctlpar\intbl\adjustright
+{{\i amount} \cell }{a k\'E9rt adat mennyis\'E9ge \cell }
+{\row }
+}
+{{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
+Visszat\'E9r\'E9si \'E9rt\'E9k:\par}\pard\plain \s62\li720\widctlpar\ql\adjustright \fs20\cgrid egy T t\'EDpus\'FA, {\b amount}  m\'E9ret\'FB vektor, felt\'F6ltve az adattal. \par
+}}{
+Megval\'F3s\'EDtja a k\'F6vetkez\'F5ket: {\b DataFlow::iSource< T >} ({\i o.{\field\fldedit {\*\fldinst PAGEREF AAAAAAAAAJ \\*MERGEFORMAT}{\fldrslt pagenum}}}).}\par
+}
+{\xe \v getMethod\:DataFlow::Consolidator}
+{\xe \v DataFlow::Consolidator\:getMethod}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+template<typename T , template< typename > typename K> K<T>& {\b DataFlow::Consolidator}< T, K >::getMethod (){\f2 [inline]}}}
+\par
+{\bkmkstart AAAAAAAACC}
+{\bkmkend AAAAAAAACC}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+\par
+{{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
+Visszat\'E9r\'E9si \'E9rt\'E9k:\par}\pard\plain \s62\li720\widctlpar\ql\adjustright \fs20\cgrid a referencia \par
+}}}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+Ez a dokument\'E1ci\'F3 az oszt\'E1lyr\'F3l a k\'F6vetkez\'F5 f\'E1jl alapj\'E1n k\'E9sz\'FClt:{\par
+\pard\plain \s81\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls2\adjustright \fs20\cgrid 
+/SharedWithWindows/Projects/szakdolgozat/inc/Consolidator.h\par
+}\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+template_utils::extract_inner_base< T > strukt\'FArasablon-referencia\par \pard\plain 
+{\tc\tcl2 \v template_utils::extract_inner_base< T >}
+{\xe \v template_utils::extract_inner_base< T >}
+{\bkmkstart AAAAAAAADH}
+{\bkmkend AAAAAAAADH}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+Ez a dokument\'E1ci\'F3 a strukt\'FAr\'E1r\'F3l a k\'F6vetkez\'F5 f\'E1jl alapj\'E1n k\'E9sz\'FClt:{\par
+\pard\plain \s81\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls2\adjustright \fs20\cgrid 
+/SharedWithWindows/Projects/szakdolgozat/inc/Utils.h\par
+}\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+template_utils::extract_inner_base< C< T > > strukt\'FArasablon-referencia\par \pard\plain 
+{\tc\tcl2 \v template_utils::extract_inner_base< C< T > >}
+{\xe \v template_utils::extract_inner_base< C< T > >}
+{\bkmkstart AAAAAAAADI}
+{\bkmkend AAAAAAAADI}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+Ez a dokument\'E1ci\'F3 a strukt\'FAr\'E1r\'F3l a k\'F6vetkez\'F5 f\'E1jl alapj\'E1n k\'E9sz\'FClt:{\par
+\pard\plain \s81\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls2\adjustright \fs20\cgrid 
+/SharedWithWindows/Projects/szakdolgozat/inc/Utils.h\par
+}\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+Clipping::Hard oszt\'E1lyreferencia\par \pard\plain 
+{\tc\tcl2 \v Clipping::Hard}
+{\xe \v Clipping::Hard}
+{\bkmkstart AAAAAAAABJ}
+{\bkmkend AAAAAAAABJ}
+\par
+{
+{\f2 #include <Clipping.h>}}\par
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+R\'E9szletes le\'EDr\'E1s\par
+\pard\plain 
+{
+\pard\plain \s17\sa60\sb30\widctlpar\qj \fs22\cgrid {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Durva ny\'EDr\'E1s. A hat\'E1r\'E9rt\'E9keken t\'FAli \'E9rt\'E9kek a hat\'E1r\'E9rt\'E9ket veszik fel. \par
+}}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+Ez a dokument\'E1ci\'F3 az oszt\'E1lyr\'F3l a k\'F6vetkez\'F5 f\'E1jl alapj\'E1n k\'E9sz\'FClt:{\par
+\pard\plain \s81\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls2\adjustright \fs20\cgrid 
+/SharedWithWindows/Projects/szakdolgozat/inc/Clipping.h\par
+}\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+Mixer::iAudioBackend< T > oszt\'E1lysablon-referencia\par \pard\plain 
+{\tc\tcl2 \v Mixer::iAudioBackend< T >}
+{\xe \v Mixer::iAudioBackend< T >}
+{\bkmkstart AAAAAAAACM}
+{\bkmkend AAAAAAAACM}
+\par
+{
+{\f2 #include <iAudioBackend.h>}}\par
+A Mixer::iAudioBackend< T > oszt\'E1ly sz\'E1rmaz\'E1si diagramja:{
+\pard\plain 
+\par\pard \qc {\field\flddirty {\*\fldinst INCLUDEPICTURE "classMixer_1_1iAudioBackend__inherit__graph.svg" \\d \\*MERGEFORMAT}{\fldrslt IMAGE}}\par
+}
+\par
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+R\'E9szletes le\'EDr\'E1s\par
+\pard\plain 
+{
+\pard\plain \s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+{
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
+template<typename T>\par
+class Mixer::iAudioBackend< T >\par
+}
+
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+K\'FCl\'F6nb\'F6z\'F5 audi\'F3 backendekhez tartoz\'F3 interf\'E9sz. \par
+}}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Publikus tagf\'FCggv\'E9nyek\par
+\pard\plain 
+
+{
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+virtual bool {\b init} ({\b DataFlow::iSource}< T > &source, const unsigned int &channels, const unsigned int &sampleRate)=0\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Tagf\'FCggv\'E9nyek dokument\'E1ci\'F3ja\par
+\pard\plain 
+{\xe \v init\:Mixer::iAudioBackend}
+{\xe \v Mixer::iAudioBackend\:init}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+template<typename T > virtual bool {\b Mixer::iAudioBackend}< T >::init ({\b DataFlow::iSource}< T > &  {\i source}, const unsigned int &  {\i channels}, const unsigned int &  {\i sampleRate}){\f2 [pure virtual]}}}
+\par
+{\bkmkstart AAAAAAAACN}
+{\bkmkend AAAAAAAACN}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Felk\'E9sz\'EDti a backendet lej\'E1ttsz\'E1sra. Nem ind\'EDtja el a lej\'E1tsz\'E1st. {\par
+{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
+Param\'E9terek:\par}
+\pard\plain \s61\li360\widctlpar\ql\adjustright \fs20\cgrid \trowd \trgaph108\trleft426\tblind426\trbrdrt\brdrs\brdrw10\brdrcf15 \trbrdrl\brdrs\brdrw10\brdrcf15 \trbrdrb\brdrs\brdrw10\brdrcf15 \trbrdrr\brdrs\brdrw10\brdrcf15 \trbrdrh\brdrs\brdrw10\brdrcf15 \trbrdrv\brdrs\brdrw10\brdrcf15 
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx2187
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx8748
+\pard \widctlpar\intbl\adjustright
+{{\i source} \cell }{az audi\'F3 adat forr\'E1sa \cell }
+{\row }
+\trowd \trgaph108\trleft426\tblind426\trbrdrt\brdrs\brdrw10\brdrcf15 \trbrdrl\brdrs\brdrw10\brdrcf15 \trbrdrb\brdrs\brdrw10\brdrcf15 \trbrdrr\brdrs\brdrw10\brdrcf15 \trbrdrh\brdrs\brdrw10\brdrcf15 \trbrdrv\brdrs\brdrw10\brdrcf15 
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx2187
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx8748
+\pard \widctlpar\intbl\adjustright
+{{\i channels} \cell }{az audi\'F3 adat csatorn\'E1inak sz\'E1ma \cell }
+{\row }
+\trowd \trgaph108\trleft426\tblind426\trbrdrt\brdrs\brdrw10\brdrcf15 \trbrdrl\brdrs\brdrw10\brdrcf15 \trbrdrb\brdrs\brdrw10\brdrcf15 \trbrdrr\brdrs\brdrw10\brdrcf15 \trbrdrh\brdrs\brdrw10\brdrcf15 \trbrdrv\brdrs\brdrw10\brdrcf15 
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx2187
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx8748
+\pard \widctlpar\intbl\adjustright
+{{\i sampleRate} \cell }{az audi\'F3 adat mintav\'E9telez\'E9si s\'FBr\'FBs\'E9ge\cell }
+{\row }
+}
+{{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
+Visszat\'E9r\'E9si \'E9rt\'E9k:\par}\pard\plain \s62\li720\widctlpar\ql\adjustright \fs20\cgrid az inicializ\'E1ci\'F3 sikeres volt-e \par
+}}{
+Megval\'F3s\'EDtj\'E1k a k\'F6vetkez\'F5k: {\b Mixer::PortAudioBackend< T >} ({\i o.{\field\fldedit {\*\fldinst PAGEREF AAAAAAAACO \\*MERGEFORMAT}{\fldrslt pagenum}}}).}\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+Ez a dokument\'E1ci\'F3 az oszt\'E1lyr\'F3l a k\'F6vetkez\'F5 f\'E1jl alapj\'E1n k\'E9sz\'FClt:{\par
+\pard\plain \s81\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls2\adjustright \fs20\cgrid 
+/SharedWithWindows/Projects/szakdolgozat/inc/iAudioBackend.h\par
+}\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+DataFlow::iBuffer< T > oszt\'E1lysablon-referencia\par \pard\plain 
+{\tc\tcl2 \v DataFlow::iBuffer< T >}
+{\xe \v DataFlow::iBuffer< T >}
+{\bkmkstart AAAAAAAACD}
+{\bkmkend AAAAAAAACD}
+A DataFlow::iBuffer< T > oszt\'E1ly sz\'E1rmaz\'E1si diagramja:{
+\pard\plain 
+\par\pard \qc {\field\flddirty {\*\fldinst INCLUDEPICTURE "classDataFlow_1_1iBuffer__inherit__graph.svg" \\d \\*MERGEFORMAT}{\fldrslt IMAGE}}\par
+}
+\par
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Additional Inherited Members\par
+\pard\plain 
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+Ez a dokument\'E1ci\'F3 az oszt\'E1lyr\'F3l a k\'F6vetkez\'F5 f\'E1jl alapj\'E1n k\'E9sz\'FClt:{\par
+\pard\plain \s81\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls2\adjustright \fs20\cgrid 
+/SharedWithWindows/Projects/szakdolgozat/inc/iBuffer.h\par
+}\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+DataFlow::iConsolidationMethod< T > oszt\'E1lysablon-referencia\par \pard\plain 
+{\tc\tcl2 \v DataFlow::iConsolidationMethod< T >}
+{\xe \v DataFlow::iConsolidationMethod< T >}
+{\bkmkstart AAAAAAAACE}
+{\bkmkend AAAAAAAACE}
+\par
+{
+{\f2 #include <iConsolidationMethod.h>}}\par
+A DataFlow::iConsolidationMethod< T > oszt\'E1ly sz\'E1rmaz\'E1si diagramja:{
+\pard\plain 
+\par\pard \qc {\field\flddirty {\*\fldinst INCLUDEPICTURE "classDataFlow_1_1iConsolidationMethod__inherit__graph.svg" \\d \\*MERGEFORMAT}{\fldrslt IMAGE}}\par
+}
+\par
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+R\'E9szletes le\'EDr\'E1s\par
+\pard\plain 
+{
+\pard\plain \s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+{
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
+template<typename T>\par
+class DataFlow::iConsolidationMethod< T >\par
+}
+
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+A konszolid\'E1ci\'F3s m\'F3dszerek interf\'E9sze.\par
+Konszolid\'E1ci\'F3s m\'F3dszerek implement\'E1l\'E1s\'E1hoz l\'E1sd a {\b Consolidation} n\'E9vteret. \par
+}}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Publikus tagf\'FCggv\'E9nyek\par
+\pard\plain 
+
+{
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+virtual bool {\b init} (const std::vector< T > &initial)=0\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+virtual bool {\b add} (const std::vector< T > &vector)=0\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+virtual std::vector< T > {\b get} ()=0\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Tagf\'FCggv\'E9nyek dokument\'E1ci\'F3ja\par
+\pard\plain 
+{\xe \v add\:DataFlow::iConsolidationMethod}
+{\xe \v DataFlow::iConsolidationMethod\:add}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+template<typename T > virtual bool {\b DataFlow::iConsolidationMethod}< T >::add (const std::vector< T > &  {\i vector}){\f2 [pure virtual]}}}
+\par
+{\bkmkstart AAAAAAAABO}
+{\bkmkend AAAAAAAABO}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Vektor hozz\'E1ad\'E1sa a konszolid\'E1ci\'F3hoz. {\par
+{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
+Param\'E9terek:\par}
+\pard\plain \s61\li360\widctlpar\ql\adjustright \fs20\cgrid \trowd \trgaph108\trleft426\tblind426\trbrdrt\brdrs\brdrw10\brdrcf15 \trbrdrl\brdrs\brdrw10\brdrcf15 \trbrdrb\brdrs\brdrw10\brdrcf15 \trbrdrr\brdrs\brdrw10\brdrcf15 \trbrdrh\brdrs\brdrw10\brdrcf15 \trbrdrv\brdrs\brdrw10\brdrcf15 
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx2187
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx8748
+\pard \widctlpar\intbl\adjustright
+{{\i vector} \cell }{a hozz\'E1adand\'F3 vektor \cell }
+{\row }
+}
+{{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
+Visszat\'E9r\'E9si \'E9rt\'E9k:\par}\pard\plain \s62\li720\widctlpar\ql\adjustright \fs20\cgrid sikeres volt-e a hozz\'E1ad\'E1s \par
+}}{
+Megval\'F3s\'EDtj\'E1k a k\'F6vetkez\'F5k: {\b Consolidation::Accumulation< T >} ({\i o.{\field\fldedit {\*\fldinst PAGEREF AAAAAAAABN \\*MERGEFORMAT}{\fldrslt pagenum}}}).}\par
+}
+{\xe \v get\:DataFlow::iConsolidationMethod}
+{\xe \v DataFlow::iConsolidationMethod\:get}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+template<typename T > virtual std::vector<T> {\b DataFlow::iConsolidationMethod}< T >::get (){\f2 [pure virtual]}}}
+\par
+{\bkmkstart AAAAAAAABQ}
+{\bkmkend AAAAAAAABQ}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Az eredm\'E9ny lek\'E9r\'E9se. Egyszer haszn\'E1lhat\'F3.\par
+{{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
+Visszat\'E9r\'E9si \'E9rt\'E9k:\par}\pard\plain \s62\li720\widctlpar\ql\adjustright \fs20\cgrid a konszolid\'E1ci\'F3 eredm\'E9nye \par
+}}{
+Megval\'F3s\'EDtj\'E1k a k\'F6vetkez\'F5k: {\b Consolidation::Accumulation< T >} ({\i o.{\field\fldedit {\*\fldinst PAGEREF AAAAAAAABP \\*MERGEFORMAT}{\fldrslt pagenum}}}).}\par
+}
+{\xe \v init\:DataFlow::iConsolidationMethod}
+{\xe \v DataFlow::iConsolidationMethod\:init}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+template<typename T > virtual bool {\b DataFlow::iConsolidationMethod}< T >::init (const std::vector< T > &  {\i initial}){\f2 [pure virtual]}}}
+\par
+{\bkmkstart AAAAAAAABS}
+{\bkmkend AAAAAAAABS}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+A konszolid\'E1ci\'F3 kezdeti \'E9rt\'E9k\'E9nek megad\'E1sa. {\par
+{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
+Param\'E9terek:\par}
+\pard\plain \s61\li360\widctlpar\ql\adjustright \fs20\cgrid \trowd \trgaph108\trleft426\tblind426\trbrdrt\brdrs\brdrw10\brdrcf15 \trbrdrl\brdrs\brdrw10\brdrcf15 \trbrdrb\brdrs\brdrw10\brdrcf15 \trbrdrr\brdrs\brdrw10\brdrcf15 \trbrdrh\brdrs\brdrw10\brdrcf15 \trbrdrv\brdrs\brdrw10\brdrcf15 
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx2187
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx8748
+\pard \widctlpar\intbl\adjustright
+{{\i initial} \cell }{a kezdeti \'E9rt\'E9k \cell }
+{\row }
+}
+{{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
+Visszat\'E9r\'E9si \'E9rt\'E9k:\par}\pard\plain \s62\li720\widctlpar\ql\adjustright \fs20\cgrid az inicializ\'E1ci\'F3 sikeres volt-e \par
+}}{
+Megval\'F3s\'EDtj\'E1k a k\'F6vetkez\'F5k: {\b Consolidation::Accumulation< T >} ({\i o.{\field\fldedit {\*\fldinst PAGEREF AAAAAAAABR \\*MERGEFORMAT}{\fldrslt pagenum}}}).}\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+Ez a dokument\'E1ci\'F3 az oszt\'E1lyr\'F3l a k\'F6vetkez\'F5 f\'E1jl alapj\'E1n k\'E9sz\'FClt:{\par
+\pard\plain \s81\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls2\adjustright \fs20\cgrid 
+/SharedWithWindows/Projects/szakdolgozat/inc/iConsolidationMethod.h\par
+}\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+Mixer::iPlayer oszt\'E1lyreferencia\par \pard\plain 
+{\tc\tcl2 \v Mixer::iPlayer}
+{\xe \v Mixer::iPlayer}
+{\bkmkstart AAAAAAAACP}
+{\bkmkend AAAAAAAACP}
+\par
+{
+{\f2 #include <iPlayer.h>}}\par
+A Mixer::iPlayer oszt\'E1ly sz\'E1rmaz\'E1si diagramja:{
+\pard\plain 
+\par\pard \qc {\field\flddirty {\*\fldinst INCLUDEPICTURE "classMixer_1_1iPlayer__inherit__graph.svg" \\d \\*MERGEFORMAT}{\fldrslt IMAGE}}\par
+}
+\par
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+R\'E9szletes le\'EDr\'E1s\par
+\pard\plain 
+{
+\pard\plain \s17\sa60\sb30\widctlpar\qj \fs22\cgrid {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Alapvet\'F5 zenelej\'E1tsz\'F3 funkcionalit\'E1st le\'EDr\'F3 interf\'E9sz. \par
+}}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Publikus tagf\'FCggv\'E9nyek\par
+\pard\plain 
+
+{
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+virtual bool {\b pause} ()=0\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+virtual bool {\b stop} ()=0\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+virtual bool {\b play} ()=0\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Tagf\'FCggv\'E9nyek dokument\'E1ci\'F3ja\par
+\pard\plain 
+{\xe \v pause\:Mixer::iPlayer}
+{\xe \v Mixer::iPlayer\:pause}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+virtual bool Mixer::iPlayer::pause (){\f2 [pure virtual]}}}
+\par
+{\bkmkstart AAAAAAAACQ}
+{\bkmkend AAAAAAAACQ}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Lej\'E1tsz\'E1s sz\'FCneteltet\'E9se. Idempotens. \par
+{{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
+Visszat\'E9r\'E9si \'E9rt\'E9k:\par}\pard\plain \s62\li720\widctlpar\ql\adjustright \fs20\cgrid igaz siker, hamis hiba eset\'E9n \par
+}}{
+Megval\'F3s\'EDtj\'E1k a k\'F6vetkez\'F5k: {\b Mixer::SimplePlayer< T, K >} ({\i o.{\field\fldedit {\*\fldinst PAGEREF AAAAAAAACR \\*MERGEFORMAT}{\fldrslt pagenum}}}).}\par
+}
+{\xe \v play\:Mixer::iPlayer}
+{\xe \v Mixer::iPlayer\:play}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+virtual bool Mixer::iPlayer::play (){\f2 [pure virtual]}}}
+\par
+{\bkmkstart AAAAAAAACS}
+{\bkmkend AAAAAAAACS}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Elind\'EDtja a lej\'E1tsz\'E1st. Idempotens. \par
+{{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
+Visszat\'E9r\'E9si \'E9rt\'E9k:\par}\pard\plain \s62\li720\widctlpar\ql\adjustright \fs20\cgrid igaz siker, hamis hiba eset\'E9n \par
+}}{
+Megval\'F3s\'EDtj\'E1k a k\'F6vetkez\'F5k: {\b Mixer::SimplePlayer< T, K >} ({\i o.{\field\fldedit {\*\fldinst PAGEREF AAAAAAAACT \\*MERGEFORMAT}{\fldrslt pagenum}}}).}\par
+}
+{\xe \v stop\:Mixer::iPlayer}
+{\xe \v Mixer::iPlayer\:stop}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+virtual bool Mixer::iPlayer::stop (){\f2 [pure virtual]}}}
+\par
+{\bkmkstart AAAAAAAACU}
+{\bkmkend AAAAAAAACU}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Meg\'E1ll\'EDtja a lej\'E1tsz\'E1st, t\'F6r\'F6lve a bels\'F5 \'E1llapotot. \par
+{{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
+Visszat\'E9r\'E9si \'E9rt\'E9k:\par}\pard\plain \s62\li720\widctlpar\ql\adjustright \fs20\cgrid igaz siker, hamis hiba eset\'E9n \par
+}}{
+Megval\'F3s\'EDtj\'E1k a k\'F6vetkez\'F5k: {\b Mixer::SimplePlayer< T, K >} ({\i o.{\field\fldedit {\*\fldinst PAGEREF AAAAAAAACV \\*MERGEFORMAT}{\fldrslt pagenum}}}).}\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+Ez a dokument\'E1ci\'F3 az oszt\'E1lyr\'F3l a k\'F6vetkez\'F5 f\'E1jl alapj\'E1n k\'E9sz\'FClt:{\par
+\pard\plain \s81\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls2\adjustright \fs20\cgrid 
+/SharedWithWindows/Projects/szakdolgozat/inc/iPlayer.h\par
+}\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+DataFlow::iSource< T > oszt\'E1lysablon-referencia\par \pard\plain 
+{\tc\tcl2 \v DataFlow::iSource< T >}
+{\xe \v DataFlow::iSource< T >}
+{\bkmkstart AAAAAAAACF}
+{\bkmkend AAAAAAAACF}
+\par
+{
+{\f2 #include <iSource.h>}}\par
+A DataFlow::iSource< T > oszt\'E1ly sz\'E1rmaz\'E1si diagramja:{
+\pard\plain 
+\par\pard \qc {\field\flddirty {\*\fldinst INCLUDEPICTURE "classDataFlow_1_1iSource__inherit__graph.svg" \\d \\*MERGEFORMAT}{\fldrslt IMAGE}}\par
+}
+\par
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+R\'E9szletes le\'EDr\'E1s\par
+\pard\plain 
+{
+\pard\plain \s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+{
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
+template<typename T>\par
+class DataFlow::iSource< T >\par
+}
+
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Interface egy T t\'EDpus\'FA adatforr\'E1shoz az adatfolyamban. \par
+}}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Publikus tagf\'FCggv\'E9nyek\par
+\pard\plain 
+
+{
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+virtual std::vector< T > {\b get} (const unsigned int &amount)=0\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Tagf\'FCggv\'E9nyek dokument\'E1ci\'F3ja\par
+\pard\plain 
+{\xe \v get\:DataFlow::iSource}
+{\xe \v DataFlow::iSource\:get}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+template<typename T> virtual std::vector<T> {\b DataFlow::iSource}< T >::get (const unsigned int &  {\i amount}){\f2 [pure virtual]}}}
+\par
+{\bkmkstart AAAAAAAAAJ}
+{\bkmkend AAAAAAAAAJ}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Adatot k\'E9r ett\'F5l a forr\'E1st\'F3l.\par
+{{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
+Param\'E9terek:\par}
+\pard\plain \s61\li360\widctlpar\ql\adjustright \fs20\cgrid \trowd \trgaph108\trleft426\tblind426\trbrdrt\brdrs\brdrw10\brdrcf15 \trbrdrl\brdrs\brdrw10\brdrcf15 \trbrdrb\brdrs\brdrw10\brdrcf15 \trbrdrr\brdrs\brdrw10\brdrcf15 \trbrdrh\brdrs\brdrw10\brdrcf15 \trbrdrv\brdrs\brdrw10\brdrcf15 
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx2187
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx8748
+\pard \widctlpar\intbl\adjustright
+{{\i amount} \cell }{a k\'E9rt adat mennyis\'E9ge \cell }
+{\row }
+}
+{{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
+Visszat\'E9r\'E9si \'E9rt\'E9k:\par}\pard\plain \s62\li720\widctlpar\ql\adjustright \fs20\cgrid egy T t\'EDpus\'FA, {\b amount}  m\'E9ret\'FB vektor, felt\'F6ltve az adattal. \par
+}}{
+Megval\'F3s\'EDtj\'E1k a k\'F6vetkez\'F5k: {\b OggFileLoader< T, K >} ({\i o.{\field\fldedit {\*\fldinst PAGEREF AAAAAAAAAI \\*MERGEFORMAT}{\fldrslt pagenum}}}), {\b DataFlow::Consolidator< T, K >} ({\i o.{\field\fldedit {\*\fldinst PAGEREF AAAAAAAACB \\*MERGEFORMAT}{\fldrslt pagenum}}}), {\b QueueBuffer< T >} ({\i o.{\field\fldedit {\*\fldinst PAGEREF AAAAAAAAAU \\*MERGEFORMAT}{\fldrslt pagenum}}}), {\b Mixer::SineGenerator< T >} ({\i o.{\field\fldedit {\*\fldinst PAGEREF AAAAAAAACG \\*MERGEFORMAT}{\fldrslt pagenum}}}), {\b Mixer::SimplePlayer< T, K >} ({\i o.{\field\fldedit {\*\fldinst PAGEREF AAAAAAAACH \\*MERGEFORMAT}{\fldrslt pagenum}}}) \'E9s {\b DataFlow::Applicator< T, K >} ({\i o.{\field\fldedit {\*\fldinst PAGEREF AAAAAAAABW \\*MERGEFORMAT}{\fldrslt pagenum}}}).}\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+Ez a dokument\'E1ci\'F3 az oszt\'E1lyr\'F3l a k\'F6vetkez\'F5 f\'E1jl alapj\'E1n k\'E9sz\'FClt:{\par
+\pard\plain \s81\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls2\adjustright \fs20\cgrid 
+/SharedWithWindows/Projects/szakdolgozat/inc/iSource.h\par
+}\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+OggFileLoader< T, K > oszt\'E1lysablon-referencia\par \pard\plain 
+{\tc\tcl2 \v OggFileLoader< T, K >}
+{\xe \v OggFileLoader< T, K >}
+{\bkmkstart AAAAAAAAAF}
+{\bkmkend AAAAAAAAAF}
+\par
+{
+{\f2 #include <OggFileLoader.h>}}\par
+Az OggFileLoader< T, K > oszt\'E1ly sz\'E1rmaz\'E1si diagramja:{
+\pard\plain 
+\par\pard \qc {\field\flddirty {\*\fldinst INCLUDEPICTURE "classOggFileLoader__inherit__graph.svg" \\d \\*MERGEFORMAT}{\fldrslt IMAGE}}\par
+}
+\par
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+R\'E9szletes le\'EDr\'E1s\par
+\pard\plain 
+{
+\pard\plain \s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+{
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
+template<typename T, typename K>\par
+class OggFileLoader< T, K >\par
+}
+
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+OGG k\'F3dolt f\'E1jlok olvas\'E1s\'E1ra haszn\'E1lhat\'F3 oszt\'E1ly. A K sablon param\'E9ter a dek\'F3dol\'E1sra haszn\'E1land\'F3 oszt\'E1ly\par
+{
+\par
+\pard\plain \s40\li0\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid         Haszn\'E1lat:  1) f\'E1jl megnyit\'E1sa - open()            \par
+                    2) inicializ\'E1l\'E1s - init()\par
+                    3) a p\'E9ld\'E1ny k\'E9szen \'E1ll az olvas\'E1sra - get()}
+ \par
+}}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Publikus tagf\'FCggv\'E9nyek\par
+\pard\plain 
+
+{
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+bool {\b open} (const std::string &_filename)\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+int {\b init} ()\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+bool {\b close} ()\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b clear} ()\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+std::vector< T > {\b get} (const unsigned int &amount)\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+const K & {\b getDecoder} ()\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Priv\'E1t tagf\'FCggv\'E9nyek\par
+\pard\plain 
+
+{
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+int {\b initStream} (ogg_page &page)\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+int {\b read} ()\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+int {\b readNextPage} ()\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+int {\b nextPage} ()\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+int {\b nextPacket} ()\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Tagf\'FCggv\'E9nyek dokument\'E1ci\'F3ja\par
+\pard\plain 
+{\xe \v clear\:OggFileLoader}
+{\xe \v OggFileLoader\:clear}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+template<typename T , typename K > void {\b OggFileLoader}< T, K >::clear ()}}
+\par
+{\bkmkstart AAAAAAAAAG}
+{\bkmkend AAAAAAAAAG}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+T\'F6rli az ogg olvas\'E1s folyam bels\'F5 \'E1llapot\'E1t. \par
+}}
+{\xe \v close\:OggFileLoader}
+{\xe \v OggFileLoader\:close}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+template<typename T , typename K > bool {\b OggFileLoader}< T, K >::close ()}}
+\par
+{\bkmkstart AAAAAAAAAH}
+{\bkmkend AAAAAAAAAH}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+F\'E1jl \'E9s forr\'E1s lez\'E1r\'E1sa.\par
+{{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
+Visszat\'E9r\'E9si \'E9rt\'E9k:\par}\pard\plain \s62\li720\widctlpar\ql\adjustright \fs20\cgrid sikeres volt-e a f\'E1jl lez\'E1r\'E1sa \par
+}}}
+{\xe \v get\:OggFileLoader}
+{\xe \v OggFileLoader\:get}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+template<typename T , typename K > std::vector< T > {\b OggFileLoader}< T, K >::get (const unsigned int &  {\i amount}){\f2 [virtual]}}}
+\par
+{\bkmkstart AAAAAAAAAI}
+{\bkmkend AAAAAAAAAI}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Adatot k\'E9r ett\'F5l a forr\'E1st\'F3l.\par
+{{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
+Param\'E9terek:\par}
+\pard\plain \s61\li360\widctlpar\ql\adjustright \fs20\cgrid \trowd \trgaph108\trleft426\tblind426\trbrdrt\brdrs\brdrw10\brdrcf15 \trbrdrl\brdrs\brdrw10\brdrcf15 \trbrdrb\brdrs\brdrw10\brdrcf15 \trbrdrr\brdrs\brdrw10\brdrcf15 \trbrdrh\brdrs\brdrw10\brdrcf15 \trbrdrv\brdrs\brdrw10\brdrcf15 
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx2187
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx8748
+\pard \widctlpar\intbl\adjustright
+{{\i amount} \cell }{a k\'E9rt adat mennyis\'E9ge \cell }
+{\row }
+}
+{{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
+Visszat\'E9r\'E9si \'E9rt\'E9k:\par}\pard\plain \s62\li720\widctlpar\ql\adjustright \fs20\cgrid egy T t\'EDpus\'FA, {\b amount}  m\'E9ret\'FB vektor, felt\'F6ltve az adattal. \par
+}}{
+Megval\'F3s\'EDtja a k\'F6vetkez\'F5ket: {\b DataFlow::iSource< T >} ({\i o.{\field\fldedit {\*\fldinst PAGEREF AAAAAAAAAJ \\*MERGEFORMAT}{\fldrslt pagenum}}}).}\par
+}
+{\xe \v getDecoder\:OggFileLoader}
+{\xe \v OggFileLoader\:getDecoder}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+template<typename T , typename K > const K & {\b OggFileLoader}< T, K >::getDecoder ()}}
+\par
+{\bkmkstart AAAAAAAAAK}
+{\bkmkend AAAAAAAAAK}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Az ezen loader p\'E9l\'E1ny \'E1ltal haszn\'E1lt decoder p\'E9ld\'E1ny hozz\'E1f\'E9rhet\'F5 ezzel a met\'F3dussal.\par
+{{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
+Visszat\'E9r\'E9si \'E9rt\'E9k:\par}\pard\plain \s62\li720\widctlpar\ql\adjustright \fs20\cgrid egy konstans referencia a decoder p\'E9ld\'E1nyhoz \par
+}}}
+{\xe \v init\:OggFileLoader}
+{\xe \v OggFileLoader\:init}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+template<typename T, typename K> int {\b OggFileLoader}< T, K >::init ()}}
+\par
+{\bkmkstart AAAAAAAAAL}
+{\bkmkend AAAAAAAAAL}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+A p\'E9ld\'E1ny felk\'E9sz\'EDt\'E9se adatszolg\'E1ltat\'E1sra.\par
+{{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
+Visszat\'E9r\'E9si \'E9rt\'E9k:\par}\pard\plain \s62\li720\widctlpar\ql\adjustright \fs20\cgrid a dek\'F3dert\'F3l kapott hibak\'F3d \par
+}}}
+{\xe \v initStream\:OggFileLoader}
+{\xe \v OggFileLoader\:initStream}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+template<typename T , typename K > int {\b OggFileLoader}< T, K >::initStream (ogg_page &  {\i page}){\f2 [private]}}}
+\par
+{\bkmkstart AAAAAAAAAM}
+{\bkmkend AAAAAAAAAM}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Libogg initializ\'E1l\'E1sa.\par
+{{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
+Visszat\'E9r\'E9si \'E9rt\'E9k:\par}\pard\plain \s62\li720\widctlpar\ql\adjustright \fs20\cgrid hibak\'F3d a libogg-t\'F3l \par
+}}}
+{\xe \v nextPacket\:OggFileLoader}
+{\xe \v OggFileLoader\:nextPacket}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+template<typename T , typename K > int {\b OggFileLoader}< T, K >::nextPacket (){\f2 [private]}}}
+\par
+{\bkmkstart AAAAAAAAAN}
+{\bkmkend AAAAAAAAAN}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+A k\'F6vetkez\'F5 csomagot olvassa ki a libogg-ba rakott oldalb\'F3l.\par
+{{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
+Visszat\'E9r\'E9si \'E9rt\'E9k:\par}\pard\plain \s62\li720\widctlpar\ql\adjustright \fs20\cgrid hibak\'F3d a libogg-t\'F3l \par
+}}}
+{\xe \v nextPage\:OggFileLoader}
+{\xe \v OggFileLoader\:nextPage}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+template<typename T , typename K > int {\b OggFileLoader}< T, K >::nextPage (){\f2 [private]}}}
+\par
+{\bkmkstart AAAAAAAAAO}
+{\bkmkend AAAAAAAAAO}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+A libogg bels\'F5 puffer\'E9be olvassa a currentPage oldalt.\par
+{{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
+Visszat\'E9r\'E9si \'E9rt\'E9k:\par}\pard\plain \s62\li720\widctlpar\ql\adjustright \fs20\cgrid hibak\'F3d a libogg-t\'F3l \par
+}}}
+{\xe \v open\:OggFileLoader}
+{\xe \v OggFileLoader\:open}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+template<typename T , typename K > bool {\b OggFileLoader}< T, K >::open (const std::string &  {\i _filename})}}
+\par
+{\bkmkstart AAAAAAAAAP}
+{\bkmkend AAAAAAAAAP}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+F\'E1jl megnyit\'E1sa.\par
+{{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
+Visszat\'E9r\'E9si \'E9rt\'E9k:\par}\pard\plain \s62\li720\widctlpar\ql\adjustright \fs20\cgrid sikeres volt-e a f\'E1jl megnyit\'E1sa \par
+}}}
+{\xe \v read\:OggFileLoader}
+{\xe \v OggFileLoader\:read}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+template<typename T , typename K > int {\b OggFileLoader}< T, K >::read (){\f2 [private]}}}
+\par
+{\bkmkstart AAAAAAAAAQ}
+{\bkmkend AAAAAAAAAQ}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+A libogg bels\'F5 puffer\'E9be olvas adatot.\par
+{{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
+Visszat\'E9r\'E9si \'E9rt\'E9k:\par}\pard\plain \s62\li720\widctlpar\ql\adjustright \fs20\cgrid hibak\'F3d a libogg-t\'F3l \par
+}}}
+{\xe \v readNextPage\:OggFileLoader}
+{\xe \v OggFileLoader\:readNextPage}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+template<typename T , typename K > int {\b OggFileLoader}< T, K >::readNextPage (){\f2 [private]}}}
+\par
+{\bkmkstart AAAAAAAAAR}
+{\bkmkend AAAAAAAAAR}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+A k\'F6vetkez\'F5 oldalt olvassa be a p\'E9ld\'E1ny currentPage v\'E1ltoz\'F3j\'E1ba.\par
+{{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
+Visszat\'E9r\'E9si \'E9rt\'E9k:\par}\pard\plain \s62\li720\widctlpar\ql\adjustright \fs20\cgrid hibak\'F3d a libogg-t\'F3l \par
+}}}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+Ez a dokument\'E1ci\'F3 az oszt\'E1lyr\'F3l a k\'F6vetkez\'F5 f\'E1jlok alapj\'E1n k\'E9sz\'FClt:{\par
+\pard\plain \s81\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls2\adjustright \fs20\cgrid 
+/SharedWithWindows/Projects/szakdolgozat/inc/OggFileLoader.h\par
+\pard\plain \s81\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls2\adjustright \fs20\cgrid 
+/SharedWithWindows/Projects/szakdolgozat/src/ogg_file_loader.cpp\par
+}\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+Mixer::PortAudioBackend< T > oszt\'E1lysablon-referencia\par \pard\plain 
+{\tc\tcl2 \v Mixer::PortAudioBackend< T >}
+{\xe \v Mixer::PortAudioBackend< T >}
+{\bkmkstart AAAAAAAACW}
+{\bkmkend AAAAAAAACW}
+\par
+{
+{\f2 #include <PortAudioBackend.h>}}\par
+A Mixer::PortAudioBackend< T > oszt\'E1ly sz\'E1rmaz\'E1si diagramja:{
+\pard\plain 
+\par\pard \qc {\field\flddirty {\*\fldinst INCLUDEPICTURE "classMixer_1_1PortAudioBackend__inherit__graph.svg" \\d \\*MERGEFORMAT}{\fldrslt IMAGE}}\par
+}
+\par
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+R\'E9szletes le\'EDr\'E1s\par
+\pard\plain 
+{
+\pard\plain \s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+{
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
+template<typename T>\par
+class Mixer::PortAudioBackend< T >\par
+}
+
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+PortAudio backendet haszn\'E1l\'F3 v\'E9gpont\par
+Ez az oszt\'E1ly egy multiplatformos audi\'F3 backendet, a PortAudio-t haszn\'E1lja egy iSource objektumb\'F3l nyert audi\'F3 adat lej\'E1tsz\'E1s\'E1ra. \par
+Haszn\'E1lat el\'F5tt az {\b init()} f\'FCggv\'E9nnyel egy iSource objektumot csatlakoztatunk hozz\'E1, majd a {\b start()} f\'FCgv\'E9nnyel elkezdhetj\'FCk a lej\'E1tsz\'E1st. A csatolt objektumb\'F3l nyert adat multiplex\'E1ltnak tekintend\'F5. \par
+}}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Publikus tagf\'FCggv\'E9nyek\par
+\pard\plain 
+
+{
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+bool {\b init} ({\b DataFlow::iSource}< T > &source, const unsigned int &channels, const unsigned int &sampleRate)\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+bool {\b start} (){\bkmkstart AAAAAAAACX}
+{\bkmkend AAAAAAAACX}
+\par
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Start playing from the attached source. }{
+}\par
+}}
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+bool {\b stop} (){\bkmkstart AAAAAAAACY}
+{\bkmkend AAAAAAAACY}
+\par
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Stop playing. Idempotent. }{
+}\par
+}}
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+
+bool {\b close} (){\bkmkstart AAAAAAAACZ}
+{\bkmkend AAAAAAAACZ}
+\par
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Close stream. Reopen with {\b init()}. }{
+}\par
+}}
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Tagf\'FCggv\'E9nyek dokument\'E1ci\'F3ja\par
+\pard\plain 
+{\xe \v init\:Mixer::PortAudioBackend}
+{\xe \v Mixer::PortAudioBackend\:init}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+template<typename T > bool {\b Mixer::PortAudioBackend}< T >::init ({\b DataFlow::iSource}< T > &  {\i source}, const unsigned int &  {\i channels}, const unsigned int &  {\i sampleRate}){\f2 [virtual]}}}
+\par
+{\bkmkstart AAAAAAAACO}
+{\bkmkend AAAAAAAACO}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Fel\'E1llitja a backendet a param\'E9terekkel. {\par
+{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
+Param\'E9terek:\par}
+\pard\plain \s61\li360\widctlpar\ql\adjustright \fs20\cgrid \trowd \trgaph108\trleft426\tblind426\trbrdrt\brdrs\brdrw10\brdrcf15 \trbrdrl\brdrs\brdrw10\brdrcf15 \trbrdrb\brdrs\brdrw10\brdrcf15 \trbrdrr\brdrs\brdrw10\brdrcf15 \trbrdrh\brdrs\brdrw10\brdrcf15 \trbrdrv\brdrs\brdrw10\brdrcf15 
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx2187
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx8748
+\pard \widctlpar\intbl\adjustright
+{{\i source} \cell }{a forr\'E1s ahonnan az adatot nyeri \cell }
+{\row }
+\trowd \trgaph108\trleft426\tblind426\trbrdrt\brdrs\brdrw10\brdrcf15 \trbrdrl\brdrs\brdrw10\brdrcf15 \trbrdrb\brdrs\brdrw10\brdrcf15 \trbrdrr\brdrs\brdrw10\brdrcf15 \trbrdrh\brdrs\brdrw10\brdrcf15 \trbrdrv\brdrs\brdrw10\brdrcf15 
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx2187
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx8748
+\pard \widctlpar\intbl\adjustright
+{{\i channels} \cell }{a csatorn\'E1k sz\'E1ma \cell }
+{\row }
+\trowd \trgaph108\trleft426\tblind426\trbrdrt\brdrs\brdrw10\brdrcf15 \trbrdrl\brdrs\brdrw10\brdrcf15 \trbrdrb\brdrs\brdrw10\brdrcf15 \trbrdrr\brdrs\brdrw10\brdrcf15 \trbrdrh\brdrs\brdrw10\brdrcf15 \trbrdrv\brdrs\brdrw10\brdrcf15 
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx2187
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx8748
+\pard \widctlpar\intbl\adjustright
+{{\i sampleRate} \cell }{a mintav\'E9telez\'E9si s\'FBr\'FBs\'E9g \cell }
+{\row }
+}
+}{
+Megval\'F3s\'EDtja a k\'F6vetkez\'F5ket: {\b Mixer::iAudioBackend< T >} ({\i o.{\field\fldedit {\*\fldinst PAGEREF AAAAAAAACN \\*MERGEFORMAT}{\fldrslt pagenum}}}).}\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+Ez a dokument\'E1ci\'F3 az oszt\'E1lyr\'F3l a k\'F6vetkez\'F5 f\'E1jlok alapj\'E1n k\'E9sz\'FClt:{\par
+\pard\plain \s81\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls2\adjustright \fs20\cgrid 
+/SharedWithWindows/Projects/szakdolgozat/inc/PortAudioBackend.h\par
+\pard\plain \s81\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls2\adjustright \fs20\cgrid 
+/SharedWithWindows/Projects/szakdolgozat/src/portaudio_backend.cpp\par
+}\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+QueueBuffer< T > oszt\'E1lysablon-referencia\par \pard\plain 
+{\tc\tcl2 \v QueueBuffer< T >}
+{\xe \v QueueBuffer< T >}
+{\bkmkstart AAAAAAAAAS}
+{\bkmkend AAAAAAAAAS}
+\par
+{
+{\f2 #include <QueueBuffer.h>}}\par
+A QueueBuffer< T > oszt\'E1ly sz\'E1rmaz\'E1si diagramja:{
+\pard\plain 
+\par\pard \qc {\field\flddirty {\*\fldinst INCLUDEPICTURE "classQueueBuffer__inherit__graph.svg" \\d \\*MERGEFORMAT}{\fldrslt IMAGE}}\par
+}
+\par
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+R\'E9szletes le\'EDr\'E1s\par
+\pard\plain 
+{
+\pard\plain \s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+{
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
+template<typename T>\par
+class QueueBuffer< T >\par
+}
+
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+\par
+{{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
+Tennival\'F3:\par}\pard\plain \s61\li360\widctlpar\ql\adjustright \fs20\cgrid TODO: document after sorting buffers out \par
+}
+}}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Publikus tagf\'FCggv\'E9nyek\par
+\pard\plain 
+
+{
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b QueueBuffer} (unsigned int cap)\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+std::vector< T > {\b get} (const unsigned int &amount)\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Konstruktorok \'E9s destruktorok dokument\'E1ci\'F3ja\par
+\pard\plain 
+{\xe \v QueueBuffer\:QueueBuffer}
+{\xe \v QueueBuffer\:QueueBuffer}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+template<typename T > {\b QueueBuffer}< T >::{\b QueueBuffer} (unsigned int  {\i _capacity})}}
+\par
+{\bkmkstart AAAAAAAAAT}
+{\bkmkend AAAAAAAAAT}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+\par
+{{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
+Tennival\'F3:\par}\pard\plain \s62\li720\widctlpar\ql\adjustright \fs20\cgrid TODO: clean this up, jesus \par
+TODO: finish the implementation of queue buffer \par
+}
+}}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Tagf\'FCggv\'E9nyek dokument\'E1ci\'F3ja\par
+\pard\plain 
+{\xe \v get\:QueueBuffer}
+{\xe \v QueueBuffer\:get}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+template<typename T > std::vector< T > {\b QueueBuffer}< T >::get (const unsigned int &  {\i amount}){\f2 [virtual]}}}
+\par
+{\bkmkstart AAAAAAAAAU}
+{\bkmkend AAAAAAAAAU}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Adatot k\'E9r ett\'F5l a forr\'E1st\'F3l.\par
+{{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
+Param\'E9terek:\par}
+\pard\plain \s61\li360\widctlpar\ql\adjustright \fs20\cgrid \trowd \trgaph108\trleft426\tblind426\trbrdrt\brdrs\brdrw10\brdrcf15 \trbrdrl\brdrs\brdrw10\brdrcf15 \trbrdrb\brdrs\brdrw10\brdrcf15 \trbrdrr\brdrs\brdrw10\brdrcf15 \trbrdrh\brdrs\brdrw10\brdrcf15 \trbrdrv\brdrs\brdrw10\brdrcf15 
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx2187
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx8748
+\pard \widctlpar\intbl\adjustright
+{{\i amount} \cell }{a k\'E9rt adat mennyis\'E9ge \cell }
+{\row }
+}
+{{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
+Visszat\'E9r\'E9si \'E9rt\'E9k:\par}\pard\plain \s62\li720\widctlpar\ql\adjustright \fs20\cgrid egy T t\'EDpus\'FA, {\b amount}  m\'E9ret\'FB vektor, felt\'F6ltve az adattal. \par
+}}{
+Megval\'F3s\'EDtja a k\'F6vetkez\'F5ket: {\b DataFlow::iSource< T >} ({\i o.{\field\fldedit {\*\fldinst PAGEREF AAAAAAAAAJ \\*MERGEFORMAT}{\fldrslt pagenum}}}).}\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+Ez a dokument\'E1ci\'F3 az oszt\'E1lyr\'F3l a k\'F6vetkez\'F5 f\'E1jlok alapj\'E1n k\'E9sz\'FClt:{\par
+\pard\plain \s81\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls2\adjustright \fs20\cgrid 
+/SharedWithWindows/Projects/szakdolgozat/inc/QueueBuffer.h\par
+\pard\plain \s81\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls2\adjustright \fs20\cgrid 
+/SharedWithWindows/Projects/szakdolgozat/src/queue_buffer.cpp\par
+}\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+Mixer::SimplePlayer< T, K > oszt\'E1lysablon-referencia\par \pard\plain 
+{\tc\tcl2 \v Mixer::SimplePlayer< T, K >}
+{\xe \v Mixer::SimplePlayer< T, K >}
+{\bkmkstart AAAAAAAADA}
+{\bkmkend AAAAAAAADA}
+\par
+{
+{\f2 #include <SimplePlayer.h>}}\par
+A Mixer::SimplePlayer< T, K > oszt\'E1ly sz\'E1rmaz\'E1si diagramja:{
+\pard\plain 
+\par\pard \qc {\field\flddirty {\*\fldinst INCLUDEPICTURE "classMixer_1_1SimplePlayer__inherit__graph.svg" \\d \\*MERGEFORMAT}{\fldrslt IMAGE}}\par
+}
+\par
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+R\'E9szletes le\'EDr\'E1s\par
+\pard\plain 
+{
+\pard\plain \s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+{
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
+template<typename T, template< typename > typename K>\par
+class Mixer::SimplePlayer< T, K >\par
+}
+
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Egy egyszer\'FB {\b iPlayer} implement\'E1ci\'F3. \par
+}}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Publikus tagf\'FCggv\'E9nyek\par
+\pard\plain 
+
+{
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+std::vector< T > {\b get} (const unsigned int &amount)\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+bool {\b pause} ()\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+bool {\b stop} ()\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+bool {\b play} ()\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b attach} ({\b DataFlow::iSource}< T > &source)\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b SimplePlayer} (const unsigned int &channels, const unsigned int &sampleRate)\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Konstruktorok \'E9s destruktorok dokument\'E1ci\'F3ja\par
+\pard\plain 
+{\xe \v SimplePlayer\:Mixer::SimplePlayer}
+{\xe \v Mixer::SimplePlayer\:SimplePlayer}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+template<typename T , template< typename > typename K> {\b Mixer::SimplePlayer}< T, K >::{\b SimplePlayer} (const unsigned int &  {\i channels}, const unsigned int &  {\i sampleRate}){\f2 [inline]}}}
+\par
+{\bkmkstart AAAAAAAADB}
+{\bkmkend AAAAAAAADB}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Konstuktor. Az {\b AudioSource} param\'E9tereit k\'E9ri.\par
+{{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
+Param\'E9terek:\par}
+\pard\plain \s61\li360\widctlpar\ql\adjustright \fs20\cgrid \trowd \trgaph108\trleft426\tblind426\trbrdrt\brdrs\brdrw10\brdrcf15 \trbrdrl\brdrs\brdrw10\brdrcf15 \trbrdrb\brdrs\brdrw10\brdrcf15 \trbrdrr\brdrs\brdrw10\brdrcf15 \trbrdrh\brdrs\brdrw10\brdrcf15 \trbrdrv\brdrs\brdrw10\brdrcf15 
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx2187
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx8748
+\pard \widctlpar\intbl\adjustright
+{{\i channels} \cell }{csatorn\'E1k sz\'E1ma \cell }
+{\row }
+\trowd \trgaph108\trleft426\tblind426\trbrdrt\brdrs\brdrw10\brdrcf15 \trbrdrl\brdrs\brdrw10\brdrcf15 \trbrdrb\brdrs\brdrw10\brdrcf15 \trbrdrr\brdrs\brdrw10\brdrcf15 \trbrdrh\brdrs\brdrw10\brdrcf15 \trbrdrv\brdrs\brdrw10\brdrcf15 
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx2187
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx8748
+\pard \widctlpar\intbl\adjustright
+{{\i sampleRate} \cell }{mintav\'E9telez\'E9si s\'FBr\'FBs\'E9g \cell }
+{\row }
+}
+}}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Tagf\'FCggv\'E9nyek dokument\'E1ci\'F3ja\par
+\pard\plain 
+{\xe \v attach\:Mixer::SimplePlayer}
+{\xe \v Mixer::SimplePlayer\:attach}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+template<typename T , template< typename > typename K> void {\b Mixer::SimplePlayer}< T, K >::attach ({\b DataFlow::iSource}< T > &  {\i source}){\f2 [inline]}}}
+\par
+{\bkmkstart AAAAAAAADC}
+{\bkmkend AAAAAAAADC}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+A param\'E9tert az objektum forr\'E1sak\'E9nt hozz\'E1csatolja. {\par
+{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
+Param\'E9terek:\par}
+\pard\plain \s61\li360\widctlpar\ql\adjustright \fs20\cgrid \trowd \trgaph108\trleft426\tblind426\trbrdrt\brdrs\brdrw10\brdrcf15 \trbrdrl\brdrs\brdrw10\brdrcf15 \trbrdrb\brdrs\brdrw10\brdrcf15 \trbrdrr\brdrs\brdrw10\brdrcf15 \trbrdrh\brdrs\brdrw10\brdrcf15 \trbrdrv\brdrs\brdrw10\brdrcf15 
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx2187
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx8748
+\pard \widctlpar\intbl\adjustright
+{{\i source} \cell }{a csatolni k\'EDv\'E1nt iSource<T> \cell }
+{\row }
+}
+}}
+{\xe \v get\:Mixer::SimplePlayer}
+{\xe \v Mixer::SimplePlayer\:get}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+template<typename T , template< typename > typename K> std::vector<T> {\b Mixer::SimplePlayer}< T, K >::get (const unsigned int &  {\i amount}){\f2 [inline]}, {\f2 [virtual]}}}
+\par
+{\bkmkstart AAAAAAAACH}
+{\bkmkend AAAAAAAACH}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Adatot k\'E9r ett\'F5l a forr\'E1st\'F3l.\par
+{{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
+Param\'E9terek:\par}
+\pard\plain \s61\li360\widctlpar\ql\adjustright \fs20\cgrid \trowd \trgaph108\trleft426\tblind426\trbrdrt\brdrs\brdrw10\brdrcf15 \trbrdrl\brdrs\brdrw10\brdrcf15 \trbrdrb\brdrs\brdrw10\brdrcf15 \trbrdrr\brdrs\brdrw10\brdrcf15 \trbrdrh\brdrs\brdrw10\brdrcf15 \trbrdrv\brdrs\brdrw10\brdrcf15 
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx2187
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx8748
+\pard \widctlpar\intbl\adjustright
+{{\i amount} \cell }{a k\'E9rt adat mennyis\'E9ge \cell }
+{\row }
+}
+{{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
+Visszat\'E9r\'E9si \'E9rt\'E9k:\par}\pard\plain \s62\li720\widctlpar\ql\adjustright \fs20\cgrid egy T t\'EDpus\'FA, {\b amount}  m\'E9ret\'FB vektor, felt\'F6ltve az adattal. \par
+}}{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+\par
+{{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
+Tennival\'F3:\par}\pard\plain \s62\li720\widctlpar\ql\adjustright \fs20\cgrid TODO: pause function \par
+}
+}{
+Megval\'F3s\'EDtja a k\'F6vetkez\'F5ket: {\b DataFlow::iSource< T >} ({\i o.{\field\fldedit {\*\fldinst PAGEREF AAAAAAAAAJ \\*MERGEFORMAT}{\fldrslt pagenum}}}).}\par
+}
+{\xe \v pause\:Mixer::SimplePlayer}
+{\xe \v Mixer::SimplePlayer\:pause}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+template<typename T , template< typename > typename K> bool {\b Mixer::SimplePlayer}< T, K >::pause (){\f2 [inline]}, {\f2 [virtual]}}}
+\par
+{\bkmkstart AAAAAAAACR}
+{\bkmkend AAAAAAAACR}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Lej\'E1tsz\'E1s sz\'FCneteltet\'E9se. Idempotens. \par
+{{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
+Visszat\'E9r\'E9si \'E9rt\'E9k:\par}\pard\plain \s62\li720\widctlpar\ql\adjustright \fs20\cgrid igaz siker, hamis hiba eset\'E9n \par
+}}{
+Megval\'F3s\'EDtja a k\'F6vetkez\'F5ket: {\b Mixer::iPlayer} ({\i o.{\field\fldedit {\*\fldinst PAGEREF AAAAAAAACQ \\*MERGEFORMAT}{\fldrslt pagenum}}}).}\par
+}
+{\xe \v play\:Mixer::SimplePlayer}
+{\xe \v Mixer::SimplePlayer\:play}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+template<typename T , template< typename > typename K> bool {\b Mixer::SimplePlayer}< T, K >::play (){\f2 [inline]}, {\f2 [virtual]}}}
+\par
+{\bkmkstart AAAAAAAACT}
+{\bkmkend AAAAAAAACT}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Elind\'EDtja a lej\'E1tsz\'E1st. Idempotens. \par
+{{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
+Visszat\'E9r\'E9si \'E9rt\'E9k:\par}\pard\plain \s62\li720\widctlpar\ql\adjustright \fs20\cgrid igaz siker, hamis hiba eset\'E9n \par
+}}{
+Megval\'F3s\'EDtja a k\'F6vetkez\'F5ket: {\b Mixer::iPlayer} ({\i o.{\field\fldedit {\*\fldinst PAGEREF AAAAAAAACS \\*MERGEFORMAT}{\fldrslt pagenum}}}).}\par
+}
+{\xe \v stop\:Mixer::SimplePlayer}
+{\xe \v Mixer::SimplePlayer\:stop}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+template<typename T , template< typename > typename K> bool {\b Mixer::SimplePlayer}< T, K >::stop (){\f2 [inline]}, {\f2 [virtual]}}}
+\par
+{\bkmkstart AAAAAAAACV}
+{\bkmkend AAAAAAAACV}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Meg\'E1ll\'EDtja a lej\'E1tsz\'E1st, t\'F6r\'F6lve a bels\'F5 \'E1llapotot. \par
+{{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
+Visszat\'E9r\'E9si \'E9rt\'E9k:\par}\pard\plain \s62\li720\widctlpar\ql\adjustright \fs20\cgrid igaz siker, hamis hiba eset\'E9n \par
+}}{
+Megval\'F3s\'EDtja a k\'F6vetkez\'F5ket: {\b Mixer::iPlayer} ({\i o.{\field\fldedit {\*\fldinst PAGEREF AAAAAAAACU \\*MERGEFORMAT}{\fldrslt pagenum}}}).}\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+Ez a dokument\'E1ci\'F3 az oszt\'E1lyr\'F3l a k\'F6vetkez\'F5 f\'E1jl alapj\'E1n k\'E9sz\'FClt:{\par
+\pard\plain \s81\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls2\adjustright \fs20\cgrid 
+/SharedWithWindows/Projects/szakdolgozat/inc/SimplePlayer.h\par
+}\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+Mixer::SineGenerator< T > oszt\'E1lysablon-referencia\par \pard\plain 
+{\tc\tcl2 \v Mixer::SineGenerator< T >}
+{\xe \v Mixer::SineGenerator< T >}
+{\bkmkstart AAAAAAAADD}
+{\bkmkend AAAAAAAADD}
+\par
+{
+{\f2 #include <SineGenerator.h>}}\par
+A Mixer::SineGenerator< T > oszt\'E1ly sz\'E1rmaz\'E1si diagramja:{
+\pard\plain 
+\par\pard \qc {\field\flddirty {\*\fldinst INCLUDEPICTURE "classMixer_1_1SineGenerator__inherit__graph.svg" \\d \\*MERGEFORMAT}{\fldrslt IMAGE}}\par
+}
+\par
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+R\'E9szletes le\'EDr\'E1s\par
+\pard\plain 
+{
+\pard\plain \s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+{
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
+template<typename T>\par
+class Mixer::SineGenerator< T >\par
+}
+
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Egy megadott frekvenci\'E1j\'FA szinusz hull\'E1mot szolg\'E1ltat\'F3 forr\'E1s. \par
+}}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Publikus tagf\'FCggv\'E9nyek\par
+\pard\plain 
+
+{
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+std::vector< T > {\b get} (const unsigned int &amount)\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b SineGenerator} (const float &frequency, const unsigned int &channels, const unsigned int &sampleRate)\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Konstruktorok \'E9s destruktorok dokument\'E1ci\'F3ja\par
+\pard\plain 
+{\xe \v SineGenerator\:Mixer::SineGenerator}
+{\xe \v Mixer::SineGenerator\:SineGenerator}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+template<typename T > {\b Mixer::SineGenerator}< T >::{\b SineGenerator} (const float &  {\i frequency}, const unsigned int &  {\i channels}, const unsigned int &  {\i sampleRate})}}
+\par
+{\bkmkstart AAAAAAAADE}
+{\bkmkend AAAAAAAADE}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Konstruktor. Be\'E1ll\'EDtja a kezdeti frekvenci\'E1t \'E9s az {\b AudioSource} param\'E9tereit. {\par
+{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
+Param\'E9terek:\par}
+\pard\plain \s61\li360\widctlpar\ql\adjustright \fs20\cgrid \trowd \trgaph108\trleft426\tblind426\trbrdrt\brdrs\brdrw10\brdrcf15 \trbrdrl\brdrs\brdrw10\brdrcf15 \trbrdrb\brdrs\brdrw10\brdrcf15 \trbrdrr\brdrs\brdrw10\brdrcf15 \trbrdrh\brdrs\brdrw10\brdrcf15 \trbrdrv\brdrs\brdrw10\brdrcf15 
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx2187
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx8748
+\pard \widctlpar\intbl\adjustright
+{{\i frequency} \cell }{a kezdeti frekvencia \cell }
+{\row }
+\trowd \trgaph108\trleft426\tblind426\trbrdrt\brdrs\brdrw10\brdrcf15 \trbrdrl\brdrs\brdrw10\brdrcf15 \trbrdrb\brdrs\brdrw10\brdrcf15 \trbrdrr\brdrs\brdrw10\brdrcf15 \trbrdrh\brdrs\brdrw10\brdrcf15 \trbrdrv\brdrs\brdrw10\brdrcf15 
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx2187
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx8748
+\pard \widctlpar\intbl\adjustright
+{{\i channels} \cell }{a csatorn\'E1k sz\'E1ma \cell }
+{\row }
+\trowd \trgaph108\trleft426\tblind426\trbrdrt\brdrs\brdrw10\brdrcf15 \trbrdrl\brdrs\brdrw10\brdrcf15 \trbrdrb\brdrs\brdrw10\brdrcf15 \trbrdrr\brdrs\brdrw10\brdrcf15 \trbrdrh\brdrs\brdrw10\brdrcf15 \trbrdrv\brdrs\brdrw10\brdrcf15 
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx2187
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx8748
+\pard \widctlpar\intbl\adjustright
+{{\i sampleRate} \cell }{a intav\'E9telez\'E9s s\'FBr\'FBs\'E9ge \cell }
+{\row }
+}
+}}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Tagf\'FCggv\'E9nyek dokument\'E1ci\'F3ja\par
+\pard\plain 
+{\xe \v get\:Mixer::SineGenerator}
+{\xe \v Mixer::SineGenerator\:get}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+template<typename T > std::vector< T > {\b Mixer::SineGenerator}< T >::get (const unsigned int &  {\i amount}){\f2 [virtual]}}}
+\par
+{\bkmkstart AAAAAAAACG}
+{\bkmkend AAAAAAAACG}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Adatot k\'E9r ett\'F5l a forr\'E1st\'F3l.\par
+{{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
+Param\'E9terek:\par}
+\pard\plain \s61\li360\widctlpar\ql\adjustright \fs20\cgrid \trowd \trgaph108\trleft426\tblind426\trbrdrt\brdrs\brdrw10\brdrcf15 \trbrdrl\brdrs\brdrw10\brdrcf15 \trbrdrb\brdrs\brdrw10\brdrcf15 \trbrdrr\brdrs\brdrw10\brdrcf15 \trbrdrh\brdrs\brdrw10\brdrcf15 \trbrdrv\brdrs\brdrw10\brdrcf15 
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx2187
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx8748
+\pard \widctlpar\intbl\adjustright
+{{\i amount} \cell }{a k\'E9rt adat mennyis\'E9ge \cell }
+{\row }
+}
+{{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
+Visszat\'E9r\'E9si \'E9rt\'E9k:\par}\pard\plain \s62\li720\widctlpar\ql\adjustright \fs20\cgrid egy T t\'EDpus\'FA, {\b amount}  m\'E9ret\'FB vektor, felt\'F6ltve az adattal. \par
+}}{
+Megval\'F3s\'EDtja a k\'F6vetkez\'F5ket: {\b DataFlow::iSource< T >} ({\i o.{\field\fldedit {\*\fldinst PAGEREF AAAAAAAAAJ \\*MERGEFORMAT}{\fldrslt pagenum}}}).}\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+Ez a dokument\'E1ci\'F3 az oszt\'E1lyr\'F3l a k\'F6vetkez\'F5 f\'E1jlok alapj\'E1n k\'E9sz\'FClt:{\par
+\pard\plain \s81\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls2\adjustright \fs20\cgrid 
+/SharedWithWindows/Projects/szakdolgozat/inc/SineGenerator.h\par
+\pard\plain \s81\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls2\adjustright \fs20\cgrid 
+/SharedWithWindows/Projects/szakdolgozat/src/sine_generator.cpp\par
+}\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+Clipping::Soft oszt\'E1lyreferencia\par \pard\plain 
+{\tc\tcl2 \v Clipping::Soft}
+{\xe \v Clipping::Soft}
+{\bkmkstart AAAAAAAABK}
+{\bkmkend AAAAAAAABK}
+\par
+{
+{\f2 #include <Clipping.h>}}\par
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+R\'E9szletes le\'EDr\'E1s\par
+\pard\plain 
+{
+\pard\plain \s17\sa60\sb30\widctlpar\qj \fs22\cgrid {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Finom ny\'EDr\'E1s. A hat\'E1r\'E9rt\'E9kek 80%-\'E1t meghalad\'F3 \'E9rt\'E9keket \'FAgy cs\'F6kkenti hogy soha ne \'E9rj\'E9k el a hat\'E1r\'E9rt\'E9keket. Hiperb\'F3likus tangens f\'FCggv\'E9nyhez hasonl\'F3. \par
+}}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+Ez a dokument\'E1ci\'F3 az oszt\'E1lyr\'F3l a k\'F6vetkez\'F5 f\'E1jl alapj\'E1n k\'E9sz\'FClt:{\par
+\pard\plain \s81\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls2\adjustright \fs20\cgrid 
+/SharedWithWindows/Projects/szakdolgozat/inc/Clipping.h\par
+}\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+VolumeControl< T > oszt\'E1lysablon-referencia\par \pard\plain 
+{\tc\tcl2 \v VolumeControl< T >}
+{\xe \v VolumeControl< T >}
+{\bkmkstart AAAAAAAAAV}
+{\bkmkend AAAAAAAAAV}
+\par
+{
+{\f2 #include <VolumeControl.h>}}\par
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+R\'E9szletes le\'EDr\'E1s\par
+\pard\plain 
+{
+\pard\plain \s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+{
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
+template<typename T>\par
+class VolumeControl< T >\par
+}
+
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Egy funktor ami hanger\'F5szab\'E1lyz\'F3k\'E9nt viselkedik egy Applicator -ban. \par
+}}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Publikus tagf\'FCggv\'E9nyek\par
+\pard\plain 
+
+{
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+T {\b getVolume} ()\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b setVolume} (const T &volume)\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Tagf\'FCggv\'E9nyek dokument\'E1ci\'F3ja\par
+\pard\plain 
+{\xe \v getVolume\:VolumeControl}
+{\xe \v VolumeControl\:getVolume}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+template<typename T > T {\b VolumeControl}< T >::getVolume (){\f2 [inline]}}}
+\par
+{\bkmkstart AAAAAAAAAW}
+{\bkmkend AAAAAAAAAW}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Visszaadja a jelenlegi hanger\'F5 szorz\'F3t. \par
+{{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
+Visszat\'E9r\'E9si \'E9rt\'E9k:\par}\pard\plain \s62\li720\widctlpar\ql\adjustright \fs20\cgrid a hanger\'F5 szorz\'F3 \par
+}}}
+{\xe \v setVolume\:VolumeControl}
+{\xe \v VolumeControl\:setVolume}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+template<typename T > void {\b VolumeControl}< T >::setVolume (const T &  {\i volume}){\f2 [inline]}}}
+\par
+{\bkmkstart AAAAAAAAAX}
+{\bkmkend AAAAAAAAAX}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Be\'E1ll\'EDtja a hanger\'F5 szorz\'F3t. {\par
+{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
+Param\'E9terek:\par}
+\pard\plain \s61\li360\widctlpar\ql\adjustright \fs20\cgrid \trowd \trgaph108\trleft426\tblind426\trbrdrt\brdrs\brdrw10\brdrcf15 \trbrdrl\brdrs\brdrw10\brdrcf15 \trbrdrb\brdrs\brdrw10\brdrcf15 \trbrdrr\brdrs\brdrw10\brdrcf15 \trbrdrh\brdrs\brdrw10\brdrcf15 \trbrdrv\brdrs\brdrw10\brdrcf15 
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx2187
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx8748
+\pard \widctlpar\intbl\adjustright
+{{\i volume} \cell }{a k\'EDv\'E1nt hanger\'F5 \cell }
+{\row }
+}
+}}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+Ez a dokument\'E1ci\'F3 az oszt\'E1lyr\'F3l a k\'F6vetkez\'F5 f\'E1jl alapj\'E1n k\'E9sz\'FClt:{\par
+\pard\plain \s81\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls2\adjustright \fs20\cgrid 
+/SharedWithWindows/Projects/szakdolgozat/inc/VolumeControl.h\par
+}\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+VorbisDecoder oszt\'E1lyreferencia\par \pard\plain 
+{\tc\tcl2 \v VorbisDecoder}
+{\xe \v VorbisDecoder}
+{\bkmkstart AAAAAAAAAY}
+{\bkmkend AAAAAAAAAY}
+\par
+{
+{\f2 #include <VorbisDecoder.h>}}\par
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+R\'E9szletes le\'EDr\'E1s\par
+\pard\plain 
+{
+\pard\plain \s17\sa60\sb30\widctlpar\qj \fs22\cgrid {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Vorbis k\'F3dol\'E1s\'FA adatot dek\'F3dol\'F3 oszt\'E1ly. \par
+}}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Publikus tagf\'FCggv\'E9nyek\par
+\pard\plain 
+
+{
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+int {\b addToHeader} (ogg_packet &packet)\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+int {\b initDecoding} ()\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+std::vector< std::string > {\b getComments} () const\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+std::string {\b getVendor} () const\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+unsigned int {\b getChannels} () const\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+unsigned int {\b getSampleRate} () const\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+std::vector< float > {\b decode} (ogg_packet &packet)\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b clear} ()\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b VorbisDecoder} ()\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Konstruktorok \'E9s destruktorok dokument\'E1ci\'F3ja\par
+\pard\plain 
+{\xe \v VorbisDecoder\:VorbisDecoder}
+{\xe \v VorbisDecoder\:VorbisDecoder}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+VorbisDecoder::VorbisDecoder ()}}
+\par
+{\bkmkstart AAAAAAAAAZ}
+{\bkmkend AAAAAAAAAZ}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+\par
+{{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
+Tennival\'F3:\par}\pard\plain \s62\li720\widctlpar\ql\adjustright \fs20\cgrid TODO: errors and exceptions \par
+}
+}}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Tagf\'FCggv\'E9nyek dokument\'E1ci\'F3ja\par
+\pard\plain 
+{\xe \v addToHeader\:VorbisDecoder}
+{\xe \v VorbisDecoder\:addToHeader}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+int VorbisDecoder::addToHeader (ogg_packet &  {\i packet})}}
+\par
+{\bkmkstart AAAAAAAABA}
+{\bkmkend AAAAAAAABA}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Az ogg csomag hozz\'E1ad\'E1sa a fejl\'E9chez. {\par
+{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
+Param\'E9terek:\par}
+\pard\plain \s61\li360\widctlpar\ql\adjustright \fs20\cgrid \trowd \trgaph108\trleft426\tblind426\trbrdrt\brdrs\brdrw10\brdrcf15 \trbrdrl\brdrs\brdrw10\brdrcf15 \trbrdrb\brdrs\brdrw10\brdrcf15 \trbrdrr\brdrs\brdrw10\brdrcf15 \trbrdrh\brdrs\brdrw10\brdrcf15 \trbrdrv\brdrs\brdrw10\brdrcf15 
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx2187
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx8748
+\pard \widctlpar\intbl\adjustright
+{{\i packet} \cell }{a hozz\'E1adand\'F3 csomag \cell }
+{\row }
+}
+{{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
+Visszat\'E9r\'E9si \'E9rt\'E9k:\par}\pard\plain \s62\li720\widctlpar\ql\adjustright \fs20\cgrid hibak\'F3d libvorbis-t\'F3l \par
+}}}
+{\xe \v clear\:VorbisDecoder}
+{\xe \v VorbisDecoder\:clear}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void VorbisDecoder::clear ()}}
+\par
+{\bkmkstart AAAAAAAABB}
+{\bkmkend AAAAAAAABB}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Ki\'FCr\'EDri a Vorbis dek\'F3dol\'E1si k\'F6rnyezetet. \par
+}}
+{\xe \v decode\:VorbisDecoder}
+{\xe \v VorbisDecoder\:decode}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+std::vector< float > VorbisDecoder::decode (ogg_packet &  {\i packet})}}
+\par
+{\bkmkstart AAAAAAAABC}
+{\bkmkend AAAAAAAABC}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Egy OGG csomagot multiplex\'E1lt PCM adatra dek\'F3dol. {\par
+{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
+Param\'E9terek:\par}
+\pard\plain \s61\li360\widctlpar\ql\adjustright \fs20\cgrid \trowd \trgaph108\trleft426\tblind426\trbrdrt\brdrs\brdrw10\brdrcf15 \trbrdrl\brdrs\brdrw10\brdrcf15 \trbrdrb\brdrs\brdrw10\brdrcf15 \trbrdrr\brdrs\brdrw10\brdrcf15 \trbrdrh\brdrs\brdrw10\brdrcf15 \trbrdrv\brdrs\brdrw10\brdrcf15 
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx2187
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx8748
+\pard \widctlpar\intbl\adjustright
+{{\i packet} \cell }{a dek\'F3dolni k\'EDv\'E1nt ogg csomag \cell }
+{\row }
+}
+{{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
+Visszat\'E9r\'E9si \'E9rt\'E9k:\par}\pard\plain \s62\li720\widctlpar\ql\adjustright \fs20\cgrid a dek\'F3dolt PCM adat \par
+}}}
+{\xe \v getChannels\:VorbisDecoder}
+{\xe \v VorbisDecoder\:getChannels}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+unsigned int VorbisDecoder::getChannels () const}}
+\par
+{\bkmkstart AAAAAAAABD}
+{\bkmkend AAAAAAAABD}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Megadja a csatorn\'E1k sz\'E1m\'E1t a Vorbis fejl\'E9cb\'F5l. A fejl\'E9cnek teljesnek kell lennie. \par
+{{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
+Visszat\'E9r\'E9si \'E9rt\'E9k:\par}\pard\plain \s62\li720\widctlpar\ql\adjustright \fs20\cgrid a csatorn\'E1k sz\'E1ma \par
+}}}
+{\xe \v getComments\:VorbisDecoder}
+{\xe \v VorbisDecoder\:getComments}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+std::vector< std::string > VorbisDecoder::getComments () const}}
+\par
+{\bkmkstart AAAAAAAABE}
+{\bkmkend AAAAAAAABE}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Megadja a kommenteket a Vorbis fejl\'E9cb\'F5l. A fejl\'E9cnek teljesnek kell lennie. \par
+{{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
+Visszat\'E9r\'E9si \'E9rt\'E9k:\par}\pard\plain \s62\li720\widctlpar\ql\adjustright \fs20\cgrid a kommentek \par
+}}}
+{\xe \v getSampleRate\:VorbisDecoder}
+{\xe \v VorbisDecoder\:getSampleRate}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+unsigned int VorbisDecoder::getSampleRate () const}}
+\par
+{\bkmkstart AAAAAAAABF}
+{\bkmkend AAAAAAAABF}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Megadja a mintav\'E9telez\'E9si s\'FBr\'FBs\'E9get a Vorbis fejl\'E9cb\'F5l. A fejl\'E9cnek teljesnek kell lennie. \par
+{{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
+Visszat\'E9r\'E9si \'E9rt\'E9k:\par}\pard\plain \s62\li720\widctlpar\ql\adjustright \fs20\cgrid a mintav\'E9telez\'E9si s\'FBr\'FBs\'E9g \par
+}}}
+{\xe \v getVendor\:VorbisDecoder}
+{\xe \v VorbisDecoder\:getVendor}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+std::string VorbisDecoder::getVendor () const}}
+\par
+{\bkmkstart AAAAAAAABG}
+{\bkmkend AAAAAAAABG}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Megadja a k\'E9sz\'EDt\'F5 sz\'F6veg\'E9t a Vorbis fejl\'E9cb\'F5l. A fejl\'E9cnek teljesnek kell lennie. \par
+{{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
+Visszat\'E9r\'E9si \'E9rt\'E9k:\par}\pard\plain \s62\li720\widctlpar\ql\adjustright \fs20\cgrid a k\'E9sz\'EDt\'F5 sz\'F6vege \par
+}}}
+{\xe \v initDecoding\:VorbisDecoder}
+{\xe \v VorbisDecoder\:initDecoding}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+int VorbisDecoder::initDecoding ()}}
+\par
+{\bkmkstart AAAAAAAABH}
+{\bkmkend AAAAAAAABH}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+A dek\'F3dol\'E1si k\'F6rnyezet inicializ\'E1l\'E1sa. A fejl\'E9cnek teljesnek kell lennie. \par
+{{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
+Visszat\'E9r\'E9si \'E9rt\'E9k:\par}\pard\plain \s62\li720\widctlpar\ql\adjustright \fs20\cgrid hibak\'F3d libvorbis-t\'F3l \par
+}}}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+Ez a dokument\'E1ci\'F3 az oszt\'E1lyr\'F3l a k\'F6vetkez\'F5 f\'E1jlok alapj\'E1n k\'E9sz\'FClt:{\par
+\pard\plain \s81\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls2\adjustright \fs20\cgrid 
+/SharedWithWindows/Projects/szakdolgozat/inc/VorbisDecoder.h\par
+\pard\plain \s81\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls2\adjustright \fs20\cgrid 
+/SharedWithWindows/Projects/szakdolgozat/src/vorbis_decoder.cpp\par
+}
+\pard\plain \sect\sbkpage
+\s1\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs36\kerning36\cgrid 
+\s1\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs36\kerning36\cgrid T\'E1rgymutat\'F3\par 
+\pard\plain 
+{\tc \v T\'E1rgymutat\'F3}
+{\field\fldedit {\*\fldinst INDEX \\c2 \\*MERGEFORMAT}{\fldrslt INDEX}}
+}

@@ -1,0 +1,209 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Szakdolgozat: DataFlow::Applicator&lt; T, K &gt; osztálysablon-referencia</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Szakdolgozat
+   </div>
+   <div id="projectbrief">A szakdolgozatom ELTE Programtervező Informatikus BSc. szakra.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Készítette Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Keresés');
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Keresés');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespaceDataFlow.html">DataFlow</a></li><li class="navelem"><a class="el" href="classDataFlow_1_1Applicator.html">Applicator</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Publikus tagfüggvények</a> &#124;
+<a href="classDataFlow_1_1Applicator-members.html">A tagok teljes listája</a>  </div>
+  <div class="headertitle">
+<div class="title">DataFlow::Applicator&lt; T, K &gt; osztálysablon-referencia</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="Applicator_8h_source.html">Applicator.h</a>&gt;</code></p>
+<div class="dynheader">
+A DataFlow::Applicator&lt; T, K &gt; osztály származási diagramja:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="classDataFlow_1_1Applicator__inherit__graph.svg" width="174" height="287"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<a name="details" id="details"></a><h2 class="groupheader">Részletes leírás</h2>
+<div class="textblock"><h3>template&lt;typename T, typename K&gt;<br />
+class DataFlow::Applicator&lt; T, K &gt;</h3>
+
+<p>Ez az osztály a K típusú funktorral transzformálja a hozzácsatolt iSource&lt;T&gt; forrást</p>
+<p>A forrást meg kell adni az <a class="el" href="classDataFlow_1_1Applicator.html#a1959c809e0e7726fb9051029e94ba14b">attach()</a> metódussal! </p>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Publikus tagfüggvények</h2></td></tr>
+<tr class="memitem:aaec7b6b55ff780c9e339a9ea41273ab1"><td class="memItemLeft" align="right" valign="top">std::vector&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDataFlow_1_1Applicator.html#aaec7b6b55ff780c9e339a9ea41273ab1">get</a> (const unsigned int &amp;amount)</td></tr>
+<tr class="separator:aaec7b6b55ff780c9e339a9ea41273ab1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a367ddf481f98814e101977e5861338a4"><td class="memItemLeft" align="right" valign="top">K &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDataFlow_1_1Applicator.html#a367ddf481f98814e101977e5861338a4">getMethod</a> ()</td></tr>
+<tr class="separator:a367ddf481f98814e101977e5861338a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1959c809e0e7726fb9051029e94ba14b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDataFlow_1_1Applicator.html#a1959c809e0e7726fb9051029e94ba14b">attach</a> (<a class="el" href="classDataFlow_1_1iSource.html">DataFlow::iSource</a>&lt; T &gt; &amp;source)</td></tr>
+<tr class="separator:a1959c809e0e7726fb9051029e94ba14b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Tagfüggvények dokumentációja</h2>
+<a id="a1959c809e0e7726fb9051029e94ba14b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1959c809e0e7726fb9051029e94ba14b">&#9670;&nbsp;</a></span>attach()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T , typename K &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classDataFlow_1_1Applicator.html">DataFlow::Applicator</a>&lt; T, K &gt;::attach </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classDataFlow_1_1iSource.html">DataFlow::iSource</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>source</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>A paramétert az objektum forrásaként hozzácsatolja. </p><dl class="params"><dt>Paraméterek</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">source</td><td>a csatolni kívánt iSource&lt;T&gt; </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aaec7b6b55ff780c9e339a9ea41273ab1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaec7b6b55ff780c9e339a9ea41273ab1">&#9670;&nbsp;</a></span>get()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T , typename K &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;T&gt; <a class="el" href="classDataFlow_1_1Applicator.html">DataFlow::Applicator</a>&lt; T, K &gt;::get </td>
+          <td>(</td>
+          <td class="paramtype">const unsigned int &amp;&#160;</td>
+          <td class="paramname"><em>amount</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Adatot kér ettől a forrástól.</p>
+<dl class="params"><dt>Paraméterek</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">amount</td><td>a kért adat mennyisége </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Visszatérési érték</dt><dd>egy T típusú, <b>amount</b> méretű vektor, feltöltve az adattal. </dd></dl>
+
+<p>Megvalósítja a következőket: <a class="el" href="classDataFlow_1_1iSource.html#a597d9d155168f1b28e7ddc4dbc17df41">DataFlow::iSource&lt; T &gt;</a>.</p>
+
+</div>
+</div>
+<a id="a367ddf481f98814e101977e5861338a4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a367ddf481f98814e101977e5861338a4">&#9670;&nbsp;</a></span>getMethod()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T , typename K &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">K&amp; <a class="el" href="classDataFlow_1_1Applicator.html">DataFlow::Applicator</a>&lt; T, K &gt;::getMethod </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Egy referenciát ad a használt módszer példányhoz.</p>
+<dl class="section return"><dt>Visszatérési érték</dt><dd>a referencia </dd></dl>
+
+</div>
+</div>
+<hr/>Ez a dokumentáció az osztályról a következő fájl alapján készült:<ul>
+<li>/SharedWithWindows/Projects/szakdolgozat/inc/<a class="el" href="Applicator_8h_source.html">Applicator.h</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Készítette &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>

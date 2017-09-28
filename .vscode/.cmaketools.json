@@ -68,6 +68,22 @@
                 "type": "EXECUTABLE"
               },
               {
+                "buildDirectory": "/SharedWithWindows/Projects/szakdolgozat/build",
+                "fileGroups": [
+                  {
+                    "isGenerated": true,
+                    "sources": [
+                      "build/CMakeFiles/doc",
+                      "build/CMakeFiles/doc.rule"
+                    ]
+                  }
+                ],
+                "fullName": "doc",
+                "name": "doc",
+                "sourceDirectory": "/SharedWithWindows/Projects/szakdolgozat",
+                "type": "UTILITY"
+              },
+              {
                 "artifacts": [
                   "/SharedWithWindows/Projects/szakdolgozat/build/bin/Mixer"
                 ],
@@ -116,29 +132,13 @@
                 "name": "cleanup",
                 "sourceDirectory": "/SharedWithWindows/Projects/szakdolgozat",
                 "type": "UTILITY"
-              },
-              {
-                "buildDirectory": "/SharedWithWindows/Projects/szakdolgozat/build",
-                "fileGroups": [
-                  {
-                    "isGenerated": true,
-                    "sources": [
-                      "build/CMakeFiles/doc",
-                      "build/CMakeFiles/doc.rule"
-                    ]
-                  }
-                ],
-                "fullName": "doc",
-                "name": "doc",
-                "sourceDirectory": "/SharedWithWindows/Projects/szakdolgozat",
-                "type": "UTILITY"
               }
             ]
           }
         ]
       }
     ],
-    "cookie": "0.5843440449864481",
+    "cookie": "0.9511182694505167",
     "inReplyTo": "codemodel",
     "type": "reply"
   }

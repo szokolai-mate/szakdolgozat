@@ -1,0 +1,3 @@
+1) for html use DOT_IMAGE_FORMAT = svg , INTERACTIVE_SVG = YES and DOT_GRAPH_MAX_DEPTH = 5
+2) for printable use DOT_GRAPH_MAX_DEPTH = 1
+3) for rtf use DOT_IMAGE_FORMAT = png

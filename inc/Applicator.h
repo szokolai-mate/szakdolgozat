@@ -24,9 +24,9 @@ class Applicator : public DataFlow::iSource<T>
     }
     
     //! \~english Get a reference to the method instance used.
-    //! \~hungary Egy referenciát ad a használt módszer példányhoz.
-    /*! \return \~english the reference
-               \~hungarian a referencia
+    //! \~hungarian Egy referenciát ad a használt módszer példányhoz.
+    /*! \~english \return the reference
+        \~hungarian \return a referencia
     */
     K & getMethod(){
         return method;
@@ -35,8 +35,8 @@ class Applicator : public DataFlow::iSource<T>
     /*!
         \~english Attach the parameter as this object's source.
         \~hungarian A paramétert az objektum forrásaként hozzácsatolja.
-        \param source \~english the iSource<T> to attach
-                        \~hungarian a csatolni kívánt iSource<T>
+        \~english \param source the iSource<T> to attach
+        \~hungarian \param source a csatolni kívánt iSource<T>
     */
     void attach(DataFlow::iSource<T> &source)
     {

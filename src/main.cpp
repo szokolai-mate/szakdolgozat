@@ -1,18 +1,13 @@
 //\todo TODO(later): equalizer
 
-//KONKLUZIÓ : FIX FRAMES-PRE-BUFFER KELL A KATTOGÁS ELLEN (legalábbis pulseaudiónál)
-
-//??? ha nincs buffer adat adjon 0-t? ezzel ki lehet küszöbölni az under és overflowot
-
-//szerintem azért van az underflow startnál, mert az openstreamköltséges?
-//con:amig nincs kész addig nem is hívna callbacket
-
-//probléma: mintha kihagyna amikor resume-nál underflow van.
+//probléma: pause-nál eldobja a mostani get-et
 
 //TODO: separate h+impl
 
 //TODO: channel + samplerate menjen végig (AudioDescriptor?)
-//TODO: change template in applicator/consolidator to interface/functor pointer: otherwise you cant change them in runtime
+
+//! \todo customize doxygen layout, after that remake latex.
+//! \todo DOC: evaluate XML
 
 /*!
 	\~todo TODO: transitionable<T> - a mutexed(? maybe not cuz time can be indeterminate? just atomic?) generalized that can handle transitioning values

@@ -16,7 +16,8 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++14")
 add_custom_target(doc
 WORKING_DIRECTORY ${PROJECT_SOURCE_DIR}/doc
 COMMAND echo "Generating documentation."
-COMMAND doxygen
+COMMAND doxygen Doxyfile_en
+COMMAND doxygen Doxyfile_hu
 )
 set_target_properties(doc PROPERTIES EXCLUDE_FROM_DEFAULT_BUILD TRUE)
 

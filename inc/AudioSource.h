@@ -17,15 +17,15 @@ class AudioSource
     /*! \~english Get the channel count.
         \~hungarian A csatornák számát adja vissza.
 
-        \return \~english the channel count
-                \~hungarian a csatornák száma
+        \~english \return the channel count
+                \~hungarian \return  a csatornák száma
     */
     unsigned int getChannels() { return channels; }
     /*! \~english Get the sample rate.
         \~hungarian A mintavételezés sűrűségét adja vissza.
 
-        \return \~english the sample rate
-                \~hungarian a mintavételezés sűrűsége
+        \~english \return the sample rate
+                \~hungarian \return a mintavételezés sűrűsége
     */
     unsigned int getSampleRate() { return sampleRate; }
 

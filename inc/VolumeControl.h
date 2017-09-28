@@ -18,8 +18,8 @@ class VolumeControl
   public:
     /*! \~english Get the current volume multiplier.
         \~hungarian Visszaadja a jelenlegi hangerő szorzót.
-        \return \~english the volume multiplier
-                \~hungarian a hangerő szorzó
+        \~english \return the volume multiplier
+                \~hungarian \return a hangerő szorzó
     */
     T getVolume()
     {
@@ -28,8 +28,8 @@ class VolumeControl
 
     /*! \~english Set the volume multiplier.
         \~hungarian Beállítja a hangerő szorzót.
-        \param volume \~english the desired volume
-                        \~hungarian a kívánt hangerő
+        \~english \param volume the desired volume
+                        \~hungarian \param volume a kívánt hangerő
     */
     void setVolume(const T &volume)
     {

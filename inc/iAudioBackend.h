@@ -13,15 +13,15 @@ namespace Mixer{
         /*!
             \~english Initializes the audio backend into a playable state. Should not begin playing.
             \~hungarian Felkészíti a backendet lejáttszásra. Nem indítja el a lejátszást.
-            \param source \~english the source of the audio data
-                            \~hungarian az audió adat forrása
-            \param channels \~english the channel count of the audio data
-                            \~hungarian az audió adat csatornáinak száma
-            \param sampleRate \~english the sample rate of the audio data
-                            \~hungarian az audió adat mintavételezési sűrűsége 
+            \~english \param source the source of the audio data
+                            \~hungarian \param source az audió adat forrása
+           \~english  \param channels the channel count of the audio data
+                            \~hungarian  \param channels az audió adat csatornáinak száma
+            \~english \param sampleRate the sample rate of the audio data
+                            \~hungarian \param sampleRate az audió adat mintavételezési sűrűsége 
             
-            \return \~english wether initialization was successful
-                    \~hungarian az inicializáció sikeres volt-e
+            \~english \return wether initialization was successful
+                    \~hungarian \return az inicializáció sikeres volt-e
         */
         virtual bool init(DataFlow::iSource<T> & source, const unsigned int & channels, const unsigned int & sampleRate) = 0;
         virtual ~iAudioBackend(){};

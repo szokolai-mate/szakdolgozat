@@ -12,22 +12,22 @@ class iPlayer
     /*!
       \~english Pause playback.Idempotent.
       \~hungarian Lejátszás szüneteltetése. Idempotens.
-      \return \~english true on success, false on error
-              \~hungarian igaz siker, hamis hiba esetén
+      \~english \return true on success, false on error
+              \~hungarian \return igaz siker, hamis hiba esetén
     */
     virtual bool pause() = 0;
     /*!
       \~english Stops playback, resetting state.
       \~hungarian Megállítja a lejátszást, törölve a belső állapotot.
-      \return \~english true on success, false on error
-              \~hungarian igaz siker, hamis hiba esetén
+      \~english \return true on success, false on error
+              \~hungarian \return igaz siker, hamis hiba esetén
     */
     virtual bool stop() = 0;
     /*!
       \~english Starts playback. Idempotent.
       \~hungarian Elindítja a lejátszást. Idempotens.
-      \return \~english true on success, false on error
-              \~hungarian igaz siker, hamis hiba esetén
+      \~english \return true on success, false on error
+              \~hungarian \return igaz siker, hamis hiba esetén
     */
     virtual bool play() = 0;
 
