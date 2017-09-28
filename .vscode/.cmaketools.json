@@ -18,6 +18,40 @@
             "sourceDirectory": "/SharedWithWindows/Projects/szakdolgozat",
             "targets": [
               {
+                "artifacts": [
+                  "/SharedWithWindows/Projects/szakdolgozat/build/bin/Mixer"
+                ],
+                "buildDirectory": "/SharedWithWindows/Projects/szakdolgozat/build/src",
+                "fileGroups": [
+                  {
+                    "compileFlags": " -std=c++14 -g  ",
+                    "includePath": [
+                      {
+                        "path": "/SharedWithWindows/Projects/szakdolgozat/inc"
+                      }
+                    ],
+                    "isGenerated": false,
+                    "language": "CXX",
+                    "sources": [
+                      "consolidation_methods.cpp",
+                      "main.cpp",
+                      "ogg_file_loader.cpp",
+                      "portaudio_backend.cpp",
+                      "queue_buffer.cpp",
+                      "sine_generator.cpp",
+                      "vorbis_decoder.cpp"
+                    ]
+                  }
+                ],
+                "fullName": "Mixer",
+                "linkLanguageFlags": "-std=c++14 -g",
+                "linkLibraries": "-Wl,-rpath,/usr/local/lib -lpthread /usr/local/lib/libportaudio.so /usr/lib/x86_64-linux-gnu/libogg.so /usr/lib/x86_64-linux-gnu/libvorbis.so",
+                "linkerLanguage": "CXX",
+                "name": "Mixer",
+                "sourceDirectory": "/SharedWithWindows/Projects/szakdolgozat/src",
+                "type": "EXECUTABLE"
+              },
+              {
                 "buildDirectory": "/SharedWithWindows/Projects/szakdolgozat/build/test",
                 "fileGroups": [
                   {
@@ -61,7 +95,7 @@
                 ],
                 "fullName": "Test",
                 "linkLanguageFlags": "-std=c++14 -g -O0 --coverage -fprofile-arcs -ftest-coverage -g",
-                "linkLibraries": "-lpthread /usr/local/lib/libgtest.a",
+                "linkLibraries": "-Wl,-rpath,/usr/local/lib -lpthread /usr/local/lib/libgtest.a /usr/local/lib/libportaudio.so /usr/lib/x86_64-linux-gnu/libogg.so /usr/lib/x86_64-linux-gnu/libvorbis.so",
                 "linkerLanguage": "CXX",
                 "name": "Test",
                 "sourceDirectory": "/SharedWithWindows/Projects/szakdolgozat/test",
@@ -84,40 +118,6 @@
                 "type": "UTILITY"
               },
               {
-                "artifacts": [
-                  "/SharedWithWindows/Projects/szakdolgozat/build/bin/Mixer"
-                ],
-                "buildDirectory": "/SharedWithWindows/Projects/szakdolgozat/build/src",
-                "fileGroups": [
-                  {
-                    "compileFlags": " -std=c++14 -g  ",
-                    "includePath": [
-                      {
-                        "path": "/SharedWithWindows/Projects/szakdolgozat/inc"
-                      }
-                    ],
-                    "isGenerated": false,
-                    "language": "CXX",
-                    "sources": [
-                      "consolidation_methods.cpp",
-                      "main.cpp",
-                      "ogg_file_loader.cpp",
-                      "portaudio_backend.cpp",
-                      "queue_buffer.cpp",
-                      "sine_generator.cpp",
-                      "vorbis_decoder.cpp"
-                    ]
-                  }
-                ],
-                "fullName": "Mixer",
-                "linkLanguageFlags": "-std=c++14 -g",
-                "linkLibraries": "-Wl,-rpath,/usr/local/lib -lpthread /usr/local/lib/libportaudio.so /usr/lib/x86_64-linux-gnu/libogg.so /usr/lib/x86_64-linux-gnu/libvorbis.so",
-                "linkerLanguage": "CXX",
-                "name": "Mixer",
-                "sourceDirectory": "/SharedWithWindows/Projects/szakdolgozat/src",
-                "type": "EXECUTABLE"
-              },
-              {
                 "buildDirectory": "/SharedWithWindows/Projects/szakdolgozat/build",
                 "fileGroups": [
                   {
@@ -138,7 +138,7 @@
         ]
       }
     ],
-    "cookie": "0.9511182694505167",
+    "cookie": "0.8831401247391275",
     "inReplyTo": "codemodel",
     "type": "reply"
   }

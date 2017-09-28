@@ -1,6 +1,7 @@
 #pragma once
 
 #include <math.h>
+#include <vector>
 
 
 //! \~english Contains classes implementing clipping methods.

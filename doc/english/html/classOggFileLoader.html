@@ -79,9 +79,12 @@ Inheritance diagram for OggFileLoader&lt; T, K &gt;:</div>
 class OggFileLoader&lt; T, K &gt;</h3>
 
 <p>Class for reading OGG encoded files. Template type K is the decoder this instance will use.</p>
-<pre class="fragment">        Usage:  1) open file with open()
-                2) initialize with init()
-                3) the loader instance is ready to be read from with get(amount)</pre> </div><table class="memberdecls">
+<p>Usage:</p><ol type="1">
+<li>open file with <a class="el" href="classOggFileLoader.html#a877b5980ca3e50479faf9680e3a704a1">open()</a></li>
+<li>initialize with <a class="el" href="classOggFileLoader.html#a577762dd6ca2fc01946babba5efda547">init()</a></li>
+<li>the loader instance is ready to be read from with get(amount) </li>
+</ol>
+</div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a877b5980ca3e50479faf9680e3a704a1"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classOggFileLoader.html#a877b5980ca3e50479faf9680e3a704a1">open</a> (const std::string &amp;_filename)</td></tr>
@@ -182,7 +185,7 @@ template&lt;typename T , typename K &gt; </div>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>a vector of type T and of size <b>amount</b> containing the data </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>a vector of type <b>T</b> and of size <b>amount</b> containing the data </dd></dl>
 
 <p>Implements <a class="el" href="classDataFlow_1_1iSource.html#a597d9d155168f1b28e7ddc4dbc17df41">DataFlow::iSource&lt; T &gt;</a>.</p>
 

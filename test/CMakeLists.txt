@@ -1,5 +1,8 @@
 find_library(LIB_PTHREAD pthread)
 find_library(LIB_GTEST gtest)
+find_library(LIB_PORTAUDIO portaudio)
+find_library(LIB_OGG ogg)
+find_library(LIB_VORBIS vorbis)
 
 FIND_PROGRAM( GCOV_PATH gcov )
 FIND_PROGRAM( LCOV_PATH lcov )
@@ -17,10 +20,14 @@ SET( CMAKE_CXX_FLAGS  "${CMAKE_CXX_FLAGS} ${CXX_TESTS_FLAGS}")
 SET( CMAKE_C_FLAGS  "${CMAKE_C_FLAGS} ${C_TEST_FLAGS}")
 
 add_executable(Test ${TEST_SRC_FILES} ${SRC_FILES})
+add_dependencies(Test Mixer)
 set_target_properties(Test PROPERTIES EXCLUDE_FROM_ALL TRUE)
 
 target_link_libraries(Test "${LIB_PTHREAD}")
 target_link_libraries(Test "${LIB_GTEST}")
+target_link_libraries(Test "${LIB_PORTAUDIO}")
+target_link_libraries(Test "${LIB_OGG}")
+target_link_libraries(Test "${LIB_VORBIS}")
 
 add_custom_target(coverage
 DEPENDS Test

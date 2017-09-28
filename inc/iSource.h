@@ -20,8 +20,8 @@ class iSource
 
             \~english \param amount the amount of type T to get
             \~hungarian \param amount a kért adat mennyisége
-            \~english \return a vector of type T and of size <b>amount</b> containing the data
-            \~hungarian \return egy T típusú, <b>amount</b> méretű vektor, feltöltve az adattal.
+            \~english \return a vector of type **T** and of size **amount** containing the data
+            \~hungarian \return egy **T** típusú, **amount** méretű vektor, feltöltve az adattal.
         */
     virtual std::vector<T> get(const unsigned int &amount) = 0;
 

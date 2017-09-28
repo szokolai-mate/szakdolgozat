@@ -14,17 +14,17 @@
     \~english Class for reading OGG encoded files.
                 Template type K is the decoder this instance will use.
 
-
-                Usage:  1) open file with open()
-                        2) initialize with init()
-                        3) the loader instance is ready to be read from with get(amount)
+                Usage:
+                1. open file with open()
+                2. initialize with init()
+                3. the loader instance is ready to be read from with get(amount)
     \~hungarian OGG kódolt fájlok olvasására használható osztály.
                 A K sablon paraméter a dekódolásra használandó osztály
 
-
-                Használat:  1) fájl megnyitása - open()            
-                            2) inicializálás - init()
-                            3) a példány készen áll az olvasásra - get()
+                Használat:
+                1. fájl megnyitása - open()            
+                2. inicializálás - init()
+                3. a példány készen áll az olvasásra - get()
 */
 template <typename T,typename K>
 class OggFileLoader : public DataFlow::iSource<T>{

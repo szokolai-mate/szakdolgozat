@@ -2,16 +2,8 @@
 
 //probléma: pause-nál eldobja a mostani get-et
 
-//TODO: separate h+impl
-
-//TODO: channel + samplerate menjen végig (AudioDescriptor?)
-
-//! \todo customize doxygen layout, after that remake latex.
-//! \todo DOC: evaluate XML
-
 /*!
-	\~todo TODO: transitionable<T> - a mutexed(? maybe not cuz time can be indeterminate? just atomic?) generalized that can handle transitioning values
-	give it destination value and time and it does its thing
+	\~todo TODO: transitioning values. make it as general as possible.
 */
 
 #include <iostream>
@@ -108,7 +100,6 @@ int main()
 
 	std::string dancingQueen{"01 - Dancing Queen.ogg"};
 	std::string waterloo{"19 - Waterloo.ogg"};
-	std::string mono{"mono86kbps44100.ogg"};
 
 	OggFileLoader<float, VorbisDecoder> loader;
 
