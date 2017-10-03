@@ -9,7 +9,7 @@ bool Mixer::SineGenerator<T>::sinetableUninitialized = true;
 template <typename T>
 Mixer::SineGenerator<T>::SineGenerator(const float &frequency, const unsigned int &channels, const unsigned int &sampleRate) : AudioSource(channels, sampleRate)
 {
-    this->step = frequency * 100;
+    this->step = frequency * (SINE_TABLE_SIZE / (float)sampleRate);
     this->position = 0;
     if (sinetableUninitialized)
     {
@@ -32,8 +32,31 @@ std::vector<T> Mixer::SineGenerator<T>::get(const unsigned int &amount)
             res.push_back(sinetable[position]);
         }
         position = (int)round((position + step)) % SINE_TABLE_SIZE;
+        if(transitioner){
+            transitioner->step(1);
+        }
     }
     return res;
 }
+
+template <typename T>
+float Mixer::SineGenerator<T>::getFrequency() const{
+    return step / (SINE_TABLE_SIZE / (float)getSampleRate());
+}
+
+template <typename T>
+void Mixer::SineGenerator<T>::setFrequency(const float & frequency){
+    this->step = frequency * (SINE_TABLE_SIZE / (float)getSampleRate());
+}
+
+template <typename T>
+void Mixer::SineGenerator<T>::setFrequency(const float & frequency, const float & seconds){
+    float newStep = frequency * (SINE_TABLE_SIZE / (float)getSampleRate());
+    float samples = seconds * getSampleRate();
+    if(transitioner) delete transitioner;
+    this->transitioner = new Transitioner<T,Transition::EaseInOut::Quintic>(this->step);
+    this->transitioner->init(step,newStep,samples);
+}
+
 
 template class Mixer::SineGenerator<float>;

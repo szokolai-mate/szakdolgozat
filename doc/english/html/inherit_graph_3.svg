@@ -8,8 +8,8 @@
  viewBox="0.00 0.00 430.00 252.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 <g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 248)">
 <title>Graphical Class Hierarchy</title>
-<!-- Node19 -->
-<g id="node1" class="node"><title>Node19</title>
+<!-- Node35 -->
+<g id="node1" class="node"><title>Node35</title>
 <g id="a_node1"><a xlink:href="classMixer_1_1AudioSource.html" target="_top" xlink:title="Mixer::AudioSource">
 <polygon fill="none" stroke="black" points="10,-178 10,-197 112,-197 112,-178 10,-178"/>
 <text text-anchor="middle" x="61" y="-185" font-family="Helvetica,sans-Serif" font-size="10.00">Mixer::AudioSource</text>
@@ -25,8 +25,8 @@
 </a>
 </g>
 </g>
-<!-- Node19&#45;&gt;Node5 -->
-<g id="edge1" class="edge"><title>Node19&#45;&gt;Node5</title>
+<!-- Node35&#45;&gt;Node5 -->
+<g id="edge1" class="edge"><title>Node35&#45;&gt;Node5</title>
 <path fill="none" stroke="midnightblue" d="M109.213,-199.486C129.075,-204.528 152.23,-210.407 172.484,-215.548"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="110.011,-196.078 99.4573,-197.009 108.289,-202.862 110.011,-196.078"/>
 </g>
@@ -38,21 +38,21 @@
 </a>
 </g>
 </g>
-<!-- Node19&#45;&gt;Node6 -->
-<g id="edge2" class="edge"><title>Node19&#45;&gt;Node6</title>
+<!-- Node35&#45;&gt;Node6 -->
+<g id="edge2" class="edge"><title>Node35&#45;&gt;Node6</title>
 <path fill="none" stroke="midnightblue" d="M122.241,-186.381C133.859,-186.165 146.083,-185.938 157.863,-185.719"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="122.148,-182.882 112.214,-186.567 122.278,-189.881 122.148,-182.882"/>
 </g>
-<!-- Node11 -->
-<g id="node4" class="node"><title>Node11</title>
+<!-- Node27 -->
+<g id="node4" class="node"><title>Node27</title>
 <g id="a_node4"><a xlink:href="classMixer_1_1iPlayer.html" target="_top" xlink:title="Mixer::iPlayer">
 <polygon fill="none" stroke="black" points="22.5,-219 22.5,-238 99.5,-238 99.5,-219 22.5,-219"/>
 <text text-anchor="middle" x="61" y="-226" font-family="Helvetica,sans-Serif" font-size="10.00">Mixer::iPlayer</text>
 </a>
 </g>
 </g>
-<!-- Node11&#45;&gt;Node5 -->
-<g id="edge3" class="edge"><title>Node11&#45;&gt;Node5</title>
+<!-- Node27&#45;&gt;Node5 -->
+<g id="edge3" class="edge"><title>Node27&#45;&gt;Node5</title>
 <path fill="none" stroke="midnightblue" d="M110.118,-228.5C129.756,-228.5 152.489,-228.5 172.421,-228.5"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="109.865,-225 99.8646,-228.5 109.865,-232 109.865,-225"/>
 </g>

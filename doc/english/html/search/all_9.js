@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['oggfileloader',['OggFileLoader',['../classOggFileLoader.html',1,'']]],
-  ['open',['open',['../classOggFileLoader.html#a877b5980ca3e50479faf9680e3a704a1',1,'OggFileLoader']]]
+  ['nextpacket',['nextPacket',['../classOggFileLoader.html#a9b1b15e250c29f1fcafbdf0cd1e5e590',1,'OggFileLoader']]],
+  ['nextpage',['nextPage',['../classOggFileLoader.html#a47b37c1962662ac4de4b88541d9e7295',1,'OggFileLoader']]]
 ];

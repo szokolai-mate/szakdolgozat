@@ -1,4 +1,4 @@
 <map id="Mixer::AudioSource" name="Mixer::AudioSource">
-<area shape="rect" id="node2" href="$classMixer_1_1SimplePlayer.html" title="{Mixer::SimplePlayer\l\&lt; T, K \&gt;\n|&#45; backend\l&#45; source\l&#45; paused\l|+ get()\l+ pause()\l+ stop()\l+ play()\l+ attach()\l+ SimplePlayer()\l}" alt="" coords="5,175,144,369"/>
-<area shape="rect" id="node3" href="$classMixer_1_1SineGenerator.html" title="{Mixer::SineGenerator\&lt; T \&gt;\n|&#45; step\l&#45; position\l&#45; sinetableUninitialized\l&#45; sinetable\l|+ get()\l+ SineGenerator()\l&#45; filler()\l}" alt="" coords="169,197,346,347"/>
+<area shape="rect" id="node2" href="$classMixer_1_1SimplePlayer.html" title="{Mixer::SimplePlayer\l\&lt; T, K \&gt;\n|&#45; backend\l&#45; source\l&#45; paused\l|+ get()\l+ pause()\l+ stop()\l+ play()\l+ attach()\l+ SimplePlayer()\l}" alt="" coords="5,182,144,377"/>
+<area shape="rect" id="node3" href="$classMixer_1_1SineGenerator.html" title="{Mixer::SineGenerator\&lt; T \&gt;\n|&#45; step\l&#45; position\l&#45; transitioner\l&#45; sinetableUninitialized\l&#45; sinetable\l|+ get()\l+ getFrequency()\l+ setFrequency()\l+ setFrequency()\l+ SineGenerator()\l&#45; filler()\l}" alt="" coords="169,175,346,384"/>
 </map>

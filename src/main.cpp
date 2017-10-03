@@ -26,7 +26,7 @@
 #include <VorbisDecoder.h>
 
 #define DEFAULT_CHANNELS 2
-#define DEFAULT_SAMPLE_RATE 48000
+#define DEFAULT_SAMPLE_RATE 44100
 
 #define DEBUG_PORTAUDIO
 #ifdef DEBUG_PORTAUDIO
@@ -128,8 +128,8 @@ int main()
 	
 	DataFlow::Consolidator<float, Consolidation::Accumulation> consolidator;
 	consolidator.attach(vc);
-	consolidator.attach(vc2);
-	consolidator.attach(vc3);
+	//consolidator.attach(vc2);
+	//consolidator.attach(vc3);
 	
 	DataFlow::Applicator<float, Clipping::Hard> applicator;
 	applicator.attach(consolidator);
@@ -141,16 +141,18 @@ int main()
 	bool b = true;
 	while (true)
 	{
-		std::this_thread::sleep_for(std::chrono::duration<int, std::ratio<1, 1>>(3));
+		std::this_thread::sleep_for(std::chrono::duration<int, std::ratio<1, 1>>(4));
 		player.pause();
 
 		if (b)
 		{
 			player.attach(vc);
+			sg.setFrequency(880,2.5f);
 		}
 		else
 		{
 			player.attach(applicator);
+			sg.setFrequency(440,2.5f);
 		}
 
 		if (b)

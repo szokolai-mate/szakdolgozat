@@ -1,6 +1,7 @@
 var searchData=
 [
-  ['simpleplayer',['SimplePlayer',['../classMixer_1_1SimplePlayer.html',1,'Mixer']]],
-  ['sinegenerator',['SineGenerator',['../classMixer_1_1SineGenerator.html',1,'Mixer']]],
-  ['soft',['Soft',['../classClipping_1_1Soft.html',1,'Clipping']]]
+  ['quadratic',['Quadratic',['../classTransition_1_1EaseOut_1_1Quadratic.html',1,'Transition::EaseOut::Quadratic&lt; T &gt;'],['../classTransition_1_1EaseInOut_1_1Quadratic.html',1,'Transition::EaseInOut::Quadratic&lt; T &gt;'],['../classTransition_1_1EaseIn_1_1Quadratic.html',1,'Transition::EaseIn::Quadratic&lt; T &gt;']]],
+  ['quartic',['Quartic',['../classTransition_1_1EaseIn_1_1Quartic.html',1,'Transition::EaseIn::Quartic&lt; T &gt;'],['../classTransition_1_1EaseInOut_1_1Quartic.html',1,'Transition::EaseInOut::Quartic&lt; T &gt;'],['../classTransition_1_1EaseOut_1_1Quartic.html',1,'Transition::EaseOut::Quartic&lt; T &gt;']]],
+  ['queuebuffer',['QueueBuffer',['../classQueueBuffer.html',1,'']]],
+  ['quintic',['Quintic',['../classTransition_1_1EaseInOut_1_1Quintic.html',1,'Transition::EaseInOut::Quintic&lt; T &gt;'],['../classTransition_1_1EaseOut_1_1Quintic.html',1,'Transition::EaseOut::Quintic&lt; T &gt;'],['../classTransition_1_1EaseIn_1_1Quintic.html',1,'Transition::EaseIn::Quintic&lt; T &gt;']]]
 ];

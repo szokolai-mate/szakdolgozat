@@ -5,11 +5,13 @@
 
 #include <iSource.h>
 #include <AudioSource.h>
+#include <Transitioner.h>
+#include <TransitionFunctions.h>
+#include <iTransitioner.h>
 #include <Utils.h>
 //! \todo TODO: változtatható frekvencia
-//! \todo TODO: actually use sample rate
+//! \todo TODO: delete transitioner pointer sometime
 
-//TODO: NOTE: sample rate is fixed to 48000
 #define SINE_TABLE_SIZE 4800000
 
 namespace Mixer
@@ -29,8 +31,15 @@ private:
   static constexpr float filler(float x) { return (float)sin(((double)x / (double)SINE_TABLE_SIZE) * M_PI * 2.0); }
   static std::array<float, SINE_TABLE_SIZE> sinetable;
 
+  iTransitioner<T> * transitioner;
+
 public:
   std::vector<T> get(const unsigned int &amount);
+
+  float getFrequency() const;
+
+  void setFrequency(const float & frequency);
+  void setFrequency(const float & frequency, const float & seconds);
 
   /*!
     \~english Constructor. Sets initial frequency and requires AudioSource parameters.
@@ -40,7 +49,7 @@ public:
     \~english \param channels the channel count
                       \~hungarian \param channels a csatornák száma
     \~english \param sampleRate the sample rate
-                      \~hungarian \param sampleRate a intavételezés sűrűsége
+                      \~hungarian \param sampleRate a mintavételezés sűrűsége
   */
   SineGenerator(const float &frequency, const unsigned int &channels, const unsigned int &sampleRate);
 };
