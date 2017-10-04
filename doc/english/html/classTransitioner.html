@@ -66,19 +66,66 @@ $(function() {
 <div class="title">Transitioner&lt; T, K &gt; Class Template Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;<a class="el" href="Transitioner_8h_source.html">Transitioner.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for Transitioner&lt; T, K &gt;:</div>
 <div class="dyncontent">
 <div class="center"><iframe scrolling="no" frameborder="0" src="classTransitioner__inherit__graph.svg" width="150" height="346"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
-<table class="memberdecls">
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><h3>template&lt;typename T, template&lt; typename &gt;typename K&gt;<br />
+class Transitioner&lt; T, K &gt;</h3>
+
+<p>Class for transitioning the attached variable according to the <a class="el" href="classTransitionFunction.html">TransitionFunction</a>.</p>
+<p>The variable must be passed as reference to the constructor.</p>
+<p>To change the value of the variable use <a class="el" href="classTransitioner.html#afee42d135e0d412702cc0207737cba26">step()</a>. This will move the internal state forward on the transition function.</p>
+<p>The <a class="el" href="classTransitionFunction.html">TransitionFunction</a> to use is the template parameter K. See the <a class="el" href="namespaceTransition.html">Transition</a> namespace for implementations. </p>
+</div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:ad7c95eaf9491647858cd3a9587796c5f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTransitioner.html#ad7c95eaf9491647858cd3a9587796c5f">init</a> (const T &amp;startValue, const T &amp;endValue, const float &amp;endTime)</td></tr>
 <tr class="separator:ad7c95eaf9491647858cd3a9587796c5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afee42d135e0d412702cc0207737cba26"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTransitioner.html#afee42d135e0d412702cc0207737cba26">step</a> (const float &amp;amount)</td></tr>
 <tr class="separator:afee42d135e0d412702cc0207737cba26"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a58a6987a8dfdf85755da975e3c3057c4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTransitioner.html#a58a6987a8dfdf85755da975e3c3057c4">Transitioner</a> (T &amp;referenceToVariable)</td></tr>
+<tr class="separator:a58a6987a8dfdf85755da975e3c3057c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a58a6987a8dfdf85755da975e3c3057c4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a58a6987a8dfdf85755da975e3c3057c4">&#9670;&nbsp;</a></span>Transitioner()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T , template&lt; typename &gt;typename K&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classTransitioner.html">Transitioner</a>&lt; T, K &gt;::<a class="el" href="classTransitioner.html">Transitioner</a> </td>
+          <td>(</td>
+          <td class="paramtype">T &amp;&#160;</td>
+          <td class="paramname"><em>referenceToVariable</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Constructor. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">referenceToVariable</td><td>the reference to the variable to transition </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <h2 class="groupheader">Member Function Documentation</h2>
 <a id="ad7c95eaf9491647858cd3a9587796c5f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad7c95eaf9491647858cd3a9587796c5f">&#9670;&nbsp;</a></span>init()</h2>

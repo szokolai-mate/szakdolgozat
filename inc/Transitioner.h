@@ -1,8 +1,20 @@
 #pragma once
 
 #include <iTransitioner.h>
+//! \~english Class for transitioning the attached variable according to the TransitionFunction.
+//! \~hungarian Az addot TransitionFunction alapján a csatolt változó átmenetére használt osztály.
 /*!
+ \~english The variable must be passed as reference to the constructor.
 
+ To change the value of the variable use step(). This will move the internal state forward on the transition function.
+
+ The TransitionFunction to use is the template parameter K. See the Transition namespace for implementations.
+
+ \~hungarian A változó referenciaként adandó a konstruktornak.
+
+ A változó értékének változtatásához a step() metódus használandó. Ez a belső állapotot lépteti előre az átmeneti függvényen.
+
+ A használandó TransitionFunction a K sablon paraméter. Implementációkhoz lásd a Transition névteret.
 */
 template <typename T, template <typename>typename K>
 class Transitioner : public iTransitioner<T>{
@@ -32,7 +44,11 @@ public:
     }
 
     /*!
+        \~english Constructor.
+        \~hungarian Konstruktor.
 
+        \~english \param referenceToVariable the reference to the variable to transition
+        \~hungarian \param referenceToVariable a referencia az átvivendő változóhoz
     */
     Transitioner(T & referenceToVariable) : variable(referenceToVariable){}
 };

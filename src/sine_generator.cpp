@@ -32,7 +32,8 @@ std::vector<T> Mixer::SineGenerator<T>::get(const unsigned int &amount)
             res.push_back(sinetable[position]);
         }
         position = (int)round((position + step)) % SINE_TABLE_SIZE;
-        if(transitioner){
+        if (transitioner)
+        {
             transitioner->step(1);
         }
     }
@@ -40,23 +41,101 @@ std::vector<T> Mixer::SineGenerator<T>::get(const unsigned int &amount)
 }
 
 template <typename T>
-float Mixer::SineGenerator<T>::getFrequency() const{
+float Mixer::SineGenerator<T>::getFrequency() const
+{
     return step / (SINE_TABLE_SIZE / (float)getSampleRate());
 }
 
 template <typename T>
-void Mixer::SineGenerator<T>::setFrequency(const float & frequency){
+void Mixer::SineGenerator<T>::setFrequency(const float &frequency)
+{
     this->step = frequency * (SINE_TABLE_SIZE / (float)getSampleRate());
 }
 
 template <typename T>
-void Mixer::SineGenerator<T>::setFrequency(const float & frequency, const float & seconds){
+void Mixer::SineGenerator<T>::setFrequency(const float &frequency, const float &seconds, std::string method, const unsigned int &degree)
+{
     float newStep = frequency * (SINE_TABLE_SIZE / (float)getSampleRate());
     float samples = seconds * getSampleRate();
-    if(transitioner) delete transitioner;
-    this->transitioner = new Transitioner<T,Transition::EaseInOut::Quintic>(this->step);
-    this->transitioner->init(step,newStep,samples);
-}
 
+    if ("linear" == method)
+    {
+        this->transitioner = std::make_unique<Transitioner<T, Transition::Linear>>(this->step);
+    }
+    switch (degree)
+    {
+    case 2:
+        if ("ease-in-out" == method)
+        {
+            this->transitioner = std::make_unique<Transitioner<T, Transition::EaseInOut::Quadratic>>(this->step);
+            break;
+        }
+        if ("ease-in" == method)
+        {
+            this->transitioner = std::make_unique<Transitioner<T, Transition::EaseIn::Quadratic>>(this->step);
+            break;
+        }
+        if ("ease-out" == method)
+        {
+            this->transitioner = std::make_unique<Transitioner<T, Transition::EaseOut::Quadratic>>(this->step);
+            break;
+        }
+
+    case 3:
+        if ("ease-in-out" == method)
+        {
+            this->transitioner = std::make_unique<Transitioner<T, Transition::EaseInOut::Cubic>>(this->step);
+            break;
+        }
+        if ("ease-in" == method)
+        {
+            this->transitioner = std::make_unique<Transitioner<T, Transition::EaseIn::Cubic>>(this->step);
+            break;
+        }
+        if ("ease-out" == method)
+        {
+            this->transitioner = std::make_unique<Transitioner<T, Transition::EaseOut::Cubic>>(this->step);
+            break;
+        }
+
+    case 4:
+        if ("ease-in-out" == method)
+        {
+            this->transitioner = std::make_unique<Transitioner<T, Transition::EaseInOut::Quartic>>(this->step);
+            break;
+        }
+        if ("ease-in" == method)
+        {
+            this->transitioner = std::make_unique<Transitioner<T, Transition::EaseIn::Quartic>>(this->step);
+            break;
+        }
+        if ("ease-out" == method)
+        {
+            this->transitioner = std::make_unique<Transitioner<T, Transition::EaseOut::Quartic>>(this->step);
+            break;
+        }
+
+    case 5:
+            if ("ease-in-out" == method)
+            {
+                this->transitioner = std::make_unique<Transitioner<T, Transition::EaseInOut::Quintic>>(this->step);
+                break;
+            }
+            if ("ease-in" == method)
+            {
+                this->transitioner = std::make_unique<Transitioner<T, Transition::EaseIn::Quintic>>(this->step);
+                break;
+            }
+            if ("ease-out" == method)
+            {
+                this->transitioner = std::make_unique<Transitioner<T, Transition::EaseOut::Quintic>>(this->step);
+                break;
+            }
+    default:
+        this->transitioner = std::make_unique<Transitioner<T, Transition::Linear>>(this->step);
+    }
+
+    this->transitioner->init(step, newStep, samples);
+}
 
 template class Mixer::SineGenerator<float>;

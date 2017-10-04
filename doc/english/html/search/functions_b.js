@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['vorbisdecoder',['VorbisDecoder',['../classVorbisDecoder.html#a637929d707ce75b456b1bf4c764876ea',1,'VorbisDecoder']]]
+  ['transitioner',['Transitioner',['../classTransitioner.html#a58a6987a8dfdf85755da975e3c3057c4',1,'Transitioner']]]
 ];

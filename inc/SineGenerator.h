@@ -2,6 +2,7 @@
 
 #include <math.h>
 #include <vector>
+#include <memory>
 
 #include <iSource.h>
 #include <AudioSource.h>
@@ -9,8 +10,6 @@
 #include <TransitionFunctions.h>
 #include <iTransitioner.h>
 #include <Utils.h>
-//! \todo TODO: változtatható frekvencia
-//! \todo TODO: delete transitioner pointer sometime
 
 #define SINE_TABLE_SIZE 4800000
 
@@ -31,15 +30,64 @@ private:
   static constexpr float filler(float x) { return (float)sin(((double)x / (double)SINE_TABLE_SIZE) * M_PI * 2.0); }
   static std::array<float, SINE_TABLE_SIZE> sinetable;
 
-  iTransitioner<T> * transitioner;
+  std::unique_ptr<iTransitioner<T>>  transitioner;
 
 public:
   std::vector<T> get(const unsigned int &amount);
 
+  /*!
+    \~english Get the current frequency.
+    \~hungarian Visszaadja a jelenlegi frekvenciát.
+
+    \~english \return the current frequency
+    \~hungarian \return a jelenlegi frekvencia
+  */
   float getFrequency() const;
 
+  /*!
+    \~english Set the frequency without any transition.
+    \~hungarian Beállítja a frekvenciát átmenet nélkül.
+
+    \~english \param frequency the desired frequency
+    \~hungarian \param frequency a kívánt frekvencia
+  */
   void setFrequency(const float & frequency);
-  void setFrequency(const float & frequency, const float & seconds);
+
+  /*!
+    \~english Set the frequency with the desired transition.
+    \~hungarian Beállítja a frekvenciát a kívánt átmenettel.
+
+    \~english \param frequency the desired frequency
+    \~hungarian \param frequency a kívánt frekvencia
+    
+    \~english \param seconds the length of transition in seconds
+    \~hungarian \param seconds az átmenet hossza másodpercben
+    
+    \~english \param method the method of transition
+
+    possible values:
+    - linear
+    - ease-in
+    - ease-out
+    - ease-in-out
+
+    Possibly more values in Transition namespace.
+    
+    \~hungarian \param method az átmenet jellege
+
+    lehetséges értékek:
+    - linear
+    - ease-in
+    - ease-out
+    - ease-in-out
+
+    Lehetséges hogy több érték van. Lásd Transition névtér.
+
+    \~english \param degree the exponential degree of the transition method (if applicable)
+    \~hungarian \param degree az átmenet hatványkitevője (ha lehetséges)
+    
+  */
+  void setFrequency(const float & frequency, const float & seconds, std::string method = "linear", const unsigned int & degree = 2);
 
   /*!
     \~english Constructor. Sets initial frequency and requires AudioSource parameters.

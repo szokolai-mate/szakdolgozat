@@ -6,6 +6,6 @@ var searchData=
   ['template_5futils',['template_utils',['../namespacetemplate__utils.html',1,'']]],
   ['todo_20list',['Todo List',['../todo.html',1,'']]],
   ['transition',['Transition',['../namespaceTransition.html',1,'']]],
-  ['transitioner',['Transitioner',['../classTransitioner.html',1,'']]],
+  ['transitioner',['Transitioner',['../classTransitioner.html',1,'Transitioner&lt; T, K &gt;'],['../classTransitioner.html#a58a6987a8dfdf85755da975e3c3057c4',1,'Transitioner::Transitioner()']]],
   ['transitionfunction',['TransitionFunction',['../classTransitionFunction.html',1,'']]]
 ];

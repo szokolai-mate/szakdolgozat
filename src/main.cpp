@@ -2,10 +2,6 @@
 
 //probléma: pause-nál eldobja a mostani get-et
 
-/*!
-	\~todo TODO: transitioning values. make it as general as possible.
-*/
-
 #include <iostream>
 #include <thread>
 #include <chrono>
@@ -147,7 +143,7 @@ int main()
 		if (b)
 		{
 			player.attach(vc);
-			sg.setFrequency(880,2.5f);
+			sg.setFrequency(880,2.5f,"ease-in",5);
 		}
 		else
 		{
