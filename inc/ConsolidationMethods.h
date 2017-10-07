@@ -24,4 +24,20 @@ namespace Consolidation{
         bool add(const std::vector<T> & vector);
         std::vector<T> get();
     };
+    
+    //! \~english An element in the resulting vector will be the productum of all the elements in the same positions.
+    //! \~hungarian Az eredményben minden elem az elemmel azonos pozición lévő elemek szorzata.
+    /*!
+        \~english For example: [1,2][1,2][2,2] -> [2,8]
+        \~hungarian Például: [1,2][1,2][2,2] -> [2,8]
+    */
+    template <typename T>
+    class Multiplication : public DataFlow::iConsolidationMethod<T>{
+    private:
+        std::vector<T> workspace;
+    public:
+        bool init(const std::vector<T> & initial);
+        bool add(const std::vector<T> & vector);
+        std::vector<T> get();
+    };
 };

@@ -124,8 +124,8 @@ int main()
 	
 	DataFlow::Consolidator<float, Consolidation::Accumulation> consolidator;
 	consolidator.attach(vc);
-	//consolidator.attach(vc2);
-	//consolidator.attach(vc3);
+	consolidator.attach(vc2);
+	consolidator.attach(vc3);
 	
 	DataFlow::Applicator<float, Clipping::Hard> applicator;
 	applicator.attach(consolidator);
