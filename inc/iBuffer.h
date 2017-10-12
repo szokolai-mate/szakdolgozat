@@ -1,5 +1,4 @@
 #pragma once
-//TODO+EVALUATE: closed flag, ha már nem szándékozunk újat beletölteni
 //!\~todo TODO: fix buffers and document!
 
 #include <vector>
@@ -11,8 +10,10 @@ template <typename T>
 class iBuffer : public DataFlow::iSource<T>
 {
   public:
-    /*Adds argument to buffer. Returns remaining capacity, -1 if was already full*/
-    virtual int add(T &_buffer) = 0;
+    virtual bool add(T &_buffer) = 0;
+    /*!
+      Adds argument to buffer. Returns elements consumed.
+    */
     virtual int add(std::vector<T> &_buffer) = 0;
 
     /*Returns whether buffer is empty*/

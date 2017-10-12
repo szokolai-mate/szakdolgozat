@@ -1,0 +1,4 @@
+<map id="Mixer::iWaveformGenerator&lt; T &gt;" name="Mixer::iWaveformGenerator&lt; T &gt;">
+<area shape="rect" id="node3" href="$classMixer_1_1SineGenerator.html" title="{Mixer::SineGenerator\&lt; T \&gt;\n|&#45; step\l&#45; position\l&#45; transitioner\l&#45; sinetableUninitialized\l&#45; sinetable\l|+ get()\l+ getFrequency()\l+ setFrequency()\l+ setFrequency()\l+ SineGenerator()\l&#45; filler()\l}" alt="" coords="24,315,201,524"/>
+<area shape="rect" id="node2" href="$classDataFlow_1_1iSource.html" title="{DataFlow::iSource\&lt; T \&gt;\n||+ get()\l+ ~iSource()\l}" alt="" coords="31,5,194,97"/>
+</map>

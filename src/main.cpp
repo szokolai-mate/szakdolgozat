@@ -1,6 +1,10 @@
-//\todo TODO(later): equalizer
+//!\todo TODO(later): equalizer
 
 //probléma: pause-nál eldobja a mostani get-et
+
+//!\todo TODO:blocking portaudio
+//!\todo TODO:microphone
+//!\todo TODO:modulating filter
 
 #include <iostream>
 #include <thread>
@@ -12,6 +16,7 @@
 #include <SimplePlayer.h>
 #include <PortAudioBackend.h>
 #include <SineGenerator.h>
+#include <SawtoothGenerator.h>
 #include <Consolidator.h>
 #include <ConsolidationMethods.h>
 #include <Applicator.h>
@@ -92,7 +97,7 @@ int main()
 #endif
 #endif
 
-	QueueBuffer<float> qb(512 * 16);
+	QueueBuffer<float> qb(512 * 500);
 
 	std::string dancingQueen{"01 - Dancing Queen.ogg"};
 	std::string waterloo{"19 - Waterloo.ogg"};
@@ -107,85 +112,39 @@ int main()
 	{
 		std::cout << a << std::endl;
 	}
-
+	
 	Mixer::SineGenerator<float> sg(440, DEFAULT_CHANNELS, DEFAULT_SAMPLE_RATE);
-	Mixer::SineGenerator<float> sg2(439, DEFAULT_CHANNELS, DEFAULT_SAMPLE_RATE);
-
+	Mixer::SawtoothGenerator<float> sg2(439,5, DEFAULT_CHANNELS, DEFAULT_SAMPLE_RATE);
+	
 	DataFlow::Applicator<float,VolumeControl<float>> vc;
 	DataFlow::Applicator<float,VolumeControl<float>> vc2;
-	DataFlow::Applicator<float,VolumeControl<float>> vc3;
 	vc.getMethod().setVolume(0.3f);
 	vc2.getMethod().setVolume(0.3f);
-	vc3.getMethod().setVolume(0.3f);
-	
+
 	vc.attach(sg);
 	vc2.attach(sg2);
-	vc3.attach(loader);
-	
+
 	DataFlow::Consolidator<float, Consolidation::Accumulation> consolidator;
 	consolidator.attach(vc);
 	consolidator.attach(vc2);
-	consolidator.attach(vc3);
-	
+
 	DataFlow::Applicator<float, Clipping::Hard> applicator;
 	applicator.attach(consolidator);
-
-	Mixer::SimplePlayer<float, Mixer::PortAudioBackend> player(DEFAULT_CHANNELS, DEFAULT_SAMPLE_RATE);
-	player.attach(applicator);
-	player.play();
-
-	bool b = true;
-	while (true)
-	{
-		std::this_thread::sleep_for(std::chrono::duration<int, std::ratio<1, 1>>(4));
-		player.pause();
-
-		if (b)
-		{
-			player.attach(vc);
-			sg.setFrequency(880,2.5f,"ease-in",5);
-		}
-		else
-		{
-			player.attach(applicator);
-			sg.setFrequency(440,2.5f);
-		}
-
-		if (b)
-			player.play();
-		b = !b;
-	}
-//! \todo TODO: extract these tests to actual tests
-/*
-while(true){
-	OggFileLoader<float,VorbisDecoder> testloader;
-	testloader.open(waterloo);
-	testloader.init();
-	std::vector<float> v(50,0);
-	while(v.size()>0){
-		v = testloader.get(2048);
-		std::cout<<"Got "<<v.size()<<std::endl;
-	}
-	std::cin.get();
-}
-*/
-//TMP: buffer test
-//#define BUFFER_TEST
-#ifdef BUFFER_TEST
-#define TEST_BUFFER_SIZE 90000
-	QueueBuffer<float> testbuffer(TEST_BUFFER_SIZE);
-
-	player.init(testbuffer, ad);
-	player.play();
 
 	std::thread fillerThread([&] {
 		while (true)
 		{
-			for (float i = 0; i < 1; i += 1.0f / TEST_BUFFER_SIZE)
-			{
-				testbuffer.add(i);
+			std::vector<float> tmp = sg.get(512);
+			/*int eaten = 0;
+			while(eaten<tmp.size()){
+				std::vector<float> doubletmp(tmp.begin()+eaten,tmp.end());
+				eaten+= qb.add(doubletmp);
+			}*/
+			for(float & e : tmp){
+				qb.add(e);
 			}
-			if (testbuffer.isFull())
+			
+			if (qb.isFull())
 			{
 				std::this_thread::yield();
 				std::this_thread::sleep_for(std::chrono::duration<int, std::ratio<1, 1000>>(1));
@@ -193,19 +152,62 @@ while(true){
 		}
 	});
 
-	float into;
-	float prev = 0;
-	std::thread readerThread([&] {
+	std::thread sizeThread([&] {
 		while (true)
 		{
-			for (int i = 0; i < TEST_BUFFER_SIZE; i++)
-			{
-				testbuffer.get(into);
-				if (prev + (1.0f / TEST_BUFFER_SIZE) > into && into != 0)
-				{
-					std::cout << prev << " -> " << into << std::endl;
-				}
+			std::cout << "Items in testbuffer: " << qb.size() << std::endl;
+			std::this_thread::sleep_for(std::chrono::duration<int, std::ratio<1, 10>>(1));
+		}
+	});
+
+	Mixer::SimplePlayer<float, Mixer::PortAudioBackend> player(DEFAULT_CHANNELS, DEFAULT_SAMPLE_RATE);
+	player.attach(qb);
+	player.play();
+
+	fillerThread.join();
+	sizeThread.join();	
+
+	bool b = true;
+	/*while (true)
+	{
+		std::this_thread::sleep_for(std::chrono::duration<int, std::ratio<1, 1>>(4));
+		player.pause();
+		
+		if (b)
+		{
+			player.attach(applicator);
+			sg.setFrequency(880,2.0f,"linear");
+		}
+		else
+		{
+			player.attach(applicator);
+			sg.setFrequency(440,1.0f,"ease-in-out",5);
+		}
+
+		if (b)
+			player.play();
+		b = !b;
+		
+	}*/
+//! \todo TODO: extract these tests to actual tests
+//TMP: buffer test
+//#define BUFFER_TEST
+#ifdef BUFFER_TEST
+#define TEST_BUFFER_SIZE 90000
+	QueueBuffer<float> testbuffer(TEST_BUFFER_SIZE);
+
+	Mixer::SineGenerator<float> testsine(440,DEFAULT_CHANNELS,DEFAULT_SAMPLE_RATE);
+
+	std::thread fillerThread([&] {
+		while (true)
+		{
+			auto tmp = testsine.get(TEST_BUFFER_SIZE / 10);
+			int eaten = 0;
+			while(eaten<tmp.size()){
+				std::vector<float> doubletmp(tmp.begin()+eaten,tmp.end());
+				eaten+= testbuffer.add(doubletmp);
 			}
+			
 			if (testbuffer.isFull())
 			{
 				std::this_thread::yield();
@@ -218,12 +220,16 @@ while(true){
 		while (true)
 		{
 			std::cout << "Items in testbuffer: " << testbuffer.size() << std::endl;
-			std::this_thread::sleep_for(std::chrono::duration<int, std::ratio<1, 1000>>(1));
+			std::this_thread::sleep_for(std::chrono::duration<int, std::ratio<1, 10>>(1));
 		}
 	});
 
+	Mixer::SimplePlayer<float, Mixer::PortAudioBackend> player(DEFAULT_CHANNELS, DEFAULT_SAMPLE_RATE);
+	player.attach(testbuffer);
+	player.play();
+
+
 	fillerThread.join();
-	readerThread.join();
 	sizeThread.join();
 #endif
 

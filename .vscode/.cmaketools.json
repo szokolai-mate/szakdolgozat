@@ -34,6 +34,22 @@
                 "type": "UTILITY"
               },
               {
+                "buildDirectory": "/SharedWithWindows/Projects/szakdolgozat/build/test",
+                "fileGroups": [
+                  {
+                    "isGenerated": true,
+                    "sources": [
+                      "../build/test/CMakeFiles/coverage",
+                      "../build/test/CMakeFiles/coverage.rule"
+                    ]
+                  }
+                ],
+                "fullName": "coverage",
+                "name": "coverage",
+                "sourceDirectory": "/SharedWithWindows/Projects/szakdolgozat/test",
+                "type": "UTILITY"
+              },
+              {
                 "artifacts": [
                   "/SharedWithWindows/Projects/szakdolgozat/build/bin/Test"
                 ],
@@ -54,6 +70,7 @@
                       "../src/ogg_file_loader.cpp",
                       "../src/portaudio_backend.cpp",
                       "../src/queue_buffer.cpp",
+                      "../src/sawtooth_generator.cpp",
                       "../src/sine_generator.cpp",
                       "../src/vorbis_decoder.cpp"
                     ]
@@ -104,6 +121,7 @@
                       "ogg_file_loader.cpp",
                       "portaudio_backend.cpp",
                       "queue_buffer.cpp",
+                      "sawtooth_generator.cpp",
                       "sine_generator.cpp",
                       "vorbis_decoder.cpp"
                     ]
@@ -116,29 +134,13 @@
                 "name": "Mixer",
                 "sourceDirectory": "/SharedWithWindows/Projects/szakdolgozat/src",
                 "type": "EXECUTABLE"
-              },
-              {
-                "buildDirectory": "/SharedWithWindows/Projects/szakdolgozat/build/test",
-                "fileGroups": [
-                  {
-                    "isGenerated": true,
-                    "sources": [
-                      "../build/test/CMakeFiles/coverage",
-                      "../build/test/CMakeFiles/coverage.rule"
-                    ]
-                  }
-                ],
-                "fullName": "coverage",
-                "name": "coverage",
-                "sourceDirectory": "/SharedWithWindows/Projects/szakdolgozat/test",
-                "type": "UTILITY"
               }
             ]
           }
         ]
       }
     ],
-    "cookie": "0.8560110985047187",
+    "cookie": "0.6093658909874466",
     "inReplyTo": "codemodel",
     "type": "reply"
   }

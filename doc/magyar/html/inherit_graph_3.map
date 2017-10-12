@@ -1,12 +1,13 @@
 <map id="Osztályhierarchia&#45;ábra" name="Osztályhierarchia&#45;ábra">
-<area shape="rect" id="node1" href="$classMixer_1_1AudioSource.html" title="Mixer::AudioSource" alt="" coords="19,67,155,94"/>
-<area shape="rect" id="node2" href="$classMixer_1_1SimplePlayer.html" title="Mixer::SimplePlayer\l\&lt; T, K \&gt;" alt="" coords="235,5,374,47"/>
-<area shape="rect" id="node3" href="$classMixer_1_1SineGenerator.html" title="Mixer::SineGenerator\&lt; T \&gt;" alt="" coords="216,71,393,98"/>
-<area shape="rect" id="node4" href="$classMixer_1_1iPlayer.html" title="Mixer::iPlayer" alt="" coords="35,13,138,39"/>
-<area shape="rect" id="node5" href="$classDataFlow_1_1iSource.html" title="DataFlow::iSource\&lt; T \&gt;" alt="" coords="5,147,168,174"/>
-<area shape="rect" id="node6" href="$classDataFlow_1_1Applicator.html" title="DataFlow::Applicator\l\&lt; T, K \&gt;" alt="" coords="233,224,377,265"/>
-<area shape="rect" id="node7" href="$classDataFlow_1_1Consolidator.html" title="DataFlow::Consolidator\l\&lt; T, K \&gt;" alt="" coords="225,289,384,331"/>
-<area shape="rect" id="node8" href="$classDataFlow_1_1iBuffer.html" title="DataFlow::iBuffer\&lt; T \&gt;" alt="" coords="227,122,383,149"/>
-<area shape="rect" id="node10" href="$classOggFileLoader.html" title="OggFileLoader\&lt; T, K \&gt;" alt="" coords="227,173,382,199"/>
-<area shape="rect" id="node9" href="$classQueueBuffer.html" title="QueueBuffer\&lt; T \&gt;" alt="" coords="441,122,568,149"/>
+<area shape="rect" id="node1" href="$classMixer_1_1AudioSource.html" title="Mixer::AudioSource" alt="" coords="19,5,155,32"/>
+<area shape="rect" id="node2" href="$classMixer_1_1SimplePlayer.html" title="Mixer::SimplePlayer\l\&lt; T, K \&gt;" alt="" coords="254,53,393,94"/>
+<area shape="rect" id="node3" href="$classMixer_1_1SineGenerator.html" title="Mixer::SineGenerator\&lt; T \&gt;" alt="" coords="479,60,656,87"/>
+<area shape="rect" id="node4" href="$classMixer_1_1iPlayer.html" title="Mixer::iPlayer" alt="" coords="35,60,138,87"/>
+<area shape="rect" id="node5" href="$classDataFlow_1_1iSource.html" title="DataFlow::iSource\&lt; T \&gt;" alt="" coords="5,211,168,237"/>
+<area shape="rect" id="node6" href="$classDataFlow_1_1Applicator.html" title="DataFlow::Applicator\l\&lt; T, K \&gt;" alt="" coords="251,170,395,211"/>
+<area shape="rect" id="node7" href="$classDataFlow_1_1Consolidator.html" title="DataFlow::Consolidator\l\&lt; T, K \&gt;" alt="" coords="244,235,403,277"/>
+<area shape="rect" id="node8" href="$classDataFlow_1_1iBuffer.html" title="DataFlow::iBuffer\&lt; T \&gt;" alt="" coords="245,301,401,328"/>
+<area shape="rect" id="node10" href="$classMixer_1_1iWaveformGenerator.html" title="Mixer::iWaveformGenerator\&lt; T \&gt;" alt="" coords="216,119,431,145"/>
+<area shape="rect" id="node11" href="$classOggFileLoader.html" title="OggFileLoader\&lt; T, K \&gt;" alt="" coords="246,352,401,379"/>
+<area shape="rect" id="node9" href="$classQueueBuffer.html" title="QueueBuffer\&lt; T \&gt;" alt="" coords="504,301,631,328"/>
 </map>

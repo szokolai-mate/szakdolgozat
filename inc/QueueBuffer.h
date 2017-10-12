@@ -33,8 +33,7 @@ public:
 
 	~QueueBuffer();
 
-	/*Adds argument to buffer. Returns remaining capacity, -1 if was full*/
-	int add(T  &_buffer);
+	bool add(T  &_buffer);
 	int add(std::vector<T>  &_buffer);
 	/**/
 	std::vector<T> get(const unsigned int & amount);

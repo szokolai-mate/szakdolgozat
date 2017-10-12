@@ -5,5 +5,6 @@ var searchData=
   ['iconsolidationmethod',['iConsolidationMethod',['../classDataFlow_1_1iConsolidationMethod.html',1,'DataFlow']]],
   ['iplayer',['iPlayer',['../classMixer_1_1iPlayer.html',1,'Mixer']]],
   ['isource',['iSource',['../classDataFlow_1_1iSource.html',1,'DataFlow']]],
-  ['itransitioner',['iTransitioner',['../classiTransitioner.html',1,'']]]
+  ['itransitioner',['iTransitioner',['../classiTransitioner.html',1,'']]],
+  ['iwaveformgenerator',['iWaveformGenerator',['../classMixer_1_1iWaveformGenerator.html',1,'Mixer']]]
 ];

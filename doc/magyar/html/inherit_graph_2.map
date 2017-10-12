@@ -1,4 +1,5 @@
 <map id="Osztályhierarchia&#45;ábra" name="Osztályhierarchia&#45;ábra">
-<area shape="rect" id="node1" href="$classDataFlow_1_1iConsolidationMethod.html" title="DataFlow::iConsolidation\lMethod\&lt; T \&gt;" alt="" coords="5,5,173,47"/>
-<area shape="rect" id="node2" href="$classConsolidation_1_1Accumulation.html" title="Consolidation::Accumulation\&lt; T \&gt;" alt="" coords="221,13,441,39"/>
+<area shape="rect" id="node1" href="$classDataFlow_1_1iConsolidationMethod.html" title="DataFlow::iConsolidation\lMethod\&lt; T \&gt;" alt="" coords="5,23,173,65"/>
+<area shape="rect" id="node2" href="$classConsolidation_1_1Accumulation.html" title="Consolidation::Accumulation\&lt; T \&gt;" alt="" coords="221,5,441,32"/>
+<area shape="rect" id="node3" href="$classConsolidation_1_1Multiplication.html" title="Consolidation::Multiplication\&lt; T \&gt;" alt="" coords="223,56,440,83"/>
 </map>
