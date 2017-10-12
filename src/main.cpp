@@ -97,7 +97,7 @@ int main()
 #endif
 #endif
 
-	QueueBuffer<float> qb(512 * 500);
+	QueueBuffer<float> qb(DEFAULT_SAMPLE_RATE * DEFAULT_CHANNELS * 5);
 
 	std::string dancingQueen{"01 - Dancing Queen.ogg"};
 	std::string waterloo{"19 - Waterloo.ogg"};
@@ -113,7 +113,7 @@ int main()
 		std::cout << a << std::endl;
 	}
 	
-	Mixer::SineGenerator<float> sg(440, DEFAULT_CHANNELS, DEFAULT_SAMPLE_RATE);
+	Mixer::SawtoothGenerator<float> sg(440,5, DEFAULT_CHANNELS, DEFAULT_SAMPLE_RATE);
 	Mixer::SawtoothGenerator<float> sg2(439,5, DEFAULT_CHANNELS, DEFAULT_SAMPLE_RATE);
 	
 	DataFlow::Applicator<float,VolumeControl<float>> vc;
@@ -134,14 +134,11 @@ int main()
 	std::thread fillerThread([&] {
 		while (true)
 		{
-			std::vector<float> tmp = sg.get(512);
-			/*int eaten = 0;
+			std::vector<float> tmp(512,0);
+			int eaten = 0;
 			while(eaten<tmp.size()){
 				std::vector<float> doubletmp(tmp.begin()+eaten,tmp.end());
 				eaten+= qb.add(doubletmp);
-			}*/
-			for(float & e : tmp){
-				qb.add(e);
 			}
 			
 			if (qb.isFull())
@@ -152,23 +149,20 @@ int main()
 		}
 	});
 
-	std::thread sizeThread([&] {
-		while (true)
-		{
-			std::cout << "Items in testbuffer: " << qb.size() << std::endl;
-			std::this_thread::sleep_for(std::chrono::duration<int, std::ratio<1, 10>>(1));
-		}
-	});
+	// std::thread sizeThread([&] {
+	// 	while (true)
+	// 	{
+	// 		std::cout << "Items in testbuffer: " << qb.size() << std::endl;
+	// 		std::this_thread::sleep_for(std::chrono::duration<int, std::ratio<1, 10>>(1));
+	// 	}
+	// });
 
 	Mixer::SimplePlayer<float, Mixer::PortAudioBackend> player(DEFAULT_CHANNELS, DEFAULT_SAMPLE_RATE);
-	player.attach(qb);
+	player.attach(applicator);
 	player.play();
 
-	fillerThread.join();
-	sizeThread.join();	
-
 	bool b = true;
-	/*while (true)
+	while (true)
 	{
 		std::this_thread::sleep_for(std::chrono::duration<int, std::ratio<1, 1>>(4));
 		player.pause();
@@ -188,7 +182,7 @@ int main()
 			player.play();
 		b = !b;
 		
-	}*/
+	}
 //! \todo TODO: extract these tests to actual tests
 //TMP: buffer test
 //#define BUFFER_TEST

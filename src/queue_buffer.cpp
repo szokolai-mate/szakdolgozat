@@ -3,6 +3,7 @@
 //! \todo TODO: clean this up, jesus
 //BUGHUNT: audio is messed after playing about one fill worth of audio
 // -> i think adding and/or reading from the fringes has errors.
+// get is definately wrong
 
 template <typename T>
 QueueBuffer<T>::QueueBuffer(unsigned int _capacity)

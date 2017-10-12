@@ -23,13 +23,13 @@
                   {
                     "isGenerated": true,
                     "sources": [
-                      "build/CMakeFiles/cleanup",
-                      "build/CMakeFiles/cleanup.rule"
+                      "build/CMakeFiles/doc",
+                      "build/CMakeFiles/doc.rule"
                     ]
                   }
                 ],
-                "fullName": "cleanup",
-                "name": "cleanup",
+                "fullName": "doc",
+                "name": "doc",
                 "sourceDirectory": "/SharedWithWindows/Projects/szakdolgozat",
                 "type": "UTILITY"
               },
@@ -85,22 +85,6 @@
                 "type": "EXECUTABLE"
               },
               {
-                "buildDirectory": "/SharedWithWindows/Projects/szakdolgozat/build",
-                "fileGroups": [
-                  {
-                    "isGenerated": true,
-                    "sources": [
-                      "build/CMakeFiles/doc",
-                      "build/CMakeFiles/doc.rule"
-                    ]
-                  }
-                ],
-                "fullName": "doc",
-                "name": "doc",
-                "sourceDirectory": "/SharedWithWindows/Projects/szakdolgozat",
-                "type": "UTILITY"
-              },
-              {
                 "artifacts": [
                   "/SharedWithWindows/Projects/szakdolgozat/build/bin/Mixer"
                 ],
@@ -134,13 +118,29 @@
                 "name": "Mixer",
                 "sourceDirectory": "/SharedWithWindows/Projects/szakdolgozat/src",
                 "type": "EXECUTABLE"
+              },
+              {
+                "buildDirectory": "/SharedWithWindows/Projects/szakdolgozat/build",
+                "fileGroups": [
+                  {
+                    "isGenerated": true,
+                    "sources": [
+                      "build/CMakeFiles/cleanup",
+                      "build/CMakeFiles/cleanup.rule"
+                    ]
+                  }
+                ],
+                "fullName": "cleanup",
+                "name": "cleanup",
+                "sourceDirectory": "/SharedWithWindows/Projects/szakdolgozat",
+                "type": "UTILITY"
               }
             ]
           }
         ]
       }
     ],
-    "cookie": "0.6093658909874466",
+    "cookie": "0.636044719953039",
     "inReplyTo": "codemodel",
     "type": "reply"
   }
