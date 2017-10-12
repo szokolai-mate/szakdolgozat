@@ -77,12 +77,14 @@ Inheritance diagram for QueueBuffer&lt; T &gt;:</div>
 <div class="textblock"><h3>template&lt;typename T&gt;<br />
 class QueueBuffer&lt; T &gt;</h3>
 
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000005">Todo:</a></b></dt><dd>TODO: document after sorting buffers out </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000007">Todo:</a></b></dt><dd>TODO: document after sorting buffers out </dd></dl>
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a366e7c97789ae30c27ad0f60082e6dac"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classQueueBuffer.html#a366e7c97789ae30c27ad0f60082e6dac">QueueBuffer</a> (unsigned int cap)</td></tr>
 <tr class="separator:a366e7c97789ae30c27ad0f60082e6dac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae694746640cafea59167d17f01e9ea98"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classQueueBuffer.html#ae694746640cafea59167d17f01e9ea98">add</a> (std::vector&lt; T &gt; &amp;_buffer)</td></tr>
+<tr class="separator:ae694746640cafea59167d17f01e9ea98"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a38b69f009d2482cbc43c0682582d5c7c"><td class="memItemLeft" align="right" valign="top">std::vector&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classQueueBuffer.html#a38b69f009d2482cbc43c0682582d5c7c">get</a> (const unsigned int &amp;amount)</td></tr>
 <tr class="separator:a38b69f009d2482cbc43c0682582d5c7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -104,13 +106,42 @@ template&lt;typename T &gt; </div>
         </tr>
       </table>
 </div><div class="memdoc">
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000003">Todo:</a></b></dt><dd><p class="startdd">TODO: clean this up, jesus </p>
-<p class="enddd">TODO: finish the implementation of queue buffer </p>
-</dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000005">Todo:</a></b></dt><dd>TODO: clean this up, jesus </dd></dl>
 
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="ae694746640cafea59167d17f01e9ea98"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae694746640cafea59167d17f01e9ea98">&#9670;&nbsp;</a></span>add()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="classQueueBuffer.html">QueueBuffer</a>&lt; T &gt;::add </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>_buffer</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Adds argument to buffer. Returns elements consumed. </p>
+
+<p>Implements <a class="el" href="classDataFlow_1_1iBuffer.html#a045f71200fd4d615601c0d15dc1fc6a7">DataFlow::iBuffer&lt; T &gt;</a>.</p>
+
+</div>
+</div>
 <a id="a38b69f009d2482cbc43c0682582d5c7c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a38b69f009d2482cbc43c0682582d5c7c">&#9670;&nbsp;</a></span>get()</h2>
 

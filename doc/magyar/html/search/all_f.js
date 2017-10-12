@@ -7,5 +7,6 @@ var searchData=
   ['tennivalók_20listája',['Tennivalók listája',['../todo.html',1,'']]],
   ['transition',['Transition',['../namespaceTransition.html',1,'']]],
   ['transitioner',['Transitioner',['../classTransitioner.html',1,'Transitioner&lt; T, K &gt;'],['../classTransitioner.html#a58a6987a8dfdf85755da975e3c3057c4',1,'Transitioner::Transitioner()']]],
-  ['transitionfunction',['TransitionFunction',['../classTransitionFunction.html',1,'']]]
+  ['transitionfunction',['TransitionFunction',['../classTransitionFunction.html',1,'']]],
+  ['trianglegenerator',['TriangleGenerator',['../classMixer_1_1TriangleGenerator.html',1,'Mixer::TriangleGenerator&lt; T &gt;'],['../classMixer_1_1TriangleGenerator.html#aa93b80e0e16970fc49327255e427c7de',1,'Mixer::TriangleGenerator::TriangleGenerator()']]]
 ];

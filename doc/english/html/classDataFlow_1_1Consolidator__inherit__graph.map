@@ -1,3 +1,4 @@
 <map id="DataFlow::Consolidator&lt; T, K &gt;" name="DataFlow::Consolidator&lt; T, K &gt;">
-<area shape="rect" id="node2" href="$classDataFlow_1_1iSource.html" title="{DataFlow::iSource\&lt; T \&gt;\n||+ get()\l+ ~iSource()\l}" alt="" coords="5,5,168,97"/>
+<area shape="rect" id="node3" href="$classDataFlow_1_1Consolidator.html" title="{DataFlow::Consolidator\l\&lt; T, Consolidation::Accumulation \&gt;\n|&#45; consolidationMethod\l&#45; sources\l|+ attach()\l+ detach()\l+ getMethod()\l+ get()\l}" alt="" coords="5,375,233,525"/>
+<area shape="rect" id="node2" href="$classDataFlow_1_1iSource.html" title="{DataFlow::iSource\&lt; T \&gt;\n||+ get()\l+ ~iSource()\l}" alt="" coords="38,5,201,97"/>
 </map>

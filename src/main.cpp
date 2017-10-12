@@ -17,6 +17,8 @@
 #include <PortAudioBackend.h>
 #include <SineGenerator.h>
 #include <SawtoothGenerator.h>
+#include <TriangleGenerator.h>
+#include <SquareGenerator.h>
 #include <Consolidator.h>
 #include <ConsolidationMethods.h>
 #include <Applicator.h>
@@ -113,8 +115,10 @@ int main()
 		std::cout << a << std::endl;
 	}
 	
-	Mixer::SawtoothGenerator<float> sg(440,5, DEFAULT_CHANNELS, DEFAULT_SAMPLE_RATE);
-	Mixer::SawtoothGenerator<float> sg2(439,5, DEFAULT_CHANNELS, DEFAULT_SAMPLE_RATE);
+	Mixer::SineGenerator<float> sg(110, DEFAULT_CHANNELS, DEFAULT_SAMPLE_RATE);
+	Mixer::TriangleGenerator<float> sg2(110,20, DEFAULT_CHANNELS, DEFAULT_SAMPLE_RATE);
+	Mixer::SquareGenerator<float> sg3(110,20, DEFAULT_CHANNELS, DEFAULT_SAMPLE_RATE);
+	Mixer::SawtoothGenerator<float> sg4(110,20, DEFAULT_CHANNELS, DEFAULT_SAMPLE_RATE);
 	
 	DataFlow::Applicator<float,VolumeControl<float>> vc;
 	DataFlow::Applicator<float,VolumeControl<float>> vc2;
@@ -162,12 +166,13 @@ int main()
 	player.play();
 
 	bool b = true;
+	int counter = 1;
 	while (true)
 	{
-		std::this_thread::sleep_for(std::chrono::duration<int, std::ratio<1, 1>>(4));
+		std::this_thread::sleep_for(std::chrono::duration<int, std::ratio<1, 1>>(1));
 		player.pause();
 		
-		if (b)
+		/*if (b)
 		{
 			player.attach(applicator);
 			sg.setFrequency(880,2.0f,"linear");
@@ -180,7 +185,22 @@ int main()
 
 		if (b)
 			player.play();
-		b = !b;
+		b = !b;*/
+		switch (counter){
+			case 1 :
+			player.attach(sg);
+			break;
+			case 2 :
+			player.attach(sg2);
+			break;
+			case 3 :
+			player.attach(sg3);
+			break;
+			case 4 :
+			player.attach(sg4);
+			break;		
+		}
+		counter = (counter + 1) % 5;
 		
 	}
 //! \todo TODO: extract these tests to actual tests

@@ -1,3 +1,4 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$structtemplate__utils_1_1extract__inner__base_3_01C_3_01T_01_4_01_4.html" title="template_utils::extract\l_inner_base\&lt; C\&lt; T \&gt; \&gt;" alt="" coords="5,5,164,47"/>
+<area shape="rect" id="node1" href="$classMixer_1_1iAudioBackend.html" title="Mixer::iAudioBackend\&lt; T \&gt;" alt="" coords="5,5,187,32"/>
+<area shape="rect" id="node2" href="$classMixer_1_1PortAudioBackend.html" title="Mixer::PortAudioBackend\&lt; T \&gt;" alt="" coords="235,5,437,32"/>
 </map>
