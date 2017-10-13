@@ -34,20 +34,43 @@
                 "type": "UTILITY"
               },
               {
-                "buildDirectory": "/SharedWithWindows/Projects/szakdolgozat/build",
+                "artifacts": [
+                  "/SharedWithWindows/Projects/szakdolgozat/build/bin/Test"
+                ],
+                "buildDirectory": "/SharedWithWindows/Projects/szakdolgozat/build/test",
                 "fileGroups": [
                   {
-                    "isGenerated": true,
+                    "compileFlags": " -std=c++14 -g -O0 --coverage -fprofile-arcs -ftest-coverage -g  ",
+                    "includePath": [
+                      {
+                        "path": "/SharedWithWindows/Projects/szakdolgozat/inc"
+                      }
+                    ],
+                    "isGenerated": false,
+                    "language": "CXX",
                     "sources": [
-                      "build/CMakeFiles/cleanup",
-                      "build/CMakeFiles/cleanup.rule"
+                      "test_main.cpp",
+                      "../src/cheap_sawtooth_generator.cpp",
+                      "../src/cheap_square_generator.cpp",
+                      "../src/consolidation_methods.cpp",
+                      "../src/ogg_file_loader.cpp",
+                      "../src/portaudio_backend.cpp",
+                      "../src/queue_buffer.cpp",
+                      "../src/sawtooth_generator.cpp",
+                      "../src/sine_generator.cpp",
+                      "../src/square_generator.cpp",
+                      "../src/triangle_generator.cpp",
+                      "../src/vorbis_decoder.cpp"
                     ]
                   }
                 ],
-                "fullName": "cleanup",
-                "name": "cleanup",
-                "sourceDirectory": "/SharedWithWindows/Projects/szakdolgozat",
-                "type": "UTILITY"
+                "fullName": "Test",
+                "linkLanguageFlags": "-std=c++14 -g -O0 --coverage -fprofile-arcs -ftest-coverage -g",
+                "linkLibraries": "-Wl,-rpath,/usr/local/lib -lpthread /usr/local/lib/libgtest.a /usr/local/lib/libportaudio.so /usr/lib/x86_64-linux-gnu/libogg.so /usr/lib/x86_64-linux-gnu/libvorbis.so",
+                "linkerLanguage": "CXX",
+                "name": "Test",
+                "sourceDirectory": "/SharedWithWindows/Projects/szakdolgozat/test",
+                "type": "EXECUTABLE"
               },
               {
                 "buildDirectory": "/SharedWithWindows/Projects/szakdolgozat/build",
@@ -62,6 +85,22 @@
                 ],
                 "fullName": "doc",
                 "name": "doc",
+                "sourceDirectory": "/SharedWithWindows/Projects/szakdolgozat",
+                "type": "UTILITY"
+              },
+              {
+                "buildDirectory": "/SharedWithWindows/Projects/szakdolgozat/build",
+                "fileGroups": [
+                  {
+                    "isGenerated": true,
+                    "sources": [
+                      "build/CMakeFiles/cleanup",
+                      "build/CMakeFiles/cleanup.rule"
+                    ]
+                  }
+                ],
+                "fullName": "cleanup",
+                "name": "cleanup",
                 "sourceDirectory": "/SharedWithWindows/Projects/szakdolgozat",
                 "type": "UTILITY"
               },
@@ -81,6 +120,8 @@
                     "isGenerated": false,
                     "language": "CXX",
                     "sources": [
+                      "cheap_sawtooth_generator.cpp",
+                      "cheap_square_generator.cpp",
                       "consolidation_methods.cpp",
                       "main.cpp",
                       "ogg_file_loader.cpp",
@@ -101,50 +142,13 @@
                 "name": "Mixer",
                 "sourceDirectory": "/SharedWithWindows/Projects/szakdolgozat/src",
                 "type": "EXECUTABLE"
-              },
-              {
-                "artifacts": [
-                  "/SharedWithWindows/Projects/szakdolgozat/build/bin/Test"
-                ],
-                "buildDirectory": "/SharedWithWindows/Projects/szakdolgozat/build/test",
-                "fileGroups": [
-                  {
-                    "compileFlags": " -std=c++14 -g -O0 --coverage -fprofile-arcs -ftest-coverage -g  ",
-                    "includePath": [
-                      {
-                        "path": "/SharedWithWindows/Projects/szakdolgozat/inc"
-                      }
-                    ],
-                    "isGenerated": false,
-                    "language": "CXX",
-                    "sources": [
-                      "test_main.cpp",
-                      "../src/consolidation_methods.cpp",
-                      "../src/ogg_file_loader.cpp",
-                      "../src/portaudio_backend.cpp",
-                      "../src/queue_buffer.cpp",
-                      "../src/sawtooth_generator.cpp",
-                      "../src/sine_generator.cpp",
-                      "../src/square_generator.cpp",
-                      "../src/triangle_generator.cpp",
-                      "../src/vorbis_decoder.cpp"
-                    ]
-                  }
-                ],
-                "fullName": "Test",
-                "linkLanguageFlags": "-std=c++14 -g -O0 --coverage -fprofile-arcs -ftest-coverage -g",
-                "linkLibraries": "-Wl,-rpath,/usr/local/lib -lpthread /usr/local/lib/libgtest.a /usr/local/lib/libportaudio.so /usr/lib/x86_64-linux-gnu/libogg.so /usr/lib/x86_64-linux-gnu/libvorbis.so",
-                "linkerLanguage": "CXX",
-                "name": "Test",
-                "sourceDirectory": "/SharedWithWindows/Projects/szakdolgozat/test",
-                "type": "EXECUTABLE"
               }
             ]
           }
         ]
       }
     ],
-    "cookie": "0.07382876362278123",
+    "cookie": "0.40991049160527493",
     "inReplyTo": "codemodel",
     "type": "reply"
   }

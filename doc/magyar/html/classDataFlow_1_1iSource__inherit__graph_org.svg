@@ -125,8 +125,8 @@
 <path fill="none" stroke="midnightblue" d="M632.802,-337.498C646.806,-296.818 667.725,-236.045 681.844,-195.03"/>
 <polygon fill="none" stroke="midnightblue" points="629.433,-336.534 629.487,-347.129 636.052,-338.812 629.433,-336.534"/>
 </g>
-<!-- Node13 -->
-<g id="node7" class="node"><title>Node13</title>
+<!-- Node15 -->
+<g id="node7" class="node"><title>Node15</title>
 <g id="a_node7"><a xlink:href="classMixer_1_1SimplePlayer.html" target="_top" xlink:title="{Mixer::SimplePlayer\&lt; T \&gt;\n|&#45; backend\l&#45; source\l&#45; paused\l|+ get()\l+ pause()\l+ stop()\l+ play()\l+ attach()\l+ SimplePlayer()\l}">
 <polygon fill="none" stroke="black" points="796,-83 796,-217 924,-217 924,-83 796,-83"/>
 <text text-anchor="middle" x="860" y="-205" font-family="Helvetica,sans-Serif" font-size="10.00">Mixer::SimplePlayer&lt; T &gt;</text>
@@ -144,13 +144,13 @@
 </a>
 </g>
 </g>
-<!-- Node0&#45;&gt;Node13 -->
-<g id="edge6" class="edge"><title>Node0&#45;&gt;Node13</title>
+<!-- Node0&#45;&gt;Node15 -->
+<g id="edge6" class="edge"><title>Node0&#45;&gt;Node15</title>
 <path fill="none" stroke="midnightblue" d="M688.626,-358.707C721.385,-345.799 758.96,-326.661 786,-300 809.24,-277.085 826.382,-245.369 838.281,-217.086"/>
 <polygon fill="none" stroke="midnightblue" points="687.176,-355.514 679.081,-362.349 689.671,-362.055 687.176,-355.514"/>
 </g>
-<!-- Node14 -->
-<g id="node8" class="node"><title>Node14</title>
+<!-- Node16 -->
+<g id="node8" class="node"><title>Node16</title>
 <g id="a_node8"><a xlink:href="classOggFileLoader.html" target="_top" xlink:title="{OggFileLoader\&lt; T \&gt;\n|&#45; infile\l&#45; eos\l&#45; buffer\l&#45; oy\l&#45; os\l&#45; currentPage\l&#45; currentPacket\l&#45; decoder\l&#45; overflow\l&#45; streamInitialized\l|+ open()\l+ init()\l+ close()\l+ clear()\l+ get()\l+ getDecoder()\l+ OggFileLoader()\l+ ~OggFileLoader()\l+ init()\l&#45; initStream()\l&#45; read()\l&#45; readNextPage()\l&#45; nextPage()\l&#45; nextPacket()\l}">
 <polygon fill="none" stroke="black" points="942,-0.5 942,-299.5 1046,-299.5 1046,-0.5 942,-0.5"/>
 <text text-anchor="middle" x="994" y="-287.5" font-family="Helvetica,sans-Serif" font-size="10.00">OggFileLoader&lt; T &gt;</text>
@@ -183,13 +183,13 @@
 </a>
 </g>
 </g>
-<!-- Node0&#45;&gt;Node14 -->
-<g id="edge7" class="edge"><title>Node0&#45;&gt;Node14</title>
+<!-- Node0&#45;&gt;Node16 -->
+<g id="edge7" class="edge"><title>Node0&#45;&gt;Node16</title>
 <path fill="none" stroke="midnightblue" d="M689.077,-380.035C759.011,-375.891 864.926,-359.251 933,-300 936.057,-297.339 938.964,-294.502 941.727,-291.516"/>
 <polygon fill="none" stroke="midnightblue" points="688.833,-376.542 679.029,-380.559 689.198,-383.533 688.833,-376.542"/>
 </g>
-<!-- Node15 -->
-<g id="node9" class="node"><title>Node15</title>
+<!-- Node17 -->
+<g id="node9" class="node"><title>Node17</title>
 <g id="a_node9"><a xlink:href="classDataFlow_1_1iSource.html" target="_top" xlink:title="{DataFlow::iSource\&lt;\l float \&gt;\n||+ get()\l+ ~iSource()\l}">
 <polygon fill="none" stroke="red" points="1064,-110.5 1064,-189.5 1168,-189.5 1168,-110.5 1064,-110.5"/>
 <text text-anchor="start" x="1072" y="-177.5" font-family="Helvetica,sans-Serif" font-size="10.00">DataFlow::iSource&lt;</text>
@@ -202,8 +202,8 @@
 </a>
 </g>
 </g>
-<!-- Node0&#45;&gt;Node15 -->
-<g id="edge8" class="edge"><title>Node0&#45;&gt;Node15</title>
+<!-- Node0&#45;&gt;Node17 -->
+<g id="edge8" class="edge"><title>Node0&#45;&gt;Node17</title>
 <path fill="none" stroke="orange" d="M689.631,-375.725C798.95,-367.077 1000.49,-345.348 1055,-300 1088.2,-272.379 1103.54,-223.827 1110.49,-189.669"/>
 <polygon fill="orange" stroke="orange" points="689.048,-372.26 679.348,-376.522 689.588,-379.239 689.048,-372.26"/>
 <text text-anchor="middle" x="1037" y="-321" font-family="Helvetica,sans-Serif" font-size="10.00"> &lt; float &gt;</text>
