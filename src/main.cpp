@@ -1,6 +1,5 @@
 //!\todo TODO:microphone
 //!\todo TODO:modulating filter
-//!\todo TODO: remake waveform generators without mixing: efficient AND perfect
 //!\todo TODO: file endpoint
 
 #include <iostream>
@@ -23,6 +22,8 @@
 #include <Applicator.h>
 #include <Clipping.h>
 #include <VolumeControl.h>
+
+#include <VorbisEncoder.h>
 
 #include <QueueBuffer.h>
 #include <VorbisDecoder.h>
@@ -115,22 +116,26 @@ int main()
 	}
 	
 	Mixer::CheapSawtoothGenerator<float> sg(227.2,DEFAULT_CHANNELS, DEFAULT_SAMPLE_RATE);
-	Mixer::TriangleGenerator<float> sg2(110,20, DEFAULT_CHANNELS, DEFAULT_SAMPLE_RATE);
+	Mixer::SineGenerator<float> sg2(110, DEFAULT_CHANNELS, DEFAULT_SAMPLE_RATE);
 	Mixer::CheapSquareGenerator<float> sg3(110, DEFAULT_CHANNELS, DEFAULT_SAMPLE_RATE);
 	Mixer::SawtoothGenerator<float> sg4(110,20, DEFAULT_CHANNELS, DEFAULT_SAMPLE_RATE);
 	
 	DataFlow::Applicator<float,VolumeControl<float>> vc;
 	DataFlow::Applicator<float,VolumeControl<float>> vc2;
+	DataFlow::Applicator<float,VolumeControl<float>> vc3;
 	vc.getMethod().setVolume(0.3f);
 	vc2.getMethod().setVolume(0.3f);
-
+	vc3.getMethod().setVolume(0.3f);
+	
 	vc.attach(sg);
 	vc2.attach(sg2);
-
+	vc3.attach(loader);
+	
 	DataFlow::Consolidator<float, Consolidation::Accumulation> consolidator;
 	consolidator.attach(vc);
-	//consolidator.attach(vc2);
-
+	consolidator.attach(vc2);
+	consolidator.attach(vc3);
+	
 	DataFlow::Applicator<float, Clipping::Hard> applicator;
 	applicator.attach(consolidator);
 
@@ -160,47 +165,60 @@ int main()
 	// 	}
 	// });
 
-	Mixer::SimplePlayer<float, Mixer::PortAudioBackend> player(DEFAULT_CHANNELS, DEFAULT_SAMPLE_RATE);
-	player.attach(applicator);
-	player.play();
+	//Mixer::SimplePlayer<float, Mixer::PortAudioBackend> player(DEFAULT_CHANNELS, DEFAULT_SAMPLE_RATE);
+	//player.attach(applicator);
+	//player.play();
 
-	bool b = true;
-	int counter = 1;
-	while (true)
-	{
-		std::this_thread::sleep_for(std::chrono::duration<int, std::ratio<1, 1>>(3));
-		player.pause();
-		
-		if (b)
-		{
-			player.attach(applicator);
-			sg.setFrequency(220,1.0f);
-		}
-		else
-		{
-			player.attach(applicator);
-			sg.setFrequency(880,1.0f,"ease-out",4);
-		}
-
-		player.play();
-		b = !b;
-		/*switch (counter){
-			case 1 :
-			sg.setFrequency(880);
-			break;
-			case 2 :
-			sg.setFrequency(990);
-			break;
-			case 3 :
-			sg.setFrequency(1760);
-			break;
-			case 4 :
-			sg.setFrequency(1870);
-			break;		
-		}
-		counter = (counter + 1) % 5;
-		*/
+	VorbisEncoder encoder(DEFAULT_CHANNELS,DEFAULT_SAMPLE_RATE,1);
+	encoder.open("test.ogg");
+	encoder.addComment(std::make_pair ("test","comment"));
+	encoder.initEncoding();
+	int c = 0;
+	while(c<DEFAULT_SAMPLE_RATE*DEFAULT_CHANNELS*10){
+		auto vec = applicator.get(512);
+		c+=vec.size();
+		encoder.add(vec);
 	}
+	encoder.close();
+	std::cout<<"Done with the file."<<std::endl;
+
+	// bool b = true;
+	// int counter = 1;
+	// while (true)
+	// {
+	// 	std::this_thread::sleep_for(std::chrono::duration<int, std::ratio<1, 1>>(3));
+	// 	player.pause();
+		
+	// 	if (b)
+	// 	{
+	// 		player.attach(applicator);
+	// 		sg.setFrequency(220,1.0f);
+	// 	}
+	// 	else
+	// 	{
+	// 		player.attach(applicator);
+	// 		sg.setFrequency(880,1.0f,"ease-out",4);
+	// 	}
+
+	// 	player.play();
+	// 	b = !b;
+	// 	/*switch (counter){
+	// 		case 1 :
+	// 		sg.setFrequency(880);
+	// 		break;
+	// 		case 2 :
+	// 		sg.setFrequency(990);
+	// 		break;
+	// 		case 3 :
+	// 		sg.setFrequency(1760);
+	// 		break;
+	// 		case 4 :
+	// 		sg.setFrequency(1870);
+	// 		break;		
+	// 	}
+	// 	counter = (counter + 1) % 5;
+	// 	*/
+	// }
 //! \todo TODO: extract these tests to actual tests
 //TMP: buffer test
 //#define BUFFER_TEST

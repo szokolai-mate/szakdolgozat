@@ -3,6 +3,7 @@ find_library(LIB_GTEST gtest)
 find_library(LIB_PORTAUDIO portaudio)
 find_library(LIB_OGG ogg)
 find_library(LIB_VORBIS vorbis)
+find_library(LIB_VORBISENC vorbis)
 
 FIND_PROGRAM( GCOV_PATH gcov )
 FIND_PROGRAM( LCOV_PATH lcov )
@@ -28,6 +29,7 @@ target_link_libraries(Test "${LIB_GTEST}")
 target_link_libraries(Test "${LIB_PORTAUDIO}")
 target_link_libraries(Test "${LIB_OGG}")
 target_link_libraries(Test "${LIB_VORBIS}")
+target_link_libraries(Test "${LIB_VORBISENC}")
 
 add_custom_target(coverage
 DEPENDS Test
