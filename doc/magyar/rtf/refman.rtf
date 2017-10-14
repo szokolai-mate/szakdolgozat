@@ -84,7 +84,7 @@
 {\info 
 {\title {\comment Szakdolgozat }Szakdolgozat}
 {\comment K\'E9sz\'EDtetteDoxgyen. }
-{\creatim \yr2017\mo10\dy14\hr11\min14\sec26}
+{\creatim \yr2017\mo10\dy14\hr11\min20\sec26}
 }\pard\plain 
 \sectd\pgnlcrm
 {\footer \s29\widctlpar\tqc\tx4320\tqr\tx8640\qr\adjustright \fs20\cgrid {\chpgn}}
@@ -6188,7 +6188,20 @@ R\'E9szletes le\'EDr\'E1s\par
 {
 \pard\plain \s17\sa60\sb30\widctlpar\qj \fs22\cgrid {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
 Vorbis kodekkel, OGG fomr\'E1tumba k\'F3dol\'E1sra haszn\'E1lt oszt\'E1ly.\par
-Vesztes\'E9ges k\'F3dol\'E1s. V\'E1ltoz\'F3 bitr\'E1t\'E1t haszn\'E1l. \par
+Vesztes\'E9ges k\'F3dol\'E1s. V\'E1ltoz\'F3 bitr\'E1t\'E1t haszn\'E1l.\par
+Haszn\'E1lat:\par
+{
+\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+f\'E1jl megnyit\'E1sa : {\b open()}\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+kommentek hozz\'E1ad\'E1sa : {\b addComment()}\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b initEncoding()}\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+adat hozz\'E1ad\'E1sa : {\b add()}\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+f\'E1jl befejez\'E9se : {\b close()} \par}
 }}
 \pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
 Publikus tagf\'FCggv\'E9nyek\par
@@ -6286,19 +6299,6 @@ void VorbisEncoder::addComment (const std::pair< std::string, std::string > &  {
 {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
 A komment hozz\'E1ad\'E1sa a fejl\'E9chez.\par
 A kommentek k\'E9t string-b\'F5l \'E1llnak, a kulcs \'E9s az \'E9rt\'E9k.\par
-Usage:\par
-{
-\par
-\pard\plain \s81\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls2\adjustright \fs20\cgrid 
-f\'E1jl megnyit\'E1sa : {\b open()}\par
-\pard\plain \s81\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls2\adjustright \fs20\cgrid 
-kommentek hozz\'E1ad\'E1sa : {\b addComment()}\par
-\pard\plain \s81\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls2\adjustright \fs20\cgrid 
-{\b initEncoding()}\par
-\pard\plain \s81\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls2\adjustright \fs20\cgrid 
-adat hozz\'E1ad\'E1sa : {\b add()}\par
-\pard\plain \s81\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls2\adjustright \fs20\cgrid 
-f\'E1jl befejez\'E9se : {\b close()}\par}
 packet a hozz\'E1adand\'F3 komment \par
 }}
 {\xe \v close\:VorbisEncoder}

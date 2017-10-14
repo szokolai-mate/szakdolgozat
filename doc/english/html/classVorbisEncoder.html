@@ -70,7 +70,15 @@ $(function() {
 <p><code>#include &lt;<a class="el" href="VorbisEncoder_8h_source.html">VorbisEncoder.h</a>&gt;</code></p>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Class used for encoding data into OGG format, with Vorbis encoding.</p>
-<p>Lossy encoding. Uses variable bitrate encoding. </p>
+<p>Lossy encoding. Uses variable bitrate encoding.</p>
+<p>Usage:</p>
+<ul>
+<li>open file with <a class="el" href="classVorbisEncoder.html#a6e2a3957f3bef64e28f63cdd89b796b7">open()</a></li>
+<li>add comments to header with <a class="el" href="classVorbisEncoder.html#a310f964e33f09c037fbaa0735140125d">addComment()</a></li>
+<li><a class="el" href="classVorbisEncoder.html#a5800bed0e227a3856a2dc6d1f1ae6899">initEncoding()</a></li>
+<li>add audio data with <a class="el" href="classVorbisEncoder.html#a2d0faeae161d7c6f10aa407289c718d1">add()</a></li>
+<li>when finished use <a class="el" href="classVorbisEncoder.html#a8f10a093cb8309e99b68386ab862125a">close()</a> </li>
+</ul>
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -173,21 +181,12 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>Add the comment to the header.</p>
 <p>Comments are a pair of strings, a key and a value.</p>
-<p>Usage:</p>
-<ul>
-<li>open file with <a class="el" href="classVorbisEncoder.html#a6e2a3957f3bef64e28f63cdd89b796b7">open()</a></li>
-<li>add comments to header with <a class="el" href="classVorbisEncoder.html#a310f964e33f09c037fbaa0735140125d">addComment()</a></li>
-<li><a class="el" href="classVorbisEncoder.html#a5800bed0e227a3856a2dc6d1f1ae6899">initEncoding()</a></li>
-<li>add audio data with <a class="el" href="classVorbisEncoder.html#a2d0faeae161d7c6f10aa407289c718d1">add()</a></li>
-<li><p class="startli">when finished use <a class="el" href="classVorbisEncoder.html#a8f10a093cb8309e99b68386ab862125a">close()</a></p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">comment</td><td>the comment to add </td></tr>
   </table>
   </dd>
 </dl>
-</li>
-</ul>
 
 </div>
 </div>

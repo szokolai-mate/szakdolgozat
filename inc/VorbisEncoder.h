@@ -9,10 +9,27 @@
 
 /*! \~english Class used for encoding data into OGG format, with Vorbis encoding.
 
-Lossy encoding. Uses variable bitrate encoding.
+    Lossy encoding. Uses variable bitrate encoding.
+
+     Usage:
+
+     - open file with open()
+     - add comments to header with addComment()
+     - initEncoding()
+     - add audio data with add()
+     - when finished use close()
+
     \~hungarian Vorbis kodekkel, OGG fomrátumba kódolásra használt osztály.
 
     Veszteséges kódolás. Változó bitrátát használ.
+
+    Használat:
+
+    - fájl megnyitása : open()
+    - kommentek hozzáadása : addComment()
+    - initEncoding()
+    - adat hozzáadása : add()
+    - fájl befejezése : close()
 */
 class VorbisEncoder{
 private:
@@ -36,25 +53,10 @@ public:
 
      Comments are a pair of strings, a key and a value.
 
-     Usage:
-
-     - open file with open()
-     - add comments to header with addComment()
-     - initEncoding()
-     - add audio data with add()
-     - when finished use close()
 
         \~hungarian A komment hozzáadása a fejléchez.
 
         A kommentek két string-ből állnak, a kulcs és az érték.
-
-        Usage:
-
-        - fájl megnyitása : open()
-        - kommentek hozzáadása : addComment()
-        - initEncoding()
-        - adat hozzáadása : add()
-        - fájl befejezése : close()
 
         \~english \param comment the comment to add
                       \~hungarian \comment packet a hozzáadandó komment

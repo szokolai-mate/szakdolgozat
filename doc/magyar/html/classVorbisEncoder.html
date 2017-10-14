@@ -70,7 +70,15 @@ $(function() {
 <p><code>#include &lt;<a class="el" href="VorbisEncoder_8h_source.html">VorbisEncoder.h</a>&gt;</code></p>
 <a name="details" id="details"></a><h2 class="groupheader">Részletes leírás</h2>
 <div class="textblock"><p>Vorbis kodekkel, OGG fomrátumba kódolásra használt osztály.</p>
-<p>Veszteséges kódolás. Változó bitrátát használ. </p>
+<p>Veszteséges kódolás. Változó bitrátát használ.</p>
+<p>Használat:</p>
+<ul>
+<li>fájl megnyitása : <a class="el" href="classVorbisEncoder.html#a6e2a3957f3bef64e28f63cdd89b796b7">open()</a></li>
+<li>kommentek hozzáadása : <a class="el" href="classVorbisEncoder.html#a310f964e33f09c037fbaa0735140125d">addComment()</a></li>
+<li><a class="el" href="classVorbisEncoder.html#a5800bed0e227a3856a2dc6d1f1ae6899">initEncoding()</a></li>
+<li>adat hozzáadása : <a class="el" href="classVorbisEncoder.html#a2d0faeae161d7c6f10aa407289c718d1">add()</a></li>
+<li>fájl befejezése : <a class="el" href="classVorbisEncoder.html#a8f10a093cb8309e99b68386ab862125a">close()</a> </li>
+</ul>
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Publikus tagfüggvények</h2></td></tr>
@@ -173,14 +181,6 @@ Publikus tagfüggvények</h2></td></tr>
 </div><div class="memdoc">
 <p>A komment hozzáadása a fejléchez.</p>
 <p>A kommentek két string-ből állnak, a kulcs és az érték.</p>
-<p>Usage:</p>
-<ul>
-<li>fájl megnyitása : <a class="el" href="classVorbisEncoder.html#a6e2a3957f3bef64e28f63cdd89b796b7">open()</a></li>
-<li>kommentek hozzáadása : <a class="el" href="classVorbisEncoder.html#a310f964e33f09c037fbaa0735140125d">addComment()</a></li>
-<li><a class="el" href="classVorbisEncoder.html#a5800bed0e227a3856a2dc6d1f1ae6899">initEncoding()</a></li>
-<li>adat hozzáadása : <a class="el" href="classVorbisEncoder.html#a2d0faeae161d7c6f10aa407289c718d1">add()</a></li>
-<li>fájl befejezése : <a class="el" href="classVorbisEncoder.html#a8f10a093cb8309e99b68386ab862125a">close()</a></li>
-</ul>
 <p>packet a hozzáadandó komment </p>
 
 </div>
