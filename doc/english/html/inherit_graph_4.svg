@@ -8,8 +8,8 @@
  viewBox="0.00 0.00 556.00 370.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 <g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 366)">
 <title>Graphical Class Hierarchy</title>
-<!-- Node45 -->
-<g id="node1" class="node"><title>Node45</title>
+<!-- Node46 -->
+<g id="node1" class="node"><title>Node46</title>
 <g id="a_node1"><a xlink:href="classMixer_1_1AudioSource.html" target="_top" xlink:title="Mixer::AudioSource">
 <polygon fill="none" stroke="black" points="192.5,-152.5 192.5,-171.5 294.5,-171.5 294.5,-152.5 192.5,-152.5"/>
 <text text-anchor="middle" x="243.5" y="-159.5" font-family="Helvetica,sans-Serif" font-size="10.00">Mixer::AudioSource</text>
@@ -24,8 +24,8 @@
 </a>
 </g>
 </g>
-<!-- Node45&#45;&gt;Node7 -->
-<g id="edge1" class="edge"><title>Node45&#45;&gt;Node7</title>
+<!-- Node46&#45;&gt;Node7 -->
+<g id="edge1" class="edge"><title>Node46&#45;&gt;Node7</title>
 <path fill="none" stroke="midnightblue" d="M304.703,-172.842C335.556,-178.399 372.789,-185.104 402.539,-190.462"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="304.966,-169.333 294.504,-171.005 303.725,-176.223 304.966,-169.333"/>
 </g>
@@ -37,8 +37,8 @@
 </a>
 </g>
 </g>
-<!-- Node45&#45;&gt;Node8 -->
-<g id="edge2" class="edge"><title>Node45&#45;&gt;Node8</title>
+<!-- Node46&#45;&gt;Node8 -->
+<g id="edge2" class="edge"><title>Node46&#45;&gt;Node8</title>
 <path fill="none" stroke="midnightblue" d="M304.557,-162C324.899,-162 348.027,-162 369.961,-162"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="304.504,-158.5 294.504,-162 304.504,-165.5 304.504,-158.5"/>
 </g>
@@ -50,8 +50,8 @@
 </a>
 </g>
 </g>
-<!-- Node45&#45;&gt;Node9 -->
-<g id="edge3" class="edge"><title>Node45&#45;&gt;Node9</title>
+<!-- Node46&#45;&gt;Node9 -->
+<g id="edge3" class="edge"><title>Node46&#45;&gt;Node9</title>
 <path fill="none" stroke="midnightblue" d="M304.323,-166.638C313.5,-169.688 322.175,-174.252 329,-181 378.369,-229.81 315.285,-284.542 365,-333 369.024,-336.922 373.639,-340.127 378.609,-342.737"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="305.203,-163.251 294.633,-163.98 303.351,-170.001 305.203,-163.251"/>
 </g>
@@ -64,8 +64,8 @@
 </a>
 </g>
 </g>
-<!-- Node45&#45;&gt;Node13 -->
-<g id="edge4" class="edge"><title>Node45&#45;&gt;Node13</title>
+<!-- Node46&#45;&gt;Node13 -->
+<g id="edge4" class="edge"><title>Node46&#45;&gt;Node13</title>
 <path fill="none" stroke="midnightblue" d="M300.443,-150.334C332.662,-143.616 372.859,-135.233 404.252,-128.687"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="299.359,-146.985 290.284,-152.453 300.788,-153.837 299.359,-146.985"/>
 </g>
@@ -77,8 +77,8 @@
 </a>
 </g>
 </g>
-<!-- Node45&#45;&gt;Node10 -->
-<g id="edge5" class="edge"><title>Node45&#45;&gt;Node10</title>
+<!-- Node46&#45;&gt;Node10 -->
+<g id="edge5" class="edge"><title>Node46&#45;&gt;Node10</title>
 <path fill="none" stroke="midnightblue" d="M304.522,-167.27C313.523,-170.267 322.088,-174.65 329,-181 368.128,-216.946 325.617,-259.333 365,-295 372.021,-301.358 380.612,-305.795 389.678,-308.858"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="305.212,-163.829 294.641,-164.533 303.344,-170.575 305.212,-163.829"/>
 </g>
@@ -90,8 +90,8 @@
 </a>
 </g>
 </g>
-<!-- Node45&#45;&gt;Node11 -->
-<g id="edge6" class="edge"><title>Node45&#45;&gt;Node11</title>
+<!-- Node46&#45;&gt;Node11 -->
+<g id="edge6" class="edge"><title>Node46&#45;&gt;Node11</title>
 <path fill="none" stroke="midnightblue" d="M304.447,-168.31C313.305,-171.198 321.844,-175.274 329,-181 358.184,-204.35 335.65,-233.858 365,-257 370.799,-261.573 377.436,-265.115 384.423,-267.851"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="305.333,-164.924 294.761,-165.621 303.461,-171.669 305.333,-164.924"/>
 </g>
@@ -103,21 +103,21 @@
 </a>
 </g>
 </g>
-<!-- Node45&#45;&gt;Node12 -->
-<g id="edge7" class="edge"><title>Node45&#45;&gt;Node12</title>
+<!-- Node46&#45;&gt;Node12 -->
+<g id="edge7" class="edge"><title>Node46&#45;&gt;Node12</title>
 <path fill="none" stroke="midnightblue" d="M304.29,-170.766C312.897,-173.345 321.401,-176.682 329,-181 349.226,-192.495 344.692,-207.649 365,-219 372.007,-222.916 379.729,-226.028 387.62,-228.499"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="305.137,-167.37 294.572,-168.165 303.327,-174.132 305.137,-167.37"/>
 </g>
-<!-- Node36 -->
-<g id="node9" class="node"><title>Node36</title>
+<!-- Node37 -->
+<g id="node9" class="node"><title>Node37</title>
 <g id="a_node9"><a xlink:href="classMixer_1_1iPlayer.html" target="_top" xlink:title="Mixer::iPlayer">
 <polygon fill="none" stroke="black" points="205,-76.5 205,-95.5 282,-95.5 282,-76.5 205,-76.5"/>
 <text text-anchor="middle" x="243.5" y="-83.5" font-family="Helvetica,sans-Serif" font-size="10.00">Mixer::iPlayer</text>
 </a>
 </g>
 </g>
-<!-- Node36&#45;&gt;Node13 -->
-<g id="edge8" class="edge"><title>Node36&#45;&gt;Node13</title>
+<!-- Node37&#45;&gt;Node13 -->
+<g id="edge8" class="edge"><title>Node37&#45;&gt;Node13</title>
 <path fill="none" stroke="midnightblue" d="M292.197,-93.2336C325.568,-98.2946 370.1,-105.048 404.231,-110.225"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="292.634,-89.7601 282.223,-91.721 291.585,-96.6809 292.634,-89.7601"/>
 </g>

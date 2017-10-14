@@ -98,77 +98,25 @@ int main()
 	}
 #endif
 #endif
-
-	QueueBuffer<float> qb(DEFAULT_SAMPLE_RATE * DEFAULT_CHANNELS * 5);
-
-	std::string dancingQueen{"01 - Dancing Queen.ogg"};
-	std::string waterloo{"19 - Waterloo.ogg"};
-
-	OggFileLoader<float, VorbisDecoder> loader;
-
-	loader.open(dancingQueen);
-
-	loader.init();
-
-	for (auto a : loader.getDecoder().getComments())
-	{
-		std::cout << a << std::endl;
-	}
 	
-	Mixer::CheapSawtoothGenerator<float> sg(227.2,DEFAULT_CHANNELS, DEFAULT_SAMPLE_RATE);
+	Mixer::SquareGenerator<float> sg(227.2,50,DEFAULT_CHANNELS, DEFAULT_SAMPLE_RATE);
 	Mixer::SineGenerator<float> sg2(110, DEFAULT_CHANNELS, DEFAULT_SAMPLE_RATE);
-	Mixer::CheapSquareGenerator<float> sg3(110, DEFAULT_CHANNELS, DEFAULT_SAMPLE_RATE);
-	Mixer::SawtoothGenerator<float> sg4(110,20, DEFAULT_CHANNELS, DEFAULT_SAMPLE_RATE);
 	
 	DataFlow::Applicator<float,VolumeControl<float>> vc;
 	DataFlow::Applicator<float,VolumeControl<float>> vc2;
-	DataFlow::Applicator<float,VolumeControl<float>> vc3;
 	vc.getMethod().setVolume(0.3f);
-	vc2.getMethod().setVolume(0.3f);
-	vc3.getMethod().setVolume(0.3f);
+	vc2.getMethod().setVolume(0);
 	
 	vc.attach(sg);
 	vc2.attach(sg2);
-	vc3.attach(loader);
 	
 	DataFlow::Consolidator<float, Consolidation::Accumulation> consolidator;
 	consolidator.attach(vc);
 	consolidator.attach(vc2);
-	consolidator.attach(vc3);
 	
 	DataFlow::Applicator<float, Clipping::Hard> applicator;
 	applicator.attach(consolidator);
-
-	std::thread fillerThread([&] {
-		while (true)
-		{
-			std::vector<float> tmp(512,0);
-			int eaten = 0;
-			while(eaten<tmp.size()){
-				std::vector<float> doubletmp(tmp.begin()+eaten,tmp.end());
-				eaten+= qb.add(doubletmp);
-			}
-			
-			if (qb.isFull())
-			{
-				std::this_thread::yield();
-				std::this_thread::sleep_for(std::chrono::duration<int, std::ratio<1, 1000>>(1));
-			}
-		}
-	});
-
-	// std::thread sizeThread([&] {
-	// 	while (true)
-	// 	{
-	// 		std::cout << "Items in testbuffer: " << qb.size() << std::endl;
-	// 		std::this_thread::sleep_for(std::chrono::duration<int, std::ratio<1, 10>>(1));
-	// 	}
-	// });
-
-	//Mixer::SimplePlayer<float, Mixer::PortAudioBackend> player(DEFAULT_CHANNELS, DEFAULT_SAMPLE_RATE);
-	//player.attach(applicator);
-	//player.play();
-
+{
 	VorbisEncoder encoder(DEFAULT_CHANNELS,DEFAULT_SAMPLE_RATE,1);
 	encoder.open("test.ogg");
 	encoder.addComment(std::make_pair ("test","comment"));
@@ -180,7 +128,23 @@ int main()
 		encoder.add(vec);
 	}
 	encoder.close();
-	std::cout<<"Done with the file."<<std::endl;
+	std::cout<<"Done generating."<<std::endl;
+}
+	OggFileLoader<float, VorbisDecoder> loader;
+	
+	loader.open("test.ogg");
+	
+	loader.init();
+	
+	for (auto a : loader.getDecoder().getComments())
+	{
+		std::cout << a << std::endl;
+	}
+
+	Mixer::SimplePlayer<float, Mixer::PortAudioBackend> player(DEFAULT_CHANNELS, DEFAULT_SAMPLE_RATE);
+	player.attach(loader);
+	player.play();
+
 
 	// bool b = true;
 	// int counter = 1;
@@ -219,49 +183,6 @@ int main()
 	// 	counter = (counter + 1) % 5;
 	// 	*/
 	// }
-//! \todo TODO: extract these tests to actual tests
-//TMP: buffer test
-//#define BUFFER_TEST
-#ifdef BUFFER_TEST
-#define TEST_BUFFER_SIZE 90000
-	QueueBuffer<float> testbuffer(TEST_BUFFER_SIZE);
-
-	Mixer::SineGenerator<float> testsine(440,DEFAULT_CHANNELS,DEFAULT_SAMPLE_RATE);
-
-	std::thread fillerThread([&] {
-		while (true)
-		{
-			auto tmp = testsine.get(TEST_BUFFER_SIZE / 10);
-			int eaten = 0;
-			while(eaten<tmp.size()){
-				std::vector<float> doubletmp(tmp.begin()+eaten,tmp.end());
-				eaten+= testbuffer.add(doubletmp);
-			}
-			
-			if (testbuffer.isFull())
-			{
-				std::this_thread::yield();
-				std::this_thread::sleep_for(std::chrono::duration<int, std::ratio<1, 1000>>(1));
-			}
-		}
-	});
-
-	std::thread sizeThread([&] {
-		while (true)
-		{
-			std::cout << "Items in testbuffer: " << testbuffer.size() << std::endl;
-			std::this_thread::sleep_for(std::chrono::duration<int, std::ratio<1, 10>>(1));
-		}
-	});
-
-	Mixer::SimplePlayer<float, Mixer::PortAudioBackend> player(DEFAULT_CHANNELS, DEFAULT_SAMPLE_RATE);
-	player.attach(testbuffer);
-	player.play();
-
-
-	fillerThread.join();
-	sizeThread.join();
-#endif
 
 	std::cin.get();
 }

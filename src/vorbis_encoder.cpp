@@ -23,7 +23,7 @@ bool VorbisEncoder::open(const std::string & filename){
     return outfile.is_open();
 }
 
-void VorbisEncoder::addComment(std::pair<std::string,std::string> comment){
+void VorbisEncoder::addComment(const std::pair<std::string,std::string> & comment){
     vorbis_comment_add_tag(&vc,comment.first.c_str(),comment.second.c_str());    
 }
 
@@ -32,11 +32,17 @@ int VorbisEncoder::initEncoding(){
     ogg_packet header_comm;
     ogg_packet header_code;
 
-    vorbis_analysis_headerout(&vd,&vc,&header,&header_comm,&header_code);
-    ogg_stream_packetin(&os,&header); /* automatically placed in its own
+    int err;
+
+    err = vorbis_analysis_headerout(&vd,&vc,&header,&header_comm,&header_code);
+    if(err!=0){return err;}
+    err = ogg_stream_packetin(&os,&header); /* automatically placed in its own
                                          page */
-    ogg_stream_packetin(&os,&header_comm);
-    ogg_stream_packetin(&os,&header_code);
+    if(err!=0){return err;}                                         
+    err = ogg_stream_packetin(&os,&header_comm);
+    if(err!=0){return err;}    
+    err = ogg_stream_packetin(&os,&header_code);
+    if(err!=0){return err;}    
 
     /* This ensures the actual
      * audio data will start on a new page, as per spec
@@ -49,7 +55,7 @@ int VorbisEncoder::initEncoding(){
     }
 }
 
-int VorbisEncoder::add(const std::vector<float> pcmData){
+void VorbisEncoder::add(const std::vector<float> pcmData){
     /* expose the buffer to submit data */
     float **buffer=vorbis_analysis_buffer(&vd,pcmData.size()/channels);
     
@@ -91,6 +97,7 @@ int VorbisEncoder::add(const std::vector<float> pcmData){
 }
 
 bool VorbisEncoder::close(){
+    vorbis_analysis_wrote(&vd,0);
     outfile.close();
     return !outfile.is_open();
 }
