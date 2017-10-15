@@ -23,11 +23,11 @@
 </g>
 <!-- Node1 -->
 <g id="node2" class="node"><title>Node1</title>
-<g id="a_node2"><a xlink:href="classConsolidation_1_1Accumulation.html" target="_top" xlink:title="{Consolidation::Accumulation\&lt; T \&gt;\n|&#45; workspace\l|+ init()\l+ add()\l+ get()\l}">
+<g id="a_node2"><a xlink:href="classConsolidation_1_1Accumulation.html" target="_top" xlink:title="{Consolidation::Accumulation\&lt; T \&gt;\n||+ init()\l+ add()\l+ get()\l}">
 <polygon fill="none" stroke="black" points="0,-0.5 0,-79.5 165,-79.5 165,-0.5 0,-0.5"/>
 <text text-anchor="middle" x="82.5" y="-67.5" font-family="Helvetica,sans-Serif" font-size="10.00">Consolidation::Accumulation&lt; T &gt;</text>
 <polyline fill="none" stroke="black" points="0,-60.5 165,-60.5 "/>
-<text text-anchor="start" x="8" y="-48.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45; workspace</text>
+<text text-anchor="middle" x="82.5" y="-48.5" font-family="Helvetica,sans-Serif" font-size="10.00"> </text>
 <polyline fill="none" stroke="black" points="0,-41.5 165,-41.5 "/>
 <text text-anchor="start" x="8" y="-29.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ init()</text>
 <text text-anchor="start" x="8" y="-18.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ add()</text>
@@ -42,11 +42,11 @@
 </g>
 <!-- Node2 -->
 <g id="node3" class="node"><title>Node2</title>
-<g id="a_node3"><a xlink:href="classConsolidation_1_1Multiplication.html" target="_top" xlink:title="{Consolidation::Multiplication\&lt; T \&gt;\n|&#45; workspace\l|+ init()\l+ add()\l+ get()\l}">
+<g id="a_node3"><a xlink:href="classConsolidation_1_1Multiplication.html" target="_top" xlink:title="{Consolidation::Multiplication\&lt; T \&gt;\n||+ init()\l+ add()\l+ get()\l}">
 <polygon fill="none" stroke="black" points="183,-0.5 183,-79.5 346,-79.5 346,-0.5 183,-0.5"/>
 <text text-anchor="middle" x="264.5" y="-67.5" font-family="Helvetica,sans-Serif" font-size="10.00">Consolidation::Multiplication&lt; T &gt;</text>
 <polyline fill="none" stroke="black" points="183,-60.5 346,-60.5 "/>
-<text text-anchor="start" x="191" y="-48.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45; workspace</text>
+<text text-anchor="middle" x="264.5" y="-48.5" font-family="Helvetica,sans-Serif" font-size="10.00"> </text>
 <polyline fill="none" stroke="black" points="183,-41.5 346,-41.5 "/>
 <text text-anchor="start" x="191" y="-29.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ init()</text>
 <text text-anchor="start" x="191" y="-18.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ add()</text>

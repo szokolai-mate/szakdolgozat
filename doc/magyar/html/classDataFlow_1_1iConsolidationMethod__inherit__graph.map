@@ -1,4 +1,4 @@
 <map id="DataFlow::iConsolidationMethod&lt; T &gt;" name="DataFlow::iConsolidationMethod&lt; T &gt;">
-<area shape="rect" id="node2" href="$classConsolidation_1_1Accumulation.html" title="{Consolidation::Accumulation\&lt; T \&gt;\n|&#45; workspace\l|+ init()\l+ add()\l+ get()\l}" alt="" coords="5,189,225,296"/>
-<area shape="rect" id="node3" href="$classConsolidation_1_1Multiplication.html" title="{Consolidation::Multiplication\&lt; T \&gt;\n|&#45; workspace\l|+ init()\l+ add()\l+ get()\l}" alt="" coords="249,189,467,296"/>
+<area shape="rect" id="node2" href="$classConsolidation_1_1Accumulation.html" title="{Consolidation::Accumulation\&lt; T \&gt;\n||+ init()\l+ add()\l+ get()\l}" alt="" coords="5,189,225,296"/>
+<area shape="rect" id="node3" href="$classConsolidation_1_1Multiplication.html" title="{Consolidation::Multiplication\&lt; T \&gt;\n||+ init()\l+ add()\l+ get()\l}" alt="" coords="249,189,467,296"/>
 </map>

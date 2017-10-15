@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['_7etransitionfunction',['~TransitionFunction',['../classTransitionFunction.html#af8401ccc8f9fed80eb03805e47bdef28',1,'TransitionFunction']]]
+  ['volumecontrol',['VolumeControl',['../classVolumeControl.html',1,'']]],
+  ['vorbisdecoder',['VorbisDecoder',['../classVorbisDecoder.html',1,'VorbisDecoder'],['../classVorbisDecoder.html#a637929d707ce75b456b1bf4c764876ea',1,'VorbisDecoder::VorbisDecoder()']]],
+  ['vorbisencoder',['VorbisEncoder',['../classVorbisEncoder.html',1,'VorbisEncoder'],['../classVorbisEncoder.html#a64110ac08512b69bc1af45ebdb19150d',1,'VorbisEncoder::VorbisEncoder()']]]
 ];

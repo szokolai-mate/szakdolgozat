@@ -61,7 +61,6 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pri-methods">Private Member Functions</a> &#124;
 <a href="classOggFileLoader-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">OggFileLoader&lt; T, K &gt; Class Template Reference</div>  </div>
@@ -72,7 +71,7 @@ $(function() {
 <div class="dynheader">
 Inheritance diagram for OggFileLoader&lt; T, K &gt;:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classOggFileLoader__inherit__graph.svg" width="174" height="551"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classOggFileLoader__inherit__graph.svg" width="174" height="346"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><h3>template&lt;typename T, typename K&gt;<br />
@@ -99,19 +98,6 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a0e01d930726fdd328af51fb6c156634e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a507d114b16c86dbde099a360157d0415"><td class="memItemLeft" align="right" valign="top">const K &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classOggFileLoader.html#a507d114b16c86dbde099a360157d0415">getDecoder</a> ()</td></tr>
 <tr class="separator:a507d114b16c86dbde099a360157d0415"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
-Private Member Functions</h2></td></tr>
-<tr class="memitem:a98f61e3908610c549d2b47861c066406"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classOggFileLoader.html#a98f61e3908610c549d2b47861c066406">initStream</a> (ogg_page &amp;page)</td></tr>
-<tr class="separator:a98f61e3908610c549d2b47861c066406"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5ba0c2a63e96c9b6815585310e10d504"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classOggFileLoader.html#a5ba0c2a63e96c9b6815585310e10d504">read</a> ()</td></tr>
-<tr class="separator:a5ba0c2a63e96c9b6815585310e10d504"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac00acf3900b694cfa9d242068b443413"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classOggFileLoader.html#ac00acf3900b694cfa9d242068b443413">readNextPage</a> ()</td></tr>
-<tr class="separator:ac00acf3900b694cfa9d242068b443413"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a47b37c1962662ac4de4b88541d9e7295"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classOggFileLoader.html#a47b37c1962662ac4de4b88541d9e7295">nextPage</a> ()</td></tr>
-<tr class="separator:a47b37c1962662ac4de4b88541d9e7295"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9b1b15e250c29f1fcafbdf0cd1e5e590"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classOggFileLoader.html#a9b1b15e250c29f1fcafbdf0cd1e5e590">nextPacket</a> ()</td></tr>
-<tr class="separator:a9b1b15e250c29f1fcafbdf0cd1e5e590"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Function Documentation</h2>
 <a id="a18b14be2466a962f53bb7c411ec46268"></a>
@@ -231,91 +217,6 @@ template&lt;typename T, typename K&gt; </div>
 
 </div>
 </div>
-<a id="a98f61e3908610c549d2b47861c066406"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a98f61e3908610c549d2b47861c066406">&#9670;&nbsp;</a></span>initStream()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T , typename K &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">int <a class="el" href="classOggFileLoader.html">OggFileLoader</a>&lt; T, K &gt;::initStream </td>
-          <td>(</td>
-          <td class="paramtype">ogg_page &amp;&#160;</td>
-          <td class="paramname"><em>page</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Initialize libogg. </p><dl class="section return"><dt>Returns</dt><dd>error code form libogg </dd></dl>
-
-</div>
-</div>
-<a id="a9b1b15e250c29f1fcafbdf0cd1e5e590"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9b1b15e250c29f1fcafbdf0cd1e5e590">&#9670;&nbsp;</a></span>nextPacket()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T , typename K &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">int <a class="el" href="classOggFileLoader.html">OggFileLoader</a>&lt; T, K &gt;::nextPacket </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Get the next packet from the page put into libogg. </p><dl class="section return"><dt>Returns</dt><dd>error code form libogg </dd></dl>
-
-</div>
-</div>
-<a id="a47b37c1962662ac4de4b88541d9e7295"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a47b37c1962662ac4de4b88541d9e7295">&#9670;&nbsp;</a></span>nextPage()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T , typename K &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">int <a class="el" href="classOggFileLoader.html">OggFileLoader</a>&lt; T, K &gt;::nextPage </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Read the currentPage into libogg's internal buffer. </p><dl class="section return"><dt>Returns</dt><dd>error code form libogg </dd></dl>
-
-</div>
-</div>
 <a id="a877b5980ca3e50479faf9680e3a704a1"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a877b5980ca3e50479faf9680e3a704a1">&#9670;&nbsp;</a></span>open()</h2>
 
@@ -334,62 +235,6 @@ template&lt;typename T , typename K &gt; </div>
       </table>
 </div><div class="memdoc">
 <p>Open file. </p><dl class="section return"><dt>Returns</dt><dd>whether operation was successful </dd></dl>
-
-</div>
-</div>
-<a id="a5ba0c2a63e96c9b6815585310e10d504"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5ba0c2a63e96c9b6815585310e10d504">&#9670;&nbsp;</a></span>read()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T , typename K &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">int <a class="el" href="classOggFileLoader.html">OggFileLoader</a>&lt; T, K &gt;::read </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Read data into libogg's internal buffer. </p><dl class="section return"><dt>Returns</dt><dd>error code form libogg </dd></dl>
-
-</div>
-</div>
-<a id="ac00acf3900b694cfa9d242068b443413"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac00acf3900b694cfa9d242068b443413">&#9670;&nbsp;</a></span>readNextPage()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T , typename K &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">int <a class="el" href="classOggFileLoader.html">OggFileLoader</a>&lt; T, K &gt;::readNextPage </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Read the next page into this instance's currentPage. </p><dl class="section return"><dt>Returns</dt><dd>error code form libogg </dd></dl>
 
 </div>
 </div>

@@ -5,6 +5,7 @@
 #include <iostream>
 #include <thread>
 #include <chrono>
+#include <memory>
 
 #include <Utils.h>
 
@@ -22,6 +23,7 @@
 #include <Applicator.h>
 #include <Clipping.h>
 #include <VolumeControl.h>
+#include <SimpleNote.h>
 
 #include <VorbisEncoder.h>
 
@@ -99,13 +101,13 @@ int main()
 #endif
 #endif
 	
-	Mixer::SquareGenerator<float> sg(227.2,50,DEFAULT_CHANNELS, DEFAULT_SAMPLE_RATE);
-	Mixer::SineGenerator<float> sg2(110, DEFAULT_CHANNELS, DEFAULT_SAMPLE_RATE);
+	Mixer::SquareGenerator<float> sg(227.2,150,DEFAULT_CHANNELS, DEFAULT_SAMPLE_RATE);
+	Mixer::SineGenerator<float> sg2(80, DEFAULT_CHANNELS, DEFAULT_SAMPLE_RATE);
 	
 	DataFlow::Applicator<float,VolumeControl<float>> vc;
 	DataFlow::Applicator<float,VolumeControl<float>> vc2;
 	vc.getMethod().setVolume(0.3f);
-	vc2.getMethod().setVolume(0);
+	vc2.getMethod().setVolume(0.3f);
 	
 	vc.attach(sg);
 	vc2.attach(sg2);
@@ -116,14 +118,29 @@ int main()
 	
 	DataFlow::Applicator<float, Clipping::Hard> applicator;
 	applicator.attach(consolidator);
+
+	Mixer::SimpleNote<float,Transition::Linear,Transition::EaseOut::Cubic> note(0.2f,DEFAULT_CHANNELS,DEFAULT_SAMPLE_RATE);
+	note.attach(sg2);
+	note.setAttack(0.1f);
+	note.setDecay(0.12f);
+	note.bakeNote();
+
+	
+	DataFlow::Applicator<float,VolumeControl<float>> lower;
+	lower.getMethod().setVolume(0.5f);
+	lower.attach(note);
+	
+	
 {
 	VorbisEncoder encoder(DEFAULT_CHANNELS,DEFAULT_SAMPLE_RATE,1);
 	encoder.open("test.ogg");
 	encoder.addComment(std::make_pair ("test","comment"));
 	encoder.initEncoding();
 	int c = 0;
-	while(c<DEFAULT_SAMPLE_RATE*DEFAULT_CHANNELS*10){
-		auto vec = applicator.get(512);
+	while(c<DEFAULT_CHANNELS*DEFAULT_SAMPLE_RATE*10){
+		encoder.add(std::vector<float>(DEFAULT_CHANNELS*DEFAULT_SAMPLE_RATE*0.5f));
+		c+=DEFAULT_CHANNELS*DEFAULT_SAMPLE_RATE*0.5f;
+		auto vec = lower.get(note.getLength());
 		c+=vec.size();
 		encoder.add(vec);
 	}

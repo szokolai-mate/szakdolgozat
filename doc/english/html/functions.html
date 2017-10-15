@@ -79,7 +79,15 @@ $(function() {
 <li>attach()
 : <a class="el" href="classDataFlow_1_1Applicator.html#a1959c809e0e7726fb9051029e94ba14b">DataFlow::Applicator&lt; T, K &gt;</a>
 , <a class="el" href="classDataFlow_1_1Consolidator.html#a33229d15aa2ba097d46cd2dd71a692b6">DataFlow::Consolidator&lt; T, K &gt;</a>
+, <a class="el" href="classMixer_1_1SimpleNote.html#ae31185a6fc7952cbdde69010331637ef">Mixer::SimpleNote&lt; T, A, D &gt;</a>
 , <a class="el" href="classMixer_1_1SimplePlayer.html#a21b19ef0f628b2cf83d03002b20dff77">Mixer::SimplePlayer&lt; T, K &gt;</a>
+</li>
+</ul>
+
+
+<h3><a id="index_b"></a>- b -</h3><ul>
+<li>bakeNote()
+: <a class="el" href="classMixer_1_1SimpleNote.html#a772abbfc00a1dbd963748226f4ed1f91">Mixer::SimpleNote&lt; T, A, D &gt;</a>
 </li>
 </ul>
 
@@ -92,7 +100,8 @@ $(function() {
 : <a class="el" href="classMixer_1_1CheapSquareGenerator.html#ab8b6b9760bef0472e394dad547f13ca7">Mixer::CheapSquareGenerator&lt; T &gt;</a>
 </li>
 <li>clear()
-: <a class="el" href="classOggFileLoader.html#a18b14be2466a962f53bb7c411ec46268">OggFileLoader&lt; T, K &gt;</a>
+: <a class="el" href="classMixer_1_1SimpleNote.html#a4b18544f7d43a375ea77a1e05ba4bb06">Mixer::SimpleNote&lt; T, A, D &gt;</a>
+, <a class="el" href="classOggFileLoader.html#a18b14be2466a962f53bb7c411ec46268">OggFileLoader&lt; T, K &gt;</a>
 , <a class="el" href="classVorbisDecoder.html#a9d4ccb71f8996dc2c214c2f93df74f32">VorbisDecoder</a>
 </li>
 <li>close()
@@ -124,6 +133,7 @@ $(function() {
 , <a class="el" href="classMixer_1_1CheapSawtoothGenerator.html#a7dbf62efaa5356d1bf21faa22e3255e4">Mixer::CheapSawtoothGenerator&lt; T &gt;</a>
 , <a class="el" href="classMixer_1_1CheapSquareGenerator.html#a25886600baa1eb21508e483d80d37ec3">Mixer::CheapSquareGenerator&lt; T &gt;</a>
 , <a class="el" href="classMixer_1_1SawtoothGenerator.html#a722b230c8aa8764bac791769ca7512fa">Mixer::SawtoothGenerator&lt; T &gt;</a>
+, <a class="el" href="classMixer_1_1SimpleNote.html#a5b8f3c21c58aa1ae110bdcd5e0fc1766">Mixer::SimpleNote&lt; T, A, D &gt;</a>
 , <a class="el" href="classMixer_1_1SimplePlayer.html#a1f1738f9d44881a20ac84b04d71d9bba">Mixer::SimplePlayer&lt; T, K &gt;</a>
 , <a class="el" href="classMixer_1_1SineGenerator.html#a15bf8bf2978c11a16ec167e47d19ab01">Mixer::SineGenerator&lt; T &gt;</a>
 , <a class="el" href="classMixer_1_1SquareGenerator.html#a58a7b0940f4b9e1b72c089d763d66ff3">Mixer::SquareGenerator&lt; T &gt;</a>
@@ -149,6 +159,9 @@ $(function() {
 , <a class="el" href="classMixer_1_1SineGenerator.html#a6cbf808efae0976ca34658c5c6aa10c4">Mixer::SineGenerator&lt; T &gt;</a>
 , <a class="el" href="classMixer_1_1SquareGenerator.html#aa2429c911319071196fc2df93d40f5a1">Mixer::SquareGenerator&lt; T &gt;</a>
 , <a class="el" href="classMixer_1_1TriangleGenerator.html#ae14972ba4f95b0bb70062d3b43d0d38d">Mixer::TriangleGenerator&lt; T &gt;</a>
+</li>
+<li>getLength()
+: <a class="el" href="classMixer_1_1SimpleNote.html#adfa0c763a6a84884e5483c2084add1b3">Mixer::SimpleNote&lt; T, A, D &gt;</a>
 </li>
 <li>getMethod()
 : <a class="el" href="classDataFlow_1_1Applicator.html#a367ddf481f98814e101977e5861338a4">DataFlow::Applicator&lt; T, K &gt;</a>
@@ -198,19 +211,6 @@ $(function() {
 <li>initEncoding()
 : <a class="el" href="classVorbisEncoder.html#a5800bed0e227a3856a2dc6d1f1ae6899">VorbisEncoder</a>
 </li>
-<li>initStream()
-: <a class="el" href="classOggFileLoader.html#a98f61e3908610c549d2b47861c066406">OggFileLoader&lt; T, K &gt;</a>
-</li>
-</ul>
-
-
-<h3><a id="index_n"></a>- n -</h3><ul>
-<li>nextPacket()
-: <a class="el" href="classOggFileLoader.html#a9b1b15e250c29f1fcafbdf0cd1e5e590">OggFileLoader&lt; T, K &gt;</a>
-</li>
-<li>nextPage()
-: <a class="el" href="classOggFileLoader.html#a47b37c1962662ac4de4b88541d9e7295">OggFileLoader&lt; T, K &gt;</a>
-</li>
 </ul>
 
 
@@ -257,19 +257,15 @@ $(function() {
 </ul>
 
 
-<h3><a id="index_r"></a>- r -</h3><ul>
-<li>read()
-: <a class="el" href="classOggFileLoader.html#a5ba0c2a63e96c9b6815585310e10d504">OggFileLoader&lt; T, K &gt;</a>
-</li>
-<li>readNextPage()
-: <a class="el" href="classOggFileLoader.html#ac00acf3900b694cfa9d242068b443413">OggFileLoader&lt; T, K &gt;</a>
-</li>
-</ul>
-
-
 <h3><a id="index_s"></a>- s -</h3><ul>
 <li>SawtoothGenerator()
 : <a class="el" href="classMixer_1_1SawtoothGenerator.html#a500ae0d27aec42cddb180a4a5eee13f3">Mixer::SawtoothGenerator&lt; T &gt;</a>
+</li>
+<li>setAttack()
+: <a class="el" href="classMixer_1_1SimpleNote.html#ae99482eb3cb1fa4dc412f1b9ea183044">Mixer::SimpleNote&lt; T, A, D &gt;</a>
+</li>
+<li>setDecay()
+: <a class="el" href="classMixer_1_1SimpleNote.html#a3e86da9cd72d2b71ec75c3587ea09c2e">Mixer::SimpleNote&lt; T, A, D &gt;</a>
 </li>
 <li>setFrequency()
 : <a class="el" href="classMixer_1_1CheapSawtoothGenerator.html#a6153f8ecf1396df7563a665b248a66e8">Mixer::CheapSawtoothGenerator&lt; T &gt;</a>
@@ -278,10 +274,13 @@ $(function() {
 , <a class="el" href="classMixer_1_1SawtoothGenerator.html#a9c8c5b27bd6626c6a3ffeb02e1c1a4e8">Mixer::SawtoothGenerator&lt; T &gt;</a>
 , <a class="el" href="classMixer_1_1SineGenerator.html#aa3182523af2f76e1630b8dfc9bcbde9e">Mixer::SineGenerator&lt; T &gt;</a>
 , <a class="el" href="classMixer_1_1SquareGenerator.html#a4551e6a9dec0a0785089dd8b68e5b2c4">Mixer::SquareGenerator&lt; T &gt;</a>
-, <a class="el" href="classMixer_1_1TriangleGenerator.html#aaac152888b8273a0721369886362aa1f">Mixer::TriangleGenerator&lt; T &gt;</a>
+, <a class="el" href="classMixer_1_1TriangleGenerator.html#a856d582e8adaf5f82bdb0f417e2bcefb">Mixer::TriangleGenerator&lt; T &gt;</a>
 </li>
 <li>setVolume()
 : <a class="el" href="classVolumeControl.html#ac5299d96bb7295f50259d3c2ca94e092">VolumeControl&lt; T &gt;</a>
+</li>
+<li>SimpleNote()
+: <a class="el" href="classMixer_1_1SimpleNote.html#ad9193fae2df9d526e81ad4aaf9c793d1">Mixer::SimpleNote&lt; T, A, D &gt;</a>
 </li>
 <li>SimplePlayer()
 : <a class="el" href="classMixer_1_1SimplePlayer.html#a2321161909ca5b134cd5f49ff0777fc1">Mixer::SimplePlayer&lt; T, K &gt;</a>

@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['extract_5finner',['extract_inner',['../namespacetemplate__utils.html#a7b01b91680ff612be51d8905456ba083',1,'template_utils']]],
-  ['extract_5finner_5fbase',['extract_inner_base',['../structtemplate__utils_1_1extract__inner__base.html',1,'template_utils']]],
-  ['extract_5finner_5fbase_3c_20c_3c_20t_20_3e_20_3e',['extract_inner_base&lt; C&lt; T &gt; &gt;',['../structtemplate__utils_1_1extract__inner__base_3_01C_3_01T_01_4_01_4.html',1,'template_utils']]]
+  ['dataflow',['DataFlow',['../namespaceDataFlow.html',1,'']]],
+  ['decode',['decode',['../classVorbisDecoder.html#a2ae9f7f18261b822502d481535609873',1,'VorbisDecoder']]],
+  ['detach',['detach',['../classDataFlow_1_1Consolidator.html#afb03d0d4200f5c5aaab3056193ed18ed',1,'DataFlow::Consolidator']]]
 ];

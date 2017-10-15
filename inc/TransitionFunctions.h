@@ -16,7 +16,7 @@ namespace Transition{
         \~hungarian Az átmenet tartja a sebességét.
     */
     template <typename T>
-    class Linear : TransitionFunction<T>{
+    class Linear : public TransitionFunction<T>{
     public:
         void init(const float & x1, const T & y1, const float & x2, const T & y2){
             this->x1 = x1;
@@ -39,7 +39,7 @@ namespace Transition{
         //! \~english Quadratic ease-in transition.
         //! \~hungarian Négyzetes elöl gyorsuló átmenet.
         template <typename T>
-        class Quadratic : TransitionFunction<T>{
+        class Quadratic : public TransitionFunction<T>{
         public:
             void init(const float & x1, const T & y1, const float & x2, const T & y2){
                 this->m = (y2-y1)/((x2-x1)*(x2-x1));
@@ -55,7 +55,7 @@ namespace Transition{
         //! \~english Cubic ease-in transition.
         //! \~hungarian Köbös elöl gyorsuló átmenet.
         template <typename T>
-        class Cubic : TransitionFunction<T>{
+        class Cubic : public TransitionFunction<T>{
         public:
             void init(const float & x1, const T & y1, const float & x2, const T & y2){
                 this->m = (y2-y1)/((x2-x1)*(x2-x1)*(x2-x1));
@@ -71,7 +71,7 @@ namespace Transition{
         //! \~english Quartic ease-in transition.
         //! \~hungarian Negyedik hatványos elöl gyorsuló átmenet.
         template <typename T>
-        class Quartic : TransitionFunction<T>{
+        class Quartic : public TransitionFunction<T>{
         public:
             void init(const float & x1, const T & y1, const float & x2, const T & y2){
                 this->m = (y2-y1)/((x2-x1)*(x2-x1)*(x2-x1)*(x2-x1));
@@ -86,7 +86,7 @@ namespace Transition{
         //! \~english Quintic ease-in transition.
         //! \~hungarian Ötödik hatványos elöl gyorsuló átmenet.
         template <typename T>
-        class Quintic : TransitionFunction<T>{
+        class Quintic : public TransitionFunction<T>{
         public:
             void init(const float & x1, const T & y1, const float & x2, const T & y2){
                 this->m = (y2-y1)/((x2-x1)*(x2-x1)*(x2-x1)*(x2-x1)*(x2-x1));
@@ -111,7 +111,7 @@ namespace Transition{
         //! \~english Quadratic ease-out transition.
         //! \~hungarian Négyzetes hátul lassuló átmenet.
         template <typename T>
-        class Quadratic : TransitionFunction<T>{
+        class Quadratic : public TransitionFunction<T>{
         public:
             void init(const float & x1, const T & y1, const float & x2, const T & y2){
                 this->m = (y1-y2)/((x1-x2)*(x1-x2));
@@ -127,7 +127,7 @@ namespace Transition{
         //! \~english Cubic ease-out transition.
         //! \~hungarian Köbös hátul lassuló átmenet.
         template <typename T>
-        class Cubic : TransitionFunction<T>{
+        class Cubic : public TransitionFunction<T>{
         public:
             void init(const float & x1, const T & y1, const float & x2, const T & y2){
                 this->m = (y1-y2)/((x1-x2)*(x1-x2)*(x1-x2));
@@ -143,7 +143,7 @@ namespace Transition{
         //! \~english Quartic ease-out transition.
         //! \~hungarian Negyedik hatványos hátul lassuló átmenet.
         template <typename T>
-        class Quartic : TransitionFunction<T>{
+        class Quartic : public TransitionFunction<T>{
         public:
             void init(const float & x1, const T & y1, const float & x2, const T & y2){
                 this->m = (y1-y2)/((x1-x2)*(x1-x2)*(x1-x2)*(x1-x2));
@@ -159,7 +159,7 @@ namespace Transition{
         //! \~english Quintic ease-out transition.
         //! \~hungarian Ötödik hatványos hátul lassuló átmenet.
         template <typename T>
-        class Quintic : TransitionFunction<T>{
+        class Quintic : public TransitionFunction<T>{
         public:
             void init(const float & x1, const T & y1, const float & x2, const T & y2){
                 this->m = (y1-y2)/((x1-x2)*(x1-x2)*(x1-x2)*(x1-x2)*(x1-x2));
@@ -183,7 +183,7 @@ namespace Transition{
         //! \~english Quadratic ease-in-out transition.
         //! \~hungarian Négyzetes elöl gyorsuló, hátul lassuló átmenet.
         template <typename T>
-        class Quadratic : TransitionFunction<T>{
+        class Quadratic : public TransitionFunction<T>{
         public:
             void init(const float & x1, const T & y1, const float & x2, const T & y2){
                 this->m = (y2-y1);
@@ -201,7 +201,7 @@ namespace Transition{
         //! \~english Cubic ease-in-out transition.
         //! \~hungarian Köbös elöl gyorsuló, hátul lassuló átmenet.
         template <typename T>
-        class Cubic : TransitionFunction<T>{
+        class Cubic : public TransitionFunction<T>{
         public:
             void init(const float & x1, const T & y1, const float & x2, const T & y2){
                 this->m = (y2-y1);
@@ -219,7 +219,7 @@ namespace Transition{
         //! \~english Quartic ease-in-out transition.
         //! \~hungarian Negyedik hatványos elöl gyorsuló, hátul lassuló átmenet.
         template <typename T>
-        class Quartic : TransitionFunction<T>{
+        class Quartic : public TransitionFunction<T>{
         public:
             void init(const float & x1, const T & y1, const float & x2, const T & y2){
                 this->m = (y2-y1);
@@ -237,7 +237,7 @@ namespace Transition{
         //! \~english Quintic ease-in-out transition.
         //! \~hungarian Ötödik hatványos elöl gyorsuló, hátul lassuló átmenet.
         template <typename T>
-        class Quintic : TransitionFunction<T>{
+        class Quintic : public TransitionFunction<T>{
         public:
             void init(const float & x1, const T & y1, const float & x2, const T & y2){
                 this->m = (y2-y1);
