@@ -4,7 +4,6 @@
 
 #include <iSource.h>
 #include <AudioSource.h>
-#include <iWaveformGenerator.h>
 #include <Consolidator.h>
 #include <ConsolidationMethods.h>
 #include <TransitionFunctions.h>
@@ -23,7 +22,7 @@ namespace Mixer
 
     To set the speed of the transitions, use setAttack() and setDecay() with the **percentage** of the note where you want the attack to end or the decay to start.
 
-    An iWaveformGenerator is also needed to be supplied with attach() to give the note it's waveform.
+    An iSource is also needed to be supplied with attach() to give the note it's waveform.
 
     After providing these 3 attributes, call bakeNote() to fill the internal buffer with the audio data. **This must be done before requesting the audio data!**
 
@@ -55,7 +54,7 @@ namespace Mixer
 
     Az átmenetek sebességét a setAttack() és setDecay() metódusokkal adhatjuk meg, a növekvés végét vagy a csökkenés kezdetét a hangjegy hosszának **százalékában**.
 
-    Egy iWaveformGenerator megadása az attach() metódussal szintén szükséges. Ez fogja a hangjegy hullámformáját adni.
+    Egy iSource megadása az attach() metódussal szintén szükséges. Ez fogja a hangjegy hullámformáját adni.
 
     Miután ezt a 3 tulajdonságot megadtuk, a bakeNote() metódussal fel kell töltenünk a belső puffert a hangjegy atadával. **Ezt meg kell tenni mielőtt audió adatot kérnénk az objektumtól!**
 
@@ -80,7 +79,7 @@ template <typename T, template <typename> typename A , template <typename> typen
 class SimpleNote : public DataFlow::iSource<T>, public AudioSource
 {
   private:
-    Mixer::iWaveformGenerator<T> * generator;
+    DataFlow::iSource<T> * generator;
 
     int lengthInSamples;
     float step = 1.0f/lengthInSamples;
@@ -98,10 +97,10 @@ class SimpleNote : public DataFlow::iSource<T>, public AudioSource
     /*!
         \~english Attach the parameter as this object's waveform source.
         \~hungarian A paramétert az objektum hullámjel-forrásaként hozzácsatolja.
-        \~english \param source the iWaveformGenerator<T> to attach
-        \~hungarian \param source a csatolni kívánt iWaveformGenerator<T>
+        \~english \param source the iSource<T> to attach
+        \~hungarian \param source a csatolni kívánt iSource<T>
     */
-    void attach(Mixer::iWaveformGenerator<T> &generator)
+    void attach(DataFlow::iSource<T> &generator)
     {
         this->generator = &generator;
     }

@@ -1,6 +1,6 @@
 //!\todo TODO:microphone
-//!\todo TODO:modulating filter
 //!\todo TODO: file endpoint
+//!\todo TODO:modulating filter
 
 #include <iostream>
 #include <thread>
@@ -17,6 +17,7 @@
 #include <TriangleGenerator.h>
 #include <CheapSquareGenerator.h>
 #include <CheapSawtoothGenerator.h>
+#include <ComplexWaveformGenerator.h>
 #include <SquareGenerator.h>
 #include <Consolidator.h>
 #include <ConsolidationMethods.h>
@@ -101,9 +102,20 @@ int main()
 #endif
 #endif
 	
-	Mixer::SquareGenerator<float> sg(227.2,150,DEFAULT_CHANNELS, DEFAULT_SAMPLE_RATE);
+	Mixer::SawtoothGenerator<float> sg(110,50,DEFAULT_CHANNELS, DEFAULT_SAMPLE_RATE);
 	Mixer::SineGenerator<float> sg2(80, DEFAULT_CHANNELS, DEFAULT_SAMPLE_RATE);
+
+	float firstHarmonicFrequency = 110;
+	std::vector<std::pair<float,float>> components;
+	components.push_back(std::make_pair(firstHarmonicFrequency,1));
+	components.push_back(std::make_pair(firstHarmonicFrequency*2,0.5f));
+	components.push_back(std::make_pair(firstHarmonicFrequency*3,0.33f));
+	components.push_back(std::make_pair(firstHarmonicFrequency*4,0.25f));
+	components.push_back(std::make_pair(firstHarmonicFrequency*2.44f,0.2f));
+	components.push_back(std::make_pair(firstHarmonicFrequency*2.76f,0.4f));
 	
+	Mixer::ComplexWaveformGenerator<float> complexGenerator(components,DEFAULT_CHANNELS,DEFAULT_SAMPLE_RATE);
+
 	DataFlow::Applicator<float,VolumeControl<float>> vc;
 	DataFlow::Applicator<float,VolumeControl<float>> vc2;
 	vc.getMethod().setVolume(0.3f);
@@ -128,7 +140,7 @@ int main()
 	
 	DataFlow::Applicator<float,VolumeControl<float>> lower;
 	lower.getMethod().setVolume(0.5f);
-	lower.attach(note);
+	lower.attach(complexGenerator);
 	
 	
 {
@@ -137,10 +149,19 @@ int main()
 	encoder.addComment(std::make_pair ("test","comment"));
 	encoder.initEncoding();
 	int c = 0;
-	while(c<DEFAULT_CHANNELS*DEFAULT_SAMPLE_RATE*10){
-		encoder.add(std::vector<float>(DEFAULT_CHANNELS*DEFAULT_SAMPLE_RATE*0.5f));
-		c+=DEFAULT_CHANNELS*DEFAULT_SAMPLE_RATE*0.5f;
-		auto vec = lower.get(note.getLength());
+	int totalLength = DEFAULT_CHANNELS*DEFAULT_SAMPLE_RATE*10;
+	bool going = false;
+	while(c<totalLength){
+		//encoder.add(std::vector<float>(DEFAULT_CHANNELS*DEFAULT_SAMPLE_RATE*0.5f));
+		//c+=DEFAULT_CHANNELS*DEFAULT_SAMPLE_RATE*0.5f;
+		if(c>totalLength/4 && !going){
+			complexGenerator.setComponent(firstHarmonicFrequency,0,1,"ease-in-out",5);
+			complexGenerator.setComponent(firstHarmonicFrequency*2,0,1);
+			complexGenerator.setComponent(firstHarmonicFrequency*3,0,1);
+			complexGenerator.setComponent(firstHarmonicFrequency*4,0,1);
+			going = true;
+		}
+		auto vec = lower.get(512);
 		c+=vec.size();
 		encoder.add(vec);
 	}
