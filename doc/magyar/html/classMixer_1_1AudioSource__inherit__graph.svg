@@ -46,7 +46,7 @@ if (edges && edges.length) {
         </defs>
 
 <script type="text/javascript">
-var viewWidth = 1280;
+var viewWidth = 1495;
 var viewHeight = 270;
 var sectionId = 'dynsection-0';
 </script>
@@ -56,14 +56,14 @@ var sectionId = 'dynsection-0';
 <title>Mixer::AudioSource</title>
 <!-- Node0 -->
 <g id="node1" class="node"><title>Node0</title>
-<polygon fill="#bfbfbf" stroke="black" points="627.5,-182.5 627.5,-261.5 729.5,-261.5 729.5,-182.5 627.5,-182.5"/>
-<text text-anchor="middle" x="678.5" y="-249.5" font-family="Helvetica,sans-Serif" font-size="10.00">Mixer::AudioSource</text>
-<polyline fill="none" stroke="black" points="627.5,-242.5 729.5,-242.5 "/>
-<text text-anchor="middle" x="678.5" y="-230.5" font-family="Helvetica,sans-Serif" font-size="10.00"> </text>
-<polyline fill="none" stroke="black" points="627.5,-223.5 729.5,-223.5 "/>
-<text text-anchor="start" x="635.5" y="-211.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getChannels()</text>
-<text text-anchor="start" x="635.5" y="-200.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getSampleRate()</text>
-<text text-anchor="start" x="635.5" y="-189.5" font-family="Helvetica,sans-Serif" font-size="10.00"># AudioSource()</text>
+<polygon fill="#bfbfbf" stroke="black" points="781.5,-182.5 781.5,-261.5 883.5,-261.5 883.5,-182.5 781.5,-182.5"/>
+<text text-anchor="middle" x="832.5" y="-249.5" font-family="Helvetica,sans-Serif" font-size="10.00">Mixer::AudioSource</text>
+<polyline fill="none" stroke="black" points="781.5,-242.5 883.5,-242.5 "/>
+<text text-anchor="middle" x="832.5" y="-230.5" font-family="Helvetica,sans-Serif" font-size="10.00"> </text>
+<polyline fill="none" stroke="black" points="781.5,-223.5 883.5,-223.5 "/>
+<text text-anchor="start" x="789.5" y="-211.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getChannels()</text>
+<text text-anchor="start" x="789.5" y="-200.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getSampleRate()</text>
+<text text-anchor="start" x="789.5" y="-189.5" font-family="Helvetica,sans-Serif" font-size="10.00"># AudioSource()</text>
 </g>
 <!-- Node1 -->
 <g id="node2" class="node"><title>Node1</title>
@@ -83,8 +83,8 @@ var sectionId = 'dynsection-0';
 </g>
 <!-- Node0&#45;&gt;Node1 -->
 <g id="edge1" class="edge"><title>Node0&#45;&gt;Node1</title>
-<path fill="none" stroke="midnightblue" d="M617.089,-220.631C522.281,-218.089 336.112,-205.175 191.5,-146 177.541,-140.288 163.687,-132.262 150.938,-123.629"/>
-<polygon fill="none" stroke="midnightblue" points="617.279,-224.136 627.359,-220.875 617.445,-217.138 617.279,-224.136"/>
+<path fill="none" stroke="midnightblue" d="M771.433,-217.77C632.48,-209.792 296.586,-186.789 191.5,-146 177.241,-140.465 163.146,-132.406 150.236,-123.663"/>
+<polygon fill="none" stroke="midnightblue" points="771.306,-221.268 781.488,-218.34 771.703,-214.279 771.306,-221.268"/>
 </g>
 <!-- Node2 -->
 <g id="node3" class="node"><title>Node2</title>
@@ -104,140 +104,161 @@ var sectionId = 'dynsection-0';
 </g>
 <!-- Node0&#45;&gt;Node2 -->
 <g id="edge2" class="edge"><title>Node0&#45;&gt;Node2</title>
-<path fill="none" stroke="midnightblue" d="M617.466,-212.841C555.845,-202.954 459.092,-182.842 382.5,-146 369.818,-139.9 357.171,-131.96 345.435,-123.589"/>
-<polygon fill="none" stroke="midnightblue" points="617,-216.311 627.421,-214.398 618.082,-209.395 617,-216.311"/>
+<path fill="none" stroke="midnightblue" d="M771.146,-219.99C682.03,-216.518 513.164,-202.301 382.5,-146 369.101,-140.227 355.877,-132.173 343.748,-123.532"/>
+<polygon fill="none" stroke="midnightblue" points="771.23,-223.495 781.349,-220.354 771.48,-216.499 771.23,-223.495"/>
 </g>
 <!-- Node3 -->
 <g id="node4" class="node"><title>Node3</title>
-<g id="a_node4"><a xlink:href="classMixer_1_1SawtoothGenerator.html" target="_top" xlink:title="{Mixer::SawtoothGenerator\&lt; T \&gt;\n||+ get()\l+ getFrequency()\l+ setFrequency()\l+ setFrequency()\l+ SawtoothGenerator()\l}">
-<polygon fill="none" stroke="black" points="392,-22.5 392,-123.5 547,-123.5 547,-22.5 392,-22.5"/>
-<text text-anchor="middle" x="469.5" y="-111.5" font-family="Helvetica,sans-Serif" font-size="10.00">Mixer::SawtoothGenerator&lt; T &gt;</text>
-<polyline fill="none" stroke="black" points="392,-104.5 547,-104.5 "/>
-<text text-anchor="middle" x="469.5" y="-92.5" font-family="Helvetica,sans-Serif" font-size="10.00"> </text>
-<polyline fill="none" stroke="black" points="392,-85.5 547,-85.5 "/>
+<g id="a_node4"><a xlink:href="classMixer_1_1ComplexWaveformGenerator.html" target="_top" xlink:title="{Mixer::ComplexWaveformGenerator\&lt; T \&gt;\n||+ get()\l+ getComponent()\l+ setComponent()\l+ setComponent()\l+ ComplexWaveformGenerator()\l}">
+<polygon fill="none" stroke="black" points="392,-22.5 392,-123.5 589,-123.5 589,-22.5 392,-22.5"/>
+<text text-anchor="middle" x="490.5" y="-111.5" font-family="Helvetica,sans-Serif" font-size="10.00">Mixer::ComplexWaveformGenerator&lt; T &gt;</text>
+<polyline fill="none" stroke="black" points="392,-104.5 589,-104.5 "/>
+<text text-anchor="middle" x="490.5" y="-92.5" font-family="Helvetica,sans-Serif" font-size="10.00"> </text>
+<polyline fill="none" stroke="black" points="392,-85.5 589,-85.5 "/>
 <text text-anchor="start" x="400" y="-73.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ get()</text>
-<text text-anchor="start" x="400" y="-62.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getFrequency()</text>
-<text text-anchor="start" x="400" y="-51.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ setFrequency()</text>
-<text text-anchor="start" x="400" y="-40.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ setFrequency()</text>
-<text text-anchor="start" x="400" y="-29.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ SawtoothGenerator()</text>
+<text text-anchor="start" x="400" y="-62.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getComponent()</text>
+<text text-anchor="start" x="400" y="-51.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ setComponent()</text>
+<text text-anchor="start" x="400" y="-40.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ setComponent()</text>
+<text text-anchor="start" x="400" y="-29.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ ComplexWaveformGenerator()</text>
 </a>
 </g>
 </g>
 <!-- Node0&#45;&gt;Node3 -->
 <g id="edge3" class="edge"><title>Node0&#45;&gt;Node3</title>
-<path fill="none" stroke="midnightblue" d="M618.547,-186.436C598.434,-174.242 576.136,-160.056 556.5,-146 546.775,-139.039 536.745,-131.307 527.108,-123.567"/>
-<polygon fill="none" stroke="midnightblue" points="616.943,-189.556 627.316,-191.712 620.552,-183.558 616.943,-189.556"/>
+<path fill="none" stroke="midnightblue" d="M771.673,-206.669C723.132,-194.044 654.124,-173.396 597.5,-146 584.298,-139.613 570.847,-131.781 558.139,-123.661"/>
+<polygon fill="none" stroke="midnightblue" points="770.847,-210.071 781.403,-209.164 772.586,-203.29 770.847,-210.071"/>
 </g>
 <!-- Node4 -->
 <g id="node5" class="node"><title>Node4</title>
-<g id="a_node5"><a xlink:href="classMixer_1_1SimpleNote.html" target="_top" xlink:title="{Mixer::SimpleNote\&lt;\l T, A, D \&gt;\n||+ attach()\l+ setAttack()\l+ setDecay()\l+ getLength()\l+ bakeNote()\l+ clear()\l+ get()\l+ SimpleNote()\l}">
-<polygon fill="none" stroke="black" points="565.5,-0.5 565.5,-145.5 669.5,-145.5 669.5,-0.5 565.5,-0.5"/>
-<text text-anchor="start" x="573.5" y="-133.5" font-family="Helvetica,sans-Serif" font-size="10.00">Mixer::SimpleNote&lt;</text>
-<text text-anchor="middle" x="617.5" y="-122.5" font-family="Helvetica,sans-Serif" font-size="10.00"> T, A, D &gt;</text>
-<polyline fill="none" stroke="black" points="565.5,-115.5 669.5,-115.5 "/>
-<text text-anchor="middle" x="617.5" y="-103.5" font-family="Helvetica,sans-Serif" font-size="10.00"> </text>
-<polyline fill="none" stroke="black" points="565.5,-96.5 669.5,-96.5 "/>
-<text text-anchor="start" x="573.5" y="-84.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ attach()</text>
-<text text-anchor="start" x="573.5" y="-73.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ setAttack()</text>
-<text text-anchor="start" x="573.5" y="-62.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ setDecay()</text>
-<text text-anchor="start" x="573.5" y="-51.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getLength()</text>
-<text text-anchor="start" x="573.5" y="-40.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ bakeNote()</text>
-<text text-anchor="start" x="573.5" y="-29.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ clear()</text>
-<text text-anchor="start" x="573.5" y="-18.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ get()</text>
-<text text-anchor="start" x="573.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ SimpleNote()</text>
+<g id="a_node5"><a xlink:href="classMixer_1_1SawtoothGenerator.html" target="_top" xlink:title="{Mixer::SawtoothGenerator\&lt; T \&gt;\n||+ get()\l+ getFrequency()\l+ setFrequency()\l+ setFrequency()\l+ SawtoothGenerator()\l}">
+<polygon fill="none" stroke="black" points="607,-22.5 607,-123.5 762,-123.5 762,-22.5 607,-22.5"/>
+<text text-anchor="middle" x="684.5" y="-111.5" font-family="Helvetica,sans-Serif" font-size="10.00">Mixer::SawtoothGenerator&lt; T &gt;</text>
+<polyline fill="none" stroke="black" points="607,-104.5 762,-104.5 "/>
+<text text-anchor="middle" x="684.5" y="-92.5" font-family="Helvetica,sans-Serif" font-size="10.00"> </text>
+<polyline fill="none" stroke="black" points="607,-85.5 762,-85.5 "/>
+<text text-anchor="start" x="615" y="-73.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ get()</text>
+<text text-anchor="start" x="615" y="-62.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getFrequency()</text>
+<text text-anchor="start" x="615" y="-51.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ setFrequency()</text>
+<text text-anchor="start" x="615" y="-40.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ setFrequency()</text>
+<text text-anchor="start" x="615" y="-29.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ SawtoothGenerator()</text>
 </a>
 </g>
 </g>
 <!-- Node0&#45;&gt;Node4 -->
 <g id="edge4" class="edge"><title>Node0&#45;&gt;Node4</title>
-<path fill="none" stroke="midnightblue" d="M658.617,-173.086C654.97,-164.296 651.091,-154.948 647.228,-145.64"/>
-<polygon fill="none" stroke="midnightblue" points="655.407,-174.483 662.473,-182.377 661.873,-171.8 655.407,-174.483"/>
+<path fill="none" stroke="midnightblue" d="M786.236,-175.049C769.82,-158.744 751.275,-140.324 734.558,-123.719"/>
+<polygon fill="none" stroke="midnightblue" points="784.053,-177.814 793.615,-182.377 788.986,-172.847 784.053,-177.814"/>
 </g>
 <!-- Node5 -->
 <g id="node6" class="node"><title>Node5</title>
-<g id="a_node6"><a xlink:href="classMixer_1_1SimplePlayer.html" target="_top" xlink:title="{Mixer::SimplePlayer\l\&lt; T, K \&gt;\n||+ get()\l+ pause()\l+ stop()\l+ play()\l+ attach()\l+ SimplePlayer()\l}">
-<polygon fill="none" stroke="black" points="687.5,-11.5 687.5,-134.5 791.5,-134.5 791.5,-11.5 687.5,-11.5"/>
-<text text-anchor="start" x="695.5" y="-122.5" font-family="Helvetica,sans-Serif" font-size="10.00">Mixer::SimplePlayer</text>
-<text text-anchor="middle" x="739.5" y="-111.5" font-family="Helvetica,sans-Serif" font-size="10.00">&lt; T, K &gt;</text>
-<polyline fill="none" stroke="black" points="687.5,-104.5 791.5,-104.5 "/>
-<text text-anchor="middle" x="739.5" y="-92.5" font-family="Helvetica,sans-Serif" font-size="10.00"> </text>
-<polyline fill="none" stroke="black" points="687.5,-85.5 791.5,-85.5 "/>
-<text text-anchor="start" x="695.5" y="-73.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ get()</text>
-<text text-anchor="start" x="695.5" y="-62.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ pause()</text>
-<text text-anchor="start" x="695.5" y="-51.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ stop()</text>
-<text text-anchor="start" x="695.5" y="-40.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ play()</text>
-<text text-anchor="start" x="695.5" y="-29.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ attach()</text>
-<text text-anchor="start" x="695.5" y="-18.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ SimplePlayer()</text>
+<g id="a_node6"><a xlink:href="classMixer_1_1SimpleNote.html" target="_top" xlink:title="{Mixer::SimpleNote\&lt;\l T, A, D \&gt;\n||+ attach()\l+ setAttack()\l+ setDecay()\l+ getLength()\l+ bakeNote()\l+ clear()\l+ get()\l+ SimpleNote()\l}">
+<polygon fill="none" stroke="black" points="780.5,-0.5 780.5,-145.5 884.5,-145.5 884.5,-0.5 780.5,-0.5"/>
+<text text-anchor="start" x="788.5" y="-133.5" font-family="Helvetica,sans-Serif" font-size="10.00">Mixer::SimpleNote&lt;</text>
+<text text-anchor="middle" x="832.5" y="-122.5" font-family="Helvetica,sans-Serif" font-size="10.00"> T, A, D &gt;</text>
+<polyline fill="none" stroke="black" points="780.5,-115.5 884.5,-115.5 "/>
+<text text-anchor="middle" x="832.5" y="-103.5" font-family="Helvetica,sans-Serif" font-size="10.00"> </text>
+<polyline fill="none" stroke="black" points="780.5,-96.5 884.5,-96.5 "/>
+<text text-anchor="start" x="788.5" y="-84.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ attach()</text>
+<text text-anchor="start" x="788.5" y="-73.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ setAttack()</text>
+<text text-anchor="start" x="788.5" y="-62.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ setDecay()</text>
+<text text-anchor="start" x="788.5" y="-51.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getLength()</text>
+<text text-anchor="start" x="788.5" y="-40.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ bakeNote()</text>
+<text text-anchor="start" x="788.5" y="-29.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ clear()</text>
+<text text-anchor="start" x="788.5" y="-18.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ get()</text>
+<text text-anchor="start" x="788.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ SimpleNote()</text>
 </a>
 </g>
 </g>
 <!-- Node0&#45;&gt;Node5 -->
 <g id="edge5" class="edge"><title>Node0&#45;&gt;Node5</title>
-<path fill="none" stroke="midnightblue" d="M698.489,-172.829C703.564,-160.599 709.081,-147.304 714.375,-134.546"/>
-<polygon fill="none" stroke="midnightblue" points="695.127,-171.8 694.527,-182.377 701.593,-174.483 695.127,-171.8"/>
+<path fill="none" stroke="midnightblue" d="M832.5,-172.243C832.5,-163.699 832.5,-154.651 832.5,-145.64"/>
+<polygon fill="none" stroke="midnightblue" points="829,-172.377 832.5,-182.377 836,-172.378 829,-172.377"/>
 </g>
 <!-- Node6 -->
 <g id="node7" class="node"><title>Node6</title>
-<g id="a_node7"><a xlink:href="classMixer_1_1SineGenerator.html" target="_top" xlink:title="{Mixer::SineGenerator\&lt; T \&gt;\n||+ get()\l+ getFrequency()\l+ setFrequency()\l+ setFrequency()\l+ SineGenerator()\l}">
-<polygon fill="none" stroke="black" points="810,-22.5 810,-123.5 943,-123.5 943,-22.5 810,-22.5"/>
-<text text-anchor="middle" x="876.5" y="-111.5" font-family="Helvetica,sans-Serif" font-size="10.00">Mixer::SineGenerator&lt; T &gt;</text>
-<polyline fill="none" stroke="black" points="810,-104.5 943,-104.5 "/>
-<text text-anchor="middle" x="876.5" y="-92.5" font-family="Helvetica,sans-Serif" font-size="10.00"> </text>
-<polyline fill="none" stroke="black" points="810,-85.5 943,-85.5 "/>
-<text text-anchor="start" x="818" y="-73.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ get()</text>
-<text text-anchor="start" x="818" y="-62.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getFrequency()</text>
-<text text-anchor="start" x="818" y="-51.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ setFrequency()</text>
-<text text-anchor="start" x="818" y="-40.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ setFrequency()</text>
-<text text-anchor="start" x="818" y="-29.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ SineGenerator()</text>
+<g id="a_node7"><a xlink:href="classMixer_1_1SimplePlayer.html" target="_top" xlink:title="{Mixer::SimplePlayer\l\&lt; T, K \&gt;\n||+ get()\l+ pause()\l+ stop()\l+ play()\l+ attach()\l+ SimplePlayer()\l}">
+<polygon fill="none" stroke="black" points="902.5,-11.5 902.5,-134.5 1006.5,-134.5 1006.5,-11.5 902.5,-11.5"/>
+<text text-anchor="start" x="910.5" y="-122.5" font-family="Helvetica,sans-Serif" font-size="10.00">Mixer::SimplePlayer</text>
+<text text-anchor="middle" x="954.5" y="-111.5" font-family="Helvetica,sans-Serif" font-size="10.00">&lt; T, K &gt;</text>
+<polyline fill="none" stroke="black" points="902.5,-104.5 1006.5,-104.5 "/>
+<text text-anchor="middle" x="954.5" y="-92.5" font-family="Helvetica,sans-Serif" font-size="10.00"> </text>
+<polyline fill="none" stroke="black" points="902.5,-85.5 1006.5,-85.5 "/>
+<text text-anchor="start" x="910.5" y="-73.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ get()</text>
+<text text-anchor="start" x="910.5" y="-62.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ pause()</text>
+<text text-anchor="start" x="910.5" y="-51.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ stop()</text>
+<text text-anchor="start" x="910.5" y="-40.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ play()</text>
+<text text-anchor="start" x="910.5" y="-29.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ attach()</text>
+<text text-anchor="start" x="910.5" y="-18.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ SimplePlayer()</text>
 </a>
 </g>
 </g>
 <!-- Node0&#45;&gt;Node6 -->
 <g id="edge6" class="edge"><title>Node0&#45;&gt;Node6</title>
-<path fill="none" stroke="midnightblue" d="M738.469,-187.514C758.767,-175.306 781.174,-160.838 800.5,-146 809.438,-139.137 818.505,-131.376 827.113,-123.553"/>
-<polygon fill="none" stroke="midnightblue" points="736.42,-184.66 729.613,-192.779 739.997,-190.677 736.42,-184.66"/>
+<path fill="none" stroke="midnightblue" d="M870.978,-174.637C881.535,-161.917 893.138,-147.936 904.251,-134.546"/>
+<polygon fill="none" stroke="midnightblue" points="868.247,-172.447 864.554,-182.377 873.634,-176.918 868.247,-172.447"/>
 </g>
 <!-- Node7 -->
 <g id="node8" class="node"><title>Node7</title>
-<g id="a_node8"><a xlink:href="classMixer_1_1SquareGenerator.html" target="_top" xlink:title="{Mixer::SquareGenerator\&lt; T \&gt;\n||+ get()\l+ getFrequency()\l+ setFrequency()\l+ setFrequency()\l+ SquareGenerator()\l}">
-<polygon fill="none" stroke="black" points="961.5,-22.5 961.5,-123.5 1105.5,-123.5 1105.5,-22.5 961.5,-22.5"/>
-<text text-anchor="middle" x="1033.5" y="-111.5" font-family="Helvetica,sans-Serif" font-size="10.00">Mixer::SquareGenerator&lt; T &gt;</text>
-<polyline fill="none" stroke="black" points="961.5,-104.5 1105.5,-104.5 "/>
-<text text-anchor="middle" x="1033.5" y="-92.5" font-family="Helvetica,sans-Serif" font-size="10.00"> </text>
-<polyline fill="none" stroke="black" points="961.5,-85.5 1105.5,-85.5 "/>
-<text text-anchor="start" x="969.5" y="-73.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ get()</text>
-<text text-anchor="start" x="969.5" y="-62.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getFrequency()</text>
-<text text-anchor="start" x="969.5" y="-51.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ setFrequency()</text>
-<text text-anchor="start" x="969.5" y="-40.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ setFrequency()</text>
-<text text-anchor="start" x="969.5" y="-29.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ SquareGenerator()</text>
+<g id="a_node8"><a xlink:href="classMixer_1_1SineGenerator.html" target="_top" xlink:title="{Mixer::SineGenerator\&lt; T \&gt;\n||+ get()\l+ getFrequency()\l+ setFrequency()\l+ setFrequency()\l+ SineGenerator()\l}">
+<polygon fill="none" stroke="black" points="1025,-22.5 1025,-123.5 1158,-123.5 1158,-22.5 1025,-22.5"/>
+<text text-anchor="middle" x="1091.5" y="-111.5" font-family="Helvetica,sans-Serif" font-size="10.00">Mixer::SineGenerator&lt; T &gt;</text>
+<polyline fill="none" stroke="black" points="1025,-104.5 1158,-104.5 "/>
+<text text-anchor="middle" x="1091.5" y="-92.5" font-family="Helvetica,sans-Serif" font-size="10.00"> </text>
+<polyline fill="none" stroke="black" points="1025,-85.5 1158,-85.5 "/>
+<text text-anchor="start" x="1033" y="-73.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ get()</text>
+<text text-anchor="start" x="1033" y="-62.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getFrequency()</text>
+<text text-anchor="start" x="1033" y="-51.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ setFrequency()</text>
+<text text-anchor="start" x="1033" y="-40.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ setFrequency()</text>
+<text text-anchor="start" x="1033" y="-29.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ SineGenerator()</text>
 </a>
 </g>
 </g>
 <!-- Node0&#45;&gt;Node7 -->
 <g id="edge7" class="edge"><title>Node0&#45;&gt;Node7</title>
-<path fill="none" stroke="midnightblue" d="M739.643,-212.511C797.248,-202.656 884.608,-182.818 952.5,-146 963.747,-139.901 974.734,-131.962 984.806,-123.591"/>
-<polygon fill="none" stroke="midnightblue" points="738.89,-209.088 729.599,-214.18 740.038,-215.994 738.89,-209.088"/>
+<path fill="none" stroke="midnightblue" d="M893.534,-202.357C930.493,-189.557 977.643,-170.461 1015.5,-146 1025.42,-139.588 1035.21,-131.791 1044.28,-123.725"/>
+<polygon fill="none" stroke="midnightblue" points="892.226,-199.105 883.884,-205.637 894.479,-205.733 892.226,-199.105"/>
 </g>
 <!-- Node8 -->
 <g id="node9" class="node"><title>Node8</title>
-<g id="a_node9"><a xlink:href="classMixer_1_1TriangleGenerator.html" target="_top" xlink:title="{Mixer::TriangleGenerator\&lt; T \&gt;\n||+ get()\l+ getFrequency()\l+ setFrequency()\l+ setFrequency()\l+ TriangleGenerator()\l}">
-<polygon fill="none" stroke="black" points="1123.5,-22.5 1123.5,-123.5 1271.5,-123.5 1271.5,-22.5 1123.5,-22.5"/>
-<text text-anchor="middle" x="1197.5" y="-111.5" font-family="Helvetica,sans-Serif" font-size="10.00">Mixer::TriangleGenerator&lt; T &gt;</text>
-<polyline fill="none" stroke="black" points="1123.5,-104.5 1271.5,-104.5 "/>
-<text text-anchor="middle" x="1197.5" y="-92.5" font-family="Helvetica,sans-Serif" font-size="10.00"> </text>
-<polyline fill="none" stroke="black" points="1123.5,-85.5 1271.5,-85.5 "/>
-<text text-anchor="start" x="1131.5" y="-73.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ get()</text>
-<text text-anchor="start" x="1131.5" y="-62.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getFrequency()</text>
-<text text-anchor="start" x="1131.5" y="-51.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ setFrequency()</text>
-<text text-anchor="start" x="1131.5" y="-40.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ setFrequency()</text>
-<text text-anchor="start" x="1131.5" y="-29.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ TriangleGenerator()</text>
+<g id="a_node9"><a xlink:href="classMixer_1_1SquareGenerator.html" target="_top" xlink:title="{Mixer::SquareGenerator\&lt; T \&gt;\n||+ get()\l+ getFrequency()\l+ setFrequency()\l+ setFrequency()\l+ SquareGenerator()\l}">
+<polygon fill="none" stroke="black" points="1176.5,-22.5 1176.5,-123.5 1320.5,-123.5 1320.5,-22.5 1176.5,-22.5"/>
+<text text-anchor="middle" x="1248.5" y="-111.5" font-family="Helvetica,sans-Serif" font-size="10.00">Mixer::SquareGenerator&lt; T &gt;</text>
+<polyline fill="none" stroke="black" points="1176.5,-104.5 1320.5,-104.5 "/>
+<text text-anchor="middle" x="1248.5" y="-92.5" font-family="Helvetica,sans-Serif" font-size="10.00"> </text>
+<polyline fill="none" stroke="black" points="1176.5,-85.5 1320.5,-85.5 "/>
+<text text-anchor="start" x="1184.5" y="-73.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ get()</text>
+<text text-anchor="start" x="1184.5" y="-62.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getFrequency()</text>
+<text text-anchor="start" x="1184.5" y="-51.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ setFrequency()</text>
+<text text-anchor="start" x="1184.5" y="-40.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ setFrequency()</text>
+<text text-anchor="start" x="1184.5" y="-29.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ SquareGenerator()</text>
 </a>
 </g>
 </g>
 <!-- Node0&#45;&gt;Node8 -->
 <g id="edge8" class="edge"><title>Node0&#45;&gt;Node8</title>
-<path fill="none" stroke="midnightblue" d="M739.507,-220.699C826.75,-218.066 990.314,-204.836 1114.5,-146 1126.57,-140.283 1138.24,-132.309 1148.83,-123.74"/>
-<polygon fill="none" stroke="midnightblue" points="739.414,-217.2 729.511,-220.964 739.6,-224.197 739.414,-217.2"/>
+<path fill="none" stroke="midnightblue" d="M894.081,-216.524C963.772,-209.404 1079.08,-191.298 1167.5,-146 1179.05,-140.081 1190.26,-132.122 1200.48,-123.652"/>
+<polygon fill="none" stroke="midnightblue" points="893.331,-213.081 883.719,-217.536 894.012,-220.048 893.331,-213.081"/>
+</g>
+<!-- Node9 -->
+<g id="node10" class="node"><title>Node9</title>
+<g id="a_node10"><a xlink:href="classMixer_1_1TriangleGenerator.html" target="_top" xlink:title="{Mixer::TriangleGenerator\&lt; T \&gt;\n||+ get()\l+ getFrequency()\l+ setFrequency()\l+ setFrequency()\l+ TriangleGenerator()\l}">
+<polygon fill="none" stroke="black" points="1338.5,-22.5 1338.5,-123.5 1486.5,-123.5 1486.5,-22.5 1338.5,-22.5"/>
+<text text-anchor="middle" x="1412.5" y="-111.5" font-family="Helvetica,sans-Serif" font-size="10.00">Mixer::TriangleGenerator&lt; T &gt;</text>
+<polyline fill="none" stroke="black" points="1338.5,-104.5 1486.5,-104.5 "/>
+<text text-anchor="middle" x="1412.5" y="-92.5" font-family="Helvetica,sans-Serif" font-size="10.00"> </text>
+<polyline fill="none" stroke="black" points="1338.5,-85.5 1486.5,-85.5 "/>
+<text text-anchor="start" x="1346.5" y="-73.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ get()</text>
+<text text-anchor="start" x="1346.5" y="-62.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getFrequency()</text>
+<text text-anchor="start" x="1346.5" y="-51.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ setFrequency()</text>
+<text text-anchor="start" x="1346.5" y="-40.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ setFrequency()</text>
+<text text-anchor="start" x="1346.5" y="-29.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ TriangleGenerator()</text>
+</a>
+</g>
+</g>
+<!-- Node0&#45;&gt;Node9 -->
+<g id="edge9" class="edge"><title>Node0&#45;&gt;Node9</title>
+<path fill="none" stroke="midnightblue" d="M893.787,-216.043C1008.95,-206.031 1252.97,-181.3 1329.5,-146 1341.8,-140.327 1353.66,-132.263 1364.38,-123.57"/>
+<polygon fill="none" stroke="midnightblue" points="893.382,-212.565 883.719,-216.91 893.983,-219.539 893.382,-212.565"/>
 </g>
 </g>
 </svg>

@@ -80,7 +80,46 @@ Publikus tagfüggvények</h2></td></tr>
 <tr class="separator:aba665d9a21b7636dcc06c7669986ce9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac5299d96bb7295f50259d3c2ca94e092"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVolumeControl.html#ac5299d96bb7295f50259d3c2ca94e092">setVolume</a> (const T &amp;volume)</td></tr>
 <tr class="separator:ac5299d96bb7295f50259d3c2ca94e092"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae8e7566b5485950dcc5e6f65248a2060"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVolumeControl.html#ae8e7566b5485950dcc5e6f65248a2060">setVolume</a> (const float &amp;newVolume, const float &amp;seconds, const int &amp;valuesPerSecond, std::string method=&quot;linear&quot;, const unsigned int &amp;degree=2)</td></tr>
+<tr class="separator:ae8e7566b5485950dcc5e6f65248a2060"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4d0d35a2473949317313e180cd8057e8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVolumeControl.html#a4d0d35a2473949317313e180cd8057e8">VolumeControl</a> (const T &amp;volume)</td></tr>
+<tr class="separator:a4d0d35a2473949317313e180cd8057e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Konstruktorok és destruktorok dokumentációja</h2>
+<a id="a4d0d35a2473949317313e180cd8057e8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4d0d35a2473949317313e180cd8057e8">&#9670;&nbsp;</a></span>VolumeControl()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classVolumeControl.html">VolumeControl</a>&lt; T &gt;::<a class="el" href="classVolumeControl.html">VolumeControl</a> </td>
+          <td>(</td>
+          <td class="paramtype">const T &amp;&#160;</td>
+          <td class="paramname"><em>volume</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Konstruktor. Beállítja a hangerőt. </p><dl class="params"><dt>Paraméterek</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">volume</td><td>a kívánt hangerő </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <h2 class="groupheader">Tagfüggvények dokumentációja</h2>
 <a id="aba665d9a21b7636dcc06c7669986ce9f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aba665d9a21b7636dcc06c7669986ce9f">&#9670;&nbsp;</a></span>getVolume()</h2>
@@ -111,7 +150,7 @@ template&lt;typename T &gt; </div>
 </div>
 </div>
 <a id="ac5299d96bb7295f50259d3c2ca94e092"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac5299d96bb7295f50259d3c2ca94e092">&#9670;&nbsp;</a></span>setVolume()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ac5299d96bb7295f50259d3c2ca94e092">&#9670;&nbsp;</a></span>setVolume() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -138,6 +177,85 @@ template&lt;typename T &gt; </div>
 <p>Beállítja a hangerő szorzót. </p><dl class="params"><dt>Paraméterek</dt><dd>
   <table class="params">
     <tr><td class="paramname">volume</td><td>a kívánt hangerő </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ae8e7566b5485950dcc5e6f65248a2060"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae8e7566b5485950dcc5e6f65248a2060">&#9670;&nbsp;</a></span>setVolume() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classVolumeControl.html">VolumeControl</a>&lt; T &gt;::setVolume </td>
+          <td>(</td>
+          <td class="paramtype">const float &amp;&#160;</td>
+          <td class="paramname"><em>newVolume</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const float &amp;&#160;</td>
+          <td class="paramname"><em>seconds</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int &amp;&#160;</td>
+          <td class="paramname"><em>valuesPerSecond</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>method</em> = <code>&quot;linear&quot;</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const unsigned int &amp;&#160;</td>
+          <td class="paramname"><em>degree</em> = <code>2</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Beállítja a hangerőt a kívánt átmenettel.</p>
+<dl class="params"><dt>Paraméterek</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">volume</td><td>a kívánt hangerő</td></tr>
+    <tr><td class="paramname">seconds</td><td>az átmenet hossza másodpercben</td></tr>
+    <tr><td class="paramname">valuesPerSecond</td><td>az objektumon átmenő értékek száma másodpercenként</td></tr>
+    <tr><td class="paramname">method</td><td>az átmenet jellege</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>lehetséges értékek:</p><ul>
+<li>linear</li>
+<li>ease-in</li>
+<li>ease-out</li>
+<li>ease-in-out</li>
+</ul>
+<p>Lehetséges hogy több érték van. Lásd <a class="el" href="namespaceTransition.html">Transition</a> névtér.</p>
+<dl class="params"><dt>Paraméterek</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">degree</td><td>az átmenet hatványkitevője (ha lehetséges) </td></tr>
   </table>
   </dd>
 </dl>

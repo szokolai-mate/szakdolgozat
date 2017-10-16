@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['quadratic',['Quadratic',['../classTransition_1_1EaseIn_1_1Quadratic.html',1,'Transition::EaseIn::Quadratic&lt; T &gt;'],['../classTransition_1_1EaseOut_1_1Quadratic.html',1,'Transition::EaseOut::Quadratic&lt; T &gt;'],['../classTransition_1_1EaseInOut_1_1Quadratic.html',1,'Transition::EaseInOut::Quadratic&lt; T &gt;']]],
-  ['quartic',['Quartic',['../classTransition_1_1EaseInOut_1_1Quartic.html',1,'Transition::EaseInOut::Quartic&lt; T &gt;'],['../classTransition_1_1EaseIn_1_1Quartic.html',1,'Transition::EaseIn::Quartic&lt; T &gt;'],['../classTransition_1_1EaseOut_1_1Quartic.html',1,'Transition::EaseOut::Quartic&lt; T &gt;']]],
+  ['quadratic',['Quadratic',['../classTransition_1_1EaseInOut_1_1Quadratic.html',1,'Transition::EaseInOut::Quadratic&lt; T &gt;'],['../classTransition_1_1EaseOut_1_1Quadratic.html',1,'Transition::EaseOut::Quadratic&lt; T &gt;'],['../classTransition_1_1EaseIn_1_1Quadratic.html',1,'Transition::EaseIn::Quadratic&lt; T &gt;']]],
+  ['quartic',['Quartic',['../classTransition_1_1EaseIn_1_1Quartic.html',1,'Transition::EaseIn::Quartic&lt; T &gt;'],['../classTransition_1_1EaseInOut_1_1Quartic.html',1,'Transition::EaseInOut::Quartic&lt; T &gt;'],['../classTransition_1_1EaseOut_1_1Quartic.html',1,'Transition::EaseOut::Quartic&lt; T &gt;']]],
   ['queuebuffer',['QueueBuffer',['../classQueueBuffer.html',1,'QueueBuffer&lt; T &gt;'],['../classQueueBuffer.html#a366e7c97789ae30c27ad0f60082e6dac',1,'QueueBuffer::QueueBuffer()']]],
-  ['quintic',['Quintic',['../classTransition_1_1EaseIn_1_1Quintic.html',1,'Transition::EaseIn::Quintic&lt; T &gt;'],['../classTransition_1_1EaseOut_1_1Quintic.html',1,'Transition::EaseOut::Quintic&lt; T &gt;'],['../classTransition_1_1EaseInOut_1_1Quintic.html',1,'Transition::EaseInOut::Quintic&lt; T &gt;']]]
+  ['quintic',['Quintic',['../classTransition_1_1EaseInOut_1_1Quintic.html',1,'Transition::EaseInOut::Quintic&lt; T &gt;'],['../classTransition_1_1EaseIn_1_1Quintic.html',1,'Transition::EaseIn::Quintic&lt; T &gt;'],['../classTransition_1_1EaseOut_1_1Quintic.html',1,'Transition::EaseOut::Quintic&lt; T &gt;']]]
 ];

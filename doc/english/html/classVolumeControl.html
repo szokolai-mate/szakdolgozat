@@ -80,7 +80,46 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:aba665d9a21b7636dcc06c7669986ce9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac5299d96bb7295f50259d3c2ca94e092"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVolumeControl.html#ac5299d96bb7295f50259d3c2ca94e092">setVolume</a> (const T &amp;volume)</td></tr>
 <tr class="separator:ac5299d96bb7295f50259d3c2ca94e092"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae8e7566b5485950dcc5e6f65248a2060"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVolumeControl.html#ae8e7566b5485950dcc5e6f65248a2060">setVolume</a> (const float &amp;newVolume, const float &amp;seconds, const int &amp;valuesPerSecond, std::string method=&quot;linear&quot;, const unsigned int &amp;degree=2)</td></tr>
+<tr class="separator:ae8e7566b5485950dcc5e6f65248a2060"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4d0d35a2473949317313e180cd8057e8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVolumeControl.html#a4d0d35a2473949317313e180cd8057e8">VolumeControl</a> (const T &amp;volume)</td></tr>
+<tr class="separator:a4d0d35a2473949317313e180cd8057e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a4d0d35a2473949317313e180cd8057e8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4d0d35a2473949317313e180cd8057e8">&#9670;&nbsp;</a></span>VolumeControl()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classVolumeControl.html">VolumeControl</a>&lt; T &gt;::<a class="el" href="classVolumeControl.html">VolumeControl</a> </td>
+          <td>(</td>
+          <td class="paramtype">const T &amp;&#160;</td>
+          <td class="paramname"><em>volume</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Constructor. Sets volume. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">volume</td><td>the desired volume </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <h2 class="groupheader">Member Function Documentation</h2>
 <a id="aba665d9a21b7636dcc06c7669986ce9f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aba665d9a21b7636dcc06c7669986ce9f">&#9670;&nbsp;</a></span>getVolume()</h2>
@@ -111,7 +150,7 @@ template&lt;typename T &gt; </div>
 </div>
 </div>
 <a id="ac5299d96bb7295f50259d3c2ca94e092"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac5299d96bb7295f50259d3c2ca94e092">&#9670;&nbsp;</a></span>setVolume()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ac5299d96bb7295f50259d3c2ca94e092">&#9670;&nbsp;</a></span>setVolume() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -138,6 +177,84 @@ template&lt;typename T &gt; </div>
 <p>Set the volume multiplier. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">volume</td><td>the desired volume </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ae8e7566b5485950dcc5e6f65248a2060"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae8e7566b5485950dcc5e6f65248a2060">&#9670;&nbsp;</a></span>setVolume() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classVolumeControl.html">VolumeControl</a>&lt; T &gt;::setVolume </td>
+          <td>(</td>
+          <td class="paramtype">const float &amp;&#160;</td>
+          <td class="paramname"><em>newVolume</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const float &amp;&#160;</td>
+          <td class="paramname"><em>seconds</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int &amp;&#160;</td>
+          <td class="paramname"><em>valuesPerSecond</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>method</em> = <code>&quot;linear&quot;</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const unsigned int &amp;&#160;</td>
+          <td class="paramname"><em>degree</em> = <code>2</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Set the volume with the desired transition. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">volume</td><td>the desired volume </td></tr>
+    <tr><td class="paramname">seconds</td><td>the length of transition in seconds </td></tr>
+    <tr><td class="paramname">valuesPerSecond</td><td>the number of samples that will go through this object per second </td></tr>
+    <tr><td class="paramname">method</td><td>the method of transition</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>possible values:</p><ul>
+<li>linear</li>
+<li>ease-in</li>
+<li>ease-out</li>
+<li>ease-in-out</li>
+</ul>
+<p>Possibly more values in <a class="el" href="namespaceTransition.html">Transition</a> namespace.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">degree</td><td>the exponential degree of the transition method (if applicable) </td></tr>
   </table>
   </dd>
 </dl>

@@ -89,7 +89,7 @@ class Mixer::SimpleNote&lt; T, A, D &gt;</h3>
 </ul>
 <p>A növekvő és csökkenő részek egy-egy <a class="el" href="classTransitionFunction.html">TransitionFunction</a> -al határozandók meg. Ezek az A és D sablonparaméterekkel adhatóak meg, A a növekvő, D a csökkenő résznek.</p>
 <p>Az átmenetek sebességét a <a class="el" href="classMixer_1_1SimpleNote.html#ae99482eb3cb1fa4dc412f1b9ea183044">setAttack()</a> és <a class="el" href="classMixer_1_1SimpleNote.html#a3e86da9cd72d2b71ec75c3587ea09c2e">setDecay()</a> metódusokkal adhatjuk meg, a növekvés végét vagy a csökkenés kezdetét a hangjegy hosszának <b>százalékában</b>.</p>
-<p>Egy <a class="el" href="classMixer_1_1iWaveformGenerator.html">iWaveformGenerator</a> megadása az <a class="el" href="classMixer_1_1SimpleNote.html#ae31185a6fc7952cbdde69010331637ef">attach()</a> metódussal szintén szükséges. Ez fogja a hangjegy hullámformáját adni.</p>
+<p>Egy iSource megadása az <a class="el" href="classMixer_1_1SimpleNote.html#a2561c84962225f3553679a9ba1ca502d">attach()</a> metódussal szintén szükséges. Ez fogja a hangjegy hullámformáját adni.</p>
 <p>Miután ezt a 3 tulajdonságot megadtuk, a <a class="el" href="classMixer_1_1SimpleNote.html#a772abbfc00a1dbd963748226f4ed1f91">bakeNote()</a> metódussal fel kell töltenünk a belső puffert a hangjegy atadával. <b>Ezt meg kell tenni mielőtt audió adatot kérnénk az objektumtól!</b></p>
 <p>Példa használatra:</p>
 <pre class="fragment">Mixer::SawtoothGenerator&lt;float&gt; generator(80, 150, 2, 48000);
@@ -106,8 +106,8 @@ std::vector&lt;float&gt; result = note.get(note.getLength());
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Publikus tagfüggvények</h2></td></tr>
-<tr class="memitem:ae31185a6fc7952cbdde69010331637ef"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMixer_1_1SimpleNote.html#ae31185a6fc7952cbdde69010331637ef">attach</a> (<a class="el" href="classMixer_1_1iWaveformGenerator.html">Mixer::iWaveformGenerator</a>&lt; T &gt; &amp;generator)</td></tr>
-<tr class="separator:ae31185a6fc7952cbdde69010331637ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2561c84962225f3553679a9ba1ca502d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMixer_1_1SimpleNote.html#a2561c84962225f3553679a9ba1ca502d">attach</a> (<a class="el" href="classDataFlow_1_1iSource.html">DataFlow::iSource</a>&lt; T &gt; &amp;generator)</td></tr>
+<tr class="separator:a2561c84962225f3553679a9ba1ca502d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae99482eb3cb1fa4dc412f1b9ea183044"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMixer_1_1SimpleNote.html#ae99482eb3cb1fa4dc412f1b9ea183044">setAttack</a> (const float &amp;end)</td></tr>
 <tr class="separator:ae99482eb3cb1fa4dc412f1b9ea183044"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3e86da9cd72d2b71ec75c3587ea09c2e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMixer_1_1SimpleNote.html#a3e86da9cd72d2b71ec75c3587ea09c2e">setDecay</a> (const float &amp;start)</td></tr>
@@ -182,8 +182,8 @@ template&lt;typename T , template&lt; typename &gt; typename A, template&lt; typ
 </div>
 </div>
 <h2 class="groupheader">Tagfüggvények dokumentációja</h2>
-<a id="ae31185a6fc7952cbdde69010331637ef"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae31185a6fc7952cbdde69010331637ef">&#9670;&nbsp;</a></span>attach()</h2>
+<a id="a2561c84962225f3553679a9ba1ca502d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2561c84962225f3553679a9ba1ca502d">&#9670;&nbsp;</a></span>attach()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -196,7 +196,7 @@ template&lt;typename T , template&lt; typename &gt; typename A, template&lt; typ
         <tr>
           <td class="memname">void <a class="el" href="classMixer_1_1SimpleNote.html">Mixer::SimpleNote</a>&lt; T, A, D &gt;::attach </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classMixer_1_1iWaveformGenerator.html">Mixer::iWaveformGenerator</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classDataFlow_1_1iSource.html">DataFlow::iSource</a>&lt; T &gt; &amp;&#160;</td>
           <td class="paramname"><em>generator</em></td><td>)</td>
           <td></td>
         </tr>
@@ -209,7 +209,7 @@ template&lt;typename T , template&lt; typename &gt; typename A, template&lt; typ
 </div><div class="memdoc">
 <p>A paramétert az objektum hullámjel-forrásaként hozzácsatolja. </p><dl class="params"><dt>Paraméterek</dt><dd>
   <table class="params">
-    <tr><td class="paramname">source</td><td>a csatolni kívánt iWaveformGenerator&lt;T&gt; </td></tr>
+    <tr><td class="paramname">source</td><td>a csatolni kívánt iSource&lt;T&gt; </td></tr>
   </table>
   </dd>
 </dl>

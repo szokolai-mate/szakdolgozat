@@ -1,0 +1,4 @@
+<map id="Mixer::ComplexWaveformGenerator&lt; T &gt;" name="Mixer::ComplexWaveformGenerator&lt; T &gt;">
+<area shape="rect" id="node2" href="$classDataFlow_1_1iSource.html" title="{DataFlow::iSource\&lt; T \&gt;\n||+ get()\l+ ~iSource()\l}" alt="" coords="5,13,168,105"/>
+<area shape="rect" id="node3" href="$classMixer_1_1AudioSource.html" title="{Mixer::AudioSource\n||+ getChannels()\l+ getSampleRate()\l# AudioSource()\l}" alt="" coords="192,5,328,112"/>
+</map>

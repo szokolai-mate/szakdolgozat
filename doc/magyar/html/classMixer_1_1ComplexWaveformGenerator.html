@@ -1,0 +1,339 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Szakdolgozat: Mixer::ComplexWaveformGenerator&lt; T &gt; osztálysablon-referencia</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Szakdolgozat
+   </div>
+   <div id="projectbrief">A szakdolgozatom ELTE Programtervező Informatikus BSc. szakra.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Készítette Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Keresés');
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Keresés');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespaceMixer.html">Mixer</a></li><li class="navelem"><a class="el" href="classMixer_1_1ComplexWaveformGenerator.html">ComplexWaveformGenerator</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Publikus tagfüggvények</a> &#124;
+<a href="classMixer_1_1ComplexWaveformGenerator-members.html">A tagok teljes listája</a>  </div>
+  <div class="headertitle">
+<div class="title">Mixer::ComplexWaveformGenerator&lt; T &gt; osztálysablon-referencia</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="ComplexWaveformGenerator_8h_source.html">ComplexWaveformGenerator.h</a>&gt;</code></p>
+<div class="dynheader">
+A Mixer::ComplexWaveformGenerator&lt; T &gt; osztály származási diagramja:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="classMixer_1_1ComplexWaveformGenerator__inherit__graph.svg" width="334" height="302"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<a name="details" id="details"></a><h2 class="groupheader">Részletes leírás</h2>
+<div class="textblock"><h3>template&lt;typename T&gt;<br />
+class Mixer::ComplexWaveformGenerator&lt; T &gt;</h3>
+
+<p>Ez az osztály egyedi hullámfromát szolgáltat, amit spektrális szintézissel készít el.</p>
+<p>Minden hullám előállítható különböző amplitúdójú és frekvenciájú szinuszoidok kombinációjaként. Ezeket a szinuszoidokat a hullám komponenseinek is nevezik. Minden komponens-halmaz egy egyedi hullámot határoz meg. Ez a halmaz a hullám spektruma.</p>
+<p>Ha egy hullámnak minden komponense ismert, ezek összeadásával az eredeti hullám tökéletezen replikálható. Ezt a teknikát hívják spektrális vagy Fourier szintézisnek. </p>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Publikus tagfüggvények</h2></td></tr>
+<tr class="memitem:a665d72e73cd56993b9ffe11ee23d8d97"><td class="memItemLeft" align="right" valign="top">std::vector&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMixer_1_1ComplexWaveformGenerator.html#a665d72e73cd56993b9ffe11ee23d8d97">get</a> (const unsigned int &amp;amount)</td></tr>
+<tr class="separator:a665d72e73cd56993b9ffe11ee23d8d97"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a45ca2b6602049043621d1557b770f6dd"><td class="memItemLeft" align="right" valign="top">T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMixer_1_1ComplexWaveformGenerator.html#a45ca2b6602049043621d1557b770f6dd">getComponent</a> (const float &amp;frequency)</td></tr>
+<tr class="separator:a45ca2b6602049043621d1557b770f6dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adc71f708e56319367da03d0da1fa58cc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMixer_1_1ComplexWaveformGenerator.html#adc71f708e56319367da03d0da1fa58cc">setComponent</a> (const float &amp;frequency, const float &amp;volume)</td></tr>
+<tr class="separator:adc71f708e56319367da03d0da1fa58cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a892ca9e4d649c324fba29660607a7325"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMixer_1_1ComplexWaveformGenerator.html#a892ca9e4d649c324fba29660607a7325">setComponent</a> (const float &amp;frequency, const float &amp;volume, const float &amp;seconds, std::string method=&quot;linear&quot;, const unsigned int &amp;degree=2)</td></tr>
+<tr class="separator:a892ca9e4d649c324fba29660607a7325"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9342fa3dbd09b9cf4e7fc48fbe3db9c5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMixer_1_1ComplexWaveformGenerator.html#a9342fa3dbd09b9cf4e7fc48fbe3db9c5">ComplexWaveformGenerator</a> (const std::vector&lt; std::pair&lt; float, T &gt;&gt; &amp;components, const unsigned int &amp;channels, const unsigned int &amp;sampleRate)</td></tr>
+<tr class="separator:a9342fa3dbd09b9cf4e7fc48fbe3db9c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classMixer_1_1AudioSource"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classMixer_1_1AudioSource')"><img src="closed.png" alt="-"/>&#160;Publikus tagfüggvények inherited from <a class="el" href="classMixer_1_1AudioSource.html">Mixer::AudioSource</a></td></tr>
+<tr class="memitem:acb94cd4a33fa1bc4e08e4bc83d80e412 inherit pub_methods_classMixer_1_1AudioSource"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMixer_1_1AudioSource.html#acb94cd4a33fa1bc4e08e4bc83d80e412">getChannels</a> () const</td></tr>
+<tr class="separator:acb94cd4a33fa1bc4e08e4bc83d80e412 inherit pub_methods_classMixer_1_1AudioSource"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0919585fa8a38d233c3b469198d98d20 inherit pub_methods_classMixer_1_1AudioSource"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMixer_1_1AudioSource.html#a0919585fa8a38d233c3b469198d98d20">getSampleRate</a> () const</td></tr>
+<tr class="separator:a0919585fa8a38d233c3b469198d98d20 inherit pub_methods_classMixer_1_1AudioSource"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Konstruktorok és destruktorok dokumentációja</h2>
+<a id="a9342fa3dbd09b9cf4e7fc48fbe3db9c5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9342fa3dbd09b9cf4e7fc48fbe3db9c5">&#9670;&nbsp;</a></span>ComplexWaveformGenerator()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classMixer_1_1ComplexWaveformGenerator.html">Mixer::ComplexWaveformGenerator</a>&lt; T &gt;::<a class="el" href="classMixer_1_1ComplexWaveformGenerator.html">ComplexWaveformGenerator</a> </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; std::pair&lt; float, T &gt;&gt; &amp;&#160;</td>
+          <td class="paramname"><em>components</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const unsigned int &amp;&#160;</td>
+          <td class="paramname"><em>channels</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const unsigned int &amp;&#160;</td>
+          <td class="paramname"><em>sampleRate</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Konstruktor. Beállítja a szinuszoid komponenseket és az <a class="el" href="classMixer_1_1AudioSource.html">AudioSource</a> paramétereit. </p><dl class="params"><dt>Paraméterek</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">components</td><td>egy frekvenciából és hangerőből álló párok vektora, minden ilyen pár leír egy szinuszoid komponenst </td></tr>
+    <tr><td class="paramname">channels</td><td>a csatornák száma </td></tr>
+    <tr><td class="paramname">sampleRate</td><td>a mintavételezés sűrűsége </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Tagfüggvények dokumentációja</h2>
+<a id="a665d72e73cd56993b9ffe11ee23d8d97"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a665d72e73cd56993b9ffe11ee23d8d97">&#9670;&nbsp;</a></span>get()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; T &gt; <a class="el" href="classMixer_1_1ComplexWaveformGenerator.html">Mixer::ComplexWaveformGenerator</a>&lt; T &gt;::get </td>
+          <td>(</td>
+          <td class="paramtype">const unsigned int &amp;&#160;</td>
+          <td class="paramname"><em>amount</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Adatot kér ettől a forrástól.</p>
+<dl class="params"><dt>Paraméterek</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">amount</td><td>a kért adat mennyisége </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Visszatérési érték</dt><dd>egy <b>T</b> típusú, <b>amount</b> méretű vektor, feltöltve az adattal. </dd></dl>
+
+<p>Megvalósítja a következőket: <a class="el" href="classDataFlow_1_1iSource.html#a597d9d155168f1b28e7ddc4dbc17df41">DataFlow::iSource&lt; T &gt;</a>.</p>
+
+</div>
+</div>
+<a id="a45ca2b6602049043621d1557b770f6dd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a45ca2b6602049043621d1557b770f6dd">&#9670;&nbsp;</a></span>getComponent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">T <a class="el" href="classMixer_1_1ComplexWaveformGenerator.html">Mixer::ComplexWaveformGenerator</a>&lt; T &gt;::getComponent </td>
+          <td>(</td>
+          <td class="paramtype">const float &amp;&#160;</td>
+          <td class="paramname"><em>frequency</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>A megadott frekvencia hangerejét adja vissza. </p><dl class="params"><dt>Paraméterek</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">frequency</td><td>a komponens frekvenciája </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Visszatérési érték</dt><dd>a komponens hangereje </dd></dl>
+
+</div>
+</div>
+<a id="adc71f708e56319367da03d0da1fa58cc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adc71f708e56319367da03d0da1fa58cc">&#9670;&nbsp;</a></span>setComponent() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classMixer_1_1ComplexWaveformGenerator.html">Mixer::ComplexWaveformGenerator</a>&lt; T &gt;::setComponent </td>
+          <td>(</td>
+          <td class="paramtype">const float &amp;&#160;</td>
+          <td class="paramname"><em>frequency</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const float &amp;&#160;</td>
+          <td class="paramname"><em>volume</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Egy komponens hangerejének beállítása, vagy új komponens hozzáadása.</p>
+<dl class="params"><dt>Paraméterek</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">frequency</td><td>a komponens frekvenciája</td></tr>
+    <tr><td class="paramname">volume</td><td>a kívánt hangerő </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a892ca9e4d649c324fba29660607a7325"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a892ca9e4d649c324fba29660607a7325">&#9670;&nbsp;</a></span>setComponent() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classMixer_1_1ComplexWaveformGenerator.html">Mixer::ComplexWaveformGenerator</a>&lt; T &gt;::setComponent </td>
+          <td>(</td>
+          <td class="paramtype">const float &amp;&#160;</td>
+          <td class="paramname"><em>frequency</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const float &amp;&#160;</td>
+          <td class="paramname"><em>volume</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const float &amp;&#160;</td>
+          <td class="paramname"><em>seconds</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>method</em> = <code>&quot;linear&quot;</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const unsigned int &amp;&#160;</td>
+          <td class="paramname"><em>degree</em> = <code>2</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Beállítja a komponens hangerejét a kívánt átmenettel. A frekvenciának már a hullám komponensének kell lennie.</p>
+<dl class="params"><dt>Paraméterek</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">frequency</td><td>a módosítani kívánt komponens frekvenciája</td></tr>
+    <tr><td class="paramname">volume</td><td>a kívánt hangerő</td></tr>
+    <tr><td class="paramname">seconds</td><td>az átmenet hossza másodpercben</td></tr>
+    <tr><td class="paramname">method</td><td>az átmenet jellege</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>lehetséges értékek:</p><ul>
+<li>linear</li>
+<li>ease-in</li>
+<li>ease-out</li>
+<li>ease-in-out</li>
+</ul>
+<p>Lehetséges hogy több érték van. Lásd <a class="el" href="namespaceTransition.html">Transition</a> névtér.</p>
+<dl class="params"><dt>Paraméterek</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">degree</td><td>az átmenet hatványkitevője (ha lehetséges) </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<hr/>Ez a dokumentáció az osztályról a következő fájlok alapján készült:<ul>
+<li>/SharedWithWindows/Projects/szakdolgozat/inc/<a class="el" href="ComplexWaveformGenerator_8h_source.html">ComplexWaveformGenerator.h</a></li>
+<li>/SharedWithWindows/Projects/szakdolgozat/src/complex_waveform_generator.cpp</li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Készítette &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>
