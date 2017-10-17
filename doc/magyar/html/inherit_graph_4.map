@@ -17,5 +17,5 @@
 <area shape="rect" id="node16" href="$classDataFlow_1_1iBuffer.html" title="DataFlow::iBuffer\&lt; T \&gt;" alt="" coords="252,157,408,184"/>
 <area shape="rect" id="node18" href="$classMixer_1_1iWaveformGenerator.html" title="Mixer::iWaveformGenerator\&lt; T \&gt;" alt="" coords="223,208,437,235"/>
 <area shape="rect" id="node19" href="$classOggFileLoader.html" title="OggFileLoader\&lt; T, K \&gt;" alt="" coords="253,309,407,336"/>
-<area shape="rect" id="node17" href="$classQueueBuffer.html" title="QueueBuffer\&lt; T \&gt;" alt="" coords="560,5,687,32"/>
+<area shape="rect" id="node17" href="$classDataFlow_1_1RepeatingBuffer.html" title="DataFlow::RepeatingBuffer\&lt; T \&gt;" alt="" coords="517,5,729,32"/>
 </map>

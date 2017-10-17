@@ -1,4 +1,4 @@
 <map id="DataFlow::iBuffer&lt; T &gt;" name="DataFlow::iBuffer&lt; T &gt;">
-<area shape="rect" id="node3" href="$classQueueBuffer.html" title="{QueueBuffer\&lt; T \&gt;\n||+ QueueBuffer()\l+ ~QueueBuffer()\l+ add()\l+ add()\l+ get()\l+ isEmpty()\l+ isFull()\l+ clear()\l+ capacity()\l+ exposeBuffer()\l+ size()\l}" alt="" coords="23,373,150,597"/>
-<area shape="rect" id="node2" href="$classDataFlow_1_1iSource.html" title="{DataFlow::iSource\&lt; T \&gt;\n||+ get()\l+ ~iSource()\l}" alt="" coords="5,5,168,97"/>
+<area shape="rect" id="node3" href="$classDataFlow_1_1RepeatingBuffer.html" title="{DataFlow::RepeatingBuffer\&lt; T \&gt;\n||+ get()\l+ put()\l+ clear()\l+ size()\l+ RepeatingBuffer()\l+ RepeatingBuffer()\l}" alt="" coords="5,300,217,451"/>
+<area shape="rect" id="node2" href="$classDataFlow_1_1iSource.html" title="{DataFlow::iSource\&lt; T \&gt;\n||+ get()\l+ ~iSource()\l}" alt="" coords="30,5,193,97"/>
 </map>

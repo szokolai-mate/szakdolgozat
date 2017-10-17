@@ -70,23 +70,31 @@ $(function() {
 <div class="title">DataFlow::iBuffer&lt; T &gt; osztálysablon-referencia<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;<a class="el" href="iBuffer_8h_source.html">iBuffer.h</a>&gt;</code></p>
 <div class="dynheader">
 A DataFlow::iBuffer&lt; T &gt; osztály származási diagramja:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="classDataFlow_1_1iBuffer__inherit__graph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classDataFlow_1_1iBuffer__inherit__graph.svg" width="223" height="456"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
-<table class="memberdecls">
+</div>
+<a name="details" id="details"></a><h2 class="groupheader">Részletes leírás</h2>
+<div class="textblock"><h3>template&lt;typename T&gt;<br />
+class DataFlow::iBuffer&lt; T &gt;</h3>
+
+<p>Pufferekhez használt interfész. </p>
+</div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Publikus tagfüggvények</h2></td></tr>
-<tr class="memitem:a045f71200fd4d615601c0d15dc1fc6a7"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDataFlow_1_1iBuffer.html#a045f71200fd4d615601c0d15dc1fc6a7">add</a> (std::vector&lt; T &gt; &amp;_buffer)=0</td></tr>
-<tr class="separator:a045f71200fd4d615601c0d15dc1fc6a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a35f76ead80841a490fcb8a9f68140a48"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDataFlow_1_1iBuffer.html#a35f76ead80841a490fcb8a9f68140a48">size</a> ()=0</td></tr>
+<tr class="separator:a35f76ead80841a490fcb8a9f68140a48"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classDataFlow_1_1iSource"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classDataFlow_1_1iSource')"><img src="closed.png" alt="-"/>&#160;Publikus tagfüggvények inherited from <a class="el" href="classDataFlow_1_1iSource.html">DataFlow::iSource&lt; T &gt;</a></td></tr>
 <tr class="memitem:a597d9d155168f1b28e7ddc4dbc17df41 inherit pub_methods_classDataFlow_1_1iSource"><td class="memItemLeft" align="right" valign="top">virtual std::vector&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDataFlow_1_1iSource.html#a597d9d155168f1b28e7ddc4dbc17df41">get</a> (const unsigned int &amp;amount)=0</td></tr>
 <tr class="separator:a597d9d155168f1b28e7ddc4dbc17df41 inherit pub_methods_classDataFlow_1_1iSource"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Tagfüggvények dokumentációja</h2>
-<a id="a045f71200fd4d615601c0d15dc1fc6a7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a045f71200fd4d615601c0d15dc1fc6a7">&#9670;&nbsp;</a></span>add()</h2>
+<a id="a35f76ead80841a490fcb8a9f68140a48"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a35f76ead80841a490fcb8a9f68140a48">&#9670;&nbsp;</a></span>size()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -97,10 +105,9 @@ template&lt;typename T &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual int <a class="el" href="classDataFlow_1_1iBuffer.html">DataFlow::iBuffer</a>&lt; T &gt;::add </td>
+          <td class="memname">virtual int <a class="el" href="classDataFlow_1_1iBuffer.html">DataFlow::iBuffer</a>&lt; T &gt;::size </td>
           <td>(</td>
-          <td class="paramtype">std::vector&lt; T &gt; &amp;&#160;</td>
-          <td class="paramname"><em>_buffer</em></td><td>)</td>
+          <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -110,9 +117,9 @@ template&lt;typename T &gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Adds argument to buffer. Returns elements consumed. </p>
+<p>A tárolt adat méretét adja vissza. </p><dl class="section return"><dt>Visszatérési érték</dt><dd>az adat mérete </dd></dl>
 
-<p>Megvalósítják a következők: <a class="el" href="classQueueBuffer.html#ae694746640cafea59167d17f01e9ea98">QueueBuffer&lt; T &gt;</a>.</p>
+<p>Megvalósítják a következők: <a class="el" href="classDataFlow_1_1RepeatingBuffer.html#a1968cb825a0a6b1aab0f7f1c952b5991">DataFlow::RepeatingBuffer&lt; T &gt;</a>.</p>
 
 </div>
 </div>

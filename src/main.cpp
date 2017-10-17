@@ -28,7 +28,7 @@
 
 #include <VorbisEncoder.h>
 
-#include <QueueBuffer.h>
+#include <RepeatingBuffer.h>
 #include <VorbisDecoder.h>
 
 #define DEFAULT_CHANNELS 2
@@ -136,11 +136,10 @@ int main()
 	note.setAttack(0.1f);
 	note.setDecay(0.12f);
 	note.bakeNote();
-
 	
 	DataFlow::Applicator<float,VolumeControl<float>> lower;
 	lower.getMethod().setVolume(0.5f);
-	lower.attach(complexGenerator);
+	lower.attach(note);
 	
 	
 {
@@ -152,16 +151,16 @@ int main()
 	int totalLength = DEFAULT_CHANNELS*DEFAULT_SAMPLE_RATE*10;
 	bool going = false;
 	while(c<totalLength){
-		//encoder.add(std::vector<float>(DEFAULT_CHANNELS*DEFAULT_SAMPLE_RATE*0.5f));
-		//c+=DEFAULT_CHANNELS*DEFAULT_SAMPLE_RATE*0.5f;
-		if(c>totalLength/4 && !going){
+		encoder.add(std::vector<float>(DEFAULT_CHANNELS*DEFAULT_SAMPLE_RATE*0.5f));
+		c+=DEFAULT_CHANNELS*DEFAULT_SAMPLE_RATE*0.5f;
+		/*if(c>totalLength/4 && !going){
 			complexGenerator.setComponent(firstHarmonicFrequency,0,1,"ease-in-out",5);
 			complexGenerator.setComponent(firstHarmonicFrequency*2,0,1);
 			complexGenerator.setComponent(firstHarmonicFrequency*3,0,1);
 			complexGenerator.setComponent(firstHarmonicFrequency*4,0,1);
 			going = true;
-		}
-		auto vec = lower.get(512);
+		}*/
+		auto vec = lower.get(note.size());
 		c+=vec.size();
 		encoder.add(vec);
 	}

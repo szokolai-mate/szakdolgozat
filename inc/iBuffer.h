@@ -1,35 +1,25 @@
 #pragma once
-//!\~todo TODO: fix buffers and document!
-
-#include <vector>
 
 #include <iSource.h>
-namespace DataFlow
-{
+
+namespace DataFlow{
+/*!
+    \~english Interface describing a buffer implementation.
+    \~hungarian Pufferekhez használt interfész.
+*/
 template <typename T>
-class iBuffer : public DataFlow::iSource<T>
-{
-  public:
-    virtual bool add(T &_buffer) = 0;
+class iBuffer : public DataFlow::iSource<T>{
+public:
+    virtual void put(std::vector<T> & data) = 0;
+
     /*!
-      Adds argument to buffer. Returns elements consumed.
+    \~english Get the size of stored data.
+    \~hungarian A tárolt adat méretét adja vissza.
+    \~english \return the size of data
+    \~hungarian \return az adat mérete
     */
-    virtual int add(std::vector<T> &_buffer) = 0;
+    virtual int size() = 0;
 
-    /*Returns whether buffer is empty*/
-    virtual bool isEmpty() = 0;
-
-    /*Returns whether buffer is full*/
-    virtual bool isFull() = 0;
-
-    /*Clears buffer of data*/
-    virtual void clear() = 0;
-
-    /*Returns capacity in number of element T*/
-    virtual unsigned int capacity() = 0;
-
-    virtual unsigned int size() = 0;
-
-    virtual ~iBuffer(){};
+    virtual ~iBuffer(){}
 };
-}
+};

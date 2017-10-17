@@ -18,20 +18,45 @@
             "sourceDirectory": "/SharedWithWindows/Projects/szakdolgozat",
             "targets": [
               {
-                "buildDirectory": "/SharedWithWindows/Projects/szakdolgozat/build",
+                "artifacts": [
+                  "/SharedWithWindows/Projects/szakdolgozat/build/bin/Mixer"
+                ],
+                "buildDirectory": "/SharedWithWindows/Projects/szakdolgozat/build/src",
                 "fileGroups": [
                   {
-                    "isGenerated": true,
+                    "compileFlags": " -std=c++14 -g  ",
+                    "includePath": [
+                      {
+                        "path": "/SharedWithWindows/Projects/szakdolgozat/inc"
+                      }
+                    ],
+                    "isGenerated": false,
+                    "language": "CXX",
                     "sources": [
-                      "build/CMakeFiles/cleanup",
-                      "build/CMakeFiles/cleanup.rule"
+                      "cheap_sawtooth_generator.cpp",
+                      "cheap_square_generator.cpp",
+                      "complex_waveform_generator.cpp",
+                      "consolidation_methods.cpp",
+                      "main.cpp",
+                      "ogg_file_loader.cpp",
+                      "portaudio_backend.cpp",
+                      "repeating_buffer.cpp",
+                      "sawtooth_generator.cpp",
+                      "sine_generator.cpp",
+                      "square_generator.cpp",
+                      "triangle_generator.cpp",
+                      "vorbis_decoder.cpp",
+                      "vorbis_encoder.cpp"
                     ]
                   }
                 ],
-                "fullName": "cleanup",
-                "name": "cleanup",
-                "sourceDirectory": "/SharedWithWindows/Projects/szakdolgozat",
-                "type": "UTILITY"
+                "fullName": "Mixer",
+                "linkLanguageFlags": "-std=c++14 -g",
+                "linkLibraries": "-Wl,-rpath,/usr/local/lib -lpthread /usr/local/lib/libportaudio.so /usr/lib/x86_64-linux-gnu/libogg.so /usr/lib/x86_64-linux-gnu/libvorbis.so /usr/lib/x86_64-linux-gnu/libvorbisenc.so",
+                "linkerLanguage": "CXX",
+                "name": "Mixer",
+                "sourceDirectory": "/SharedWithWindows/Projects/szakdolgozat/src",
+                "type": "EXECUTABLE"
               },
               {
                 "buildDirectory": "/SharedWithWindows/Projects/szakdolgozat/build/test",
@@ -72,7 +97,7 @@
                       "../src/consolidation_methods.cpp",
                       "../src/ogg_file_loader.cpp",
                       "../src/portaudio_backend.cpp",
-                      "../src/queue_buffer.cpp",
+                      "../src/repeating_buffer.cpp",
                       "../src/sawtooth_generator.cpp",
                       "../src/sine_generator.cpp",
                       "../src/square_generator.cpp",
@@ -91,47 +116,6 @@
                 "type": "EXECUTABLE"
               },
               {
-                "artifacts": [
-                  "/SharedWithWindows/Projects/szakdolgozat/build/bin/Mixer"
-                ],
-                "buildDirectory": "/SharedWithWindows/Projects/szakdolgozat/build/src",
-                "fileGroups": [
-                  {
-                    "compileFlags": " -std=c++14 -g  ",
-                    "includePath": [
-                      {
-                        "path": "/SharedWithWindows/Projects/szakdolgozat/inc"
-                      }
-                    ],
-                    "isGenerated": false,
-                    "language": "CXX",
-                    "sources": [
-                      "cheap_sawtooth_generator.cpp",
-                      "cheap_square_generator.cpp",
-                      "complex_waveform_generator.cpp",
-                      "consolidation_methods.cpp",
-                      "main.cpp",
-                      "ogg_file_loader.cpp",
-                      "portaudio_backend.cpp",
-                      "queue_buffer.cpp",
-                      "sawtooth_generator.cpp",
-                      "sine_generator.cpp",
-                      "square_generator.cpp",
-                      "triangle_generator.cpp",
-                      "vorbis_decoder.cpp",
-                      "vorbis_encoder.cpp"
-                    ]
-                  }
-                ],
-                "fullName": "Mixer",
-                "linkLanguageFlags": "-std=c++14 -g",
-                "linkLibraries": "-Wl,-rpath,/usr/local/lib -lpthread /usr/local/lib/libportaudio.so /usr/lib/x86_64-linux-gnu/libogg.so /usr/lib/x86_64-linux-gnu/libvorbis.so /usr/lib/x86_64-linux-gnu/libvorbisenc.so",
-                "linkerLanguage": "CXX",
-                "name": "Mixer",
-                "sourceDirectory": "/SharedWithWindows/Projects/szakdolgozat/src",
-                "type": "EXECUTABLE"
-              },
-              {
                 "buildDirectory": "/SharedWithWindows/Projects/szakdolgozat/build",
                 "fileGroups": [
                   {
@@ -146,13 +130,29 @@
                 "name": "doc",
                 "sourceDirectory": "/SharedWithWindows/Projects/szakdolgozat",
                 "type": "UTILITY"
+              },
+              {
+                "buildDirectory": "/SharedWithWindows/Projects/szakdolgozat/build",
+                "fileGroups": [
+                  {
+                    "isGenerated": true,
+                    "sources": [
+                      "build/CMakeFiles/cleanup",
+                      "build/CMakeFiles/cleanup.rule"
+                    ]
+                  }
+                ],
+                "fullName": "cleanup",
+                "name": "cleanup",
+                "sourceDirectory": "/SharedWithWindows/Projects/szakdolgozat",
+                "type": "UTILITY"
               }
             ]
           }
         ]
       }
     ],
-    "cookie": "0.5879764793191233",
+    "cookie": "0.23511616417844472",
     "inReplyTo": "codemodel",
     "type": "reply"
   }

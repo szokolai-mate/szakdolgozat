@@ -1,6 +1,12 @@
 var searchData=
 [
-  ['volumecontrol',['VolumeControl',['../classVolumeControl.html',1,'VolumeControl&lt; T &gt;'],['../classVolumeControl.html#a4d0d35a2473949317313e180cd8057e8',1,'VolumeControl::VolumeControl()']]],
-  ['vorbisdecoder',['VorbisDecoder',['../classVorbisDecoder.html',1,'VorbisDecoder'],['../classVorbisDecoder.html#a637929d707ce75b456b1bf4c764876ea',1,'VorbisDecoder::VorbisDecoder()']]],
-  ['vorbisencoder',['VorbisEncoder',['../classVorbisEncoder.html',1,'VorbisEncoder'],['../classVorbisEncoder.html#a64110ac08512b69bc1af45ebdb19150d',1,'VorbisEncoder::VorbisEncoder()']]]
+  ['easein',['EaseIn',['../namespaceTransition_1_1EaseIn.html',1,'Transition']]],
+  ['easeinout',['EaseInOut',['../namespaceTransition_1_1EaseInOut.html',1,'Transition']]],
+  ['easeout',['EaseOut',['../namespaceTransition_1_1EaseOut.html',1,'Transition']]],
+  ['template_5futils',['template_utils',['../namespacetemplate__utils.html',1,'']]],
+  ['tennivalók_20listája',['Tennivalók listája',['../todo.html',1,'']]],
+  ['transition',['Transition',['../namespaceTransition.html',1,'']]],
+  ['transitioner',['Transitioner',['../classTransitioner.html',1,'Transitioner&lt; T, K &gt;'],['../classTransitioner.html#a58a6987a8dfdf85755da975e3c3057c4',1,'Transitioner::Transitioner()']]],
+  ['transitionfunction',['TransitionFunction',['../classTransitionFunction.html',1,'']]],
+  ['trianglegenerator',['TriangleGenerator',['../classMixer_1_1TriangleGenerator.html',1,'Mixer::TriangleGenerator&lt; T &gt;'],['../classMixer_1_1TriangleGenerator.html#aa93b80e0e16970fc49327255e427c7de',1,'Mixer::TriangleGenerator::TriangleGenerator()']]]
 ];

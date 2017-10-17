@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['volumecontrol',['VolumeControl',['../classVolumeControl.html',1,'']]],
-  ['vorbisdecoder',['VorbisDecoder',['../classVorbisDecoder.html',1,'']]],
-  ['vorbisencoder',['VorbisEncoder',['../classVorbisEncoder.html',1,'']]]
+  ['transitioner',['Transitioner',['../classTransitioner.html',1,'']]],
+  ['transitionfunction',['TransitionFunction',['../classTransitionFunction.html',1,'']]],
+  ['trianglegenerator',['TriangleGenerator',['../classMixer_1_1TriangleGenerator.html',1,'Mixer']]]
 ];

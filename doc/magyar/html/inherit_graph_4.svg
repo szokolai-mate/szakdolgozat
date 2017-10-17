@@ -254,15 +254,15 @@
 </g>
 <!-- Node5 -->
 <g id="node17" class="node"><title>Node5</title>
-<g id="a_node17"><a xlink:href="classQueueBuffer.html" target="_top" xlink:title="QueueBuffer\&lt; T \&gt;">
-<polygon fill="none" stroke="black" points="416,-430 416,-449 511,-449 511,-430 416,-430"/>
-<text text-anchor="middle" x="463.5" y="-437" font-family="Helvetica,sans-Serif" font-size="10.00">QueueBuffer&lt; T &gt;</text>
+<g id="a_node17"><a xlink:href="classDataFlow_1_1RepeatingBuffer.html" target="_top" xlink:title="DataFlow::RepeatingBuffer\&lt; T \&gt;">
+<polygon fill="none" stroke="black" points="384,-430 384,-449 543,-449 543,-430 384,-430"/>
+<text text-anchor="middle" x="463.5" y="-437" font-family="Helvetica,sans-Serif" font-size="10.00">DataFlow::RepeatingBuffer&lt; T &gt;</text>
 </a>
 </g>
 </g>
 <!-- Node4&#45;&gt;Node5 -->
 <g id="edge15" class="edge"><title>Node4&#45;&gt;Node5</title>
-<path fill="none" stroke="midnightblue" d="M312.03,-335.497C318.13,-338.124 323.914,-341.405 329,-345.5 357.8,-368.687 335.742,-397.893 365,-420.5 379.329,-431.572 398.306,-436.757 415.707,-439.023"/>
+<path fill="none" stroke="midnightblue" d="M312.03,-335.497C318.13,-338.124 323.914,-341.405 329,-345.5 357.8,-368.687 335.742,-397.893 365,-420.5 370.595,-424.823 376.899,-428.249 383.541,-430.954"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="312.833,-332.063 302.239,-331.886 310.41,-338.63 312.833,-332.063"/>
 </g>
 <!-- Node7&#45;&gt;Node8 -->

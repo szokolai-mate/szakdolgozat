@@ -7,6 +7,7 @@
 #include <Consolidator.h>
 #include <ConsolidationMethods.h>
 #include <TransitionFunctions.h>
+#include <RepeatingBuffer.h>
 
 namespace Mixer
 {
@@ -38,7 +39,7 @@ namespace Mixer
 
         note.bakeNote();
 
-        std::vector<float> result = note.get(note.getLength());
+        std::vector<float> result = note.get(note.size());
 
     The vector *result* now contains multiplexed audio data that is 0.2 seconds long, has a 80Hz sawtooth waveform, approaches it's maximum volume linearily,
      reaches that maximum volume at 10% of the length (0.02 seconds in this case) and begins the reduction of volume at 12% of the note's length, approaching 0 volume with a cubic ease-out function.
@@ -92,7 +93,7 @@ class SimpleNote : public DataFlow::iSource<T>, public AudioSource
 
     bool attackInitialized = false, decayInicialized = false;
     
-    std::vector<T> bakedNote;
+    DataFlow::RepeatingBuffer<T> bakedNote;
   public:
     /*!
         \~english Attach the parameter as this object's waveform source.
@@ -135,8 +136,8 @@ class SimpleNote : public DataFlow::iSource<T>, public AudioSource
         \~english \return the length of the note
         \~hungarian \return a hangjegy hossza
     */
-    int getLength(){
-        return lengthInSamples * getChannels();
+    int size(){
+        return bakedNote.size();
     }
 
     /*!
@@ -152,6 +153,7 @@ class SimpleNote : public DataFlow::iSource<T>, public AudioSource
     bool bakeNote(){
         if(generator && attackInitialized && decayInicialized){
             bakedNote.clear();
+            std::vector<T> res;
             std::vector<T> envelope(lengthInSamples,1.0f);
             float position = 0;
             for(int i = 0; i<lengthInSamples*attackEnd;i++){
@@ -167,10 +169,11 @@ class SimpleNote : public DataFlow::iSource<T>, public AudioSource
             int envelopePos = 0;
             for(int i = 0; i < lengthInSamples * getChannels(); i+=getChannels()){
                 for (int j = 0 ; j<getChannels();j++){
-                    bakedNote.push_back( envelope[envelopePos] * waveform[i+j]);
+                    res.push_back( envelope[envelopePos] * waveform[i+j]);
                 }
                 envelopePos++;
             }
+            bakedNote.put(res);
             return true;
         }
         return false;
@@ -185,13 +188,7 @@ class SimpleNote : public DataFlow::iSource<T>, public AudioSource
     }
 
     std::vector<T> get(const unsigned int & amount){
-        std::vector<T> res;
-        res.reserve(amount);
-        for(int i = 0;i<amount;i++){
-            res.push_back(bakedNote[position]);
-            position=(position+1)%bakedNote.size();
-        }
-        return res;
+        return bakedNote.get(amount);
     }
     
     /*!
@@ -205,8 +202,6 @@ class SimpleNote : public DataFlow::iSource<T>, public AudioSource
         \~hungarian \param sampleRate a mintavételezés sűrűsége
     */
     SimpleNote(const float &lengthInSeconds, const unsigned int &channels, const unsigned int &sampleRate)
-    : AudioSource(channels,sampleRate), lengthInSamples(sampleRate*lengthInSeconds){
-        bakedNote.reserve(lengthInSamples*channels);
-    }
+    : AudioSource(channels,sampleRate), lengthInSamples(sampleRate*lengthInSeconds){}
 };
 };

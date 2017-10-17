@@ -126,26 +126,21 @@ var sectionId = 'dynsection-0';
 </g>
 <!-- Node6 -->
 <g id="node5" class="node"><title>Node6</title>
-<g id="a_node5"><a xlink:href="classDataFlow_1_1iBuffer.html" target="_top" xlink:title="{DataFlow::iBuffer\&lt; T \&gt;\n||+ add()\l+ add()\l+ isEmpty()\l+ isFull()\l+ clear()\l+ capacity()\l+ size()\l+ ~iBuffer()\l}">
-<polygon fill="none" stroke="red" points="481.5,-6 481.5,-140 598.5,-140 598.5,-6 481.5,-6"/>
-<text text-anchor="middle" x="540" y="-128" font-family="Helvetica,sans-Serif" font-size="10.00">DataFlow::iBuffer&lt; T &gt;</text>
-<polyline fill="none" stroke="red" points="481.5,-121 598.5,-121 "/>
-<text text-anchor="middle" x="540" y="-109" font-family="Helvetica,sans-Serif" font-size="10.00"> </text>
-<polyline fill="none" stroke="red" points="481.5,-102 598.5,-102 "/>
-<text text-anchor="start" x="489.5" y="-90" font-family="Helvetica,sans-Serif" font-size="10.00">+ add()</text>
-<text text-anchor="start" x="489.5" y="-79" font-family="Helvetica,sans-Serif" font-size="10.00">+ add()</text>
-<text text-anchor="start" x="489.5" y="-68" font-family="Helvetica,sans-Serif" font-size="10.00">+ isEmpty()</text>
-<text text-anchor="start" x="489.5" y="-57" font-family="Helvetica,sans-Serif" font-size="10.00">+ isFull()</text>
-<text text-anchor="start" x="489.5" y="-46" font-family="Helvetica,sans-Serif" font-size="10.00">+ clear()</text>
-<text text-anchor="start" x="489.5" y="-35" font-family="Helvetica,sans-Serif" font-size="10.00">+ capacity()</text>
-<text text-anchor="start" x="489.5" y="-24" font-family="Helvetica,sans-Serif" font-size="10.00">+ size()</text>
-<text text-anchor="start" x="489.5" y="-13" font-family="Helvetica,sans-Serif" font-size="10.00">+ ~iBuffer()</text>
+<g id="a_node5"><a xlink:href="classDataFlow_1_1iBuffer.html" target="_top" xlink:title="{DataFlow::iBuffer\&lt; T \&gt;\n||+ put()\l+ size()\l+ ~iBuffer()\l}">
+<polygon fill="none" stroke="red" points="481.5,-33.5 481.5,-112.5 598.5,-112.5 598.5,-33.5 481.5,-33.5"/>
+<text text-anchor="middle" x="540" y="-100.5" font-family="Helvetica,sans-Serif" font-size="10.00">DataFlow::iBuffer&lt; T &gt;</text>
+<polyline fill="none" stroke="red" points="481.5,-93.5 598.5,-93.5 "/>
+<text text-anchor="middle" x="540" y="-81.5" font-family="Helvetica,sans-Serif" font-size="10.00"> </text>
+<polyline fill="none" stroke="red" points="481.5,-74.5 598.5,-74.5 "/>
+<text text-anchor="start" x="489.5" y="-62.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ put()</text>
+<text text-anchor="start" x="489.5" y="-51.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ size()</text>
+<text text-anchor="start" x="489.5" y="-40.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ ~iBuffer()</text>
 </a>
 </g>
 </g>
 <!-- Node0&#45;&gt;Node6 -->
 <g id="edge4" class="edge"><title>Node0&#45;&gt;Node6</title>
-<path fill="none" stroke="midnightblue" d="M742.041,-207.466C700.446,-194.257 648.16,-173.975 607,-146 604.176,-144.08 601.384,-142.021 598.636,-139.856"/>
+<path fill="none" stroke="midnightblue" d="M742.041,-207.466C700.446,-194.257 648.16,-173.975 607,-146 593.584,-136.882 580.899,-124.616 570.249,-112.794"/>
 <polygon fill="none" stroke="midnightblue" points="741.24,-210.882 751.828,-210.507 743.317,-204.197 741.24,-210.882"/>
 </g>
 <!-- Node8 -->
@@ -191,7 +186,7 @@ var sectionId = 'dynsection-0';
 </g>
 <!-- Node16 -->
 <g id="node8" class="node"><title>Node16</title>
-<g id="a_node8"><a xlink:href="classMixer_1_1SimpleNote.html" target="_top" xlink:title="{Mixer::SimpleNote\&lt; T \&gt;\n||+ attach()\l+ setAttack()\l+ setDecay()\l+ getLength()\l+ bakeNote()\l+ clear()\l+ get()\l+ SimpleNote()\l}">
+<g id="a_node8"><a xlink:href="classMixer_1_1SimpleNote.html" target="_top" xlink:title="{Mixer::SimpleNote\&lt; T \&gt;\n||+ attach()\l+ setAttack()\l+ setDecay()\l+ size()\l+ bakeNote()\l+ clear()\l+ get()\l+ SimpleNote()\l}">
 <polygon fill="none" stroke="black" points="1011,-6 1011,-140 1133,-140 1133,-6 1011,-6"/>
 <text text-anchor="middle" x="1072" y="-128" font-family="Helvetica,sans-Serif" font-size="10.00">Mixer::SimpleNote&lt; T &gt;</text>
 <polyline fill="none" stroke="black" points="1011,-121 1133,-121 "/>
@@ -200,7 +195,7 @@ var sectionId = 'dynsection-0';
 <text text-anchor="start" x="1019" y="-90" font-family="Helvetica,sans-Serif" font-size="10.00">+ attach()</text>
 <text text-anchor="start" x="1019" y="-79" font-family="Helvetica,sans-Serif" font-size="10.00">+ setAttack()</text>
 <text text-anchor="start" x="1019" y="-68" font-family="Helvetica,sans-Serif" font-size="10.00">+ setDecay()</text>
-<text text-anchor="start" x="1019" y="-57" font-family="Helvetica,sans-Serif" font-size="10.00">+ getLength()</text>
+<text text-anchor="start" x="1019" y="-57" font-family="Helvetica,sans-Serif" font-size="10.00">+ size()</text>
 <text text-anchor="start" x="1019" y="-46" font-family="Helvetica,sans-Serif" font-size="10.00">+ bakeNote()</text>
 <text text-anchor="start" x="1019" y="-35" font-family="Helvetica,sans-Serif" font-size="10.00">+ clear()</text>
 <text text-anchor="start" x="1019" y="-24" font-family="Helvetica,sans-Serif" font-size="10.00">+ get()</text>
