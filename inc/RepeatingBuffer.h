@@ -21,7 +21,7 @@ public:
         \~english \param data the new buffered data
         \~hungarian \param data az új pufferelni kívánt adat
     */
-    void put(std::vector<T> & data);
+    void put(std::vector<T> data);
 
     /*!
         \~english Clear the internal state of this object.

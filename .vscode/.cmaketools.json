@@ -18,6 +18,22 @@
             "sourceDirectory": "/SharedWithWindows/Projects/szakdolgozat",
             "targets": [
               {
+                "buildDirectory": "/SharedWithWindows/Projects/szakdolgozat/build",
+                "fileGroups": [
+                  {
+                    "isGenerated": true,
+                    "sources": [
+                      "build/CMakeFiles/doc",
+                      "build/CMakeFiles/doc.rule"
+                    ]
+                  }
+                ],
+                "fullName": "doc",
+                "name": "doc",
+                "sourceDirectory": "/SharedWithWindows/Projects/szakdolgozat",
+                "type": "UTILITY"
+              },
+              {
                 "artifacts": [
                   "/SharedWithWindows/Projects/szakdolgozat/build/bin/Mixer"
                 ],
@@ -40,6 +56,7 @@
                       "main.cpp",
                       "ogg_file_loader.cpp",
                       "portaudio_backend.cpp",
+                      "queue_buffer.cpp",
                       "repeating_buffer.cpp",
                       "sawtooth_generator.cpp",
                       "sine_generator.cpp",
@@ -97,6 +114,7 @@
                       "../src/consolidation_methods.cpp",
                       "../src/ogg_file_loader.cpp",
                       "../src/portaudio_backend.cpp",
+                      "../src/queue_buffer.cpp",
                       "../src/repeating_buffer.cpp",
                       "../src/sawtooth_generator.cpp",
                       "../src/sine_generator.cpp",
@@ -121,22 +139,6 @@
                   {
                     "isGenerated": true,
                     "sources": [
-                      "build/CMakeFiles/doc",
-                      "build/CMakeFiles/doc.rule"
-                    ]
-                  }
-                ],
-                "fullName": "doc",
-                "name": "doc",
-                "sourceDirectory": "/SharedWithWindows/Projects/szakdolgozat",
-                "type": "UTILITY"
-              },
-              {
-                "buildDirectory": "/SharedWithWindows/Projects/szakdolgozat/build",
-                "fileGroups": [
-                  {
-                    "isGenerated": true,
-                    "sources": [
                       "build/CMakeFiles/cleanup",
                       "build/CMakeFiles/cleanup.rule"
                     ]
@@ -152,7 +154,7 @@
         ]
       }
     ],
-    "cookie": "0.23511616417844472",
+    "cookie": "0.5030433073538367",
     "inReplyTo": "codemodel",
     "type": "reply"
   }

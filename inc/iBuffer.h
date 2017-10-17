@@ -10,7 +10,7 @@ namespace DataFlow{
 template <typename T>
 class iBuffer : public DataFlow::iSource<T>{
 public:
-    virtual void put(std::vector<T> & data) = 0;
+    virtual void put(std::vector<T> data) = 0;
 
     /*!
     \~english Get the size of stored data.

@@ -12,7 +12,7 @@ std::vector<T> DataFlow::RepeatingBuffer<T>::get(const unsigned int &amount){
 }
 
 template <typename T>
-void DataFlow::RepeatingBuffer<T>::put(std::vector<T> & data){
+void DataFlow::RepeatingBuffer<T>::put(std::vector<T> data){
     buffer = std::move(data);
     clear();
 }

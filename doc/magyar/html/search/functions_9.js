@@ -9,7 +9,7 @@ var searchData=
   ['simplenote',['SimpleNote',['../classMixer_1_1SimpleNote.html#ad9193fae2df9d526e81ad4aaf9c793d1',1,'Mixer::SimpleNote']]],
   ['simpleplayer',['SimplePlayer',['../classMixer_1_1SimplePlayer.html#a2321161909ca5b134cd5f49ff0777fc1',1,'Mixer::SimplePlayer']]],
   ['sinegenerator',['SineGenerator',['../classMixer_1_1SineGenerator.html#aca2b5ad391abd8eb6fd1de66f43b8292',1,'Mixer::SineGenerator']]],
-  ['size',['size',['../classDataFlow_1_1iBuffer.html#a35f76ead80841a490fcb8a9f68140a48',1,'DataFlow::iBuffer::size()'],['../classDataFlow_1_1RepeatingBuffer.html#a1968cb825a0a6b1aab0f7f1c952b5991',1,'DataFlow::RepeatingBuffer::size()'],['../classMixer_1_1SimpleNote.html#a1b84b0236926654d2c565c41797cb61d',1,'Mixer::SimpleNote::size()']]],
+  ['size',['size',['../classDataFlow_1_1iBuffer.html#a35f76ead80841a490fcb8a9f68140a48',1,'DataFlow::iBuffer::size()'],['../classDataFlow_1_1QueueBuffer.html#a9fd72de95726c27ecccd128f8284eb63',1,'DataFlow::QueueBuffer::size()'],['../classDataFlow_1_1RepeatingBuffer.html#a1968cb825a0a6b1aab0f7f1c952b5991',1,'DataFlow::RepeatingBuffer::size()'],['../classMixer_1_1SimpleNote.html#a1b84b0236926654d2c565c41797cb61d',1,'Mixer::SimpleNote::size()']]],
   ['squaregenerator',['SquareGenerator',['../classMixer_1_1SquareGenerator.html#a6982d65ec2faa0591598da0a03f45f5c',1,'Mixer::SquareGenerator']]],
   ['start',['start',['../classMixer_1_1PortAudioBackend.html#a02450772b298b5906955ed553b56cd5c',1,'Mixer::PortAudioBackend']]],
   ['step',['step',['../classiTransitioner.html#aeeeb6324221361b77da063afec35d8c3',1,'iTransitioner::step()'],['../classTransitioner.html#afee42d135e0d412702cc0207737cba26',1,'Transitioner::step()']]],

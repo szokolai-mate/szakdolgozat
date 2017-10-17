@@ -1,7 +1,5 @@
 #include <VorbisDecoder.h>
 
-//!\todo TODO: errors and exceptions
-
 VorbisDecoder::VorbisDecoder()
 {
     vorbis_info_init(&vi);

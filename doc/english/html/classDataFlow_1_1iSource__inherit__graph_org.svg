@@ -97,8 +97,8 @@
 <path fill="none" stroke="midnightblue" d="M742.041,-207.466C700.446,-194.257 648.16,-173.975 607,-146 593.584,-136.882 580.899,-124.616 570.249,-112.794"/>
 <polygon fill="none" stroke="midnightblue" points="741.24,-210.882 751.828,-210.507 743.317,-204.197 741.24,-210.882"/>
 </g>
-<!-- Node8 -->
-<g id="node6" class="node"><title>Node8</title>
+<!-- Node9 -->
+<g id="node6" class="node"><title>Node9</title>
 <g id="a_node6"><a xlink:href="classMixer_1_1ComplexWaveformGenerator.html" target="_top" xlink:title="{Mixer::ComplexWaveformGenerator\&lt; T \&gt;\n||+ get()\l+ getComponent()\l+ setComponent()\l+ setComponent()\l+ ComplexWaveformGenerator()\l}">
 <polygon fill="none" stroke="black" points="616.5,-22.5 616.5,-123.5 813.5,-123.5 813.5,-22.5 616.5,-22.5"/>
 <text text-anchor="middle" x="715" y="-111.5" font-family="Helvetica,sans-Serif" font-size="10.00">Mixer::ComplexWaveformGenerator&lt; T &gt;</text>
@@ -113,13 +113,13 @@
 </a>
 </g>
 </g>
-<!-- Node0&#45;&gt;Node8 -->
-<g id="edge5" class="edge"><title>Node0&#45;&gt;Node8</title>
+<!-- Node0&#45;&gt;Node9 -->
+<g id="edge5" class="edge"><title>Node0&#45;&gt;Node9</title>
 <path fill="none" stroke="midnightblue" d="M786.315,-184.975C774.126,-166.008 759.595,-143.396 746.84,-123.547"/>
 <polygon fill="none" stroke="midnightblue" points="783.385,-186.889 791.735,-193.41 789.274,-183.105 783.385,-186.889"/>
 </g>
-<!-- Node9 -->
-<g id="node7" class="node"><title>Node9</title>
+<!-- Node10 -->
+<g id="node7" class="node"><title>Node10</title>
 <g id="a_node7"><a xlink:href="classMixer_1_1iWaveformGenerator.html" target="_top" xlink:title="{Mixer::iWaveformGenerator\&lt; T \&gt;\n||+ getFrequency()\l+ setFrequency()\l+ setFrequency()\l+ ~iWaveformGenerator()\l}">
 <polygon fill="none" stroke="red" points="831.5,-28 831.5,-118 992.5,-118 992.5,-28 831.5,-28"/>
 <text text-anchor="middle" x="912" y="-106" font-family="Helvetica,sans-Serif" font-size="10.00">Mixer::iWaveformGenerator&lt; T &gt;</text>
@@ -133,13 +133,13 @@
 </a>
 </g>
 </g>
-<!-- Node0&#45;&gt;Node9 -->
-<g id="edge6" class="edge"><title>Node0&#45;&gt;Node9</title>
+<!-- Node0&#45;&gt;Node10 -->
+<g id="edge6" class="edge"><title>Node0&#45;&gt;Node10</title>
 <path fill="none" stroke="midnightblue" d="M840.059,-184.818C853.51,-164.098 869.766,-139.058 883.419,-118.026"/>
 <polygon fill="none" stroke="midnightblue" points="836.991,-183.116 834.482,-193.41 842.862,-186.928 836.991,-183.116"/>
 </g>
-<!-- Node16 -->
-<g id="node8" class="node"><title>Node16</title>
+<!-- Node17 -->
+<g id="node8" class="node"><title>Node17</title>
 <g id="a_node8"><a xlink:href="classMixer_1_1SimpleNote.html" target="_top" xlink:title="{Mixer::SimpleNote\&lt; T \&gt;\n||+ attach()\l+ setAttack()\l+ setDecay()\l+ size()\l+ bakeNote()\l+ clear()\l+ get()\l+ SimpleNote()\l}">
 <polygon fill="none" stroke="black" points="1011,-6 1011,-140 1133,-140 1133,-6 1011,-6"/>
 <text text-anchor="middle" x="1072" y="-128" font-family="Helvetica,sans-Serif" font-size="10.00">Mixer::SimpleNote&lt; T &gt;</text>
@@ -157,13 +157,13 @@
 </a>
 </g>
 </g>
-<!-- Node0&#45;&gt;Node16 -->
-<g id="edge7" class="edge"><title>Node0&#45;&gt;Node16</title>
+<!-- Node0&#45;&gt;Node17 -->
+<g id="edge7" class="edge"><title>Node0&#45;&gt;Node17</title>
 <path fill="none" stroke="midnightblue" d="M883.694,-203.665C920.438,-190.005 965.051,-170.514 1001,-146 1004.34,-143.725 1007.65,-141.278 1010.91,-138.708"/>
 <polygon fill="none" stroke="midnightblue" points="882.238,-200.47 874.044,-207.187 884.638,-207.046 882.238,-200.47"/>
 </g>
-<!-- Node17 -->
-<g id="node9" class="node"><title>Node17</title>
+<!-- Node18 -->
+<g id="node9" class="node"><title>Node18</title>
 <g id="a_node9"><a xlink:href="classMixer_1_1SimplePlayer.html" target="_top" xlink:title="{Mixer::SimplePlayer\&lt; T \&gt;\n||+ get()\l+ pause()\l+ stop()\l+ play()\l+ attach()\l+ SimplePlayer()\l}">
 <polygon fill="none" stroke="black" points="1151,-17 1151,-129 1279,-129 1279,-17 1151,-17"/>
 <text text-anchor="middle" x="1215" y="-117" font-family="Helvetica,sans-Serif" font-size="10.00">Mixer::SimplePlayer&lt; T &gt;</text>
@@ -179,13 +179,13 @@
 </a>
 </g>
 </g>
-<!-- Node0&#45;&gt;Node17 -->
-<g id="edge8" class="edge"><title>Node0&#45;&gt;Node17</title>
+<!-- Node0&#45;&gt;Node18 -->
+<g id="edge8" class="edge"><title>Node0&#45;&gt;Node18</title>
 <path fill="none" stroke="midnightblue" d="M884.148,-220.168C953.633,-211.518 1060.52,-191.493 1142,-146 1150.24,-141.401 1158.19,-135.62 1165.63,-129.343"/>
 <polygon fill="none" stroke="midnightblue" points="883.687,-216.699 874.175,-221.364 884.52,-223.649 883.687,-216.699"/>
 </g>
-<!-- Node18 -->
-<g id="node10" class="node"><title>Node18</title>
+<!-- Node19 -->
+<g id="node10" class="node"><title>Node19</title>
 <g id="a_node10"><a xlink:href="classOggFileLoader.html" target="_top" xlink:title="{OggFileLoader\&lt; T \&gt;\n||+ open()\l+ init()\l+ close()\l+ clear()\l+ get()\l+ getDecoder()\l+ OggFileLoader()\l+ ~OggFileLoader()\l+ init()\l}">
 <polygon fill="none" stroke="black" points="1297,-0.5 1297,-145.5 1401,-145.5 1401,-0.5 1297,-0.5"/>
 <text text-anchor="middle" x="1349" y="-133.5" font-family="Helvetica,sans-Serif" font-size="10.00">OggFileLoader&lt; T &gt;</text>
@@ -204,13 +204,13 @@
 </a>
 </g>
 </g>
-<!-- Node0&#45;&gt;Node18 -->
-<g id="edge9" class="edge"><title>Node0&#45;&gt;Node18</title>
+<!-- Node0&#45;&gt;Node19 -->
+<g id="edge9" class="edge"><title>Node0&#45;&gt;Node19</title>
 <path fill="none" stroke="midnightblue" d="M884.266,-220.438C999.402,-209.656 1220.28,-184.586 1288,-146 1290.99,-144.297 1293.9,-142.389 1296.72,-140.32"/>
 <polygon fill="none" stroke="midnightblue" points="883.773,-216.969 874.138,-221.375 884.418,-223.939 883.773,-216.969"/>
 </g>
-<!-- Node19 -->
-<g id="node11" class="node"><title>Node19</title>
+<!-- Node20 -->
+<g id="node11" class="node"><title>Node20</title>
 <g id="a_node11"><a xlink:href="classDataFlow_1_1iSource.html" target="_top" xlink:title="{DataFlow::iSource\&lt;\l float \&gt;\n||+ get()\l+ ~iSource()\l}">
 <polygon fill="none" stroke="red" points="1419,-33.5 1419,-112.5 1523,-112.5 1523,-33.5 1419,-33.5"/>
 <text text-anchor="start" x="1427" y="-100.5" font-family="Helvetica,sans-Serif" font-size="10.00">DataFlow::iSource&lt;</text>
@@ -223,8 +223,8 @@
 </a>
 </g>
 </g>
-<!-- Node0&#45;&gt;Node19 -->
-<g id="edge10" class="edge"><title>Node0&#45;&gt;Node19</title>
+<!-- Node0&#45;&gt;Node20 -->
+<g id="edge10" class="edge"><title>Node0&#45;&gt;Node20</title>
 <path fill="none" stroke="orange" d="M884.209,-223.484C1022.46,-216.571 1321.43,-196.142 1410,-146 1424.26,-137.929 1436.68,-125.177 1446.53,-112.632"/>
 <polygon fill="orange" stroke="orange" points="883.954,-219.992 874.137,-223.978 884.297,-226.984 883.954,-219.992"/>
 <text text-anchor="middle" x="1385" y="-167" font-family="Helvetica,sans-Serif" font-size="10.00"> &lt; float &gt;</text>

@@ -99,6 +99,11 @@ void VorbisEncoder::add(const std::vector<float> pcmData){
 bool VorbisEncoder::close(){
     vorbis_analysis_wrote(&vd,0);
     outfile.close();
+    ogg_stream_clear(&os);
+    vorbis_block_clear(&vb);
+    vorbis_dsp_clear(&vd);
+    vorbis_comment_clear(&vc);
+    vorbis_info_clear(&vi);
     return !outfile.is_open();
 }
 
