@@ -106,10 +106,10 @@ public:
         \~hungarian \param sampleRate a mintavételezési sűrűség 
         \~english \param quality the quality of the output file
 
-        Possible range is **[-0.1f;1.0f]** , where -0.1f is smallest file and lowest quality
+        Possible range is [-0.1f;1.0f] , where -0.1f is smallest file and lowest quality
         \~hungarian \param quality a kimenet minősége
 
-        A lehetséges intervallum **[-0.1f;1.0f]** , ahol -0.1f a legkisebb fájlméretet és hangminőséget jelent.
+        A lehetséges intervallum [-0.1f;1.0f] , ahol -0.1f a legkisebb fájlméretet és hangminőséget jelent.
     */
     VorbisEncoder(const unsigned int & channels,const unsigned int & sampleRate, const float & quality = 1.0f);
     ~VorbisEncoder();

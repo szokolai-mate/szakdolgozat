@@ -81,7 +81,8 @@ Inheritance diagram for DataFlow::RepeatingBuffer&lt; T &gt;:</div>
 <div class="textblock"><h3>template&lt;typename T&gt;<br />
 class DataFlow::RepeatingBuffer&lt; T &gt;</h3>
 
-<p>A simple <a class="el" href="classDataFlow_1_1iBuffer.html">iBuffer</a> that supplies an infinitely repeating pattern of the buffered data. </p>
+<p>A simple <a class="el" href="classDataFlow_1_1iBuffer.html">iBuffer</a> that supplies an infinitely repeating pattern of the stored data.</p>
+<p>This class is <b>not</b> for normal buffering! It will ony make one data block into an infinite pattern. </p>
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -237,7 +238,7 @@ template&lt;typename T &gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Replace the contents of this buffer with the argument. </p><dl class="params"><dt>Parameters</dt><dd>
+<p><b>Replace</b> the contents of this buffer with the argument. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">data</td><td>the new buffered data </td></tr>
   </table>

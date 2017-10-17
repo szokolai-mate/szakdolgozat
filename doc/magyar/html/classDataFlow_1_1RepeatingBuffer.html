@@ -81,7 +81,8 @@ A DataFlow::RepeatingBuffer&lt; T &gt; osztály származási diagramja:</div>
 <div class="textblock"><h3>template&lt;typename T&gt;<br />
 class DataFlow::RepeatingBuffer&lt; T &gt;</h3>
 
-<p>Egy egyszerű <a class="el" href="classDataFlow_1_1iBuffer.html">iBuffer</a> ami a pufferelt adat végtelenszeres ismétlődésének megfelelő adatot szolgáltat. </p>
+<p>Egy egyszerű <a class="el" href="classDataFlow_1_1iBuffer.html">iBuffer</a> ami a tárolt adat végtelenszeres ismétlődésének megfelelő adatot szolgáltat.</p>
+<p>Ez az osztály <b>nem</b> szokásos pufferelésre használandó! Csak egy adatblokk végtelenszeresítésére való. </p>
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Publikus tagfüggvények</h2></td></tr>
@@ -238,7 +239,7 @@ template&lt;typename T &gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>A puffer tartalmát kicseréli az argumentumra. </p><dl class="params"><dt>Paraméterek</dt><dd>
+<p>A puffer tartalmát <b>kicseréli</b> az argumentumra. </p><dl class="params"><dt>Paraméterek</dt><dd>
   <table class="params">
     <tr><td class="paramname">data</td><td>az új pufferelni kívánt adat </td></tr>
   </table>

@@ -31,6 +31,7 @@
 #include <RepeatingBuffer.h>
 #include <QueueBuffer.h>
 #include <VorbisDecoder.h>
+#include <Recorder.h>
 
 #define DEFAULT_CHANNELS 2
 #define DEFAULT_SAMPLE_RATE 48000
@@ -105,7 +106,15 @@ int main()
 	
 	Mixer::SawtoothGenerator<float> sg(110,50,DEFAULT_CHANNELS, DEFAULT_SAMPLE_RATE);
 	Mixer::SineGenerator<float> sg2(80, DEFAULT_CHANNELS, DEFAULT_SAMPLE_RATE);
-	DataFlow::QueueBuffer<float> buffer;	
+	DataFlow::QueueBuffer<float> buffer;
+	
+	DataFlow::RepeatingBuffer<float> recorded;
+	Mixer::Recorder<float> rec(DEFAULT_CHANNELS,DEFAULT_SAMPLE_RATE);
+	rec.attach(recorded);
+	std::cout<<"started recording"<<std::endl;
+	rec.record(0.5f,true);
+	std::cout<<"recorded "<<recorded.size()<<" samples"<<std::endl;
+
 {
 	OggFileLoader<float, VorbisDecoder> queen;
 	
@@ -207,7 +216,7 @@ int main()
 	}
 
 	Mixer::SimplePlayer<float, Mixer::PortAudioBackend> player(DEFAULT_CHANNELS, DEFAULT_SAMPLE_RATE);
-	player.attach(loader);
+	player.attach(recorded);
 	player.play();
 
 

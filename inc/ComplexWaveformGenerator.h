@@ -24,7 +24,7 @@ namespace Mixer{
 
         If all components of a wave are known, adding the components together will perfectly reproduce the wave. This is known as spectral or Fourier synthesis.
 
-        \~hungarian Ez az osztály egyedi hullámfromát szolgáltat, amit spektrális szintézissel készít el.
+        \~hungarian Ez az osztály egyedi hullámformát szolgáltat, amit spektrális szintézissel készít el.
 
         Minden hullám előállítható különböző amplitúdójú és frekvenciájú szinuszoidok kombinációjaként. Ezeket a szinuszoidokat a hullám komponenseinek is nevezik.
          Minden komponens-halmaz egy egyedi hullámot határoz meg. Ez a halmaz a hullám spektruma.

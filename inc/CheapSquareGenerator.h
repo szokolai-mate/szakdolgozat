@@ -15,15 +15,11 @@ namespace Mixer
 /*!
   \~english A source that provides a continous square wave with the set frequency.
 
-  **WARNING!**
-
-  This generator is extremely efficient but the frequency is imprecise.
+  This generator is extremely **efficient** but the frequency is **imprecise**.
 
   \~hungarian Egy megadott frekvenciájú négyzetes hullámot szolgáltató forrás.
 
-    **FIGYELEM!**
-
-    Ez a generator rednkívül hatékony, viszont pontatlan a frekvenciája.
+    Ez a generator rednkívül **hatékony**, viszont **pontatlan** a frekvenciája.
 */
 template <typename T>
 class CheapSquareGenerator : public Mixer::iWaveformGenerator<T>, public Mixer::AudioSource

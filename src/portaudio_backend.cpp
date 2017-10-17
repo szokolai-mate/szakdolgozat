@@ -25,7 +25,9 @@ bool Mixer::PortAudioBackend<T>::start()
     err = Pa_StartStream(stream);
     if (err != paNoError)
     {
+        #ifdef PA_WRITE_ERRORS
         Pa_error_occured(err);
+        #endif
         return false;
     }
 
@@ -46,7 +48,9 @@ bool Mixer::PortAudioBackend<T>::stop()
     err = Pa_StopStream(stream);
     if (err != paNoError)
     {
+        #ifdef PA_WRITE_ERRORS
         Pa_error_occured(err);
+        #endif
         return false;
     }
     return true;
@@ -62,13 +66,17 @@ bool Mixer::PortAudioBackend<T>::close()
     err = Pa_StopStream(stream);
     if (err != paNoError)
     {
+        #ifdef PA_WRITE_ERRORS
         Pa_error_occured(err);
+        #endif
         return false;
     }
     err = Pa_CloseStream(stream);
     if (err != paNoError)
     {
+        #ifdef PA_WRITE_ERRORS
         Pa_error_occured(err);
+        #endif
         return false;
     }
     Pa_Terminate();
@@ -88,17 +96,20 @@ bool Mixer::PortAudioBackend<float>::init(DataFlow::iSource<float> &source,const
     err = Pa_Initialize();
     if (err != paNoError)
     {
+        #ifdef PA_WRITE_ERRORS
         Pa_error_occured(err);
+        #endif
         return false;
     }
 
     outputParameters.device = Pa_GetDefaultOutputDevice(); /* default output device */
     if (outputParameters.device == paNoDevice)
     {
-        std::cerr << "Error: No default output device." << std::endl;
         if (err != paNoError)
         {
-            Pa_error_occured(err);
+            #ifdef PA_WRITE_ERRORS
+            Pa_error_occured(err,"Error: No default output device.");
+            #endif
             return false;
         }
     }
@@ -119,7 +130,9 @@ bool Mixer::PortAudioBackend<float>::init(DataFlow::iSource<float> &source,const
 
     if (err != paNoError)
     {
+        #ifdef PA_WRITE_ERRORS
         Pa_error_occured(err);
+        #endif
         return false;
     }
     return true;
