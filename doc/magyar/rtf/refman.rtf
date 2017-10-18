@@ -84,7 +84,7 @@
 {\info 
 {\title {\comment Szakdolgozat }Szakdolgozat}
 {\comment K\'E9sz\'EDtetteDoxgyen. }
-{\creatim \yr2017\mo10\dy17\hr19\min25\sec30}
+{\creatim \yr2017\mo10\dy18\hr8\min52\sec59}
 }\pard\plain 
 \sectd\pgnlcrm
 {\footer \s29\widctlpar\tqc\tx4320\tqr\tx8640\qr\adjustright \fs20\cgrid {\chpgn}}
@@ -97,7 +97,7 @@
 \par\par\par\par\par\par\par\par\par\par\par\par
 \pard\plain \s16\qc\sa60\widctlpar\outlinelevel1\adjustright \f1\cgrid 
 {\field\fldedit {\*\fldinst AUTHOR \\*MERGEFORMAT}{\fldrslt AUTHOR}}\par
-Verzi\'F3 \par{\field\fldedit {\*\fldinst CREATEDATE \\*MERGEFORMAT}{\fldrslt Tue Oct 17 2017 }}\par
+Verzi\'F3 \par{\field\fldedit {\*\fldinst CREATEDATE \\*MERGEFORMAT}{\fldrslt Wed Oct 18 2017 }}\par
 \page\page\vertalt
 \pard\plain 
 \s1\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs36\kerning36\cgrid Tartalomjegyz\'E9k\par
@@ -7011,7 +7011,25 @@ kommentek hozz\'E1ad\'E1sa : {\b addComment()}\par
 \pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
 adat hozz\'E1ad\'E1sa : {\b add()}\par
 \pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
-f\'E1jl befejez\'E9se : {\b close()} \par}
+f\'E1jl befejez\'E9se : {\b close()}\par}
+A vorbis k\'F6nyvt\'E1r egyik korl\'E1tozotts\'E1ga miatt egy {\b VorbisEncoder} \'E9s egy {\b VorbisDecoder} objektum nem l\'E9tezhet egy id\'F5ben egym\'E1st \'E1tfed\'F5 scope-okban.\par
+P\'E9ld\'E1ul, a k\'F6vetkez\'F5 k\'F3d segmentation fault-al fog megszakadni: {
+\par
+\pard\plain \s40\li0\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid VorbisEncoder encoder(DEFAULT_CHANNELS,DEFAULT_SAMPLE_RATE,1);\par
+\{\par
+    OggFileLoader<float, VorbisDecoder> loader;\par
+\}\par
+}
+\par
+De ez nem: {
+\par
+\pard\plain \s40\li0\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \{\par
+    OggFileLoader<float, VorbisDecoder> loader;\par
+\}\par
+\{\par
+    VorbisEncoder encoder(DEFAULT_CHANNELS,DEFAULT_SAMPLE_RATE,1);\par
+\}}
+ \par
 }}
 \pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
 Publikus tagf\'FCggv\'E9nyek\par

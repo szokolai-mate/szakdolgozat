@@ -77,9 +77,19 @@ $(function() {
 <li>add comments to header with <a class="el" href="classVorbisEncoder.html#a310f964e33f09c037fbaa0735140125d">addComment()</a></li>
 <li><a class="el" href="classVorbisEncoder.html#a5800bed0e227a3856a2dc6d1f1ae6899">initEncoding()</a></li>
 <li>add audio data with <a class="el" href="classVorbisEncoder.html#a2d0faeae161d7c6f10aa407289c718d1">add()</a></li>
-<li>when finished use <a class="el" href="classVorbisEncoder.html#a8f10a093cb8309e99b68386ab862125a">close()</a> </li>
+<li>when finished use <a class="el" href="classVorbisEncoder.html#a8f10a093cb8309e99b68386ab862125a">close()</a></li>
 </ul>
-</div><table class="memberdecls">
+<p>Due to a limitation in the vorbis library, a <a class="el" href="classVorbisEncoder.html">VorbisEncoder</a> and <a class="el" href="classVorbisDecoder.html">VorbisDecoder</a> object cannot exist in an overlapping scope at the same time.</p>
+<p>For example, this will result in segmentation fault: </p><pre class="fragment">VorbisEncoder encoder(DEFAULT_CHANNELS,DEFAULT_SAMPLE_RATE,1);
+{
+    OggFileLoader&lt;float, VorbisDecoder&gt; loader;
+}
+</pre><p>But this will not: </p><pre class="fragment">{
+    OggFileLoader&lt;float, VorbisDecoder&gt; loader;
+}
+{
+    VorbisEncoder encoder(DEFAULT_CHANNELS,DEFAULT_SAMPLE_RATE,1);
+}</pre> </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a310f964e33f09c037fbaa0735140125d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVorbisEncoder.html#a310f964e33f09c037fbaa0735140125d">addComment</a> (const std::pair&lt; std::string, std::string &gt; &amp;comment)</td></tr>

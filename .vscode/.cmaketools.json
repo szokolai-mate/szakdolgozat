@@ -18,54 +18,6 @@
             "sourceDirectory": "/SharedWithWindows/Projects/szakdolgozat",
             "targets": [
               {
-                "buildDirectory": "/SharedWithWindows/Projects/szakdolgozat/build",
-                "fileGroups": [
-                  {
-                    "isGenerated": true,
-                    "sources": [
-                      "build/CMakeFiles/doc",
-                      "build/CMakeFiles/doc.rule"
-                    ]
-                  }
-                ],
-                "fullName": "doc",
-                "name": "doc",
-                "sourceDirectory": "/SharedWithWindows/Projects/szakdolgozat",
-                "type": "UTILITY"
-              },
-              {
-                "buildDirectory": "/SharedWithWindows/Projects/szakdolgozat/build/test",
-                "fileGroups": [
-                  {
-                    "isGenerated": true,
-                    "sources": [
-                      "../build/test/CMakeFiles/coverage",
-                      "../build/test/CMakeFiles/coverage.rule"
-                    ]
-                  }
-                ],
-                "fullName": "coverage",
-                "name": "coverage",
-                "sourceDirectory": "/SharedWithWindows/Projects/szakdolgozat/test",
-                "type": "UTILITY"
-              },
-              {
-                "buildDirectory": "/SharedWithWindows/Projects/szakdolgozat/build",
-                "fileGroups": [
-                  {
-                    "isGenerated": true,
-                    "sources": [
-                      "build/CMakeFiles/cleanup",
-                      "build/CMakeFiles/cleanup.rule"
-                    ]
-                  }
-                ],
-                "fullName": "cleanup",
-                "name": "cleanup",
-                "sourceDirectory": "/SharedWithWindows/Projects/szakdolgozat",
-                "type": "UTILITY"
-              },
-              {
                 "artifacts": [
                   "/SharedWithWindows/Projects/szakdolgozat/build/bin/Mixer"
                 ],
@@ -109,6 +61,22 @@
                 "type": "EXECUTABLE"
               },
               {
+                "buildDirectory": "/SharedWithWindows/Projects/szakdolgozat/build/test",
+                "fileGroups": [
+                  {
+                    "isGenerated": true,
+                    "sources": [
+                      "../build/test/CMakeFiles/coverage",
+                      "../build/test/CMakeFiles/coverage.rule"
+                    ]
+                  }
+                ],
+                "fullName": "coverage",
+                "name": "coverage",
+                "sourceDirectory": "/SharedWithWindows/Projects/szakdolgozat/test",
+                "type": "UTILITY"
+              },
+              {
                 "artifacts": [
                   "/SharedWithWindows/Projects/szakdolgozat/build/bin/Test"
                 ],
@@ -150,13 +118,45 @@
                 "name": "Test",
                 "sourceDirectory": "/SharedWithWindows/Projects/szakdolgozat/test",
                 "type": "EXECUTABLE"
+              },
+              {
+                "buildDirectory": "/SharedWithWindows/Projects/szakdolgozat/build",
+                "fileGroups": [
+                  {
+                    "isGenerated": true,
+                    "sources": [
+                      "build/CMakeFiles/cleanup",
+                      "build/CMakeFiles/cleanup.rule"
+                    ]
+                  }
+                ],
+                "fullName": "cleanup",
+                "name": "cleanup",
+                "sourceDirectory": "/SharedWithWindows/Projects/szakdolgozat",
+                "type": "UTILITY"
+              },
+              {
+                "buildDirectory": "/SharedWithWindows/Projects/szakdolgozat/build",
+                "fileGroups": [
+                  {
+                    "isGenerated": true,
+                    "sources": [
+                      "build/CMakeFiles/doc",
+                      "build/CMakeFiles/doc.rule"
+                    ]
+                  }
+                ],
+                "fullName": "doc",
+                "name": "doc",
+                "sourceDirectory": "/SharedWithWindows/Projects/szakdolgozat",
+                "type": "UTILITY"
               }
             ]
           }
         ]
       }
     ],
-    "cookie": "0.332725277338078",
+    "cookie": "0.5314934892616425",
     "inReplyTo": "codemodel",
     "type": "reply"
   }
