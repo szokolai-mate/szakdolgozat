@@ -1,6 +1,4 @@
 #include <OggFileLoader.h>
-//! \todo TODO: exceptions and error handling
-//MAYBE: separate further to file-packaging-coded
 
 #define BUFFERSIZE 4096
 
@@ -65,7 +63,7 @@ int OggFileLoader<T, K>::nextPage()
 	}
 	if (err != 1)
 	{
-		//ERROR
+		return err;
 	}
 	return ogg_stream_pagein(&os, &currentPage);
 }
@@ -80,7 +78,6 @@ int OggFileLoader<T, K>::nextPacket()
 	{
 		nextPage();
 		err = ogg_stream_packetout(&os, &currentPacket);
-		//return err;
 	}
 	return err;
 }

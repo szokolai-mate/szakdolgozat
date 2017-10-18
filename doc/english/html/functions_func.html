@@ -101,9 +101,13 @@ $(function() {
 <li>clear()
 : <a class="el" href="classDataFlow_1_1QueueBuffer.html#a50fac2bdf091eed9ca7a2d6ab11b0511">DataFlow::QueueBuffer&lt; T &gt;</a>
 , <a class="el" href="classDataFlow_1_1RepeatingBuffer.html#a727b3d9f6bf38bf66caa1bef1d44b154">DataFlow::RepeatingBuffer&lt; T &gt;</a>
+, <a class="el" href="classMixer_1_1Multiplexer.html#a825db364ecc87eef98cc5ca552bf53ed">Mixer::Multiplexer&lt; T &gt;</a>
 , <a class="el" href="classMixer_1_1SimpleNote.html#a4b18544f7d43a375ea77a1e05ba4bb06">Mixer::SimpleNote&lt; T, A, D &gt;</a>
 , <a class="el" href="classOggFileLoader.html#a18b14be2466a962f53bb7c411ec46268">OggFileLoader&lt; T, K &gt;</a>
 , <a class="el" href="classVorbisDecoder.html#a9d4ccb71f8996dc2c214c2f93df74f32">VorbisDecoder</a>
+</li>
+<li>clearChannel()
+: <a class="el" href="classMixer_1_1Multiplexer.html#a291008ac50984b7a02d7984c13ec881d">Mixer::Multiplexer&lt; T &gt;</a>
 </li>
 <li>close()
 : <a class="el" href="classMixer_1_1PortAudioBackend.html#af1e65b5e14f0f06a99c6c4d147fbc1cc">Mixer::PortAudioBackend&lt; T &gt;</a>
@@ -139,6 +143,7 @@ $(function() {
 , <a class="el" href="classMixer_1_1CheapSawtoothGenerator.html#a7dbf62efaa5356d1bf21faa22e3255e4">Mixer::CheapSawtoothGenerator&lt; T &gt;</a>
 , <a class="el" href="classMixer_1_1CheapSquareGenerator.html#a25886600baa1eb21508e483d80d37ec3">Mixer::CheapSquareGenerator&lt; T &gt;</a>
 , <a class="el" href="classMixer_1_1ComplexWaveformGenerator.html#a665d72e73cd56993b9ffe11ee23d8d97">Mixer::ComplexWaveformGenerator&lt; T &gt;</a>
+, <a class="el" href="classMixer_1_1Multiplexer.html#a11fc0a0b45d3fef1a1d7d4e7459373a3">Mixer::Multiplexer&lt; T &gt;</a>
 , <a class="el" href="classMixer_1_1SawtoothGenerator.html#a722b230c8aa8764bac791769ca7512fa">Mixer::SawtoothGenerator&lt; T &gt;</a>
 , <a class="el" href="classMixer_1_1SimpleNote.html#a5b8f3c21c58aa1ae110bdcd5e0fc1766">Mixer::SimpleNote&lt; T, A, D &gt;</a>
 , <a class="el" href="classMixer_1_1SimplePlayer.html#a1f1738f9d44881a20ac84b04d71d9bba">Mixer::SimplePlayer&lt; T, K &gt;</a>
@@ -146,6 +151,9 @@ $(function() {
 , <a class="el" href="classMixer_1_1SquareGenerator.html#a58a7b0940f4b9e1b72c089d763d66ff3">Mixer::SquareGenerator&lt; T &gt;</a>
 , <a class="el" href="classMixer_1_1TriangleGenerator.html#a91c44f0429416505de637ac2937d4286">Mixer::TriangleGenerator&lt; T &gt;</a>
 , <a class="el" href="classOggFileLoader.html#a0e01d930726fdd328af51fb6c156634e">OggFileLoader&lt; T, K &gt;</a>
+</li>
+<li>getChannelCount()
+: <a class="el" href="classMixer_1_1Multiplexer.html#ad9c95f3db071e11608b17060072c77a1">Mixer::Multiplexer&lt; T &gt;</a>
 </li>
 <li>getChannels()
 : <a class="el" href="classMixer_1_1AudioSource.html#acb94cd4a33fa1bc4e08e4bc83d80e412">Mixer::AudioSource</a>
@@ -220,6 +228,13 @@ $(function() {
 </ul>
 
 
+<h3><a id="index_m"></a>- m -</h3><ul>
+<li>Multiplexer()
+: <a class="el" href="classMixer_1_1Multiplexer.html#a571d1c30ceccbc92dfb36234b99346c8">Mixer::Multiplexer&lt; T &gt;</a>
+</li>
+</ul>
+
+
 <h3><a id="index_o"></a>- o -</h3><ul>
 <li>open()
 : <a class="el" href="classOggFileLoader.html#a877b5980ca3e50479faf9680e3a704a1">OggFileLoader&lt; T, K &gt;</a>
@@ -280,6 +295,12 @@ $(function() {
 <li>setAttack()
 : <a class="el" href="classMixer_1_1SimpleNote.html#ae99482eb3cb1fa4dc412f1b9ea183044">Mixer::SimpleNote&lt; T, A, D &gt;</a>
 </li>
+<li>setChannel()
+: <a class="el" href="classMixer_1_1Multiplexer.html#a260504b01ac88771da9fa96d75455428">Mixer::Multiplexer&lt; T &gt;</a>
+</li>
+<li>setChannelCount()
+: <a class="el" href="classMixer_1_1Multiplexer.html#ac7cf92cf49ef53737e5113f8fbe7e7d7">Mixer::Multiplexer&lt; T &gt;</a>
+</li>
 <li>setComponent()
 : <a class="el" href="classMixer_1_1ComplexWaveformGenerator.html#adc71f708e56319367da03d0da1fa58cc">Mixer::ComplexWaveformGenerator&lt; T &gt;</a>
 </li>
@@ -296,7 +317,7 @@ $(function() {
 , <a class="el" href="classMixer_1_1TriangleGenerator.html#a856d582e8adaf5f82bdb0f417e2bcefb">Mixer::TriangleGenerator&lt; T &gt;</a>
 </li>
 <li>setVolume()
-: <a class="el" href="classVolumeControl.html#ac5299d96bb7295f50259d3c2ca94e092">VolumeControl&lt; T &gt;</a>
+: <a class="el" href="classVolumeControl.html#ae8e7566b5485950dcc5e6f65248a2060">VolumeControl&lt; T &gt;</a>
 </li>
 <li>SimpleNote()
 : <a class="el" href="classMixer_1_1SimpleNote.html#ad9193fae2df9d526e81ad4aaf9c793d1">Mixer::SimpleNote&lt; T, A, D &gt;</a>

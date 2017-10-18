@@ -18,62 +18,19 @@
             "sourceDirectory": "/SharedWithWindows/Projects/szakdolgozat",
             "targets": [
               {
-                "artifacts": [
-                  "/SharedWithWindows/Projects/szakdolgozat/build/bin/Mixer"
-                ],
-                "buildDirectory": "/SharedWithWindows/Projects/szakdolgozat/build/src",
-                "fileGroups": [
-                  {
-                    "compileFlags": " -std=c++14 -g  ",
-                    "includePath": [
-                      {
-                        "path": "/SharedWithWindows/Projects/szakdolgozat/inc"
-                      }
-                    ],
-                    "isGenerated": false,
-                    "language": "CXX",
-                    "sources": [
-                      "cheap_sawtooth_generator.cpp",
-                      "cheap_square_generator.cpp",
-                      "complex_waveform_generator.cpp",
-                      "consolidation_methods.cpp",
-                      "main.cpp",
-                      "ogg_file_loader.cpp",
-                      "portaudio_backend.cpp",
-                      "queue_buffer.cpp",
-                      "recorder.cpp",
-                      "repeating_buffer.cpp",
-                      "sawtooth_generator.cpp",
-                      "sine_generator.cpp",
-                      "square_generator.cpp",
-                      "triangle_generator.cpp",
-                      "vorbis_decoder.cpp",
-                      "vorbis_encoder.cpp"
-                    ]
-                  }
-                ],
-                "fullName": "Mixer",
-                "linkLanguageFlags": "-std=c++14 -g",
-                "linkLibraries": "-Wl,-rpath,/usr/local/lib -lpthread /usr/local/lib/libportaudio.so /usr/lib/x86_64-linux-gnu/libogg.so /usr/lib/x86_64-linux-gnu/libvorbis.so /usr/lib/x86_64-linux-gnu/libvorbisenc.so",
-                "linkerLanguage": "CXX",
-                "name": "Mixer",
-                "sourceDirectory": "/SharedWithWindows/Projects/szakdolgozat/src",
-                "type": "EXECUTABLE"
-              },
-              {
-                "buildDirectory": "/SharedWithWindows/Projects/szakdolgozat/build/test",
+                "buildDirectory": "/SharedWithWindows/Projects/szakdolgozat/build",
                 "fileGroups": [
                   {
                     "isGenerated": true,
                     "sources": [
-                      "../build/test/CMakeFiles/coverage",
-                      "../build/test/CMakeFiles/coverage.rule"
+                      "build/CMakeFiles/cleanup",
+                      "build/CMakeFiles/cleanup.rule"
                     ]
                   }
                 ],
-                "fullName": "coverage",
-                "name": "coverage",
-                "sourceDirectory": "/SharedWithWindows/Projects/szakdolgozat/test",
+                "fullName": "cleanup",
+                "name": "cleanup",
+                "sourceDirectory": "/SharedWithWindows/Projects/szakdolgozat",
                 "type": "UTILITY"
               },
               {
@@ -97,6 +54,7 @@
                       "../src/cheap_square_generator.cpp",
                       "../src/complex_waveform_generator.cpp",
                       "../src/consolidation_methods.cpp",
+                      "../src/multiplexer.cpp",
                       "../src/ogg_file_loader.cpp",
                       "../src/portaudio_backend.cpp",
                       "../src/queue_buffer.cpp",
@@ -120,20 +78,66 @@
                 "type": "EXECUTABLE"
               },
               {
-                "buildDirectory": "/SharedWithWindows/Projects/szakdolgozat/build",
+                "buildDirectory": "/SharedWithWindows/Projects/szakdolgozat/build/test",
                 "fileGroups": [
                   {
                     "isGenerated": true,
                     "sources": [
-                      "build/CMakeFiles/cleanup",
-                      "build/CMakeFiles/cleanup.rule"
+                      "../build/test/CMakeFiles/coverage",
+                      "../build/test/CMakeFiles/coverage.rule"
                     ]
                   }
                 ],
-                "fullName": "cleanup",
-                "name": "cleanup",
-                "sourceDirectory": "/SharedWithWindows/Projects/szakdolgozat",
+                "fullName": "coverage",
+                "name": "coverage",
+                "sourceDirectory": "/SharedWithWindows/Projects/szakdolgozat/test",
                 "type": "UTILITY"
+              },
+              {
+                "artifacts": [
+                  "/SharedWithWindows/Projects/szakdolgozat/build/lib/libSzakdolgozat.so"
+                ],
+                "buildDirectory": "/SharedWithWindows/Projects/szakdolgozat/build/src",
+                "fileGroups": [
+                  {
+                    "compileFlags": " -std=c++14 -g -fPIC  ",
+                    "defines": [
+                      "Szakdolgozat_EXPORTS"
+                    ],
+                    "includePath": [
+                      {
+                        "path": "/SharedWithWindows/Projects/szakdolgozat/inc"
+                      }
+                    ],
+                    "isGenerated": false,
+                    "language": "CXX",
+                    "sources": [
+                      "cheap_sawtooth_generator.cpp",
+                      "cheap_square_generator.cpp",
+                      "complex_waveform_generator.cpp",
+                      "consolidation_methods.cpp",
+                      "main.cpp",
+                      "multiplexer.cpp",
+                      "ogg_file_loader.cpp",
+                      "portaudio_backend.cpp",
+                      "queue_buffer.cpp",
+                      "recorder.cpp",
+                      "repeating_buffer.cpp",
+                      "sawtooth_generator.cpp",
+                      "sine_generator.cpp",
+                      "square_generator.cpp",
+                      "triangle_generator.cpp",
+                      "vorbis_decoder.cpp",
+                      "vorbis_encoder.cpp"
+                    ]
+                  }
+                ],
+                "fullName": "libSzakdolgozat.so",
+                "linkLibraries": "-Wl,-rpath,/usr/local/lib: -lpthread /usr/local/lib/libportaudio.so /usr/lib/x86_64-linux-gnu/libogg.so /usr/lib/x86_64-linux-gnu/libvorbis.so /usr/lib/x86_64-linux-gnu/libvorbisenc.so",
+                "linkerLanguage": "CXX",
+                "name": "Szakdolgozat",
+                "sourceDirectory": "/SharedWithWindows/Projects/szakdolgozat/src",
+                "type": "SHARED_LIBRARY"
               },
               {
                 "buildDirectory": "/SharedWithWindows/Projects/szakdolgozat/build",
@@ -150,13 +154,57 @@
                 "name": "doc",
                 "sourceDirectory": "/SharedWithWindows/Projects/szakdolgozat",
                 "type": "UTILITY"
+              },
+              {
+                "artifacts": [
+                  "/SharedWithWindows/Projects/szakdolgozat/build/bin/Mixer"
+                ],
+                "buildDirectory": "/SharedWithWindows/Projects/szakdolgozat/build/src",
+                "fileGroups": [
+                  {
+                    "compileFlags": " -std=c++14 -g  ",
+                    "includePath": [
+                      {
+                        "path": "/SharedWithWindows/Projects/szakdolgozat/inc"
+                      }
+                    ],
+                    "isGenerated": false,
+                    "language": "CXX",
+                    "sources": [
+                      "cheap_sawtooth_generator.cpp",
+                      "cheap_square_generator.cpp",
+                      "complex_waveform_generator.cpp",
+                      "consolidation_methods.cpp",
+                      "main.cpp",
+                      "multiplexer.cpp",
+                      "ogg_file_loader.cpp",
+                      "portaudio_backend.cpp",
+                      "queue_buffer.cpp",
+                      "recorder.cpp",
+                      "repeating_buffer.cpp",
+                      "sawtooth_generator.cpp",
+                      "sine_generator.cpp",
+                      "square_generator.cpp",
+                      "triangle_generator.cpp",
+                      "vorbis_decoder.cpp",
+                      "vorbis_encoder.cpp"
+                    ]
+                  }
+                ],
+                "fullName": "Mixer",
+                "linkLanguageFlags": "-std=c++14 -g",
+                "linkLibraries": "-Wl,-rpath,/usr/local/lib -lpthread /usr/local/lib/libportaudio.so /usr/lib/x86_64-linux-gnu/libogg.so /usr/lib/x86_64-linux-gnu/libvorbis.so /usr/lib/x86_64-linux-gnu/libvorbisenc.so",
+                "linkerLanguage": "CXX",
+                "name": "Mixer",
+                "sourceDirectory": "/SharedWithWindows/Projects/szakdolgozat/src",
+                "type": "EXECUTABLE"
               }
             ]
           }
         ]
       }
     ],
-    "cookie": "0.5314934892616425",
+    "cookie": "0.9024575756163948",
     "inReplyTo": "codemodel",
     "type": "reply"
   }

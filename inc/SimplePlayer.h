@@ -7,8 +7,6 @@
 #include <vector>
 #include <atomic>
 
-/*! \todo TODO: at start and stop make a rapid approach to 0 to avoid popping*/
-
 namespace Mixer{
 //! \~english Simple implementation of an iPlayer.
 //! \~hungarian Egy egyszerű iPlayer implementáció.
@@ -25,7 +23,7 @@ class SimplePlayer : public Mixer::AudioSource, public DataFlow::iSource<T>, pub
     {
         if (paused)
         {
-            //!\todo TODO: pause function
+            return std::vector<T>(amount*getChannels(),0);
         }
         return source->get(amount * getChannels());
     }
@@ -41,7 +39,8 @@ class SimplePlayer : public Mixer::AudioSource, public DataFlow::iSource<T>, pub
     bool play()
     {
         this->paused = false;
-        return backend.start();
+        backend.start();
+        return paused;
     }
     /*!
         \~english Attach the parameter as this object's source.

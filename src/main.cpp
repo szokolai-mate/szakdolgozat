@@ -1,5 +1,3 @@
-//!\todo TODO:microphone
-//!\todo TODO: file endpoint
 //!\todo TODO:modulating filter
 
 #include <iostream>
@@ -25,6 +23,7 @@
 #include <Clipping.h>
 #include <VolumeControl.h>
 #include <SimpleNote.h>
+#include <Multiplexer.h>
 
 #include <VorbisEncoder.h>
 
@@ -104,16 +103,9 @@ int main()
 #endif
 #endif
 	
-	Mixer::SawtoothGenerator<float> sg(110,50,DEFAULT_CHANNELS, DEFAULT_SAMPLE_RATE);
-	Mixer::SineGenerator<float> sg2(80, DEFAULT_CHANNELS, DEFAULT_SAMPLE_RATE);
+	Mixer::SineGenerator<float> sg(220,1, DEFAULT_SAMPLE_RATE);
+	Mixer::SineGenerator<float> sg2(880, 1, DEFAULT_SAMPLE_RATE);
 	DataFlow::QueueBuffer<float> buffer;
-	
-	DataFlow::RepeatingBuffer<float> recorded;
-	Mixer::Recorder<float> rec(DEFAULT_CHANNELS,DEFAULT_SAMPLE_RATE);
-	rec.attach(recorded);
-	std::cout<<"started recording"<<std::endl;
-	rec.record(0.5f,true);
-	std::cout<<"recorded "<<recorded.size()<<" samples"<<std::endl;
 
 {
 	OggFileLoader<float, VorbisDecoder> queen;
@@ -151,11 +143,11 @@ int main()
 
 	DataFlow::Applicator<float,VolumeControl<float>> vc;
 	DataFlow::Applicator<float,VolumeControl<float>> vc2;
-	vc.getMethod().setVolume(0.2f);
+	vc.getMethod().setVolume(0.3f);
 	vc2.getMethod().setVolume(0.3f);
 	
-	vc.attach(water);
-	vc2.attach(queen);
+	vc.attach(queen);
+	vc2.attach(water);
 	
 	DataFlow::Consolidator<float, Consolidation::Accumulation> consolidator;
 	consolidator.attach(vc);
@@ -216,7 +208,7 @@ int main()
 	}
 
 	Mixer::SimplePlayer<float, Mixer::PortAudioBackend> player(DEFAULT_CHANNELS, DEFAULT_SAMPLE_RATE);
-	player.attach(recorded);
+	player.attach(mx);
 	player.play();
 
 

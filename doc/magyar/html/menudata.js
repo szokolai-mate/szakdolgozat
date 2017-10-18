@@ -1,6 +1,5 @@
 var menudata={children:[
 {text:"Főoldal",url:"index.html"},
-{text:"Kapcsolódó lapok",url:"pages.html"},
 {text:"Névterek",url:"namespaces.html",children:[
 {text:"Névtérlista",url:"namespaces.html"},
 {text:"Névtértagok",url:"namespacemembers.html",children:[
@@ -18,6 +17,7 @@ var menudata={children:[
 {text:"d",url:"functions.html#index_d"},
 {text:"g",url:"functions.html#index_g"},
 {text:"i",url:"functions.html#index_i"},
+{text:"m",url:"functions.html#index_m"},
 {text:"o",url:"functions.html#index_o"},
 {text:"p",url:"functions.html#index_p"},
 {text:"r",url:"functions.html#index_r"},
@@ -31,6 +31,7 @@ var menudata={children:[
 {text:"d",url:"functions_func.html#index_d"},
 {text:"g",url:"functions_func.html#index_g"},
 {text:"i",url:"functions_func.html#index_i"},
+{text:"m",url:"functions_func.html#index_m"},
 {text:"o",url:"functions_func.html#index_o"},
 {text:"p",url:"functions_func.html#index_p"},
 {text:"r",url:"functions_func.html#index_r"},

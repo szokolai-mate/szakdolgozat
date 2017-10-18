@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['transitioner',['Transitioner',['../classTransitioner.html#a58a6987a8dfdf85755da975e3c3057c4',1,'Transitioner']]],
-  ['trianglegenerator',['TriangleGenerator',['../classMixer_1_1TriangleGenerator.html#aa93b80e0e16970fc49327255e427c7de',1,'Mixer::TriangleGenerator']]]
+  ['volumecontrol',['VolumeControl',['../classVolumeControl.html#a4d0d35a2473949317313e180cd8057e8',1,'VolumeControl']]],
+  ['vorbisencoder',['VorbisEncoder',['../classVorbisEncoder.html#a64110ac08512b69bc1af45ebdb19150d',1,'VorbisEncoder']]]
 ];
