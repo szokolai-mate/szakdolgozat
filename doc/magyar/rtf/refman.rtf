@@ -84,7 +84,7 @@
 {\info 
 {\title {\comment Szakdolgozat }Szakdolgozat}
 {\comment K\'E9sz\'EDtetteDoxgyen. }
-{\creatim \yr2017\mo10\dy18\hr16\min52\sec30}
+{\creatim \yr2017\mo10\dy19\hr19\min32\sec10}
 }\pard\plain 
 \sectd\pgnlcrm
 {\footer \s29\widctlpar\tqc\tx4320\tqr\tx8640\qr\adjustright \fs20\cgrid {\chpgn}}
@@ -97,7 +97,7 @@
 \par\par\par\par\par\par\par\par\par\par\par\par
 \pard\plain \s16\qc\sa60\widctlpar\outlinelevel1\adjustright \f1\cgrid 
 {\field\fldedit {\*\fldinst AUTHOR \\*MERGEFORMAT}{\fldrslt AUTHOR}}\par
-Verzi\'F3 \par{\field\fldedit {\*\fldinst CREATEDATE \\*MERGEFORMAT}{\fldrslt Wed Oct 18 2017 }}\par
+Verzi\'F3 \par{\field\fldedit {\*\fldinst CREATEDATE \\*MERGEFORMAT}{\fldrslt Thu Oct 19 2017 }}\par
 \page\page\vertalt
 \pard\plain 
 \s1\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs36\kerning36\cgrid Tartalomjegyz\'E9k\par
@@ -7219,25 +7219,7 @@ kommentek hozz\'E1ad\'E1sa : {\b addComment()}\par
 \pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
 adat hozz\'E1ad\'E1sa : {\b add()}\par
 \pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
-f\'E1jl befejez\'E9se : {\b close()}\par}
-A vorbis k\'F6nyvt\'E1r egyik korl\'E1tozotts\'E1ga miatt egy {\b VorbisEncoder} \'E9s egy {\b VorbisDecoder} objektum nem l\'E9tezhet egy id\'F5ben egym\'E1st \'E1tfed\'F5 scope-okban.\par
-P\'E9ld\'E1ul, a k\'F6vetkez\'F5 k\'F3d segmentation fault-al fog megszakadni: {
-\par
-\pard\plain \s40\li0\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid VorbisEncoder encoder(DEFAULT_CHANNELS,DEFAULT_SAMPLE_RATE,1);\par
-\{\par
-    OggFileLoader<float, VorbisDecoder> loader;\par
-\}\par
-}
-\par
-De ez nem: {
-\par
-\pard\plain \s40\li0\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \{\par
-    OggFileLoader<float, VorbisDecoder> loader;\par
-\}\par
-\{\par
-    VorbisEncoder encoder(DEFAULT_CHANNELS,DEFAULT_SAMPLE_RATE,1);\par
-\}}
- \par
+f\'E1jl befejez\'E9se : {\b close()} \par}
 }}
 \pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
 Publikus tagf\'FCggv\'E9nyek\par
@@ -7245,7 +7227,7 @@ Publikus tagf\'FCggv\'E9nyek\par
 
 {
 \pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
-void {\b addComment} (const std::pair< std::string, std::string > &comment)\par
+void {\b addComment} (std::string key, std::string value)\par
 \pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
 int {\b initEncoding} ()\par
 \pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
@@ -7326,7 +7308,7 @@ Param\'E9terek:\par}
 {\xe \v VorbisEncoder\:addComment}
 \pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
 {\b 
-void VorbisEncoder::addComment (const std::pair< std::string, std::string > &  {\i comment})}}
+void VorbisEncoder::addComment (std::string  {\i key}, std::string  {\i value})}}
 \par
 {\bkmkstart AAAAAAAACJ}
 {\bkmkend AAAAAAAACJ}
@@ -7335,7 +7317,21 @@ void VorbisEncoder::addComment (const std::pair< std::string, std::string > &  {
 {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
 A komment hozz\'E1ad\'E1sa a fejl\'E9chez.\par
 A kommentek k\'E9t string-b\'F5l \'E1llnak, a kulcs \'E9s az \'E9rt\'E9k.\par
-packet a hozz\'E1adand\'F3 komment \par
+{{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
+Param\'E9terek:\par}
+\pard\plain \s61\li360\widctlpar\ql\adjustright \fs20\cgrid \trowd \trgaph108\trleft426\tblind426\trbrdrt\brdrs\brdrw10\brdrcf15 \trbrdrl\brdrs\brdrw10\brdrcf15 \trbrdrb\brdrs\brdrw10\brdrcf15 \trbrdrr\brdrs\brdrw10\brdrcf15 \trbrdrh\brdrs\brdrw10\brdrcf15 \trbrdrv\brdrs\brdrw10\brdrcf15 
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx2187
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx8748
+\pard \widctlpar\intbl\adjustright
+{{\i key} \cell }{a hozz\'E1adand\'F3 komment kulcsa \cell }
+{\row }
+\trowd \trgaph108\trleft426\tblind426\trbrdrt\brdrs\brdrw10\brdrcf15 \trbrdrl\brdrs\brdrw10\brdrcf15 \trbrdrb\brdrs\brdrw10\brdrcf15 \trbrdrr\brdrs\brdrw10\brdrcf15 \trbrdrh\brdrs\brdrw10\brdrcf15 \trbrdrv\brdrs\brdrw10\brdrcf15 
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx2187
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx8748
+\pard \widctlpar\intbl\adjustright
+{{\i value} \cell }{a hozz\'E1adand\'F3 komment \'E9rt\'E9ke \cell }
+{\row }
+}
 }}
 {\xe \v close\:VorbisEncoder}
 {\xe \v VorbisEncoder\:close}

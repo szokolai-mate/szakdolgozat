@@ -19,24 +19,6 @@
      - add audio data with add()
      - when finished use close()
 
-    Due to a limitation in the vorbis library, a VorbisEncoder and VorbisDecoder object cannot exist in an overlapping scope at the same time.
-
-    For example, this will result in segmentation fault:
-
-        VorbisEncoder encoder(DEFAULT_CHANNELS,DEFAULT_SAMPLE_RATE,1);
-        {
-            OggFileLoader<float, VorbisDecoder> loader;
-        }
-
-    But this will not:
-
-        {
-            OggFileLoader<float, VorbisDecoder> loader;
-        }
-        {
-            VorbisEncoder encoder(DEFAULT_CHANNELS,DEFAULT_SAMPLE_RATE,1);
-        }
-
     \~hungarian Vorbis kodekkel, OGG fomrátumba kódolásra használt osztály.
 
     Veszteséges kódolás. Változó bitrátát használ.
@@ -48,24 +30,6 @@
     - initEncoding()
     - adat hozzáadása : add()
     - fájl befejezése : close()
-
-    A vorbis könyvtár egyik korlátozottsága miatt egy VorbisEncoder és egy VorbisDecoder objektum nem létezhet egy időben egymást átfedő scope-okban.
-
-    Például, a következő kód segmentation fault-al fog megszakadni:
-
-        VorbisEncoder encoder(DEFAULT_CHANNELS,DEFAULT_SAMPLE_RATE,1);
-        {
-            OggFileLoader<float, VorbisDecoder> loader;
-        }
-
-    De ez nem:
-
-        {
-            OggFileLoader<float, VorbisDecoder> loader;
-        }
-        {
-            VorbisEncoder encoder(DEFAULT_CHANNELS,DEFAULT_SAMPLE_RATE,1);
-        }
 */
 class VorbisEncoder{
 private:
@@ -73,15 +37,14 @@ private:
 
     unsigned int channels, sampleRate;
 
-    ogg_stream_state os; /* take physical pages, weld into a logical
-                            stream of packets */
-    ogg_page         og; /* one Ogg bitstream page.  Vorbis packets are inside */
-    ogg_packet       op; /* one raw packet of data for decode */
+    ogg_stream_state os;
+    ogg_page         og;
+    ogg_packet       op;
 
-    vorbis_info vi;      /* struct that stores all the static vorbis bitstream settings */
-    vorbis_comment vc;   /* struct that stores all the bitstream user comments */
-    vorbis_dsp_state vd; /* central working state for the packet->PCM decoder */
-    vorbis_block vb;     /* local working space for packet->PCM decode */
+    vorbis_info vi;
+    vorbis_comment vc;
+    vorbis_dsp_state vd;
+    vorbis_block vb;
 
     int eos = 0;
 public:

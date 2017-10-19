@@ -33,11 +33,11 @@ private:
     bool eos = true;
     char * buffer;
 
-    ogg_sync_state   oy; /* sync and verify incoming physical bitstream */    
-    ogg_stream_state os; /* take physical pages, weld into a logical stream of packets */
+    ogg_sync_state   oy;
+    ogg_stream_state os;
 
-    ogg_page         currentPage; /* one Ogg bitstream page. Vorbis packets are inside */
-    ogg_packet       currentPacket; /* one raw packet of data for decode */
+    ogg_page         currentPage;
+    ogg_packet       currentPacket;
 
     K decoder;
 

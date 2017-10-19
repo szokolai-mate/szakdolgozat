@@ -48,7 +48,6 @@ int OggFileLoader<T, K>::readNextPage()
 	{
 		read();
 		err = ogg_sync_pageout(&oy, &currentPage);
-		//return err;
 	}
 	return err;
 }
@@ -103,6 +102,7 @@ std::vector<T> OggFileLoader<T, K>::get(const unsigned int &amount)
 			return res;
 		}
 		std::vector<T> decoded = decoder.decode(currentPacket);
+		if(decoded.size()<=0) return res;
 		int amountFits = std::min(amount - samples, (unsigned int)decoded.size());
 		res.insert(res.end(), decoded.begin(), decoded.begin()+amountFits);
 		samples+=amountFits;

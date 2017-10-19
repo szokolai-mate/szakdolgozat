@@ -11,10 +11,10 @@
 class VorbisDecoder
 {
   private:
-    vorbis_info vi;      /* struct that stores all the static vorbis bitstream settings */
-    vorbis_comment vc;   /* struct that stores all the bitstream user comments */
-    vorbis_dsp_state vd; /* central working state for the packet->PCM decoder */
-    vorbis_block vb;     /* local working space for packet->PCM decode */
+    vorbis_info vi;
+    vorbis_comment vc;
+    vorbis_dsp_state vd;
+    vorbis_block vb;
   public:
     /*! \~english Add the ogg packet to header.
         \~hungarian Az ogg csomag hozzáadása a fejléchez.

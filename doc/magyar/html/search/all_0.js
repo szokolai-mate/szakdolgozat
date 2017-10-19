@@ -2,7 +2,7 @@ var searchData=
 [
   ['accumulation',['Accumulation',['../classConsolidation_1_1Accumulation.html',1,'Consolidation']]],
   ['add',['add',['../classConsolidation_1_1Accumulation.html#a6d973f440e88be4d280692eef6734b13',1,'Consolidation::Accumulation::add()'],['../classConsolidation_1_1Multiplication.html#a6a0f0d840b48408f68988d5b608868f7',1,'Consolidation::Multiplication::add()'],['../classDataFlow_1_1iConsolidationMethod.html#aba29ef8d71ca74cbd81fd7a3b3bc0909',1,'DataFlow::iConsolidationMethod::add()'],['../classVorbisEncoder.html#a2d0faeae161d7c6f10aa407289c718d1',1,'VorbisEncoder::add()']]],
-  ['addcomment',['addComment',['../classVorbisEncoder.html#a310f964e33f09c037fbaa0735140125d',1,'VorbisEncoder']]],
+  ['addcomment',['addComment',['../classVorbisEncoder.html#a046cd9c022bfccedc386ede12f24fe2a',1,'VorbisEncoder']]],
   ['addtoheader',['addToHeader',['../classVorbisDecoder.html#a8788601bafad9e49d21b6fa5a009a164',1,'VorbisDecoder']]],
   ['applicator',['Applicator',['../classDataFlow_1_1Applicator.html',1,'DataFlow']]],
   ['applicator_3c_20float_2c_20volumecontrol_3c_20t_20_3e_20_3e',['Applicator&lt; float, VolumeControl&lt; T &gt; &gt;',['../classDataFlow_1_1Applicator.html',1,'DataFlow']]],

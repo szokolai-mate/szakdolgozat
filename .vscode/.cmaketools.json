@@ -92,50 +92,36 @@
                 "type": "UTILITY"
               },
               {
-                "artifacts": [
-                  "/SharedWithWindows/Projects/szakdolgozat/build/lib/libSzakdolgozat.so"
-                ],
-                "buildDirectory": "/SharedWithWindows/Projects/szakdolgozat/build/src",
+                "buildDirectory": "/SharedWithWindows/Projects/szakdolgozat/build",
                 "fileGroups": [
                   {
-                    "compileFlags": " -std=c++14 -g -fPIC  ",
-                    "defines": [
-                      "Szakdolgozat_EXPORTS"
-                    ],
-                    "includePath": [
-                      {
-                        "path": "/SharedWithWindows/Projects/szakdolgozat/inc"
-                      }
-                    ],
-                    "isGenerated": false,
-                    "language": "CXX",
+                    "isGenerated": true,
                     "sources": [
-                      "cheap_sawtooth_generator.cpp",
-                      "cheap_square_generator.cpp",
-                      "complex_waveform_generator.cpp",
-                      "consolidation_methods.cpp",
-                      "main.cpp",
-                      "multiplexer.cpp",
-                      "ogg_file_loader.cpp",
-                      "portaudio_backend.cpp",
-                      "queue_buffer.cpp",
-                      "recorder.cpp",
-                      "repeating_buffer.cpp",
-                      "sawtooth_generator.cpp",
-                      "sine_generator.cpp",
-                      "square_generator.cpp",
-                      "triangle_generator.cpp",
-                      "vorbis_decoder.cpp",
-                      "vorbis_encoder.cpp"
+                      "build/CMakeFiles/doc",
+                      "build/CMakeFiles/doc.rule"
                     ]
                   }
                 ],
-                "fullName": "libSzakdolgozat.so",
-                "linkLibraries": "-Wl,-rpath,/usr/local/lib: -lpthread /usr/local/lib/libportaudio.so /usr/lib/x86_64-linux-gnu/libogg.so /usr/lib/x86_64-linux-gnu/libvorbis.so /usr/lib/x86_64-linux-gnu/libvorbisenc.so",
-                "linkerLanguage": "CXX",
-                "name": "Szakdolgozat",
-                "sourceDirectory": "/SharedWithWindows/Projects/szakdolgozat/src",
-                "type": "SHARED_LIBRARY"
+                "fullName": "doc",
+                "name": "doc",
+                "sourceDirectory": "/SharedWithWindows/Projects/szakdolgozat",
+                "type": "UTILITY"
+              },
+              {
+                "buildDirectory": "/SharedWithWindows/Projects/szakdolgozat/build",
+                "fileGroups": [
+                  {
+                    "isGenerated": true,
+                    "sources": [
+                      "build/CMakeFiles/cleanup",
+                      "build/CMakeFiles/cleanup.rule"
+                    ]
+                  }
+                ],
+                "fullName": "cleanup",
+                "name": "cleanup",
+                "sourceDirectory": "/SharedWithWindows/Projects/szakdolgozat",
+                "type": "UTILITY"
               },
               {
                 "artifacts": [
@@ -182,43 +168,57 @@
                 "type": "EXECUTABLE"
               },
               {
-                "buildDirectory": "/SharedWithWindows/Projects/szakdolgozat/build",
+                "artifacts": [
+                  "/SharedWithWindows/Projects/szakdolgozat/build/lib/libSzakdolgozat.so"
+                ],
+                "buildDirectory": "/SharedWithWindows/Projects/szakdolgozat/build/src",
                 "fileGroups": [
                   {
-                    "isGenerated": true,
+                    "compileFlags": " -std=c++14 -g -fPIC  ",
+                    "defines": [
+                      "Szakdolgozat_EXPORTS"
+                    ],
+                    "includePath": [
+                      {
+                        "path": "/SharedWithWindows/Projects/szakdolgozat/inc"
+                      }
+                    ],
+                    "isGenerated": false,
+                    "language": "CXX",
                     "sources": [
-                      "build/CMakeFiles/doc",
-                      "build/CMakeFiles/doc.rule"
+                      "cheap_sawtooth_generator.cpp",
+                      "cheap_square_generator.cpp",
+                      "complex_waveform_generator.cpp",
+                      "consolidation_methods.cpp",
+                      "main.cpp",
+                      "multiplexer.cpp",
+                      "ogg_file_loader.cpp",
+                      "portaudio_backend.cpp",
+                      "queue_buffer.cpp",
+                      "recorder.cpp",
+                      "repeating_buffer.cpp",
+                      "sawtooth_generator.cpp",
+                      "sine_generator.cpp",
+                      "square_generator.cpp",
+                      "triangle_generator.cpp",
+                      "vorbis_decoder.cpp",
+                      "vorbis_encoder.cpp"
                     ]
                   }
                 ],
-                "fullName": "doc",
-                "name": "doc",
-                "sourceDirectory": "/SharedWithWindows/Projects/szakdolgozat",
-                "type": "UTILITY"
-              },
-              {
-                "buildDirectory": "/SharedWithWindows/Projects/szakdolgozat/build",
-                "fileGroups": [
-                  {
-                    "isGenerated": true,
-                    "sources": [
-                      "build/CMakeFiles/cleanup",
-                      "build/CMakeFiles/cleanup.rule"
-                    ]
-                  }
-                ],
-                "fullName": "cleanup",
-                "name": "cleanup",
-                "sourceDirectory": "/SharedWithWindows/Projects/szakdolgozat",
-                "type": "UTILITY"
+                "fullName": "libSzakdolgozat.so",
+                "linkLibraries": "-Wl,-rpath,/usr/local/lib: -lpthread /usr/local/lib/libportaudio.so /usr/lib/x86_64-linux-gnu/libogg.so /usr/lib/x86_64-linux-gnu/libvorbis.so /usr/lib/x86_64-linux-gnu/libvorbisenc.so",
+                "linkerLanguage": "CXX",
+                "name": "Szakdolgozat",
+                "sourceDirectory": "/SharedWithWindows/Projects/szakdolgozat/src",
+                "type": "SHARED_LIBRARY"
               }
             ]
           }
         ]
       }
     ],
-    "cookie": "0.7325921429948019",
+    "cookie": "0.17763160706388192",
     "inReplyTo": "codemodel",
     "type": "reply"
   }
