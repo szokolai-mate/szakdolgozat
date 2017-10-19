@@ -63,14 +63,6 @@ bool Mixer::PortAudioBackend<T>::close()
     {
         return false;
     }
-    err = Pa_StopStream(stream);
-    if (err != paNoError)
-    {
-        #ifdef PA_WRITE_ERRORS
-        Pa_error_occured(err);
-        #endif
-        return false;
-    }
     err = Pa_CloseStream(stream);
     if (err != paNoError)
     {
@@ -79,8 +71,6 @@ bool Mixer::PortAudioBackend<T>::close()
         #endif
         return false;
     }
-    Pa_Terminate();
-
     return true;
 }
 

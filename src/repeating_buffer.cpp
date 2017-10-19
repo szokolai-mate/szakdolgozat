@@ -33,3 +33,4 @@ DataFlow::RepeatingBuffer<T>::RepeatingBuffer(std::vector<T> data){
 }
 
 template class DataFlow::RepeatingBuffer<float>;
+template class DataFlow::RepeatingBuffer<int>;

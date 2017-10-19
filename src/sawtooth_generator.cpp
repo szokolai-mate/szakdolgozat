@@ -34,6 +34,7 @@ void Mixer::SawtoothGenerator<T>::setFrequency(const float &frequency)
         sg->setFrequency(frequency*i);
         i++;
     }
+    this->frequency = frequency;
 }
 
 template <typename T>
@@ -44,6 +45,7 @@ void Mixer::SawtoothGenerator<T>::setFrequency(const float &frequency, const flo
         sg->setFrequency(frequency*i,seconds,method,degree);
         i++;
     }
+    this->frequency = frequency;  
 }
 
 template class Mixer::SawtoothGenerator<float>;

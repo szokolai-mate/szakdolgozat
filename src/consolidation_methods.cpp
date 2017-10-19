@@ -20,7 +20,6 @@ std::vector<T> Consolidation::Accumulation<T>::get(){
 
 template class Consolidation::Accumulation<float>;
 template class Consolidation::Accumulation<int>;
-template class Consolidation::Accumulation<unsigned int>;
 
 template <typename T>
 bool Consolidation::Multiplication<T>::init(const std::vector<T> & initial){
@@ -42,4 +41,3 @@ std::vector<T> Consolidation::Multiplication<T>::get(){
 
 template class Consolidation::Multiplication<float>;
 template class Consolidation::Multiplication<int>;
-template class Consolidation::Multiplication<unsigned int>;

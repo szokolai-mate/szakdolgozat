@@ -23,8 +23,8 @@ bool VorbisEncoder::open(const std::string & filename){
     return outfile.is_open();
 }
 
-void VorbisEncoder::addComment(const std::pair<std::string,std::string> & comment){
-    vorbis_comment_add_tag(&vc,comment.first.c_str(),comment.second.c_str());    
+void VorbisEncoder::addComment(std::string key,std::string value){
+    vorbis_comment_add_tag(&vc,key.c_str(),value.c_str());    
 }
 
 int VorbisEncoder::initEncoding(){

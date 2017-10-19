@@ -16,7 +16,8 @@ Mixer::ComplexWaveformGenerator<T>::ComplexWaveformGenerator(const std::vector<s
 
 template <typename T>
 std::vector<T> Mixer::ComplexWaveformGenerator<T>::get(const unsigned int &amount){
-   return complexSource.get(amount);
+    if(componentObjects.size()==0){return std::vector<T>(amount,0);}
+    return complexSource.get(amount);
 }
 
 template <typename T>

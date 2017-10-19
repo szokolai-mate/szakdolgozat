@@ -107,7 +107,7 @@ int main()
 	Mixer::SineGenerator<float> sg2(880, 1, DEFAULT_SAMPLE_RATE);
 	DataFlow::QueueBuffer<float> buffer;
 
-{
+/*{
 	OggFileLoader<float, VorbisDecoder> queen;
 	
 	queen.open("01 - Dancing Queen.ogg");
@@ -129,7 +129,7 @@ int main()
 	{
 		std::cout << a << std::endl;
 	}
-
+*/
 	float firstHarmonicFrequency = 110;
 	std::vector<std::pair<float,float>> components;
 	components.push_back(std::make_pair(firstHarmonicFrequency,1));
@@ -146,8 +146,8 @@ int main()
 	vc.getMethod().setVolume(0.3f);
 	vc2.getMethod().setVolume(0.3f);
 	
-	vc.attach(queen);
-	vc2.attach(water);
+	/*vc.attach(queen);
+	vc2.attach(water);*/
 	
 	DataFlow::Consolidator<float, Consolidation::Accumulation> consolidator;
 	consolidator.attach(vc);
@@ -180,13 +180,13 @@ int main()
 			complexGenerator.setComponent(firstHarmonicFrequency*4,0,1);
 			going = true;
 		}*/
-		buffer.put(applicator.get(512));
+		buffer.put(lower.get(512));
 	}
-}
+//}
 {
 	VorbisEncoder encoder(DEFAULT_CHANNELS,DEFAULT_SAMPLE_RATE,1);
 	encoder.open("test.ogg");
-	encoder.addComment(std::make_pair ("test","comment"));
+	encoder.addComment("test","comment");
 	encoder.initEncoding();
 	while(buffer.size()>512){
 		encoder.add(buffer.get(512));
@@ -208,7 +208,7 @@ int main()
 	}
 
 	Mixer::SimplePlayer<float, Mixer::PortAudioBackend> player(DEFAULT_CHANNELS, DEFAULT_SAMPLE_RATE);
-	player.attach(mx);
+	player.attach(loader);
 	player.play();
 
 

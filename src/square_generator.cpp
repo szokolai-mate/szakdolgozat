@@ -34,6 +34,7 @@ void Mixer::SquareGenerator<T>::setFrequency(const float &frequency)
         sg->setFrequency(frequency*i);
         i++;
     }
+    this->frequency = frequency;
 }
 
 template <typename T>
@@ -44,6 +45,7 @@ void Mixer::SquareGenerator<T>::setFrequency(const float &frequency, const float
         sg->setFrequency(frequency*i,seconds,method,degree);
         i++;
     }
+    this->frequency = frequency;
 }
 
 template class Mixer::SquareGenerator<float>;

@@ -94,10 +94,12 @@ public:
 
         A kommentek két string-ből állnak, a kulcs és az érték.
 
-        \~english \param comment the comment to add
-                      \~hungarian \comment packet a hozzáadandó komment
+        \~english \param key the key of the comment
+                      \~hungarian \param key a hozzáadandó komment kulcsa
+                      \~english \param value the value of the comment
+                      \~hungarian \param value a hozzáadandó komment értéke
     */
-    void addComment(const std::pair<std::string,std::string> & comment);
+    void addComment(std::string key,std::string value);
 
     /*! \~english Initialize the encoding state. The header needs to be complete.
         \~hungarian A kódolási környezet inicializálása. A fejlécnek teljesnek kell lennie.
