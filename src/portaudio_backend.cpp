@@ -78,7 +78,6 @@ namespace Mixer{
 template <>
 bool Mixer::PortAudioBackend<float>::init(DataFlow::iSource<float> &source,const unsigned int & channels, const unsigned int & sampleRate)
 {
-    this->stop();
     this->source = &source;
     
     PaStreamParameters outputParameters;

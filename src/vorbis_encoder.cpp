@@ -53,7 +53,7 @@ int VorbisEncoder::initEncoding(){
     return 0;
 }
 
-void VorbisEncoder::add(const std::vector<float> pcmData){
+void VorbisEncoder::add(const std::vector<float> pcmData){  
     float ** buffer=vorbis_analysis_buffer(&vd,pcmData.size()/channels);
     
     unsigned int c = 0;
@@ -63,28 +63,45 @@ void VorbisEncoder::add(const std::vector<float> pcmData){
             c++;
         }
     }
-    vorbis_analysis_wrote(&vd,pcmData.size()/channels);
+    vorbis_analysis_wrote(&vd,pcmData.size()/channels);    
 
-    while(vorbis_analysis_blockout(&vd,&vb)==1){
+    while(vorbis_analysis_blockout(&vd,&vb)>0){
         
-              vorbis_analysis(&vb,NULL);
-              vorbis_bitrate_addblock(&vb);
-        
-              while(vorbis_bitrate_flushpacket(&vd,&op)){
-                ogg_stream_packetin(&os,&op);
-        
-                while(!eos){
-                  int result=ogg_stream_pageout(&os,&og);
-                  if(result==0)break;
-                  outfile.write((const char*)og.header,og.header_len);
-                  outfile.write((const char*)og.body,og.body_len);
-                }
+        vorbis_analysis(&vb,NULL);
+        vorbis_bitrate_addblock(&vb);
+
+        while(vorbis_bitrate_flushpacket(&vd,&op)){
+            ogg_stream_packetin(&os,&op);
+            int result;
+            while((result = ogg_stream_pageout(&os,&og)) > 0){
+                outfile.write((const char*)og.header,og.header_len);
+                outfile.write((const char*)og.body,og.body_len);
             }
         }
+    }          
 }
 
 bool VorbisEncoder::close(){
     vorbis_analysis_wrote(&vd,0);
+    while(vorbis_analysis_blockout(&vd,&vb)>0){        
+        vorbis_analysis(&vb,NULL);
+        vorbis_bitrate_addblock(&vb);
+
+        while(vorbis_bitrate_flushpacket(&vd,&op)){
+            ogg_stream_packetin(&os,&op);
+            int result;
+            while((result = ogg_stream_pageout(&os,&og)) > 0){
+                outfile.write((const char*)og.header,og.header_len);
+                outfile.write((const char*)og.body,og.body_len);
+            }
+        }
+    }          
+    
+    int result=ogg_stream_flush(&os,&og);
+    if(result!=0){
+        outfile.write((const char*)og.header,og.header_len);
+        outfile.write((const char*)og.body,og.body_len);
+    }
     outfile.close();
     ogg_stream_clear(&os);
     vorbis_block_clear(&vb);
@@ -95,10 +112,5 @@ bool VorbisEncoder::close(){
 }
 
 VorbisEncoder::~VorbisEncoder(){
-    outfile.close();
-    ogg_stream_clear(&os);
-    vorbis_block_clear(&vb);
-    vorbis_dsp_clear(&vd);
-    vorbis_comment_clear(&vc);
-    vorbis_info_clear(&vi);
+    close();
 }

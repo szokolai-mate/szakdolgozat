@@ -28,7 +28,7 @@ class VorbisTest : public ::testing::Test
 
 TEST_F(VorbisTest, EncodeThenDecode)
 {
-  /*std::string fname{"test.ogg"};
+  std::string fname{"test.ogg"};
 
   Mixer::Multiplexer<float> mx(2);
   mx.setChannel(1,infiniteOnes);
@@ -53,13 +53,15 @@ TEST_F(VorbisTest, EncodeThenDecode)
   DataFlow::QueueBuffer<float> buffer;
   std::vector<float> vec = loader.get(512);
   while(vec.size()>0){
-    std::cout<<vec.size()<<std::endl;
     buffer.put(vec);
     vec = loader.get(512);
   }
-  std::cout<<vec.size()<<std::endl;
-  
+  /*
+  for(auto e : buffer.get(buffer.size())){
+    std::cout<<e<<std::endl;
+  }
+  */
   loader.close();
-  std::remove(fname.c_str());*/
+  std::remove(fname.c_str());
 }
 };

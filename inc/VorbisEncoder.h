@@ -6,7 +6,6 @@
 #include <vector>
 #include <string>
 #include <fstream>
-
 /*! \~english Class used for encoding data into OGG format, with Vorbis encoding.
 
     Lossy encoding. Uses variable bitrate encoding.
