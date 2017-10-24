@@ -59,5 +59,6 @@ public:
                             \~hungarian \param sampleRate a mintavételezés sűrűsége
         */
     TriangleGenerator(const float &frequency, const unsigned int &harmonics, const unsigned int &channels, const unsigned int &sampleRate);
+    TriangleGenerator() = delete;
 };
 };

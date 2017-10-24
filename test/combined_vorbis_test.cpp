@@ -1,5 +1,6 @@
 #include <gtest/gtest.h>
 #include <cstdio>
+#include <cmath>
 
 #include <OggFileLoader.h>
 #include <VorbisEncoder.h>
@@ -8,14 +9,12 @@
 #include <QueueBuffer.h>
 #include <Multiplexer.h>
 
-#include <iostream>
-
 #define CHANNELS 2
 #define SAMPLE_RATE 48000
 
 namespace
 {
-class VorbisTest : public ::testing::Test
+class CombinedVorbisTest : public ::testing::Test
 {
   protected:
     virtual void SetUp() {}
@@ -23,12 +22,14 @@ class VorbisTest : public ::testing::Test
   public:
     DataFlow::RepeatingBuffer<float> infiniteOnes;
     DataFlow::RepeatingBuffer<float> infiniteTwos;
-    VorbisTest():infiniteOnes(std::vector<float>(1,1)),infiniteTwos(std::vector<float>(1,2)){}
+    CombinedVorbisTest():infiniteOnes(std::vector<float>(1,1)),infiniteTwos(std::vector<float>(1,2)){}
 };
 
-TEST_F(VorbisTest, EncodeThenDecode)
+TEST_F(CombinedVorbisTest, EncodeThenDecode)
 {
   std::string fname{"test.ogg"};
+
+  float seconds = 10;
 
   Mixer::Multiplexer<float> mx(2);
   mx.setChannel(1,infiniteOnes);
@@ -39,13 +40,18 @@ TEST_F(VorbisTest, EncodeThenDecode)
   encoder.addComment("test","comment");
   encoder.addComment("key","vAlUE");
   EXPECT_EQ(0,encoder.initEncoding());
-  encoder.add(mx.get(SAMPLE_RATE*CHANNELS*10));
+  encoder.add(mx.get(SAMPLE_RATE*CHANNELS*seconds));
   EXPECT_TRUE(encoder.close());
 
   OggFileLoader<float, VorbisDecoder> loader;
 	EXPECT_TRUE(loader.open(fname));
   loader.init();
+
+  /*Header is correct*/
+  EXPECT_EQ(CHANNELS,loader.getDecoder().getChannels());
+  EXPECT_EQ(SAMPLE_RATE,loader.getDecoder().getSampleRate());
   
+  /*Comments are correct*/
   auto comments = loader.getDecoder().getComments();
   EXPECT_EQ(comments[0],"test=comment");
   EXPECT_EQ(comments[1],"key=vAlUE");
@@ -56,11 +62,27 @@ TEST_F(VorbisTest, EncodeThenDecode)
     buffer.put(vec);
     vec = loader.get(512);
   }
-  /*
+
+  /*Vendor string is not empty*/
+  EXPECT_GT((loader.getDecoder().getVendor()).size(),0);
+  
+  
+  /*All data present*/
+  EXPECT_EQ(buffer.size(),CHANNELS*SAMPLE_RATE*seconds);
+
+  /*Values are within error range and are in order*/
+  float error = 0.1f;
+  int nextValue = 1;
   for(auto e : buffer.get(buffer.size())){
-    std::cout<<e<<std::endl;
+    EXPECT_GT(nextValue,fabs(e-error));
+    if(nextValue==1){
+      nextValue = 2;
+    }
+    else{
+      nextValue = 1;
+    }
   }
-  */
+
   loader.close();
   std::remove(fname.c_str());
 }

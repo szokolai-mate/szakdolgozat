@@ -32,14 +32,19 @@ public:
         this->endValue = endValue;
         this->endTime = endTime;
         functor.init(0,startValue,endTime,endValue);
+        variable = startValue;
     }
 
     void step(const float & amount){
+        position+=amount;        
         if(position>=endTime){
             variable = endValue;
             return;
         }
-        position+=amount;
+        if(position<=0){
+            variable = startValue;
+            return;
+        }
         variable = functor(position);
     }
 

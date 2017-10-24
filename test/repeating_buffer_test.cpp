@@ -68,4 +68,29 @@ TEST_F(RepeatingBufferTest, getSize)
     auto vecInt = bufferInt.get(testSize);
     EXPECT_EQ(vecInt.size(),testSize);
 }
+
+TEST_F(RepeatingBufferTest, clear)
+{
+    std::vector<float> data;
+    data.push_back(1);
+    for(int i = 2;i<500;i++){
+        data.push_back(i/500);
+    }
+    DataFlow::RepeatingBuffer<float> buffer(data);
+    buffer.get(49);
+    buffer.clear();
+    
+    EXPECT_EQ(1,buffer.get(1)[0]);
+
+    std::vector<float> intData;
+    intData.push_back(1);
+    for(int i = 0;i<500;i++){
+        intData.push_back(i/500);
+    }
+    DataFlow::RepeatingBuffer<float> intBuffer(intData);
+    intBuffer.get(49);
+    intBuffer.clear();
+    
+    EXPECT_EQ(1,intBuffer.get(1)[0]);
+}
 };

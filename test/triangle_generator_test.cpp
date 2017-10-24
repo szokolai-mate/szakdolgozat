@@ -7,8 +7,10 @@
 #define SAMPLE_RATE 48000
 #define COMPONENT_AMOUNT 50
 
+template class Mixer::TriangleGenerator<float>;
+
 namespace
-{
+{    
 class TriangleGeneratorTest : public ::testing::Test
 {
   protected:

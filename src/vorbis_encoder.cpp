@@ -112,5 +112,10 @@ bool VorbisEncoder::close(){
 }
 
 VorbisEncoder::~VorbisEncoder(){
-    close();
+    outfile.close();
+    ogg_stream_clear(&os);
+    vorbis_block_clear(&vb);
+    vorbis_dsp_clear(&vd);
+    vorbis_comment_clear(&vc);
+    vorbis_info_clear(&vi);
 }

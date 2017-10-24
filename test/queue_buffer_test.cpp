@@ -50,6 +50,8 @@ TEST_F(QueueBufferTest, DataRemainsContinous)
     buffer.put(vector4);
     buffer.put(vector5);
 
+    EXPECT_EQ(size,buffer.size());
+
     int prev = -1;
     for(auto e : buffer.get(buffer.size())){
         EXPECT_EQ(prev+1,e);
