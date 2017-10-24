@@ -215,23 +215,24 @@
 </g>
 <!-- Node10 -->
 <g id="node11" class="node"><title>Node10</title>
-<g id="a_node11"><a xlink:href="$classMixer_1_1TriangleGenerator.html" xlink:title="{Mixer::TriangleGenerator\&lt; T \&gt;\n||+ get()\l+ getFrequency()\l+ setFrequency()\l+ setFrequency()\l+ TriangleGenerator()\l}">
-<polygon fill="none" stroke="black" points="1467.5,-22.5 1467.5,-123.5 1615.5,-123.5 1615.5,-22.5 1467.5,-22.5"/>
-<text text-anchor="middle" x="1541.5" y="-111.5" font-family="Helvetica,sans-Serif" font-size="10.00">Mixer::TriangleGenerator&lt; T &gt;</text>
-<polyline fill="none" stroke="black" points="1467.5,-104.5 1615.5,-104.5 "/>
-<text text-anchor="middle" x="1541.5" y="-92.5" font-family="Helvetica,sans-Serif" font-size="10.00"> </text>
-<polyline fill="none" stroke="black" points="1467.5,-85.5 1615.5,-85.5 "/>
-<text text-anchor="start" x="1475.5" y="-73.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ get()</text>
-<text text-anchor="start" x="1475.5" y="-62.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getFrequency()</text>
-<text text-anchor="start" x="1475.5" y="-51.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ setFrequency()</text>
-<text text-anchor="start" x="1475.5" y="-40.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ setFrequency()</text>
-<text text-anchor="start" x="1475.5" y="-29.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ TriangleGenerator()</text>
+<g id="a_node11"><a xlink:href="$classMixer_1_1TriangleGenerator.html" xlink:title="{Mixer::TriangleGenerator\&lt; T \&gt;\n||+ get()\l+ getFrequency()\l+ setFrequency()\l+ setFrequency()\l+ TriangleGenerator()\l+ TriangleGenerator()\l}">
+<polygon fill="none" stroke="black" points="1467.5,-17 1467.5,-129 1615.5,-129 1615.5,-17 1467.5,-17"/>
+<text text-anchor="middle" x="1541.5" y="-117" font-family="Helvetica,sans-Serif" font-size="10.00">Mixer::TriangleGenerator&lt; T &gt;</text>
+<polyline fill="none" stroke="black" points="1467.5,-110 1615.5,-110 "/>
+<text text-anchor="middle" x="1541.5" y="-98" font-family="Helvetica,sans-Serif" font-size="10.00"> </text>
+<polyline fill="none" stroke="black" points="1467.5,-91 1615.5,-91 "/>
+<text text-anchor="start" x="1475.5" y="-79" font-family="Helvetica,sans-Serif" font-size="10.00">+ get()</text>
+<text text-anchor="start" x="1475.5" y="-68" font-family="Helvetica,sans-Serif" font-size="10.00">+ getFrequency()</text>
+<text text-anchor="start" x="1475.5" y="-57" font-family="Helvetica,sans-Serif" font-size="10.00">+ setFrequency()</text>
+<text text-anchor="start" x="1475.5" y="-46" font-family="Helvetica,sans-Serif" font-size="10.00">+ setFrequency()</text>
+<text text-anchor="start" x="1475.5" y="-35" font-family="Helvetica,sans-Serif" font-size="10.00">+ TriangleGenerator()</text>
+<text text-anchor="start" x="1475.5" y="-24" font-family="Helvetica,sans-Serif" font-size="10.00">+ TriangleGenerator()</text>
 </a>
 </g>
 </g>
 <!-- Node0&#45;&gt;Node10 -->
 <g id="edge10" class="edge"><title>Node0&#45;&gt;Node10</title>
-<path fill="none" stroke="midnightblue" d="M948.93,-217.402C1077.06,-209.179 1368.38,-186.522 1458.5,-146 1470.85,-140.446 1482.74,-132.434 1493.46,-123.755"/>
+<path fill="none" stroke="midnightblue" d="M948.93,-217.402C1077.06,-209.179 1368.38,-186.522 1458.5,-146 1468.24,-141.619 1477.69,-135.709 1486.52,-129.15"/>
 <polygon fill="none" stroke="midnightblue" points="948.646,-213.913 938.887,-218.039 949.089,-220.899 948.646,-213.913"/>
 </g>
 </g>

@@ -1,272 +1,48 @@
-//!\todo TODO:modulating filter
-
 #include <iostream>
-#include <thread>
-#include <chrono>
-#include <memory>
-
-#include <Utils.h>
 
 #include <OggFileLoader.h>
+#include <VorbisDecoder.h>
 #include <SimplePlayer.h>
 #include <PortAudioBackend.h>
-#include <SineGenerator.h>
-#include <SawtoothGenerator.h>
-#include <TriangleGenerator.h>
-#include <CheapSquareGenerator.h>
-#include <CheapSawtoothGenerator.h>
-#include <ComplexWaveformGenerator.h>
-#include <SquareGenerator.h>
-#include <Consolidator.h>
-#include <ConsolidationMethods.h>
 #include <Applicator.h>
-#include <Clipping.h>
+#include <Filters.h>
 #include <VolumeControl.h>
-#include <SimpleNote.h>
-#include <Multiplexer.h>
+#include <Clipping.h>
 
-#include <VorbisEncoder.h>
-
-#include <RepeatingBuffer.h>
-#include <QueueBuffer.h>
-#include <VorbisDecoder.h>
-#include <Recorder.h>
+#include <SineGenerator.h>
 
 #define DEFAULT_CHANNELS 2
 #define DEFAULT_SAMPLE_RATE 44100
 
-#define DEBUG_PORTAUDIO
-#ifdef DEBUG_PORTAUDIO
-#include <portaudio.h>
-#endif
+int main(int argc, char * argv[]){
 
-int main()
-{
-#ifdef DEBUG_PORTAUDIO
-	PaError err;
-	err = Pa_Initialize();
-	if (err != paNoError)
-	{
-		std::cout << "PortAudio error: " << err << std::endl
-				  << Pa_GetErrorText(err) << std::endl;
+	std::string fname{"19 - Waterloo.ogg"};
+
+	OggFileLoader<float,VorbisDecoder> loader;
+	if(!loader.open(fname)){
+		std::cout<<"File not found!"<<std::endl;
+		return -1;
 	}
-//#define DEBUG_DEVICES
-#ifdef DEBUG_DEVICES
-	std::cout << Pa_GetVersionText() << std::endl;
-	int n = Pa_GetDeviceCount();
-	std::cout << n << " device(s) found." << std::endl;
-	for (int i = 0; i < n; i++)
-	{
-		PaDeviceInfo const *info = Pa_GetDeviceInfo(i);
-		if (!info)
-		{
-			std::cout << "device not found" << std::endl;
-		}
-		else
-		{
-			PaHostApiInfo const *apiinfo = Pa_GetHostApiInfo(info->hostApi);
-			printf("%s of API %s\n", info->name, apiinfo->name);
-		}
-	}
-#endif
-
-//#define DEBUG_APIS
-#ifdef DEBUG_APIS
-	int hosts = Pa_GetHostApiCount();
-	std::cout << n << " host(s) found." << std::endl;
-	for (int i = 0; i < hosts; i++)
-	{
-		PaHostApiInfo const *info = Pa_GetHostApiInfo(i);
-		if (!info)
-		{
-			std::cout << "host not found" << std::endl;
-		}
-		else
-		{
-			printf("%d:%s ,type %d\n", i, info->name, info->type);
-			printf("%d devices\n", info->deviceCount);
-			printf("default odevice: %d\n", info->defaultOutputDevice);
-			printf("default idevice: %d\n", info->defaultInputDevice);
-			std::cout << std::endl;
-		}
-	}
-	PaDeviceInfo const *info = Pa_GetDeviceInfo(Pa_GetDefaultOutputDevice());
-	if (!info)
-	{
-		std::cout << "default device not found" << std::endl;
-	}
-	else
-	{
-		PaHostApiInfo const *apiinfo = Pa_GetHostApiInfo(info->hostApi);
-		printf("Default odevice: %s of API %s\n", info->name, apiinfo->name);
-	}
-#endif
-#endif
-	
-	Mixer::SineGenerator<float> sg(220,1, DEFAULT_SAMPLE_RATE);
-	Mixer::SineGenerator<float> sg2(880, 1, DEFAULT_SAMPLE_RATE);
-	DataFlow::QueueBuffer<float> buffer;
-
-	OggFileLoader<float, VorbisDecoder> queen;
-	
-	queen.open("test.ogg");
-	
-	queen.init();
-	std::vector<float> vec;
-	while((vec = queen.get(512)).size()>0){
-		buffer.put(vec);
-	}
-	queen.close();
-	
-	// for (auto a : queen.getDecoder().getComments())
-	// {
-	// 	std::cout << a << std::endl;
-	// }
-
-	// OggFileLoader<float, VorbisDecoder> water;
-	
-	// water.open("19 - Waterloo.ogg");
-	
-	// water.init();
-	
-	// for (auto a : water.getDecoder().getComments())
-	// {
-	// 	std::cout << a << std::endl;
-	// }
-
-	// float firstHarmonicFrequency = 110;
-	// std::vector<std::pair<float,float>> components;
-	// components.push_back(std::make_pair(firstHarmonicFrequency,1));
-	// components.push_back(std::make_pair(firstHarmonicFrequency*2,0.5f));
-	// components.push_back(std::make_pair(firstHarmonicFrequency*3,0.33f));
-	// components.push_back(std::make_pair(firstHarmonicFrequency*4,0.25f));
-	// components.push_back(std::make_pair(firstHarmonicFrequency*2.44f,0.2f));
-	// components.push_back(std::make_pair(firstHarmonicFrequency*2.76f,0.4f));
-	
-	// Mixer::ComplexWaveformGenerator<float> complexGenerator(components,DEFAULT_CHANNELS,DEFAULT_SAMPLE_RATE);
-
-	// DataFlow::Applicator<float,VolumeControl<float>> vc;
-	// DataFlow::Applicator<float,VolumeControl<float>> vc2;
-	// vc.getMethod().setVolume(0.3f);
-	// vc2.getMethod().setVolume(0.3f);
-	
-	// vc.attach(queen);
-	// vc2.attach(water);
-	
-	DataFlow::Consolidator<float, Consolidation::Accumulation> consolidator;
-	//consolidator.attach(vc);
-	//consolidator.attach(vc2);
-	
-	//DataFlow::Applicator<float, Clipping::Hard> applicator;
-	//applicator.attach(consolidator);
-
-	Mixer::SimpleNote<float,Transition::Linear,Transition::EaseOut::Cubic> note(0.5f,DEFAULT_CHANNELS,DEFAULT_SAMPLE_RATE);
-	note.attach(sg2);
-	note.setAttack(0.1f);
-	note.setDecay(0.12f);
-	note.bakeNote();
-	
-	DataFlow::Applicator<float,VolumeControl<float>> lower;
-	lower.getMethod().setVolume(0.3f);
-	lower.attach(note);
-	DataFlow::RepeatingBuffer<float> rep(lower.get(note.size()));
-	std::cout<<"Generated note length: "<<note.size()<<std::endl;
-	consolidator.attach(lower);	
-
-	// int c = 0;
-	// int totalLength = DEFAULT_CHANNELS*DEFAULT_SAMPLE_RATE*5;
-	// bool going = false;
-	// while(buffer.size()<totalLength-512){
-	// 	//std::vector<float> silence(DEFAULT_CHANNELS*DEFAULT_SAMPLE_RATE*0.5f,0);
-	// 	//buffer.put(silence);
-	// 	/*if(c>totalLength/4 && !going){
-	// 		complexGenerator.setComponent(firstHarmonicFrequency,0,1,"ease-in-out",5);
-	// 		complexGenerator.setComponent(firstHarmonicFrequency*2,0,1);
-	// 		complexGenerator.setComponent(firstHarmonicFrequency*3,0,1);
-	// 		complexGenerator.setComponent(firstHarmonicFrequency*4,0,1);
-	// 		going = true;
-	// 	}*/
-	// 	buffer.put(applicator.get(512));
-	// }
-	// buffer.put(applicator.get(totalLength-buffer.size()));
-	// std::cout<<"Generated "<<buffer.size()<<" into buffer."<<std::endl;
-
-	VorbisEncoder encoder(DEFAULT_CHANNELS,DEFAULT_SAMPLE_RATE,1);
-	encoder.open("test.ogg");
-	encoder.addComment("test","comment");
-	encoder.initEncoding();
-	/*while(buffer.size()>512){
-		encoder.add(buffer.get(512));
-	}*/
-	encoder.add(rep.get(rep.size()));
-	encoder.close();
-	std::cout<<"Done generating file."<<std::endl;
-
-
-	OggFileLoader<float, VorbisDecoder> loader;
-	
-	loader.open("test.ogg");
-	
 	loader.init();
+
+	Mixer::SineGenerator<float> sg(440,DEFAULT_CHANNELS,DEFAULT_SAMPLE_RATE);
+
+	DataFlow::Applicator<float,Mixer::Filter::Fuzzbox> filter;
+	filter.getMethod().setDegree(10);
+	filter.attach(sg);
+
+	DataFlow::Applicator<float,Clipping::Soft> clip;
+	clip.attach(filter);
+
+	DataFlow::Applicator<float,VolumeControl> vc;
+	vc.getMethod().setVolume(0.3f);
+	vc.attach(clip);
 	
-	for (auto a : loader.getDecoder().getComments())
-	{
-		std::cout << a << std::endl;
-	}
-
-	buffer.clear();
-	//std::vector<float> vec;
-	/*while((vec = loader.get(512)).size()>0){
-		buffer.put(vec);
-	}*/
-	rep.put(loader.get(999999));
-	std::cout<<"Read "<<rep.size()<<" into buffer."<<std::endl;
-	note.clear();
-	rep.clear();
-	consolidator.attach(rep);
-
-	Mixer::SimplePlayer<float, Mixer::PortAudioBackend> player(DEFAULT_CHANNELS, DEFAULT_SAMPLE_RATE);
-	player.attach(consolidator);
+	Mixer::SimplePlayer<float,Mixer::PortAudioBackend> player(DEFAULT_CHANNELS,DEFAULT_SAMPLE_RATE);
+	player.attach(vc);
 	player.play();
 
-
-	// bool b = true;
-	// int counter = 1;
-	// while (true)
-	// {
-	// 	std::this_thread::sleep_for(std::chrono::duration<int, std::ratio<1, 1>>(3));
-	// 	player.pause();
-		
-	// 	if (b)
-	// 	{
-	// 		player.attach(applicator);
-	// 		sg.setFrequency(220,1.0f);
-	// 	}
-	// 	else
-	// 	{
-	// 		player.attach(applicator);
-	// 		sg.setFrequency(880,1.0f,"ease-out",4);
-	// 	}
-
-	// 	player.play();
-	// 	b = !b;
-	// 	/*switch (counter){
-	// 		case 1 :
-	// 		sg.setFrequency(880);
-	// 		break;
-	// 		case 2 :
-	// 		sg.setFrequency(990);
-	// 		break;
-	// 		case 3 :
-	// 		sg.setFrequency(1760);
-	// 		break;
-	// 		case 4 :
-	// 		sg.setFrequency(1870);
-	// 		break;		
-	// 	}
-	// 	counter = (counter + 1) % 5;
-	// 	*/
-	// }
-
+	std::cout<<"Press any key to exit."<<std::endl;
 	std::cin.get();
+	return 0;
 }

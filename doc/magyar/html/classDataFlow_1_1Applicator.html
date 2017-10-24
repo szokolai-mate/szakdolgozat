@@ -75,21 +75,23 @@ $(function() {
 <div class="dynheader">
 A DataFlow::Applicator&lt; T, K &gt; osztály származási diagramja:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classDataFlow_1_1Applicator__inherit__graph.svg" width="228" height="487"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classDataFlow_1_1Applicator__inherit__graph.svg" width="223" height="458"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <a name="details" id="details"></a><h2 class="groupheader">Részletes leírás</h2>
-<div class="textblock"><h3>template&lt;typename T, typename K&gt;<br />
+<div class="textblock"><h3>template&lt;typename T, template&lt; typename &gt; typename K&gt;<br />
 class DataFlow::Applicator&lt; T, K &gt;</h3>
 
 <p>Ez az osztály a K típusú funktorral transzformálja a hozzácsatolt iSource&lt;T&gt; forrást</p>
+<p>A funktor sablonparaméterének T-nek kell lennie.</p>
+<p>Hasznos funktorokért lásd Filter névtér.</p>
 <p>A forrást meg kell adni az <a class="el" href="classDataFlow_1_1Applicator.html#a1959c809e0e7726fb9051029e94ba14b">attach()</a> metódussal! </p>
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Publikus tagfüggvények</h2></td></tr>
 <tr class="memitem:aaec7b6b55ff780c9e339a9ea41273ab1"><td class="memItemLeft" align="right" valign="top">std::vector&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDataFlow_1_1Applicator.html#aaec7b6b55ff780c9e339a9ea41273ab1">get</a> (const unsigned int &amp;amount)</td></tr>
 <tr class="separator:aaec7b6b55ff780c9e339a9ea41273ab1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a367ddf481f98814e101977e5861338a4"><td class="memItemLeft" align="right" valign="top">K &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDataFlow_1_1Applicator.html#a367ddf481f98814e101977e5861338a4">getMethod</a> ()</td></tr>
-<tr class="separator:a367ddf481f98814e101977e5861338a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a46cc00fb1086ef8f09745e07e94e6d25"><td class="memItemLeft" align="right" valign="top">K&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDataFlow_1_1Applicator.html#a46cc00fb1086ef8f09745e07e94e6d25">getMethod</a> ()</td></tr>
+<tr class="separator:a46cc00fb1086ef8f09745e07e94e6d25"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1959c809e0e7726fb9051029e94ba14b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDataFlow_1_1Applicator.html#a1959c809e0e7726fb9051029e94ba14b">attach</a> (<a class="el" href="classDataFlow_1_1iSource.html">DataFlow::iSource</a>&lt; T &gt; &amp;source)</td></tr>
 <tr class="separator:a1959c809e0e7726fb9051029e94ba14b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -100,7 +102,7 @@ Publikus tagfüggvények</h2></td></tr>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T, typename K&gt; </div>
+template&lt;typename T, template&lt; typename &gt; typename K&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -134,7 +136,7 @@ template&lt;typename T, typename K&gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T, typename K&gt; </div>
+template&lt;typename T, template&lt; typename &gt; typename K&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -166,19 +168,19 @@ template&lt;typename T, typename K&gt; </div>
 
 </div>
 </div>
-<a id="a367ddf481f98814e101977e5861338a4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a367ddf481f98814e101977e5861338a4">&#9670;&nbsp;</a></span>getMethod()</h2>
+<a id="a46cc00fb1086ef8f09745e07e94e6d25"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a46cc00fb1086ef8f09745e07e94e6d25">&#9670;&nbsp;</a></span>getMethod()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T, typename K&gt; </div>
+template&lt;typename T, template&lt; typename &gt; typename K&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">K&amp; <a class="el" href="classDataFlow_1_1Applicator.html">DataFlow::Applicator</a>&lt; T, K &gt;::getMethod </td>
+          <td class="memname">K&lt;T&gt;&amp; <a class="el" href="classDataFlow_1_1Applicator.html">DataFlow::Applicator</a>&lt; T, K &gt;::getMethod </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>

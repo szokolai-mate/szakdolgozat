@@ -16,7 +16,7 @@ class ClippingTest : public ::testing::Test
 
 TEST_F(ClippingTest, Hard)
 {
-    Clipping::Hard h;
+    Clipping::Hard<float> h;
     EXPECT_EQ(0,h(0));
     EXPECT_EQ(0.7f,h(0.7f));
     EXPECT_EQ(1,h(1));
@@ -29,7 +29,7 @@ TEST_F(ClippingTest, Hard)
 
 TEST_F(ClippingTest, Soft)
 {
-    Clipping::Soft h;
+    Clipping::Soft<float> h;
     EXPECT_EQ(0,h(0));
     EXPECT_EQ(0.7f,h(0.7f));
     EXPECT_GT(1,h(1));

@@ -5,13 +5,14 @@
 
 #define TEST_VALUE 858
 
+template <typename T>
 class ApplicatorTestFunctor{
 public:
-  float operator()(const float & x){
+  T operator()(const T & x){
     return TEST_VALUE;
   }
-  void operator()(std::vector<float> & vec){
-    for(float & x : vec){
+  void operator()(std::vector<T> & vec){
+    for(T & x : vec){
       x = TEST_VALUE;
     }
   }

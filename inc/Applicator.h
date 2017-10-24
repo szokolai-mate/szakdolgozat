@@ -6,14 +6,24 @@ namespace DataFlow
 {
 //! \~english A class that applies a functor of type K to the attached iSource of type T
 //! \~hungarian Ez az osztály a K típusú funktorral transzformálja a hozzácsatolt iSource<T> forrást
-/*! \~english Must initialize the source pointer with attach()!
-    \~hungarian A forrást meg kell adni az attach() metódussal!
+/*! \~english 
+    The functor must be templated for type T.
+
+    See the Filter namespace for useful functors.
+
+    Must initialize the source pointer with attach()!
+    \~hungarian
+    A funktor sablonparaméterének T-nek kell lennie.
+
+    Hasznos funktorokért lásd Filter névtér.
+    
+    A forrást meg kell adni az attach() metódussal!
 */
-template <typename T, typename K>
+template <typename T, template <typename> typename K>
 class Applicator : public DataFlow::iSource<T>
 {
   private:
-    K method;
+    K<T> method;
     DataFlow::iSource<T> *source;
   public:
     std::vector<T> get(const unsigned int &amount)
@@ -28,7 +38,7 @@ class Applicator : public DataFlow::iSource<T>
     /*! \~english \return the reference
         \~hungarian \return a referencia
     */
-    K & getMethod(){
+    K<T> & getMethod(){
         return method;
     }
 

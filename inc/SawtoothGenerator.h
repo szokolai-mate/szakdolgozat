@@ -34,7 +34,7 @@ class SawtoothGenerator : public Mixer::iWaveformGenerator<T>, public Mixer::Aud
     DataFlow::Consolidator<T, Consolidation::Accumulation> complexSource;
 
     std::vector<std::unique_ptr<Mixer::SineGenerator<T>>> generators;
-    std::vector<std::unique_ptr<DataFlow::Applicator<float,VolumeControl<T>>>> volumeControllers;
+    std::vector<std::unique_ptr<DataFlow::Applicator<T,VolumeControl>>> volumeControllers;
 
   public:
     std::vector<T> get(const unsigned int &amount);

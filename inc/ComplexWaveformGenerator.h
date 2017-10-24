@@ -38,7 +38,7 @@ namespace Mixer{
 
         DataFlow::Consolidator<T, Consolidation::Accumulation> complexSource;        
 
-        std::map<float,std::pair<std::unique_ptr<Mixer::SineGenerator<T>>,std::unique_ptr<DataFlow::Applicator<T,VolumeControl<T>>>>> componentObjects;
+        std::map<float,std::pair<std::unique_ptr<Mixer::SineGenerator<T>>,std::unique_ptr<DataFlow::Applicator<T,VolumeControl>>>> componentObjects;
     public:
         std::vector<T> get(const unsigned int &amount);
         

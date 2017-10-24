@@ -7,8 +7,8 @@ int main(int argc, char **argv)
         if(std::string(argv[1])=="-s"){
             std::cout<<"Running tests silently."<<std::endl;
             ::testing::InitGoogleTest(&argc, argv);
-            RUN_ALL_TESTS();
-            return 0;
+            auto res = RUN_ALL_TESTS();
+            return res;
         }
     }
     ::testing::InitGoogleTest(&argc, argv);

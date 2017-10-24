@@ -8,5 +8,5 @@
 <area shape="rect" id="node8" href="$classMixer_1_1SimplePlayer.html" title="{Mixer::SimplePlayer\l\&lt; T, K \&gt;\n||+ get()\l+ pause()\l+ stop()\l+ play()\l+ attach()\l+ SimplePlayer()\l}" alt="" coords="1381,175,1519,340"/>
 <area shape="rect" id="node9" href="$classMixer_1_1SineGenerator.html" title="{Mixer::SineGenerator\&lt; T \&gt;\n||+ get()\l+ getFrequency()\l+ setFrequency()\l+ setFrequency()\l+ SineGenerator()\l}" alt="" coords="1544,189,1721,325"/>
 <area shape="rect" id="node10" href="$classMixer_1_1SquareGenerator.html" title="{Mixer::SquareGenerator\&lt; T \&gt;\n||+ get()\l+ getFrequency()\l+ setFrequency()\l+ setFrequency()\l+ SquareGenerator()\l}" alt="" coords="1746,189,1938,325"/>
-<area shape="rect" id="node11" href="$classMixer_1_1TriangleGenerator.html" title="{Mixer::TriangleGenerator\&lt; T \&gt;\n||+ get()\l+ getFrequency()\l+ setFrequency()\l+ setFrequency()\l+ TriangleGenerator()\l}" alt="" coords="1962,189,2159,325"/>
+<area shape="rect" id="node11" href="$classMixer_1_1TriangleGenerator.html" title="{Mixer::TriangleGenerator\&lt; T \&gt;\n||+ get()\l+ getFrequency()\l+ setFrequency()\l+ setFrequency()\l+ TriangleGenerator()\l+ TriangleGenerator()\l}" alt="" coords="1962,182,2159,333"/>
 </map>

@@ -25,7 +25,11 @@ class SimplePlayer : public Mixer::AudioSource, public DataFlow::iSource<T>, pub
         {
             return std::vector<T>(amount*getChannels(),0);
         }
-        return source->get(amount * getChannels());
+        auto vec = source->get(amount * getChannels());
+        if(vec.size()>0){
+            return vec;
+        }
+        return std::vector<T>(amount*getChannels(),0);
     }
     bool pause()
     {

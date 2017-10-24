@@ -84,7 +84,7 @@
 {\info 
 {\title {\comment Szakdolgozat }Szakdolgozat}
 {\comment K\'E9sz\'EDtetteDoxgyen. }
-{\creatim \yr2017\mo10\dy19\hr19\min32\sec10}
+{\creatim \yr2017\mo10\dy24\hr14\min23\sec19}
 }\pard\plain 
 \sectd\pgnlcrm
 {\footer \s29\widctlpar\tqc\tx4320\tqr\tx8640\qr\adjustright \fs20\cgrid {\chpgn}}
@@ -97,7 +97,7 @@
 \par\par\par\par\par\par\par\par\par\par\par\par
 \pard\plain \s16\qc\sa60\widctlpar\outlinelevel1\adjustright \f1\cgrid 
 {\field\fldedit {\*\fldinst AUTHOR \\*MERGEFORMAT}{\fldrslt AUTHOR}}\par
-Verzi\'F3 \par{\field\fldedit {\*\fldinst CREATEDATE \\*MERGEFORMAT}{\fldrslt Thu Oct 19 2017 }}\par
+Verzi\'F3 \par{\field\fldedit {\*\fldinst CREATEDATE \\*MERGEFORMAT}{\fldrslt Tue Oct 24 2017 }}\par
 \page\page\vertalt
 \pard\plain 
 \s1\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs36\kerning36\cgrid Tartalomjegyz\'E9k\par
@@ -187,15 +187,17 @@ N\'E9vt\'E9rlista\par \pard\plain
 \par
 {\b {\b Mixer} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAEM \\*MERGEFORMAT}{\fldrslt pagenum}}
 \par
-{\b {\b template_utils} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAHO \\*MERGEFORMAT}{\fldrslt pagenum}}
+{\b {\b Mixer::Filter} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAHO \\*MERGEFORMAT}{\fldrslt pagenum}}
 \par
-{\b {\b Transition} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAHS \\*MERGEFORMAT}{\fldrslt pagenum}}
+{\b {\b template_utils} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAHW \\*MERGEFORMAT}{\fldrslt pagenum}}
 \par
-{\b {\b Transition::EaseIn} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAHU \\*MERGEFORMAT}{\fldrslt pagenum}}
+{\b {\b Transition} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAIA \\*MERGEFORMAT}{\fldrslt pagenum}}
 \par
-{\b {\b Transition::EaseInOut} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAHZ \\*MERGEFORMAT}{\fldrslt pagenum}}
+{\b {\b Transition::EaseIn} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAIC \\*MERGEFORMAT}{\fldrslt pagenum}}
 \par
-{\b {\b Transition::EaseOut} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAIE \\*MERGEFORMAT}{\fldrslt pagenum}}
+{\b {\b Transition::EaseInOut} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAIH \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b {\b Transition::EaseOut} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAIM \\*MERGEFORMAT}{\fldrslt pagenum}}
 \par
 \par}
 \pard\plain \sect\sbkpage
@@ -234,11 +236,13 @@ Mixer::SquareGenerator< T >\tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAHK \
 Mixer::TriangleGenerator< T >\tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAHM \\*MERGEFORMAT}{\fldrslt pagenum}}
 \par
 }\par
-template_utils::extract_inner_base< T >\tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAHQ \\*MERGEFORMAT}{\fldrslt pagenum}}
+template_utils::extract_inner_base< T >\tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAHY \\*MERGEFORMAT}{\fldrslt pagenum}}
 \par
-template_utils::extract_inner_base< C< T > >\tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAHR \\*MERGEFORMAT}{\fldrslt pagenum}}
+template_utils::extract_inner_base< C< T > >\tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAHZ \\*MERGEFORMAT}{\fldrslt pagenum}}
 \par
-Clipping::Hard\tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAACO \\*MERGEFORMAT}{\fldrslt pagenum}}
+Mixer::Filter::Fuzzbox< T >\tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAHP \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+Clipping::Hard< T >\tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAACO \\*MERGEFORMAT}{\fldrslt pagenum}}
 \par
 Mixer::iAudioBackend< T >\tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAFI \\*MERGEFORMAT}{\fldrslt pagenum}}
 {
@@ -267,6 +271,8 @@ DataFlow::iSource< T >\tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAADR \\*MER
 {
 \par
 \pard\plain \s72\li720\sa24\sb24\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid 
+DataFlow::Applicator< T, VolumeControl >\tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAADD \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
 DataFlow::Consolidator< T, Consolidation::Accumulation >\tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAADH \\*MERGEFORMAT}{\fldrslt pagenum}}
 \par
 DataFlow::Applicator< T, K >\tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAADD \\*MERGEFORMAT}{\fldrslt pagenum}}
@@ -310,13 +316,6 @@ Mixer::SimplePlayer< T, K >\tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAHF \
 OggFileLoader< T, K >\tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAAF \\*MERGEFORMAT}{\fldrslt pagenum}}
 \par
 }\par
-DataFlow::iSource< float >\tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAADR \\*MERGEFORMAT}{\fldrslt pagenum}}
-{
-\par
-\pard\plain \s72\li720\sa24\sb24\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid 
-DataFlow::Applicator< float, VolumeControl< T > >\tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAADD \\*MERGEFORMAT}{\fldrslt pagenum}}
-\par
-}\par
 iTransitioner< T >\tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAAA \\*MERGEFORMAT}{\fldrslt pagenum}}
 {
 \par
@@ -324,37 +323,37 @@ iTransitioner< T >\tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAAA \\*MERGEFO
 Transitioner< T, K >\tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAAN \\*MERGEFORMAT}{\fldrslt pagenum}}
 \par
 }\par
-Clipping::Soft\tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAACP \\*MERGEFORMAT}{\fldrslt pagenum}}
+Clipping::Soft< T >\tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAACP \\*MERGEFORMAT}{\fldrslt pagenum}}
 \par
 TransitionFunction< T >\tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAAP \\*MERGEFORMAT}{\fldrslt pagenum}}
 {
 \par
 \pard\plain \s72\li720\sa24\sb24\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid 
-Transition::EaseIn::Cubic< T >\tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAHV \\*MERGEFORMAT}{\fldrslt pagenum}}
+Transition::EaseIn::Cubic< T >\tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAID \\*MERGEFORMAT}{\fldrslt pagenum}}
 \par
-Transition::EaseIn::Quadratic< T >\tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAHW \\*MERGEFORMAT}{\fldrslt pagenum}}
+Transition::EaseIn::Quadratic< T >\tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAIE \\*MERGEFORMAT}{\fldrslt pagenum}}
 \par
-Transition::EaseIn::Quartic< T >\tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAHX \\*MERGEFORMAT}{\fldrslt pagenum}}
+Transition::EaseIn::Quartic< T >\tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAIF \\*MERGEFORMAT}{\fldrslt pagenum}}
 \par
-Transition::EaseIn::Quintic< T >\tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAHY \\*MERGEFORMAT}{\fldrslt pagenum}}
+Transition::EaseIn::Quintic< T >\tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAIG \\*MERGEFORMAT}{\fldrslt pagenum}}
 \par
-Transition::EaseInOut::Cubic< T >\tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAIA \\*MERGEFORMAT}{\fldrslt pagenum}}
+Transition::EaseInOut::Cubic< T >\tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAII \\*MERGEFORMAT}{\fldrslt pagenum}}
 \par
-Transition::EaseInOut::Quadratic< T >\tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAIB \\*MERGEFORMAT}{\fldrslt pagenum}}
+Transition::EaseInOut::Quadratic< T >\tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAIJ \\*MERGEFORMAT}{\fldrslt pagenum}}
 \par
-Transition::EaseInOut::Quartic< T >\tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAIC \\*MERGEFORMAT}{\fldrslt pagenum}}
+Transition::EaseInOut::Quartic< T >\tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAIK \\*MERGEFORMAT}{\fldrslt pagenum}}
 \par
-Transition::EaseInOut::Quintic< T >\tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAID \\*MERGEFORMAT}{\fldrslt pagenum}}
+Transition::EaseInOut::Quintic< T >\tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAIL \\*MERGEFORMAT}{\fldrslt pagenum}}
 \par
-Transition::EaseOut::Cubic< T >\tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAIF \\*MERGEFORMAT}{\fldrslt pagenum}}
+Transition::EaseOut::Cubic< T >\tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAIN \\*MERGEFORMAT}{\fldrslt pagenum}}
 \par
-Transition::EaseOut::Quadratic< T >\tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAIG \\*MERGEFORMAT}{\fldrslt pagenum}}
+Transition::EaseOut::Quadratic< T >\tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAIO \\*MERGEFORMAT}{\fldrslt pagenum}}
 \par
-Transition::EaseOut::Quartic< T >\tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAIH \\*MERGEFORMAT}{\fldrslt pagenum}}
+Transition::EaseOut::Quartic< T >\tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAIP \\*MERGEFORMAT}{\fldrslt pagenum}}
 \par
-Transition::EaseOut::Quintic< T >\tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAII \\*MERGEFORMAT}{\fldrslt pagenum}}
+Transition::EaseOut::Quintic< T >\tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAIQ \\*MERGEFORMAT}{\fldrslt pagenum}}
 \par
-Transition::Linear< T >\tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAHT \\*MERGEFORMAT}{\fldrslt pagenum}}
+Transition::Linear< T >\tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAIB \\*MERGEFORMAT}{\fldrslt pagenum}}
 \par
 }\par
 VolumeControl< T >\tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAABS \\*MERGEFORMAT}{\fldrslt pagenum}}
@@ -389,17 +388,19 @@ Oszt\'E1lylista\par \pard\plain
 \par
 {\b {\b DataFlow::Consolidator< T, K >} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAADH \\*MERGEFORMAT}{\fldrslt pagenum}}
 \par
-{\b {\b Transition::EaseIn::Cubic< T >} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAHV \\*MERGEFORMAT}{\fldrslt pagenum}}
+{\b {\b Transition::EaseIn::Cubic< T >} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAID \\*MERGEFORMAT}{\fldrslt pagenum}}
 \par
-{\b {\b Transition::EaseOut::Cubic< T >} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAIF \\*MERGEFORMAT}{\fldrslt pagenum}}
+{\b {\b Transition::EaseOut::Cubic< T >} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAIN \\*MERGEFORMAT}{\fldrslt pagenum}}
 \par
-{\b {\b Transition::EaseInOut::Cubic< T >} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAIA \\*MERGEFORMAT}{\fldrslt pagenum}}
+{\b {\b Transition::EaseInOut::Cubic< T >} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAII \\*MERGEFORMAT}{\fldrslt pagenum}}
 \par
-{\b {\b template_utils::extract_inner_base< T >} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAHQ \\*MERGEFORMAT}{\fldrslt pagenum}}
+{\b {\b template_utils::extract_inner_base< T >} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAHY \\*MERGEFORMAT}{\fldrslt pagenum}}
 \par
-{\b {\b template_utils::extract_inner_base< C< T > >} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAHR \\*MERGEFORMAT}{\fldrslt pagenum}}
+{\b {\b template_utils::extract_inner_base< C< T > >} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAHZ \\*MERGEFORMAT}{\fldrslt pagenum}}
 \par
-{\b {\b Clipping::Hard} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAACO \\*MERGEFORMAT}{\fldrslt pagenum}}
+{\b {\b Mixer::Filter::Fuzzbox< T >} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAHP \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b {\b Clipping::Hard< T >} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAACO \\*MERGEFORMAT}{\fldrslt pagenum}}
 \par
 {\b {\b Mixer::iAudioBackend< T >} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAFI \\*MERGEFORMAT}{\fldrslt pagenum}}
 \par
@@ -415,7 +416,7 @@ Oszt\'E1lylista\par \pard\plain
 \par
 {\b {\b Mixer::iWaveformGenerator< T >} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAFS \\*MERGEFORMAT}{\fldrslt pagenum}}
 \par
-{\b {\b Transition::Linear< T >} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAHT \\*MERGEFORMAT}{\fldrslt pagenum}}
+{\b {\b Transition::Linear< T >} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAIB \\*MERGEFORMAT}{\fldrslt pagenum}}
 \par
 {\b {\b Mixer::Multiplexer< T >} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAGF \\*MERGEFORMAT}{\fldrslt pagenum}}
 \par
@@ -425,25 +426,25 @@ Oszt\'E1lylista\par \pard\plain
 \par
 {\b {\b Mixer::PortAudioBackend< T >} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAGN \\*MERGEFORMAT}{\fldrslt pagenum}}
 \par
-{\b {\b Transition::EaseIn::Quadratic< T >} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAHW \\*MERGEFORMAT}{\fldrslt pagenum}}
+{\b {\b Transition::EaseOut::Quadratic< T >} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAIO \\*MERGEFORMAT}{\fldrslt pagenum}}
 \par
-{\b {\b Transition::EaseOut::Quadratic< T >} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAIG \\*MERGEFORMAT}{\fldrslt pagenum}}
+{\b {\b Transition::EaseInOut::Quadratic< T >} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAIJ \\*MERGEFORMAT}{\fldrslt pagenum}}
 \par
-{\b {\b Transition::EaseInOut::Quadratic< T >} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAIB \\*MERGEFORMAT}{\fldrslt pagenum}}
+{\b {\b Transition::EaseIn::Quadratic< T >} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAIE \\*MERGEFORMAT}{\fldrslt pagenum}}
 \par
-{\b {\b Transition::EaseIn::Quartic< T >} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAHX \\*MERGEFORMAT}{\fldrslt pagenum}}
+{\b {\b Transition::EaseIn::Quartic< T >} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAIF \\*MERGEFORMAT}{\fldrslt pagenum}}
 \par
-{\b {\b Transition::EaseOut::Quartic< T >} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAIH \\*MERGEFORMAT}{\fldrslt pagenum}}
+{\b {\b Transition::EaseInOut::Quartic< T >} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAIK \\*MERGEFORMAT}{\fldrslt pagenum}}
 \par
-{\b {\b Transition::EaseInOut::Quartic< T >} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAIC \\*MERGEFORMAT}{\fldrslt pagenum}}
+{\b {\b Transition::EaseOut::Quartic< T >} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAIP \\*MERGEFORMAT}{\fldrslt pagenum}}
 \par
 {\b {\b DataFlow::QueueBuffer< T >} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAEE \\*MERGEFORMAT}{\fldrslt pagenum}}
 \par
-{\b {\b Transition::EaseIn::Quintic< T >} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAHY \\*MERGEFORMAT}{\fldrslt pagenum}}
+{\b {\b Transition::EaseIn::Quintic< T >} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAIG \\*MERGEFORMAT}{\fldrslt pagenum}}
 \par
-{\b {\b Transition::EaseInOut::Quintic< T >} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAID \\*MERGEFORMAT}{\fldrslt pagenum}}
+{\b {\b Transition::EaseInOut::Quintic< T >} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAIL \\*MERGEFORMAT}{\fldrslt pagenum}}
 \par
-{\b {\b Transition::EaseOut::Quintic< T >} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAII \\*MERGEFORMAT}{\fldrslt pagenum}}
+{\b {\b Transition::EaseOut::Quintic< T >} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAIQ \\*MERGEFORMAT}{\fldrslt pagenum}}
 \par
 {\b {\b Mixer::Recorder< T >} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAGR \\*MERGEFORMAT}{\fldrslt pagenum}}
 \par
@@ -457,7 +458,7 @@ Oszt\'E1lylista\par \pard\plain
 \par
 {\b {\b Mixer::SineGenerator< T >} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAHI \\*MERGEFORMAT}{\fldrslt pagenum}}
 \par
-{\b {\b Clipping::Soft} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAACP \\*MERGEFORMAT}{\fldrslt pagenum}}
+{\b {\b Clipping::Soft< T >} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAACP \\*MERGEFORMAT}{\fldrslt pagenum}}
 \par
 {\b {\b Mixer::SquareGenerator< T >} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAHK \\*MERGEFORMAT}{\fldrslt pagenum}}
 \par
@@ -580,6 +581,14 @@ Mixer n\'E9vt\'E9r-referencia\par \pard\plain
 {\bkmkstart AAAAAAAAEM}
 {\bkmkend AAAAAAAAEM}
 \pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+N\'E9vterek\par
+\pard\plain 
+
+{
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+ {\b Filter}\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
 Oszt\'E1lyok\par
 \pard\plain 
 
@@ -630,11 +639,38 @@ Hangfolyamok k\'E9sz\'EDt\'E9s\'E9re, kever\'E9s\'E9re \'E9s lej\'E1tsz\'E1s\'E1
 \pard\plain \sect\sbkpage
 \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
 \pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+Mixer::Filter n\'E9vt\'E9r-referencia\par \pard\plain 
+{\tc\tcl2 \v Mixer::Filter}
+{\xe \v Mixer::Filter}
+{\bkmkstart AAAAAAAAHO}
+{\bkmkend AAAAAAAAHO}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Oszt\'E1lyok\par
+\pard\plain 
+
+{
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+class {\b Fuzzbox}\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+R\'E9szletes le\'EDr\'E1s\par
+\pard\plain 
+{
+\pard\plain \s17\sa60\sb30\widctlpar\qj \fs22\cgrid {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Olyan funktorokat tartamlaz\'F3 n\'E9vt\'E9r, melyek valamilyen hat\'E1ssal vannak audi\'F3 adatra.\par
+Az Applicator oszt\'E1llyal val\'F3 haszn\'E1latra. \par
+}}
+\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
 template_utils n\'E9vt\'E9r-referencia\par \pard\plain 
 {\tc\tcl2 \v template_utils}
 {\xe \v template_utils}
-{\bkmkstart AAAAAAAAHO}
-{\bkmkend AAAAAAAAHO}
+{\bkmkstart AAAAAAAAHW}
+{\bkmkend AAAAAAAAHW}
 \pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
 Oszt\'E1lyok\par
 \pard\plain 
@@ -671,8 +707,8 @@ T\'EDpusdefin\'EDci\'F3k dokument\'E1ci\'F3ja\par
 {\b 
 template<typename T > using {\b template_utils::extract_inner} = typedef typename {\b extract_inner_base}<T>::type}}
 \par
-{\bkmkstart AAAAAAAAHP}
-{\bkmkend AAAAAAAAHP}
+{\bkmkstart AAAAAAAAHX}
+{\bkmkend AAAAAAAAHX}
 {
 \pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
@@ -686,8 +722,8 @@ This will extract the template parameter of template parameter T For example, if
 Transition n\'E9vt\'E9r-referencia\par \pard\plain 
 {\tc\tcl2 \v Transition}
 {\xe \v Transition}
-{\bkmkstart AAAAAAAAHS}
-{\bkmkend AAAAAAAAHS}
+{\bkmkstart AAAAAAAAIA}
+{\bkmkend AAAAAAAAIA}
 \pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
 N\'E9vterek\par
 \pard\plain 
@@ -725,8 +761,8 @@ Ez a n\'E9vt\'E9r {\b TransitionFunction} implement\'E1ci\'F3kat tartalmaz, mely
 Transition::EaseIn n\'E9vt\'E9r-referencia\par \pard\plain 
 {\tc\tcl2 \v Transition::EaseIn}
 {\xe \v Transition::EaseIn}
-{\bkmkstart AAAAAAAAHU}
-{\bkmkend AAAAAAAAHU}
+{\bkmkstart AAAAAAAAIC}
+{\bkmkend AAAAAAAAIC}
 \pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
 Oszt\'E1lyok\par
 \pard\plain 
@@ -758,8 +794,8 @@ Az \'E1tmenet az elej\'E9n gyorsul. \par
 Transition::EaseInOut n\'E9vt\'E9r-referencia\par \pard\plain 
 {\tc\tcl2 \v Transition::EaseInOut}
 {\xe \v Transition::EaseInOut}
-{\bkmkstart AAAAAAAAHZ}
-{\bkmkend AAAAAAAAHZ}
+{\bkmkstart AAAAAAAAIH}
+{\bkmkend AAAAAAAAIH}
 \pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
 Oszt\'E1lyok\par
 \pard\plain 
@@ -791,8 +827,8 @@ Az \'E1tmenet az elej\'E9n gyorsul, a k\'F6zep\'E9n \'E9ri el a legnagyobb gyors
 Transition::EaseOut n\'E9vt\'E9r-referencia\par \pard\plain 
 {\tc\tcl2 \v Transition::EaseOut}
 {\xe \v Transition::EaseOut}
-{\bkmkstart AAAAAAAAIE}
-{\bkmkend AAAAAAAAIE}
+{\bkmkstart AAAAAAAAIM}
+{\bkmkend AAAAAAAAIM}
 \pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
 Oszt\'E1lyok\par
 \pard\plain 
@@ -968,12 +1004,14 @@ R\'E9szletes le\'EDr\'E1s\par
 \pard\plain \s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
 {
 \pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
-template<typename T, typename K>\par
+template<typename T, template< typename > typename K>\par
 class DataFlow::Applicator< T, K >\par
 }
 
 {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
 Ez az oszt\'E1ly a K t\'EDpus\'FA funktorral transzform\'E1lja a hozz\'E1csatolt iSource<T> forr\'E1st\par
+A funktor sablonparam\'E9ter\'E9nek T-nek kell lennie.\par
+Hasznos funktorok\'E9rt l\'E1sd Filter n\'E9vt\'E9r.\par
 A forr\'E1st meg kell adni az {\b attach()} met\'F3dussal! \par
 }}
 \pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
@@ -984,7 +1022,7 @@ Publikus tagf\'FCggv\'E9nyek\par
 \pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
 std::vector< T > {\b get} (const unsigned int &amount)\par
 \pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
-K & {\b getMethod} ()\par
+K< T > & {\b getMethod} ()\par
 \pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
 void {\b attach} ({\b DataFlow::iSource}< T > &source)\par
 }
@@ -996,7 +1034,7 @@ Tagf\'FCggv\'E9nyek dokument\'E1ci\'F3ja\par
 {\xe \v DataFlow::Applicator\:attach}
 \pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
 {\b 
-template<typename T, typename K> void {\b DataFlow::Applicator}< T, K >::attach ({\b DataFlow::iSource}< T > &  {\i source}){\f2 [inline]}}}
+template<typename T, template< typename > typename K> void {\b DataFlow::Applicator}< T, K >::attach ({\b DataFlow::iSource}< T > &  {\i source}){\f2 [inline]}}}
 \par
 {\bkmkstart AAAAAAAADE}
 {\bkmkend AAAAAAAADE}
@@ -1018,7 +1056,7 @@ Param\'E9terek:\par}
 {\xe \v DataFlow::Applicator\:get}
 \pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
 {\b 
-template<typename T, typename K> std::vector<T> {\b DataFlow::Applicator}< T, K >::get (const unsigned int &  {\i amount}){\f2 [inline]}, {\f2 [virtual]}}}
+template<typename T, template< typename > typename K> std::vector<T> {\b DataFlow::Applicator}< T, K >::get (const unsigned int &  {\i amount}){\f2 [inline]}, {\f2 [virtual]}}}
 \par
 {\bkmkstart AAAAAAAADF}
 {\bkmkend AAAAAAAADF}
@@ -1044,7 +1082,7 @@ Megval\'F3s\'EDtja a k\'F6vetkez\'F5ket: {\b DataFlow::iSource< T >} ({\i o.{\fi
 {\xe \v DataFlow::Applicator\:getMethod}
 \pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
 {\b 
-template<typename T, typename K> K& {\b DataFlow::Applicator}< T, K >::getMethod (){\f2 [inline]}}}
+template<typename T, template< typename > typename K> K<T>& {\b DataFlow::Applicator}< T, K >::getMethod (){\f2 [inline]}}}
 \par
 {\bkmkstart AAAAAAAADG}
 {\bkmkend AAAAAAAADG}
@@ -1962,8 +2000,8 @@ Ez a dokument\'E1ci\'F3 az oszt\'E1lyr\'F3l a k\'F6vetkez\'F5 f\'E1jl alapj\'E1n
 Transition::EaseIn::Cubic< T > oszt\'E1lysablon-referencia\par \pard\plain 
 {\tc\tcl2 \v Transition::EaseIn::Cubic< T >}
 {\xe \v Transition::EaseIn::Cubic< T >}
-{\bkmkstart AAAAAAAAHV}
-{\bkmkend AAAAAAAAHV}
+{\bkmkstart AAAAAAAAID}
+{\bkmkend AAAAAAAAID}
 \par
 {
 {\f2 #include <TransitionFunctions.h>}}\par
@@ -2069,8 +2107,8 @@ Ez a dokument\'E1ci\'F3 az oszt\'E1lyr\'F3l a k\'F6vetkez\'F5 f\'E1jl alapj\'E1n
 Transition::EaseOut::Cubic< T > oszt\'E1lysablon-referencia\par \pard\plain 
 {\tc\tcl2 \v Transition::EaseOut::Cubic< T >}
 {\xe \v Transition::EaseOut::Cubic< T >}
-{\bkmkstart AAAAAAAAIF}
-{\bkmkend AAAAAAAAIF}
+{\bkmkstart AAAAAAAAIN}
+{\bkmkend AAAAAAAAIN}
 \par
 {
 {\f2 #include <TransitionFunctions.h>}}\par
@@ -2176,8 +2214,8 @@ Ez a dokument\'E1ci\'F3 az oszt\'E1lyr\'F3l a k\'F6vetkez\'F5 f\'E1jl alapj\'E1n
 Transition::EaseInOut::Cubic< T > oszt\'E1lysablon-referencia\par \pard\plain 
 {\tc\tcl2 \v Transition::EaseInOut::Cubic< T >}
 {\xe \v Transition::EaseInOut::Cubic< T >}
-{\bkmkstart AAAAAAAAIA}
-{\bkmkend AAAAAAAAIA}
+{\bkmkstart AAAAAAAAII}
+{\bkmkend AAAAAAAAII}
 \par
 {
 {\f2 #include <TransitionFunctions.h>}}\par
@@ -2283,8 +2321,8 @@ Ez a dokument\'E1ci\'F3 az oszt\'E1lyr\'F3l a k\'F6vetkez\'F5 f\'E1jl alapj\'E1n
 template_utils::extract_inner_base< T > strukt\'FArasablon-referencia\par \pard\plain 
 {\tc\tcl2 \v template_utils::extract_inner_base< T >}
 {\xe \v template_utils::extract_inner_base< T >}
-{\bkmkstart AAAAAAAAHQ}
-{\bkmkend AAAAAAAAHQ}
+{\bkmkstart AAAAAAAAHY}
+{\bkmkend AAAAAAAAHY}
 {\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
 Ez a dokument\'E1ci\'F3 a strukt\'FAr\'E1r\'F3l a k\'F6vetkez\'F5 f\'E1jl alapj\'E1n k\'E9sz\'FClt:{\par
 \pard\plain \s81\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls2\adjustright \fs20\cgrid 
@@ -2297,8 +2335,8 @@ Ez a dokument\'E1ci\'F3 a strukt\'FAr\'E1r\'F3l a k\'F6vetkez\'F5 f\'E1jl alapj\
 template_utils::extract_inner_base< C< T > > strukt\'FArasablon-referencia\par \pard\plain 
 {\tc\tcl2 \v template_utils::extract_inner_base< C< T > >}
 {\xe \v template_utils::extract_inner_base< C< T > >}
-{\bkmkstart AAAAAAAAHR}
-{\bkmkend AAAAAAAAHR}
+{\bkmkstart AAAAAAAAHZ}
+{\bkmkend AAAAAAAAHZ}
 {\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
 Ez a dokument\'E1ci\'F3 a strukt\'FAr\'E1r\'F3l a k\'F6vetkez\'F5 f\'E1jl alapj\'E1n k\'E9sz\'FClt:{\par
 \pard\plain \s81\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls2\adjustright \fs20\cgrid 
@@ -2308,9 +2346,187 @@ Ez a dokument\'E1ci\'F3 a strukt\'FAr\'E1r\'F3l a k\'F6vetkez\'F5 f\'E1jl alapj\
 \pard\plain \sect\sbkpage
 \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
 \pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
-Clipping::Hard oszt\'E1lyreferencia\par \pard\plain 
-{\tc\tcl2 \v Clipping::Hard}
-{\xe \v Clipping::Hard}
+Mixer::Filter::Fuzzbox< T > oszt\'E1lysablon-referencia\par \pard\plain 
+{\tc\tcl2 \v Mixer::Filter::Fuzzbox< T >}
+{\xe \v Mixer::Filter::Fuzzbox< T >}
+{\bkmkstart AAAAAAAAHP}
+{\bkmkend AAAAAAAAHP}
+\par
+{
+{\f2 #include <Filters.h>}}\par
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+R\'E9szletes le\'EDr\'E1s\par
+\pard\plain 
+{
+\pard\plain \s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+{
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
+template<typename T>\par
+class Mixer::Filter::Fuzzbox< T >\par
+}
+
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Egy funktor, mely torz\'EDtja az audi\'F3 adatot az amplit\'FAd\'F3 sokszoros\'EDt\'E1s\'E1val.\par
+A torz\'EDt\'E1s m\'E9rt\'E9ke a {\b setDegree()} met\'F3dussal \'E1ll\'EDthat\'F3. \par
+}}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Publikus tagf\'FCggv\'E9nyek\par
+\pard\plain 
+
+{
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+T {\b operator()} (const T &x)\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b operator()} (std::vector< T > &vec)\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b setDegree} (const unsigned int &degree)\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+unsigned int {\b getDegree} ()\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b Fuzzbox} ()\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b Fuzzbox} (unsigned int &degree)\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Konstruktorok \'E9s destruktorok dokument\'E1ci\'F3ja\par
+\pard\plain 
+{\xe \v Fuzzbox\:Mixer::Filter::Fuzzbox}
+{\xe \v Mixer::Filter::Fuzzbox\:Fuzzbox}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+template<typename T > {\b Mixer::Filter::Fuzzbox}< T >::{\b Fuzzbox} (){\f2 [inline]}}}
+\par
+{\bkmkstart AAAAAAAAHQ}
+{\bkmkend AAAAAAAAHQ}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Alap\'E9rtelmezett konstruktor.\par
+Az alap\'E9rtelmezett torz\'EDt\'E1si fok a 4. \par
+}}
+{\xe \v Fuzzbox\:Mixer::Filter::Fuzzbox}
+{\xe \v Mixer::Filter::Fuzzbox\:Fuzzbox}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+template<typename T > {\b Mixer::Filter::Fuzzbox}< T >::{\b Fuzzbox} (unsigned int &  {\i degree}){\f2 [inline]}}}
+\par
+{\bkmkstart AAAAAAAAHR}
+{\bkmkend AAAAAAAAHR}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Konstruktor. Inicializ\'E1lja a torz\'EDt\'E1s fok\'E1t. {\par
+{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
+Param\'E9terek:\par}
+\pard\plain \s61\li360\widctlpar\ql\adjustright \fs20\cgrid \trowd \trgaph108\trleft426\tblind426\trbrdrt\brdrs\brdrw10\brdrcf15 \trbrdrl\brdrs\brdrw10\brdrcf15 \trbrdrb\brdrs\brdrw10\brdrcf15 \trbrdrr\brdrs\brdrw10\brdrcf15 \trbrdrh\brdrs\brdrw10\brdrcf15 \trbrdrv\brdrs\brdrw10\brdrcf15 
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx2187
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx8748
+\pard \widctlpar\intbl\adjustright
+{{\i degree} \cell }{a k\'EDv\'E1nt torz\'EDt\'E1si fok \cell }
+{\row }
+}
+}}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Tagf\'FCggv\'E9nyek dokument\'E1ci\'F3ja\par
+\pard\plain 
+{\xe \v getDegree\:Mixer::Filter::Fuzzbox}
+{\xe \v Mixer::Filter::Fuzzbox\:getDegree}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+template<typename T > unsigned int {\b Mixer::Filter::Fuzzbox}< T >::getDegree (){\f2 [inline]}}}
+\par
+{\bkmkstart AAAAAAAAHS}
+{\bkmkend AAAAAAAAHS}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Visszaadja a torz\'EDt\'E1s fok\'E1t. \par
+{{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
+Visszat\'E9r\'E9si \'E9rt\'E9k:\par}\pard\plain \s62\li720\widctlpar\ql\adjustright \fs20\cgrid a torz\'EDt\'E1s jelenlegi foka \par
+}}}
+{\xe \v operator()\:Mixer::Filter::Fuzzbox}
+{\xe \v Mixer::Filter::Fuzzbox\:operator()}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+template<typename T > T {\b Mixer::Filter::Fuzzbox}< T >::operator() (const T &  {\i x}){\f2 [inline]}}}
+\par
+{\bkmkstart AAAAAAAAHT}
+{\bkmkend AAAAAAAAHT}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Egy \'E9rt\'E9ket torz\'EDt. {\par
+{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
+Param\'E9terek:\par}
+\pard\plain \s61\li360\widctlpar\ql\adjustright \fs20\cgrid \trowd \trgaph108\trleft426\tblind426\trbrdrt\brdrs\brdrw10\brdrcf15 \trbrdrl\brdrs\brdrw10\brdrcf15 \trbrdrb\brdrs\brdrw10\brdrcf15 \trbrdrr\brdrs\brdrw10\brdrcf15 \trbrdrh\brdrs\brdrw10\brdrcf15 \trbrdrv\brdrs\brdrw10\brdrcf15 
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx2187
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx8748
+\pard \widctlpar\intbl\adjustright
+{{\i x} \cell }{a torz\'EDtand\'F3 \'E9rt\'E9k \cell }
+{\row }
+}
+{{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
+Visszat\'E9r\'E9si \'E9rt\'E9k:\par}\pard\plain \s62\li720\widctlpar\ql\adjustright \fs20\cgrid a torz\'EDtott \'E9rt\'E9k \par
+}}}
+{\xe \v operator()\:Mixer::Filter::Fuzzbox}
+{\xe \v Mixer::Filter::Fuzzbox\:operator()}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+template<typename T > void {\b Mixer::Filter::Fuzzbox}< T >::operator() (std::vector< T > &  {\i vec}){\f2 [inline]}}}
+\par
+{\bkmkstart AAAAAAAAHU}
+{\bkmkend AAAAAAAAHU}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Egy vektorban kapott \'F6sszes \'E9rt\'E9ket torz\'EDtja. {\par
+{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
+Param\'E9terek:\par}
+\pard\plain \s61\li360\widctlpar\ql\adjustright \fs20\cgrid \trowd \trgaph108\trleft426\tblind426\trbrdrt\brdrs\brdrw10\brdrcf15 \trbrdrl\brdrs\brdrw10\brdrcf15 \trbrdrb\brdrs\brdrw10\brdrcf15 \trbrdrr\brdrs\brdrw10\brdrcf15 \trbrdrh\brdrs\brdrw10\brdrcf15 \trbrdrv\brdrs\brdrw10\brdrcf15 
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx2187
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx8748
+\pard \widctlpar\intbl\adjustright
+{{\i vec} \cell }{a torz\'EDtand\'F3 vektor \cell }
+{\row }
+}
+}}
+{\xe \v setDegree\:Mixer::Filter::Fuzzbox}
+{\xe \v Mixer::Filter::Fuzzbox\:setDegree}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+template<typename T > void {\b Mixer::Filter::Fuzzbox}< T >::setDegree (const unsigned int &  {\i degree}){\f2 [inline]}}}
+\par
+{\bkmkstart AAAAAAAAHV}
+{\bkmkend AAAAAAAAHV}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Be\'E1ll\'EDtja a torz\'EDt\'E1s fok\'E1t. {\par
+{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
+Param\'E9terek:\par}
+\pard\plain \s61\li360\widctlpar\ql\adjustright \fs20\cgrid \trowd \trgaph108\trleft426\tblind426\trbrdrt\brdrs\brdrw10\brdrcf15 \trbrdrl\brdrs\brdrw10\brdrcf15 \trbrdrb\brdrs\brdrw10\brdrcf15 \trbrdrr\brdrs\brdrw10\brdrcf15 \trbrdrh\brdrs\brdrw10\brdrcf15 \trbrdrv\brdrs\brdrw10\brdrcf15 
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx2187
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx8748
+\pard \widctlpar\intbl\adjustright
+{{\i degree} \cell }{a k\'EDv\'E1nt torz\'EDt\'E1si fok \cell }
+{\row }
+}
+}}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+Ez a dokument\'E1ci\'F3 az oszt\'E1lyr\'F3l a k\'F6vetkez\'F5 f\'E1jl alapj\'E1n k\'E9sz\'FClt:{\par
+\pard\plain \s81\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls2\adjustright \fs20\cgrid 
+/SharedWithWindows/Projects/szakdolgozat/inc/Filters.h\par
+}\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+Clipping::Hard< T > oszt\'E1lysablon-referencia\par \pard\plain 
+{\tc\tcl2 \v Clipping::Hard< T >}
+{\xe \v Clipping::Hard< T >}
 {\bkmkstart AAAAAAAACO}
 {\bkmkend AAAAAAAACO}
 \par
@@ -2321,7 +2537,14 @@ Clipping::Hard oszt\'E1lyreferencia\par \pard\plain
 R\'E9szletes le\'EDr\'E1s\par
 \pard\plain 
 {
-\pard\plain \s17\sa60\sb30\widctlpar\qj \fs22\cgrid {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+\pard\plain \s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+{
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
+template<typename T>\par
+class Clipping::Hard< T >\par
+}
+
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
 Durva ny\'EDr\'E1s. A hat\'E1r\'E9rt\'E9keken t\'FAli \'E9rt\'E9kek a hat\'E1r\'E9rt\'E9ket veszik fel. \par
 }}
 {\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
@@ -2770,7 +2993,7 @@ Param\'E9terek:\par}
 {{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
 Visszat\'E9r\'E9si \'E9rt\'E9k:\par}\pard\plain \s62\li720\widctlpar\ql\adjustright \fs20\cgrid egy {\b T}  t\'EDpus\'FA, {\b amount}  m\'E9ret\'FB vektor, felt\'F6ltve az adattal. \par
 }}{
-Megval\'F3s\'EDtj\'E1k a k\'F6vetkez\'F5k: {\b Mixer::SimpleNote< T, A, D >} ({\i o.{\field\fldedit {\*\fldinst PAGEREF AAAAAAAADS \\*MERGEFORMAT}{\fldrslt pagenum}}}), {\b OggFileLoader< T, K >} ({\i o.{\field\fldedit {\*\fldinst PAGEREF AAAAAAAAAI \\*MERGEFORMAT}{\fldrslt pagenum}}}), {\b DataFlow::Consolidator< T, K >} ({\i o.{\field\fldedit {\*\fldinst PAGEREF AAAAAAAADK \\*MERGEFORMAT}{\fldrslt pagenum}}}), {\b DataFlow::Consolidator< T, Consolidation::Accumulation >} ({\i o.{\field\fldedit {\*\fldinst PAGEREF AAAAAAAADK \\*MERGEFORMAT}{\fldrslt pagenum}}}), {\b Mixer::ComplexWaveformGenerator< T >} ({\i o.{\field\fldedit {\*\fldinst PAGEREF AAAAAAAADT \\*MERGEFORMAT}{\fldrslt pagenum}}}), {\b Mixer::SquareGenerator< T >} ({\i o.{\field\fldedit {\*\fldinst PAGEREF AAAAAAAADU \\*MERGEFORMAT}{\fldrslt pagenum}}}), {\b Mixer::TriangleGenerator< T >} ({\i o.{\field\fldedit {\*\fldinst PAGEREF AAAAAAAADV \\*MERGEFORMAT}{\fldrslt pagenum}}}), {\b Mixer::CheapSawtoothGenerator< T >} ({\i o.{\field\fldedit {\*\fldinst PAGEREF AAAAAAAADW \\*MERGEFORMAT}{\fldrslt pagenum}}}), {\b Mixer::SawtoothGenerator< T >} ({\i o.{\field\fldedit {\*\fldinst PAGEREF AAAAAAAADX \\*MERGEFORMAT}{\fldrslt pagenum}}}), {\b Mixer::CheapSquareGenerator< T >} ({\i o.{\field\fldedit {\*\fldinst PAGEREF AAAAAAAADY \\*MERGEFORMAT}{\fldrslt pagenum}}}), {\b Mixer::SineGenerator< T >} ({\i o.{\field\fldedit {\*\fldinst PAGEREF AAAAAAAADZ \\*MERGEFORMAT}{\fldrslt pagenum}}}), {\b Mixer::Multiplexer< T >} ({\i o.{\field\fldedit {\*\fldinst PAGEREF AAAAAAAAEA \\*MERGEFORMAT}{\fldrslt pagenum}}}), {\b Mixer::SimplePlayer< T, K >} ({\i o.{\field\fldedit {\*\fldinst PAGEREF AAAAAAAAEB \\*MERGEFORMAT}{\fldrslt pagenum}}}), {\b DataFlow::RepeatingBuffer< T >} ({\i o.{\field\fldedit {\*\fldinst PAGEREF AAAAAAAAEC \\*MERGEFORMAT}{\fldrslt pagenum}}}), {\b DataFlow::Applicator< T, K >} ({\i o.{\field\fldedit {\*\fldinst PAGEREF AAAAAAAADF \\*MERGEFORMAT}{\fldrslt pagenum}}}), {\b DataFlow::Applicator< float, VolumeControl< T > >} ({\i o.{\field\fldedit {\*\fldinst PAGEREF AAAAAAAADF \\*MERGEFORMAT}{\fldrslt pagenum}}}) \'E9s {\b DataFlow::QueueBuffer< T >} ({\i o.{\field\fldedit {\*\fldinst PAGEREF AAAAAAAAED \\*MERGEFORMAT}{\fldrslt pagenum}}}).}\par
+Megval\'F3s\'EDtj\'E1k a k\'F6vetkez\'F5k: {\b Mixer::SimpleNote< T, A, D >} ({\i o.{\field\fldedit {\*\fldinst PAGEREF AAAAAAAADS \\*MERGEFORMAT}{\fldrslt pagenum}}}), {\b OggFileLoader< T, K >} ({\i o.{\field\fldedit {\*\fldinst PAGEREF AAAAAAAAAI \\*MERGEFORMAT}{\fldrslt pagenum}}}), {\b DataFlow::Consolidator< T, K >} ({\i o.{\field\fldedit {\*\fldinst PAGEREF AAAAAAAADK \\*MERGEFORMAT}{\fldrslt pagenum}}}), {\b DataFlow::Consolidator< T, Consolidation::Accumulation >} ({\i o.{\field\fldedit {\*\fldinst PAGEREF AAAAAAAADK \\*MERGEFORMAT}{\fldrslt pagenum}}}), {\b Mixer::ComplexWaveformGenerator< T >} ({\i o.{\field\fldedit {\*\fldinst PAGEREF AAAAAAAADT \\*MERGEFORMAT}{\fldrslt pagenum}}}), {\b Mixer::SquareGenerator< T >} ({\i o.{\field\fldedit {\*\fldinst PAGEREF AAAAAAAADU \\*MERGEFORMAT}{\fldrslt pagenum}}}), {\b Mixer::TriangleGenerator< T >} ({\i o.{\field\fldedit {\*\fldinst PAGEREF AAAAAAAADV \\*MERGEFORMAT}{\fldrslt pagenum}}}), {\b Mixer::CheapSawtoothGenerator< T >} ({\i o.{\field\fldedit {\*\fldinst PAGEREF AAAAAAAADW \\*MERGEFORMAT}{\fldrslt pagenum}}}), {\b Mixer::SawtoothGenerator< T >} ({\i o.{\field\fldedit {\*\fldinst PAGEREF AAAAAAAADX \\*MERGEFORMAT}{\fldrslt pagenum}}}), {\b Mixer::CheapSquareGenerator< T >} ({\i o.{\field\fldedit {\*\fldinst PAGEREF AAAAAAAADY \\*MERGEFORMAT}{\fldrslt pagenum}}}), {\b Mixer::SineGenerator< T >} ({\i o.{\field\fldedit {\*\fldinst PAGEREF AAAAAAAADZ \\*MERGEFORMAT}{\fldrslt pagenum}}}), {\b DataFlow::Applicator< T, K >} ({\i o.{\field\fldedit {\*\fldinst PAGEREF AAAAAAAADF \\*MERGEFORMAT}{\fldrslt pagenum}}}), {\b DataFlow::Applicator< T, VolumeControl >} ({\i o.{\field\fldedit {\*\fldinst PAGEREF AAAAAAAADF \\*MERGEFORMAT}{\fldrslt pagenum}}}), {\b Mixer::Multiplexer< T >} ({\i o.{\field\fldedit {\*\fldinst PAGEREF AAAAAAAAEA \\*MERGEFORMAT}{\fldrslt pagenum}}}), {\b Mixer::SimplePlayer< T, K >} ({\i o.{\field\fldedit {\*\fldinst PAGEREF AAAAAAAAEB \\*MERGEFORMAT}{\fldrslt pagenum}}}), {\b DataFlow::RepeatingBuffer< T >} ({\i o.{\field\fldedit {\*\fldinst PAGEREF AAAAAAAAEC \\*MERGEFORMAT}{\fldrslt pagenum}}}) \'E9s {\b DataFlow::QueueBuffer< T >} ({\i o.{\field\fldedit {\*\fldinst PAGEREF AAAAAAAAED \\*MERGEFORMAT}{\fldrslt pagenum}}}).}\par
 }
 {\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
 Ez a dokument\'E1ci\'F3 az oszt\'E1lyr\'F3l a k\'F6vetkez\'F5 f\'E1jl alapj\'E1n k\'E9sz\'FClt:{\par
@@ -3028,8 +3251,8 @@ Ez a dokument\'E1ci\'F3 az oszt\'E1lyr\'F3l a k\'F6vetkez\'F5 f\'E1jl alapj\'E1n
 Transition::Linear< T > oszt\'E1lysablon-referencia\par \pard\plain 
 {\tc\tcl2 \v Transition::Linear< T >}
 {\xe \v Transition::Linear< T >}
-{\bkmkstart AAAAAAAAHT}
-{\bkmkend AAAAAAAAHT}
+{\bkmkstart AAAAAAAAIB}
+{\bkmkend AAAAAAAAIB}
 \par
 {
 {\f2 #include <TransitionFunctions.h>}}\par
@@ -3776,118 +3999,11 @@ Ez a dokument\'E1ci\'F3 az oszt\'E1lyr\'F3l a k\'F6vetkez\'F5 f\'E1jlok alapj\'E
 \pard\plain \sect\sbkpage
 \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
 \pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
-Transition::EaseIn::Quadratic< T > oszt\'E1lysablon-referencia\par \pard\plain 
-{\tc\tcl2 \v Transition::EaseIn::Quadratic< T >}
-{\xe \v Transition::EaseIn::Quadratic< T >}
-{\bkmkstart AAAAAAAAHW}
-{\bkmkend AAAAAAAAHW}
-\par
-{
-{\f2 #include <TransitionFunctions.h>}}\par
-A Transition::EaseIn::Quadratic< T > oszt\'E1ly sz\'E1rmaz\'E1si diagramja:{
-\pard\plain 
-\par\pard \qc {\field\flddirty {\*\fldinst INCLUDEPICTURE "classTransition_1_1EaseIn_1_1Quadratic__inherit__graph.svg" \\d \\*MERGEFORMAT}{\fldrslt IMAGE}}\par
-}
-\par
-{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
-\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
-R\'E9szletes le\'EDr\'E1s\par
-\pard\plain 
-{
-\pard\plain \s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
-{
-\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
-template<typename T>\par
-class Transition::EaseIn::Quadratic< T >\par
-}
-
-{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
-N\'E9gyzetes el\'F6l gyorsul\'F3 \'E1tmenet. \par
-}}
-\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
-Publikus tagf\'FCggv\'E9nyek\par
-\pard\plain 
-
-{
-\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
-void {\b init} (const float &x1, const T &y1, const float &x2, const T &y2)\par
-\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
-T {\b operator()} (const float &x)\par
-}
-{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
-\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
-Tagf\'FCggv\'E9nyek dokument\'E1ci\'F3ja\par
-\pard\plain 
-{\xe \v init\:Transition::EaseIn::Quadratic}
-{\xe \v Transition::EaseIn::Quadratic\:init}
-\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
-{\b 
-template<typename T > void {\b Transition::EaseIn::Quadratic}< T >::init (const float &  {\i x1}, const T &  {\i y1}, const float &  {\i x2}, const T &  {\i y2}){\f2 [inline]}, {\f2 [virtual]}}}
-\par
-{\bkmkstart AAAAAAAABC}
-{\bkmkend AAAAAAAABC}
-{
-\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
-{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
-Inicializ\'E1lja a funktort, ezzel fel\'E9p\'EDtve a k\'E9t adott pont k\'F6z\'F6tti \'E1tmeneti f\'FCggv\'E9nyt.\par
-{{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
-Param\'E9terek:\par}
-\pard\plain \s61\li360\widctlpar\ql\adjustright \fs20\cgrid \trowd \trgaph108\trleft426\tblind426\trbrdrt\brdrs\brdrw10\brdrcf15 \trbrdrl\brdrs\brdrw10\brdrcf15 \trbrdrb\brdrs\brdrw10\brdrcf15 \trbrdrr\brdrs\brdrw10\brdrcf15 \trbrdrh\brdrs\brdrw10\brdrcf15 \trbrdrv\brdrs\brdrw10\brdrcf15 
-\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx2187
-\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx8748
-\pard \widctlpar\intbl\adjustright
-{{\i x1,y1} \cell }{a kezd\'F5pont koordin\'E1t\'E1i \cell }
-{\row }
-\trowd \trgaph108\trleft426\tblind426\trbrdrt\brdrs\brdrw10\brdrcf15 \trbrdrl\brdrs\brdrw10\brdrcf15 \trbrdrb\brdrs\brdrw10\brdrcf15 \trbrdrr\brdrs\brdrw10\brdrcf15 \trbrdrh\brdrs\brdrw10\brdrcf15 \trbrdrv\brdrs\brdrw10\brdrcf15 
-\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx2187
-\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx8748
-\pard \widctlpar\intbl\adjustright
-{{\i x2,y2} \cell }{a v\'E9gpont koordin\'E1t\'E1i \cell }
-{\row }
-}
-}{
-Megval\'F3s\'EDtja a k\'F6vetkez\'F5ket: {\b TransitionFunction< T >} ({\i o.{\field\fldedit {\*\fldinst PAGEREF AAAAAAAAAQ \\*MERGEFORMAT}{\fldrslt pagenum}}}).}\par
-}
-{\xe \v operator()\:Transition::EaseIn::Quadratic}
-{\xe \v Transition::EaseIn::Quadratic\:operator()}
-\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
-{\b 
-template<typename T > T {\b Transition::EaseIn::Quadratic}< T >::operator() (const float &  {\i x}){\f2 [inline]}, {\f2 [virtual]}}}
-\par
-{\bkmkstart AAAAAAAABQ}
-{\bkmkend AAAAAAAABQ}
-{
-\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
-{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
-Megadja az adott helyen a f\'FCggv\'E9ny \'E9rt\'E9k\'E9t.\par
-{{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
-Param\'E9terek:\par}
-\pard\plain \s61\li360\widctlpar\ql\adjustright \fs20\cgrid \trowd \trgaph108\trleft426\tblind426\trbrdrt\brdrs\brdrw10\brdrcf15 \trbrdrl\brdrs\brdrw10\brdrcf15 \trbrdrb\brdrs\brdrw10\brdrcf15 \trbrdrr\brdrs\brdrw10\brdrcf15 \trbrdrh\brdrs\brdrw10\brdrcf15 \trbrdrv\brdrs\brdrw10\brdrcf15 
-\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx2187
-\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx8748
-\pard \widctlpar\intbl\adjustright
-{{\i x} \cell }{a poz\'EDci\'F3\cell }
-{\row }
-}
-{{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
-Visszat\'E9r\'E9si \'E9rt\'E9k:\par}\pard\plain \s62\li720\widctlpar\ql\adjustright \fs20\cgrid a {\b x} -beli \'E9rt\'E9k \par
-}}{
-Megval\'F3s\'EDtja a k\'F6vetkez\'F5ket: {\b TransitionFunction< T >} ({\i o.{\field\fldedit {\*\fldinst PAGEREF AAAAAAAABE \\*MERGEFORMAT}{\fldrslt pagenum}}}).}\par
-}
-{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
-Ez a dokument\'E1ci\'F3 az oszt\'E1lyr\'F3l a k\'F6vetkez\'F5 f\'E1jl alapj\'E1n k\'E9sz\'FClt:{\par
-\pard\plain \s81\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls2\adjustright \fs20\cgrid 
-/SharedWithWindows/Projects/szakdolgozat/inc/TransitionFunctions.h\par
-}\par \pard\plain 
-
-\pard\plain \sect\sbkpage
-\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
-\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
 Transition::EaseOut::Quadratic< T > oszt\'E1lysablon-referencia\par \pard\plain 
 {\tc\tcl2 \v Transition::EaseOut::Quadratic< T >}
 {\xe \v Transition::EaseOut::Quadratic< T >}
-{\bkmkstart AAAAAAAAIG}
-{\bkmkend AAAAAAAAIG}
+{\bkmkstart AAAAAAAAIO}
+{\bkmkend AAAAAAAAIO}
 \par
 {
 {\f2 #include <TransitionFunctions.h>}}\par
@@ -3993,8 +4109,8 @@ Ez a dokument\'E1ci\'F3 az oszt\'E1lyr\'F3l a k\'F6vetkez\'F5 f\'E1jl alapj\'E1n
 Transition::EaseInOut::Quadratic< T > oszt\'E1lysablon-referencia\par \pard\plain 
 {\tc\tcl2 \v Transition::EaseInOut::Quadratic< T >}
 {\xe \v Transition::EaseInOut::Quadratic< T >}
-{\bkmkstart AAAAAAAAIB}
-{\bkmkend AAAAAAAAIB}
+{\bkmkstart AAAAAAAAIJ}
+{\bkmkend AAAAAAAAIJ}
 \par
 {
 {\f2 #include <TransitionFunctions.h>}}\par
@@ -4097,11 +4213,118 @@ Ez a dokument\'E1ci\'F3 az oszt\'E1lyr\'F3l a k\'F6vetkez\'F5 f\'E1jl alapj\'E1n
 \pard\plain \sect\sbkpage
 \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
 \pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+Transition::EaseIn::Quadratic< T > oszt\'E1lysablon-referencia\par \pard\plain 
+{\tc\tcl2 \v Transition::EaseIn::Quadratic< T >}
+{\xe \v Transition::EaseIn::Quadratic< T >}
+{\bkmkstart AAAAAAAAIE}
+{\bkmkend AAAAAAAAIE}
+\par
+{
+{\f2 #include <TransitionFunctions.h>}}\par
+A Transition::EaseIn::Quadratic< T > oszt\'E1ly sz\'E1rmaz\'E1si diagramja:{
+\pard\plain 
+\par\pard \qc {\field\flddirty {\*\fldinst INCLUDEPICTURE "classTransition_1_1EaseIn_1_1Quadratic__inherit__graph.svg" \\d \\*MERGEFORMAT}{\fldrslt IMAGE}}\par
+}
+\par
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+R\'E9szletes le\'EDr\'E1s\par
+\pard\plain 
+{
+\pard\plain \s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+{
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
+template<typename T>\par
+class Transition::EaseIn::Quadratic< T >\par
+}
+
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+N\'E9gyzetes el\'F6l gyorsul\'F3 \'E1tmenet. \par
+}}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Publikus tagf\'FCggv\'E9nyek\par
+\pard\plain 
+
+{
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b init} (const float &x1, const T &y1, const float &x2, const T &y2)\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+T {\b operator()} (const float &x)\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Tagf\'FCggv\'E9nyek dokument\'E1ci\'F3ja\par
+\pard\plain 
+{\xe \v init\:Transition::EaseIn::Quadratic}
+{\xe \v Transition::EaseIn::Quadratic\:init}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+template<typename T > void {\b Transition::EaseIn::Quadratic}< T >::init (const float &  {\i x1}, const T &  {\i y1}, const float &  {\i x2}, const T &  {\i y2}){\f2 [inline]}, {\f2 [virtual]}}}
+\par
+{\bkmkstart AAAAAAAABC}
+{\bkmkend AAAAAAAABC}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Inicializ\'E1lja a funktort, ezzel fel\'E9p\'EDtve a k\'E9t adott pont k\'F6z\'F6tti \'E1tmeneti f\'FCggv\'E9nyt.\par
+{{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
+Param\'E9terek:\par}
+\pard\plain \s61\li360\widctlpar\ql\adjustright \fs20\cgrid \trowd \trgaph108\trleft426\tblind426\trbrdrt\brdrs\brdrw10\brdrcf15 \trbrdrl\brdrs\brdrw10\brdrcf15 \trbrdrb\brdrs\brdrw10\brdrcf15 \trbrdrr\brdrs\brdrw10\brdrcf15 \trbrdrh\brdrs\brdrw10\brdrcf15 \trbrdrv\brdrs\brdrw10\brdrcf15 
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx2187
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx8748
+\pard \widctlpar\intbl\adjustright
+{{\i x1,y1} \cell }{a kezd\'F5pont koordin\'E1t\'E1i \cell }
+{\row }
+\trowd \trgaph108\trleft426\tblind426\trbrdrt\brdrs\brdrw10\brdrcf15 \trbrdrl\brdrs\brdrw10\brdrcf15 \trbrdrb\brdrs\brdrw10\brdrcf15 \trbrdrr\brdrs\brdrw10\brdrcf15 \trbrdrh\brdrs\brdrw10\brdrcf15 \trbrdrv\brdrs\brdrw10\brdrcf15 
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx2187
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx8748
+\pard \widctlpar\intbl\adjustright
+{{\i x2,y2} \cell }{a v\'E9gpont koordin\'E1t\'E1i \cell }
+{\row }
+}
+}{
+Megval\'F3s\'EDtja a k\'F6vetkez\'F5ket: {\b TransitionFunction< T >} ({\i o.{\field\fldedit {\*\fldinst PAGEREF AAAAAAAAAQ \\*MERGEFORMAT}{\fldrslt pagenum}}}).}\par
+}
+{\xe \v operator()\:Transition::EaseIn::Quadratic}
+{\xe \v Transition::EaseIn::Quadratic\:operator()}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+template<typename T > T {\b Transition::EaseIn::Quadratic}< T >::operator() (const float &  {\i x}){\f2 [inline]}, {\f2 [virtual]}}}
+\par
+{\bkmkstart AAAAAAAABQ}
+{\bkmkend AAAAAAAABQ}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Megadja az adott helyen a f\'FCggv\'E9ny \'E9rt\'E9k\'E9t.\par
+{{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
+Param\'E9terek:\par}
+\pard\plain \s61\li360\widctlpar\ql\adjustright \fs20\cgrid \trowd \trgaph108\trleft426\tblind426\trbrdrt\brdrs\brdrw10\brdrcf15 \trbrdrl\brdrs\brdrw10\brdrcf15 \trbrdrb\brdrs\brdrw10\brdrcf15 \trbrdrr\brdrs\brdrw10\brdrcf15 \trbrdrh\brdrs\brdrw10\brdrcf15 \trbrdrv\brdrs\brdrw10\brdrcf15 
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx2187
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx8748
+\pard \widctlpar\intbl\adjustright
+{{\i x} \cell }{a poz\'EDci\'F3\cell }
+{\row }
+}
+{{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
+Visszat\'E9r\'E9si \'E9rt\'E9k:\par}\pard\plain \s62\li720\widctlpar\ql\adjustright \fs20\cgrid a {\b x} -beli \'E9rt\'E9k \par
+}}{
+Megval\'F3s\'EDtja a k\'F6vetkez\'F5ket: {\b TransitionFunction< T >} ({\i o.{\field\fldedit {\*\fldinst PAGEREF AAAAAAAABE \\*MERGEFORMAT}{\fldrslt pagenum}}}).}\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+Ez a dokument\'E1ci\'F3 az oszt\'E1lyr\'F3l a k\'F6vetkez\'F5 f\'E1jl alapj\'E1n k\'E9sz\'FClt:{\par
+\pard\plain \s81\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls2\adjustright \fs20\cgrid 
+/SharedWithWindows/Projects/szakdolgozat/inc/TransitionFunctions.h\par
+}\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
 Transition::EaseIn::Quartic< T > oszt\'E1lysablon-referencia\par \pard\plain 
 {\tc\tcl2 \v Transition::EaseIn::Quartic< T >}
 {\xe \v Transition::EaseIn::Quartic< T >}
-{\bkmkstart AAAAAAAAHX}
-{\bkmkend AAAAAAAAHX}
+{\bkmkstart AAAAAAAAIF}
+{\bkmkend AAAAAAAAIF}
 \par
 {
 {\f2 #include <TransitionFunctions.h>}}\par
@@ -4204,118 +4427,11 @@ Ez a dokument\'E1ci\'F3 az oszt\'E1lyr\'F3l a k\'F6vetkez\'F5 f\'E1jl alapj\'E1n
 \pard\plain \sect\sbkpage
 \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
 \pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
-Transition::EaseOut::Quartic< T > oszt\'E1lysablon-referencia\par \pard\plain 
-{\tc\tcl2 \v Transition::EaseOut::Quartic< T >}
-{\xe \v Transition::EaseOut::Quartic< T >}
-{\bkmkstart AAAAAAAAIH}
-{\bkmkend AAAAAAAAIH}
-\par
-{
-{\f2 #include <TransitionFunctions.h>}}\par
-A Transition::EaseOut::Quartic< T > oszt\'E1ly sz\'E1rmaz\'E1si diagramja:{
-\pard\plain 
-\par\pard \qc {\field\flddirty {\*\fldinst INCLUDEPICTURE "classTransition_1_1EaseOut_1_1Quartic__inherit__graph.svg" \\d \\*MERGEFORMAT}{\fldrslt IMAGE}}\par
-}
-\par
-{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
-\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
-R\'E9szletes le\'EDr\'E1s\par
-\pard\plain 
-{
-\pard\plain \s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
-{
-\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
-template<typename T>\par
-class Transition::EaseOut::Quartic< T >\par
-}
-
-{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
-Negyedik hatv\'E1nyos h\'E1tul lassul\'F3 \'E1tmenet. \par
-}}
-\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
-Publikus tagf\'FCggv\'E9nyek\par
-\pard\plain 
-
-{
-\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
-void {\b init} (const float &x1, const T &y1, const float &x2, const T &y2)\par
-\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
-T {\b operator()} (const float &x)\par
-}
-{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
-\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
-Tagf\'FCggv\'E9nyek dokument\'E1ci\'F3ja\par
-\pard\plain 
-{\xe \v init\:Transition::EaseOut::Quartic}
-{\xe \v Transition::EaseOut::Quartic\:init}
-\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
-{\b 
-template<typename T > void {\b Transition::EaseOut::Quartic}< T >::init (const float &  {\i x1}, const T &  {\i y1}, const float &  {\i x2}, const T &  {\i y2}){\f2 [inline]}, {\f2 [virtual]}}}
-\par
-{\bkmkstart AAAAAAAAAW}
-{\bkmkend AAAAAAAAAW}
-{
-\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
-{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
-Inicializ\'E1lja a funktort, ezzel fel\'E9p\'EDtve a k\'E9t adott pont k\'F6z\'F6tti \'E1tmeneti f\'FCggv\'E9nyt.\par
-{{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
-Param\'E9terek:\par}
-\pard\plain \s61\li360\widctlpar\ql\adjustright \fs20\cgrid \trowd \trgaph108\trleft426\tblind426\trbrdrt\brdrs\brdrw10\brdrcf15 \trbrdrl\brdrs\brdrw10\brdrcf15 \trbrdrb\brdrs\brdrw10\brdrcf15 \trbrdrr\brdrs\brdrw10\brdrcf15 \trbrdrh\brdrs\brdrw10\brdrcf15 \trbrdrv\brdrs\brdrw10\brdrcf15 
-\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx2187
-\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx8748
-\pard \widctlpar\intbl\adjustright
-{{\i x1,y1} \cell }{a kezd\'F5pont koordin\'E1t\'E1i \cell }
-{\row }
-\trowd \trgaph108\trleft426\tblind426\trbrdrt\brdrs\brdrw10\brdrcf15 \trbrdrl\brdrs\brdrw10\brdrcf15 \trbrdrb\brdrs\brdrw10\brdrcf15 \trbrdrr\brdrs\brdrw10\brdrcf15 \trbrdrh\brdrs\brdrw10\brdrcf15 \trbrdrv\brdrs\brdrw10\brdrcf15 
-\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx2187
-\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx8748
-\pard \widctlpar\intbl\adjustright
-{{\i x2,y2} \cell }{a v\'E9gpont koordin\'E1t\'E1i \cell }
-{\row }
-}
-}{
-Megval\'F3s\'EDtja a k\'F6vetkez\'F5ket: {\b TransitionFunction< T >} ({\i o.{\field\fldedit {\*\fldinst PAGEREF AAAAAAAAAQ \\*MERGEFORMAT}{\fldrslt pagenum}}}).}\par
-}
-{\xe \v operator()\:Transition::EaseOut::Quartic}
-{\xe \v Transition::EaseOut::Quartic\:operator()}
-\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
-{\b 
-template<typename T > T {\b Transition::EaseOut::Quartic}< T >::operator() (const float &  {\i x}){\f2 [inline]}, {\f2 [virtual]}}}
-\par
-{\bkmkstart AAAAAAAABK}
-{\bkmkend AAAAAAAABK}
-{
-\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
-{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
-Megadja az adott helyen a f\'FCggv\'E9ny \'E9rt\'E9k\'E9t.\par
-{{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
-Param\'E9terek:\par}
-\pard\plain \s61\li360\widctlpar\ql\adjustright \fs20\cgrid \trowd \trgaph108\trleft426\tblind426\trbrdrt\brdrs\brdrw10\brdrcf15 \trbrdrl\brdrs\brdrw10\brdrcf15 \trbrdrb\brdrs\brdrw10\brdrcf15 \trbrdrr\brdrs\brdrw10\brdrcf15 \trbrdrh\brdrs\brdrw10\brdrcf15 \trbrdrv\brdrs\brdrw10\brdrcf15 
-\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx2187
-\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx8748
-\pard \widctlpar\intbl\adjustright
-{{\i x} \cell }{a poz\'EDci\'F3\cell }
-{\row }
-}
-{{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
-Visszat\'E9r\'E9si \'E9rt\'E9k:\par}\pard\plain \s62\li720\widctlpar\ql\adjustright \fs20\cgrid a {\b x} -beli \'E9rt\'E9k \par
-}}{
-Megval\'F3s\'EDtja a k\'F6vetkez\'F5ket: {\b TransitionFunction< T >} ({\i o.{\field\fldedit {\*\fldinst PAGEREF AAAAAAAABE \\*MERGEFORMAT}{\fldrslt pagenum}}}).}\par
-}
-{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
-Ez a dokument\'E1ci\'F3 az oszt\'E1lyr\'F3l a k\'F6vetkez\'F5 f\'E1jl alapj\'E1n k\'E9sz\'FClt:{\par
-\pard\plain \s81\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls2\adjustright \fs20\cgrid 
-/SharedWithWindows/Projects/szakdolgozat/inc/TransitionFunctions.h\par
-}\par \pard\plain 
-
-\pard\plain \sect\sbkpage
-\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
-\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
 Transition::EaseInOut::Quartic< T > oszt\'E1lysablon-referencia\par \pard\plain 
 {\tc\tcl2 \v Transition::EaseInOut::Quartic< T >}
 {\xe \v Transition::EaseInOut::Quartic< T >}
-{\bkmkstart AAAAAAAAIC}
-{\bkmkend AAAAAAAAIC}
+{\bkmkstart AAAAAAAAIK}
+{\bkmkend AAAAAAAAIK}
 \par
 {
 {\f2 #include <TransitionFunctions.h>}}\par
@@ -4391,6 +4507,113 @@ template<typename T > T {\b Transition::EaseInOut::Quartic}< T >::operator() (co
 \par
 {\bkmkstart AAAAAAAABG}
 {\bkmkend AAAAAAAABG}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Megadja az adott helyen a f\'FCggv\'E9ny \'E9rt\'E9k\'E9t.\par
+{{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
+Param\'E9terek:\par}
+\pard\plain \s61\li360\widctlpar\ql\adjustright \fs20\cgrid \trowd \trgaph108\trleft426\tblind426\trbrdrt\brdrs\brdrw10\brdrcf15 \trbrdrl\brdrs\brdrw10\brdrcf15 \trbrdrb\brdrs\brdrw10\brdrcf15 \trbrdrr\brdrs\brdrw10\brdrcf15 \trbrdrh\brdrs\brdrw10\brdrcf15 \trbrdrv\brdrs\brdrw10\brdrcf15 
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx2187
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx8748
+\pard \widctlpar\intbl\adjustright
+{{\i x} \cell }{a poz\'EDci\'F3\cell }
+{\row }
+}
+{{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
+Visszat\'E9r\'E9si \'E9rt\'E9k:\par}\pard\plain \s62\li720\widctlpar\ql\adjustright \fs20\cgrid a {\b x} -beli \'E9rt\'E9k \par
+}}{
+Megval\'F3s\'EDtja a k\'F6vetkez\'F5ket: {\b TransitionFunction< T >} ({\i o.{\field\fldedit {\*\fldinst PAGEREF AAAAAAAABE \\*MERGEFORMAT}{\fldrslt pagenum}}}).}\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+Ez a dokument\'E1ci\'F3 az oszt\'E1lyr\'F3l a k\'F6vetkez\'F5 f\'E1jl alapj\'E1n k\'E9sz\'FClt:{\par
+\pard\plain \s81\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls2\adjustright \fs20\cgrid 
+/SharedWithWindows/Projects/szakdolgozat/inc/TransitionFunctions.h\par
+}\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+Transition::EaseOut::Quartic< T > oszt\'E1lysablon-referencia\par \pard\plain 
+{\tc\tcl2 \v Transition::EaseOut::Quartic< T >}
+{\xe \v Transition::EaseOut::Quartic< T >}
+{\bkmkstart AAAAAAAAIP}
+{\bkmkend AAAAAAAAIP}
+\par
+{
+{\f2 #include <TransitionFunctions.h>}}\par
+A Transition::EaseOut::Quartic< T > oszt\'E1ly sz\'E1rmaz\'E1si diagramja:{
+\pard\plain 
+\par\pard \qc {\field\flddirty {\*\fldinst INCLUDEPICTURE "classTransition_1_1EaseOut_1_1Quartic__inherit__graph.svg" \\d \\*MERGEFORMAT}{\fldrslt IMAGE}}\par
+}
+\par
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+R\'E9szletes le\'EDr\'E1s\par
+\pard\plain 
+{
+\pard\plain \s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+{
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
+template<typename T>\par
+class Transition::EaseOut::Quartic< T >\par
+}
+
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Negyedik hatv\'E1nyos h\'E1tul lassul\'F3 \'E1tmenet. \par
+}}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Publikus tagf\'FCggv\'E9nyek\par
+\pard\plain 
+
+{
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b init} (const float &x1, const T &y1, const float &x2, const T &y2)\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+T {\b operator()} (const float &x)\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Tagf\'FCggv\'E9nyek dokument\'E1ci\'F3ja\par
+\pard\plain 
+{\xe \v init\:Transition::EaseOut::Quartic}
+{\xe \v Transition::EaseOut::Quartic\:init}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+template<typename T > void {\b Transition::EaseOut::Quartic}< T >::init (const float &  {\i x1}, const T &  {\i y1}, const float &  {\i x2}, const T &  {\i y2}){\f2 [inline]}, {\f2 [virtual]}}}
+\par
+{\bkmkstart AAAAAAAAAW}
+{\bkmkend AAAAAAAAAW}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Inicializ\'E1lja a funktort, ezzel fel\'E9p\'EDtve a k\'E9t adott pont k\'F6z\'F6tti \'E1tmeneti f\'FCggv\'E9nyt.\par
+{{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
+Param\'E9terek:\par}
+\pard\plain \s61\li360\widctlpar\ql\adjustright \fs20\cgrid \trowd \trgaph108\trleft426\tblind426\trbrdrt\brdrs\brdrw10\brdrcf15 \trbrdrl\brdrs\brdrw10\brdrcf15 \trbrdrb\brdrs\brdrw10\brdrcf15 \trbrdrr\brdrs\brdrw10\brdrcf15 \trbrdrh\brdrs\brdrw10\brdrcf15 \trbrdrv\brdrs\brdrw10\brdrcf15 
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx2187
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx8748
+\pard \widctlpar\intbl\adjustright
+{{\i x1,y1} \cell }{a kezd\'F5pont koordin\'E1t\'E1i \cell }
+{\row }
+\trowd \trgaph108\trleft426\tblind426\trbrdrt\brdrs\brdrw10\brdrcf15 \trbrdrl\brdrs\brdrw10\brdrcf15 \trbrdrb\brdrs\brdrw10\brdrcf15 \trbrdrr\brdrs\brdrw10\brdrcf15 \trbrdrh\brdrs\brdrw10\brdrcf15 \trbrdrv\brdrs\brdrw10\brdrcf15 
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx2187
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx8748
+\pard \widctlpar\intbl\adjustright
+{{\i x2,y2} \cell }{a v\'E9gpont koordin\'E1t\'E1i \cell }
+{\row }
+}
+}{
+Megval\'F3s\'EDtja a k\'F6vetkez\'F5ket: {\b TransitionFunction< T >} ({\i o.{\field\fldedit {\*\fldinst PAGEREF AAAAAAAAAQ \\*MERGEFORMAT}{\fldrslt pagenum}}}).}\par
+}
+{\xe \v operator()\:Transition::EaseOut::Quartic}
+{\xe \v Transition::EaseOut::Quartic\:operator()}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+template<typename T > T {\b Transition::EaseOut::Quartic}< T >::operator() (const float &  {\i x}){\f2 [inline]}, {\f2 [virtual]}}}
+\par
+{\bkmkstart AAAAAAAABK}
+{\bkmkend AAAAAAAABK}
 {
 \pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
@@ -4558,8 +4781,8 @@ Ez a dokument\'E1ci\'F3 az oszt\'E1lyr\'F3l a k\'F6vetkez\'F5 f\'E1jlok alapj\'E
 Transition::EaseIn::Quintic< T > oszt\'E1lysablon-referencia\par \pard\plain 
 {\tc\tcl2 \v Transition::EaseIn::Quintic< T >}
 {\xe \v Transition::EaseIn::Quintic< T >}
-{\bkmkstart AAAAAAAAHY}
-{\bkmkend AAAAAAAAHY}
+{\bkmkstart AAAAAAAAIG}
+{\bkmkend AAAAAAAAIG}
 \par
 {
 {\f2 #include <TransitionFunctions.h>}}\par
@@ -4665,8 +4888,8 @@ Ez a dokument\'E1ci\'F3 az oszt\'E1lyr\'F3l a k\'F6vetkez\'F5 f\'E1jl alapj\'E1n
 Transition::EaseInOut::Quintic< T > oszt\'E1lysablon-referencia\par \pard\plain 
 {\tc\tcl2 \v Transition::EaseInOut::Quintic< T >}
 {\xe \v Transition::EaseInOut::Quintic< T >}
-{\bkmkstart AAAAAAAAID}
-{\bkmkend AAAAAAAAID}
+{\bkmkstart AAAAAAAAIL}
+{\bkmkend AAAAAAAAIL}
 \par
 {
 {\f2 #include <TransitionFunctions.h>}}\par
@@ -4772,8 +4995,8 @@ Ez a dokument\'E1ci\'F3 az oszt\'E1lyr\'F3l a k\'F6vetkez\'F5 f\'E1jl alapj\'E1n
 Transition::EaseOut::Quintic< T > oszt\'E1lysablon-referencia\par \pard\plain 
 {\tc\tcl2 \v Transition::EaseOut::Quintic< T >}
 {\xe \v Transition::EaseOut::Quintic< T >}
-{\bkmkstart AAAAAAAAII}
-{\bkmkend AAAAAAAAII}
+{\bkmkstart AAAAAAAAIQ}
+{\bkmkend AAAAAAAAIQ}
 \par
 {
 {\f2 #include <TransitionFunctions.h>}}\par
@@ -6100,9 +6323,9 @@ Ez a dokument\'E1ci\'F3 az oszt\'E1lyr\'F3l a k\'F6vetkez\'F5 f\'E1jlok alapj\'E
 \pard\plain \sect\sbkpage
 \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
 \pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
-Clipping::Soft oszt\'E1lyreferencia\par \pard\plain 
-{\tc\tcl2 \v Clipping::Soft}
-{\xe \v Clipping::Soft}
+Clipping::Soft< T > oszt\'E1lysablon-referencia\par \pard\plain 
+{\tc\tcl2 \v Clipping::Soft< T >}
+{\xe \v Clipping::Soft< T >}
 {\bkmkstart AAAAAAAACP}
 {\bkmkend AAAAAAAACP}
 \par
@@ -6113,7 +6336,14 @@ Clipping::Soft oszt\'E1lyreferencia\par \pard\plain
 R\'E9szletes le\'EDr\'E1s\par
 \pard\plain 
 {
-\pard\plain \s17\sa60\sb30\widctlpar\qj \fs22\cgrid {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+\pard\plain \s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+{
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
+template<typename T>\par
+class Clipping::Soft< T >\par
+}
+
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
 Finom ny\'EDr\'E1s. A hat\'E1r\'E9rt\'E9kek 80%-\'E1t meghalad\'F3 \'E9rt\'E9keket \'FAgy cs\'F6kkenti hogy soha ne \'E9rj\'E9k el a hat\'E1r\'E9rt\'E9keket. Hiperb\'F3likus tangens f\'FCggv\'E9nyhez hasonl\'F3. \par
 }}
 {\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}

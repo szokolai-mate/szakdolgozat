@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['hard',['Hard',['../classClipping_1_1Hard.html',1,'Clipping']]]
+  ['fuzzbox',['Fuzzbox',['../classMixer_1_1Filter_1_1Fuzzbox.html',1,'Mixer::Filter']]]
 ];

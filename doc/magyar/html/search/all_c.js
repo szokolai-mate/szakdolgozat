@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['quadratic',['Quadratic',['../classTransition_1_1EaseIn_1_1Quadratic.html',1,'Transition::EaseIn::Quadratic&lt; T &gt;'],['../classTransition_1_1EaseOut_1_1Quadratic.html',1,'Transition::EaseOut::Quadratic&lt; T &gt;'],['../classTransition_1_1EaseInOut_1_1Quadratic.html',1,'Transition::EaseInOut::Quadratic&lt; T &gt;']]],
-  ['quartic',['Quartic',['../classTransition_1_1EaseIn_1_1Quartic.html',1,'Transition::EaseIn::Quartic&lt; T &gt;'],['../classTransition_1_1EaseOut_1_1Quartic.html',1,'Transition::EaseOut::Quartic&lt; T &gt;'],['../classTransition_1_1EaseInOut_1_1Quartic.html',1,'Transition::EaseInOut::Quartic&lt; T &gt;']]],
-  ['queuebuffer',['QueueBuffer',['../classDataFlow_1_1QueueBuffer.html',1,'DataFlow']]],
-  ['quintic',['Quintic',['../classTransition_1_1EaseIn_1_1Quintic.html',1,'Transition::EaseIn::Quintic&lt; T &gt;'],['../classTransition_1_1EaseInOut_1_1Quintic.html',1,'Transition::EaseInOut::Quintic&lt; T &gt;'],['../classTransition_1_1EaseOut_1_1Quintic.html',1,'Transition::EaseOut::Quintic&lt; T &gt;']]]
+  ['pause',['pause',['../classMixer_1_1iPlayer.html#a38073c8b4de79a9126f9f7a15ae5002b',1,'Mixer::iPlayer::pause()'],['../classMixer_1_1SimplePlayer.html#a836a52bfa67be8049bf1fb2da0e2b55f',1,'Mixer::SimplePlayer::pause()']]],
+  ['play',['play',['../classMixer_1_1iPlayer.html#a691cce4aa509a5c0d2acde1b0f2c741d',1,'Mixer::iPlayer::play()'],['../classMixer_1_1SimplePlayer.html#a7bcde060cc486426ab25239c82827241',1,'Mixer::SimplePlayer::play()']]],
+  ['portaudiobackend',['PortAudioBackend',['../classMixer_1_1PortAudioBackend.html',1,'Mixer']]],
+  ['put',['put',['../classDataFlow_1_1QueueBuffer.html#a981759e123186d56d56278730e316c62',1,'DataFlow::QueueBuffer::put()'],['../classDataFlow_1_1RepeatingBuffer.html#a40bc2f46829801f38255178f66cc98a5',1,'DataFlow::RepeatingBuffer::put()']]]
 ];

@@ -1,4 +1,4 @@
 <map id="DataFlow::Applicator&lt; T, K &gt;" name="DataFlow::Applicator&lt; T, K &gt;">
-<area shape="rect" id="node3" href="$classDataFlow_1_1Applicator.html" title="{DataFlow::Applicator\l\&lt; float, VolumeControl\l\&lt; T \&gt; \&gt;\n||+ get()\l+ getMethod()\l+ attach()\l}" alt="" coords="10,345,163,481"/>
+<area shape="rect" id="node3" href="$classDataFlow_1_1Applicator.html" title="{DataFlow::Applicator\l\&lt; T, VolumeControl \&gt;\n||+ get()\l+ getMethod()\l+ attach()\l}" alt="" coords="13,331,161,452"/>
 <area shape="rect" id="node2" href="$classDataFlow_1_1iSource.html" title="{DataFlow::iSource\&lt; T \&gt;\n||+ get()\l+ ~iSource()\l}" alt="" coords="5,5,168,97"/>
 </map>

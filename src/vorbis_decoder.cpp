@@ -37,8 +37,10 @@ std::string VorbisDecoder::getVendor() const{
 }
 
 void VorbisDecoder::clear(){
-    vorbis_block_clear(&vb);
-    vorbis_dsp_clear(&vd);
+    if(initialized){
+        vorbis_block_clear(&vb);
+        vorbis_dsp_clear(&vd);
+    }
     vorbis_comment_clear(&vc);
     vorbis_info_clear(&vi);
 }
@@ -46,6 +48,7 @@ void VorbisDecoder::clear(){
 int VorbisDecoder::initDecoding(){
     int err = vorbis_synthesis_init(&vd, &vi);
     vorbis_block_init(&vd, &vb);
+    initialized = true;
     return err;
 }
 

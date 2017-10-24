@@ -134,7 +134,9 @@ bool OggFileLoader<T, K>::close()
 template <typename T, typename K>
 void OggFileLoader<T, K>::clear()
 {
-	ogg_stream_clear(&os);
+	if(streamInitialized){
+		ogg_stream_clear(&os);
+	}
 	ogg_sync_clear(&oy);
 }
 

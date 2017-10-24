@@ -6,16 +6,16 @@
 
 namespace
 {
-class ConsolidationMethodTest : public ::testing::Test
+class ConsolidationMethodsTest : public ::testing::Test
 {
   protected:
     virtual void SetUp() {}
     virtual void TearDown() {}
   public:
-    ConsolidationMethodTest(){}
+    ConsolidationMethodsTest(){}
 };
 
-TEST_F(ConsolidationMethodTest, AccumulationWithFloat)
+TEST_F(ConsolidationMethodsTest, AccumulationWithFloat)
 {
     DataFlow::Consolidator<float,Consolidation::Accumulation> cons;
 
@@ -36,7 +36,7 @@ TEST_F(ConsolidationMethodTest, AccumulationWithFloat)
     }
 }
 
-TEST_F(ConsolidationMethodTest, AccumulationWithint)
+TEST_F(ConsolidationMethodsTest, AccumulationWithint)
 {
     DataFlow::Consolidator<int,Consolidation::Accumulation> cons;
 
@@ -57,7 +57,7 @@ TEST_F(ConsolidationMethodTest, AccumulationWithint)
     }
 }
 
-TEST_F(ConsolidationMethodTest, MultiplicationWithFloat)
+TEST_F(ConsolidationMethodsTest, MultiplicationWithFloat)
 {
     DataFlow::Consolidator<float,Consolidation::Multiplication> cons;
 
@@ -78,7 +78,7 @@ TEST_F(ConsolidationMethodTest, MultiplicationWithFloat)
     }
 }
 
-TEST_F(ConsolidationMethodTest, MultiplicationWithInt)
+TEST_F(ConsolidationMethodsTest, MultiplicationWithInt)
 {
     DataFlow::Consolidator<int,Consolidation::Multiplication> cons;
 

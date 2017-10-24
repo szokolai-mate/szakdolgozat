@@ -18,6 +18,22 @@
             "sourceDirectory": "/SharedWithWindows/Projects/szakdolgozat",
             "targets": [
               {
+                "buildDirectory": "/SharedWithWindows/Projects/szakdolgozat/build",
+                "fileGroups": [
+                  {
+                    "isGenerated": true,
+                    "sources": [
+                      "build/CMakeFiles/cleanup",
+                      "build/CMakeFiles/cleanup.rule"
+                    ]
+                  }
+                ],
+                "fullName": "cleanup",
+                "name": "cleanup",
+                "sourceDirectory": "/SharedWithWindows/Projects/szakdolgozat",
+                "type": "UTILITY"
+              },
+              {
                 "artifacts": [
                   "/SharedWithWindows/Projects/szakdolgozat/build/bin/Mixer"
                 ],
@@ -108,6 +124,22 @@
                 "type": "SHARED_LIBRARY"
               },
               {
+                "buildDirectory": "/SharedWithWindows/Projects/szakdolgozat/build",
+                "fileGroups": [
+                  {
+                    "isGenerated": true,
+                    "sources": [
+                      "build/CMakeFiles/doc",
+                      "build/CMakeFiles/doc.rule"
+                    ]
+                  }
+                ],
+                "fullName": "doc",
+                "name": "doc",
+                "sourceDirectory": "/SharedWithWindows/Projects/szakdolgozat",
+                "type": "UTILITY"
+              },
+              {
                 "artifacts": [
                   "/SharedWithWindows/Projects/szakdolgozat/build/bin/Test"
                 ],
@@ -131,6 +163,7 @@
                       "complex_waveform_generator_test.cpp",
                       "consolidation_methods_test.cpp",
                       "consolidator_test.cpp",
+                      "filters_test.cpp",
                       "multiplexer_test.cpp",
                       "portaudio_backend_test.cpp",
                       "queue_buffer_test.cpp",
@@ -187,45 +220,13 @@
                 "name": "coverage",
                 "sourceDirectory": "/SharedWithWindows/Projects/szakdolgozat/test",
                 "type": "UTILITY"
-              },
-              {
-                "buildDirectory": "/SharedWithWindows/Projects/szakdolgozat/build",
-                "fileGroups": [
-                  {
-                    "isGenerated": true,
-                    "sources": [
-                      "build/CMakeFiles/doc",
-                      "build/CMakeFiles/doc.rule"
-                    ]
-                  }
-                ],
-                "fullName": "doc",
-                "name": "doc",
-                "sourceDirectory": "/SharedWithWindows/Projects/szakdolgozat",
-                "type": "UTILITY"
-              },
-              {
-                "buildDirectory": "/SharedWithWindows/Projects/szakdolgozat/build",
-                "fileGroups": [
-                  {
-                    "isGenerated": true,
-                    "sources": [
-                      "build/CMakeFiles/cleanup",
-                      "build/CMakeFiles/cleanup.rule"
-                    ]
-                  }
-                ],
-                "fullName": "cleanup",
-                "name": "cleanup",
-                "sourceDirectory": "/SharedWithWindows/Projects/szakdolgozat",
-                "type": "UTILITY"
               }
             ]
           }
         ]
       }
     ],
-    "cookie": "0.4111845966852852",
+    "cookie": "0.07832614525003123",
     "inReplyTo": "codemodel",
     "type": "reply"
   }

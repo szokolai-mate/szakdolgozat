@@ -6,7 +6,7 @@ Mixer::ComplexWaveformGenerator<T>::ComplexWaveformGenerator(const std::vector<s
 {
     for (auto & component : components){
         auto generator = std::make_unique<Mixer::SineGenerator<T>>(component.first,channels,sampleRate);
-        auto volumeControl = std::make_unique<DataFlow::Applicator<T,VolumeControl<T>>>();
+        auto volumeControl = std::make_unique<DataFlow::Applicator<T,VolumeControl>>();
         volumeControl->getMethod().setVolume(component.second);
         volumeControl->attach(*generator);
         complexSource.attach(*(volumeControl));        
@@ -37,7 +37,7 @@ void Mixer::ComplexWaveformGenerator<T>::setComponent(const float &frequency, co
         return;
     }
     auto generator = std::make_unique<Mixer::SineGenerator<T>>(frequency,getChannels(),getSampleRate());
-    auto volumeControl = std::make_unique<DataFlow::Applicator<T,VolumeControl<T>>>();
+    auto volumeControl = std::make_unique<DataFlow::Applicator<T,VolumeControl>>();
     volumeControl->getMethod().setVolume(volume);
     volumeControl->attach(*generator);
     complexSource.attach(*(volumeControl));        

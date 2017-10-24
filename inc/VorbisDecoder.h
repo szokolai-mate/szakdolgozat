@@ -15,6 +15,7 @@ class VorbisDecoder
     vorbis_comment vc;
     vorbis_dsp_state vd;
     vorbis_block vb;
+    bool initialized = false;
   public:
     /*! \~english Add the ogg packet to header.
         \~hungarian Az ogg csomag hozzáadása a fejléchez.

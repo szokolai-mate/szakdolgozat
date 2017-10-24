@@ -7,7 +7,7 @@ Mixer::SquareGenerator<T>::SquareGenerator(const float &frequency, const unsigne
     volumeControllers.reserve(harmonics+1);
     for(int i = 1;i<harmonics*2+2;i+=2){
         generators.push_back(std::make_unique<Mixer::SineGenerator<T>>(frequency*i,channels,sampleRate));
-        volumeControllers.push_back(std::make_unique<DataFlow::Applicator<T,VolumeControl<T>>>());
+        volumeControllers.push_back(std::make_unique<DataFlow::Applicator<T,VolumeControl>>());
         volumeControllers.back()->getMethod().setVolume(1.0f/(float)i);
         volumeControllers.back()->attach(*(generators.back()));
         complexSource.attach(*(volumeControllers.back()));
