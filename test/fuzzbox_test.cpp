@@ -4,16 +4,16 @@
 
 namespace
 {
-class FiltersTest : public ::testing::Test
+class FuzzboxTest : public ::testing::Test
 {
   protected:
     virtual void SetUp() {}
     virtual void TearDown() {}
   public:
-    FiltersTest(){}
+    FuzzboxTest(){}
 };
 
-TEST_F(FiltersTest, FuzzboxDegreeOfZero)
+TEST_F(FuzzboxTest, DegreeOfZero)
 {
     Mixer::Filter::Fuzzbox<float> box;
     box.setDegree(0);
@@ -26,7 +26,7 @@ TEST_F(FiltersTest, FuzzboxDegreeOfZero)
     }
 }
 
-TEST_F(FiltersTest, FuzzboxBigDegree)
+TEST_F(FuzzboxTest, BigDegree)
 {
     Mixer::Filter::Fuzzbox<float> box;
     box.setDegree(10);
@@ -46,13 +46,13 @@ TEST_F(FiltersTest, FuzzboxBigDegree)
     }
 }
 
-TEST_F(FiltersTest, getDegree)
+TEST_F(FuzzboxTest, getDegree)
 {
     Mixer::Filter::Fuzzbox<float> box;  
     EXPECT_EQ(4,box.getDegree());
 }
 
-TEST_F(FiltersTest, setDegree)
+TEST_F(FuzzboxTest, setDegree)
 {
     Mixer::Filter::Fuzzbox<float> box;
     box.setDegree(55); 

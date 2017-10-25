@@ -9,8 +9,6 @@
 #include <VolumeControl.h>
 #include <Clipping.h>
 
-#include <SineGenerator.h>
-
 #define DEFAULT_CHANNELS 2
 #define DEFAULT_SAMPLE_RATE 44100
 
@@ -25,18 +23,14 @@ int main(int argc, char * argv[]){
 	}
 	loader.init();
 
-	Mixer::SineGenerator<float> sg(440,DEFAULT_CHANNELS,DEFAULT_SAMPLE_RATE);
-
-	DataFlow::Applicator<float,Mixer::Filter::Fuzzbox> filter;
-	filter.getMethod().setDegree(10);
-	filter.attach(sg);
-
-	DataFlow::Applicator<float,Clipping::Soft> clip;
-	clip.attach(filter);
+	DataFlow::Applicator<float,Mixer::Filter::Echo> filter;
+	filter.getMethod().setDelay(DEFAULT_CHANNELS*DEFAULT_SAMPLE_RATE*0.5f);
+	filter.getMethod().setReflectionQuotient(0.3f);
+	filter.attach(loader);
 
 	DataFlow::Applicator<float,VolumeControl> vc;
 	vc.getMethod().setVolume(0.3f);
-	vc.attach(clip);
+	vc.attach(filter);
 	
 	Mixer::SimplePlayer<float,Mixer::PortAudioBackend> player(DEFAULT_CHANNELS,DEFAULT_SAMPLE_RATE);
 	player.attach(vc);

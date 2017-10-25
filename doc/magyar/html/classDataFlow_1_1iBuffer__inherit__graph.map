@@ -1,5 +1,5 @@
 <map id="DataFlow::iBuffer&lt; T &gt;" name="DataFlow::iBuffer&lt; T &gt;">
-<area shape="rect" id="node3" href="$classDataFlow_1_1QueueBuffer.html" title="{DataFlow::QueueBuffer\&lt; T \&gt;\n||+ get()\l+ put()\l+ clear()\l+ size()\l}" alt="" coords="5,315,196,436"/>
+<area shape="rect" id="node3" href="$classDataFlow_1_1QueueBuffer.html" title="{DataFlow::QueueBuffer\&lt; T \&gt;\n||+ get()\l+ get()\l+ put()\l+ put()\l+ clear()\l+ size()\l}" alt="" coords="5,300,196,451"/>
 <area shape="rect" id="node4" href="$classDataFlow_1_1RepeatingBuffer.html" title="{DataFlow::RepeatingBuffer\&lt; T \&gt;\n||+ get()\l+ put()\l+ clear()\l+ size()\l+ RepeatingBuffer()\l+ RepeatingBuffer()\l}" alt="" coords="220,300,432,451"/>
 <area shape="rect" id="node2" href="$classDataFlow_1_1iSource.html" title="{DataFlow::iSource\&lt; T \&gt;\n||+ get()\l+ ~iSource()\l}" alt="" coords="131,5,294,97"/>
 </map>

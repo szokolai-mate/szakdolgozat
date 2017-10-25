@@ -12,10 +12,22 @@ std::vector<T> DataFlow::QueueBuffer<T>::get(const unsigned int &amount){
 }
 
 template <typename T>
+T DataFlow::QueueBuffer<T>::get(){
+    auto res = buffer.front();
+    buffer.pop();
+    return res;
+}
+
+template <typename T>
 void DataFlow::QueueBuffer<T>::put(std::vector<T> data){
     for (T & e : data){
         buffer.push(std::move(e));
     }
+}
+
+template <typename T>
+void DataFlow::QueueBuffer<T>::put(T element){
+    buffer.push(std::move(element));
 }
 
 template <typename T>

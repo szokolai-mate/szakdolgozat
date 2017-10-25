@@ -1,0 +1,333 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Szakdolgozat: Mixer::Filter::Echo&lt; T &gt; osztálysablon-referencia</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Szakdolgozat
+   </div>
+   <div id="projectbrief">A szakdolgozatom ELTE Programtervező Informatikus BSc. szakra.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Készítette Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Keresés');
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Keresés');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespaceMixer.html">Mixer</a></li><li class="navelem"><a class="el" href="namespaceMixer_1_1Filter.html">Filter</a></li><li class="navelem"><a class="el" href="classMixer_1_1Filter_1_1Echo.html">Echo</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Publikus tagfüggvények</a> &#124;
+<a href="classMixer_1_1Filter_1_1Echo-members.html">A tagok teljes listája</a>  </div>
+  <div class="headertitle">
+<div class="title">Mixer::Filter::Echo&lt; T &gt; osztálysablon-referencia</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="Filters_8h_source.html">Filters.h</a>&gt;</code></p>
+<a name="details" id="details"></a><h2 class="groupheader">Részletes leírás</h2>
+<div class="textblock"><h3>template&lt;typename T&gt;<br />
+class Mixer::Filter::Echo&lt; T &gt;</h3>
+
+<p>Egy funktor, mely visszhang effektet rak az audió adara.</p>
+<p>Az visszhang késleltetésének megadására a <a class="el" href="classMixer_1_1Filter_1_1Echo.html#a797312fbb85a00af49262f55ed0a1740">setDelay()</a> metódus használható.</p>
+<p>A visszaverés mértékének megadására a <a class="el" href="classMixer_1_1Filter_1_1Echo.html#ab253cb61bdcde162e1627e954708e566">setReflectionQuotient()</a> metódus használható. </p>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Publikus tagfüggvények</h2></td></tr>
+<tr class="memitem:a89a7a8fbee028f73f44249e8aa078f1a"><td class="memItemLeft" align="right" valign="top">T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMixer_1_1Filter_1_1Echo.html#a89a7a8fbee028f73f44249e8aa078f1a">operator()</a> (const T &amp;x)</td></tr>
+<tr class="separator:a89a7a8fbee028f73f44249e8aa078f1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afc39e7b4c70b4835d205dc36d137f6ed"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMixer_1_1Filter_1_1Echo.html#afc39e7b4c70b4835d205dc36d137f6ed">operator()</a> (std::vector&lt; T &gt; &amp;vec)</td></tr>
+<tr class="separator:afc39e7b4c70b4835d205dc36d137f6ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a797312fbb85a00af49262f55ed0a1740"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMixer_1_1Filter_1_1Echo.html#a797312fbb85a00af49262f55ed0a1740">setDelay</a> (const unsigned int &amp;delay)</td></tr>
+<tr class="separator:a797312fbb85a00af49262f55ed0a1740"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa1f05848979c8dd6ff09be740db1620e"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMixer_1_1Filter_1_1Echo.html#aa1f05848979c8dd6ff09be740db1620e">getDelay</a> ()</td></tr>
+<tr class="separator:aa1f05848979c8dd6ff09be740db1620e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab253cb61bdcde162e1627e954708e566"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMixer_1_1Filter_1_1Echo.html#ab253cb61bdcde162e1627e954708e566">setReflectionQuotient</a> (const float &amp;reflectionQuotient)</td></tr>
+<tr class="separator:ab253cb61bdcde162e1627e954708e566"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac8328f90a24d99b25873fef5f9242b54"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMixer_1_1Filter_1_1Echo.html#ac8328f90a24d99b25873fef5f9242b54">getReflectionQuotient</a> ()</td></tr>
+<tr class="separator:ac8328f90a24d99b25873fef5f9242b54"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2ebb72da5538ce2a9f9ff2fd06098261"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMixer_1_1Filter_1_1Echo.html#a2ebb72da5538ce2a9f9ff2fd06098261">clear</a> ()</td></tr>
+<tr class="separator:a2ebb72da5538ce2a9f9ff2fd06098261"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Tagfüggvények dokumentációja</h2>
+<a id="a2ebb72da5538ce2a9f9ff2fd06098261"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2ebb72da5538ce2a9f9ff2fd06098261">&#9670;&nbsp;</a></span>clear()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classMixer_1_1Filter_1_1Echo.html">Mixer::Filter::Echo</a>&lt; T &gt;::clear </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Törli az objektum belső állapotát, ezzel újraindítva a visszhang késleltetését. </p>
+
+</div>
+</div>
+<a id="aa1f05848979c8dd6ff09be740db1620e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa1f05848979c8dd6ff09be740db1620e">&#9670;&nbsp;</a></span>getDelay()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int <a class="el" href="classMixer_1_1Filter_1_1Echo.html">Mixer::Filter::Echo</a>&lt; T &gt;::getDelay </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Visszaadja a visszhang késleltetését mintákban. </p><dl class="section return"><dt>Visszatérési érték</dt><dd>a késleltetés mintákban </dd></dl>
+
+</div>
+</div>
+<a id="ac8328f90a24d99b25873fef5f9242b54"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac8328f90a24d99b25873fef5f9242b54">&#9670;&nbsp;</a></span>getReflectionQuotient()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float <a class="el" href="classMixer_1_1Filter_1_1Echo.html">Mixer::Filter::Echo</a>&lt; T &gt;::getReflectionQuotient </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Visszaadja a visszaverési hányadost, ami megadja hogy a visszaverő felületet érő kinetikus energiából mennyi verődik vissza. </p><dl class="section return"><dt>Visszatérési érték</dt><dd>a visszaverési hányados </dd></dl>
+
+</div>
+</div>
+<a id="a89a7a8fbee028f73f44249e8aa078f1a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a89a7a8fbee028f73f44249e8aa078f1a">&#9670;&nbsp;</a></span>operator()() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">T <a class="el" href="classMixer_1_1Filter_1_1Echo.html">Mixer::Filter::Echo</a>&lt; T &gt;::operator() </td>
+          <td>(</td>
+          <td class="paramtype">const T &amp;&#160;</td>
+          <td class="paramname"><em>x</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Egy értékre alkalmazza a visszhang effektet. </p><dl class="params"><dt>Paraméterek</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>az érték </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Visszatérési érték</dt><dd>a módosított érték </dd></dl>
+
+</div>
+</div>
+<a id="afc39e7b4c70b4835d205dc36d137f6ed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afc39e7b4c70b4835d205dc36d137f6ed">&#9670;&nbsp;</a></span>operator()() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classMixer_1_1Filter_1_1Echo.html">Mixer::Filter::Echo</a>&lt; T &gt;::operator() </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>vec</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Egy vektorban kapott összes rtékre alkalmazza a visszhang effektet. </p><dl class="params"><dt>Paraméterek</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">vec</td><td>a módosítandó vektor </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a797312fbb85a00af49262f55ed0a1740"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a797312fbb85a00af49262f55ed0a1740">&#9670;&nbsp;</a></span>setDelay()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classMixer_1_1Filter_1_1Echo.html">Mixer::Filter::Echo</a>&lt; T &gt;::setDelay </td>
+          <td>(</td>
+          <td class="paramtype">const unsigned int &amp;&#160;</td>
+          <td class="paramname"><em>delay</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Beállítja a visszhang késleltetését <b>mintákban</b>. </p><dl class="params"><dt>Paraméterek</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">delay</td><td>a kívánt késleltetés mintákban </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ab253cb61bdcde162e1627e954708e566"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab253cb61bdcde162e1627e954708e566">&#9670;&nbsp;</a></span>setReflectionQuotient()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classMixer_1_1Filter_1_1Echo.html">Mixer::Filter::Echo</a>&lt; T &gt;::setReflectionQuotient </td>
+          <td>(</td>
+          <td class="paramtype">const float &amp;&#160;</td>
+          <td class="paramname"><em>reflectionQuotient</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Beállítja a visszaverési hányadost, ami megadja hogy a visszaverő felületet érő kinetikus energiából mennyi verődik vissza. </p><dl class="params"><dt>Paraméterek</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">reflectionQuotient</td><td>a visszaverési hányados </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<hr/>Ez a dokumentáció az osztályról a következő fájl alapján készült:<ul>
+<li>/SharedWithWindows/Projects/szakdolgozat/inc/<a class="el" href="Filters_8h_source.html">Filters.h</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Készítette &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>

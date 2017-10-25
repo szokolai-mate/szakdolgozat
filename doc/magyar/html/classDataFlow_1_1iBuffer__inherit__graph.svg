@@ -21,22 +21,24 @@
 </g>
 <!-- Node2 -->
 <g id="node3" class="node"><title>Node2</title>
-<g id="a_node3"><a xlink:href="classDataFlow_1_1QueueBuffer.html" target="_top" xlink:title="{DataFlow::QueueBuffer\&lt; T \&gt;\n||+ get()\l+ put()\l+ clear()\l+ size()\l}">
-<polygon fill="none" stroke="black" points="0,-11.5 0,-101.5 143,-101.5 143,-11.5 0,-11.5"/>
-<text text-anchor="middle" x="71.5" y="-89.5" font-family="Helvetica,sans-Serif" font-size="10.00">DataFlow::QueueBuffer&lt; T &gt;</text>
-<polyline fill="none" stroke="black" points="0,-82.5 143,-82.5 "/>
-<text text-anchor="middle" x="71.5" y="-70.5" font-family="Helvetica,sans-Serif" font-size="10.00"> </text>
-<polyline fill="none" stroke="black" points="0,-63.5 143,-63.5 "/>
+<g id="a_node3"><a xlink:href="classDataFlow_1_1QueueBuffer.html" target="_top" xlink:title="{DataFlow::QueueBuffer\&lt; T \&gt;\n||+ get()\l+ get()\l+ put()\l+ put()\l+ clear()\l+ size()\l}">
+<polygon fill="none" stroke="black" points="0,-0.5 0,-112.5 143,-112.5 143,-0.5 0,-0.5"/>
+<text text-anchor="middle" x="71.5" y="-100.5" font-family="Helvetica,sans-Serif" font-size="10.00">DataFlow::QueueBuffer&lt; T &gt;</text>
+<polyline fill="none" stroke="black" points="0,-93.5 143,-93.5 "/>
+<text text-anchor="middle" x="71.5" y="-81.5" font-family="Helvetica,sans-Serif" font-size="10.00"> </text>
+<polyline fill="none" stroke="black" points="0,-74.5 143,-74.5 "/>
+<text text-anchor="start" x="8" y="-62.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ get()</text>
 <text text-anchor="start" x="8" y="-51.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ get()</text>
 <text text-anchor="start" x="8" y="-40.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ put()</text>
-<text text-anchor="start" x="8" y="-29.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ clear()</text>
-<text text-anchor="start" x="8" y="-18.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ size()</text>
+<text text-anchor="start" x="8" y="-29.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ put()</text>
+<text text-anchor="start" x="8" y="-18.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ clear()</text>
+<text text-anchor="start" x="8" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ size()</text>
 </a>
 </g>
 </g>
 <!-- Node0&#45;&gt;Node2 -->
 <g id="edge2" class="edge"><title>Node0&#45;&gt;Node2</title>
-<path fill="none" stroke="midnightblue" d="M125.005,-140.624C116.864,-127.977 108.099,-114.359 100.066,-101.879"/>
+<path fill="none" stroke="midnightblue" d="M125.053,-140.698C119.226,-131.645 113.077,-122.092 107.105,-112.814"/>
 <polygon fill="none" stroke="midnightblue" points="122.169,-142.685 130.525,-149.199 128.055,-138.896 122.169,-142.685"/>
 </g>
 <!-- Node3 -->

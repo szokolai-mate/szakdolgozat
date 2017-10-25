@@ -1,7 +1,6 @@
 #include <iostream>
 
-#include <OggFileLoader.h>
-#include <VorbisDecoder.h>
+#include <SineGenerator.h>
 #include <SimplePlayer.h>
 #include <PortAudioBackend.h>
 
@@ -10,24 +9,23 @@
 
 int main(int argc, char * argv[]){
 	if(argc<2){
-		std::cout<<"No filename given!"<<std::endl;
+		std::cout<<"No frequency given!"<<std::endl;
 		return -1;
 	}
 
-	std::string fname{argv[1]};
-	std::cout<<fname<<std::endl;
-
-	OggFileLoader<float,VorbisDecoder> loader;
-	if(!loader.open(fname)){
-		std::cout<<"File not found!"<<std::endl;
+    float frequency = std::atof(argv[1]);
+    if(frequency<=0){
+		std::cout<<"Please give a valid frequency value."<<std::endl;
 		return -1;
 	}
-	loader.init();
+
+    Mixer::SineGenerator<float> sg(frequency,DEFAULT_CHANNELS,DEFAULT_SAMPLE_RATE);
 	
 	Mixer::SimplePlayer<float,Mixer::PortAudioBackend> player(DEFAULT_CHANNELS,DEFAULT_SAMPLE_RATE);
-	player.attach(loader);
+	player.attach(sg);
 	player.play();
 
+    std::cout<<"Playing a sine wave with a frequency of "<<sg.getFrequency()<<"."<<std::endl;    
 	std::cout<<"Press any key to exit."<<std::endl;
 	std::cin.get();
 	return 0;

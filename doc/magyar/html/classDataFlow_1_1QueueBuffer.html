@@ -75,7 +75,8 @@ $(function() {
 <div class="dynheader">
 A DataFlow::QueueBuffer&lt; T &gt; osztály származási diagramja:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classDataFlow_1_1QueueBuffer__inherit__graph.svg" width="202" height="287"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classDataFlow_1_1QueueBuffer__inherit__graph.svg" width="202" height="316"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
 </div>
 <a name="details" id="details"></a><h2 class="groupheader">Részletes leírás</h2>
 <div class="textblock"><h3>template&lt;typename T&gt;<br />
@@ -87,8 +88,12 @@ class DataFlow::QueueBuffer&lt; T &gt;</h3>
 Publikus tagfüggvények</h2></td></tr>
 <tr class="memitem:a40d1c1eec9eee8576719c792789ec892"><td class="memItemLeft" align="right" valign="top">std::vector&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDataFlow_1_1QueueBuffer.html#a40d1c1eec9eee8576719c792789ec892">get</a> (const unsigned int &amp;amount)</td></tr>
 <tr class="separator:a40d1c1eec9eee8576719c792789ec892"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a12ec05a2ca19acb3f94636b4f3e68649"><td class="memItemLeft" align="right" valign="top">T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDataFlow_1_1QueueBuffer.html#a12ec05a2ca19acb3f94636b4f3e68649">get</a> ()</td></tr>
+<tr class="separator:a12ec05a2ca19acb3f94636b4f3e68649"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a981759e123186d56d56278730e316c62"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDataFlow_1_1QueueBuffer.html#a981759e123186d56d56278730e316c62">put</a> (std::vector&lt; T &gt; data)</td></tr>
 <tr class="separator:a981759e123186d56d56278730e316c62"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7c63d9e8b3997296cc1a63503a5a516b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDataFlow_1_1QueueBuffer.html#a7c63d9e8b3997296cc1a63503a5a516b">put</a> (T element)</td></tr>
+<tr class="separator:a7c63d9e8b3997296cc1a63503a5a516b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a50fac2bdf091eed9ca7a2d6ab11b0511"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDataFlow_1_1QueueBuffer.html#a50fac2bdf091eed9ca7a2d6ab11b0511">clear</a> ()</td></tr>
 <tr class="separator:a50fac2bdf091eed9ca7a2d6ab11b0511"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9fd72de95726c27ecccd128f8284eb63"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDataFlow_1_1QueueBuffer.html#a9fd72de95726c27ecccd128f8284eb63">size</a> ()</td></tr>
@@ -116,7 +121,7 @@ template&lt;typename T &gt; </div>
 </div>
 </div>
 <a id="a40d1c1eec9eee8576719c792789ec892"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a40d1c1eec9eee8576719c792789ec892">&#9670;&nbsp;</a></span>get()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a40d1c1eec9eee8576719c792789ec892">&#9670;&nbsp;</a></span>get() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -153,8 +158,28 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
+<a id="a12ec05a2ca19acb3f94636b4f3e68649"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a12ec05a2ca19acb3f94636b4f3e68649">&#9670;&nbsp;</a></span>get() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">T <a class="el" href="classDataFlow_1_1QueueBuffer.html">DataFlow::QueueBuffer</a>&lt; T &gt;::get </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Egy elemet kér a buffertől. </p><dl class="section return"><dt>Visszatérési érték</dt><dd>a következő elem </dd></dl>
+
+</div>
+</div>
 <a id="a981759e123186d56d56278730e316c62"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a981759e123186d56d56278730e316c62">&#9670;&nbsp;</a></span>put()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a981759e123186d56d56278730e316c62">&#9670;&nbsp;</a></span>put() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -178,7 +203,7 @@ template&lt;typename T &gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Az argumentumot berakja a pufferbe. </p><dl class="params"><dt>Paraméterek</dt><dd>
+<p>Az argumentum tartalmát berakja a pufferbe. </p><dl class="params"><dt>Paraméterek</dt><dd>
   <table class="params">
     <tr><td class="paramname">data</td><td>a pufferelni kívánt adat </td></tr>
   </table>
@@ -186,6 +211,32 @@ template&lt;typename T &gt; </div>
 </dl>
 
 <p>Megvalósítja a következőket: <a class="el" href="classDataFlow_1_1iBuffer.html">DataFlow::iBuffer&lt; T &gt;</a>.</p>
+
+</div>
+</div>
+<a id="a7c63d9e8b3997296cc1a63503a5a516b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7c63d9e8b3997296cc1a63503a5a516b">&#9670;&nbsp;</a></span>put() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classDataFlow_1_1QueueBuffer.html">DataFlow::QueueBuffer</a>&lt; T &gt;::put </td>
+          <td>(</td>
+          <td class="paramtype">T&#160;</td>
+          <td class="paramname"><em>element</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Az argumentum elemet berakja a pufferbe. </p><dl class="params"><dt>Paraméterek</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">element</td><td>a pufferelni kívánt elem </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

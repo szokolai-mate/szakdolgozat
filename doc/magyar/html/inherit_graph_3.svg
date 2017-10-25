@@ -8,8 +8,8 @@
  viewBox="0.00 0.00 570.00 529.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 <g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 525)">
 <title>Osztályhierarchia&#45;ábra</title>
-<!-- Node50 -->
-<g id="node1" class="node"><title>Node50</title>
+<!-- Node51 -->
+<g id="node1" class="node"><title>Node51</title>
 <g id="a_node1"><a xlink:href="classMixer_1_1AudioSource.html" target="_top" xlink:title="Mixer::AudioSource">
 <polygon fill="none" stroke="black" points="192.5,-240 192.5,-259 294.5,-259 294.5,-240 192.5,-240"/>
 <text text-anchor="middle" x="243.5" y="-247" font-family="Helvetica,sans-Serif" font-size="10.00">Mixer::AudioSource</text>
@@ -24,8 +24,8 @@
 </a>
 </g>
 </g>
-<!-- Node50&#45;&gt;Node10 -->
-<g id="edge1" class="edge"><title>Node50&#45;&gt;Node10</title>
+<!-- Node51&#45;&gt;Node10 -->
+<g id="edge1" class="edge"><title>Node51&#45;&gt;Node10</title>
 <path fill="none" stroke="midnightblue" d="M304.676,-255.056C313.581,-258.029 322.075,-262.329 329,-268.5 365.205,-300.761 328.336,-339.762 365,-371.5 369.303,-375.225 374.116,-378.305 379.238,-380.845"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="305.48,-251.647 294.907,-252.326 303.595,-258.389 305.48,-251.647"/>
 </g>
@@ -37,8 +37,8 @@
 </a>
 </g>
 </g>
-<!-- Node50&#45;&gt;Node11 -->
-<g id="edge2" class="edge"><title>Node50&#45;&gt;Node11</title>
+<!-- Node51&#45;&gt;Node11 -->
+<g id="edge2" class="edge"><title>Node51&#45;&gt;Node11</title>
 <path fill="none" stroke="midnightblue" d="M304.739,-256.404C313.422,-259.227 321.831,-263.128 329,-268.5 355.427,-288.303 338.291,-314.078 365,-333.5 370.161,-337.253 375.866,-340.318 381.851,-342.815"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="305.443,-252.967 294.87,-253.653 303.563,-259.71 305.443,-252.967"/>
 </g>
@@ -50,21 +50,21 @@
 </a>
 </g>
 </g>
-<!-- Node50&#45;&gt;Node8 -->
-<g id="edge3" class="edge"><title>Node50&#45;&gt;Node8</title>
+<!-- Node51&#45;&gt;Node8 -->
+<g id="edge3" class="edge"><title>Node51&#45;&gt;Node8</title>
 <path fill="none" stroke="midnightblue" d="M304.479,-241.668C313.127,-238.964 321.594,-235.343 329,-230.5 351.616,-215.709 342.174,-195.965 365,-181.5 371.118,-177.623 377.853,-174.507 384.838,-172.006"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="303.406,-238.333 294.685,-244.348 305.254,-245.085 303.406,-238.333"/>
 </g>
-<!-- Node51 -->
-<g id="node5" class="node"><title>Node51</title>
+<!-- Node52 -->
+<g id="node5" class="node"><title>Node52</title>
 <g id="a_node5"><a xlink:href="classMixer_1_1Recorder.html" target="_top" xlink:title="Mixer::Recorder\&lt; T \&gt;">
 <polygon fill="none" stroke="black" points="408.5,-191 408.5,-210 518.5,-210 518.5,-191 408.5,-191"/>
 <text text-anchor="middle" x="463.5" y="-198" font-family="Helvetica,sans-Serif" font-size="10.00">Mixer::Recorder&lt; T &gt;</text>
 </a>
 </g>
 </g>
-<!-- Node50&#45;&gt;Node51 -->
-<g id="edge4" class="edge"><title>Node50&#45;&gt;Node51</title>
+<!-- Node51&#45;&gt;Node52 -->
+<g id="edge4" class="edge"><title>Node51&#45;&gt;Node52</title>
 <path fill="none" stroke="midnightblue" d="M299.84,-237.686C309.588,-235.426 319.614,-232.985 329,-230.5 345.173,-226.217 348.767,-223.55 365,-219.5 378.972,-216.014 394.202,-212.781 408.383,-210.006"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="298.794,-234.334 289.822,-239.97 300.35,-241.159 298.794,-234.334"/>
 </g>
@@ -76,8 +76,8 @@
 </a>
 </g>
 </g>
-<!-- Node50&#45;&gt;Node12 -->
-<g id="edge5" class="edge"><title>Node50&#45;&gt;Node12</title>
+<!-- Node51&#45;&gt;Node12 -->
+<g id="edge5" class="edge"><title>Node51&#45;&gt;Node12</title>
 <path fill="none" stroke="midnightblue" d="M304.611,-259.702C312.992,-262.072 321.346,-264.968 329,-268.5 347.16,-276.88 346.722,-287.382 365,-295.5 373.747,-299.385 383.284,-302.479 392.858,-304.941"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="305.36,-256.281 294.801,-257.156 303.601,-263.056 305.36,-256.281"/>
 </g>
@@ -90,8 +90,8 @@
 </a>
 </g>
 </g>
-<!-- Node50&#45;&gt;Node17 -->
-<g id="edge6" class="edge"><title>Node50&#45;&gt;Node17</title>
+<!-- Node51&#45;&gt;Node17 -->
+<g id="edge6" class="edge"><title>Node51&#45;&gt;Node17</title>
 <path fill="none" stroke="midnightblue" d="M304.381,-243.604C313.322,-240.672 321.905,-236.474 329,-230.5 361.011,-203.548 333.395,-170.927 365,-143.5 377.868,-132.333 395.077,-126.046 411.454,-122.541"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="303.297,-240.272 294.592,-246.311 305.164,-247.019 303.297,-240.272"/>
 </g>
@@ -104,8 +104,8 @@
 </a>
 </g>
 </g>
-<!-- Node50&#45;&gt;Node18 -->
-<g id="edge7" class="edge"><title>Node50&#45;&gt;Node18</title>
+<!-- Node51&#45;&gt;Node18 -->
+<g id="edge7" class="edge"><title>Node51&#45;&gt;Node18</title>
 <path fill="none" stroke="midnightblue" d="M304.791,-244.517C313.761,-241.486 322.245,-237.017 329,-230.5 374.306,-186.787 320.137,-137.668 365,-93.5 377.298,-81.3923 394.666,-75.06 411.343,-71.8468"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="303.618,-241.211 294.928,-247.272 305.5,-247.953 303.618,-241.211"/>
 </g>
@@ -117,8 +117,8 @@
 </a>
 </g>
 </g>
-<!-- Node50&#45;&gt;Node13 -->
-<g id="edge8" class="edge"><title>Node50&#45;&gt;Node13</title>
+<!-- Node51&#45;&gt;Node13 -->
+<g id="edge8" class="edge"><title>Node51&#45;&gt;Node13</title>
 <path fill="none" stroke="midnightblue" d="M304.747,-256.962C333.264,-260.494 367.39,-264.72 396.595,-268.337"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="304.868,-253.45 294.514,-255.694 304.008,-260.397 304.868,-253.45"/>
 </g>
@@ -130,8 +130,8 @@
 </a>
 </g>
 </g>
-<!-- Node50&#45;&gt;Node14 -->
-<g id="edge9" class="edge"><title>Node50&#45;&gt;Node14</title>
+<!-- Node51&#45;&gt;Node14 -->
+<g id="edge9" class="edge"><title>Node51&#45;&gt;Node14</title>
 <path fill="none" stroke="midnightblue" d="M304.535,-246.471C331.37,-245.117 363.203,-243.51 391.237,-242.096"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="304.324,-242.977 294.514,-246.976 304.677,-249.968 304.324,-242.977"/>
 </g>
@@ -143,8 +143,8 @@
 </a>
 </g>
 </g>
-<!-- Node50&#45;&gt;Node15 -->
-<g id="edge10" class="edge"><title>Node50&#45;&gt;Node15</title>
+<!-- Node51&#45;&gt;Node15 -->
+<g id="edge10" class="edge"><title>Node51&#45;&gt;Node15</title>
 <path fill="none" stroke="midnightblue" d="M304.224,-254.239C313.413,-257.278 322.117,-261.812 329,-268.5 375.387,-313.57 317.97,-365.1 365,-409.5 371.897,-416.011 380.331,-420.602 389.323,-423.796"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="305.098,-250.85 294.529,-251.587 303.251,-257.602 305.098,-250.85"/>
 </g>

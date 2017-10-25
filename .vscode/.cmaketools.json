@@ -18,64 +18,36 @@
             "sourceDirectory": "/SharedWithWindows/Projects/szakdolgozat",
             "targets": [
               {
+                "buildDirectory": "/SharedWithWindows/Projects/szakdolgozat/build/test",
+                "fileGroups": [
+                  {
+                    "isGenerated": true,
+                    "sources": [
+                      "../build/test/CMakeFiles/coverage",
+                      "../build/test/CMakeFiles/coverage.rule"
+                    ]
+                  }
+                ],
+                "fullName": "coverage",
+                "name": "coverage",
+                "sourceDirectory": "/SharedWithWindows/Projects/szakdolgozat/test",
+                "type": "UTILITY"
+              },
+              {
                 "buildDirectory": "/SharedWithWindows/Projects/szakdolgozat/build",
                 "fileGroups": [
                   {
                     "isGenerated": true,
                     "sources": [
-                      "build/CMakeFiles/cleanup",
-                      "build/CMakeFiles/cleanup.rule"
+                      "build/CMakeFiles/doc",
+                      "build/CMakeFiles/doc.rule"
                     ]
                   }
                 ],
-                "fullName": "cleanup",
-                "name": "cleanup",
+                "fullName": "doc",
+                "name": "doc",
                 "sourceDirectory": "/SharedWithWindows/Projects/szakdolgozat",
                 "type": "UTILITY"
-              },
-              {
-                "artifacts": [
-                  "/SharedWithWindows/Projects/szakdolgozat/build/bin/Mixer"
-                ],
-                "buildDirectory": "/SharedWithWindows/Projects/szakdolgozat/build/src",
-                "fileGroups": [
-                  {
-                    "compileFlags": " -std=c++14 -g  ",
-                    "includePath": [
-                      {
-                        "path": "/SharedWithWindows/Projects/szakdolgozat/inc"
-                      }
-                    ],
-                    "isGenerated": false,
-                    "language": "CXX",
-                    "sources": [
-                      "cheap_sawtooth_generator.cpp",
-                      "cheap_square_generator.cpp",
-                      "complex_waveform_generator.cpp",
-                      "consolidation_methods.cpp",
-                      "main.cpp",
-                      "multiplexer.cpp",
-                      "ogg_file_loader.cpp",
-                      "portaudio_backend.cpp",
-                      "queue_buffer.cpp",
-                      "recorder.cpp",
-                      "repeating_buffer.cpp",
-                      "sawtooth_generator.cpp",
-                      "sine_generator.cpp",
-                      "square_generator.cpp",
-                      "triangle_generator.cpp",
-                      "vorbis_decoder.cpp",
-                      "vorbis_encoder.cpp"
-                    ]
-                  }
-                ],
-                "fullName": "Mixer",
-                "linkLanguageFlags": "-std=c++14 -g",
-                "linkLibraries": "-Wl,-rpath,/usr/local/lib -lpthread /usr/local/lib/libportaudio.so /usr/lib/x86_64-linux-gnu/libogg.so /usr/lib/x86_64-linux-gnu/libvorbis.so /usr/lib/x86_64-linux-gnu/libvorbisenc.so",
-                "linkerLanguage": "CXX",
-                "name": "Mixer",
-                "sourceDirectory": "/SharedWithWindows/Projects/szakdolgozat/src",
-                "type": "EXECUTABLE"
               },
               {
                 "artifacts": [
@@ -124,18 +96,62 @@
                 "type": "SHARED_LIBRARY"
               },
               {
+                "artifacts": [
+                  "/SharedWithWindows/Projects/szakdolgozat/build/bin/Mixer"
+                ],
+                "buildDirectory": "/SharedWithWindows/Projects/szakdolgozat/build/src",
+                "fileGroups": [
+                  {
+                    "compileFlags": " -std=c++14 -g  ",
+                    "includePath": [
+                      {
+                        "path": "/SharedWithWindows/Projects/szakdolgozat/inc"
+                      }
+                    ],
+                    "isGenerated": false,
+                    "language": "CXX",
+                    "sources": [
+                      "cheap_sawtooth_generator.cpp",
+                      "cheap_square_generator.cpp",
+                      "complex_waveform_generator.cpp",
+                      "consolidation_methods.cpp",
+                      "main.cpp",
+                      "multiplexer.cpp",
+                      "ogg_file_loader.cpp",
+                      "portaudio_backend.cpp",
+                      "queue_buffer.cpp",
+                      "recorder.cpp",
+                      "repeating_buffer.cpp",
+                      "sawtooth_generator.cpp",
+                      "sine_generator.cpp",
+                      "square_generator.cpp",
+                      "triangle_generator.cpp",
+                      "vorbis_decoder.cpp",
+                      "vorbis_encoder.cpp"
+                    ]
+                  }
+                ],
+                "fullName": "Mixer",
+                "linkLanguageFlags": "-std=c++14 -g",
+                "linkLibraries": "-Wl,-rpath,/usr/local/lib -lpthread /usr/local/lib/libportaudio.so /usr/lib/x86_64-linux-gnu/libogg.so /usr/lib/x86_64-linux-gnu/libvorbis.so /usr/lib/x86_64-linux-gnu/libvorbisenc.so",
+                "linkerLanguage": "CXX",
+                "name": "Mixer",
+                "sourceDirectory": "/SharedWithWindows/Projects/szakdolgozat/src",
+                "type": "EXECUTABLE"
+              },
+              {
                 "buildDirectory": "/SharedWithWindows/Projects/szakdolgozat/build",
                 "fileGroups": [
                   {
                     "isGenerated": true,
                     "sources": [
-                      "build/CMakeFiles/doc",
-                      "build/CMakeFiles/doc.rule"
+                      "build/CMakeFiles/cleanup",
+                      "build/CMakeFiles/cleanup.rule"
                     ]
                   }
                 ],
-                "fullName": "doc",
-                "name": "doc",
+                "fullName": "cleanup",
+                "name": "cleanup",
                 "sourceDirectory": "/SharedWithWindows/Projects/szakdolgozat",
                 "type": "UTILITY"
               },
@@ -163,7 +179,8 @@
                       "complex_waveform_generator_test.cpp",
                       "consolidation_methods_test.cpp",
                       "consolidator_test.cpp",
-                      "filters_test.cpp",
+                      "echo_test.cpp",
+                      "fuzzbox_test.cpp",
                       "multiplexer_test.cpp",
                       "portaudio_backend_test.cpp",
                       "queue_buffer_test.cpp",
@@ -204,29 +221,13 @@
                 "name": "Test",
                 "sourceDirectory": "/SharedWithWindows/Projects/szakdolgozat/test",
                 "type": "EXECUTABLE"
-              },
-              {
-                "buildDirectory": "/SharedWithWindows/Projects/szakdolgozat/build/test",
-                "fileGroups": [
-                  {
-                    "isGenerated": true,
-                    "sources": [
-                      "../build/test/CMakeFiles/coverage",
-                      "../build/test/CMakeFiles/coverage.rule"
-                    ]
-                  }
-                ],
-                "fullName": "coverage",
-                "name": "coverage",
-                "sourceDirectory": "/SharedWithWindows/Projects/szakdolgozat/test",
-                "type": "UTILITY"
               }
             ]
           }
         ]
       }
     ],
-    "cookie": "0.07832614525003123",
+    "cookie": "0.4084317548745626",
     "inReplyTo": "codemodel",
     "type": "reply"
   }

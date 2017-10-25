@@ -1,16 +1,3 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$classTransitionFunction.html" title="TransitionFunction\&lt; T \&gt;" alt="" coords="5,405,167,431"/>
-<area shape="rect" id="node2" href="$classTransition_1_1EaseIn_1_1Cubic.html" title="Transition::EaseIn\l::Cubic\&lt; T \&gt;" alt="" coords="228,5,356,47"/>
-<area shape="rect" id="node3" href="$classTransition_1_1EaseIn_1_1Quadratic.html" title="Transition::EaseIn\l::Quadratic\&lt; T \&gt;" alt="" coords="228,71,356,112"/>
-<area shape="rect" id="node4" href="$classTransition_1_1EaseIn_1_1Quartic.html" title="Transition::EaseIn\l::Quartic\&lt; T \&gt;" alt="" coords="228,136,356,177"/>
-<area shape="rect" id="node5" href="$classTransition_1_1EaseIn_1_1Quintic.html" title="Transition::EaseIn\l::Quintic\&lt; T \&gt;" alt="" coords="228,201,356,243"/>
-<area shape="rect" id="node6" href="$classTransition_1_1EaseInOut_1_1Cubic.html" title="Transition::EaseInOut\l::Cubic\&lt; T \&gt;" alt="" coords="217,267,367,308"/>
-<area shape="rect" id="node7" href="$classTransition_1_1EaseInOut_1_1Quadratic.html" title="Transition::EaseInOut\l::Quadratic\&lt; T \&gt;" alt="" coords="217,332,367,373"/>
-<area shape="rect" id="node8" href="$classTransition_1_1EaseInOut_1_1Quartic.html" title="Transition::EaseInOut\l::Quartic\&lt; T \&gt;" alt="" coords="217,397,367,439"/>
-<area shape="rect" id="node9" href="$classTransition_1_1EaseInOut_1_1Quintic.html" title="Transition::EaseInOut\l::Quintic\&lt; T \&gt;" alt="" coords="217,463,367,504"/>
-<area shape="rect" id="node10" href="$classTransition_1_1EaseOut_1_1Cubic.html" title="Transition::EaseOut\l::Cubic\&lt; T \&gt;" alt="" coords="223,528,361,569"/>
-<area shape="rect" id="node11" href="$classTransition_1_1EaseOut_1_1Quadratic.html" title="Transition::EaseOut\l::Quadratic\&lt; T \&gt;" alt="" coords="223,593,361,635"/>
-<area shape="rect" id="node12" href="$classTransition_1_1EaseOut_1_1Quartic.html" title="Transition::EaseOut\l::Quartic\&lt; T \&gt;" alt="" coords="223,659,361,700"/>
-<area shape="rect" id="node13" href="$classTransition_1_1EaseOut_1_1Quintic.html" title="Transition::EaseOut\l::Quintic\&lt; T \&gt;" alt="" coords="223,724,361,765"/>
-<area shape="rect" id="node14" href="$classTransition_1_1Linear.html" title="Transition::Linear\&lt; T \&gt;" alt="" coords="215,790,369,817"/>
+<area shape="rect" id="node1" href="$structtemplate__utils_1_1extract__inner__base.html" title="template_utils::extract\l_inner_base\&lt; T \&gt;" alt="" coords="5,5,156,47"/>
 </map>

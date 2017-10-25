@@ -59,6 +59,20 @@ TEST_F(QueueBufferTest, DataRemainsContinous)
     }
 }
 
+TEST_F(QueueBufferTest, SinglePutAndGet)
+{
+    DataFlow::QueueBuffer<float> buffer;
+    int elements = 1500;
+
+    for(int i = 0; i<elements;i++){
+        buffer.put(i);
+    }
+
+    for(int i = 0;i<elements;i++){
+        EXPECT_EQ(i,buffer.get());
+    }
+}
+
 TEST_F(QueueBufferTest, ClearTest)
 {
     DataFlow::QueueBuffer<float> buffer;
