@@ -1,4 +1,3 @@
-#TODO: cleanup cmake - linked libraries, test target
 cmake_minimum_required(VERSION 3.6)
 
 project(Szakdolgozat)
@@ -18,6 +17,7 @@ WORKING_DIRECTORY ${PROJECT_SOURCE_DIR}/doc
 COMMAND echo "Generating documentation."
 COMMAND doxygen Doxyfile_en
 COMMAND doxygen Doxyfile_hu
+COMMAND doxygen Doxyfile_hu_rtf
 )
 set_target_properties(doc PROPERTIES EXCLUDE_FROM_DEFAULT_BUILD TRUE)
 

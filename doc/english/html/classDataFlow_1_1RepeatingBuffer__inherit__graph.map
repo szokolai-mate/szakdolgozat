@@ -1,3 +1,4 @@
 <map id="DataFlow::RepeatingBuffer&lt; T &gt;" name="DataFlow::RepeatingBuffer&lt; T &gt;">
-<area shape="rect" id="node2" href="$classDataFlow_1_1iBuffer.html" title="{DataFlow::iBuffer\&lt; T \&gt;\n||+ put()\l+ size()\l+ ~iBuffer()\l}" alt="" coords="33,5,189,112"/>
+<area shape="rect" id="node2" href="$classDataFlow_1_1iBuffer.html" title="{DataFlow::iBuffer\&lt; T \&gt;\n||+ put()\l+ size()\l+ ~iBuffer()\l}" alt="" coords="33,145,189,252"/>
+<area shape="rect" id="node3" href="$classDataFlow_1_1iSource.html" title="{DataFlow::iSource\&lt; T \&gt;\n||+ get()\l+ ~iSource()\l}" alt="" coords="30,5,193,97"/>
 </map>

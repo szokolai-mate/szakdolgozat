@@ -1,16 +1,16 @@
 {
   "variant": {
-    "label": "Debug",
+    "label": "Release",
     "keywordSettings": {
-      "buildType": "debug"
+      "buildType": "release"
     },
-    "description": "Emit debug information without performing optimizations"
+    "description": "Enable optimizations, omit debug info"
   },
   "activeEnvironments": [],
   "codeModel": {
     "configurations": [
       {
-        "name": "Debug",
+        "name": "Release",
         "projects": [
           {
             "buildDirectory": "/SharedWithWindows/Projects/szakdolgozat/build",
@@ -18,48 +18,36 @@
             "sourceDirectory": "/SharedWithWindows/Projects/szakdolgozat",
             "targets": [
               {
-                "artifacts": [
-                  "/SharedWithWindows/Projects/szakdolgozat/build/bin/Mixer"
-                ],
-                "buildDirectory": "/SharedWithWindows/Projects/szakdolgozat/build/src",
+                "buildDirectory": "/SharedWithWindows/Projects/szakdolgozat/build",
                 "fileGroups": [
                   {
-                    "compileFlags": " -std=c++14 -g  ",
-                    "includePath": [
-                      {
-                        "path": "/SharedWithWindows/Projects/szakdolgozat/inc"
-                      }
-                    ],
-                    "isGenerated": false,
-                    "language": "CXX",
+                    "isGenerated": true,
                     "sources": [
-                      "cheap_sawtooth_generator.cpp",
-                      "cheap_square_generator.cpp",
-                      "complex_waveform_generator.cpp",
-                      "consolidation_methods.cpp",
-                      "main.cpp",
-                      "multiplexer.cpp",
-                      "ogg_file_loader.cpp",
-                      "portaudio_backend.cpp",
-                      "queue_buffer.cpp",
-                      "recorder.cpp",
-                      "repeating_buffer.cpp",
-                      "sawtooth_generator.cpp",
-                      "sine_generator.cpp",
-                      "square_generator.cpp",
-                      "triangle_generator.cpp",
-                      "vorbis_decoder.cpp",
-                      "vorbis_encoder.cpp"
+                      "build/CMakeFiles/doc",
+                      "build/CMakeFiles/doc.rule"
                     ]
                   }
                 ],
-                "fullName": "Mixer",
-                "linkLanguageFlags": "-std=c++14 -g",
-                "linkLibraries": "-Wl,-rpath,/usr/local/lib -lpthread /usr/local/lib/libportaudio.so /usr/lib/x86_64-linux-gnu/libogg.so /usr/lib/x86_64-linux-gnu/libvorbis.so /usr/lib/x86_64-linux-gnu/libvorbisenc.so",
-                "linkerLanguage": "CXX",
-                "name": "Mixer",
-                "sourceDirectory": "/SharedWithWindows/Projects/szakdolgozat/src",
-                "type": "EXECUTABLE"
+                "fullName": "doc",
+                "name": "doc",
+                "sourceDirectory": "/SharedWithWindows/Projects/szakdolgozat",
+                "type": "UTILITY"
+              },
+              {
+                "buildDirectory": "/SharedWithWindows/Projects/szakdolgozat/build",
+                "fileGroups": [
+                  {
+                    "isGenerated": true,
+                    "sources": [
+                      "build/CMakeFiles/cleanup",
+                      "build/CMakeFiles/cleanup.rule"
+                    ]
+                  }
+                ],
+                "fullName": "cleanup",
+                "name": "cleanup",
+                "sourceDirectory": "/SharedWithWindows/Projects/szakdolgozat",
+                "type": "UTILITY"
               },
               {
                 "artifacts": [
@@ -68,7 +56,7 @@
                 "buildDirectory": "/SharedWithWindows/Projects/szakdolgozat/build/src",
                 "fileGroups": [
                   {
-                    "compileFlags": " -std=c++14 -g -fPIC  ",
+                    "compileFlags": " -std=c++14 -O3 -DNDEBUG -fPIC  ",
                     "defines": [
                       "Szakdolgozat_EXPORTS"
                     ],
@@ -84,7 +72,6 @@
                       "cheap_square_generator.cpp",
                       "complex_waveform_generator.cpp",
                       "consolidation_methods.cpp",
-                      "main.cpp",
                       "multiplexer.cpp",
                       "ogg_file_loader.cpp",
                       "portaudio_backend.cpp",
@@ -114,7 +101,7 @@
                 "buildDirectory": "/SharedWithWindows/Projects/szakdolgozat/build/test",
                 "fileGroups": [
                   {
-                    "compileFlags": " -std=c++14 -g -O0 --coverage -fno-elide-constructors -fprofile-arcs -ftest-coverage -fno-inline -fno-inline-small-functions -fno-default-inline -g  ",
+                    "compileFlags": " -std=c++14 -g -O0 --coverage -fno-elide-constructors -fprofile-arcs -ftest-coverage -fno-inline -fno-inline-small-functions -fno-default-inline -O3 -DNDEBUG  ",
                     "includePath": [
                       {
                         "path": "/SharedWithWindows/Projects/szakdolgozat/inc"
@@ -167,7 +154,7 @@
                   }
                 ],
                 "fullName": "Test",
-                "linkLanguageFlags": "-std=c++14 -g -O0 --coverage -fno-elide-constructors -fprofile-arcs -ftest-coverage -fno-inline -fno-inline-small-functions -fno-default-inline -g",
+                "linkLanguageFlags": "-std=c++14 -g -O0 --coverage -fno-elide-constructors -fprofile-arcs -ftest-coverage -fno-inline -fno-inline-small-functions -fno-default-inline -O3 -DNDEBUG",
                 "linkLibraries": "-Wl,-rpath,/usr/local/lib -lpthread /usr/local/lib/libgtest.a /usr/local/lib/libportaudio.so /usr/lib/x86_64-linux-gnu/libogg.so /usr/lib/x86_64-linux-gnu/libvorbis.so /usr/lib/x86_64-linux-gnu/libvorbisenc.so",
                 "linkerLanguage": "CXX",
                 "name": "Test",
@@ -189,45 +176,13 @@
                 "name": "coverage",
                 "sourceDirectory": "/SharedWithWindows/Projects/szakdolgozat/test",
                 "type": "UTILITY"
-              },
-              {
-                "buildDirectory": "/SharedWithWindows/Projects/szakdolgozat/build",
-                "fileGroups": [
-                  {
-                    "isGenerated": true,
-                    "sources": [
-                      "build/CMakeFiles/doc",
-                      "build/CMakeFiles/doc.rule"
-                    ]
-                  }
-                ],
-                "fullName": "doc",
-                "name": "doc",
-                "sourceDirectory": "/SharedWithWindows/Projects/szakdolgozat",
-                "type": "UTILITY"
-              },
-              {
-                "buildDirectory": "/SharedWithWindows/Projects/szakdolgozat/build",
-                "fileGroups": [
-                  {
-                    "isGenerated": true,
-                    "sources": [
-                      "build/CMakeFiles/cleanup",
-                      "build/CMakeFiles/cleanup.rule"
-                    ]
-                  }
-                ],
-                "fullName": "cleanup",
-                "name": "cleanup",
-                "sourceDirectory": "/SharedWithWindows/Projects/szakdolgozat",
-                "type": "UTILITY"
               }
             ]
           }
         ]
       }
     ],
-    "cookie": "0.7449630122556168",
+    "cookie": "0.23045437091091725",
     "inReplyTo": "codemodel",
     "type": "reply"
   }

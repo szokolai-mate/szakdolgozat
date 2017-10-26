@@ -1,3 +1,8 @@
+/*! 
+*	Example 4 - multiplexing
+*
+*	Demonstrates multiplexing - combining single-channel sources into a multichannel source.
+*/
 #include <iostream>
 
 #include <SineGenerator.h>
@@ -9,6 +14,8 @@
 #define DEFAULT_SAMPLE_RATE 44100
 
 int main(int argc, char * argv[]){
+	/* Checking argument */
+	/***********************************************************/
 	if(argc<2){
 		std::cout<<"No frequency given!"<<std::endl;
 		return -1;
@@ -19,11 +26,15 @@ int main(int argc, char * argv[]){
 		std::cout<<"Please give a valid frequency value."<<std::endl;
 		return -1;
 	}
+	/***********************************************************/
 
+	/* make two mono sawtooth generators, one with the set frequency and the other an octave higher */
     Mixer::CheapSawtoothGenerator<float> sg(frequency,1,DEFAULT_SAMPLE_RATE);
     Mixer::CheapSawtoothGenerator<float> sg2(frequency*2,1,DEFAULT_SAMPLE_RATE);
-    
-    Mixer::Multiplexer<float> mx(2);
+	
+	/* make the multiplexer which will supply 2 channeled data */
+	Mixer::Multiplexer<float> mx(2);
+	/* set the channel sources */
     mx.setChannel(1,sg);
     mx.setChannel(2,sg2);
     
