@@ -5,6 +5,7 @@ std::vector<T> DataFlow::QueueBuffer<T>::get(const unsigned int &amount){
     std::vector<T> res;
     res.reserve(amount);
     for(int i = 0;i<amount;i++){
+        if(buffer.empty()){return res;}        
         res.push_back(buffer.front());
         buffer.pop();
     }

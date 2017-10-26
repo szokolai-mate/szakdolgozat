@@ -6,15 +6,7 @@ find_library(LIB_VORBISENC vorbisenc)
 
 file(GLOB SRC_FILES "*.cpp")
 
-#todo: remove this and make example files
-add_executable(Mixer ${SRC_FILES})
 add_library(${PROJECT_NAME} SHARED ${SRC_FILES})
-
-target_link_libraries(Mixer "${LIB_PTHREAD}")
-target_link_libraries(Mixer "${LIB_PORTAUDIO}")
-target_link_libraries(Mixer "${LIB_OGG}")
-target_link_libraries(Mixer "${LIB_VORBIS}")
-target_link_libraries(Mixer "${LIB_VORBISENC}")
 
 target_link_libraries(${PROJECT_NAME} "${LIB_PTHREAD}")
 target_link_libraries(${PROJECT_NAME} "${LIB_PORTAUDIO}")
