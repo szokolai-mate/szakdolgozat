@@ -4,8 +4,7 @@ var indexSectionsWithContent =
   1: "acefhilmopqrstv",
   2: "cdmt",
   3: "abcdfgimoprstv",
-  4: "e",
-  5: "s"
+  4: "e"
 };
 
 var indexSectionNames =
@@ -14,8 +13,7 @@ var indexSectionNames =
   1: "classes",
   2: "namespaces",
   3: "functions",
-  4: "typedefs",
-  5: "pages"
+  4: "typedefs"
 };
 
 var indexSectionLabels =
@@ -24,7 +22,6 @@ var indexSectionLabels =
   1: "Osztályok",
   2: "Névtér",
   3: "Függvények",
-  4: "Típusdefiníciók",
-  5: "Oldal"
+  4: "Típusdefiníciók"
 };
 

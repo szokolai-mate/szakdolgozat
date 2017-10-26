@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['szakdolgozat',['szakdolgozat',['../index.html',1,'']]],
   ['sawtoothgenerator',['SawtoothGenerator',['../classMixer_1_1SawtoothGenerator.html',1,'Mixer::SawtoothGenerator&lt; T &gt;'],['../classMixer_1_1SawtoothGenerator.html#a500ae0d27aec42cddb180a4a5eee13f3',1,'Mixer::SawtoothGenerator::SawtoothGenerator()']]],
   ['setattack',['setAttack',['../classMixer_1_1SimpleNote.html#ae99482eb3cb1fa4dc412f1b9ea183044',1,'Mixer::SimpleNote']]],
   ['setchannel',['setChannel',['../classMixer_1_1Multiplexer.html#a260504b01ac88771da9fa96d75455428',1,'Mixer::Multiplexer']]],
