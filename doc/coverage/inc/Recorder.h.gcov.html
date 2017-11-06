@@ -1,0 +1,143 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>LCOV - code_coverage.info - inc/Recorder.h</title>
+  <link rel="stylesheet" type="text/css" href="../gcov.css">
+</head>
+
+<body>
+
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="title">LCOV - code coverage report</td></tr>
+    <tr><td class="ruler"><img src="../glass.png" width=3 height=3 alt=""></td></tr>
+
+    <tr>
+      <td width="100%">
+        <table cellpadding=1 border=0 width="100%">
+          <tr>
+            <td width="10%" class="headerItem">Current view:</td>
+            <td width="35%" class="headerValue"><a href="../index.html">top level</a> - <a href="index.html">inc</a> - Recorder.h<span style="font-size: 80%;"> (source / <a href="Recorder.h.func-sort-c.html">functions</a>)</span></td>
+            <td width="5%"></td>
+            <td width="15%"></td>
+            <td width="10%" class="headerCovTableHead">Hit</td>
+            <td width="10%" class="headerCovTableHead">Total</td>
+            <td width="15%" class="headerCovTableHead">Coverage</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Test:</td>
+            <td class="headerValue">code_coverage.info</td>
+            <td></td>
+            <td class="headerItem">Lines:</td>
+            <td class="headerCovTableEntry">4</td>
+            <td class="headerCovTableEntry">4</td>
+            <td class="headerCovTableEntryHi">100.0 %</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Date:</td>
+            <td class="headerValue">2017-11-06 09:47:00</td>
+            <td></td>
+            <td class="headerItem">Functions:</td>
+            <td class="headerCovTableEntry">2</td>
+            <td class="headerCovTableEntry">2</td>
+            <td class="headerCovTableEntryHi">100.0 %</td>
+          </tr>
+          <tr><td><img src="../glass.png" width=3 height=3 alt=""></td></tr>
+        </table>
+      </td>
+    </tr>
+
+    <tr><td class="ruler"><img src="../glass.png" width=3 height=3 alt=""></td></tr>
+  </table>
+
+  <table cellpadding=0 cellspacing=0 border=0>
+    <tr>
+      <td><br></td>
+    </tr>
+    <tr>
+      <td>
+<pre class="sourceHeading">          Line data    Source code</pre>
+<pre class="source">
+<a name="1"><span class="lineNum">       1 </span>            : #pragma once</a>
+<span class="lineNum">       2 </span>            : 
+<span class="lineNum">       3 </span>            : #include &lt;portaudio.h&gt;
+<span class="lineNum">       4 </span>            : #include &lt;thread&gt;
+<span class="lineNum">       5 </span>            : #include &lt;chrono&gt;
+<span class="lineNum">       6 </span>            : 
+<span class="lineNum">       7 </span>            : #include &lt;AudioSource.h&gt;
+<span class="lineNum">       8 </span>            : #include &lt;iBuffer.h&gt;
+<span class="lineNum">       9 </span>            : 
+<span class="lineNum">      10 </span>            : #define PA_WRITE_ERRORS
+<span class="lineNum">      11 </span>            : 
+<span class="lineNum">      12 </span>            : #ifdef PA_WRITE_ERRORS
+<span class="lineNum">      13 </span>            : #include &lt;iostream&gt;
+<span class="lineNum">      14 </span>            : #endif
+<span class="lineNum">      15 </span>            : 
+<span class="lineNum">      16 </span>            : namespace Mixer{
+<span class="lineNum">      17 </span>            : /*!
+<span class="lineNum">      18 </span>            :     \~english This class will use the PortAudio backend to record audio data from the computer's default input device into the attached buffer.
+<span class="lineNum">      19 </span>            :     \~hungarian Ez az osztály a PortAudio backend segítségével képes az alapértelmezett bemenetről audió adatot felvenni és azt a csatolt pufferbe besorolni.
+<span class="lineNum">      20 </span>            : */
+<span class="lineNum">      21 </span>            : template &lt;typename T&gt;
+<span class="lineNum">      22 </span>            : class Recorder : public AudioSource{
+<span class="lineNum">      23 </span>            : private:
+<span class="lineNum">      24 </span>            :     DataFlow::iBuffer&lt;T&gt; * buffer;
+<span class="lineNum">      25 </span>            :     static int callbackFunction(const void *inputBuffer, void *outputBuffer,
+<span class="lineNum">      26 </span>            :         unsigned long framesPerBuffer,
+<span class="lineNum">      27 </span>            :         const PaStreamCallbackTimeInfo *timeInfo,
+<span class="lineNum">      28 </span>            :         PaStreamCallbackFlags statusFlags,
+<span class="lineNum">      29 </span>            :         void *userData);
+<span class="lineNum">      30 </span>            : public:
+<span class="lineNum">      31 </span>            :     /*!
+<span class="lineNum">      32 </span>            :         \~english Starts recording for the given duration and streams the resulting audio data into the buffer.
+<span class="lineNum">      33 </span>            : 
+<span class="lineNum">      34 </span>            :         Set oneBlock to true to put the whole recorded data into the buffer in one put() .
+<span class="lineNum">      35 </span>            :         \~hungarian Megkezdi a felvételt a megadott időtartamig, az adatot pedig a pufferbe sorolja.
+<span class="lineNum">      36 </span>            : 
+<span class="lineNum">      37 </span>            :         Ha a oneBlock argumentum igaz, az egész felvétel egy put() -al kerül a pufferbe.
+<span class="lineNum">      38 </span>            :         \~english \param seconds the duration of the recording
+<span class="lineNum">      39 </span>            :         \~hungarian \param seconds a felvétel időtartama
+<span class="lineNum">      40 </span>            :         \~english \param oneBlock whether to use only one put() on the buffer
+<span class="lineNum">      41 </span>            :         \~hungarian \param oneBlock csak egy put() -ot hívhat meg a pufferre
+<span class="lineNum">      42 </span>            :         \~english \return whether the recording was successful
+<span class="lineNum">      43 </span>            :         \~hungarian \return a felvétel sikeres volt-e
+<span class="lineNum">      44 </span>            :     */
+<span class="lineNum">      45 </span>            :     bool record(const float &amp; seconds, bool oneBlock = false);
+<span class="lineNum">      46 </span>            : 
+<span class="lineNum">      47 </span>            :     /*!
+<span class="lineNum">      48 </span>            :         \~english Attach the parameter as this object's buffer.
+<span class="lineNum">      49 </span>            :         \~hungarian A paramétert az objektum puffereként hozzácsatolja.
+<span class="lineNum">      50 </span>            :         \~english \param buffer the iBuffer&lt;T&gt; to attach
+<a name="51"><span class="lineNum">      51 </span>            :         \~hungarian \param buffer a csatolni kívánt iBuffer&lt;T&gt;</a>
+<span class="lineNum">      52 </span>            :     */
+<span class="lineNum">      53 </span><span class="lineCov">         12 :     void attach(DataFlow::iBuffer&lt;T&gt; &amp; buffer){</span>
+<span class="lineNum">      54 </span><span class="lineCov">         12 :         this-&gt;buffer = &amp;buffer;</span>
+<span class="lineNum">      55 </span><span class="lineCov">         12 :     }</span>
+<span class="lineNum">      56 </span>            : 
+<span class="lineNum">      57 </span>            :     /*! \~english Constructor. Requires parameters for AudioSource.
+<span class="lineNum">      58 </span>            :         \~hungarian Konstuktor. Az AudioSource paramétereit kéri.
+<span class="lineNum">      59 </span>            : 
+<span class="lineNum">      60 </span>            :         \~english \param channels channel count
+<span class="lineNum">      61 </span>            :                         \~hungarian \param channels csatornák száma
+<span class="lineNum">      62 </span>            :         \~english \param sampleRate sample rate
+<a name="63"><span class="lineNum">      63 </span>            :                             \~hungarian \param sampleRate mintavételezési sűrűség</a>
+<span class="lineNum">      64 </span>            :     */
+<span class="lineNum">      65 </span><span class="lineCov">         24 :     Recorder(const unsigned int &amp; channels, const unsigned int &amp; sampleRate) : AudioSource(channels,sampleRate){}</span>
+<span class="lineNum">      66 </span>            : };
+<span class="lineNum">      67 </span>            : };
+</pre>
+      </td>
+    </tr>
+  </table>
+  <br>
+
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="ruler"><img src="../glass.png" width=3 height=3 alt=""></td></tr>
+    <tr><td class="versionInfo">Generated by: <a href="http://ltp.sourceforge.net/coverage/lcov.php" target="_parent">LCOV version 1.13</a></td></tr>
+  </table>
+  <br>
+
+</body>
+</html>

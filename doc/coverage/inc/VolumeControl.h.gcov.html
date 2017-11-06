@@ -1,0 +1,267 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>LCOV - code_coverage.info - inc/VolumeControl.h</title>
+  <link rel="stylesheet" type="text/css" href="../gcov.css">
+</head>
+
+<body>
+
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="title">LCOV - code coverage report</td></tr>
+    <tr><td class="ruler"><img src="../glass.png" width=3 height=3 alt=""></td></tr>
+
+    <tr>
+      <td width="100%">
+        <table cellpadding=1 border=0 width="100%">
+          <tr>
+            <td width="10%" class="headerItem">Current view:</td>
+            <td width="35%" class="headerValue"><a href="../index.html">top level</a> - <a href="index.html">inc</a> - VolumeControl.h<span style="font-size: 80%;"> (source / <a href="VolumeControl.h.func-sort-c.html">functions</a>)</span></td>
+            <td width="5%"></td>
+            <td width="15%"></td>
+            <td width="10%" class="headerCovTableHead">Hit</td>
+            <td width="10%" class="headerCovTableHead">Total</td>
+            <td width="15%" class="headerCovTableHead">Coverage</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Test:</td>
+            <td class="headerValue">code_coverage.info</td>
+            <td></td>
+            <td class="headerItem">Lines:</td>
+            <td class="headerCovTableEntry">63</td>
+            <td class="headerCovTableEntry">63</td>
+            <td class="headerCovTableEntryHi">100.0 %</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Date:</td>
+            <td class="headerValue">2017-11-06 09:47:00</td>
+            <td></td>
+            <td class="headerItem">Functions:</td>
+            <td class="headerCovTableEntry">8</td>
+            <td class="headerCovTableEntry">8</td>
+            <td class="headerCovTableEntryHi">100.0 %</td>
+          </tr>
+          <tr><td><img src="../glass.png" width=3 height=3 alt=""></td></tr>
+        </table>
+      </td>
+    </tr>
+
+    <tr><td class="ruler"><img src="../glass.png" width=3 height=3 alt=""></td></tr>
+  </table>
+
+  <table cellpadding=0 cellspacing=0 border=0>
+    <tr>
+      <td><br></td>
+    </tr>
+    <tr>
+      <td>
+<pre class="sourceHeading">          Line data    Source code</pre>
+<pre class="source">
+<a name="1"><span class="lineNum">       1 </span>            : #pragma once</a>
+<span class="lineNum">       2 </span>            : 
+<span class="lineNum">       3 </span>            : #include &lt;vector&gt;
+<span class="lineNum">       4 </span>            : #include &lt;memory&gt;
+<span class="lineNum">       5 </span>            : 
+<span class="lineNum">       6 </span>            : #include &lt;iSource.h&gt;
+<span class="lineNum">       7 </span>            : #include &lt;Transitioner.h&gt;
+<span class="lineNum">       8 </span>            : #include &lt;TransitionFunctions.h&gt;
+<span class="lineNum">       9 </span>            : #include &lt;iTransitioner.h&gt;
+<span class="lineNum">      10 </span>            : 
+<span class="lineNum">      11 </span>            : template &lt;typename T&gt;
+<span class="lineNum">      12 </span>            : /*! \~english A functor that acts as volume control when used with Applicator.
+<a name="13"><span class="lineNum">      13 </span>            :     \~hungarian Egy funktor ami hangerőszabályzóként viselkedik egy Applicator -ban.</a>
+<span class="lineNum">      14 </span>            : */
+<span class="lineNum">      15 </span><span class="lineCov">       3726 : class VolumeControl</span>
+<span class="lineNum">      16 </span>            : {
+<span class="lineNum">      17 </span>            :   private:
+<span class="lineNum">      18 </span>            :     float volume;
+<span class="lineNum">      19 </span>            :     DataFlow::iSource&lt;T&gt; *source;
+<a name="20"><span class="lineNum">      20 </span>            :     std::unique_ptr&lt;iTransitioner&lt;T&gt;&gt;  transitioner;</a>
+<span class="lineNum">      21 </span>            : 
+<span class="lineNum">      22 </span><span class="lineCov">   45380670 :     void stepTransition(const int &amp; amount){</span>
+<span class="lineNum">      23 </span><span class="lineCov">   45380670 :         if(transitioner){</span>
+<span class="lineNum">      24 </span><span class="lineCov">     290346 :             transitioner-&gt;step(amount);</span>
+<span class="lineNum">      25 </span>            :         }
+<span class="lineNum">      26 </span><span class="lineCov">   45380670 :     }</span>
+<span class="lineNum">      27 </span>            : 
+<span class="lineNum">      28 </span>            :   public:
+<span class="lineNum">      29 </span>            :     /*! \~english Get the current volume multiplier.
+<span class="lineNum">      30 </span>            :         \~hungarian Visszaadja a jelenlegi hangerő szorzót.
+<span class="lineNum">      31 </span>            :         \~english \return the volume multiplier
+<a name="32"><span class="lineNum">      32 </span>            :                 \~hungarian \return a hangerő szorzó</a>
+<span class="lineNum">      33 </span>            :     */
+<span class="lineNum">      34 </span><span class="lineCov">        108 :     T getVolume()</span>
+<span class="lineNum">      35 </span>            :     {
+<span class="lineNum">      36 </span><span class="lineCov">        108 :         return volume;</span>
+<span class="lineNum">      37 </span>            :     }
+<span class="lineNum">      38 </span>            : 
+<span class="lineNum">      39 </span>            :     /*! \~english Set the volume multiplier.
+<span class="lineNum">      40 </span>            :         \~hungarian Beállítja a hangerő szorzót.
+<span class="lineNum">      41 </span>            :         \~english \param volume the desired volume
+<a name="42"><span class="lineNum">      42 </span>            :                         \~hungarian \param volume a kívánt hangerő</a>
+<span class="lineNum">      43 </span>            :     */
+<span class="lineNum">      44 </span><span class="lineCov">       1857 :     void setVolume(const T &amp;volume)</span>
+<span class="lineNum">      45 </span>            :     {
+<span class="lineNum">      46 </span><span class="lineCov">       1857 :         this-&gt;volume = volume;</span>
+<a name="47"><span class="lineNum">      47 </span><span class="lineCov">       1857 :     }</span></a>
+<span class="lineNum">      48 </span>            : 
+<span class="lineNum">      49 </span><span class="lineCov">       2340 :     inline T operator()(T x)</span>
+<span class="lineNum">      50 </span>            :     {
+<span class="lineNum">      51 </span><span class="lineCov">       2340 :         stepTransition(1);</span>
+<span class="lineNum">      52 </span><span class="lineCov">       2340 :         return x * volume;</span>
+<a name="53"><span class="lineNum">      53 </span>            :     }</a>
+<span class="lineNum">      54 </span>            : 
+<span class="lineNum">      55 </span><span class="lineCov">       1839 :     inline void operator()(std::vector&lt;T&gt; &amp;vector)</span>
+<span class="lineNum">      56 </span>            :     {
+<span class="lineNum">      57 </span><span class="lineCov">   45380169 :         for (T &amp;x : vector)</span>
+<span class="lineNum">      58 </span>            :         {
+<span class="lineNum">      59 </span><span class="lineCov">   45378330 :             x = x * volume;</span>
+<span class="lineNum">      60 </span><span class="lineCov">   45378330 :             stepTransition(1);      </span>
+<span class="lineNum">      61 </span>            :         }
+<span class="lineNum">      62 </span><span class="lineCov">       1839 :     }</span>
+<span class="lineNum">      63 </span>            : 
+<span class="lineNum">      64 </span>            :     /*!
+<span class="lineNum">      65 </span>            :       \~english Set the volume with the desired transition.
+<span class="lineNum">      66 </span>            :       \~hungarian Beállítja a hangerőt a kívánt átmenettel.
+<span class="lineNum">      67 </span>            :   
+<span class="lineNum">      68 </span>            :       \~english \param volume the desired volume
+<span class="lineNum">      69 </span>            :       \~hungarian \param volume a kívánt hangerő
+<span class="lineNum">      70 </span>            :       
+<span class="lineNum">      71 </span>            :       \~english \param seconds the length of transition in seconds
+<span class="lineNum">      72 </span>            :       \~hungarian \param seconds az átmenet hossza másodpercben
+<span class="lineNum">      73 </span>            :       
+<span class="lineNum">      74 </span>            :       \~english \param valuesPerSecond the number of samples that will go through this object per second
+<span class="lineNum">      75 </span>            :       \~hungarian \param valuesPerSecond az objektumon átmenő értékek száma másodpercenként
+<span class="lineNum">      76 </span>            :       
+<span class="lineNum">      77 </span>            :       \~english \param method the method of transition
+<span class="lineNum">      78 </span>            :   
+<span class="lineNum">      79 </span>            :       possible values:
+<span class="lineNum">      80 </span>            :       - linear
+<span class="lineNum">      81 </span>            :       - ease-in
+<span class="lineNum">      82 </span>            :       - ease-out
+<span class="lineNum">      83 </span>            :       - ease-in-out
+<span class="lineNum">      84 </span>            :   
+<span class="lineNum">      85 </span>            :       Possibly more values in Transition namespace.
+<span class="lineNum">      86 </span>            :       
+<span class="lineNum">      87 </span>            :       \~hungarian \param method az átmenet jellege
+<span class="lineNum">      88 </span>            :   
+<span class="lineNum">      89 </span>            :       lehetséges értékek:
+<span class="lineNum">      90 </span>            :       - linear
+<span class="lineNum">      91 </span>            :       - ease-in
+<span class="lineNum">      92 </span>            :       - ease-out
+<span class="lineNum">      93 </span>            :       - ease-in-out
+<span class="lineNum">      94 </span>            :   
+<span class="lineNum">      95 </span>            :       Lehetséges hogy több érték van. Lásd Transition névtér.
+<span class="lineNum">      96 </span>            :   
+<span class="lineNum">      97 </span>            :       \~english \param degree the exponential degree of the transition method (if applicable)
+<span class="lineNum">      98 </span>            :       \~hungarian \param degree az átmenet hatványkitevője (ha lehetséges)
+<a name="99"><span class="lineNum">      99 </span>            :       </a>
+<span class="lineNum">     100 </span>            :     */
+<span class="lineNum">     101 </span><span class="lineCov">         42 :     void setVolume(const float &amp; newVolume, const float &amp;seconds, const int &amp; valuesPerSecond, std::string method = &quot;linear&quot;, const unsigned int &amp;degree = 2){</span>
+<span class="lineNum">     102 </span><span class="lineCov">         42 :             int samples = valuesPerSecond * seconds;</span>
+<span class="lineNum">     103 </span><span class="lineCov">         42 :             if (&quot;linear&quot; == method)</span>
+<span class="lineNum">     104 </span>            :             {
+<span class="lineNum">     105 </span><span class="lineCov">          6 :                 this-&gt;transitioner = std::make_unique&lt;Transitioner&lt;T, Transition::Linear&gt;&gt;(this-&gt;volume);</span>
+<span class="lineNum">     106 </span>            :             }
+<span class="lineNum">     107 </span><span class="lineCov">         42 :             switch (degree)</span>
+<span class="lineNum">     108 </span>            :             {
+<span class="lineNum">     109 </span>            :             case 2:
+<span class="lineNum">     110 </span><span class="lineCov">         15 :                 if (&quot;ease-in-out&quot; == method)</span>
+<span class="lineNum">     111 </span>            :                 {
+<span class="lineNum">     112 </span><span class="lineCov">          3 :                     this-&gt;transitioner = std::make_unique&lt;Transitioner&lt;T, Transition::EaseInOut::Quadratic&gt;&gt;(this-&gt;volume);</span>
+<span class="lineNum">     113 </span><span class="lineCov">          3 :                     break;</span>
+<span class="lineNum">     114 </span>            :                 }
+<span class="lineNum">     115 </span><span class="lineCov">         12 :                 if (&quot;ease-in&quot; == method)</span>
+<span class="lineNum">     116 </span>            :                 {
+<span class="lineNum">     117 </span><span class="lineCov">          3 :                     this-&gt;transitioner = std::make_unique&lt;Transitioner&lt;T, Transition::EaseIn::Quadratic&gt;&gt;(this-&gt;volume);</span>
+<span class="lineNum">     118 </span><span class="lineCov">          3 :                     break;</span>
+<span class="lineNum">     119 </span>            :                 }
+<span class="lineNum">     120 </span><span class="lineCov">          9 :                 if (&quot;ease-out&quot; == method)</span>
+<span class="lineNum">     121 </span>            :                 {
+<span class="lineNum">     122 </span><span class="lineCov">          3 :                     this-&gt;transitioner = std::make_unique&lt;Transitioner&lt;T, Transition::EaseOut::Quadratic&gt;&gt;(this-&gt;volume);</span>
+<span class="lineNum">     123 </span><span class="lineCov">          3 :                     break;</span>
+<span class="lineNum">     124 </span>            :                 }
+<span class="lineNum">     125 </span>            :         
+<span class="lineNum">     126 </span>            :             case 3:
+<span class="lineNum">     127 </span><span class="lineCov">         15 :                 if (&quot;ease-in-out&quot; == method)</span>
+<span class="lineNum">     128 </span>            :                 {
+<span class="lineNum">     129 </span><span class="lineCov">          3 :                     this-&gt;transitioner = std::make_unique&lt;Transitioner&lt;T, Transition::EaseInOut::Cubic&gt;&gt;(this-&gt;volume);</span>
+<span class="lineNum">     130 </span><span class="lineCov">          3 :                     break;</span>
+<span class="lineNum">     131 </span>            :                 }
+<span class="lineNum">     132 </span><span class="lineCov">         12 :                 if (&quot;ease-in&quot; == method)</span>
+<span class="lineNum">     133 </span>            :                 {
+<span class="lineNum">     134 </span><span class="lineCov">          3 :                     this-&gt;transitioner = std::make_unique&lt;Transitioner&lt;T, Transition::EaseIn::Cubic&gt;&gt;(this-&gt;volume);</span>
+<span class="lineNum">     135 </span><span class="lineCov">          3 :                     break;</span>
+<span class="lineNum">     136 </span>            :                 }
+<span class="lineNum">     137 </span><span class="lineCov">          9 :                 if (&quot;ease-out&quot; == method)</span>
+<span class="lineNum">     138 </span>            :                 {
+<span class="lineNum">     139 </span><span class="lineCov">          3 :                     this-&gt;transitioner = std::make_unique&lt;Transitioner&lt;T, Transition::EaseOut::Cubic&gt;&gt;(this-&gt;volume);</span>
+<span class="lineNum">     140 </span><span class="lineCov">          3 :                     break;</span>
+<span class="lineNum">     141 </span>            :                 }
+<span class="lineNum">     142 </span>            :         
+<span class="lineNum">     143 </span>            :             case 4:
+<span class="lineNum">     144 </span><span class="lineCov">         15 :                 if (&quot;ease-in-out&quot; == method)</span>
+<span class="lineNum">     145 </span>            :                 {
+<span class="lineNum">     146 </span><span class="lineCov">          3 :                     this-&gt;transitioner = std::make_unique&lt;Transitioner&lt;T, Transition::EaseInOut::Quartic&gt;&gt;(this-&gt;volume);</span>
+<span class="lineNum">     147 </span><span class="lineCov">          3 :                     break;</span>
+<span class="lineNum">     148 </span>            :                 }
+<span class="lineNum">     149 </span><span class="lineCov">         12 :                 if (&quot;ease-in&quot; == method)</span>
+<span class="lineNum">     150 </span>            :                 {
+<span class="lineNum">     151 </span><span class="lineCov">          3 :                     this-&gt;transitioner = std::make_unique&lt;Transitioner&lt;T, Transition::EaseIn::Quartic&gt;&gt;(this-&gt;volume);</span>
+<span class="lineNum">     152 </span><span class="lineCov">          3 :                     break;</span>
+<span class="lineNum">     153 </span>            :                 }
+<span class="lineNum">     154 </span><span class="lineCov">          9 :                 if (&quot;ease-out&quot; == method)</span>
+<span class="lineNum">     155 </span>            :                 {
+<span class="lineNum">     156 </span><span class="lineCov">          3 :                     this-&gt;transitioner = std::make_unique&lt;Transitioner&lt;T, Transition::EaseOut::Quartic&gt;&gt;(this-&gt;volume);</span>
+<span class="lineNum">     157 </span><span class="lineCov">          3 :                     break;</span>
+<span class="lineNum">     158 </span>            :                 }
+<span class="lineNum">     159 </span>            :         
+<span class="lineNum">     160 </span>            :             case 5:
+<span class="lineNum">     161 </span><span class="lineCov">         15 :                     if (&quot;ease-in-out&quot; == method)</span>
+<span class="lineNum">     162 </span>            :                     {
+<span class="lineNum">     163 </span><span class="lineCov">          3 :                         this-&gt;transitioner = std::make_unique&lt;Transitioner&lt;T, Transition::EaseInOut::Quintic&gt;&gt;(this-&gt;volume);</span>
+<span class="lineNum">     164 </span><span class="lineCov">          3 :                         break;</span>
+<span class="lineNum">     165 </span>            :                     }
+<span class="lineNum">     166 </span><span class="lineCov">         12 :                     if (&quot;ease-in&quot; == method)</span>
+<span class="lineNum">     167 </span>            :                     {
+<span class="lineNum">     168 </span><span class="lineCov">          3 :                         this-&gt;transitioner = std::make_unique&lt;Transitioner&lt;T, Transition::EaseIn::Quintic&gt;&gt;(this-&gt;volume);</span>
+<span class="lineNum">     169 </span><span class="lineCov">          3 :                         break;</span>
+<span class="lineNum">     170 </span>            :                     }
+<span class="lineNum">     171 </span><span class="lineCov">          9 :                     if (&quot;ease-out&quot; == method)</span>
+<span class="lineNum">     172 </span>            :                     {
+<span class="lineNum">     173 </span><span class="lineCov">          3 :                         this-&gt;transitioner = std::make_unique&lt;Transitioner&lt;T, Transition::EaseOut::Quintic&gt;&gt;(this-&gt;volume);</span>
+<span class="lineNum">     174 </span><span class="lineCov">          3 :                         break;</span>
+<span class="lineNum">     175 </span>            :                     }
+<span class="lineNum">     176 </span>            :             default:
+<span class="lineNum">     177 </span><span class="lineCov">          6 :                 this-&gt;transitioner = std::make_unique&lt;Transitioner&lt;T, Transition::Linear&gt;&gt;(this-&gt;volume);</span>
+<span class="lineNum">     178 </span>            :             }
+<span class="lineNum">     179 </span>            :         
+<span class="lineNum">     180 </span><span class="lineCov">         42 :             this-&gt;transitioner-&gt;init(this-&gt;getVolume(), newVolume, samples);</span>
+<a name="181"><span class="lineNum">     181 </span><span class="lineCov">         42 :         }</span></a>
+<span class="lineNum">     182 </span>            : 
+<span class="lineNum">     183 </span><span class="lineCov">       3726 :     VolumeControl(): volume(1){}</span>
+<span class="lineNum">     184 </span>            :     /*!
+<span class="lineNum">     185 </span>            :         \~english Constructor. Sets volume.
+<span class="lineNum">     186 </span>            :         \~hungarian Konstruktor. Beállítja a hangerőt.
+<span class="lineNum">     187 </span>            :         \~english \param volume the desired volume
+<span class="lineNum">     188 </span>            :         \~hungarian \param volume a kívánt hangerő
+<span class="lineNum">     189 </span>            :     */
+<span class="lineNum">     190 </span>            :     VolumeControl(const T &amp; volume): volume(volume){}
+<span class="lineNum">     191 </span>            : };
+</pre>
+      </td>
+    </tr>
+  </table>
+  <br>
+
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="ruler"><img src="../glass.png" width=3 height=3 alt=""></td></tr>
+    <tr><td class="versionInfo">Generated by: <a href="http://ltp.sourceforge.net/coverage/lcov.php" target="_parent">LCOV version 1.13</a></td></tr>
+  </table>
+  <br>
+
+</body>
+</html>

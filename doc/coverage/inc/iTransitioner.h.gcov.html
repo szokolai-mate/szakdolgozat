@@ -1,0 +1,110 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>LCOV - code_coverage.info - inc/iTransitioner.h</title>
+  <link rel="stylesheet" type="text/css" href="../gcov.css">
+</head>
+
+<body>
+
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="title">LCOV - code coverage report</td></tr>
+    <tr><td class="ruler"><img src="../glass.png" width=3 height=3 alt=""></td></tr>
+
+    <tr>
+      <td width="100%">
+        <table cellpadding=1 border=0 width="100%">
+          <tr>
+            <td width="10%" class="headerItem">Current view:</td>
+            <td width="35%" class="headerValue"><a href="../index.html">top level</a> - <a href="index.html">inc</a> - iTransitioner.h<span style="font-size: 80%;"> (source / <a href="iTransitioner.h.func-sort-c.html">functions</a>)</span></td>
+            <td width="5%"></td>
+            <td width="15%"></td>
+            <td width="10%" class="headerCovTableHead">Hit</td>
+            <td width="10%" class="headerCovTableHead">Total</td>
+            <td width="15%" class="headerCovTableHead">Coverage</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Test:</td>
+            <td class="headerValue">code_coverage.info</td>
+            <td></td>
+            <td class="headerItem">Lines:</td>
+            <td class="headerCovTableEntry">2</td>
+            <td class="headerCovTableEntry">2</td>
+            <td class="headerCovTableEntryHi">100.0 %</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Date:</td>
+            <td class="headerValue">2017-11-06 09:47:00</td>
+            <td></td>
+            <td class="headerItem">Functions:</td>
+            <td class="headerCovTableEntry">2</td>
+            <td class="headerCovTableEntry">3</td>
+            <td class="headerCovTableEntryLo">66.7 %</td>
+          </tr>
+          <tr><td><img src="../glass.png" width=3 height=3 alt=""></td></tr>
+        </table>
+      </td>
+    </tr>
+
+    <tr><td class="ruler"><img src="../glass.png" width=3 height=3 alt=""></td></tr>
+  </table>
+
+  <table cellpadding=0 cellspacing=0 border=0>
+    <tr>
+      <td><br></td>
+    </tr>
+    <tr>
+      <td>
+<pre class="sourceHeading">          Line data    Source code</pre>
+<pre class="source">
+<a name="1"><span class="lineNum">       1 </span>            : #pragma once</a>
+<span class="lineNum">       2 </span>            : 
+<span class="lineNum">       3 </span>            : 
+<span class="lineNum">       4 </span>            : //! \~english Interface defining the functionality of the Transitioner.
+<span class="lineNum">       5 </span>            : //! \~hungarian A Transitioner funkcionalitását definiáló interfész.
+<span class="lineNum">       6 </span>            : /*!
+<span class="lineNum">       7 </span>            :     \~english Use an iTransitioner pointer as data member in order to switch TransitionFunction at runtime. For an example see SineGenerator.
+<span class="lineNum">       8 </span>            :     \~hungarian Adattagként egy iTransitioner pointer használata szükséges ahhoz hogy TransitionFunction -t futási időben válasszunk. Példaként lásd SineGenerator.
+<a name="9"><span class="lineNum">       9 </span>            : */</a>
+<span class="lineNum">      10 </span>            : template &lt;typename T&gt;
+<span class="lineNum">      11 </span><span class="lineCov">       1137 : class iTransitioner{</span>
+<span class="lineNum">      12 </span>            : public:
+<span class="lineNum">      13 </span>            :     /*!
+<span class="lineNum">      14 </span>            :         \~english Step the internal state forward on the transition function, changing the attached variable.
+<span class="lineNum">      15 </span>            :         \~hungarian Előre lépteti az átmenet függvény belső állapotát, a csatolt változót megfelelően változtatva.
+<span class="lineNum">      16 </span>            :         \~english \param amount the amount to step with
+<span class="lineNum">      17 </span>            :         \~hungarian \param amount a lépés mértéke
+<span class="lineNum">      18 </span>            :     */
+<span class="lineNum">      19 </span>            :     virtual void step(const float &amp; amount) = 0;
+<span class="lineNum">      20 </span>            : 
+<span class="lineNum">      21 </span>            :     /*!
+<span class="lineNum">      22 </span>            :         \~english Initialize the internal state of the transition function.
+<span class="lineNum">      23 </span>            :         \~hungarian Az átmenet függvény belső állapotának kezdeti felépítése.
+<span class="lineNum">      24 </span>            :         \~english \param startValue the start value, where we transition **from**
+<span class="lineNum">      25 </span>            :         \~hungarian \param startValue a kezdeti érték, **ahonnan** az érték megy át
+<span class="lineNum">      26 </span>            :         \~english \param endValue the end value, where we transition **to**
+<span class="lineNum">      27 </span>            :         \~hungarian \param endValue a végső érték, **ahova** az érték megy át
+<span class="lineNum">      28 </span>            :         \~english \param endTime the position where value will reach endValue
+<span class="lineNum">      29 </span>            :         \~hungarian \param endTime a pozíció ahol az érték eléri a végső értéket
+<span class="lineNum">      30 </span>            :     */
+<a name="31"><span class="lineNum">      31 </span>            :     virtual void init(const T &amp; startValue, const T &amp; endValue, const float &amp; endTime) = 0;</a>
+<span class="lineNum">      32 </span>            :     
+<span class="lineNum">      33 </span><span class="lineCov">       1137 :     virtual ~iTransitioner(){}</span>
+<span class="lineNum">      34 </span>            : };
+</pre>
+      </td>
+    </tr>
+  </table>
+  <br>
+
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="ruler"><img src="../glass.png" width=3 height=3 alt=""></td></tr>
+    <tr><td class="versionInfo">Generated by: <a href="http://ltp.sourceforge.net/coverage/lcov.php" target="_parent">LCOV version 1.13</a></td></tr>
+  </table>
+  <br>
+
+</body>
+</html>

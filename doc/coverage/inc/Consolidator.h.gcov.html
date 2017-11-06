@@ -1,0 +1,144 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>LCOV - code_coverage.info - inc/Consolidator.h</title>
+  <link rel="stylesheet" type="text/css" href="../gcov.css">
+</head>
+
+<body>
+
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="title">LCOV - code coverage report</td></tr>
+    <tr><td class="ruler"><img src="../glass.png" width=3 height=3 alt=""></td></tr>
+
+    <tr>
+      <td width="100%">
+        <table cellpadding=1 border=0 width="100%">
+          <tr>
+            <td width="10%" class="headerItem">Current view:</td>
+            <td width="35%" class="headerValue"><a href="../index.html">top level</a> - <a href="index.html">inc</a> - Consolidator.h<span style="font-size: 80%;"> (source / <a href="Consolidator.h.func-sort-c.html">functions</a>)</span></td>
+            <td width="5%"></td>
+            <td width="15%"></td>
+            <td width="10%" class="headerCovTableHead">Hit</td>
+            <td width="10%" class="headerCovTableHead">Total</td>
+            <td width="15%" class="headerCovTableHead">Coverage</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Test:</td>
+            <td class="headerValue">code_coverage.info</td>
+            <td></td>
+            <td class="headerItem">Lines:</td>
+            <td class="headerCovTableEntry">15</td>
+            <td class="headerCovTableEntry">15</td>
+            <td class="headerCovTableEntryHi">100.0 %</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Date:</td>
+            <td class="headerValue">2017-11-06 09:47:00</td>
+            <td></td>
+            <td class="headerItem">Functions:</td>
+            <td class="headerCovTableEntry">17</td>
+            <td class="headerCovTableEntry">21</td>
+            <td class="headerCovTableEntryMed">81.0 %</td>
+          </tr>
+          <tr><td><img src="../glass.png" width=3 height=3 alt=""></td></tr>
+        </table>
+      </td>
+    </tr>
+
+    <tr><td class="ruler"><img src="../glass.png" width=3 height=3 alt=""></td></tr>
+  </table>
+
+  <table cellpadding=0 cellspacing=0 border=0>
+    <tr>
+      <td><br></td>
+    </tr>
+    <tr>
+      <td>
+<pre class="sourceHeading">          Line data    Source code</pre>
+<pre class="source">
+<a name="1"><span class="lineNum">       1 </span>            : #pragma once</a>
+<span class="lineNum">       2 </span>            : 
+<span class="lineNum">       3 </span>            : #include &lt;vector&gt;
+<span class="lineNum">       4 </span>            : #include &lt;functional&gt;
+<span class="lineNum">       5 </span>            : 
+<span class="lineNum">       6 </span>            : #include &lt;iSource.h&gt;
+<span class="lineNum">       7 </span>            : 
+<span class="lineNum">       8 </span>            : namespace DataFlow{
+<span class="lineNum">       9 </span>            :     //! \~english Consolidates multiple sources into a single one.
+<span class="lineNum">      10 </span>            :     //! \~hungarian Több forrást egy forrássá alakít.
+<span class="lineNum">      11 </span>            :     /*!
+<span class="lineNum">      12 </span>            :         \~english The template parameter K is the method with which the source consolidation is performed.
+<span class="lineNum">      13 </span>            :                   The type of consolidation must match the type of the consolidator.
+<span class="lineNum">      14 </span>            :                   See the Consolidation namespace for implemented methods.
+<span class="lineNum">      15 </span>            :         \~hungarian A konszolidáció a K sablon paraméter szerint történik.
+<span class="lineNum">      16 </span>            :                     A konszolidátor és a konszolidáció típusának meg kell egyeznie a sablonban.
+<span class="lineNum">      17 </span>            :                     Implementált konszolidációs moódszerekhez lásd a Consolidation névteret.
+<a name="18"><span class="lineNum">      18 </span>            :     */</a>
+<span class="lineNum">      19 </span>            :     template &lt;typename T, template &lt;typename&gt; typename K&gt;
+<span class="lineNum">      20 </span><span class="lineCov">        312 :     class Consolidator : public DataFlow::iSource&lt;T&gt;{</span>
+<span class="lineNum">      21 </span>            :     private:
+<span class="lineNum">      22 </span>            :         K&lt;T&gt; consolidationMethod;
+<span class="lineNum">      23 </span>            :         std::vector&lt;std::reference_wrapper&lt;iSource&lt;T&gt;&gt;&gt; sources;
+<span class="lineNum">      24 </span>            :     public:
+<span class="lineNum">      25 </span>            :         /*!
+<span class="lineNum">      26 </span>            :         \~english Attach the parameter to this object's sources.
+<span class="lineNum">      27 </span>            :         \~hungarian A paramétert az objektum forrásaihoz hozzácsatolja.
+<span class="lineNum">      28 </span>            :         \~english \param source the iSource&lt;T&gt; to attach
+<a name="29"><span class="lineNum">      29 </span>            :                         \~hungarian \param source a csatolni kívánt iSource&lt;T&gt;</a>
+<span class="lineNum">      30 </span>            :         */
+<span class="lineNum">      31 </span><span class="lineCov">       1896 :         void attach(DataFlow::iSource&lt;T&gt; &amp; source){</span>
+<span class="lineNum">      32 </span><span class="lineCov">       1896 :             sources.push_back(source);</span>
+<span class="lineNum">      33 </span><span class="lineCov">       1896 :         }</span>
+<span class="lineNum">      34 </span>            :         
+<span class="lineNum">      35 </span>            :         /*!
+<span class="lineNum">      36 </span>            :         \~english Remove the parameter from this object's sources.
+<span class="lineNum">      37 </span>            :         \~hungarian A paramétert az objektum forrásaiból kiveszi.
+<span class="lineNum">      38 </span>            :         \~english \param source the iSource&lt;T&gt; to detach
+<a name="39"><span class="lineNum">      39 </span>            :                         \~hungarian \param source a kivenni kívánt iSource&lt;T&gt;</a>
+<span class="lineNum">      40 </span>            :         */
+<span class="lineNum">      41 </span><span class="lineCov">          3 :         bool detach(DataFlow::iSource&lt;T&gt; &amp; source){</span>
+<span class="lineNum">      42 </span><span class="lineCov">          3 :             for(auto it = sources.begin();it!=sources.end();it++){</span>
+<span class="lineNum">      43 </span><span class="lineCov">          3 :                 if(&amp;((*it).get())==&amp;source){</span>
+<span class="lineNum">      44 </span><span class="lineCov">          3 :                     sources.erase(it);</span>
+<span class="lineNum">      45 </span><span class="lineCov">          3 :                     return true;</span>
+<span class="lineNum">      46 </span>            :                 }
+<span class="lineNum">      47 </span>            :             }
+<span class="lineNum">      48 </span><span class="lineCov">          3 :             return false;</span>
+<span class="lineNum">      49 </span>            :         }
+<span class="lineNum">      50 </span>            : 
+<span class="lineNum">      51 </span>            :         //! \~english Get a reference to the consolidation method instance used.
+<span class="lineNum">      52 </span>            :         //! \~hungary Egy referenciát ad a használt konszolidációs módszer példányhoz.
+<span class="lineNum">      53 </span>            :         /*! \~english \return the reference
+<span class="lineNum">      54 </span>            :                     \~hungarian \return a referencia
+<span class="lineNum">      55 </span>            :         */
+<span class="lineNum">      56 </span>            :         K&lt;T&gt; &amp; getMethod(){
+<span class="lineNum">      57 </span>            :             return consolidationMethod;
+<a name="58"><span class="lineNum">      58 </span>            :         }</a>
+<span class="lineNum">      59 </span>            : 
+<span class="lineNum">      60 </span><span class="lineCov">         66 :         std::vector&lt;T&gt; get(const unsigned int &amp; amount){</span>
+<span class="lineNum">      61 </span><span class="lineCov">         66 :             consolidationMethod.init(sources[0].get().get(amount));</span>
+<span class="lineNum">      62 </span><span class="lineCov">       1893 :             for(int i = 1; i&lt;sources.size();i++){</span>
+<span class="lineNum">      63 </span><span class="lineCov">       1827 :                 consolidationMethod.add(sources[i].get().get(amount));</span>
+<span class="lineNum">      64 </span>            :             }
+<span class="lineNum">      65 </span><span class="lineCov">         66 :             return consolidationMethod.get();</span>
+<span class="lineNum">      66 </span>            :         }       
+<span class="lineNum">      67 </span>            :     };
+<span class="lineNum">      68 </span>            : };
+</pre>
+      </td>
+    </tr>
+  </table>
+  <br>
+
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="ruler"><img src="../glass.png" width=3 height=3 alt=""></td></tr>
+    <tr><td class="versionInfo">Generated by: <a href="http://ltp.sourceforge.net/coverage/lcov.php" target="_parent">LCOV version 1.13</a></td></tr>
+  </table>
+  <br>
+
+</body>
+</html>

@@ -1,0 +1,160 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>LCOV - code_coverage.info - inc/Multiplexer.h</title>
+  <link rel="stylesheet" type="text/css" href="../gcov.css">
+</head>
+
+<body>
+
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="title">LCOV - code coverage report</td></tr>
+    <tr><td class="ruler"><img src="../glass.png" width=3 height=3 alt=""></td></tr>
+
+    <tr>
+      <td width="100%">
+        <table cellpadding=1 border=0 width="100%">
+          <tr>
+            <td width="10%" class="headerItem">Current view:</td>
+            <td width="35%" class="headerValue"><a href="../index.html">top level</a> - <a href="index.html">inc</a> - Multiplexer.h<span style="font-size: 80%;"> (source / <a href="Multiplexer.h.func-sort-c.html">functions</a>)</span></td>
+            <td width="5%"></td>
+            <td width="15%"></td>
+            <td width="10%" class="headerCovTableHead">Hit</td>
+            <td width="10%" class="headerCovTableHead">Total</td>
+            <td width="15%" class="headerCovTableHead">Coverage</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Test:</td>
+            <td class="headerValue">code_coverage.info</td>
+            <td></td>
+            <td class="headerItem">Lines:</td>
+            <td class="headerCovTableEntry">11</td>
+            <td class="headerCovTableEntry">11</td>
+            <td class="headerCovTableEntryHi">100.0 %</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Date:</td>
+            <td class="headerValue">2017-11-06 09:47:00</td>
+            <td></td>
+            <td class="headerItem">Functions:</td>
+            <td class="headerCovTableEntry">6</td>
+            <td class="headerCovTableEntry">7</td>
+            <td class="headerCovTableEntryMed">85.7 %</td>
+          </tr>
+          <tr><td><img src="../glass.png" width=3 height=3 alt=""></td></tr>
+        </table>
+      </td>
+    </tr>
+
+    <tr><td class="ruler"><img src="../glass.png" width=3 height=3 alt=""></td></tr>
+  </table>
+
+  <table cellpadding=0 cellspacing=0 border=0>
+    <tr>
+      <td><br></td>
+    </tr>
+    <tr>
+      <td>
+<pre class="sourceHeading">          Line data    Source code</pre>
+<pre class="source">
+<a name="1"><span class="lineNum">       1 </span>            : #pragma once</a>
+<span class="lineNum">       2 </span>            : 
+<span class="lineNum">       3 </span>            : #include &lt;map&gt;
+<span class="lineNum">       4 </span>            : 
+<span class="lineNum">       5 </span>            : #include &lt;iSource.h&gt;
+<span class="lineNum">       6 </span>            : 
+<span class="lineNum">       7 </span>            : namespace Mixer{
+<span class="lineNum">       8 </span>            : /*!
+<span class="lineNum">       9 </span>            :     \~english A class that will supply multiplexed audio data, which will have the number of channels desired.
+<span class="lineNum">      10 </span>            :     
+<span class="lineNum">      11 </span>            :     Assign mono audio data sources to each channel with setChannel() . Channels that do not have a source set will be silent.
+<span class="lineNum">      12 </span>            :     \~hungarian Multiplexált audió adatot szolgáltató osztály. A szolgáltatott adat a kért csatornaszámot tartalmazza.
+<span class="lineNum">      13 </span>            :     
+<span class="lineNum">      14 </span>            :     Monó audió forrásokat lehet csatlakoztatni egy csatornához a setChannel() -el. Azon csatornák, melyekre nincs forrás beállítva, némák lesznek.
+<a name="15"><span class="lineNum">      15 </span>            : */</a>
+<span class="lineNum">      16 </span>            : template &lt;typename T&gt;
+<span class="lineNum">      17 </span><span class="lineCov">         48 : class Multiplexer : public DataFlow::iSource&lt;T&gt;{</span>
+<span class="lineNum">      18 </span>            : private:
+<span class="lineNum">      19 </span>            :     std::map&lt;unsigned int, DataFlow::iSource&lt;T&gt; *&gt; sources;
+<span class="lineNum">      20 </span>            :     unsigned int channelCount = 2;
+<span class="lineNum">      21 </span>            : public:
+<span class="lineNum">      22 </span>            :     std::vector&lt;T&gt; get(const unsigned int &amp;amount);
+<span class="lineNum">      23 </span>            : 
+<span class="lineNum">      24 </span>            :     /*!
+<span class="lineNum">      25 </span>            :         \~english Set a channel to get it's data from an iSource.
+<span class="lineNum">      26 </span>            :         \~hungarian Beállítja az adott csatorna forrását.
+<span class="lineNum">      27 </span>            :         \~english \param channel the channel number
+<span class="lineNum">      28 </span>            :         \~hungarian \param channel a csatorna száma
+<span class="lineNum">      29 </span>            :         \~english \param source the source to attach to the channel
+<span class="lineNum">      30 </span>            :         \~hungarian \param source a csatornához csatolandó forrás
+<span class="lineNum">      31 </span>            :     */
+<span class="lineNum">      32 </span>            :     void setChannel(const unsigned int &amp; channel, DataFlow::iSource&lt;T&gt; &amp; source);
+<span class="lineNum">      33 </span>            : 
+<span class="lineNum">      34 </span>            :     /*!
+<span class="lineNum">      35 </span>            :         \~english Clear the channel of it's source, if there is one.
+<span class="lineNum">      36 </span>            :         \~hungarian A csatorna forrását kiüríti, ha volt neki.
+<span class="lineNum">      37 </span>            :         \~english \param channel the channel to clear
+<span class="lineNum">      38 </span>            :         \~hungarian \param channel a kiürítendő csatorna száma
+<span class="lineNum">      39 </span>            :     */
+<span class="lineNum">      40 </span>            :     void clearChannel(const unsigned int &amp; channel);
+<span class="lineNum">      41 </span>            : 
+<span class="lineNum">      42 </span>            :     /*!
+<span class="lineNum">      43 </span>            :         \~english Set the number of channels.
+<span class="lineNum">      44 </span>            :         \~hungarian A csatornák számának megadása.
+<span class="lineNum">      45 </span>            :         \~english \param channels the number of channels
+<a name="46"><span class="lineNum">      46 </span>            :         \~hungarian \param channels a csatornák száma</a>
+<span class="lineNum">      47 </span>            :     */
+<span class="lineNum">      48 </span><span class="lineCov">          3 :     void setChannelCount(unsigned int channels){</span>
+<span class="lineNum">      49 </span><span class="lineCov">          3 :         channelCount = channels;</span>
+<span class="lineNum">      50 </span><span class="lineCov">          3 :     }</span>
+<span class="lineNum">      51 </span>            : 
+<span class="lineNum">      52 </span>            :     /*!
+<span class="lineNum">      53 </span>            :         \~english Get the number of channels.
+<span class="lineNum">      54 </span>            :         \~hungarian A csatornák számát adja vissza.
+<span class="lineNum">      55 </span>            :         \~english \return the number of channels
+<a name="56"><span class="lineNum">      56 </span>            :         \~hungarian \return a csatornák száma</a>
+<span class="lineNum">      57 </span>            :     */
+<span class="lineNum">      58 </span><span class="lineCov">    5811288 :     unsigned int getChannelCount(){</span>
+<span class="lineNum">      59 </span><span class="lineCov">    5811288 :         return channelCount;</span>
+<span class="lineNum">      60 </span>            :     }
+<span class="lineNum">      61 </span>            : 
+<span class="lineNum">      62 </span>            :     /*!
+<span class="lineNum">      63 </span>            :         \~english Clears all channels of their source.
+<a name="64"><span class="lineNum">      64 </span>            :         \~hungarian Az összes csatorna forrását kiüríti.</a>
+<span class="lineNum">      65 </span>            :     */
+<span class="lineNum">      66 </span><span class="lineCov">          3 :     void clear(){</span>
+<span class="lineNum">      67 </span><span class="lineCov">          3 :         sources.clear();</span>
+<span class="lineNum">      68 </span><span class="lineCov">          3 :     }</span>
+<span class="lineNum">      69 </span>            : 
+<span class="lineNum">      70 </span>            :     /*!
+<span class="lineNum">      71 </span>            :         \~english Constructor. Initializes the channel count.
+<span class="lineNum">      72 </span>            :         \~hungarian Konstruktor. Inicializálja a csatornák számát.
+<span class="lineNum">      73 </span>            :          \~english \param channels the number of channels
+<a name="74"><span class="lineNum">      74 </span>            :         \~hungarian \param channels a csatornák száma</a>
+<span class="lineNum">      75 </span>            :     */
+<span class="lineNum">      76 </span><span class="lineCov">         42 :     Multiplexer(unsigned int channels) : channelCount(channels) {}</span>
+<span class="lineNum">      77 </span>            : 
+<span class="lineNum">      78 </span>            :     /*!
+<span class="lineNum">      79 </span>            :         \~english Default constructor. Channel count will be initialized to 2.
+<a name="80"><span class="lineNum">      80 </span>            :         \~hungarian Konstruktor. A csatornák számát 2-re inicializálja.</a>
+<span class="lineNum">      81 </span>            :     */
+<span class="lineNum">      82 </span><span class="lineCov">          6 :     Multiplexer(){}</span>
+<span class="lineNum">      83 </span>            : };
+<span class="lineNum">      84 </span>            : };
+</pre>
+      </td>
+    </tr>
+  </table>
+  <br>
+
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="ruler"><img src="../glass.png" width=3 height=3 alt=""></td></tr>
+    <tr><td class="versionInfo">Generated by: <a href="http://ltp.sourceforge.net/coverage/lcov.php" target="_parent">LCOV version 1.13</a></td></tr>
+  </table>
+  <br>
+
+</body>
+</html>

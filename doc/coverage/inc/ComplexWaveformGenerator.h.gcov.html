@@ -1,0 +1,195 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>LCOV - code_coverage.info - inc/ComplexWaveformGenerator.h</title>
+  <link rel="stylesheet" type="text/css" href="../gcov.css">
+</head>
+
+<body>
+
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="title">LCOV - code coverage report</td></tr>
+    <tr><td class="ruler"><img src="../glass.png" width=3 height=3 alt=""></td></tr>
+
+    <tr>
+      <td width="100%">
+        <table cellpadding=1 border=0 width="100%">
+          <tr>
+            <td width="10%" class="headerItem">Current view:</td>
+            <td width="35%" class="headerValue"><a href="../index.html">top level</a> - <a href="index.html">inc</a> - ComplexWaveformGenerator.h<span style="font-size: 80%;"> (source / <a href="ComplexWaveformGenerator.h.func-sort-c.html">functions</a>)</span></td>
+            <td width="5%"></td>
+            <td width="15%"></td>
+            <td width="10%" class="headerCovTableHead">Hit</td>
+            <td width="10%" class="headerCovTableHead">Total</td>
+            <td width="15%" class="headerCovTableHead">Coverage</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Test:</td>
+            <td class="headerValue">code_coverage.info</td>
+            <td></td>
+            <td class="headerItem">Lines:</td>
+            <td class="headerCovTableEntry">1</td>
+            <td class="headerCovTableEntry">1</td>
+            <td class="headerCovTableEntryHi">100.0 %</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Date:</td>
+            <td class="headerValue">2017-11-06 09:47:00</td>
+            <td></td>
+            <td class="headerItem">Functions:</td>
+            <td class="headerCovTableEntry">1</td>
+            <td class="headerCovTableEntry">2</td>
+            <td class="headerCovTableEntryLo">50.0 %</td>
+          </tr>
+          <tr><td><img src="../glass.png" width=3 height=3 alt=""></td></tr>
+        </table>
+      </td>
+    </tr>
+
+    <tr><td class="ruler"><img src="../glass.png" width=3 height=3 alt=""></td></tr>
+  </table>
+
+  <table cellpadding=0 cellspacing=0 border=0>
+    <tr>
+      <td><br></td>
+    </tr>
+    <tr>
+      <td>
+<pre class="sourceHeading">          Line data    Source code</pre>
+<pre class="source">
+<a name="1"><span class="lineNum">       1 </span>            : #pragma once</a>
+<span class="lineNum">       2 </span>            : 
+<span class="lineNum">       3 </span>            : #include &lt;string&gt;
+<span class="lineNum">       4 </span>            : #include &lt;vector&gt;
+<span class="lineNum">       5 </span>            : #include &lt;memory&gt;
+<span class="lineNum">       6 </span>            : #include &lt;map&gt;
+<span class="lineNum">       7 </span>            : 
+<span class="lineNum">       8 </span>            : #include &lt;AudioSource.h&gt;
+<span class="lineNum">       9 </span>            : #include &lt;Transitioner.h&gt;
+<span class="lineNum">      10 </span>            : #include &lt;TransitionFunctions.h&gt;
+<span class="lineNum">      11 </span>            : #include &lt;iTransitioner.h&gt;
+<span class="lineNum">      12 </span>            : #include &lt;Consolidator.h&gt;
+<span class="lineNum">      13 </span>            : #include &lt;ConsolidationMethods.h&gt;
+<span class="lineNum">      14 </span>            : #include &lt;VolumeControl.h&gt;
+<span class="lineNum">      15 </span>            : #include &lt;SineGenerator.h&gt;
+<span class="lineNum">      16 </span>            : #include &lt;Applicator.h&gt;
+<span class="lineNum">      17 </span>            : 
+<span class="lineNum">      18 </span>            : namespace Mixer{
+<span class="lineNum">      19 </span>            :     /*!
+<span class="lineNum">      20 </span>            :         \~english This class will provide a custom waveform by utilizing spectral synthesis.
+<span class="lineNum">      21 </span>            : 
+<span class="lineNum">      22 </span>            :         Every waveform can be made by combining sinusoids with varying frequencies and amplitudes. These sinusoids are also called components.
+<span class="lineNum">      23 </span>            :          Each set of components defines a unique waveform. This set is also known as the waveform's spectrum.
+<span class="lineNum">      24 </span>            : 
+<span class="lineNum">      25 </span>            :         If all components of a wave are known, adding the components together will perfectly reproduce the wave. This is known as spectral or Fourier synthesis.
+<span class="lineNum">      26 </span>            : 
+<span class="lineNum">      27 </span>            :         \~hungarian Ez az osztály egyedi hullámformát szolgáltat, amit spektrális szintézissel készít el.
+<span class="lineNum">      28 </span>            : 
+<span class="lineNum">      29 </span>            :         Minden hullám előállítható különböző amplitúdójú és frekvenciájú szinuszoidok kombinációjaként. Ezeket a szinuszoidokat a hullám komponenseinek is nevezik.
+<span class="lineNum">      30 </span>            :          Minden komponens-halmaz egy egyedi hullámot határoz meg. Ez a halmaz a hullám spektruma.
+<span class="lineNum">      31 </span>            : 
+<span class="lineNum">      32 </span>            :         Ha egy hullámnak minden komponense ismert, ezek összeadásával az eredeti hullám tökéletezen replikálható. Ezt a teknikát hívják spektrális vagy Fourier szintézisnek.
+<a name="33"><span class="lineNum">      33 </span>            :     */</a>
+<span class="lineNum">      34 </span>            :     template &lt;typename T&gt;
+<span class="lineNum">      35 </span><span class="lineCov">         48 :     class ComplexWaveformGenerator : public DataFlow::iSource&lt;T&gt;, public Mixer::AudioSource{</span>
+<span class="lineNum">      36 </span>            :     private:
+<span class="lineNum">      37 </span>            :         float frequency;
+<span class="lineNum">      38 </span>            : 
+<span class="lineNum">      39 </span>            :         DataFlow::Consolidator&lt;T, Consolidation::Accumulation&gt; complexSource;        
+<span class="lineNum">      40 </span>            : 
+<span class="lineNum">      41 </span>            :         std::map&lt;float,std::pair&lt;std::unique_ptr&lt;Mixer::SineGenerator&lt;T&gt;&gt;,std::unique_ptr&lt;DataFlow::Applicator&lt;T,VolumeControl&gt;&gt;&gt;&gt; componentObjects;
+<span class="lineNum">      42 </span>            :     public:
+<span class="lineNum">      43 </span>            :         std::vector&lt;T&gt; get(const unsigned int &amp;amount);
+<span class="lineNum">      44 </span>            :         
+<span class="lineNum">      45 </span>            :         /*!
+<span class="lineNum">      46 </span>            :             \~english Returns the volume of a selected frequency.
+<span class="lineNum">      47 </span>            :             \~hungarian A megadott frekvencia hangerejét adja vissza.
+<span class="lineNum">      48 </span>            :             \~english \param frequency the frequency of the component
+<span class="lineNum">      49 </span>            :             \~hungarian \param frequency a komponens frekvenciája
+<span class="lineNum">      50 </span>            :             \~english \return the volume of the component
+<span class="lineNum">      51 </span>            :             \~hungarian \return a komponens hangereje
+<span class="lineNum">      52 </span>            :         */
+<span class="lineNum">      53 </span>            :         T getComponent(const float &amp; frequency);
+<span class="lineNum">      54 </span>            :         
+<span class="lineNum">      55 </span>            :     /*!
+<span class="lineNum">      56 </span>            :       \~english Set the volume of a component or add a new component.
+<span class="lineNum">      57 </span>            :       \~hungarian Egy komponens hangerejének beállítása, vagy új komponens hozzáadása.
+<span class="lineNum">      58 </span>            :   
+<span class="lineNum">      59 </span>            :       \~english \param frequency the frequency of the component
+<span class="lineNum">      60 </span>            :       \~hungarian \param frequency a komponens frekvenciája
+<span class="lineNum">      61 </span>            :       
+<span class="lineNum">      62 </span>            :       \~english \param volume the desired volume
+<span class="lineNum">      63 </span>            :       \~hungarian \param volume a kívánt hangerő
+<span class="lineNum">      64 </span>            :     */
+<span class="lineNum">      65 </span>            :         void setComponent(const float &amp;frequency, const float &amp; volume);
+<span class="lineNum">      66 </span>            :         
+<span class="lineNum">      67 </span>            :         /*!
+<span class="lineNum">      68 </span>            :       \~english Set the volume of the component with the desired transition. The waveform must already contain this frequency.
+<span class="lineNum">      69 </span>            :       \~hungarian Beállítja a komponens hangerejét a kívánt átmenettel. A frekvenciának már a hullám komponensének kell lennie.
+<span class="lineNum">      70 </span>            :   
+<span class="lineNum">      71 </span>            :       \~english \param frequency the frequency of the component to change
+<span class="lineNum">      72 </span>            :       \~hungarian \param frequency a módosítani kívánt komponens frekvenciája
+<span class="lineNum">      73 </span>            :       
+<span class="lineNum">      74 </span>            : 
+<span class="lineNum">      75 </span>            :       \~english \param volume the desired volume
+<span class="lineNum">      76 </span>            :       \~hungarian \param volume a kívánt hangerő
+<span class="lineNum">      77 </span>            :       
+<span class="lineNum">      78 </span>            :       \~english \param seconds the length of transition in seconds
+<span class="lineNum">      79 </span>            :       \~hungarian \param seconds az átmenet hossza másodpercben
+<span class="lineNum">      80 </span>            :       
+<span class="lineNum">      81 </span>            :       \~english \param method the method of transition
+<span class="lineNum">      82 </span>            :   
+<span class="lineNum">      83 </span>            :       possible values:
+<span class="lineNum">      84 </span>            :       - linear
+<span class="lineNum">      85 </span>            :       - ease-in
+<span class="lineNum">      86 </span>            :       - ease-out
+<span class="lineNum">      87 </span>            :       - ease-in-out
+<span class="lineNum">      88 </span>            :   
+<span class="lineNum">      89 </span>            :       Possibly more values in Transition namespace.
+<span class="lineNum">      90 </span>            :       
+<span class="lineNum">      91 </span>            :       \~hungarian \param method az átmenet jellege
+<span class="lineNum">      92 </span>            :   
+<span class="lineNum">      93 </span>            :       lehetséges értékek:
+<span class="lineNum">      94 </span>            :       - linear
+<span class="lineNum">      95 </span>            :       - ease-in
+<span class="lineNum">      96 </span>            :       - ease-out
+<span class="lineNum">      97 </span>            :       - ease-in-out
+<span class="lineNum">      98 </span>            :   
+<span class="lineNum">      99 </span>            :       Lehetséges hogy több érték van. Lásd Transition névtér.
+<span class="lineNum">     100 </span>            :   
+<span class="lineNum">     101 </span>            :       \~english \param degree the exponential degree of the transition method (if applicable)
+<span class="lineNum">     102 </span>            :       \~hungarian \param degree az átmenet hatványkitevője (ha lehetséges)
+<span class="lineNum">     103 </span>            :       
+<span class="lineNum">     104 </span>            :     */
+<span class="lineNum">     105 </span>            :         void setComponent(const float &amp;frequency, const float &amp;volume, const float &amp;seconds, std::string method = &quot;linear&quot;, const unsigned int &amp;degree = 2);
+<span class="lineNum">     106 </span>            :         
+<span class="lineNum">     107 </span>            :         /*!
+<span class="lineNum">     108 </span>            :             \~english Constructor. Requires the sinusoid components and AudioSource parameters.
+<span class="lineNum">     109 </span>            :             \~hungarian Konstruktor. Beállítja a szinuszoid komponenseket és az AudioSource paramétereit.
+<span class="lineNum">     110 </span>            :             \~english \param components a vector of frequency and volume pairs, each pair describes a sinusoid
+<span class="lineNum">     111 </span>            :                                 \~hungarian \param components egy frekvenciából és hangerőből álló párok vektora, minden ilyen pár leír egy szinuszoid komponenst
+<span class="lineNum">     112 </span>            :             \~english \param channels the channel count
+<span class="lineNum">     113 </span>            :                                 \~hungarian \param channels a csatornák száma
+<span class="lineNum">     114 </span>            :             \~english \param sampleRate the sample rate
+<span class="lineNum">     115 </span>            :                                 \~hungarian \param sampleRate a mintavételezés sűrűsége
+<span class="lineNum">     116 </span>            :         */
+<span class="lineNum">     117 </span>            :         ComplexWaveformGenerator(const std::vector&lt;std::pair&lt;float,T&gt;&gt; &amp; components, const unsigned int &amp;channels, const unsigned int &amp;sampleRate);
+<span class="lineNum">     118 </span>            :     };
+<span class="lineNum">     119 </span>            : };
+</pre>
+      </td>
+    </tr>
+  </table>
+  <br>
+
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="ruler"><img src="../glass.png" width=3 height=3 alt=""></td></tr>
+    <tr><td class="versionInfo">Generated by: <a href="http://ltp.sourceforge.net/coverage/lcov.php" target="_parent">LCOV version 1.13</a></td></tr>
+  </table>
+  <br>
+
+</body>
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>LCOV - code_coverage.info - inc/PortAudioBackend.h</title>
+  <link rel="stylesheet" type="text/css" href="../gcov.css">
+</head>
+
+<body>
+
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="title">LCOV - code coverage report</td></tr>
+    <tr><td class="ruler"><img src="../glass.png" width=3 height=3 alt=""></td></tr>
+
+    <tr>
+      <td width="100%">
+        <table cellpadding=1 border=0 width="100%">
+          <tr>
+            <td width="10%" class="headerItem">Current view:</td>
+            <td width="35%" class="headerValue"><a href="../index.html">top level</a> - <a href="index.html">inc</a> - PortAudioBackend.h<span style="font-size: 80%;"> (source / <a href="PortAudioBackend.h.func-sort-c.html">functions</a>)</span></td>
+            <td width="5%"></td>
+            <td width="15%"></td>
+            <td width="10%" class="headerCovTableHead">Hit</td>
+            <td width="10%" class="headerCovTableHead">Total</td>
+            <td width="15%" class="headerCovTableHead">Coverage</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Test:</td>
+            <td class="headerValue">code_coverage.info</td>
+            <td></td>
+            <td class="headerItem">Lines:</td>
+            <td class="headerCovTableEntry">1</td>
+            <td class="headerCovTableEntry">1</td>
+            <td class="headerCovTableEntryHi">100.0 %</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Date:</td>
+            <td class="headerValue">2017-11-06 09:47:00</td>
+            <td></td>
+            <td class="headerItem">Functions:</td>
+            <td class="headerCovTableEntry">2</td>
+            <td class="headerCovTableEntry">3</td>
+            <td class="headerCovTableEntryLo">66.7 %</td>
+          </tr>
+          <tr><td><img src="../glass.png" width=3 height=3 alt=""></td></tr>
+        </table>
+      </td>
+    </tr>
+
+    <tr><td class="ruler"><img src="../glass.png" width=3 height=3 alt=""></td></tr>
+  </table>
+
+  <table cellpadding=0 cellspacing=0 border=0>
+    <tr>
+      <td><br></td>
+    </tr>
+    <tr>
+      <td>
+<pre class="sourceHeading">          Line data    Source code</pre>
+<pre class="source">
+<a name="1"><span class="lineNum">       1 </span>            : #pragma once</a>
+<span class="lineNum">       2 </span>            : #include &lt;portaudio.h&gt;
+<span class="lineNum">       3 </span>            : #include &lt;vector&gt;
+<span class="lineNum">       4 </span>            : 
+<span class="lineNum">       5 </span>            : #include &lt;iAudioBackend.h&gt;
+<span class="lineNum">       6 </span>            : #include &lt;iSource.h&gt;
+<span class="lineNum">       7 </span>            : 
+<span class="lineNum">       8 </span>            : #define PA_WRITE_ERRORS
+<span class="lineNum">       9 </span>            : 
+<span class="lineNum">      10 </span>            : #ifdef PA_WRITE_ERRORS
+<span class="lineNum">      11 </span>            : #include &lt;iostream&gt;
+<span class="lineNum">      12 </span>            : #endif
+<span class="lineNum">      13 </span>            : 
+<span class="lineNum">      14 </span>            : namespace Mixer{
+<span class="lineNum">      15 </span>            : //! \~english An endpoint with PortAudio backend
+<span class="lineNum">      16 </span>            : //! \~hungarian PortAudio backendet használó végpont
+<span class="lineNum">      17 </span>            : /*!
+<span class="lineNum">      18 </span>            :     \~english This class utilizes the cross-platform audio backend PortAudio to play data from an iSource. \n
+<span class="lineNum">      19 </span>            :     The init() function must be called before starting playback with the start() function.
+<span class="lineNum">      20 </span>            :     The source must contain the audio data already multiplexed.
+<span class="lineNum">      21 </span>            :     \~hungarian Ez az osztály egy multiplatformos audió backendet, a PortAudio-t használja egy iSource objektumból nyert audió adat lejátszására. \n
+<span class="lineNum">      22 </span>            :     Használat előtt az init() függvénnyel egy iSource objektumot csatlakoztatunk hozzá, majd a start() fügvénnyel elkezdhetjük a lejátszást.
+<span class="lineNum">      23 </span>            :     A csatolt objektumból nyert adat multiplexáltnak tekintendő.
+<a name="24"><span class="lineNum">      24 </span>            : */</a>
+<span class="lineNum">      25 </span>            : template &lt;typename T&gt;
+<span class="lineNum">      26 </span><span class="lineCov">         48 : class PortAudioBackend : public Mixer::iAudioBackend&lt;T&gt;</span>
+<span class="lineNum">      27 </span>            : {
+<span class="lineNum">      28 </span>            : public:
+<span class="lineNum">      29 </span>            :   /*! \~english Initialize the backend with the parameters. 
+<span class="lineNum">      30 </span>            :         \~hungarian Felállitja a backendet a paraméterekkel.
+<span class="lineNum">      31 </span>            :     \~english \param source the object supplying audio data
+<span class="lineNum">      32 </span>            :            \~hungarian \param source a forrás ahonnan az adatot nyeri
+<span class="lineNum">      33 </span>            :     \~english \param channels channel count
+<span class="lineNum">      34 </span>            :     \~english \param sampleRate sample rate 
+<span class="lineNum">      35 </span>            :     \~hungarian \param channels a csatornák száma
+<span class="lineNum">      36 </span>            :     \~hungarian \param sampleRate a mintavételezési sűrűség
+<span class="lineNum">      37 </span>            :     */
+<span class="lineNum">      38 </span>            :   bool init(DataFlow::iSource&lt;T&gt; &amp;source, const unsigned int &amp; channels, const unsigned int &amp; sampleRate);
+<span class="lineNum">      39 </span>            :   //! Start playing from the attached source.
+<span class="lineNum">      40 </span>            :   bool start();
+<span class="lineNum">      41 </span>            :   //! Stop playing. Idempotent.
+<span class="lineNum">      42 </span>            :   bool stop();
+<span class="lineNum">      43 </span>            :   //! Close stream. Reopen with init().
+<span class="lineNum">      44 </span>            :   bool close();
+<span class="lineNum">      45 </span>            : 
+<span class="lineNum">      46 </span>            : private:
+<span class="lineNum">      47 </span>            :   PaStream *stream;
+<span class="lineNum">      48 </span>            :   PaError err;
+<span class="lineNum">      49 </span>            :   DataFlow::iSource&lt;T&gt; *source;
+<span class="lineNum">      50 </span>            :   static int callbackFunction(const void *inputBuffer, void *outputBuffer,
+<span class="lineNum">      51 </span>            :                               unsigned long framesPerBuffer,
+<span class="lineNum">      52 </span>            :                               const PaStreamCallbackTimeInfo *timeInfo,
+<span class="lineNum">      53 </span>            :                               PaStreamCallbackFlags statusFlags,
+<span class="lineNum">      54 </span>            :                               void *userData);
+<span class="lineNum">      55 </span>            : };
+<span class="lineNum">      56 </span>            : };
+</pre>
+      </td>
+    </tr>
+  </table>
+  <br>
+
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="ruler"><img src="../glass.png" width=3 height=3 alt=""></td></tr>
+    <tr><td class="versionInfo">Generated by: <a href="http://ltp.sourceforge.net/coverage/lcov.php" target="_parent">LCOV version 1.13</a></td></tr>
+  </table>
+  <br>
+
+</body>
+</html>
