@@ -83,3 +83,5 @@ client/jspm_packages
 *.ogg
 *.mp3
 *.wav
+# except the one provided for the examples
+!for_tests.ogg

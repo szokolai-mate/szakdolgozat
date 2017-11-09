@@ -16,43 +16,47 @@
 #define DEFAULT_CHANNELS 2
 #define DEFAULT_SAMPLE_RATE 44100
 
-int main(int argc, char * argv[]){
+int main(int argc, char *argv[])
+{
 	/* Checking argument */
 	/***********************************************************/
-	if(argc<3){
-		std::cout<<"Please give a filename and a frequency!"<<std::endl;
+	if (argc < 3)
+	{
+		std::cout << "Please give a filename and a frequency!" << std::endl;
 		return -1;
-    }
+	}
 
-    float frequency = std::atof(argv[2]);
-    if(frequency<=0){
-		std::cout<<"Please give a valid frequency value."<<std::endl;
+	float frequency = std::atof(argv[2]);
+	if (frequency <= 0)
+	{
+		std::cout << "Please give a valid frequency value." << std::endl;
 		return -1;
 	}
 	/***********************************************************/
 
 	std::string fname{argv[1]};
 
-	OggFileLoader<float,VorbisDecoder> loader;
-	if(!loader.open(fname)){
-		std::cout<<"File not found!"<<std::endl;
+	OggFileLoader<float, VorbisDecoder> loader;
+	if (!loader.open(fname))
+	{
+		std::cout << "File not found!" << std::endl;
 		return -1;
 	}
-    loader.init();
-    
-    Mixer::SineGenerator<float> sg(frequency,DEFAULT_CHANNELS,DEFAULT_SAMPLE_RATE);
-	
+	loader.init();
+
+	Mixer::SineGenerator<float> sg(frequency, DEFAULT_CHANNELS, DEFAULT_SAMPLE_RATE);
+
 	/* make the consolidator with the Accumulation method */
-	DataFlow::Consolidator<float,Consolidation::Accumulation> con;
+	DataFlow::Consolidator<float, Consolidation::Accumulation> con;
 	/* attach both sources to the consolidator */
-    con.attach(loader);
-    con.attach(sg);
-	
-	Mixer::SimplePlayer<float,Mixer::PortAudioBackend> player(DEFAULT_CHANNELS,DEFAULT_SAMPLE_RATE);
+	con.attach(loader);
+	con.attach(sg);
+
+	Mixer::SimplePlayer<float, Mixer::PortAudioBackend> player(DEFAULT_CHANNELS, DEFAULT_SAMPLE_RATE);
 	player.attach(con);
 	player.play();
 
-	std::cout<<"Press any key to exit."<<std::endl;
+	std::cout << "Press any key to exit." << std::endl;
 	std::cin.get();
 	return 0;
 }
