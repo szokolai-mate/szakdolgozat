@@ -88,5 +88,6 @@ int main(int argc, char *argv[])
 
     std::cout << "Playing back the recorded audio. Press any key to exit." << std::endl;
     std::cin.get();
+    player.stop();
     return 0;
 }
